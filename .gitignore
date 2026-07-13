@@ -12,5 +12,8 @@ artifacts/cache/*
 # bootstrap (GDELT rate-limits some corporate IPs) and is only ~75 KB.
 !artifacts/cache/gdelt_daily.csv
 
+# Keep the verified earnings calendar (Yahoo rate-limits this network too)
+!artifacts/cache/earnings_NVDA.csv
+
 # Streamlit
 .streamlit/
