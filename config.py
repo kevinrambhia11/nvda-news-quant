@@ -53,5 +53,16 @@ VAR_NOTIONAL = 1_000_000    # $ notional used in the VaR lines
 FUSED_CURVE_PATH = ARTIFACTS / "fused_equity.csv"
 FUSED_REPORT_PATH = ARTIFACTS / "fused_report.txt"
 
+# Intraday news-reaction pilot (60 days of 5-minute bars vs 15-min GDELT)
+INTRADAY_NVDA_5M = CACHE / "nvda_5m.csv"
+INTRADAY_QQQ_5M = CACHE / "qqq_5m.csv"
+INTRADAY_GDELT_15M = CACHE / "gdelt_15min.csv"
+INTRADAY_REPORT_PATH = ARTIFACTS / "intraday_report.txt"
+INTRADAY_EVENTS_PATH = ARTIFACTS / "intraday_events.csv"
+INTRADAY_PLOT_PATH = ARTIFACTS / "intraday_reaction.png"
+BURST_Z = 3.0               # article-count z-score to call a news burst
+BURST_MIN_ARTICLES = 20     # absolute floor so low-base spikes don't count
+HEADLINE_LOG_PATH = ARTIFACTS / "headline_log.csv"
+
 ARTIFACTS.mkdir(exist_ok=True)
 CACHE.mkdir(parents=True, exist_ok=True)

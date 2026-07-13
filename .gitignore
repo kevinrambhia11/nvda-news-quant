@@ -15,5 +15,11 @@ artifacts/cache/*
 # Keep the verified earnings calendar (Yahoo rate-limits this network too)
 !artifacts/cache/earnings_NVDA.csv
 
+# Keep the intraday snapshots: Yahoo only serves 5-min bars for a rolling
+# 60 days, so these cannot be re-downloaded later
+!artifacts/cache/nvda_5m.csv
+!artifacts/cache/qqq_5m.csv
+!artifacts/cache/gdelt_15min.csv
+
 # Streamlit
 .streamlit/

@@ -109,6 +109,16 @@ def cmd_fuse() -> None:
     print(report)
 
 
+def cmd_intraday_study() -> None:
+    from intraday.study import run_study
+    print(run_study())
+
+
+def cmd_log_headlines() -> None:
+    from intraday.logger import log_once
+    print(f"{log_once()} new headlines logged -> {config.HEADLINE_LOG_PATH}")
+
+
 def cmd_vol_train() -> None:
     from model.volatility import train_and_report
     print(train_and_report())
@@ -130,7 +140,8 @@ def main() -> None:
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("command",
                         choices=["fetch", "train", "backtest", "signal",
-                                 "vol-train", "vol-forecast", "fuse", "all"])
+                                 "vol-train", "vol-forecast", "fuse",
+                                 "intraday-study", "log-headlines", "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
     parser.add_argument("--no-finbert", action="store_true",
@@ -155,6 +166,10 @@ def main() -> None:
         cmd_vol_forecast()
     elif args.command == "fuse":
         cmd_fuse()
+    elif args.command == "intraday-study":
+        cmd_intraday_study()
+    elif args.command == "log-headlines":
+        cmd_log_headlines()
     elif args.command == "all":
         cmd_fetch(refresh=args.refresh)
         cmd_train()
