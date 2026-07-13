@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Generated artifacts (recreated by `python main.py train` / `vol-train`)
+artifacts/*
+!artifacts/cache/
+artifacts/cache/*
+
+# Keep the GDELT history cache: it took a cross-network workaround to
+# bootstrap (GDELT rate-limits some corporate IPs) and is only ~75 KB.
+!artifacts/cache/gdelt_daily.csv
+
+# Streamlit
+.streamlit/
