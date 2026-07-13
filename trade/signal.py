@@ -87,7 +87,14 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
     # features use everything known now, exactly as a training row would.
     next_day = next_trading_day(px.index.max())
     px_ext = px.reindex(px.index.append(pd.DatetimeIndex([next_day])))
-    ds = build_dataset(px_ext, bench, gdelt)
+    try:
+        from data.earnings import load_earnings_dates
+        earn_dates = load_earnings_dates()
+    except Exception as exc:
+        log.warning("Earnings calendar unavailable (%s); event features "
+                    "fall back to neutral values", exc)
+        earn_dates = None
+    ds = build_dataset(px_ext, bench, gdelt, earn_dates=earn_dates)
     missing = [f for f in feat_names if f not in ds.columns]
     if missing:
         raise RuntimeError(

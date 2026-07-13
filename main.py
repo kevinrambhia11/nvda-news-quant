@@ -28,6 +28,16 @@ logging.basicConfig(level=logging.INFO,
 log = logging.getLogger("main")
 
 
+def _load_earnings():
+    from data.earnings import load_earnings_dates
+    try:
+        return load_earnings_dates()
+    except Exception as exc:
+        log.warning("Earnings calendar unavailable (%s); event features "
+                    "fall back to neutral values", exc)
+        return None
+
+
 def cmd_fetch(refresh: bool = False) -> None:
     from data.news import load_gdelt_daily
     from data.prices import load_prices
@@ -37,6 +47,10 @@ def cmd_fetch(refresh: bool = False) -> None:
     gdelt = load_gdelt_daily(refresh=refresh)
     log.info("GDELT daily sentiment: %d days (%s -> %s)", len(gdelt),
              gdelt.index.min().date(), gdelt.index.max().date())
+    earn = _load_earnings()
+    if earn is not None:
+        log.info("Earnings calendar: %d dates (%s -> %s)", len(earn),
+                 earn.min().date(), earn.max().date())
 
 
 def _build() -> pd.DataFrame:
@@ -45,7 +59,7 @@ def _build() -> pd.DataFrame:
     from features.build import build_dataset
     px, bench = load_prices()
     gdelt = load_gdelt_daily()
-    ds = build_dataset(px, bench, gdelt)
+    ds = build_dataset(px, bench, gdelt, earn_dates=_load_earnings())
     ds.to_csv(config.FEATURES_PATH)
     log.info("Dataset: %d rows x %d cols -> %s", len(ds), ds.shape[1],
              config.FEATURES_PATH)
@@ -73,6 +87,28 @@ def cmd_backtest(frictionless: bool = False) -> None:
     print(report)
 
 
+def cmd_fuse() -> None:
+    from backtest.engine import format_fused_report, run_fused_backtest
+    from data.prices import load_prices
+    for path, cmd in ((config.OOS_PREDICTIONS_PATH, "train"),
+                      (config.VOL_OOS_PATH, "vol-train")):
+        if not path.exists():
+            sys.exit(f"Missing {path.name} - run `python main.py {cmd}` first")
+    oos = pd.read_csv(config.OOS_PREDICTIONS_PATH, index_col=0, parse_dates=[0])
+    # Report only the direction model's untouched holdout tail: earlier days
+    # were used to SELECT both models, so including them would flatter the
+    # fusion numbers.
+    split = oos.index[int(len(oos) * (1 - config.HOLDOUT_FRACTION))]
+    oos = oos.loc[oos.index >= split]
+    vol_oos = pd.read_csv(config.VOL_OOS_PATH, index_col=0, parse_dates=[0])
+    px, _ = load_prices()
+    stats, curves = run_fused_backtest(oos, vol_oos, px,
+                                       earn_dates=_load_earnings())
+    report = format_fused_report(stats, curves.index)
+    config.FUSED_REPORT_PATH.write_text(report, encoding="utf-8")
+    print(report)
+
+
 def cmd_vol_train() -> None:
     from model.volatility import train_and_report
     print(train_and_report())
@@ -94,7 +130,7 @@ def main() -> None:
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("command",
                         choices=["fetch", "train", "backtest", "signal",
-                                 "vol-train", "vol-forecast", "all"])
+                                 "vol-train", "vol-forecast", "fuse", "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
     parser.add_argument("--no-finbert", action="store_true",
@@ -117,6 +153,8 @@ def main() -> None:
         cmd_vol_train()
     elif args.command == "vol-forecast":
         cmd_vol_forecast()
+    elif args.command == "fuse":
+        cmd_fuse()
     elif args.command == "all":
         cmd_fetch(refresh=args.refresh)
         cmd_train()

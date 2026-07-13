@@ -23,14 +23,24 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.linear_model import LinearRegression
 
 import config
-from features.vol import (VOL_FEATURES, VOL_TECH_FEATURES, build_vol_dataset,
-                          garman_klass_vol)
+from features.vol import (EVENT_FEATURES, VOL_FEATURES, VOL_TECH_FEATURES,
+                          build_vol_dataset, garman_klass_vol)
 from trade.calendar import next_trading_day, session_close_hour_et
 
 log = logging.getLogger(__name__)
 
 HAR_FEATURES = ["gk_1", "gk_5", "gk_22"]
 EWMA_ALPHA = 0.06  # RiskMetrics lambda = 0.94
+
+
+def _load_earnings():
+    from data.earnings import load_earnings_dates
+    try:
+        return load_earnings_dates()
+    except Exception as exc:
+        log.warning("Earnings calendar unavailable (%s); event features "
+                    "fall back to neutral values", exc)
+        return None
 
 
 def _gbm() -> HistGradientBoostingRegressor:
@@ -42,11 +52,13 @@ def _gbm() -> HistGradientBoostingRegressor:
 
 # (name, feature list, model factory) - the pipeline SELECTS the winner by
 # out-of-sample QLIKE per horizon rather than assuming the fancier model wins
-# (in vol forecasting the parsimonious HAR frequently beats ML).
+# (in vol forecasting the parsimonious HAR frequently beats ML). Earnings
+# features enter via two candidates so their marginal value is measured.
 CANDIDATES = [
     ("GBM news+price", VOL_FEATURES, _gbm),
-    ("GBM price-only", VOL_TECH_FEATURES, _gbm),
+    ("GBM +events", VOL_FEATURES + EVENT_FEATURES, _gbm),
     ("HAR (classic)", HAR_FEATURES, LinearRegression),
+    ("HAR +events", HAR_FEATURES + EVENT_FEATURES, LinearRegression),
 ]
 
 
@@ -76,9 +88,10 @@ def _metrics(y_log: pd.Series, pred_log: pd.Series,
 
 
 def evaluate_horizon(px: pd.DataFrame, bench: pd.DataFrame,
-                     gdelt: pd.DataFrame, horizon: int):
-    """Walk-forward OOS comparison of all candidate forecasters."""
-    ds = build_vol_dataset(px, bench, gdelt, horizon=horizon)
+                     gdelt: pd.DataFrame, horizon: int, earn_dates=None):
+    """Walk-forward OOS predictions for every candidate and baseline."""
+    ds = build_vol_dataset(px, bench, gdelt, horizon=horizon,
+                           earn_dates=earn_dates)
     data = ds.dropna(subset=["gk_22", "tone_1d", "y_vol"]).copy()
     y = data["y_vol"]
     embargo = horizon - 1
@@ -91,15 +104,9 @@ def evaluate_horizon(px: pd.DataFrame, bench: pd.DataFrame,
     # EWMA smooths the SAME GK variance series the target is built from, so
     # the comparison is not handicapped by a measurement mismatch.
     ewm_var = np.exp(2 * data["gk_1"]).ewm(alpha=EWMA_ALPHA, min_periods=30).mean()
-    baselines = {
-        "Random walk": data["gk_1"],
-        "EWMA (GK var)": 0.5 * np.log(ewm_var),
-    }
-
-    results = {}
-    for name, pred in {**baselines, **fitted}.items():
-        results[name] = _metrics(y[oos], pred[oos], data.loc[oos, "realized_var"])
-    return data, results, oos, fitted
+    preds = {"Random walk": data["gk_1"],
+             "EWMA (GK var)": 0.5 * np.log(ewm_var), **fitted}
+    return data, preds, oos
 
 
 def train_and_report() -> str:
@@ -107,29 +114,45 @@ def train_and_report() -> str:
     from data.prices import load_prices
     px, bench = load_prices()
     gdelt = load_gdelt_daily()
+    earn_dates = _load_earnings()
 
     lines = ["=" * 66,
-             "  NVDA volatility model - walk-forward out-of-sample comparison",
+             "  NVDA volatility model - walk-forward comparison",
              "  (targets: log Garman-Klass vol; lower RMSE/QLIKE and higher",
-             "   R2 are better; QLIKE is the standard vol-forecast loss)",
+             "   R2 are better; candidates judged on a SELECTION window,",
+             "   the winner reported on the untouched HOLDOUT tail)",
              "=" * 66]
     models = {}
     trained_through = None
     for horizon in config.VOL_HORIZONS:
-        data, results, oos, fitted = evaluate_horizon(px, bench, gdelt, horizon)
-        lines.append(f"\n  Horizon {horizon} day(s)  |  {int(oos.sum())} OOS days "
-                     f"({data.index[oos][0].date()} -> {data.index[oos][-1].date()})")
+        data, preds, oos = evaluate_horizon(px, bench, gdelt, horizon,
+                                            earn_dates)
+        y, rv = data["y_vol"], data["realized_var"]
+        oos_idx = data.index[oos]
+        split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
+        sel = oos & (data.index < split)
+        hold = oos & (data.index >= split)
+
+        lines.append(f"\n  Horizon {horizon} day(s)  |  selection "
+                     f"{oos_idx[0].date()} -> {split.date()}  |  holdout -> "
+                     f"{oos_idx[-1].date()}")
         lines.append(f"  {'model':<22}{'RMSE(log)':>11}{'QLIKE':>9}{'R2':>8}")
-        for name, m in results.items():
+        sel_q = {}
+        for name, pred in preds.items():
+            m = _metrics(y[sel], pred[sel], rv[sel])
+            sel_q[name] = m["qlike"]
             lines.append(f"  {name:<22}{m['rmse']:>11.4f}{m['qlike']:>9.4f}"
                          f"{m['r2']:>8.3f}")
         best_name, best_feats, best_factory = min(
-            CANDIDATES, key=lambda c: results[c[0]]["qlike"])
-        lines.append(f"  -> selected for the desk: {best_name} "
-                     f"(best OOS QLIKE among fitted candidates)")
+            CANDIDATES, key=lambda c: sel_q[c[0]])
+        hm = _metrics(y[hold], preds[best_name][hold], rv[hold])
+        lines.append(f"  -> selected: {best_name} (best selection QLIKE "
+                     f"among fitted candidates)")
+        lines.append(f"     untouched holdout: RMSE {hm['rmse']:.4f} | "
+                     f"QLIKE {hm['qlike']:.4f} | R2 {hm['r2']:.3f}")
         if horizon == 1:
             oos_df = data.loc[oos, ["y_vol", "realized_var"]].copy()
-            oos_df["pred_selected"] = fitted[best_name][oos]
+            oos_df["pred_selected"] = preds[best_name][oos]
             oos_df.to_csv(config.VOL_OOS_PATH)
         models[horizon] = {"name": best_name, "features": best_feats,
                            "model": best_factory().fit(data[best_feats],
@@ -170,13 +193,15 @@ def forecast() -> dict:
 
     next_day = next_trading_day(px.index.max())
     px_ext = px.reindex(px.index.append(pd.DatetimeIndex([next_day])))
+    earn_dates = _load_earnings()
 
     out = {"generated_at": pd.Timestamp.now().isoformat(timespec="seconds"),
            "ticker": config.TICKER, "entry_day": str(next_day.date()),
            "model_trained_through": bundle.get("trained_through"),
            "var_notional": config.VAR_NOTIONAL, "horizons": {}}
     for horizon, spec in bundle["models"].items():
-        ds = build_vol_dataset(px_ext, bench, gdelt, horizon=horizon)
+        ds = build_vol_dataset(px_ext, bench, gdelt, horizon=horizon,
+                               earn_dates=earn_dates)
         row = ds.iloc[[-1]][spec["features"]]
         daily_vol = float(np.exp(spec["model"].predict(row)[0]))
         ann_vol = daily_vol * np.sqrt(252)
@@ -186,12 +211,22 @@ def forecast() -> dict:
         if horizon == 1:
             # GK measures intraday range only; scale by the historical
             # total/intraday variance ratio (last ~2y) so sizing and VaR
-            # include overnight gap risk.
+            # include overnight gap risk. On an earnings entry day the
+            # print-night gap dwarfs the ordinary overnight: add the mean
+            # squared gap over all PAST prints instead.
             gap = np.log(px["Open"] / px["Close"].shift(1))
             gk_var = garman_klass_vol(px) ** 2
             win_gk, win_gap = gk_var.iloc[-504:], gap.iloc[-504:]
             ratio = float((win_gk + win_gap ** 2).mean() / win_gk.mean())
-            total_daily = daily_vol * np.sqrt(ratio)
+            print_tonight = bool(float(row["earn_window"].iloc[0]) == 1.0) \
+                if "earn_window" in row.columns else False
+            if print_tonight and earn_dates is not None and len(earn_dates):
+                from features.build import print_gap_sq
+                gap_var = float(print_gap_sq(px, earn_dates).mean())
+                total_daily = float(np.sqrt(daily_vol ** 2 + gap_var))
+            else:
+                total_daily = daily_vol * np.sqrt(ratio)
+            entry["earnings_print_tonight"] = print_tonight
             total_ann = total_daily * np.sqrt(252)
             entry["total_daily_vol"] = round(total_daily, 5)
             entry["total_annualized_vol"] = round(total_ann, 4)
@@ -217,9 +252,12 @@ def format_forecast(f: dict) -> str:
     for h, e in f["horizons"].items():
         lines.append(f"  {h}-day intraday vol: {e['daily_vol']:.3%}/day  "
                      f"({e['annualized_vol']:.1%} annualized)  [{e['model']}]")
+    print_note = ("  !! EARNINGS PRINT TONIGHT - gap-risk sizing in effect"
+                  if h1.get("earnings_print_tonight") else "")
     lines += [
         f"  1-day TOTAL vol (incl. overnight gap): "
-        f"{h1['total_daily_vol']:.3%}/day ({h1['total_annualized_vol']:.1%} ann)",
+        f"{h1['total_daily_vol']:.3%}/day ({h1['total_annualized_vol']:.1%} ann)"
+        f"{print_note}",
         "-" * 62,
         f"  Target-vol sizing ({config.VOL_TARGET_ANN:.0%} ann target): "
         f"{h1['target_vol_weight']:.1%} of full position",

@@ -27,7 +27,7 @@ from sklearn.preprocessing import StandardScaler
 
 import config
 from backtest.engine import positions_from_probs
-from features.build import ALL_FEATURES, EXTENDED_FEATURES
+from features.build import ALL_FEATURES, EXTENDED_FEATURES, FULL_FEATURES
 
 log = logging.getLogger(__name__)
 
@@ -51,12 +51,21 @@ def _logit():
                          LogisticRegression(C=0.5, max_iter=2000))
 
 
-# (name, feature list, model factory)
+def _cal_gbm():
+    from sklearn.calibration import CalibratedClassifierCV
+    return CalibratedClassifierCV(_gbm_deep(), method="isotonic", cv=3)
+
+
+# (name, feature list, model factory, rolling window in trading days or None
+#  for an expanding window). ROLL_3Y tests whether dropping stale history
+# helps in the regime the expanding-window model failed in (2023+ holdout).
+ROLL_3Y = 756
 CANDIDATES = [
-    ("GBM base", ALL_FEATURES, _gbm),
-    ("GBM + vol context", EXTENDED_FEATURES, _gbm),
-    ("GBM deep + vol", EXTENDED_FEATURES, _gbm_deep),
-    ("Logistic L2 + vol", EXTENDED_FEATURES, _logit),
+    ("GBM deep + vol", EXTENDED_FEATURES, _gbm_deep, None),      # incumbent
+    ("GBM deep + events", FULL_FEATURES, _gbm_deep, None),
+    ("GBM base + events", FULL_FEATURES, _gbm, None),
+    ("GBM deep rolling-3y", FULL_FEATURES, _gbm_deep, ROLL_3Y),
+    ("GBM deep calibrated", FULL_FEATURES, _cal_gbm, None),
 ]
 
 
@@ -69,9 +78,10 @@ def _clean(dataset: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
-def walk_forward_probs(data: pd.DataFrame, features: list[str],
-                       factory) -> pd.Series:
-    """Strictly-OOS P(up) series (NaN before the first refit)."""
+def walk_forward_probs(data: pd.DataFrame, features: list[str], factory,
+                       window: int | None = None) -> pd.Series:
+    """Strictly-OOS P(up) series (NaN before the first refit). `window`
+    limits training to the most recent N rows (rolling); None = expanding."""
     X, y = data[features], data["y"]
     n = len(data)
     if n <= config.MIN_TRAIN_DAYS + config.RETRAIN_EVERY:
@@ -79,10 +89,12 @@ def walk_forward_probs(data: pd.DataFrame, features: list[str],
     probs = pd.Series(index=data.index, dtype=float)
     for start in range(config.MIN_TRAIN_DAYS, n, config.RETRAIN_EVERY):
         stop = min(start + config.RETRAIN_EVERY, n)
-        model = factory()
         # Embargo the last row: its open-to-open label is only realized at
         # the first OOS entry open, unknowable at (pre-open) refit time.
-        model.fit(X.iloc[:start - 1], y.iloc[:start - 1])
+        hi = start - 1
+        lo = 0 if window is None else max(0, hi - window)
+        model = factory()
+        model.fit(X.iloc[lo:hi], y.iloc[lo:hi])
         probs.iloc[start:stop] = model.predict_proba(X.iloc[start:stop])[:, 1]
     return probs
 
@@ -109,9 +121,9 @@ def select_and_train(dataset: pd.DataFrame) -> str:
     data = _clean(dataset)
 
     all_probs = {}
-    for name, feats, factory in CANDIDATES:
+    for name, feats, factory, window in CANDIDATES:
         log.info("walk-forward: %s ...", name)
-        all_probs[name] = walk_forward_probs(data, feats, factory)
+        all_probs[name] = walk_forward_probs(data, feats, factory, window)
 
     oos_mask = next(iter(all_probs.values())).notna()
     oos_idx = data.index[oos_mask]
@@ -126,7 +138,7 @@ def select_and_train(dataset: pd.DataFrame) -> str:
              "=" * 66,
              f"  {'candidate':<20}{'Sharpe':>8}{'AUC':>8}{'acc':>7}{'expo':>7}"]
     sel_stats = {}
-    for name, _, _ in CANDIDATES:
+    for name, _, _, _ in CANDIDATES:
         s = _strategy_stats(all_probs[name][sel_idx],
                             data.loc[sel_idx, "fwd_ret"], data.loc[sel_idx, "y"])
         sel_stats[name] = s
@@ -135,7 +147,7 @@ def select_and_train(dataset: pd.DataFrame) -> str:
 
     # nan_to_num: a candidate that never trades has NaN Sharpe - it must
     # lose the selection, not win it via NaN comparison quirks.
-    winner, win_feats, win_factory = max(
+    winner, win_feats, win_factory, win_window = max(
         CANDIDATES,
         key=lambda c: np.nan_to_num(sel_stats[c[0]]["sharpe"], nan=-np.inf))
     hold = _strategy_stats(all_probs[winner][hold_idx],
@@ -153,10 +165,12 @@ def select_and_train(dataset: pd.DataFrame) -> str:
     oos["prob_up"] = all_probs[winner][oos_mask]
     oos.to_csv(config.OOS_PREDICTIONS_PATH)
 
-    final = win_factory().fit(data[win_feats], data["y"])
+    train_slice = data if win_window is None else data.iloc[-win_window:]
+    final = win_factory().fit(train_slice[win_feats], train_slice["y"])
     joblib.dump({"model": final, "features": win_feats, "name": winner,
+                 "window": win_window,
                  "trained_through": str(data.index.max().date()),
-                 "n_rows": len(data)}, config.MODEL_PATH)
+                 "n_rows": len(train_slice)}, config.MODEL_PATH)
     log.info("Winner '%s' trained on %d rows -> %s", winner, len(data),
              config.MODEL_PATH)
 

@@ -12,7 +12,9 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from features.build import build_news_features, garman_klass_vol, news_asof
+from features.build import (build_news_features, earnings_calendar_features,
+                            garman_klass_vol, news_asof)
+from features.build import EVENT_FEATURES  # noqa: F401  (re-export for candidates)
 
 VOL_NEWS_FEATURES = ["news_vol_spike", "news_vol_ratio", "tone_1d",
                      "tone_z60", "tone_shock"]
@@ -22,7 +24,8 @@ VOL_FEATURES = VOL_NEWS_FEATURES + VOL_TECH_FEATURES
 
 
 def build_vol_dataset(px: pd.DataFrame, bench: pd.DataFrame,
-                      gdelt: pd.DataFrame, horizon: int = 1) -> pd.DataFrame:
+                      gdelt: pd.DataFrame, horizon: int = 1,
+                      earn_dates=None) -> pd.DataFrame:
     """Dataset indexed by entry day with VOL_FEATURES + [y_vol, realized_var].
 
     y_vol(d) = ln(mean Garman-Klass vol over sessions d..d+horizon-1);
@@ -52,6 +55,10 @@ def build_vol_dataset(px: pd.DataFrame, bench: pd.DataFrame,
     for col in ("news_vol_spike", "news_vol_ratio", "tone_1d", "tone_z60"):
         df[col] = news[col].to_numpy()
     df["tone_shock"] = (news["tone_1d"] - news["tone_7d"]).abs().to_numpy()
+
+    ev = earnings_calendar_features(df.index, earn_dates)
+    for col in EVENT_FEATURES:
+        df[col] = ev[col].to_numpy()
 
     fwd_mean_vol = gk.rolling(horizon).mean().shift(-(horizon - 1))
     df["y_vol"] = np.log(fwd_mean_vol)

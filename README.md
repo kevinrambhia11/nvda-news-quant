@@ -101,6 +101,21 @@ consistent with prices impounding news arrival within the day.
 `python main.py backtest --frictionless` re-runs the direction backtest
 with zero transaction costs (the idealized-execution bound).
 
+## Earnings features and fusion
+
+The feature set includes NVDA's earnings calendar (announcement dates are
+scheduled weeks ahead, so they are knowable pre-open; AMC convention). They
+improved the vol model — "HAR + events" is the selected 1-day forecaster —
+and did nothing for direction, consistent with the EMH prior.
+
+`python main.py fuse` runs the direction x volatility fusion on the
+untouched holdout only (days used to select either model are excluded),
+with earnings-night gap variance in the sizing. Holdout verdict
+(2023-08 -> 2026-07): the vol-sized always-long leg is the best
+risk-adjusted product (Sharpe 1.33 vs buy-and-hold 1.30 at ~30% shallower
+drawdown); adding the direction sign reduces drawdown further but costs
+return. The desk trades risk management, not return prediction.
+
 ## Dashboard
 
 `streamlit run dashboard.py` (or start "quant-desk" from `.claude/launch.json`,

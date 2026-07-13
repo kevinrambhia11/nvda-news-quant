@@ -93,6 +93,83 @@ def format_report(s: dict) -> str:
     return "\n".join(lines)
 
 
+def _leg_stats(weights: pd.Series, fwd_ret: pd.Series) -> tuple[dict, pd.Series]:
+    turnover = weights.diff().abs()
+    if len(turnover):
+        turnover.iloc[0] = abs(weights.iloc[0])
+    rets = weights * fwd_ret - turnover * config.COST_PER_TURNOVER
+    equity = (1 + rets).cumprod()
+    years = len(rets) / 252
+    sd = rets.std()
+    return ({"cagr": equity.iloc[-1] ** (1 / years) - 1 if years > 0 else np.nan,
+             "sharpe": rets.mean() / sd * np.sqrt(252) if sd > 0 else np.nan,
+             "maxdd": (equity / equity.cummax() - 1).min(),
+             "avg_exposure": float(weights.abs().mean())}, equity)
+
+
+def run_fused_backtest(oos: pd.DataFrame, vol_oos: pd.DataFrame,
+                       px: pd.DataFrame, earn_dates=None) -> tuple[dict, pd.DataFrame]:
+    """Item-2 fusion: the direction model sets the SIGN, the vol model sets
+    the SIZE (target-vol weight on total next-day vol, capped at 1 - no
+    leverage). Benchmarked against direction-only and a vol-sized always-long
+    leg, all on the same days with identical costs.
+
+    The intraday GK vol forecast is scaled to total vol with a trailing-2y
+    (intraday+overnight)/intraday variance ratio known at d-1; on earnings
+    entry days the print-night gap variance (expanding mean over strictly
+    PAST prints) replaces the ordinary overnight component, so target-vol
+    sizing actually derisks the ~4 print nights per year."""
+    from features.build import garman_klass_vol, print_gap_sq
+    df = oos.join(vol_oos[["pred_selected"]], how="inner")
+    if df.empty:
+        raise RuntimeError("Direction and volatility OOS windows do not overlap")
+
+    gap = np.log(px["Open"] / px["Close"].shift(1))
+    gk_var = garman_klass_vol(px) ** 2
+    ratio = ((gk_var + gap ** 2).rolling(504).mean()
+             / gk_var.rolling(504).mean()).shift(1)
+    ratio = ratio.reindex(df.index).ffill()
+    var_intra = np.exp(2 * df["pred_selected"])
+    total_var = var_intra * ratio
+    if earn_dates is not None and len(earn_dates):
+        past_gap_var = (print_gap_sq(px, earn_dates)
+                        .expanding().mean().shift(1).reindex(df.index))
+        mask = past_gap_var.notna()
+        total_var[mask] = var_intra[mask] + past_gap_var[mask]
+    total_ann = np.sqrt(total_var) * np.sqrt(252)
+    size = (config.VOL_TARGET_ANN / total_ann).clip(upper=1.0)
+
+    sign = positions_from_probs(df["prob_up"])
+    legs = {
+        "direction-only": sign,
+        "fused (sign x vol size)": sign * size,
+        "vol-sized long": size,
+        "buy & hold": pd.Series(1.0, index=df.index),
+    }
+    stats, curves = {}, pd.DataFrame(index=df.index)
+    for name, w in legs.items():
+        stats[name], curves[name] = _leg_stats(w, df["fwd_ret"])
+    curves.to_csv(config.FUSED_CURVE_PATH)
+    return stats, curves
+
+
+def format_fused_report(stats: dict, index) -> str:
+    lines = ["=" * 66,
+             "  Direction x volatility fusion - untouched holdout only",
+             "  (days used to select either model are excluded)",
+             f"  {index.min().date()} -> {index.max().date()}  "
+             f"({len(index)} trading days)",
+             f"  (sizing: {config.VOL_TARGET_ANN:.0%} ann target vol, "
+             f"no leverage, costs {config.COST_PER_TURNOVER:.2%}/change)",
+             "=" * 66,
+             f"  {'leg':<26}{'CAGR':>9}{'Sharpe':>8}{'MaxDD':>9}{'AvgExp':>8}"]
+    for name, s in stats.items():
+        lines.append(f"  {name:<26}{s['cagr']:>9.1%}{s['sharpe']:>8.2f}"
+                     f"{s['maxdd']:>9.1%}{s['avg_exposure']:>8.1%}")
+    lines.append("=" * 66)
+    return "\n".join(lines)
+
+
 def _maybe_plot(df: pd.DataFrame) -> None:
     try:
         import matplotlib

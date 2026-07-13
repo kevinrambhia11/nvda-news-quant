@@ -49,5 +49,9 @@ VOL_HORIZONS = (1, 5)       # forecast horizons in trading days
 VOL_TARGET_ANN = 0.30       # annualized vol anchor for target-vol sizing
 VAR_NOTIONAL = 1_000_000    # $ notional used in the VaR lines
 
+# Direction x volatility fusion backtest
+FUSED_CURVE_PATH = ARTIFACTS / "fused_equity.csv"
+FUSED_REPORT_PATH = ARTIFACTS / "fused_report.txt"
+
 ARTIFACTS.mkdir(exist_ok=True)
 CACHE.mkdir(parents=True, exist_ok=True)

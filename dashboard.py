@@ -226,6 +226,15 @@ with tab_dir:
             st.caption("21-day average model probability")
             st.line_chart(oos["prob_up"].rolling(21).mean())
 
+    fused_report = read_text(str(config.FUSED_REPORT_PATH))
+    if fused_report:
+        st.subheader("Direction x volatility fusion")
+        st.code(fused_report, language=None)
+        fused = read_csv(str(config.FUSED_CURVE_PATH))
+        if fused is not None:
+            st.caption("Growth of $1 (log scale)")
+            st.line_chart(np.log10(fused))
+
 
 # ---------------------------------------------------------------------------
 # Tab 3: Volatility

@@ -28,6 +28,17 @@ ALL_FEATURES = NEWS_FEATURES + TECH_FEATURES
 VOL_CONTEXT_FEATURES = ["gk_1", "gk_5", "gk_22", "tone_shock"]
 EXTENDED_FEATURES = ALL_FEATURES + VOL_CONTEXT_FEATURES
 
+# Earnings calendar (dates are scheduled weeks ahead, so knowable pre-open):
+# earn_window = the print lands inside this entry day's holding window (AMC);
+# post_earn = the gap session immediately after the print.
+EVENT_FEATURES = ["days_to_earn", "days_since_earn", "earn_window", "post_earn"]
+EARN_CAP = 30  # trading days; distances beyond this carry no signal
+
+# Market-regime state (both computed strictly from data through d-1)
+REGIME_FEATURES = ["dd_252", "vol_regime_z"]
+
+FULL_FEATURES = EXTENDED_FEATURES + EVENT_FEATURES + REGIME_FEATURES
+
 DAILY_VOL_FLOOR = 1e-4  # 1bp-per-day floor so logs never blow up on odd bars
 
 
@@ -72,6 +83,59 @@ def build_news_features(gdelt: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def earnings_calendar_features(index: pd.DatetimeIndex,
+                               earn_dates) -> pd.DataFrame:
+    """Trading-day distances to/from earnings announcements for each entry
+    day. AMC convention: the announcement on trading day E belongs to entry
+    day E (its open->open holding window contains the print). Future dates
+    beyond the index are approximated with business-day counts (they are
+    capped at EARN_CAP anyway). With no calendar available, features take
+    their neutral capped values."""
+    out = pd.DataFrame(index=index)
+    n = len(index)
+    days_to = np.full(n, float(EARN_CAP))
+    days_since = np.full(n, float(EARN_CAP))
+    if earn_dates is not None and len(earn_dates):
+        earn = pd.DatetimeIndex(earn_dates).sort_values()
+        pos = index.searchsorted(earn)          # index position holding each print
+        pos_in = np.unique(pos[pos < n])
+        future = earn[pos >= n]
+        i_arr = np.arange(n)
+        if len(pos_in):
+            nxt = np.searchsorted(pos_in, i_arr, side="left")
+            valid = nxt < len(pos_in)
+            days_to[valid] = pos_in[nxt[valid]] - i_arr[valid]
+            prv = np.searchsorted(pos_in, i_arr, side="right") - 1
+            valid = prv >= 0
+            days_since[valid] = i_arr[valid] - pos_in[prv[valid]]
+        if len(future):
+            from trade.calendar import NYSEHolidays
+            hols = NYSEHolidays().holidays(
+                index[-1], future[0]).values.astype("datetime64[D]")
+            extra = float(np.busday_count(np.datetime64(index[-1].date()),
+                                          np.datetime64(future[0].date()),
+                                          holidays=hols))
+            approx = (n - 1 - i_arr) + extra
+            days_to = np.minimum(days_to, np.maximum(approx, 0))
+    out["days_to_earn"] = np.clip(days_to, 0, EARN_CAP)
+    out["days_since_earn"] = np.clip(days_since, 0, EARN_CAP)
+    out["earn_window"] = (out["days_to_earn"] == 0).astype(float)
+    out["post_earn"] = (out["days_since_earn"] == 1).astype(float)
+    return out
+
+
+def print_gap_sq(px: pd.DataFrame, earn_dates) -> pd.Series:
+    """Squared overnight gap of the session AFTER each earnings print (AMC on
+    entry day E -> gap into session E+1), stamped at entry day E. Callers
+    derive risk estimates: expanding().mean().shift(1) for backtests (past
+    prints only), plain .mean() for a live forecast."""
+    gap = np.log(px["Open"] / px["Close"].shift(1))
+    earn = pd.DatetimeIndex(earn_dates).sort_values()
+    pos = px.index.searchsorted(earn)
+    pos = pos[pos < len(px.index) - 1]
+    return pd.Series(gap.to_numpy()[pos + 1] ** 2, index=px.index[pos])
+
+
 def build_tech_features(px: pd.DataFrame, bench: pd.DataFrame) -> pd.DataFrame:
     """Trading-day features stamped at day t using data through the close of t.
     (build_dataset shifts these by one row so entry day d sees t = d-1.)"""
@@ -91,6 +155,9 @@ def build_tech_features(px: pd.DataFrame, bench: pd.DataFrame) -> pd.DataFrame:
     out["gk_1"] = np.log(gk)
     out["gk_5"] = np.log(gk.rolling(5).mean())
     out["gk_22"] = np.log(gk.rolling(22).mean())
+    out["dd_252"] = close / close.rolling(252).max() - 1
+    roll = out["gk_22"].rolling(252)
+    out["vol_regime_z"] = (out["gk_22"] - roll.mean()) / roll.std()
     return out
 
 
@@ -107,9 +174,9 @@ def news_asof(index: pd.DatetimeIndex, news: pd.DataFrame) -> pd.DataFrame:
 
 
 def build_dataset(px: pd.DataFrame, bench: pd.DataFrame,
-                  gdelt: pd.DataFrame) -> pd.DataFrame:
+                  gdelt: pd.DataFrame, earn_dates=None) -> pd.DataFrame:
     """Full modelling dataset indexed by entry day, with columns
-    ALL_FEATURES + [fwd_ret, y]. The final row(s) may have NaN targets."""
+    FULL_FEATURES + [fwd_ret, y]. The final row(s) may have NaN targets."""
     tech = build_tech_features(px, bench).shift(1)  # entry day d sees close(d-1)
     df = tech.copy()
     df["dow"] = df.index.dayofweek
@@ -119,6 +186,10 @@ def build_dataset(px: pd.DataFrame, bench: pd.DataFrame,
     for col in NEWS_FEATURES:
         df[col] = merged[col].to_numpy()
     df["tone_shock"] = (merged["tone_1d"] - merged["tone_7d"]).abs().to_numpy()
+
+    ev = earnings_calendar_features(df.index, earn_dates)
+    for col in EVENT_FEATURES:
+        df[col] = ev[col].to_numpy()
 
     open_ = px["Open"]
     df["fwd_ret"] = open_.shift(-1) / open_ - 1  # held open(d) -> open(d+1)
