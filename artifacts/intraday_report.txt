@@ -1,0 +1,22 @@
+==================================================================
+  Intraday news-reaction pilot (5-min bars vs 15-min GDELT)
+  bars 2026-04-15 -> 2026-07-10 (4680 bars) | 58 burst events (18 intraday, 40 overnight)
+  returns are NVDA minus QQQ (market-adjusted)
+==================================================================
+
+  Reaction bar |abnormal return|: median 0.069% vs time-of-day-matched baseline 0.068% (1.0x)
+
+  tone bucket    n    react     +15m     +30m      +1h
+  negative       6  -0.051%  -0.005%   0.132%   0.091%
+  neutral        5   0.067%  -0.126%  -0.124%   0.091%
+  positive       5  -0.018%   0.043%   0.059%   0.026%
+
+  Post-reaction drift t-stats (positive minus negative tone):
+    +15m  spread   0.048%  t =  0.34  (n=5/6)
+    +30m  spread  -0.072%  t = -0.37  (n=5/6)
+    +1h   spread  -0.064%  t = -0.22  (n=5/6)
+    +3h   spread     nan%  t =   nan  (n=0/5)
+
+  Read |t| >= 2 as suggestive, not conclusive: with ~60 days of
+  data this pilot is powered to find large effects only.
+==================================================================
