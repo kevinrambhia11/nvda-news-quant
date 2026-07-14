@@ -39,6 +39,12 @@ REGIME_FEATURES = ["dd_252", "vol_regime_z"]
 
 FULL_FEATURES = EXTENDED_FEATURES + EVENT_FEATURES + REGIME_FEATURES
 
+# Cross-name context: competitor and industry news also moves NVDA.
+# comp_tone_rel (NVDA tone minus competitor tone) is the relative-sentiment
+# signal; the volume spikes capture sector-wide attention shocks.
+CROSS_FEATURES = ["comp_tone_1d", "comp_tone_rel", "comp_vol_spike",
+                  "ind_tone_1d", "ind_vol_spike"]
+
 DAILY_VOL_FLOOR = 1e-4  # 1bp-per-day floor so logs never blow up on odd bars
 
 
@@ -174,9 +180,11 @@ def news_asof(index: pd.DatetimeIndex, news: pd.DataFrame) -> pd.DataFrame:
 
 
 def build_dataset(px: pd.DataFrame, bench: pd.DataFrame,
-                  gdelt: pd.DataFrame, earn_dates=None) -> pd.DataFrame:
+                  gdelt: pd.DataFrame, earn_dates=None,
+                  aux: dict | None = None) -> pd.DataFrame:
     """Full modelling dataset indexed by entry day, with columns
-    FULL_FEATURES + [fwd_ret, y]. The final row(s) may have NaN targets."""
+    FULL_FEATURES + CROSS_FEATURES + [fwd_ret, y]. The final row(s) may have
+    NaN targets; cross features are NaN when aux series are unavailable."""
     tech = build_tech_features(px, bench).shift(1)  # entry day d sees close(d-1)
     df = tech.copy()
     df["dow"] = df.index.dayofweek
@@ -190,6 +198,20 @@ def build_dataset(px: pd.DataFrame, bench: pd.DataFrame,
     ev = earnings_calendar_features(df.index, earn_dates)
     for col in EVENT_FEATURES:
         df[col] = ev[col].to_numpy()
+
+    # Competitor/industry cross features (same d-1 cutoff discipline)
+    for col in CROSS_FEATURES:
+        df[col] = np.nan
+    aux = aux or {}
+    if "competitors" in aux:
+        m = news_asof(df.index, build_news_features(aux["competitors"]))
+        df["comp_tone_1d"] = m["tone_1d"].to_numpy()
+        df["comp_vol_spike"] = m["news_vol_spike"].to_numpy()
+        df["comp_tone_rel"] = df["tone_1d"] - df["comp_tone_1d"]
+    if "industry" in aux:
+        m = news_asof(df.index, build_news_features(aux["industry"]))
+        df["ind_tone_1d"] = m["tone_1d"].to_numpy()
+        df["ind_vol_spike"] = m["news_vol_spike"].to_numpy()
 
     open_ = px["Open"]
     df["fwd_ret"] = open_.shift(-1) / open_ - 1  # held open(d) -> open(d+1)

@@ -94,7 +94,8 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         log.warning("Earnings calendar unavailable (%s); event features "
                     "fall back to neutral values", exc)
         earn_dates = None
-    ds = build_dataset(px_ext, bench, gdelt, earn_dates=earn_dates)
+    aux = news_mod.load_aux_gdelt()
+    ds = build_dataset(px_ext, bench, gdelt, earn_dates=earn_dates, aux=aux)
     missing = [f for f in feat_names if f not in ds.columns]
     if missing:
         raise RuntimeError(

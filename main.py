@@ -54,15 +54,16 @@ def cmd_fetch(refresh: bool = False) -> None:
 
 
 def _build() -> pd.DataFrame:
-    from data.news import load_gdelt_daily
+    from data.news import load_aux_gdelt, load_gdelt_daily
     from data.prices import load_prices
     from features.build import build_dataset
     px, bench = load_prices()
     gdelt = load_gdelt_daily()
-    ds = build_dataset(px, bench, gdelt, earn_dates=_load_earnings())
+    aux = load_aux_gdelt()
+    ds = build_dataset(px, bench, gdelt, earn_dates=_load_earnings(), aux=aux)
     ds.to_csv(config.FEATURES_PATH)
-    log.info("Dataset: %d rows x %d cols -> %s", len(ds), ds.shape[1],
-             config.FEATURES_PATH)
+    log.info("Dataset: %d rows x %d cols (aux series: %s) -> %s", len(ds),
+             ds.shape[1], sorted(aux) or "none", config.FEATURES_PATH)
     return ds
 
 

@@ -7,6 +7,17 @@ BENCHMARK = "QQQ"
 # GDELT full-text search query (GDELT monitors global online news media)
 GDELT_QUERY = "NVIDIA sourcelang:english"
 
+# Auxiliary news series: competitor and industry coverage also moves NVDA.
+# Edit these queries to tune which names/terms count as "competitors" and
+# "industry" - each becomes a cached daily tone/volume series and a set of
+# cross features the direction model can use.
+AUX_GDELT_QUERIES = {
+    "competitors": ('("Advanced Micro Devices" OR Intel OR TSMC OR Broadcom '
+                    'OR Qualcomm) sourcelang:english'),
+    "industry": ('(semiconductors OR chipmakers OR "AI chips") '
+                 'sourcelang:english'),
+}
+
 # Data range (GDELT DOC 2.0 API coverage begins January 2017)
 TRAIN_START = "2017-01-01"
 

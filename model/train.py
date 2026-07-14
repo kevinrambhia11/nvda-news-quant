@@ -27,7 +27,8 @@ from sklearn.preprocessing import StandardScaler
 
 import config
 from backtest.engine import positions_from_probs
-from features.build import ALL_FEATURES, EXTENDED_FEATURES, FULL_FEATURES
+from features.build import (ALL_FEATURES, CROSS_FEATURES, EXTENDED_FEATURES,
+                            FULL_FEATURES)
 
 log = logging.getLogger(__name__)
 
@@ -67,6 +68,20 @@ CANDIDATES = [
     ("GBM deep rolling-3y", FULL_FEATURES, _gbm_deep, ROLL_3Y),
     ("GBM deep calibrated", FULL_FEATURES, _cal_gbm, None),
 ]
+# Competitor/industry candidate joins only once its series are bootstrapped
+# (an all-NaN column inside a training window breaks HGB's binning).
+CROSS_CANDIDATE = ("GBM deep + cross", FULL_FEATURES + CROSS_FEATURES,
+                   _gbm_deep, None)
+
+
+def active_candidates(data: pd.DataFrame) -> list:
+    cands = list(CANDIDATES)
+    if not data[CROSS_FEATURES].isna().all().any():
+        cands.append(CROSS_CANDIDATE)
+    else:
+        log.info("Cross features not yet bootstrapped - competitor/industry "
+                 "candidate skipped")
+    return cands
 
 
 def _clean(dataset: pd.DataFrame) -> pd.DataFrame:
@@ -119,9 +134,10 @@ def select_and_train(dataset: pd.DataFrame) -> str:
     persist the winner's full-OOS predictions and final model. Returns the
     printable selection report."""
     data = _clean(dataset)
+    candidates = active_candidates(data)
 
     all_probs = {}
-    for name, feats, factory, window in CANDIDATES:
+    for name, feats, factory, window in candidates:
         log.info("walk-forward: %s ...", name)
         all_probs[name] = walk_forward_probs(data, feats, factory, window)
 
@@ -138,7 +154,7 @@ def select_and_train(dataset: pd.DataFrame) -> str:
              "=" * 66,
              f"  {'candidate':<20}{'Sharpe':>8}{'AUC':>8}{'acc':>7}{'expo':>7}"]
     sel_stats = {}
-    for name, _, _, _ in CANDIDATES:
+    for name, _, _, _ in candidates:
         s = _strategy_stats(all_probs[name][sel_idx],
                             data.loc[sel_idx, "fwd_ret"], data.loc[sel_idx, "y"])
         sel_stats[name] = s
@@ -148,7 +164,7 @@ def select_and_train(dataset: pd.DataFrame) -> str:
     # nan_to_num: a candidate that never trades has NaN Sharpe - it must
     # lose the selection, not win it via NaN comparison quirks.
     winner, win_feats, win_factory, win_window = max(
-        CANDIDATES,
+        candidates,
         key=lambda c: np.nan_to_num(sel_stats[c[0]]["sharpe"], nan=-np.inf))
     hold = _strategy_stats(all_probs[winner][hold_idx],
                            data.loc[hold_idx, "fwd_ret"], data.loc[hold_idx, "y"])

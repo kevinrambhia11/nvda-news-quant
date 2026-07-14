@@ -51,7 +51,8 @@ class GdeltRateLimited(RuntimeError):
     simply re-run `python main.py fetch` later to resume where you left off."""
 
 
-def _gdelt_timeline_chunk(mode: str, start: datetime, end: datetime) -> pd.Series:
+def _gdelt_timeline_chunk(mode: str, start: datetime, end: datetime,
+                          query: str) -> pd.Series:
     """One GDELT timeline request. mode: 'timelinetone' or 'timelinevolraw'.
 
     GDELT signals throttling either as HTTP 429 or as an HTTP-200 text page
@@ -59,7 +60,7 @@ def _gdelt_timeline_chunk(mode: str, start: datetime, end: datetime) -> pd.Serie
     backoff, then surfaced as GdeltRateLimited.
     """
     params = {
-        "query": config.GDELT_QUERY,
+        "query": query,
         "mode": mode,
         "format": "json",
         "startdatetime": start.strftime("%Y%m%d000000"),
@@ -101,13 +102,16 @@ def _gdelt_timeline_chunk(mode: str, start: datetime, end: datetime) -> pd.Serie
     return df.set_index("date")["value"].astype(float)
 
 
-def fetch_gdelt_daily(start: str, end: str | None = None) -> pd.DataFrame:
-    """Daily average tone and raw article count for the GDELT query.
+def fetch_gdelt_daily(start: str, end: str | None = None,
+                      query: str = config.GDELT_QUERY,
+                      cache_prefix: str = "gdelt") -> pd.DataFrame:
+    """Daily average tone and raw article count for a GDELT query.
 
     Returns a calendar-day (UTC) indexed DataFrame with columns
     [tone, art_count]. Chunked into <=300-day requests so GDELT always
     returns daily granularity; each completed historical chunk is cached on
-    disk, so an interrupted fetch resumes instead of restarting.
+    disk (namespaced by cache_prefix), so an interrupted fetch resumes
+    instead of restarting.
     """
     start_dt = pd.Timestamp(start).to_pydatetime()
     end_dt = (pd.Timestamp(end).to_pydatetime() if end
@@ -117,15 +121,16 @@ def fetch_gdelt_daily(start: str, end: str | None = None) -> pd.DataFrame:
     cursor = start_dt
     while cursor < end_dt:
         chunk_end = min(cursor + timedelta(days=300), end_dt)
-        chunk_cache = (config.CACHE /
-                       f"gdelt_chunk_{cursor:%Y%m%d}_{chunk_end:%Y%m%d}.csv")
+        chunk_cache = (config.CACHE / (f"{cache_prefix}_chunk_"
+                                       f"{cursor:%Y%m%d}_{chunk_end:%Y%m%d}.csv"))
         if chunk_cache.exists():
             part = pd.read_csv(chunk_cache, index_col="date", parse_dates=["date"])
         else:
-            log.info("GDELT fetch %s -> %s", cursor.date(), chunk_end.date())
-            tone = _gdelt_timeline_chunk("timelinetone", cursor, chunk_end)
+            log.info("GDELT fetch [%s] %s -> %s", cache_prefix, cursor.date(),
+                     chunk_end.date())
+            tone = _gdelt_timeline_chunk("timelinetone", cursor, chunk_end, query)
             time.sleep(6.5)  # GDELT allows max one request per 5 seconds
-            vol = _gdelt_timeline_chunk("timelinevolraw", cursor, chunk_end)
+            vol = _gdelt_timeline_chunk("timelinevolraw", cursor, chunk_end, query)
             time.sleep(6.5)
             part = pd.DataFrame({"tone": tone, "art_count": vol})
             part.index.name = "date"
@@ -140,13 +145,14 @@ def fetch_gdelt_daily(start: str, end: str | None = None) -> pd.DataFrame:
     if df.empty:
         raise RuntimeError(
             f"GDELT returned no data for {start} -> {end or 'now'} "
-            f"(query: {config.GDELT_QUERY!r})")
+            f"(query: {query!r})")
     return df
 
 
-def load_gdelt_daily(refresh: bool = False) -> pd.DataFrame:
+def load_gdelt_daily(refresh: bool = False, name: str = "gdelt_daily",
+                     query: str = config.GDELT_QUERY) -> pd.DataFrame:
     """Cached GDELT daily series; incrementally extends the cache when stale."""
-    cache_file = config.CACHE / "gdelt_daily.csv"
+    cache_file = config.CACHE / f"{name}.csv"
     today_utc = pd.Timestamp.now(tz="UTC").tz_localize(None).normalize()
     if cache_file.exists() and not refresh:
         cached = pd.read_csv(cache_file, index_col="date", parse_dates=["date"])
@@ -154,14 +160,30 @@ def load_gdelt_daily(refresh: bool = False) -> pd.DataFrame:
             last = cached.index.max()
             if last >= today_utc - pd.Timedelta(days=1):
                 return cached
-            fresh = fetch_gdelt_daily((last - pd.Timedelta(days=3)).strftime("%Y-%m-%d"))
+            fresh = fetch_gdelt_daily(
+                (last - pd.Timedelta(days=3)).strftime("%Y-%m-%d"),
+                query=query, cache_prefix=name)
             merged = pd.concat([cached, fresh])
             merged = merged[~merged.index.duplicated(keep="last")].sort_index()
             atomic_to_csv(merged, cache_file)
             return merged
-    df = fetch_gdelt_daily(config.TRAIN_START)
+    df = fetch_gdelt_daily(config.TRAIN_START, query=query, cache_prefix=name)
     atomic_to_csv(df, cache_file)
     return df
+
+
+def load_aux_gdelt(refresh: bool = False) -> dict:
+    """Competitor/industry daily series from config.AUX_GDELT_QUERIES.
+    Each failure degrades to omission (features go NaN) rather than blocking
+    the pipeline - the caches bootstrap once and update incrementally."""
+    out = {}
+    for series, query in config.AUX_GDELT_QUERIES.items():
+        try:
+            out[series] = load_gdelt_daily(refresh, name=f"gdelt_{series}",
+                                           query=query)
+        except Exception as exc:
+            log.warning("Aux GDELT series %r unavailable (%s)", series, exc)
+    return out
 
 
 # ---------------------------------------------------------------------------

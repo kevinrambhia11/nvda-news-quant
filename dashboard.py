@@ -280,6 +280,37 @@ with tab_news:
         st.line_chart(g["tone"].rolling(30).mean())
         st.area_chart(g["art_count"].rolling(7).mean())
 
+    st.subheader("Competitors & industry")
+    st.caption("Cross-name news series feeding the direction model's "
+               "'GBM deep + cross' candidate. Queries are parameters in "
+               "config.AUX_GDELT_QUERIES.")
+    tone_panel = {}
+    for series, query in config.AUX_GDELT_QUERIES.items():
+        a = read_csv(str(config.CACHE / f"gdelt_{series}.csv"))
+        c1, c2 = st.columns([1, 3])
+        with c1:
+            st.markdown(f"**{series}**")
+            st.caption(query)
+        with c2:
+            if a is None or a.empty:
+                st.info("Series not bootstrapped yet - history download "
+                        "pending (GDELT rate limits).")
+            else:
+                m = st.columns(3)
+                m[0].metric("Last tone", f"{a['tone'].iloc[-1]:+.2f}")
+                m[1].metric("Tone 7d avg",
+                            f"{a['tone'].rolling(7).mean().iloc[-1]:+.2f}")
+                base = a["art_count"].rolling(30).mean().iloc[-1]
+                spike = (a["art_count"].iloc[-1] / base) if base else np.nan
+                m[2].metric("Volume vs 30d", f"{spike:.1f}x")
+                tone_panel[series] = a["tone"].rolling(7).mean()
+    if tone_panel:
+        nv = read_csv(str(config.CACHE / "gdelt_daily.csv"))
+        if nv is not None:
+            tone_panel["NVIDIA"] = nv["tone"].rolling(7).mean()
+        st.caption("7-day average tone: NVIDIA vs competitors vs industry")
+        st.line_chart(pd.DataFrame(tone_panel))
+
     st.subheader("Data caches")
     rows = []
     for f in sorted(config.CACHE.glob("*.csv")):
