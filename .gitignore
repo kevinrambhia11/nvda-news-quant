@@ -26,5 +26,21 @@ artifacts/cache/*
 !artifacts/cache/qqq_5m.csv
 !artifacts/cache/gdelt_15min.csv
 
+# BigQuery-sourced competitor series (rebuildable, but only with credentials)
+!artifacts/cache/gdelt_competitors.csv
+!artifacts/cache/gdelt_industry.csv
+
+# Display artifacts for the hosted dashboard (Streamlit Community Cloud
+# renders whatever the repo carries; push after retraining to refresh it)
+!artifacts/*.txt
+!artifacts/*.joblib
+!artifacts/oos_predictions.csv
+!artifacts/vol_oos_predictions.csv
+!artifacts/equity_curve.csv
+!artifacts/fused_equity.csv
+!artifacts/intraday_events.csv
+!artifacts/signal_*.json
+!artifacts/vol_forecast_*.json
+
 # Streamlit
 .streamlit/

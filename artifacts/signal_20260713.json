@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-07-13T18:18:50",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-13",
+  "last_close": 210.96,
+  "model_trained_through": "2026-07-09",
+  "model_prob_up": 0.5715,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.1002,
+  "headline_count": 148,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 12,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.5651,
+  "most_negative": [
+    {
+      "title": "$NVDA regardless of market overall performance  this shit should be moving up at this point.  Its been beaten up.",
+      "source": "stocktwits",
+      "score": -0.793
+    },
+    {
+      "title": "Nvidia Stock Is Losing to the Market in 2026. Time to Walk Away or Double Down? - The Motley Fool",
+      "source": "google_news",
+      "score": -0.67
+    },
+    {
+      "title": "AI Chips Today - AI Advancements Revolutionize Drug Discovery and Cancer Treatment",
+      "source": "yahoo_rss",
+      "score": -0.66
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Reviewing some of the high-conviction macro setups highlighted earlier. Real data logs remain the ultimate validator. \n \nBased on recent market execution, multiple tactical selections delivered massive trend expansion, with several striking fresh psychological highs before local cooling: \n\u2022 $PLTR : Triggered at $35 \u2192 +260% gain \n\u2022 $NVDA : Triggered at $45 \u2192 +180% gain \n\u2022 $ASTS : Triggered at $15 \u2192 +230% gain \n\u2022 $CEG  : Triggered at baseline lows \u2192 +150% gain \n\u2022 $VRT  : Triggered at key technical support \u2192 +190% gain \n \n Our next high-probability breakout warning is dropping soon. Click my profile to analyze our newly updated portfolio monitoring matrix and turn on alerts to guarantee you secure our raw technical entry signals right as institutional volume hits, rather than chasing after the expansion has materialized.",
+      "source": "stocktwits",
+      "score": 0.969
+    },
+    {
+      "title": "@AlphaBull_10M consulted Claude Fable (1/5): \n \nPhase 1 \u2014 Compute (2023\u201324, mature): \n1. $NVDA \u2014 the genesis; ~90% of accelerator spend \n2. $TSM \u2014 manufactures every leading-edge AI chip, plus the CoWoS packaging bottleneck \n3. AVGO \u2014 custom ASICs (Google TPU, Meta, ByteDance) and networking silicon \n4. $AMD \u2014 the credible second source in GPUs \n5. ASML \u2014 the EUV monopoly beneath all of it \n \nPhase 2 \u2014 Neoclouds &amp; deployment (2024\u201325, mature): \n1. $CRWV \u2014 the pure-play; $66B+ contracted backlog, guiding ~140% growth in 2026 \n2. ORCL \u2014 the hyperscaler-adjacent winner via OCI and Stargate \n3. $NBIS \u2014 the international neocloud pure-play \n4. DELL \u2014 AI server integration at scale \n5. CLS \u2014 hyperscaler rack integration, Google TPU board/rack assembly, and the shift to liquid-cooled rack economics",
+      "source": "stocktwits",
+      "score": 0.9
+    },
+    {
+      "title": "$NVDA has broken out! High-conviction bulls are ready for a massive rally! \n \nNvidia has officially delivered a stellar breakout, further solidifying the absolute bull case for the coming weeks! The momentum is completely undeniable. \n \nPrice is now hovering safely above the 50DMA, and the ultimate playbook is to see this critical line of steel hold firm. If this support remains intact, we are looking at a textbook 17% upside potential straight into a massive short squeeze! \n \nI share what I&#39;m watching in real time. Stay notified.",
+      "source": "stocktwits",
+      "score": 0.847
+    }
+  ]
+}

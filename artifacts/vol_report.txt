@@ -1,0 +1,29 @@
+==================================================================
+  NVDA volatility model - walk-forward comparison
+  (targets: log Garman-Klass vol; lower RMSE/QLIKE and higher
+   R2 are better; candidates judged on a SELECTION window,
+   the winner reported on the untouched HOLDOUT tail)
+==================================================================
+
+  Horizon 1 day(s)  |  selection 2018-09-06 -> 2023-05-18  |  holdout -> 2026-07-10
+  model                   RMSE(log)    QLIKE      R2
+  Random walk                0.4179   0.4590   0.171
+  EWMA (GK var)              0.3967   0.3127   0.253
+  GBM news+price             0.3686   0.3721   0.355
+  GBM +events                0.3649   0.3547   0.368
+  HAR (classic)              0.3515   0.3343   0.414
+  HAR +events                0.3502   0.3299   0.418
+  -> selected: HAR +events (best selection QLIKE among fitted candidates)
+     untouched holdout: RMSE 0.3581 | QLIKE 0.3083 | R2 0.291
+
+  Horizon 5 day(s)  |  selection 2018-09-06 -> 2023-05-15  |  holdout -> 2026-07-06
+  model                   RMSE(log)    QLIKE      R2
+  Random walk                0.3736   0.3486  -0.051
+  EWMA (GK var)              0.2928   0.1755   0.355
+  GBM news+price             0.2935   0.2128   0.352
+  GBM +events                0.2950   0.2189   0.345
+  HAR (classic)              0.2666   0.1868   0.465
+  HAR +events                0.2662   0.1870   0.467
+  -> selected: HAR (classic) (best selection QLIKE among fitted candidates)
+     untouched holdout: RMSE 0.2419 | QLIKE 0.1380 | R2 0.374
+==================================================================

@@ -1,0 +1,14 @@
+==================================================================
+  Direction model - candidate selection (walk-forward OOS)
+  selection window: 2019-05-23 -> 2023-08-28  |  holdout: 2023-08-29 -> 2026-07-09
+==================================================================
+  candidate             Sharpe     AUC    acc   expo
+  GBM deep + vol          1.51   0.538  0.538  52.6%
+  GBM deep + events       1.07   0.527  0.524  54.2%
+  GBM base + events       1.06   0.516  0.522  55.6%
+  GBM deep rolling-3y     0.72   0.510  0.507  53.2%
+  GBM deep calibrated     1.26   0.492  0.531  87.3%
+------------------------------------------------------------------
+  WINNER (by selection Sharpe): GBM deep + vol
+  Untouched holdout: Sharpe 0.97 (buy&hold 1.30) | AUC 0.479 | acc 0.501 | exposure 60.7%
+==================================================================

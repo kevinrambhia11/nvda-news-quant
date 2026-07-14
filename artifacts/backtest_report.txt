@@ -1,0 +1,15 @@
+==============================================================
+  NVDA news-sentiment strategy - out-of-sample backtest
+  2019-05-23 -> 2026-07-09  (1791 trading days, 7.1 years)
+==============================================================
+                                Strategy    Buy & hold
+  Total return                  2037.9%      5344.1%
+  CAGR                            53.9%        75.5%
+  Ann. volatility                 38.2%        51.7%
+  Sharpe (rf=0)                    1.32         1.35
+  Max drawdown                   -32.4%       -67.2%
+--------------------------------------------------------------
+  Market exposure:    55.8% of days
+  Hit rate (active):  55.8%
+  Position changes:   590 (cost 0.05% per change)
+==============================================================

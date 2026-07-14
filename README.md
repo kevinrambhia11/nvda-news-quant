@@ -134,6 +134,22 @@ HOLDOUT tail. Current honest verdict: the winner's selection-window Sharpe
 the direction edge does not demonstrably survive the recent regime. Treat
 the direction signal as context; the volatility model is the workhorse.
 
+## Hosted dashboard (Streamlit Community Cloud)
+
+The repo is deploy-ready: display artifacts (reports, OOS predictions,
+equity curves, trained models, latest signals) are committed, and
+requirements.txt pins scikit-learn to the training version so the models
+unpickle in the cloud container. To deploy: sign in at share.streamlit.io
+with GitHub -> New app -> repo `kevinrambhia11/nvda-news-quant`, branch
+`main`, file `dashboard.py` -> Deploy.
+
+Notes: apps deployed from public repos get a PUBLIC url - this dashboard
+contains no secrets, but anyone with the link can view it. The hosted copy
+shows data as of the last `git push` (push after retraining to refresh);
+the local instance (`quant-desk` on port 8502) remains the live desk. The
+BigQuery competitor series and GDELT top-ups degrade gracefully to the
+committed caches in the cloud, where no credentials exist.
+
 ## Honest limitations
 
 - **Daily bars only.** News is absorbed into prices within minutes; a daily
