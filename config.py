@@ -8,14 +8,23 @@ BENCHMARK = "QQQ"
 GDELT_QUERY = "NVIDIA sourcelang:english"
 
 # Auxiliary news series: competitor and industry coverage also moves NVDA.
-# Edit these queries to tune which names/terms count as "competitors" and
-# "industry" - each becomes a cached daily tone/volume series and a set of
-# cross features the direction model can use.
-AUX_GDELT_QUERIES = {
-    "competitors": ('("Advanced Micro Devices" OR Intel OR TSMC OR Broadcom '
-                    'OR Qualcomm) sourcelang:english'),
-    "industry": ('(semiconductors OR chipmakers OR "AI chips") '
-                 'sourcelang:english'),
+# Each becomes a cached daily tone/volume series and cross features for the
+# direction model. Sources are permanent per series (never spliced):
+#   bigquery  - GKG organization matching via the service account (instant)
+#   gdelt_api - the DOC API full-text search (rate-limited on this network)
+AUX_SERIES = {
+    "competitors": {
+        "source": "bigquery",
+        "terms": ["advanced micro devices", "intel corp",
+                  "taiwan semiconductor", "broadcom", "qualcomm"],
+        "label": "AMD / Intel / TSMC / Broadcom / Qualcomm (BigQuery GKG)",
+    },
+    "industry": {
+        "source": "gdelt_api",
+        "query": ('(semiconductors OR chipmakers OR "AI chips") '
+                  'sourcelang:english'),
+        "label": "semiconductor industry coverage (GDELT DOC API)",
+    },
 }
 
 # Data range (GDELT DOC 2.0 API coverage begins January 2017)

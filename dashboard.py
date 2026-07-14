@@ -282,15 +282,15 @@ with tab_news:
 
     st.subheader("Competitors & industry")
     st.caption("Cross-name news series feeding the direction model's "
-               "'GBM deep + cross' candidate. Queries are parameters in "
-               "config.AUX_GDELT_QUERIES.")
+               "'GBM deep + cross' candidate. Parameters live in "
+               "config.AUX_SERIES.")
     tone_panel = {}
-    for series, query in config.AUX_GDELT_QUERIES.items():
+    for series, spec in config.AUX_SERIES.items():
         a = read_csv(str(config.CACHE / f"gdelt_{series}.csv"))
         c1, c2 = st.columns([1, 3])
         with c1:
             st.markdown(f"**{series}**")
-            st.caption(query)
+            st.caption(spec["label"])
         with c2:
             if a is None or a.empty:
                 st.info("Series not bootstrapped yet - history download "

@@ -110,6 +110,11 @@ def cmd_fuse() -> None:
     print(report)
 
 
+def cmd_bq_probe() -> None:
+    from data.bigquery_gdelt import probe
+    print(probe())
+
+
 def cmd_intraday_study() -> None:
     from intraday.study import run_study
     print(run_study())
@@ -142,7 +147,8 @@ def main() -> None:
     parser.add_argument("command",
                         choices=["fetch", "train", "backtest", "signal",
                                  "vol-train", "vol-forecast", "fuse",
-                                 "intraday-study", "log-headlines", "all"])
+                                 "intraday-study", "log-headlines",
+                                 "bq-probe", "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
     parser.add_argument("--no-finbert", action="store_true",
@@ -171,6 +177,8 @@ def main() -> None:
         cmd_intraday_study()
     elif args.command == "log-headlines":
         cmd_log_headlines()
+    elif args.command == "bq-probe":
+        cmd_bq_probe()
     elif args.command == "all":
         cmd_fetch(refresh=args.refresh)
         cmd_train()

@@ -68,16 +68,16 @@ CANDIDATES = [
     ("GBM deep rolling-3y", FULL_FEATURES, _gbm_deep, ROLL_3Y),
     ("GBM deep calibrated", FULL_FEATURES, _cal_gbm, None),
 ]
-# Competitor/industry candidate joins only once its series are bootstrapped
-# (an all-NaN column inside a training window breaks HGB's binning).
-CROSS_CANDIDATE = ("GBM deep + cross", FULL_FEATURES + CROSS_FEATURES,
-                   _gbm_deep, None)
-
-
 def active_candidates(data: pd.DataFrame) -> list:
+    """The competitor/industry candidate uses whichever cross features have
+    data (an all-NaN column inside a training window breaks HGB's binning);
+    it joins the tournament once at least one aux series is bootstrapped."""
     cands = list(CANDIDATES)
-    if not data[CROSS_FEATURES].isna().all().any():
-        cands.append(CROSS_CANDIDATE)
+    avail = [c for c in CROSS_FEATURES if not data[c].isna().all()]
+    if len(avail) >= 3:
+        cands.append(("GBM deep + cross", FULL_FEATURES + avail,
+                      _gbm_deep, None))
+        log.info("Cross candidate active with features: %s", avail)
     else:
         log.info("Cross features not yet bootstrapped - competitor/industry "
                  "candidate skipped")

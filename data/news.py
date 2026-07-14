@@ -173,16 +173,22 @@ def load_gdelt_daily(refresh: bool = False, name: str = "gdelt_daily",
 
 
 def load_aux_gdelt(refresh: bool = False) -> dict:
-    """Competitor/industry daily series from config.AUX_GDELT_QUERIES.
-    Each failure degrades to omission (features go NaN) rather than blocking
-    the pipeline - the caches bootstrap once and update incrementally."""
+    """Competitor/industry daily series per config.AUX_SERIES, routed to
+    each series' permanent source. Failures degrade to omission (features go
+    NaN) rather than blocking the pipeline."""
     out = {}
-    for series, query in config.AUX_GDELT_QUERIES.items():
+    for series, spec in config.AUX_SERIES.items():
         try:
-            out[series] = load_gdelt_daily(refresh, name=f"gdelt_{series}",
-                                           query=query)
+            if spec["source"] == "bigquery":
+                from data.bigquery_gdelt import load_bq_daily
+                out[series] = load_bq_daily(f"gdelt_{series}", spec["terms"],
+                                            refresh)
+            else:
+                out[series] = load_gdelt_daily(refresh,
+                                               name=f"gdelt_{series}",
+                                               query=spec["query"])
         except Exception as exc:
-            log.warning("Aux GDELT series %r unavailable (%s)", series, exc)
+            log.warning("Aux series %r unavailable (%s)", series, exc)
     return out
 
 
