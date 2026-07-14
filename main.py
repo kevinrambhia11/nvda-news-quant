@@ -115,6 +115,11 @@ def cmd_bq_probe() -> None:
     print(probe())
 
 
+def cmd_bqml() -> None:
+    from model.bqml import run_experiments
+    print(run_experiments())
+
+
 def cmd_intraday_study() -> None:
     from intraday.study import run_study
     print(run_study())
@@ -136,7 +141,19 @@ def cmd_vol_forecast() -> None:
 
 
 def cmd_signal(prefer_finbert: bool = True) -> None:
+    """Desk output, vol-first: the validated product (vol-sized long) leads;
+    the direction model prints as advisory context."""
     from trade.signal import format_signal, generate_signal
+    try:
+        from model.volatility import forecast, format_forecast
+        vol = forecast()
+        h1 = vol["horizons"]["1"]
+        print("=" * 62)
+        print(f"  DESK POSITION (primary): hold NVDA at "
+              f"{h1['target_vol_weight']:.0%} of full size (vol-sized long)")
+        print(format_forecast(vol))
+    except Exception as exc:
+        log.warning("Vol forecast unavailable (%s) - advisory only", exc)
     signal = generate_signal(prefer_finbert=prefer_finbert)
     print(format_signal(signal))
 
@@ -148,7 +165,7 @@ def main() -> None:
                         choices=["fetch", "train", "backtest", "signal",
                                  "vol-train", "vol-forecast", "fuse",
                                  "intraday-study", "log-headlines",
-                                 "bq-probe", "all"])
+                                 "bq-probe", "bqml", "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
     parser.add_argument("--no-finbert", action="store_true",
@@ -179,6 +196,8 @@ def main() -> None:
         cmd_log_headlines()
     elif args.command == "bq-probe":
         cmd_bq_probe()
+    elif args.command == "bqml":
+        cmd_bqml()
     elif args.command == "all":
         cmd_fetch(refresh=args.refresh)
         cmd_train()

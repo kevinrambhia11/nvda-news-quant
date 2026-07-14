@@ -182,7 +182,8 @@ def format_signal(signal: dict) -> str:
         f"  Advisory composite   : {signal['advisory_composite']:.3f} "
         f"(context only - not the traded rule)",
         "-" * 62,
-        f"  ACTION: {signal['action']}",
+        f"  ADVISORY direction (no demonstrated holdout edge): "
+        f"{signal['action']}",
         "-" * 62,
         "  Most positive headlines:",
         *[f"    {h['score']:+.2f} [{h['source']}] {h['title'][:70]}"

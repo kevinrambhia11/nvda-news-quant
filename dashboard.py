@@ -136,16 +136,23 @@ with tab_today:
                 st.rerun()
 
     with c1:
+        if vol:
+            h1 = vol["horizons"]["1"]
+            st.success(
+                f"**DESK POSITION (primary): hold NVDA at "
+                f"{h1['target_vol_weight']:.0%} of full size** - vol-sized "
+                f"long, {config.VOL_TARGET_ANN:.0%} annual target vs "
+                f"{h1['total_annualized_vol']:.1%} forecast vol"
+                + ("  |  :red[**EARNINGS PRINT TONIGHT**]"
+                   if h1.get("earnings_print_tonight") else ""))
         if signal is None:
-            st.info("No signal yet - run `python main.py signal` or click "
-                    "Regenerate signal.")
+            st.info("No direction signal yet - run `python main.py signal` "
+                    "or click Regenerate signal.")
         else:
-            action = signal["action"]
-            banner = (st.success if action.startswith("BUY")
-                      else st.error if action.startswith(("EXIT", "GO SHORT"))
-                      else st.info)
-            banner(f"**{action}**  -  entry day {signal['entry_day']}  -  "
-                   f"generated {signal['generated_at']}")
+            st.info(f"Advisory direction (no demonstrated holdout edge): "
+                    f"**{signal['action']}** - entry day "
+                    f"{signal['entry_day']}, generated "
+                    f"{signal['generated_at']}")
 
     if signal:
         m = st.columns(5)

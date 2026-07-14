@@ -178,6 +178,17 @@ def load_aux_gdelt(refresh: bool = False) -> dict:
     NaN) rather than blocking the pipeline."""
     out = {}
     for series, spec in config.AUX_SERIES.items():
+        # Negative cache: a cold bootstrap against a throttled network burns
+        # ~10 minutes of retries; don't repeat that more than every 3 hours.
+        marker = config.CACHE / f"gdelt_{series}.unavailable"
+        if not refresh and marker.exists():
+            # st_mtime is epoch (UTC); compare against a UTC clock, not local
+            age = (pd.Timestamp.now(tz="UTC").tz_localize(None)
+                   - pd.Timestamp(marker.stat().st_mtime, unit="s"))
+            if age < pd.Timedelta(hours=3):
+                log.info("Aux series %r skipped (marked unavailable %s ago)",
+                         series, str(age).split(".")[0])
+                continue
         try:
             if spec["source"] == "bigquery":
                 from data.bigquery_gdelt import load_bq_daily
@@ -187,8 +198,10 @@ def load_aux_gdelt(refresh: bool = False) -> dict:
                 out[series] = load_gdelt_daily(refresh,
                                                name=f"gdelt_{series}",
                                                query=spec["query"])
+            marker.unlink(missing_ok=True)
         except Exception as exc:
             log.warning("Aux series %r unavailable (%s)", series, exc)
+            marker.touch()
     return out
 
 
