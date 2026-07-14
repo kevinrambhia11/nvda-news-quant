@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-07-14T13:44:13",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-14",
+  "last_close": 203.53,
+  "model_trained_through": "2026-07-10",
+  "model_prob_up": 0.5662,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0681,
+  "headline_count": 145,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 14,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.5566,
+  "most_negative": [
+    {
+      "title": "$QQQ $SPY \ud83c\udde8\ud83c\uddf3 Nvidia $NVDA cuts Asia authorized AI chip buyers by half to block gray market leaks to China and slash regulatory risks.\ud83e\udd14\ud83e\udd14",
+      "source": "stocktwits",
+      "score": -0.807
+    },
+    {
+      "title": "Micron and other chip stocks feel the pain of imported volatility - blame SK Hynix",
+      "source": "finviz",
+      "score": -0.691
+    },
+    {
+      "title": "Is Nvidia Stock Too Cheap to Ignore Right Now? - The Motley Fool",
+      "source": "google_news",
+      "score": -0.66
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "$NVDA $ASML $BTC.X \n\nThe need for sustainability is becoming increasingly clear.\n\nFrance shows that climate change is not only an environmental issue, but also an economic one. Extreme heat and drought are putting pressure on agriculture, energy production and infrastructure. Germany is facing similar challenges, with low water levels affecting transport and industry.\n\nThe transition to cleaner and smarter systems is therefore not a luxury, but an economic necessity. Investments in renewable energy, electricity grids, energy storage, water technology and infrastructure will become increasingly important.\n\nAt the same time, the growth of AI and data centers is creating enormous demand for electricity. The future will require more energy, but above all cleaner, smarter and more reliable energy systems.\n\nSustainability and technology will become key pillars of the global economy.",
+      "source": "stocktwits",
+      "score": 0.979
+    },
+    {
+      "title": "Best Artificial Intelligence (AI) Stock: AMD, Nvidia, or Broadcom - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.807
+    },
+    {
+      "title": "SK Hynix set to benefit as South Korea's ruling party seeks to ease capital-raising rules",
+      "source": "yahoo_rss",
+      "score": 0.802
+    }
+  ]
+}
