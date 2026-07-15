@@ -160,9 +160,17 @@ def load_gdelt_daily(refresh: bool = False, name: str = "gdelt_daily",
             last = cached.index.max()
             if last >= today_utc - pd.Timedelta(days=1):
                 return cached
-            fresh = fetch_gdelt_daily(
-                (last - pd.Timedelta(days=3)).strftime("%Y-%m-%d"),
-                query=query, cache_prefix=name)
+            try:
+                fresh = fetch_gdelt_daily(
+                    (last - pd.Timedelta(days=3)).strftime("%Y-%m-%d"),
+                    query=query, cache_prefix=name)
+            except Exception as exc:
+                # A scheduled run must degrade to slightly-stale data, not
+                # die: tone is ffilled downstream anyway. Cold bootstraps
+                # (no cache) still raise below.
+                log.warning("GDELT top-up failed (%s); using cached %s "
+                            "through %s", exc, name, last.date())
+                return cached
             merged = pd.concat([cached, fresh])
             merged = merged[~merged.index.duplicated(keep="last")].sort_index()
             atomic_to_csv(merged, cache_file)
