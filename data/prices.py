@@ -68,7 +68,9 @@ def _fetch_yahoo_chart(ticker: str, start: str) -> pd.DataFrame:
     df = pd.DataFrame({"Open": quote["open"], "High": quote["high"],
                        "Low": quote["low"], "Close": quote["close"],
                        "AdjClose": adj, "Volume": quote["volume"]}, index=idx)
-    df = df.dropna(subset=["Close", "AdjClose"])
+    # Yahoo's chart payload can carry null O/H/L on odd rows; a NaN there
+    # poisons Garman-Klass features and crashes the linear vol model.
+    df = df.dropna(subset=["Open", "High", "Low", "Close", "AdjClose"])
     factor = df["AdjClose"] / df["Close"]
     for col in ("Open", "High", "Low", "Close"):
         df[col] = df[col] * factor

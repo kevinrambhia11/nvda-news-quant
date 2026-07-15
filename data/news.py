@@ -52,12 +52,13 @@ class GdeltRateLimited(RuntimeError):
 
 
 def _gdelt_timeline_chunk(mode: str, start: datetime, end: datetime,
-                          query: str) -> pd.Series:
+                          query: str, backoffs=None) -> pd.Series:
     """One GDELT timeline request. mode: 'timelinetone' or 'timelinevolraw'.
 
     GDELT signals throttling either as HTTP 429 or as an HTTP-200 text page
     starting with 'Please limit requests' - both are retried with patient
-    backoff, then surfaced as GdeltRateLimited.
+    backoff (or fail fast when backoffs=[]), then surfaced as
+    GdeltRateLimited.
     """
     params = {
         "query": query,
@@ -66,7 +67,8 @@ def _gdelt_timeline_chunk(mode: str, start: datetime, end: datetime,
         "startdatetime": start.strftime("%Y%m%d000000"),
         "enddatetime": end.strftime("%Y%m%d235959"),
     }
-    backoffs = [75, 150, 300]
+    if backoffs is None:
+        backoffs = [75, 150, 300]
     timeline = None
     for attempt in range(len(backoffs) + 1):
         throttled = False
@@ -104,7 +106,8 @@ def _gdelt_timeline_chunk(mode: str, start: datetime, end: datetime,
 
 def fetch_gdelt_daily(start: str, end: str | None = None,
                       query: str = config.GDELT_QUERY,
-                      cache_prefix: str = "gdelt") -> pd.DataFrame:
+                      cache_prefix: str = "gdelt",
+                      quick: bool = False) -> pd.DataFrame:
     """Daily average tone and raw article count for a GDELT query.
 
     Returns a calendar-day (UTC) indexed DataFrame with columns
@@ -128,9 +131,12 @@ def fetch_gdelt_daily(start: str, end: str | None = None,
         else:
             log.info("GDELT fetch [%s] %s -> %s", cache_prefix, cursor.date(),
                      chunk_end.date())
-            tone = _gdelt_timeline_chunk("timelinetone", cursor, chunk_end, query)
+            backoffs = [] if quick else None  # quick: one shot, fail fast
+            tone = _gdelt_timeline_chunk("timelinetone", cursor, chunk_end,
+                                         query, backoffs)
             time.sleep(6.5)  # GDELT allows max one request per 5 seconds
-            vol = _gdelt_timeline_chunk("timelinevolraw", cursor, chunk_end, query)
+            vol = _gdelt_timeline_chunk("timelinevolraw", cursor, chunk_end,
+                                        query, backoffs)
             time.sleep(6.5)
             part = pd.DataFrame({"tone": tone, "art_count": vol})
             part.index.name = "date"
@@ -150,7 +156,8 @@ def fetch_gdelt_daily(start: str, end: str | None = None,
 
 
 def load_gdelt_daily(refresh: bool = False, name: str = "gdelt_daily",
-                     query: str = config.GDELT_QUERY) -> pd.DataFrame:
+                     query: str = config.GDELT_QUERY,
+                     quick: bool = False) -> pd.DataFrame:
     """Cached GDELT daily series; incrementally extends the cache when stale."""
     cache_file = config.CACHE / f"{name}.csv"
     today_utc = pd.Timestamp.now(tz="UTC").tz_localize(None).normalize()
@@ -161,9 +168,11 @@ def load_gdelt_daily(refresh: bool = False, name: str = "gdelt_daily",
             if last >= today_utc - pd.Timedelta(days=1):
                 return cached
             try:
+                # quick=True: a top-up must never stall a scheduled run in
+                # retry ladders - one shot, then serve the stale cache.
                 fresh = fetch_gdelt_daily(
                     (last - pd.Timedelta(days=3)).strftime("%Y-%m-%d"),
-                    query=query, cache_prefix=name)
+                    query=query, cache_prefix=name, quick=True)
             except Exception as exc:
                 # A scheduled run must degrade to slightly-stale data, not
                 # die: tone is ffilled downstream anyway. Cold bootstraps
@@ -175,7 +184,8 @@ def load_gdelt_daily(refresh: bool = False, name: str = "gdelt_daily",
             merged = merged[~merged.index.duplicated(keep="last")].sort_index()
             atomic_to_csv(merged, cache_file)
             return merged
-    df = fetch_gdelt_daily(config.TRAIN_START, query=query, cache_prefix=name)
+    df = fetch_gdelt_daily(config.TRAIN_START, query=query, cache_prefix=name,
+                           quick=quick)
     atomic_to_csv(df, cache_file)
     return df
 
@@ -203,9 +213,12 @@ def load_aux_gdelt(refresh: bool = False) -> dict:
                 out[series] = load_bq_daily(f"gdelt_{series}", spec["terms"],
                                             refresh)
             else:
+                # quick=True: aux series must never stall a signal/train run
+                # in retry ladders; dedicated fetch runs do the grinding.
                 out[series] = load_gdelt_daily(refresh,
                                                name=f"gdelt_{series}",
-                                               query=spec["query"])
+                                               query=spec["query"],
+                                               quick=True)
             marker.unlink(missing_ok=True)
         except Exception as exc:
             log.warning("Aux series %r unavailable (%s)", series, exc)
