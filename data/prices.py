@@ -29,6 +29,9 @@ HEADERS = {"User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                           "Chrome/126.0 Safari/537.36")}
 
 
+OHLC = ["Open", "High", "Low", "Close"]
+
+
 def _normalize_index(df: pd.DataFrame) -> pd.DataFrame:
     idx = pd.to_datetime(df.index)
     if idx.tz is not None:
@@ -36,6 +39,18 @@ def _normalize_index(df: pd.DataFrame) -> pd.DataFrame:
     df.index = idx.normalize()
     df.index.name = "date"
     return df[~df.index.duplicated(keep="last")].sort_index()
+
+
+def _sanitize(df: pd.DataFrame) -> pd.DataFrame:
+    """Every source (and old caches) can carry a malformed bar with NaN
+    OHLC - Yahoo emits them around session boundaries. One NaN close breaks
+    the signal display AND poisons Garman-Klass features into crashing the
+    linear vol model, so rows must be complete or absent."""
+    bad = df[OHLC].isna().any(axis=1)
+    if bad.any():
+        log.warning("Dropping %d malformed price row(s): %s", int(bad.sum()),
+                    ", ".join(str(d.date()) for d in df.index[bad][:5]))
+    return df[~bad]
 
 
 def _fetch_yahoo(ticker: str, start: str) -> pd.DataFrame:
@@ -100,7 +115,7 @@ def fetch_prices(ticker: str, start: str = config.TRAIN_START) -> pd.DataFrame:
     last_exc: Exception | None = None
     for name, fn in sources:
         try:
-            df = fn(ticker, start)
+            df = _sanitize(fn(ticker, start))
             log.info("%s: %d rows from %s (through %s)",
                      ticker, len(df), name, df.index.max().date())
             return df
@@ -121,7 +136,8 @@ def load_prices(refresh: bool = False) -> tuple[pd.DataFrame, pd.DataFrame]:
         cache_file = config.CACHE / f"prices_{ticker}.csv"
         df = None
         if cache_file.exists() and not refresh:
-            cached = pd.read_csv(cache_file, index_col="date", parse_dates=["date"])
+            cached = _sanitize(
+                pd.read_csv(cache_file, index_col="date", parse_dates=["date"]))
             if not cached.empty:
                 # Fresh if it holds the last completed business day (weekends
                 # and Mondays pre-open must not trigger a refetch).
