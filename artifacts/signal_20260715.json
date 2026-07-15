@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-07-15T15:07:51",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-15",
+  "last_close": 211.8,
+  "model_trained_through": "2026-07-10",
+  "model_prob_up": 0.5394,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0863,
+  "headline_count": 141,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 9,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5405,
+  "most_negative": [
+    {
+      "title": "$NVDA Underestimating the threat to Russia: Of these three risks, JPMorgan believes the market is significantly underestimating the severity of the cumulative and severe damage to Russia\u2019s refining capacity from repeated Ukrainian drone attacks.\nDecline in Refinery Size Destroyed!,",
+      "source": "stocktwits",
+      "score": -0.949
+    },
+    {
+      "title": "$NVDA -Hormuz, the market has become accustomed to treating disruptions in crude oil supply as temporary and dynamic \u2013 crude flows are able to recover relatively quickly once the winds calm down.\nThe real bottleneck is refining: The critical question today is no longer whether crude can physically flow, but whether the global refining system has the structural capacity to process this crude into finished products such as diesel, gasoline, jet fuel and fuel oil.",
+      "source": "stocktwits",
+      "score": -0.927
+    },
+    {
+      "title": "$NVDA http://Investing.com - The U.S. dollar is facing near-term pressure following weak June inflation data, but UBS recommends buying on small dips as long as tightening risks remain.\n\nThe June consumer price index, released on Monday, led to a weaker dollar, although renewed geopolitical tensions in the Middle East provided some support, UBS said on Tuesday. The firm said prolonged overbought conditions and a decline in the urgency for Federal Reserve policy tightening point to further consolidation in the near term.!!!!!",
+      "source": "stocktwits",
+      "score": -0.835
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Best Artificial Intelligence (AI) Stock: AMD, Nvidia, or Broadcom - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.807
+    },
+    {
+      "title": "$NVDA http://Investing.com - UBS noted that the Japanese government&#39;s move to encourage domestic capital allocation by the government pension fund GPIF and retail investors NISA raises the prospect of capital inflows that could provide support to the Japanese lin..",
+      "source": "stocktwits",
+      "score": 0.802
+    },
+    {
+      "title": "SK Hynix set to benefit as South Korea's ruling party seeks to ease capital-raising rules",
+      "source": "finviz",
+      "score": 0.802
+    }
+  ]
+}
