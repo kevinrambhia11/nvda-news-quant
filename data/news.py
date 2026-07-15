@@ -276,11 +276,18 @@ def stocktwits_messages(ticker: str = config.TICKER, max_items: int = 30) -> lis
     resp.raise_for_status()
     msgs = resp.json().get("messages", [])
     items = []
-    for m in msgs[:max_items]:
+    for m in msgs:
+        # A post tagged with 3+ tickers is broad market commentary, not
+        # NVDA news (e.g. an IBM-earnings essay tagged $SPY $NVDA $AMD
+        # lands in the NVDA stream) - skip it.
+        if len(m.get("symbols") or []) > 2:
+            continue
         declared = (m.get("entities") or {}).get("sentiment") or {}
         items.append({"source": "stocktwits", "title": m.get("body", ""),
                       "published": m.get("created_at", ""),
                       "declared_sentiment": declared.get("basic")})
+        if len(items) >= max_items:
+            break
     return items
 
 
