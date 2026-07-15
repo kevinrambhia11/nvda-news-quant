@@ -134,7 +134,7 @@ def load_prices(refresh: bool = False) -> tuple[pd.DataFrame, pd.DataFrame]:
     out = []
     for ticker in (config.TICKER, config.BENCHMARK):
         cache_file = config.CACHE / f"prices_{ticker}.csv"
-        df = None
+        df, cached = None, None
         if cache_file.exists() and not refresh:
             cached = _sanitize(
                 pd.read_csv(cache_file, index_col="date", parse_dates=["date"]))
@@ -145,7 +145,18 @@ def load_prices(refresh: bool = False) -> tuple[pd.DataFrame, pd.DataFrame]:
                 if cached.index.max() >= last_bday:
                     df = cached
         if df is None:
-            df = fetch_prices(ticker)
-            atomic_to_csv(df, cache_file)
+            try:
+                df = fetch_prices(ticker)
+                atomic_to_csv(df, cache_file)
+            except Exception as exc:
+                if cached is not None and not cached.empty:
+                    # Degrade, don't die: a one-day-stale frame yields a
+                    # one-day-stale signal, which the desk survives.
+                    log.warning("All price sources failed for %s (%s); "
+                                "using stale cache through %s", ticker, exc,
+                                cached.index.max().date())
+                    df = cached
+                else:
+                    raise
         out.append(df)
     return out[0], out[1]
