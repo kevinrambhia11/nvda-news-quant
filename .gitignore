@@ -44,3 +44,7 @@ artifacts/cache/*
 
 # Streamlit
 .streamlit/
+
+# Machine-specific scheduled-task wrappers and their log
+scripts/
+artifacts/scheduler.log
