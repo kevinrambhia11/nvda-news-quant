@@ -1,50 +1,50 @@
 {
-  "generated_at": "2026-07-15T15:13:12",
+  "generated_at": "2026-07-15T17:00:47",
   "ticker": "NVDA",
   "entry_day": "2026-07-15",
   "last_close": 211.8,
   "model_trained_through": "2026-07-10",
   "model_prob_up": 0.5394,
   "action": "HOLD (keep current position)",
-  "headline_sentiment": 0.0867,
-  "headline_count": 142,
+  "headline_sentiment": 0.0884,
+  "headline_count": 140,
   "headlines_degraded": false,
   "sentiment_backend": "vader",
-  "stocktwits_bulls": 10,
+  "stocktwits_bulls": 9,
   "stocktwits_bears": 1,
-  "advisory_composite": 0.5406,
+  "advisory_composite": 0.5408,
   "most_negative": [
     {
-      "title": "$NVDA Underestimating the threat to Russia: Of these three risks, JPMorgan believes the market is significantly underestimating the severity of the cumulative and severe damage to Russia\u2019s refining capacity from repeated Ukrainian drone attacks.\nDecline in Refinery Size Destroyed!,",
-      "source": "stocktwits",
-      "score": -0.949
+      "title": "Nvidia, Intel and Micron Rebound as Chip Stocks Shake Off War Fears",
+      "source": "finviz",
+      "score": -0.813
     },
     {
-      "title": "$NVDA -Hormuz, the market has become accustomed to treating disruptions in crude oil supply as temporary and dynamic \u2013 crude flows are able to recover relatively quickly once the winds calm down.\nThe real bottleneck is refining: The critical question today is no longer whether crude can physically flow, but whether the global refining system has the structural capacity to process this crude into finished products such as diesel, gasoline, jet fuel and fuel oil.",
-      "source": "stocktwits",
-      "score": -0.927
+      "title": "Micron and other chip stocks feel the pain of imported volatility - blame SK Hynix",
+      "source": "finviz",
+      "score": -0.691
     },
     {
-      "title": "$NVDA http://Investing.com - The U.S. dollar is facing near-term pressure following weak June inflation data, but UBS recommends buying on small dips as long as tightening risks remain.\n\nThe June consumer price index, released on Monday, led to a weaker dollar, although renewed geopolitical tensions in the Middle East provided some support, UBS said on Tuesday. The firm said prolonged overbought conditions and a decline in the urgency for Federal Reserve policy tightening point to further consolidation in the near term.!!!!!",
-      "source": "stocktwits",
-      "score": -0.835
+      "title": "Nvidia Stock Is Losing to the Market in 2026. Time to Walk Away or Double Down? - The Motley Fool",
+      "source": "google_news",
+      "score": -0.67
     }
   ],
   "most_positive": [
     {
+      "title": "$NVDA I promised to do a number re-crunch of yesterday when I said what Mr. Juang said about him seeing this company being a 3 to 4 trillion dollar company by 2030 in an interview. I said yesterday that would almost or at least it should make this price target cross 1,000 almost twice with the associated 10 to one splits twice and while I type it and it sounds wonderful when I type it I am going to re-crunch and assume that it grows to 2 trillion by 2030 which in my mind is just going against the CEO because he gets where his company is headed. I guess throwing out a whole trillion dollars is my speculative way of crunching a conservative estimate. I love how my calculator doesn&#39;t do trillions as well as my iphone calculator. Your alright Apple even though you are a struggle sometimes. Yes, Siri you can go ahead and tell me a joke. Siri uh huh? Tell me a joke. Where the stock price has been for two years with Nvda is a joke am I right? Yes Siri you are right. Time to crunch it.",
+      "source": "stocktwits",
+      "score": 0.973
+    },
+    {
+      "title": "$NVDA that sucks for you and your family.  Hope you have a good bankruptcy lawyer.  All the best and hope you get back on your feet",
+      "source": "stocktwits",
+      "score": 0.886
+    },
+    {
       "title": "Best Artificial Intelligence (AI) Stock: AMD, Nvidia, or Broadcom - Yahoo Finance",
       "source": "google_news",
       "score": 0.807
-    },
-    {
-      "title": "$NVDA http://Investing.com - UBS noted that the Japanese government&#39;s move to encourage domestic capital allocation by the government pension fund GPIF and retail investors NISA raises the prospect of capital inflows that could provide support to the Japanese lin..",
-      "source": "stocktwits",
-      "score": 0.802
-    },
-    {
-      "title": "SK Hynix set to benefit as South Korea's ruling party seeks to ease capital-raising rules",
-      "source": "finviz",
-      "score": 0.802
     }
   ]
 }
