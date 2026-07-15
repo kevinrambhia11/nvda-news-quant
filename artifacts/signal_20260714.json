@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-14T13:44:13",
+  "generated_at": "2026-07-15T13:19:07",
   "ticker": "NVDA",
   "entry_day": "2026-07-14",
   "last_close": 203.53,
   "model_trained_through": "2026-07-10",
   "model_prob_up": 0.5662,
   "action": "BUY / HOLD LONG",
-  "headline_sentiment": 0.0681,
-  "headline_count": 145,
+  "headline_sentiment": 0.0824,
+  "headline_count": 146,
   "headlines_degraded": false,
   "sentiment_backend": "vader",
-  "stocktwits_bulls": 14,
-  "stocktwits_bears": 3,
-  "advisory_composite": 0.5566,
+  "stocktwits_bulls": 15,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5587,
   "most_negative": [
     {
-      "title": "$QQQ $SPY \ud83c\udde8\ud83c\uddf3 Nvidia $NVDA cuts Asia authorized AI chip buyers by half to block gray market leaks to China and slash regulatory risks.\ud83e\udd14\ud83e\udd14",
-      "source": "stocktwits",
-      "score": -0.807
+      "title": "Nvidia, Intel and Micron Rebound as Chip Stocks Shake Off War Fears",
+      "source": "finviz",
+      "score": -0.813
     },
     {
       "title": "Micron and other chip stocks feel the pain of imported volatility - blame SK Hynix",
@@ -25,16 +25,16 @@
       "score": -0.691
     },
     {
-      "title": "Is Nvidia Stock Too Cheap to Ignore Right Now? - The Motley Fool",
+      "title": "Nvidia Stock Is Losing to the Market in 2026. Time to Walk Away or Double Down? - The Motley Fool",
       "source": "google_news",
-      "score": -0.66
+      "score": -0.67
     }
   ],
   "most_positive": [
     {
-      "title": "$NVDA $ASML $BTC.X \n\nThe need for sustainability is becoming increasingly clear.\n\nFrance shows that climate change is not only an environmental issue, but also an economic one. Extreme heat and drought are putting pressure on agriculture, energy production and infrastructure. Germany is facing similar challenges, with low water levels affecting transport and industry.\n\nThe transition to cleaner and smarter systems is therefore not a luxury, but an economic necessity. Investments in renewable energy, electricity grids, energy storage, water technology and infrastructure will become increasingly important.\n\nAt the same time, the growth of AI and data centers is creating enormous demand for electricity. The future will require more energy, but above all cleaner, smarter and more reliable energy systems.\n\nSustainability and technology will become key pillars of the global economy.",
+      "title": "$NVDA its so funny you get a dividend already, so many stocks people buy for 1% divs and you almost get that already with 75% profit &amp; 70% growth, wait till we get div raises to 1 % and then 100 billy more buybacks for the next several years",
       "source": "stocktwits",
-      "score": 0.979
+      "score": 0.85
     },
     {
       "title": "Best Artificial Intelligence (AI) Stock: AMD, Nvidia, or Broadcom - Yahoo Finance",
@@ -43,7 +43,7 @@
     },
     {
       "title": "SK Hynix set to benefit as South Korea's ruling party seeks to ease capital-raising rules",
-      "source": "yahoo_rss",
+      "source": "finviz",
       "score": 0.802
     }
   ]

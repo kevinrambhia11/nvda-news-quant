@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-15T15:07:51",
+  "generated_at": "2026-07-15T15:13:12",
   "ticker": "NVDA",
   "entry_day": "2026-07-15",
   "last_close": 211.8,
   "model_trained_through": "2026-07-10",
   "model_prob_up": 0.5394,
   "action": "HOLD (keep current position)",
-  "headline_sentiment": 0.0863,
-  "headline_count": 141,
+  "headline_sentiment": 0.0867,
+  "headline_count": 142,
   "headlines_degraded": false,
   "sentiment_backend": "vader",
-  "stocktwits_bulls": 9,
+  "stocktwits_bulls": 10,
   "stocktwits_bears": 1,
-  "advisory_composite": 0.5405,
+  "advisory_composite": 0.5406,
   "most_negative": [
     {
       "title": "$NVDA Underestimating the threat to Russia: Of these three risks, JPMorgan believes the market is significantly underestimating the severity of the cumulative and severe damage to Russia\u2019s refining capacity from repeated Ukrainian drone attacks.\nDecline in Refinery Size Destroyed!,",
