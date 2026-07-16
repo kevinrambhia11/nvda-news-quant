@@ -154,9 +154,11 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         "stocktwits_bulls": bulls,
         "stocktwits_bears": len(st) - bulls,
         "advisory_composite": round(float(advisory), 4),
-        "most_negative": [{k: h.get(k) for k in ("title", "source", "score")}
+        "most_negative": [{k: h.get(k) for k in ("title", "source", "score",
+                                                 "url")}
                           for h in ranked[:3]],
-        "most_positive": [{k: h.get(k) for k in ("title", "source", "score")}
+        "most_positive": [{k: h.get(k) for k in ("title", "source", "score",
+                                                 "url")}
                           for h in ranked[-3:][::-1]],
     }
     out_path = config.ARTIFACTS / f"signal_{next_day.strftime('%Y%m%d')}.json"

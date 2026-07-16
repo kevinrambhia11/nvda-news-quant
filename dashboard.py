@@ -26,6 +26,42 @@ import config  # noqa: E402
 st.set_page_config(page_title="NVDA Quant Desk", page_icon="📈", layout="wide")
 
 
+@st.cache_data(ttl=300)
+def fetch_intraday(sym: str):
+    """Today's 5-minute closes + previous close, live from Yahoo's chart
+    API. Cached 5 minutes; returns None when the source is throttled."""
+    import requests
+    from data.prices import HEADERS, YAHOO_CHART_URL
+    try:
+        r = requests.get(YAHOO_CHART_URL.format(symbol=sym),
+                         params={"range": "1d", "interval": "5m"},
+                         headers=HEADERS, timeout=15)
+        r.raise_for_status()
+        res = r.json()["chart"]["result"][0]
+        ts = (pd.to_datetime(res["timestamp"], unit="s", utc=True)
+              .tz_convert("America/New_York"))
+        closes = pd.Series(res["indicators"]["quote"][0]["close"],
+                           index=ts, dtype=float).dropna()
+        prev = float(res["meta"].get("chartPreviousClose")
+                     or res["meta"].get("previousClose") or float("nan"))
+        if closes.empty:
+            return None
+        return closes, prev
+    except Exception:
+        return None
+
+
+def headline_lines(items):
+    for h in items:
+        prefix = f"`{h.get('score', 0):+.2f}` [{h.get('source', '')}] "
+        title = str(h.get("title", ""))[:160]
+        url = h.get("url")
+        if url:
+            st.markdown(prefix + f"[{title}]({url})")
+        else:
+            st.markdown(prefix + title)
+
+
 # ---------------------------------------------------------------------------
 # Cached artifact readers
 # ---------------------------------------------------------------------------
@@ -178,16 +214,41 @@ with tab_today:
         v[2].metric("VaR 95% ($1M)", f"${h1['var_95']:,.0f}")
         v[3].metric("VaR 99% ($1M)", f"${h1['var_99']:,.0f}")
 
+    st.subheader("Charts")
+    c_live, c_hist = st.columns(2)
+    with c_live:
+        live = fetch_intraday(config.TICKER)
+        if live is None:
+            st.info("Live intraday feed unavailable right now (source "
+                    "throttled) - try again in a few minutes.")
+        else:
+            closes, prev = live
+            last = float(closes.iloc[-1])
+            st.caption(f"{config.TICKER} today - 5-minute prices, live "
+                       "(vs previous close)")
+            st.line_chart(pd.DataFrame({"price": closes,
+                                        "prev close": prev}))
+            if prev == prev:  # NaN-safe
+                st.metric("Latest", f"${last:,.2f}",
+                          f"{(last / prev - 1) * 100:+.2f}% vs prev close")
+    with c_hist:
+        px_hist = read_csv(str(config.CACHE / f"prices_{config.TICKER}.csv"))
+        if px_hist is not None and len(px_hist) > 60:
+            st.caption(f"{config.TICKER} daily close - ~6 months, with "
+                       "50-day average")
+            st.line_chart(pd.DataFrame({
+                "close": px_hist["Close"].iloc[-126:],
+                "SMA50": px_hist["Close"].rolling(50).mean().iloc[-126:],
+            }))
+
     if signal:
         cpos, cneg = st.columns(2)
         with cpos:
             st.subheader("Most positive headlines")
-            for h in signal["most_positive"]:
-                st.markdown(f"`{h['score']:+.2f}` [{h['source']}] {h['title']}")
+            headline_lines(signal["most_positive"])
         with cneg:
             st.subheader("Most negative headlines")
-            for h in signal["most_negative"]:
-                st.markdown(f"`{h['score']:+.2f}` [{h['source']}] {h['title']}")
+            headline_lines(signal["most_negative"])
 
 
 # ---------------------------------------------------------------------------
@@ -350,7 +411,10 @@ with tab_news:
                 "score": scores,
                 "source": [h["source"] for h in items],
                 "headline": [h["title"] for h in items],
+                "link": [h.get("url", "") for h in items],
             }).sort_values("score")
             st.metric("Mean sentiment", f"{df['score'].mean():+.3f}",
                       help=f"{len(df)} unique items")
-            st.dataframe(df, use_container_width=True, hide_index=True)
+            st.dataframe(df, use_container_width=True, hide_index=True,
+                         column_config={
+                             "link": st.column_config.LinkColumn("link")})

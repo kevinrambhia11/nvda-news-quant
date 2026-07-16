@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-07-16T13:22:06",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-16",
+  "last_close": 212.5,
+  "model_trained_through": "2026-07-10",
+  "model_prob_up": 0.5337,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.034,
+  "headline_count": 126,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 4,
+  "stocktwits_bears": 4,
+  "advisory_composite": 0.5287,
+  "most_negative": [
+    {
+      "title": "$NVDA Doing worse than soxx or smh. Nvidia is the worst semi",
+      "source": "stocktwits",
+      "score": -0.859,
+      "url": null
+    },
+    {
+      "title": "Nvidia Stock Is Losing to the Market in 2026. Time to Walk Away or Double Down? - The Motley Fool",
+      "source": "google_news",
+      "score": -0.67,
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVi1YZlZxeGxyNUtMSjNYUDVyVmRSdDRYdW5JT3l3Zi1YU193TDloaXdMcHZyOUp3NWc4R00wOWxwd3h5dHpzY3lINmhiWEtGN215TXRpNmdJN3U5ekV0OXQyaHk1MXZaaDBuTFZMbHhCT0plRTVhbm1lRlRmaUNGN2JYZnJpMURMTW9XOEg1LWFvTUZSLU5j?oc=5"
+    },
+    {
+      "title": "Jensen Huang Denies Reports Of Nvidia's Vera Rubin Being Delayed Due To Production Issues \u2014 \u2018Giant Amounts Of Production Incoming\u2019 - Stocktwits",
+      "source": "google_news",
+      "score": -0.572,
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMi1CZzllWlFOMGFoUW5kMk1NSWZtclIwVWpibGV1dmNtXzhITUJ4endUeElNdGt2N1NpNURYN3RnUFhLM09XX0I2SDFJNHpwSDU5WkVJMmZ1ZkdfUm56eVdKMllPUlVtdWdKc1cwR0pudll5SlE3VVN2ak92VmZ3bWRzdmtYekozYTV6MjhJOUhlWTlzR3R1TFlOVl9xcFJZb3pFeU1MODJCZllYeFVDV0JoeFJuNzZVV3EyT1FyakNFUG4y?oc=5"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "$NVDA my puts were absolutely melted yesterday. Got some more ticking until tomorrow. This is my short-term hedge but I don\u2019t complain as I have a 1000 shares averaged in the low 200s. This is the company of the future. I don\u2019t really care much about short term. The infrastructure and vision this company has long term is just unmatched. Impossible to not be a bull over a 2-3 years time horizon. However, in the meanwhile, playing the swings is quite fun as it there is a very obvious market rotation that is somewhat predictable because markets became a casino and no longer chase fundamentals intraday",
+      "source": "stocktwits",
+      "score": 0.839,
+      "url": null
+    },
+    {
+      "title": "Nvidia and Sega celebrate 30 years after famous 1995 bankruptcy rescue",
+      "source": "finviz",
+      "score": 0.791,
+      "url": "https://finance.yahoo.com/video/nvidia-and-sega-celebrate-30-years-after-famous-1995-bankruptcy-rescue-194112759.html"
+    },
+    {
+      "title": "Nvidia May Be the Most Valuable Company in the World, but It Looks Like a Bargain Compared to These 3 Artificial Intelligence (AI) Stocks - The Motley Fool",
+      "source": "google_news",
+      "score": 0.787,
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQU1laSVgtSllFNHlxX1BzYWEtNEZoM3doWWNyOEV4WlB2T0hnbF9OWE1HY3l0QVFrYms4cXdnNUJLVy1nWlU4WkpuNzBCQU5ILXF1LVlpYUNhQVQxOE9IWUo5U2gwdjVvX09HOWJRSl94TjBYUHYzLV9XT09HTnZXaFJrQTFfRkl3MWhaa2FweE05R0hzME93OQ?oc=5"
+    }
+  ]
+}
