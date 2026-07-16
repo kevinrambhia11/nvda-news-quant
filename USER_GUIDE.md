@@ -52,14 +52,22 @@ first fact and honest about the second.
 
 ## The rest of the dashboard
 
-- **Desk today / headlines**: live scraped news (Google News, Yahoo,
-  Finviz, StockTwits), sentiment-scored. Color, not signal.
+Every metric carries a one-line explanation beneath it, and every tab opens
+with a note on what it shows and why it matters.
+
+- **Desk today**: the banners and metrics above, a live intraday price
+  chart (5-minute, vs previous close), six months of price context, and
+  the day's most bullish/bearish headlines with links to the articles.
 - **Direction model**: tournament results (selection window vs untouched
   holdout) and a threshold explorer that recomputes the backtest live.
 - **Volatility**: the vol model's out-of-sample record vs standard
   benchmarks (random walk, EWMA, HAR), plus a VaR calculator.
+- **Technical charts**: price with SMA50/200 and Bollinger bands, RSI,
+  MACD, realized volatility (the raw material behind position sizing),
+  drawdown, and volume — with a 6M/1Y/2Y window selector. Context, not
+  signal.
 - **News & data**: NVIDIA news-tone history, competitor/industry series,
-  cache freshness.
+  cache freshness, and an on-demand scored headline scan.
 - **Buttons**: *Regenerate signal* re-runs the whole pipeline with a fresh
   headline scrape (useful when big news breaks mid-day); *Refresh vol
   forecast* re-runs just sizing/VaR. Never required — the schedule owns the
