@@ -45,6 +45,12 @@ FULL_FEATURES = EXTENDED_FEATURES + EVENT_FEATURES + REGIME_FEATURES
 CROSS_FEATURES = ["comp_tone_1d", "comp_tone_rel", "comp_vol_spike",
                   "ind_tone_1d", "ind_vol_spike"]
 
+# Reliable-sources experiment: tone from vetted outlets only, and its
+# divergence from the full-corpus tone ("what serious desks read" vs
+# "what everyone prints").
+QUALITY_FEATURES = ["quality_tone_1d", "quality_tone_rel",
+                    "quality_vol_spike"]
+
 DAILY_VOL_FLOOR = 1e-4  # 1bp-per-day floor so logs never blow up on odd bars
 
 
@@ -212,6 +218,14 @@ def build_dataset(px: pd.DataFrame, bench: pd.DataFrame,
         m = news_asof(df.index, build_news_features(aux["industry"]))
         df["ind_tone_1d"] = m["tone_1d"].to_numpy()
         df["ind_vol_spike"] = m["news_vol_spike"].to_numpy()
+
+    for col in QUALITY_FEATURES:
+        df[col] = np.nan
+    if "quality" in aux:
+        m = news_asof(df.index, build_news_features(aux["quality"]))
+        df["quality_tone_1d"] = m["tone_1d"].to_numpy()
+        df["quality_vol_spike"] = m["news_vol_spike"].to_numpy()
+        df["quality_tone_rel"] = df["quality_tone_1d"] - df["tone_1d"]
 
     open_ = px["Open"]
     df["fwd_ret"] = open_.shift(-1) / open_ - 1  # held open(d) -> open(d+1)

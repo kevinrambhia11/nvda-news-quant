@@ -28,7 +28,7 @@ from sklearn.preprocessing import StandardScaler
 import config
 from backtest.engine import positions_from_probs
 from features.build import (ALL_FEATURES, CROSS_FEATURES, EXTENDED_FEATURES,
-                            FULL_FEATURES)
+                            FULL_FEATURES, QUALITY_FEATURES)
 
 log = logging.getLogger(__name__)
 
@@ -81,6 +81,11 @@ def active_candidates(data: pd.DataFrame) -> list:
     else:
         log.info("Cross features not yet bootstrapped - competitor/industry "
                  "candidate skipped")
+    qual = [c for c in QUALITY_FEATURES if not data[c].isna().all()]
+    if len(qual) >= 2:
+        cands.append(("GBM deep + quality", FULL_FEATURES + qual,
+                      _gbm_deep, None))
+        log.info("Quality-sources candidate active with features: %s", qual)
     return cands
 
 

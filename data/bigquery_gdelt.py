@@ -51,9 +51,11 @@ def _client():
     return bigquery, bigquery.Client()
 
 
-def _daily_sql(n_terms: int) -> str:
+def _daily_sql(n_terms: int, with_domains: bool = False) -> str:
     likes = " OR ".join(f"LOWER(V2Organizations) LIKE @term{i}"
                         for i in range(n_terms))
+    domain_filter = ("AND LOWER(SourceCommonName) IN UNNEST(@domains)"
+                     if with_domains else "")
     return f"""
         SELECT DATE(_PARTITIONTIME) AS date,
                COUNT(*) AS art_count,
@@ -62,6 +64,7 @@ def _daily_sql(n_terms: int) -> str:
         WHERE _PARTITIONTIME >= TIMESTAMP(@start)
           AND _PARTITIONTIME < TIMESTAMP(@end)
           AND ({likes})
+          {domain_filter}
         GROUP BY date
         ORDER BY date
     """
@@ -69,9 +72,12 @@ def _daily_sql(n_terms: int) -> str:
 
 def daily_series(terms: list[str], start: str, end: str,
                  dry_run: bool = False,
-                 cap_bytes: int = PROBE_CAP_BYTES):
-    """Daily [tone, art_count] for records mentioning any of `terms`.
-    dry_run=True returns the bytes the query WOULD scan, without running it."""
+                 cap_bytes: int = PROBE_CAP_BYTES,
+                 domains: list[str] | None = None):
+    """Daily [tone, art_count] for records mentioning any of `terms`,
+    optionally restricted to a whitelist of source domains (the
+    reliable-sources experiment). dry_run=True returns the bytes the query
+    WOULD scan, without running it."""
     bigquery, client = _client()
     params = ([bigquery.ScalarQueryParameter("start", "TIMESTAMP",
                                              pd.Timestamp(start, tz="UTC")),
@@ -80,11 +86,15 @@ def daily_series(terms: list[str], start: str, end: str,
               + [bigquery.ScalarQueryParameter(f"term{i}", "STRING",
                                                f"%{t.lower()}%")
                  for i, t in enumerate(terms)])
+    if domains:
+        params.append(bigquery.ArrayQueryParameter(
+            "domains", "STRING", [d.lower() for d in domains]))
     job_config = bigquery.QueryJobConfig(query_parameters=params,
                                          dry_run=dry_run)
     if not dry_run:  # dry runs bill nothing; a None cap is rejected upstream
         job_config.maximum_bytes_billed = int(cap_bytes)
-    job = client.query(_daily_sql(len(terms)), job_config=job_config)
+    job = client.query(_daily_sql(len(terms), with_domains=bool(domains)),
+                       job_config=job_config)
     if dry_run:
         return int(job.total_bytes_processed)
     df = job.to_dataframe()
@@ -96,8 +106,8 @@ def daily_series(terms: list[str], start: str, end: str,
     return df
 
 
-def load_bq_daily(name: str, terms: list[str],
-                  refresh: bool = False) -> pd.DataFrame:
+def load_bq_daily(name: str, terms: list[str], refresh: bool = False,
+                  domains: list[str] | None = None) -> pd.DataFrame:
     """Cached BigQuery daily series; full rebuild once, tiny incremental
     top-ups thereafter (a few GB/month of the 1 TB quota)."""
     from data.news import atomic_to_csv
@@ -111,14 +121,15 @@ def load_bq_daily(name: str, terms: list[str],
                 return cached
             fresh = daily_series(terms,
                                  str((last - pd.Timedelta(days=3)).date()),
-                                 str((today + pd.Timedelta(days=1)).date()))
+                                 str((today + pd.Timedelta(days=1)).date()),
+                                 domains=domains)
             merged = pd.concat([cached, fresh])
             merged = merged[~merged.index.duplicated(keep="last")].sort_index()
             atomic_to_csv(merged, cache_file)
             return merged
     df = daily_series(terms, config.TRAIN_START,
                       str((today + pd.Timedelta(days=1)).date()),
-                      cap_bytes=DEFAULT_CAP_BYTES)
+                      cap_bytes=DEFAULT_CAP_BYTES, domains=domains)
     if df.empty:
         raise RuntimeError(f"BigQuery returned no rows for {name} ({terms})")
     atomic_to_csv(df, cache_file)

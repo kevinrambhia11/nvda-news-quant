@@ -211,7 +211,8 @@ def load_aux_gdelt(refresh: bool = False) -> dict:
             if spec["source"] == "bigquery":
                 from data.bigquery_gdelt import load_bq_daily
                 out[series] = load_bq_daily(f"gdelt_{series}", spec["terms"],
-                                            refresh)
+                                            refresh,
+                                            domains=spec.get("domains"))
             else:
                 # quick=True: aux series must never stall a signal/train run
                 # in retry ladders; dedicated fetch runs do the grinding.

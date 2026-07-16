@@ -13,13 +13,26 @@ GDELT_QUERY = "NVIDIA sourcelang:english"
 CURATED_FEEDS = {
     "finance": {"query": "NVDA OR NVIDIA",
                 "sources": ["Reuters", "Bloomberg", "CNBC",
-                            "The Wall Street Journal", "Barron's"]},
+                            "The Wall Street Journal", "Barron's",
+                            "Financial Times", "MarketWatch",
+                            "The Economist"]},
     "ai": {"query": "NVIDIA AI",
-           "sources": ["Reuters", "Bloomberg", "TechCrunch", "The Verge"]},
+           "sources": ["Reuters", "Bloomberg", "TechCrunch", "The Verge",
+                       "BBC News", "Financial Times"]},
     "semiconductors": {"query": "semiconductor OR chipmaker OR TSMC",
                        "sources": ["Reuters", "CNBC", "Tom's Hardware",
-                                   "Bloomberg"]},
+                                   "Bloomberg", "Nikkei Asia",
+                                   "Financial Times"]},
 }
+
+# Vetted source domains for the QUALITY tone series (matched against GKG's
+# SourceCommonName in BigQuery) - the "reliable sources only" experiment.
+QUALITY_DOMAINS = [
+    "reuters.com", "bloomberg.com", "cnbc.com", "wsj.com", "barrons.com",
+    "ft.com", "bbc.com", "bbc.co.uk", "apnews.com", "economist.com",
+    "nikkei.com", "asia.nikkei.com", "marketwatch.com", "forbes.com",
+    "fortune.com", "techcrunch.com", "theverge.com", "tomshardware.com",
+]
 
 # Auxiliary news series: competitor and industry coverage also moves NVDA.
 # Each becomes a cached daily tone/volume series and cross features for the
@@ -38,6 +51,12 @@ AUX_SERIES = {
         "query": ('(semiconductors OR chipmakers OR "AI chips") '
                   'sourcelang:english'),
         "label": "semiconductor industry coverage (GDELT DOC API)",
+    },
+    "quality": {
+        "source": "bigquery",
+        "terms": ["nvidia"],
+        "domains": QUALITY_DOMAINS,
+        "label": "NVIDIA coverage from vetted outlets only (BigQuery GKG)",
     },
 }
 
