@@ -1,25 +1,19 @@
 {
-  "generated_at": "2026-07-16T13:22:06",
+  "generated_at": "2026-07-16T17:00:57",
   "ticker": "NVDA",
   "entry_day": "2026-07-16",
   "last_close": 212.5,
   "model_trained_through": "2026-07-10",
   "model_prob_up": 0.5337,
   "action": "HOLD (keep current position)",
-  "headline_sentiment": 0.034,
-  "headline_count": 126,
+  "headline_sentiment": 0.0904,
+  "headline_count": 171,
   "headlines_degraded": false,
   "sentiment_backend": "vader",
-  "stocktwits_bulls": 4,
-  "stocktwits_bears": 4,
-  "advisory_composite": 0.5287,
+  "stocktwits_bulls": 8,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5372,
   "most_negative": [
-    {
-      "title": "$NVDA Doing worse than soxx or smh. Nvidia is the worst semi",
-      "source": "stocktwits",
-      "score": -0.859,
-      "url": null
-    },
     {
       "title": "Nvidia Stock Is Losing to the Market in 2026. Time to Walk Away or Double Down? - The Motley Fool",
       "source": "google_news",
@@ -27,30 +21,36 @@
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVi1YZlZxeGxyNUtMSjNYUDVyVmRSdDRYdW5JT3l3Zi1YU193TDloaXdMcHZyOUp3NWc4R00wOWxwd3h5dHpzY3lINmhiWEtGN215TXRpNmdJN3U5ekV0OXQyaHk1MXZaaDBuTFZMbHhCT0plRTVhbm1lRlRmaUNGN2JYZnJpMURMTW9XOEg1LWFvTUZSLU5j?oc=5"
     },
     {
-      "title": "Jensen Huang Denies Reports Of Nvidia's Vera Rubin Being Delayed Due To Production Issues \u2014 \u2018Giant Amounts Of Production Incoming\u2019 - Stocktwits",
-      "source": "google_news",
-      "score": -0.572,
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMi1CZzllWlFOMGFoUW5kMk1NSWZtclIwVWpibGV1dmNtXzhITUJ4endUeElNdGt2N1NpNURYN3RnUFhLM09XX0I2SDFJNHpwSDU5WkVJMmZ1ZkdfUm56eVdKMllPUlVtdWdKc1cwR0pudll5SlE3VVN2ak92VmZ3bWRzdmtYekozYTV6MjhJOUhlWTlzR3R1TFlOVl9xcFJZb3pFeU1MODJCZllYeFVDV0JoeFJuNzZVV3EyT1FyakNFUG4y?oc=5"
+      "title": "Nasdaq, S&P 500 Futures Slip As Iran Tensions, Chip Weakness Keep Investors On Edge: Why TSM, NVDA, NFLX, ATAI, ASTS Are In Focus",
+      "source": "finviz",
+      "score": -0.67,
+      "url": "https://finance.yahoo.com/m/cba4477d-3d77-36e5-a30f-0e5da069c030/nasdaq%2C-s%26p-500-futures-slip.html"
+    },
+    {
+      "title": "$NVDA  bear just blocked me because I told him I\u2019m up over 100%.. If we dip back to 189 . I\u2019ll start buying again. You can\u2019t scare me to sell.",
+      "source": "stocktwits",
+      "score": -0.649,
+      "url": null
     }
   ],
   "most_positive": [
     {
-      "title": "$NVDA my puts were absolutely melted yesterday. Got some more ticking until tomorrow. This is my short-term hedge but I don\u2019t complain as I have a 1000 shares averaged in the low 200s. This is the company of the future. I don\u2019t really care much about short term. The infrastructure and vision this company has long term is just unmatched. Impossible to not be a bull over a 2-3 years time horizon. However, in the meanwhile, playing the swings is quite fun as it there is a very obvious market rotation that is somewhat predictable because markets became a casino and no longer chase fundamentals intraday",
+      "title": "$NVDA $TM  \n \nNvidia expands partnership with Toyota to advance physical AI \n \nToyota (TM) and NVIDIA (NVDA) are working on the next era of mobility, defined by AI-enabled systems that can perceive, reason and safely act in the physical world. NVIDIA has enabled Toyota to tap into NVIDIA accelerated computing, AI software and simulation technologies to develop safer, more intelligent vehicles, optimize automotive engineering workflows, fine-tune factory operations and power urban intelligence systems, in support of the company&#39;s vision for safer mobility. &quot;Physical AI will bring intelligence to every moving machine from cars, robots and trucks to the cities and factories they operate in,&quot; said Rishi Dhall, vice president of automotive at NVIDIA. &quot;Together, Toyota and NVIDIA are building the AI infrastructure for a new era of mobility, where vehicles can become more autonomous, manufacturing more AI-defined and urban environments more intelligent, responsive and safe.&quot;",
       "source": "stocktwits",
-      "score": 0.839,
+      "score": 0.985,
       "url": null
     },
     {
-      "title": "Nvidia and Sega celebrate 30 years after famous 1995 bankruptcy rescue",
-      "source": "finviz",
-      "score": 0.791,
-      "url": "https://finance.yahoo.com/video/nvidia-and-sega-celebrate-30-years-after-famous-1995-bankruptcy-rescue-194112759.html"
+      "title": "$NVDA God gave him life, wind, guts, muscle, long hair and the best thing he could ever hold under these circumstances His flag. Thank you God for allowing me the freedom to hold my NVDA shares today in Your free country that you gave me. I will always try to put my best foot forward when I deal with the money that you have blessed me with. I appreciate you stocktwits for having to read my thoughts in this market while Howard L. still hasn&#39;t thrown me off of the Nvidia stocktwit train. Hold your shares long like this kid below. It takes some spunk but you still got it kids!!! C&#39;ya week before next ER.",
+      "source": "stocktwits",
+      "score": 0.958,
+      "url": null
     },
     {
-      "title": "Nvidia May Be the Most Valuable Company in the World, but It Looks Like a Bargain Compared to These 3 Artificial Intelligence (AI) Stocks - The Motley Fool",
-      "source": "google_news",
-      "score": 0.787,
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQU1laSVgtSllFNHlxX1BzYWEtNEZoM3doWWNyOEV4WlB2T0hnbF9OWE1HY3l0QVFrYms4cXdnNUJLVy1nWlU4WkpuNzBCQU5ILXF1LVlpYUNhQVQxOE9IWUo5U2gwdjVvX09HOWJRSl94TjBYUHYzLV9XT09HTnZXaFJrQTFfRkl3MWhaa2FweE05R0hzME93OQ?oc=5"
+      "title": "$NVDA The business news has become downright slanderous when it comes to how it reports on this beautiful miracle company that is Nvidia. There isn&#39;t one negative I can think of and that terrifies them so they create fairy tales instead. You will never get me to sell one share with any of your drivel. I will always be free to type the truth about this company in this free country! Nvidia rocks!",
+      "source": "stocktwits",
+      "score": 0.941,
+      "url": null
     }
   ]
 }
