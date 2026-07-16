@@ -166,6 +166,11 @@ tab_today, tab_dir, tab_vol, tab_tech, tab_news = st.tabs(
 # Tab 1: Desk today
 # ---------------------------------------------------------------------------
 with tab_today:
+    st.caption("**What this page is:** the desk's daily output. The green "
+               "banner is the product - how much NVDA to hold so your risk "
+               "stays constant. The blue banner is the news-based direction "
+               "read (advisory - it has no proven edge). Below: today's "
+               "numbers, live charts, and what the news is saying.")
     signal = read_latest_json("signal_*.json")
     vol = read_latest_json("vol_forecast_*.json")
 
@@ -215,25 +220,42 @@ with tab_today:
         m = st.columns(5)
         m[0].metric("Model P(up)", f"{signal['model_prob_up']:.1%}",
                     help=f"Long > {config.LONG_ENTER}, exit < {config.LONG_EXIT}")
+        m[0].caption("Model's odds that NVDA rises into tomorrow's open - "
+                     "advisory only, no proven edge.")
         m[1].metric("Headline sentiment", f"{signal['headline_sentiment']:+.3f}",
                     help=f"{signal['headline_count']} items, "
                          f"{signal['sentiment_backend']}")
+        m[1].caption("Average mood of live headlines, from -1 (bearish) "
+                     "to +1 (bullish).")
         m[2].metric("StockTwits bulls/bears",
                     f"{signal['stocktwits_bulls']}/{signal['stocktwits_bears']}")
+        m[2].caption("How the retail crowd says it is positioned right now.")
         m[3].metric("Last close", f"${signal['last_close']}")
+        m[3].caption("Latest verified daily closing price the desk "
+                     "computed from.")
         if vol:
             h1 = vol["horizons"]["1"]
             m[4].metric("1-day total vol", f"{h1['total_daily_vol']:.2%}",
                         help="Includes overnight gap risk")
+            m[4].caption("Expected size of tomorrow's move (either "
+                         "direction), incl. overnight gap.")
 
     if vol:
         h1 = vol["horizons"]["1"]
         v = st.columns(4)
         v[0].metric("Annualized vol", f"{h1['total_annualized_vol']:.1%}")
+        v[0].caption("The same expected movement, scaled to a yearly rate.")
         v[1].metric("Target-vol sizing", f"{h1['target_vol_weight']:.0%}",
                     help=f"{config.VOL_TARGET_ANN:.0%} annual target")
+        v[1].caption(f"Position size that keeps risk at the "
+                     f"{config.VOL_TARGET_ANN:.0%} target - THE desk "
+                     "recommendation.")
         v[2].metric("VaR 95% ($1M)", f"${h1['var_95']:,.0f}")
+        v[2].caption("A bad day (worst 1-in-20) loses about this much "
+                     "per $1M held.")
         v[3].metric("VaR 99% ($1M)", f"${h1['var_99']:,.0f}")
+        v[3].caption("A very bad day (worst 1-in-100) - treat as a floor, "
+                     "tails are fatter.")
 
     st.subheader("Charts")
     c_live, c_hist = st.columns(2)
@@ -278,6 +300,13 @@ with tab_today:
 # Tab 2: Direction model
 # ---------------------------------------------------------------------------
 with tab_dir:
+    st.caption("**What this page is:** the direction model's report card. "
+               "Candidates compete on a selection window and the winner is "
+               "judged on data it never saw (the holdout) - that honest "
+               "verdict is why direction is only advisory. The sliders let "
+               "you replay the backtest under different trading rules; the "
+               "fusion table shows what combining direction with vol-sizing "
+               "would have done.")
     selection = read_text(str(config.MODEL_SELECTION_PATH))
     if selection:
         st.subheader("Candidate selection (selection window vs holdout)")
@@ -331,6 +360,12 @@ with tab_dir:
 # Tab 3: Volatility
 # ---------------------------------------------------------------------------
 with tab_vol:
+    st.caption("**What this page is:** the desk's workhorse. Volatility - "
+               "how much the stock moves, not which way - is genuinely "
+               "predictable, and this model's forecasts drive the position "
+               "size and VaR on the front page. Here you can see its "
+               "out-of-sample accuracy vs standard benchmarks and translate "
+               "risk into dollars for any position.")
     vol_report = read_text(str(config.VOL_REPORT_PATH))
     if vol_report:
         st.subheader("Model comparison (walk-forward OOS)")
@@ -365,6 +400,12 @@ with tab_vol:
 # Tab 4: Technical charts
 # ---------------------------------------------------------------------------
 with tab_tech:
+    st.caption("**What this page is:** classic trader charts computed from "
+               "the desk's own price history. Trend (SMAs), stretch "
+               "(Bollinger), momentum (RSI, MACD), realized volatility "
+               "(the raw material behind your position sizing), drawdown, "
+               "and volume. Context for reading the market - none of these "
+               "drive the desk's recommendation directly.")
     px_full = read_csv(str(config.CACHE / f"prices_{config.TICKER}.csv"))
     if px_full is None or len(px_full) < 260:
         st.info("Price cache not ready - run `python main.py fetch`.")
@@ -480,6 +521,12 @@ with tab_tech:
 # Tab 5: News & data
 # ---------------------------------------------------------------------------
 with tab_news:
+    st.caption("**What this page is:** what the desk reads. The news-tone "
+               "and volume series that feed the models (GDELT monitors "
+               "global online media), competitor and industry coverage, "
+               "the freshness of every data cache, and an on-demand live "
+               "headline scan. If a number on the front page ever looks "
+               "stale, this page shows you why.")
     g = read_csv(str(config.CACHE / "gdelt_daily.csv"))
     if g is not None:
         st.subheader("GDELT news tone (30-day average) and article volume")
