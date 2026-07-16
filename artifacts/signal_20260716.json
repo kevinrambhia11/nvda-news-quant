@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-07-16T17:04:07",
+  "generated_at": "2026-07-16T17:07:20",
   "ticker": "NVDA",
   "entry_day": "2026-07-16",
   "last_close": 212.5,
   "model_trained_through": "2026-07-14",
   "model_prob_up": 0.4687,
   "action": "EXIT / STAY FLAT",
-  "headline_sentiment": 0.0869,
-  "headline_count": 173,
+  "headline_sentiment": 0.0835,
+  "headline_count": 171,
   "headlines_degraded": false,
   "sentiment_backend": "vader",
   "stocktwits_bulls": 7,
-  "stocktwits_bears": 1,
-  "advisory_composite": 0.4911,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.4906,
   "most_negative": [
     {
       "title": "Nvidia Stock Is Losing to the Market in 2026. Time to Walk Away or Double Down? - The Motley Fool",
