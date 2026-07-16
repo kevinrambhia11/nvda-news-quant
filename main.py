@@ -61,6 +61,13 @@ def _build() -> pd.DataFrame:
     gdelt = load_gdelt_daily()
     aux = load_aux_gdelt()
     ds = build_dataset(px, bench, gdelt, earn_dates=_load_earnings(), aux=aux)
+    try:
+        from model.news2vec import load_news2_features
+        n2 = load_news2_features()
+        if n2 is not None:
+            ds = ds.join(n2, how="left")
+    except Exception as exc:
+        log.warning("news2 features unavailable (%s)", exc)
     ds.to_csv(config.FEATURES_PATH)
     log.info("Dataset: %d rows x %d cols (aux series: %s) -> %s", len(ds),
              ds.shape[1], sorted(aux) or "none", config.FEATURES_PATH)
@@ -120,6 +127,22 @@ def cmd_bqml() -> None:
     print(run_experiments())
 
 
+def cmd_news2() -> None:
+    """Learn article-impact scorers (pre-holdout only), build the daily
+    news2 feature matrix, and run the magnitude-head evaluation."""
+    from model.magnitude import evaluate
+    from model.news2vec import build_daily_features, learn_impact
+    ds = _build()
+    from model.train import _clean
+    data = _clean(ds)
+    oos_idx = data.index[config.MIN_TRAIN_DAYS:]
+    split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
+    learn_impact(split)
+    build_daily_features()
+    ds = _build()  # rebuild with news2 columns joined
+    print(evaluate(ds))
+
+
 def cmd_intraday_study() -> None:
     from intraday.study import run_study
     print(run_study())
@@ -165,7 +188,7 @@ def main() -> None:
                         choices=["fetch", "train", "backtest", "signal",
                                  "vol-train", "vol-forecast", "fuse",
                                  "intraday-study", "log-headlines",
-                                 "bq-probe", "bqml", "all"])
+                                 "bq-probe", "bqml", "news2", "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
     parser.add_argument("--no-finbert", action="store_true",
@@ -198,6 +221,8 @@ def main() -> None:
         cmd_bq_probe()
     elif args.command == "bqml":
         cmd_bqml()
+    elif args.command == "news2":
+        cmd_news2()
     elif args.command == "all":
         cmd_fetch(refresh=args.refresh)
         cmd_train()

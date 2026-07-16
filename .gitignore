@@ -30,6 +30,12 @@ artifacts/cache/*
 !artifacts/cache/gdelt_competitors.csv
 !artifacts/cache/gdelt_industry.csv
 
+# news2 daily aggregates/features are small and tracked; the 785k-article
+# parquet (~50 MB) and embeddings (~600 MB) are rebuildable via one BigQuery
+# query + local encoding, so they stay out of the repo
+!artifacts/cache/news2_daily.csv
+!artifacts/cache/news2_features.csv
+
 # Display artifacts for the hosted dashboard (Streamlit Community Cloud
 # renders whatever the repo carries; push after retraining to refresh it)
 !artifacts/*.txt

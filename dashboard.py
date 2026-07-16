@@ -157,9 +157,22 @@ st.title("NVDA Quant Desk")
 st.caption("News-sentiment direction signal + EMH-consistent volatility desk. "
            "Educational tool - not financial advice.")
 
-tab_today, tab_dir, tab_vol, tab_tech, tab_news = st.tabs(
+(tab_today, tab_dir, tab_vol, tab_tech, tab_links,
+ tab_news) = st.tabs(
     ["Desk today", "Direction model", "Volatility", "Technical charts",
-     "News & data"])
+     "Today's news", "News & data"])
+
+
+@st.cache_data(ttl=900, show_spinner="Collecting today's news...")
+def todays_news():
+    from data.news import collect_live_headlines
+    from sentiment.analyzer import SentimentAnalyzer
+    items = collect_live_headlines()
+    scores = SentimentAnalyzer(prefer_finbert=False).score(
+        [h.get("title", "") for h in items])
+    for h, s in zip(items, scores):
+        h["score"] = round(float(s), 3)
+    return items
 
 
 # ---------------------------------------------------------------------------
@@ -518,7 +531,44 @@ with tab_tech:
 
 
 # ---------------------------------------------------------------------------
-# Tab 5: News & data
+# Tab 5: Today's news (all collected links, grouped by category)
+# ---------------------------------------------------------------------------
+with tab_links:
+    st.caption("**What this page is:** every article the desk can see right "
+               "now, grouped by category, scored for sentiment, and linked "
+               "to the original source. Refreshes at most every 15 minutes.")
+    c1, c2 = st.columns([1, 5])
+    with c1:
+        if st.button("Refresh now"):
+            todays_news.clear()
+            st.rerun()
+    try:
+        items = todays_news()
+    except Exception as exc:
+        items = []
+        st.warning(f"Collection failed: {exc}")
+    if items:
+        with c2:
+            st.metric("Articles collected", len(items),
+                      f"mean sentiment {np.mean([h['score'] for h in items]):+.3f}")
+        order = ["finance", "ai", "semiconductors", "hyperscalers", "macro",
+                 "brokers"]
+        groups: dict = {}
+        for h in items:
+            groups.setdefault(h.get("vertical") or "general", []).append(h)
+        for cat in order + [c for c in groups if c not in order]:
+            if cat not in groups:
+                continue
+            grp = sorted(groups[cat], key=lambda h: -abs(h.get("score", 0)))
+            mean_s = np.mean([h.get("score", 0) for h in grp])
+            with st.expander(f"{cat}  -  {len(grp)} articles, "
+                             f"mean sentiment {mean_s:+.3f}",
+                             expanded=(cat in ("finance", "macro"))):
+                headline_lines(grp[:25])
+
+
+# ---------------------------------------------------------------------------
+# Tab 6: News & data
 # ---------------------------------------------------------------------------
 with tab_news:
     st.caption("**What this page is:** what the desk reads. The news-tone "

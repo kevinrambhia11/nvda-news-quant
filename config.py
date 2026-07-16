@@ -23,6 +23,16 @@ CURATED_FEEDS = {
                        "sources": ["Reuters", "CNBC", "Tom's Hardware",
                                    "Bloomberg", "Nikkei Asia",
                                    "Financial Times"]},
+    "hyperscalers": {"query": ('(Microsoft OR Google OR Amazon OR Meta OR '
+                               'Oracle) (AI OR datacenter OR cloud OR GPU)'),
+                     "sources": ["Reuters", "Bloomberg", "CNBC"]},
+    "macro": {"query": ('tariffs OR "export controls" OR "Federal Reserve" '
+                        'OR sanctions OR geopolitics'),
+              "sources": ["Reuters", "BBC News", "Financial Times",
+                          "The Wall Street Journal"]},
+    "brokers": {"query": ('NVDA (upgrade OR downgrade OR "price target" OR '
+                          'analyst)'),
+                "sources": ["Reuters", "Barron's", "CNBC", "Bloomberg"]},
 }
 
 # Vetted source domains for the QUALITY tone series (matched against GKG's

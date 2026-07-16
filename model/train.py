@@ -86,6 +86,16 @@ def active_candidates(data: pd.DataFrame) -> list:
         cands.append(("GBM deep + quality", FULL_FEATURES + qual,
                       _gbm_deep, None))
         log.info("Quality-sources candidate active with features: %s", qual)
+    try:
+        from model.news2vec import NEWS2_FEATURES
+        n2 = [c for c in NEWS2_FEATURES
+              if c in data.columns and not data[c].isna().all()]
+        if len(n2) >= 6:
+            cands.append(("GBM deep + news2", FULL_FEATURES + n2,
+                          _gbm_deep, None))
+            log.info("news2 candidate active with %d features", len(n2))
+    except Exception:
+        pass
     return cands
 
 
