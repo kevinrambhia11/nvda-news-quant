@@ -13,6 +13,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -49,6 +50,25 @@ def fetch_intraday(sym: str):
         return closes, prev
     except Exception:
         return None
+
+
+def fitted_lines(df: pd.DataFrame, y_title: str = "price ($)",
+                 height: int = 280, fmt: str = ".2f"):
+    """Multi-series line chart with the y-axis fitted to the data (Streamlit's
+    native chart anchors at zero, which flattens a $200 stock)."""
+    data = (df.rename_axis("date").reset_index()
+            .melt("date", var_name="series", value_name="value").dropna())
+    lo, hi = float(data["value"].min()), float(data["value"].max())
+    pad = (hi - lo) * 0.06 or max(abs(hi), 1) * 0.02
+    return (alt.Chart(data).mark_line()
+            .encode(x=alt.X("date:T", title=None),
+                    y=alt.Y("value:Q", title=y_title,
+                            scale=alt.Scale(domain=[lo - pad, hi + pad])),
+                    color=alt.Color("series:N",
+                                    legend=alt.Legend(orient="top", title=None)),
+                    tooltip=[alt.Tooltip("date:T"), alt.Tooltip("series:N"),
+                             alt.Tooltip("value:Q", format=fmt)])
+            .properties(height=height))
 
 
 def headline_lines(items):
@@ -137,8 +157,9 @@ st.title("NVDA Quant Desk")
 st.caption("News-sentiment direction signal + EMH-consistent volatility desk. "
            "Educational tool - not financial advice.")
 
-tab_today, tab_dir, tab_vol, tab_news = st.tabs(
-    ["Desk today", "Direction model", "Volatility", "News & data"])
+tab_today, tab_dir, tab_vol, tab_tech, tab_news = st.tabs(
+    ["Desk today", "Direction model", "Volatility", "Technical charts",
+     "News & data"])
 
 
 # ---------------------------------------------------------------------------
@@ -224,10 +245,12 @@ with tab_today:
         else:
             closes, prev = live
             last = float(closes.iloc[-1])
-            st.caption(f"{config.TICKER} today - 5-minute prices, live "
-                       "(vs previous close)")
-            st.line_chart(pd.DataFrame({"price": closes,
-                                        "prev close": prev}))
+            st.caption(f"{config.TICKER} - 5-minute prices, latest session, "
+                       "live (times in ET)")
+            intraday_df = pd.DataFrame(
+                {"price": closes.tz_localize(None), "prev close": prev})
+            st.altair_chart(fitted_lines(intraday_df, height=260),
+                            use_container_width=True)
             if prev == prev:  # NaN-safe
                 st.metric("Latest", f"${last:,.2f}",
                           f"{(last / prev - 1) * 100:+.2f}% vs prev close")
@@ -236,10 +259,10 @@ with tab_today:
         if px_hist is not None and len(px_hist) > 60:
             st.caption(f"{config.TICKER} daily close - ~6 months, with "
                        "50-day average")
-            st.line_chart(pd.DataFrame({
+            st.altair_chart(fitted_lines(pd.DataFrame({
                 "close": px_hist["Close"].iloc[-126:],
                 "SMA50": px_hist["Close"].rolling(50).mean().iloc[-126:],
-            }))
+            }), height=260), use_container_width=True)
 
     if signal:
         cpos, cneg = st.columns(2)
@@ -339,7 +362,122 @@ with tab_vol:
 
 
 # ---------------------------------------------------------------------------
-# Tab 4: News & data
+# Tab 4: Technical charts
+# ---------------------------------------------------------------------------
+with tab_tech:
+    px_full = read_csv(str(config.CACHE / f"prices_{config.TICKER}.csv"))
+    if px_full is None or len(px_full) < 260:
+        st.info("Price cache not ready - run `python main.py fetch`.")
+    else:
+        window = st.radio("Window", ["6M", "1Y", "2Y"], index=1,
+                          horizontal=True)
+        n = {"6M": 126, "1Y": 252, "2Y": 504}[window]
+        c, v = px_full["Close"], px_full["Volume"]
+
+        # --- price with SMAs and Bollinger band (full width) ---------------
+        mid, sd = c.rolling(20).mean(), c.rolling(20).std()
+        tail = c.index[-n:]
+        band = pd.DataFrame({"date": tail,
+                             "upper": (mid + 2 * sd).iloc[-n:].to_numpy(),
+                             "lower": (mid - 2 * sd).iloc[-n:].to_numpy()})
+        price_df = pd.DataFrame({"close": c.iloc[-n:],
+                                 "SMA50": c.rolling(50).mean().iloc[-n:],
+                                 "SMA200": c.rolling(200).mean().iloc[-n:]})
+        lo = float(min(band["lower"].min(), price_df.min().min()))
+        hi = float(max(band["upper"].max(), price_df.max().max()))
+        pad = (hi - lo) * 0.05
+        area = (alt.Chart(band).mark_area(opacity=0.15)
+                .encode(x=alt.X("date:T", title=None),
+                        y=alt.Y("lower:Q", title="price ($)",
+                                scale=alt.Scale(domain=[lo - pad, hi + pad])),
+                        y2="upper:Q"))
+        st.caption("Price with SMA50 / SMA200 and Bollinger band (20, 2 sd)")
+        st.altair_chart(area + fitted_lines(price_df, height=340),
+                        use_container_width=True)
+
+        col_l, col_r = st.columns(2)
+
+        with col_l:
+            # --- RSI(14) with 30/70 guides ---------------------------------
+            delta = c.diff()
+            gain = delta.clip(lower=0).rolling(14).mean()
+            loss = (-delta.clip(upper=0)).rolling(14).mean()
+            rsi = (100 - 100 / (1 + gain / loss)).iloc[-n:]
+            st.caption("RSI (14) - overbought > 70, oversold < 30")
+            rsi_data = rsi.rename_axis("date").reset_index(name="RSI")
+            rsi_line = (alt.Chart(rsi_data).mark_line()
+                        .encode(x=alt.X("date:T", title=None),
+                                y=alt.Y("RSI:Q",
+                                        scale=alt.Scale(domain=[0, 100])),
+                                tooltip=["date:T",
+                                         alt.Tooltip("RSI:Q", format=".1f")]))
+            guides = (alt.Chart(pd.DataFrame({"y": [30, 70]}))
+                      .mark_rule(strokeDash=[4, 4], opacity=0.6)
+                      .encode(y="y:Q"))
+            st.altair_chart((rsi_line + guides).properties(height=220),
+                            use_container_width=True)
+
+            # --- realized volatility ---------------------------------------
+            from features.build import garman_klass_vol
+            gk_ann = (garman_klass_vol(px_full).rolling(21).mean()
+                      * np.sqrt(252) * 100).iloc[-n:]
+            cc_ann = (c.pct_change().rolling(21).std()
+                      * np.sqrt(252) * 100).iloc[-n:]
+            st.caption("Realized volatility, 21-day, annualized (%)")
+            st.altair_chart(fitted_lines(pd.DataFrame(
+                {"Garman-Klass": gk_ann, "close-to-close": cc_ann}),
+                y_title="vol (%)", height=220, fmt=".1f"),
+                use_container_width=True)
+
+        with col_r:
+            # --- MACD (12, 26, 9) ------------------------------------------
+            ema12 = c.ewm(span=12, adjust=False).mean()
+            ema26 = c.ewm(span=26, adjust=False).mean()
+            macd = (ema12 - ema26).iloc[-n:]
+            sig = (ema12 - ema26).ewm(span=9, adjust=False).mean().iloc[-n:]
+            hist = (macd - sig)
+            st.caption("MACD (12, 26, 9)")
+            hist_data = hist.rename_axis("date").reset_index(name="hist")
+            bars = (alt.Chart(hist_data).mark_bar(opacity=0.4)
+                    .encode(x=alt.X("date:T", title=None),
+                            y=alt.Y("hist:Q", title="MACD"),
+                            color=alt.condition(alt.datum.hist > 0,
+                                                alt.value("#2a9d64"),
+                                                alt.value("#c0504d"))))
+            macd_lines = fitted_lines(pd.DataFrame(
+                {"MACD": macd, "signal": sig}), y_title="MACD", height=220)
+            st.altair_chart(bars + macd_lines, use_container_width=True)
+
+            # --- drawdown ---------------------------------------------------
+            dd = (c / c.cummax() - 1).iloc[-n:] * 100
+            st.caption("Drawdown from all-time high (%)")
+            dd_data = dd.rename_axis("date").reset_index(name="drawdown")
+            st.altair_chart(
+                (alt.Chart(dd_data).mark_area(opacity=0.5, color="#c0504d")
+                 .encode(x=alt.X("date:T", title=None),
+                         y=alt.Y("drawdown:Q", title="drawdown (%)"),
+                         tooltip=["date:T",
+                                  alt.Tooltip("drawdown:Q", format=".1f")])
+                 .properties(height=220)), use_container_width=True)
+
+        # --- volume (full width) --------------------------------------------
+        st.caption("Volume with 20-day average")
+        vol_data = (v.iloc[-n:] / 1e6).rename_axis("date").reset_index(name="volume")
+        vol_bars = (alt.Chart(vol_data).mark_bar(opacity=0.5)
+                    .encode(x=alt.X("date:T", title=None),
+                            y=alt.Y("volume:Q", title="shares (millions)"),
+                            tooltip=["date:T",
+                                     alt.Tooltip("volume:Q", format=".0f")]))
+        vol_avg = ((v.rolling(20).mean() / 1e6).iloc[-n:]
+                   .rename_axis("date").reset_index(name="avg20"))
+        avg_line = (alt.Chart(vol_avg).mark_line(color="#e8a838")
+                    .encode(x="date:T", y="avg20:Q"))
+        st.altair_chart((vol_bars + avg_line).properties(height=200),
+                        use_container_width=True)
+
+
+# ---------------------------------------------------------------------------
+# Tab 5: News & data
 # ---------------------------------------------------------------------------
 with tab_news:
     g = read_csv(str(config.CACHE / "gdelt_daily.csv"))
