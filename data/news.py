@@ -230,6 +230,33 @@ def load_aux_gdelt(refresh: bool = False) -> dict:
 # Live headline scrapers
 # ---------------------------------------------------------------------------
 
+def curated_headlines(max_per_source: int = 4) -> list[dict]:
+    """Reliable-publisher feeds per vertical (AI / semiconductors / finance):
+    one simple Google News query per (query, publisher) pair, since
+    OR-chained source: filters are unreliable in the RSS endpoint. Each item
+    is labeled with its actual publisher and vertical."""
+    import feedparser
+    from urllib.parse import quote_plus
+    items: list[dict] = []
+    for vertical, spec in config.CURATED_FEEDS.items():
+        for src in spec["sources"]:
+            q = f'{spec["query"]} source:"{src}" when:3d'
+            url = (f"https://news.google.com/rss/search?q={quote_plus(q)}"
+                   "&hl=en-US&gl=US&ceid=US:en")
+            try:
+                feed = feedparser.parse(url)
+            except Exception:
+                continue
+            for e in feed.entries[:max_per_source]:
+                publisher = (getattr(getattr(e, "source", None), "title", "")
+                             or src)
+                items.append({"source": publisher, "vertical": vertical,
+                              "title": e.get("title", ""),
+                              "published": e.get("published", ""),
+                              "url": e.get("link", "")})
+    return items
+
+
 def google_news_headlines(query: str = "NVIDIA stock", max_items: int = 50) -> list[dict]:
     import feedparser
     from urllib.parse import quote_plus
@@ -309,6 +336,9 @@ def reddit_headlines(query: str = config.TICKER, max_items: int = 40) -> list[di
 def collect_live_headlines() -> list[dict]:
     """Pull fresh headlines from every source and de-duplicate by title."""
     collectors = [
+        # curated first: when the same story also arrives via the generic
+        # feeds, the deduplicator keeps the publisher-labeled version
+        ("curated", curated_headlines),
         ("google_news", google_news_headlines),
         ("yahoo_rss", yahoo_finance_headlines),
         ("finviz", finviz_headlines),

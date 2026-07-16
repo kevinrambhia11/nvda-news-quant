@@ -595,6 +595,7 @@ with tab_news:
             df = pd.DataFrame({
                 "score": scores,
                 "source": [h["source"] for h in items],
+                "vertical": [h.get("vertical", "") for h in items],
                 "headline": [h["title"] for h in items],
                 "link": [h.get("url", "") for h in items],
             }).sort_values("score")

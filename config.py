@@ -7,6 +7,20 @@ BENCHMARK = "QQQ"
 # GDELT full-text search query (GDELT monitors global online news media)
 GDELT_QUERY = "NVIDIA sourcelang:english"
 
+# Curated live-headline feeds: reliable publishers per vertical, fetched as
+# one simple Google News query per (query, publisher) pair - OR-chained
+# source: filters are unreliable in the RSS endpoint. Edit to taste.
+CURATED_FEEDS = {
+    "finance": {"query": "NVDA OR NVIDIA",
+                "sources": ["Reuters", "Bloomberg", "CNBC",
+                            "The Wall Street Journal", "Barron's"]},
+    "ai": {"query": "NVIDIA AI",
+           "sources": ["Reuters", "Bloomberg", "TechCrunch", "The Verge"]},
+    "semiconductors": {"query": "semiconductor OR chipmaker OR TSMC",
+                       "sources": ["Reuters", "CNBC", "Tom's Hardware",
+                                   "Bloomberg"]},
+}
+
 # Auxiliary news series: competitor and industry coverage also moves NVDA.
 # Each becomes a cached daily tone/volume series and cross features for the
 # direction model. Sources are permanent per series (never spliced):
