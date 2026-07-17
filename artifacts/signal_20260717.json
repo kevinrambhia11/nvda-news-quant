@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-07-17T17:01:37",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-17",
+  "last_close": 207.4,
+  "model_trained_through": "2026-07-14",
+  "model_prob_up": 0.6353,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0507,
+  "headline_count": 194,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 6,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.6023,
+  "most_negative": [
+    {
+      "title": "$NVDA \ud83e\udee8\ud83e\udee8\ud83e\udee8\ud83e\udee8\ud83e\udd74\ud83e\udd74\ud83e\udd74\ud83e\udd74\ud83e\udd74\ud83d\ude31\ud83d\ude31\ud83d\ude31",
+      "source": "stocktwits",
+      "score": -0.947,
+      "url": null
+    },
+    {
+      "title": "This Detroit Auto Stock Has Soared, but There's Still One Nagging Problem: China",
+      "source": "yahoo_rss",
+      "score": -0.796,
+      "url": "https://www.fool.com/investing/2026/07/17/this-detroit-auto-stock-has-soared-but-theres-stil/?.tsrc=rss"
+    },
+    {
+      "title": "$NVDA Fake premarket pumps bull traps today will be bad",
+      "source": "stocktwits",
+      "score": -0.765,
+      "url": null
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "XI JINPING PUSHES GLOBAL AI COLLAB OVER SOLO PLAY   \n \nChinese President Xi Jinping at WAIC called for international AI cooperation instead of any one country\u2019s \u201csolo performance\u201d while touting new Moonshot Kimi K3 model.   \n \n\ud83d\udd39 Highlights World AI Cooperation Organization with 29 countries and support for developing nations   \n\ud83d\udd39 Kimi K3 launches as world\u2019s largest open-source AI with 2.8T parameters claiming edge over Anthropic OpenAI   \n\ud83d\udd39 Comes amid US chip export limits as $NVDA $AMD shipments to China remain tightly controlled   \n\ud83d\udd39 Beijing accelerating tech autonomy push in the AI race   \n \n$NVDA $AMD exposure in the mix as geopolitics meets massive model competition.",
+      "source": "stocktwits",
+      "score": 0.914,
+      "url": null
+    },
+    {
+      "title": "Nvidia May Be the Most Valuable Company in the World, but It Looks Like a Bargain Compared to These 3 Artificial Intelligence (AI) Stocks - The Motley Fool",
+      "source": "google_news",
+      "score": 0.787,
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQU1laSVgtSllFNHlxX1BzYWEtNEZoM3doWWNyOEV4WlB2T0hnbF9OWE1HY3l0QVFrYms4cXdnNUJLVy1nWlU4WkpuNzBCQU5ILXF1LVlpYUNhQVQxOE9IWUo5U2gwdjVvX09HOWJRSl94TjBYUHYzLV9XT09HTnZXaFJrQTFfRkl3MWhaa2FweE05R0hzME93OQ?oc=5"
+    },
+    {
+      "title": "The Great Rotation Is Here. Why Money Is Fleeing Chips for Old Favorites.",
+      "source": "finviz",
+      "score": 0.784,
+      "url": "https://www.barrons.com/articles/great-rotation-chip-stocks-value-10124e06?mod=bar_FV"
+    }
+  ]
+}
