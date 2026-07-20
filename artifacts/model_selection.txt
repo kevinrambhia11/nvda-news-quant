@@ -1,18 +1,19 @@
 ==================================================================
   Direction model - candidate selection (walk-forward OOS)
   selection window: 2019-05-23 -> 2023-08-31  |  holdout: 2023-09-01 -> 2026-07-16
+  judged on CLEAN window 2021-12-14 -> 2023-08-31 (nested news scorers trained < 2021-12-14)
 ==================================================================
-  candidate             Sharpe     AUC    acc   expo
-  GBM deep + vol          1.41   0.536  0.529  53.1%
-  GBM deep + events       1.15   0.525  0.525  54.3%
-  GBM base + events       1.11   0.513  0.523  55.0%
-  GBM deep rolling-3y     0.70   0.505  0.506  53.3%
-  GBM deep calibrated     1.28   0.498  0.534  87.1%
-  GBM deep + cross        0.67   0.521  0.487  51.9%
-  GBM deep + news2        1.37   0.541  0.539  60.8%
-  GBM deep + newsnet      6.24   0.800  0.730  56.5%
-  (news2/newsnet rows: selection numbers are memorized - ineligible to win until nested-split validation)
+  candidate            Sharpe  +-SE     AUC    acc   expo
+  GBM deep + vol         1.30  0.77   0.527  0.522  47.3%
+  GBM deep + events      0.79  0.77   0.525  0.503  51.3%
+  GBM base + events      0.89  0.77   0.519  0.522  50.3%
+  GBM deep rolling-3y   -0.29  0.76   0.505  0.487  48.0%
+  GBM deep calibrated    0.70  0.77   0.508  0.494  88.9%
+  GBM deep + cross       0.85  0.77   0.528  0.492  51.3%
+  GBM deep + news2      -0.67  0.76   0.466  0.485  49.7%
+  GBM deep + newsnet     1.62  0.77   0.539  0.534  43.6%
 ------------------------------------------------------------------
-  WINNER (by selection Sharpe): GBM deep + vol
-  Untouched holdout: Sharpe 0.96 (buy&hold 1.26) | AUC 0.475 | acc 0.499 | exposure 61.1%
+  WINNER (by clean-window Sharpe): GBM deep + newsnet [nested-validated]
+  Untouched holdout: Sharpe 1.03 (buy&hold 1.26) | AUC 0.492 | acc 0.501 | exposure 48.4%
+  (oos_predictions.csv starts at the nested boundary - earlier rows would be memorized)
 ==================================================================

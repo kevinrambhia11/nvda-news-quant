@@ -686,14 +686,14 @@ digraph desk {
     label="FEATURES (leak-free: news thru d-1, prices thru prior close)";
     fontname="Consolas"; fontsize=11; color="#8a988e"; fontcolor="#5f6d64";
     FB [label="tone - technicals - GK vol\\nearnings events - regime - cross"];
-    NN [label="NewsNet (neural)\\nfrozen MiniLM encoder\\n-> attention pooling over each day's articles\\n-> learned source + category weights\\n-> conflict = disagreement of articles"];
+    NN [label="news vectors\\nMiniLM embeddings of 707k headlines\\nnews2 ridge scorers (carry the edge)\\n+ NewsNet attention net (adds nothing\\nbeyond ridge once inputs were fixed)"];
   }
   subgraph cluster_mod {
     label="MODELS (tournament + untouched holdout)";
     fontname="Consolas"; fontsize=11; color="#8a988e"; fontcolor="#5f6d64";
-    VOL [label="VOLATILITY - HAR + events\\nOOS R2 0.37 / 0.45", fillcolor="#2e7d5b", fontcolor="#f6f8f5"];
-    DIR [label="DIRECTION - GBM tournament\\n7x no holdout edge", fillcolor="#5b7a99", fontcolor="#f6f8f5"];
-    MAG [label="MAGNITUDE - P(big move)\\n+news vectors: AUC .540 -> .558", fillcolor="#b07f35", fontcolor="#f6f8f5"];
+    VOL [label="VOLATILITY - HAR + events\\nholdout R2 0.31 / 0.42\\nnews vectors tried - not selected", fillcolor="#2e7d5b", fontcolor="#f6f8f5"];
+    DIR [label="DIRECTION - GBM tournament\\n9x no holdout edge\\n(incl. nested-validated news)", fillcolor="#5b7a99", fontcolor="#f6f8f5"];
+    MAG [label="MAGNITUDE - P(big move)\\n+news2: holdout AUC .537 -> .567\\ncalibrated Brier .250", fillcolor="#b07f35", fontcolor="#f6f8f5"];
   }
   subgraph cluster_out {
     label="OUTPUTS (daily 17:00, auto-published)";
@@ -709,7 +709,7 @@ digraph desk {
   FB -> VOL; FB -> DIR; FB -> MAG;
   NN -> MAG; NN -> DIR;
   VOL -> SZ; DIR -> AD;
-  MAG -> VOL [style=dashed, label="feeds sizing next", fontname="Consolas", fontsize=9, fontcolor="#b07f35", color="#b07f35"];
+  MAG -> VOL [style=dashed, label="tested 07-20: HAR+events still wins", fontname="Consolas", fontsize=9, fontcolor="#5b7a99", color="#5b7a99"];
   SZ -> DB; AD -> DB; SZ -> GH; DB -> GH [style=dashed, dir=back];
 }
 """)
