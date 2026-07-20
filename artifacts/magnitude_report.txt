@@ -8,4 +8,6 @@
   candidate         sel AUC  sel Brier  hold AUC  hold Brier
   price-only          0.538     0.2904     0.540      0.2733
   price + news2       0.534     0.2963     0.558      0.2706
+  price + newsnet     0.705     0.2463     0.565      0.2835
+  price + both        0.706     0.2443     0.580      0.2737
 ==================================================================

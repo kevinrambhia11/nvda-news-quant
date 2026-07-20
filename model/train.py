@@ -186,11 +186,19 @@ def select_and_train(dataset: pd.DataFrame) -> str:
         lines.append(f"  {name:<20}{s['sharpe']:>8.2f}{s['auc']:>8.3f}"
                      f"{s['acc']:>7.3f}{s['exposure']:>7.1%}")
 
+    # Candidates whose feature extractors were TRAINED on the selection era
+    # (news2 ridge scorers, NewsNet) post fantasy selection numbers by
+    # memorization - they are evaluated and reported but cannot be crowned
+    # until a nested-split retrain validates them on clean selection data.
+    CONTAMINATED = {"GBM deep + news2", "GBM deep + newsnet"}
+    eligible = [c for c in candidates if c[0] not in CONTAMINATED]
     # nan_to_num: a candidate that never trades has NaN Sharpe - it must
     # lose the selection, not win it via NaN comparison quirks.
     winner, win_feats, win_factory, win_window = max(
-        candidates,
+        eligible,
         key=lambda c: np.nan_to_num(sel_stats[c[0]]["sharpe"], nan=-np.inf))
+    lines.append("  (news2/newsnet rows: selection numbers are memorized -"
+                 " ineligible to win until nested-split validation)")
     hold = _strategy_stats(all_probs[winner][hold_idx],
                            data.loc[hold_idx, "fwd_ret"], data.loc[hold_idx, "y"])
     bh_rets = data.loc[hold_idx, "fwd_ret"]
