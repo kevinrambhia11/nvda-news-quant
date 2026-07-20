@@ -20,7 +20,9 @@ import joblib
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingRegressor
+from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LinearRegression
+from sklearn.pipeline import make_pipeline
 
 import config
 from features.vol import (EVENT_FEATURES, VOL_FEATURES, VOL_TECH_FEATURES,
@@ -31,6 +33,42 @@ log = logging.getLogger(__name__)
 
 HAR_FEATURES = ["gk_1", "gk_5", "gk_22"]
 EWMA_ALPHA = 0.06  # RiskMetrics lambda = 0.94
+
+# News-vector magnitude features promoted from the magnitude head (its
+# holdout verdict: news predicts move SIZE). Candidates carrying them are
+# judged with NESTED scorers on the clean window - see model/train.py.
+NEWSVEC_FEATURES = ["nn_mag", "nn_conflict", "n2_nvda_mag", "n2_macro_mag",
+                    "n2_nvda_count_z"]
+
+
+def _linreg_imputed():
+    # LinearRegression cannot digest NaNs (news-vector coverage starts in
+    # 2018; conflict needs 2+ same-day articles); median-impute, keeping
+    # all-NaN columns so early refit windows keep a stable feature count.
+    return make_pipeline(
+        SimpleImputer(strategy="median", keep_empty_features=True),
+        LinearRegression())
+
+
+def _join_newsvec(df: pd.DataFrame, nested: bool):
+    """Join whichever news-vector features exist onto df (entry-day indexed
+    on both sides, so the d-1 timing discipline carries over unchanged).
+    Returns (frame, joined column names)."""
+    from model.news2vec import load_news2_features
+    from model.newsnet import load_newsnet_features
+    out, cols = df.copy(), []
+    for loader in (load_news2_features, load_newsnet_features):
+        try:
+            f = loader(nested=nested)
+        except Exception:
+            f = None
+        if f is None:
+            continue
+        for c in NEWSVEC_FEATURES:
+            if c in f.columns:
+                out[c] = f[c].reindex(out.index).to_numpy()
+                cols.append(c)
+    return out, cols
 
 
 def _load_earnings():
@@ -89,15 +127,58 @@ def _metrics(y_log: pd.Series, pred_log: pd.Series,
 
 def evaluate_horizon(px: pd.DataFrame, bench: pd.DataFrame,
                      gdelt: pd.DataFrame, horizon: int, earn_dates=None):
-    """Walk-forward OOS predictions for every candidate and baseline."""
+    """Walk-forward OOS predictions for every candidate and baseline.
+
+    Returns (data_eval, data_live, preds, oos, candidates, meta). The
+    news-vector candidates are EVALUATED on nested-scorer features (so the
+    clean judging window is honest) but the live winner is refit on
+    production features (data_live); meta is None when no news-vector
+    candidates run, and judging then uses the full selection window."""
+    from model.train import nested_meta
     ds = build_vol_dataset(px, bench, gdelt, horizon=horizon,
                            earn_dates=earn_dates)
     data = ds.dropna(subset=["gk_22", "tone_1d", "y_vol"]).copy()
+
+    cands = list(CANDIDATES)
+    data_eval, data_live, meta = data, data, nested_meta()
+    if meta is not None:
+        # This dataset's calendar differs from the direction model's, so
+        # validate the judging geometry here: the boundary must leave a
+        # usable clean window before the (pinned or fraction) split.
+        oos_idx = data.index[config.MIN_TRAIN_DAYS:]
+        split = None
+        if len(oos_idx):
+            if oos_idx[0] < meta["holdout_start"] <= oos_idx[-1]:
+                split = meta["holdout_start"]
+            else:
+                split = oos_idx[int(len(oos_idx)
+                                    * (1 - config.HOLDOUT_FRACTION))]
+            pre = oos_idx[(oos_idx >= meta["inner"]) & (oos_idx < split)]
+            if meta["features_through"] is not None:
+                pre = pre[pre <= meta["features_through"]]
+            if len(pre) < 60:
+                log.warning("Nested judging window unusable for horizon %d "
+                            "(%d rows) - newsvec candidates skipped",
+                            horizon, len(pre))
+                meta = None
+        else:
+            meta = None
+    if meta is not None:
+        eval_join, nv = _join_newsvec(data, nested=True)
+        live_join, nv_live = _join_newsvec(data, nested=False)
+        if len(nv) >= 3 and sorted(nv) == sorted(nv_live):
+            data_eval, data_live = eval_join, live_join
+            cands += [("GBM +ev+newsvec",
+                       VOL_FEATURES + EVENT_FEATURES + nv, _gbm),
+                      ("HAR +ev+newsvec",
+                       HAR_FEATURES + EVENT_FEATURES + nv, _linreg_imputed)]
+        else:
+            meta = None
     y = data["y_vol"]
     embargo = horizon - 1
 
-    fitted = {name: _walk_forward(data[feats], y, factory, embargo)
-              for name, feats, factory in CANDIDATES}
+    fitted = {name: _walk_forward(data_eval[feats], y, factory, embargo)
+              for name, feats, factory in cands}
     oos = next(iter(fitted.values())).notna()
 
     # Analytic baselines (no fitting; both use info through d-1 only).
@@ -106,7 +187,7 @@ def evaluate_horizon(px: pd.DataFrame, bench: pd.DataFrame,
     ewm_var = np.exp(2 * data["gk_1"]).ewm(alpha=EWMA_ALPHA, min_periods=30).mean()
     preds = {"Random walk": data["gk_1"],
              "EWMA (GK var)": 0.5 * np.log(ewm_var), **fitted}
-    return data, preds, oos
+    return data_eval, data_live, preds, oos, cands, meta
 
 
 def train_and_report() -> str:
@@ -125,17 +206,33 @@ def train_and_report() -> str:
     models = {}
     trained_through = None
     for horizon in config.VOL_HORIZONS:
-        data, preds, oos = evaluate_horizon(px, bench, gdelt, horizon,
-                                            earn_dates)
+        data, data_live, preds, oos, cands, vmeta = evaluate_horizon(
+            px, bench, gdelt, horizon, earn_dates)
         y, rv = data["y_vol"], data["realized_var"]
         oos_idx = data.index[oos]
-        split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
-        sel = oos & (data.index < split)
+        split = None
+        if vmeta is not None and \
+                oos_idx[0] < vmeta["holdout_start"] <= oos_idx[-1]:
+            split = vmeta["holdout_start"]
+        if split is None:
+            split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
+        judge_start = max(vmeta["inner"], oos_idx[0]) if vmeta is not None \
+            else oos_idx[0]
+        sel = oos & (data.index >= judge_start) & (data.index < split)
+        if vmeta is not None and vmeta["features_through"] is not None:
+            sel &= data.index <= vmeta["features_through"]
         hold = oos & (data.index >= split)
 
-        lines.append(f"\n  Horizon {horizon} day(s)  |  selection "
-                     f"{oos_idx[0].date()} -> {split.date()}  |  holdout -> "
+        lines.append(f"\n  Horizon {horizon} day(s)  |  judged "
+                     f"{judge_start.date()} -> {split.date()}  |  holdout -> "
                      f"{oos_idx[-1].date()}")
+        if vmeta is not None:
+            lines.append("  (newsvec candidates use NESTED scorers; all "
+                         "models judged on the clean window. Newsvec was")
+            lines.append("   promoted on the magnitude head's holdout, "
+                         "which overlaps this holdout - treat a newsvec")
+            lines.append("   holdout QLIKE as second-use; the live paper "
+                         "trail is the fresh test.)")
         lines.append(f"  {'model':<22}{'RMSE(log)':>11}{'QLIKE':>9}{'R2':>8}")
         sel_q = {}
         for name, pred in preds.items():
@@ -144,7 +241,7 @@ def train_and_report() -> str:
             lines.append(f"  {name:<22}{m['rmse']:>11.4f}{m['qlike']:>9.4f}"
                          f"{m['r2']:>8.3f}")
         best_name, best_feats, best_factory = min(
-            CANDIDATES, key=lambda c: sel_q[c[0]])
+            cands, key=lambda c: sel_q[c[0]])
         hm = _metrics(y[hold], preds[best_name][hold], rv[hold])
         lines.append(f"  -> selected: {best_name} (best selection QLIKE "
                      f"among fitted candidates)")
@@ -154,9 +251,11 @@ def train_and_report() -> str:
             oos_df = data.loc[oos, ["y_vol", "realized_var"]].copy()
             oos_df["pred_selected"] = preds[best_name][oos]
             oos_df.to_csv(config.VOL_OOS_PATH)
+        # live refit on PRODUCTION news features (live days postdate every
+        # scorer's training data, so contamination cannot arise there)
         models[horizon] = {"name": best_name, "features": best_feats,
-                           "model": best_factory().fit(data[best_feats],
-                                                       data["y_vol"])}
+                           "model": best_factory().fit(data_live[best_feats],
+                                                       data_live["y_vol"])}
         # max across horizons: longer horizons drop more unrealized-target
         # rows, so their dataset ends earlier (ISO strings sort correctly)
         trained_through = max(trained_through or "", str(data.index.max().date()))
@@ -202,6 +301,22 @@ def forecast() -> dict:
     for horizon, spec in bundle["models"].items():
         ds = build_vol_dataset(px_ext, bench, gdelt, horizon=horizon,
                                earn_dates=earn_dates)
+        nv_used = [c for c in spec["features"] if c in NEWSVEC_FEATURES]
+        if nv_used:
+            ds, _ = _join_newsvec(ds, nested=False)
+            absent = [c for c in nv_used if c not in ds.columns]
+            if absent:
+                # feature CSVs missing entirely (fresh clone/deploy): keep
+                # the forecast alive on the model's missing-value paths
+                log.warning("news-vector feature files unavailable (%s) - "
+                            "filling NaN", absent)
+                for c in absent:
+                    ds[c] = np.nan
+            if ds.iloc[-1][nv_used].isna().all():
+                log.warning("news-vector features missing for entry day %s "
+                            "(article parquet ends before it) - the vol "
+                            "model falls back to their missing-value paths",
+                            next_day.date())
         row = ds.iloc[[-1]][spec["features"]]
         daily_vol = float(np.exp(spec["model"].predict(row)[0]))
         ann_vol = daily_vol * np.sqrt(252)

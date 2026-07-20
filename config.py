@@ -90,6 +90,14 @@ RETRAIN_EVERY = 21          # retrain cadence in trading days (~monthly)
 HOLDOUT_FRACTION = 0.4      # OOS tail reserved for post-selection reporting
 MODEL_SELECTION_PATH = ARTIFACTS / "model_selection.txt"
 
+# Nested split: news2/newsnet scorers memorize whatever era they train on,
+# so a second scorer set is trained on only the FIRST part of the selection
+# window; the remainder stays clean and every candidate is judged there.
+# The fraction is where the inner boundary sits inside the selection window.
+NESTED_FRACTION = 0.6
+NESTED_META_PATH = ARTIFACTS / "nested_meta.json"
+OOS_META_PATH = ARTIFACTS / "oos_meta.json"
+
 # Signal thresholds (hysteresis band reduces churn around 0.50)
 LONG_ENTER = 0.55           # go long when P(up) exceeds this
 LONG_EXIT = 0.48            # drop back to flat when P(up) falls below this

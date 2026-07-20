@@ -109,6 +109,55 @@ def active_candidates(data: pd.DataFrame) -> list:
     return cands
 
 
+NEWS_CANDIDATES = {"GBM deep + news2", "GBM deep + newsnet"}
+
+
+def nested_meta() -> dict | None:
+    """Metadata written by `main.py nested`. Keys: `inner` (the nested news
+    scorers trained strictly before this date - judging on or after it is
+    clean), `holdout_start` (the PINNED tournament split, so weekly retrains
+    stop consuming holdout days as the dataset grows), `features_through`
+    (nested feature coverage end - judging past it would silently compare
+    news candidates with all-NaN news columns). None until the nested
+    artifacts exist."""
+    import json
+    try:
+        raw = json.loads(config.NESTED_META_PATH.read_text(encoding="utf-8"))
+        return {"inner": pd.Timestamp(raw["inner"]),
+                "holdout_start": pd.Timestamp(raw["holdout_start"]),
+                "features_through": (pd.Timestamp(raw["features_through"])
+                                     if raw.get("features_through") else None)}
+    except Exception:
+        return None
+
+
+def nested_data(data: pd.DataFrame) -> pd.DataFrame | None:
+    """Copy of `data` with the news2/newsnet columns replaced by the
+    nested-scorer values. None when the nested feature files are missing or
+    schema-incomplete - callers must then treat news candidates as
+    contaminated (a silent partial swap would leave memorized production
+    values in the 'clean' frame)."""
+    from model.news2vec import NEWS2_FEATURES, load_news2_features
+    from model.newsnet import NEWSNET_FEATURES, load_newsnet_features
+    n2 = load_news2_features(nested=True)
+    nn = load_newsnet_features(nested=True)
+    if n2 is None or nn is None:
+        return None
+    out = data.copy()
+    for frame, cols in ((n2, NEWS2_FEATURES), (nn, NEWSNET_FEATURES)):
+        missing = [c for c in cols if c in out.columns
+                   and c not in frame.columns]
+        if missing:
+            log.warning("Nested feature file lacks %s - rebuild with "
+                        "`python main.py nested`; treating news candidates "
+                        "as contaminated", missing)
+            return None
+        for c in cols:
+            if c in frame.columns and c in out.columns:
+                out[c] = frame[c].reindex(out.index).to_numpy()
+    return out
+
+
 def _clean(dataset: pd.DataFrame) -> pd.DataFrame:
     # sma200_dist has the longest warm-up (200 trading days); dropping its NaN
     # rows removes the whole warm-up period so no feature column is ever
@@ -148,7 +197,12 @@ def _strategy_stats(probs: pd.Series, fwd_ret: pd.Series,
     rets = pos * fwd_ret - turnover * config.COST_PER_TURNOVER
     sd = rets.std()
     sharpe = float(rets.mean() / sd * np.sqrt(252)) if sd > 0 else float("nan")
-    return {"sharpe": sharpe,
+    # Lo (2002) asymptotic standard error, annualized - a reminder of how
+    # noisy a Sharpe estimate over a short judging window is.
+    sr_d = rets.mean() / sd if sd > 0 else np.nan
+    se = float(np.sqrt((1 + 0.5 * sr_d ** 2) / len(rets)) * np.sqrt(252)) \
+        if len(rets) else float("nan")
+    return {"sharpe": sharpe, "sharpe_se": se,
             "auc": float(roc_auc_score(y, probs)),
             "acc": float(accuracy_score(y, (probs > 0.5).astype(int))),
             "exposure": float((pos != 0).mean())}
@@ -160,51 +214,84 @@ def select_and_train(dataset: pd.DataFrame) -> str:
     printable selection report."""
     data = _clean(dataset)
     candidates = active_candidates(data)
+    meta = nested_meta()
+    ndata = nested_data(data) if meta is not None else None
+    clean_news = ndata is not None
 
     all_probs = {}
     for name, feats, factory, window in candidates:
         log.info("walk-forward: %s ...", name)
-        all_probs[name] = walk_forward_probs(data, feats, factory, window)
+        frame = ndata if (clean_news and name in NEWS_CANDIDATES) else data
+        all_probs[name] = walk_forward_probs(frame, feats, factory, window)
 
     oos_mask = next(iter(all_probs.values())).notna()
     oos_idx = data.index[oos_mask]
-    split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
+    # Holdout boundary: pinned to the nested meta's date when available, so
+    # scheduled retrains stop converting reported-holdout days into judging
+    # material as the dataset grows; fraction rule otherwise.
+    split = None
+    if meta is not None and oos_idx[0] < meta["holdout_start"] <= oos_idx[-1]:
+        split = meta["holdout_start"]
+    if split is None:
+        split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
     sel_idx = oos_idx[oos_idx < split]
     hold_idx = oos_idx[oos_idx >= split]
+
+    # With nested scorers available, every candidate is judged on the clean
+    # tail of the selection window (dates the nested news scorers never saw,
+    # capped at nested feature coverage) so the news candidates compete for
+    # the crown on equal, honest footing.
+    judge_idx = sel_idx
+    if clean_news:
+        judge_idx = sel_idx[sel_idx >= meta["inner"]]
+        if meta["features_through"] is not None:
+            judge_idx = judge_idx[judge_idx <= meta["features_through"]]
+        if len(judge_idx) < 60 or data.loc[judge_idx, "y"].nunique() < 2:
+            log.warning("Nested judging window unusable (%d rows) - meta "
+                        "is stale against the current config/data; falling "
+                        "back to the full selection window with news "
+                        "candidates ineligible", len(judge_idx))
+            clean_news, judge_idx = False, sel_idx
 
     lines = ["=" * 66,
              "  Direction model - candidate selection (walk-forward OOS)",
              f"  selection window: {sel_idx[0].date()} -> {sel_idx[-1].date()}"
              f"  |  holdout: {hold_idx[0].date()} -> {hold_idx[-1].date()}",
+             (f"  judged on CLEAN window {judge_idx[0].date()} -> "
+              f"{judge_idx[-1].date()} (nested news scorers trained "
+              f"< {meta['inner'].date()})" if clean_news else
+              "  judged on the full selection window (nested artifacts "
+              "absent/stale - news candidates ineligible)"),
              "=" * 66,
-             f"  {'candidate':<20}{'Sharpe':>8}{'AUC':>8}{'acc':>7}{'expo':>7}"]
+             f"  {'candidate':<20}{'Sharpe':>7}{'+-SE':>6}{'AUC':>8}"
+             f"{'acc':>7}{'expo':>7}"]
     sel_stats = {}
     for name, _, _, _ in candidates:
-        s = _strategy_stats(all_probs[name][sel_idx],
-                            data.loc[sel_idx, "fwd_ret"], data.loc[sel_idx, "y"])
+        s = _strategy_stats(all_probs[name][judge_idx],
+                            data.loc[judge_idx, "fwd_ret"],
+                            data.loc[judge_idx, "y"])
         sel_stats[name] = s
-        lines.append(f"  {name:<20}{s['sharpe']:>8.2f}{s['auc']:>8.3f}"
-                     f"{s['acc']:>7.3f}{s['exposure']:>7.1%}")
+        lines.append(f"  {name:<20}{s['sharpe']:>7.2f}{s['sharpe_se']:>6.2f}"
+                     f"{s['auc']:>8.3f}{s['acc']:>7.3f}{s['exposure']:>7.1%}")
 
-    # Candidates whose feature extractors were TRAINED on the selection era
-    # (news2 ridge scorers, NewsNet) post fantasy selection numbers by
-    # memorization - they are evaluated and reported but cannot be crowned
-    # until a nested-split retrain validates them on clean selection data.
-    CONTAMINATED = {"GBM deep + news2", "GBM deep + newsnet"}
-    eligible = [c for c in candidates if c[0] not in CONTAMINATED]
+    # Without nested scorers, news2/newsnet selection numbers are memorized
+    # (their extractors trained on this era) - reported but never crowned.
+    eligible = candidates if clean_news else \
+        [c for c in candidates if c[0] not in NEWS_CANDIDATES]
     # nan_to_num: a candidate that never trades has NaN Sharpe - it must
     # lose the selection, not win it via NaN comparison quirks.
     winner, win_feats, win_factory, win_window = max(
         eligible,
         key=lambda c: np.nan_to_num(sel_stats[c[0]]["sharpe"], nan=-np.inf))
-    lines.append("  (news2/newsnet rows: selection numbers are memorized -"
-                 " ineligible to win until nested-split validation)")
     hold = _strategy_stats(all_probs[winner][hold_idx],
                            data.loc[hold_idx, "fwd_ret"], data.loc[hold_idx, "y"])
     bh_rets = data.loc[hold_idx, "fwd_ret"]
     bh_sharpe = float(bh_rets.mean() / bh_rets.std() * np.sqrt(252))
+    win_note = " [nested-validated]" if clean_news and \
+        winner in NEWS_CANDIDATES else ""
     lines += ["-" * 66,
-              f"  WINNER (by selection Sharpe): {winner}",
+              f"  WINNER (by {'clean-window' if clean_news else 'selection'}"
+              f" Sharpe): {winner}{win_note}",
               f"  Untouched holdout: Sharpe {hold['sharpe']:.2f} "
               f"(buy&hold {bh_sharpe:.2f}) | AUC {hold['auc']:.3f} "
               f"| acc {hold['acc']:.3f} | exposure {hold['exposure']:.1%}",
@@ -212,7 +299,20 @@ def select_and_train(dataset: pd.DataFrame) -> str:
 
     oos = data.loc[oos_mask, ["fwd_ret", "y"]].copy()
     oos["prob_up"] = all_probs[winner][oos_mask]
+    if clean_news and winner in NEWS_CANDIDATES:
+        # pre-inner rows are memorized by the nested scorers: keep only the
+        # honest segment so backtest/fuse artifacts cannot be flattered
+        oos = oos.loc[oos.index >= meta["inner"]]
+        lines.insert(-1, "  (oos_predictions.csv starts at the nested "
+                         "boundary - earlier rows would be memorized)")
     oos.to_csv(config.OOS_PREDICTIONS_PATH)
+    # Sidecar so backtest/fuse recover the TRUE holdout boundary instead of
+    # re-deriving it as a fraction of a possibly shortened file.
+    import json
+    config.OOS_META_PATH.write_text(json.dumps(
+        {"winner": winner, "oos_start": str(oos.index[0].date()),
+         "holdout_start": str(split.date()),
+         "nested_judged": bool(clean_news)}, indent=2), encoding="utf-8")
 
     train_slice = data if win_window is None else data.iloc[-win_window:]
     final = win_factory().fit(train_slice[win_feats], train_slice["y"])

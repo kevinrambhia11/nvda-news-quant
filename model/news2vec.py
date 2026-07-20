@@ -33,6 +33,10 @@ DAILY_PATH = config.CACHE / "news2_daily.csv"
 EMB_PATH = config.CACHE / "news2_emb.npy"
 IMPACT_PATH = config.ARTIFACTS / "news2_impact.joblib"
 FEATURES_PATH = config.CACHE / "news2_features.csv"
+# Nested variant: scorers trained only on the early selection era, so the
+# late selection era is clean judging ground (see config.NESTED_FRACTION).
+IMPACT_NESTED_PATH = config.ARTIFACTS / "news2_impact_nested.joblib"
+FEATURES_NESTED_PATH = config.CACHE / "news2_features_nested.csv"
 
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
@@ -64,7 +68,17 @@ def _entry_days(article_dates: pd.Series, trading_index: pd.DatetimeIndex):
     return entry
 
 
-def learn_impact(holdout_start: pd.Timestamp) -> dict:
+def _entry_index(px_index: pd.DatetimeIndex) -> pd.DatetimeIndex:
+    """Price index extended by the NEXT trading session. Without this, no
+    article dated on/after the last cached close can map to any entry day,
+    so the feature files would never contain the row the live signal
+    predicts on (permanent train/serve skew for news-candidate models)."""
+    from trade.calendar import next_trading_day
+    return px_index.append(
+        pd.DatetimeIndex([next_trading_day(px_index.max())]))
+
+
+def learn_impact(holdout_start: pd.Timestamp, nested: bool = False) -> dict:
     """Ridge scorers from embedding space onto next-day signed and absolute
     NVDA returns, trained strictly before `holdout_start`."""
     from sklearn.linear_model import Ridge
@@ -78,7 +92,9 @@ def learn_impact(holdout_start: pd.Timestamp) -> dict:
     art["entry"] = _entry_days(art["date"], px.index)
     art["fwd"] = art["entry"].map(fwd)
     mask = art["fwd"].notna() & (art["entry"] < holdout_start)
-    X, y = emb[mask.to_numpy()], art.loc[mask, "fwd"].to_numpy()
+    # embeddings may lag a fresh parquet - only rows with a vector count
+    mask &= art.index < len(emb)
+    X, y = emb[mask.to_numpy()[: len(emb)]], art.loc[mask, "fwd"].to_numpy()
     log.info("Impact training set: %d articles (< %s)", len(y),
              holdout_start.date())
 
@@ -87,23 +103,26 @@ def learn_impact(holdout_start: pd.Timestamp) -> dict:
     bundle = {"dir": dir_model, "mag": mag_model,
               "trained_before": str(holdout_start.date()),
               "n_articles": int(len(y))}
-    joblib.dump(bundle, IMPACT_PATH)
+    joblib.dump(bundle, IMPACT_NESTED_PATH if nested else IMPACT_PATH)
     return bundle
 
 
-def build_daily_features() -> pd.DataFrame:
+def build_daily_features(nested: bool = False) -> pd.DataFrame:
     """Apply the frozen impact scorers to every article and aggregate to
     entry-day features. Writes news2_features.csv and returns it."""
     from data.prices import load_prices
 
     art = pd.read_parquet(ART_PATH)
     emb = np.load(EMB_PATH).astype(np.float32)
-    bundle = joblib.load(IMPACT_PATH)
+    bundle = joblib.load(IMPACT_NESTED_PATH if nested else IMPACT_PATH)
     px, _ = load_prices()
+    entry_idx = _entry_index(px.index)
 
-    art["entry"] = _entry_days(art["date"], px.index)
+    art["entry"] = _entry_days(art["date"], entry_idx)
     art = art[art["entry"].notna()].copy()
     keep = art.index.to_numpy()
+    keep = keep[keep < len(emb)]  # embeddings may lag a fresh parquet
+    art = art.loc[keep]
     emb = emb[keep]
     art = art.reset_index(drop=True)
 
@@ -135,7 +154,7 @@ def build_daily_features() -> pd.DataFrame:
 
     # exact daily aggregates: dispersion + volume anomalies + divergence
     daily = pd.read_csv(DAILY_PATH, parse_dates=["date"])
-    daily["entry"] = _entry_days(daily["date"], px.index)
+    daily["entry"] = _entry_days(daily["date"], entry_idx)
     dv = daily.pivot_table(index="entry", columns="category",
                            values=["day_tone", "day_tone_sd", "day_n"])
     feats["n2_macro_tone_sd"] = dv[("day_tone_sd", "macro")]
@@ -149,13 +168,15 @@ def build_daily_features() -> pd.DataFrame:
     feats.index.name = "date"
     feats = feats.sort_index()
     from data.news import atomic_to_csv
-    atomic_to_csv(feats, FEATURES_PATH)
+    out_path = FEATURES_NESTED_PATH if nested else FEATURES_PATH
+    atomic_to_csv(feats, out_path)
     log.info("news2 daily features: %d rows x %d cols -> %s",
-             len(feats), feats.shape[1], FEATURES_PATH.name)
+             len(feats), feats.shape[1], out_path.name)
     return feats
 
 
-def load_news2_features() -> pd.DataFrame | None:
-    if not FEATURES_PATH.exists():
+def load_news2_features(nested: bool = False) -> pd.DataFrame | None:
+    path = FEATURES_NESTED_PATH if nested else FEATURES_PATH
+    if not path.exists():
         return None
-    return pd.read_csv(FEATURES_PATH, index_col="date", parse_dates=["date"])
+    return pd.read_csv(path, index_col="date", parse_dates=["date"])

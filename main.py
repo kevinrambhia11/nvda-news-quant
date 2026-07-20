@@ -112,8 +112,18 @@ def cmd_fuse() -> None:
     oos = pd.read_csv(config.OOS_PREDICTIONS_PATH, index_col=0, parse_dates=[0])
     # Report only the direction model's untouched holdout tail: earlier days
     # were used to SELECT both models, so including them would flatter the
-    # fusion numbers.
-    split = oos.index[int(len(oos) * (1 - config.HOLDOUT_FRACTION))]
+    # fusion numbers. The boundary comes from the sidecar written at train
+    # time - a fraction of the saved file would misplace it whenever the
+    # file starts at the nested boundary (news-candidate winners).
+    split = None
+    try:
+        import json
+        m = json.loads(config.OOS_META_PATH.read_text(encoding="utf-8"))
+        split = pd.Timestamp(m["holdout_start"])
+    except Exception:
+        pass
+    if split is None:
+        split = oos.index[int(len(oos) * (1 - config.HOLDOUT_FRACTION))]
     oos = oos.loc[oos.index >= split]
     vol_oos = pd.read_csv(config.VOL_OOS_PATH, index_col=0, parse_dates=[0])
     px, _ = load_prices()
@@ -134,6 +144,18 @@ def cmd_bqml() -> None:
     print(run_experiments())
 
 
+def _holdout_split(data: pd.DataFrame) -> pd.Timestamp:
+    """The tournament holdout boundary: pinned via nested_meta when it
+    exists (so production scorers train up to the SAME date every refresh),
+    fraction rule otherwise."""
+    from model.train import nested_meta
+    oos_idx = data.index[config.MIN_TRAIN_DAYS:]
+    m = nested_meta()
+    if m is not None and oos_idx[0] < m["holdout_start"] <= oos_idx[-1]:
+        return m["holdout_start"]
+    return oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
+
+
 def cmd_newsnet() -> None:
     """Train the attention-pooling NewsNet on pre-holdout days, build its
     daily features, and re-run the magnitude evaluation."""
@@ -141,10 +163,55 @@ def cmd_newsnet() -> None:
     from model.newsnet import build_features, train
     from model.train import _clean
     data = _clean(_build())
-    oos_idx = data.index[config.MIN_TRAIN_DAYS:]
-    split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
-    train(split)
+    train(_holdout_split(data))
     build_features()
+    print(evaluate(_build()))
+
+
+def cmd_nested() -> None:
+    """Nested split: retrain the news2 impact scorers and NewsNet on only
+    the EARLY part of the selection window, leaving its tail genuinely clean
+    for judging - which makes the news candidates eligible for the
+    production crown in both tournaments. Writes nested_meta.json LAST so a
+    crashed run never leaves the boundary pointing at missing artifacts."""
+    import json
+    from model.news2vec import build_daily_features, learn_impact
+    from model.newsnet import build_features, train
+    from model.train import _clean, nested_meta
+    data = _clean(_build())
+    oos_idx = data.index[config.MIN_TRAIN_DAYS:]
+    prior = nested_meta()
+    if prior is not None:
+        # Boundaries are PINNED: a refresh retrains scorers and extends
+        # feature coverage WITHOUT moving the goalposts - a drifting inner
+        # would train new scorers on days earlier runs judged as clean, and
+        # a drifting split would quietly consume reported holdout.
+        inner, split = prior["inner"], prior["holdout_start"]
+        log.info("Reusing pinned nested boundaries: inner %s, holdout %s",
+                 inner.date(), split.date())
+    else:
+        split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
+        sel_idx = oos_idx[oos_idx < split]
+        inner = sel_idx[int(len(sel_idx) * config.NESTED_FRACTION)]
+        log.info("Nested boundary %s | clean selection %s -> %s | holdout "
+                 "from %s", inner.date(), inner.date(), sel_idx[-1].date(),
+                 split.date())
+    learn_impact(inner, nested=True)
+    n2 = build_daily_features(nested=True)
+    train(inner, nested=True)
+    nn = build_features(nested=True)
+    through = min(pd.Timestamp(n2.index.max()), pd.Timestamp(nn.index.max()))
+    config.NESTED_META_PATH.write_text(
+        json.dumps({"inner": str(inner.date()),
+                    "holdout_start": str(split.date()),
+                    "features_through": str(through.date())}, indent=2),
+        encoding="utf-8")
+    log.info("Nested artifacts complete (coverage through %s) -> %s",
+             through.date(), config.NESTED_META_PATH.name)
+
+
+def cmd_magnitude() -> None:
+    from model.magnitude import evaluate
     print(evaluate(_build()))
 
 
@@ -156,9 +223,7 @@ def cmd_news2() -> None:
     ds = _build()
     from model.train import _clean
     data = _clean(ds)
-    oos_idx = data.index[config.MIN_TRAIN_DAYS:]
-    split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
-    learn_impact(split)
+    learn_impact(_holdout_split(data))
     build_daily_features()
     ds = _build()  # rebuild with news2 columns joined
     print(evaluate(ds))
@@ -210,7 +275,7 @@ def main() -> None:
                                  "vol-train", "vol-forecast", "fuse",
                                  "intraday-study", "log-headlines",
                                  "bq-probe", "bqml", "news2", "newsnet",
-                                 "all"])
+                                 "nested", "magnitude", "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
     parser.add_argument("--no-finbert", action="store_true",
@@ -247,6 +312,10 @@ def main() -> None:
         cmd_news2()
     elif args.command == "newsnet":
         cmd_newsnet()
+    elif args.command == "nested":
+        cmd_nested()
+    elif args.command == "magnitude":
+        cmd_magnitude()
     elif args.command == "all":
         cmd_fetch(refresh=args.refresh)
         cmd_train()

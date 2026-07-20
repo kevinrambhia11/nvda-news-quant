@@ -31,13 +31,17 @@ import numpy as np
 import pandas as pd
 
 import config
-from model.news2vec import ART_PATH, EMB_PATH, _entry_days
+from model.news2vec import ART_PATH, EMB_PATH, _entry_days, _entry_index
 
 log = logging.getLogger(__name__)
 
 NET_PATH = config.ARTIFACTS / "newsnet.pt"
 FEATURES_PATH = config.CACHE / "newsnet_features.csv"
 SOURCES_PATH = config.ARTIFACTS / "newsnet_sources.csv"
+# Nested variant: net trained only on the early selection era (clean-window
+# judging); the production net above still serves live signals.
+NET_NESTED_PATH = config.ARTIFACTS / "newsnet_nested.pt"
+FEATURES_NESTED_PATH = config.CACHE / "newsnet_features_nested.csv"
 
 NEWSNET_FEATURES = ["nn_dir", "nn_mag", "nn_conflict", "nn_attn_ent",
                     "nn_top_share"]
@@ -83,10 +87,31 @@ def _build_model(torch):
     return NewsNet()
 
 
+def _aligned(art: pd.DataFrame, emb: np.ndarray, trading_index):
+    """Row-aligned (articles, embeddings) after dropping articles with no
+    entry day. The parquet is NOT date-sorted, so dropped rows sit mid-file:
+    embeddings must be selected by the kept rows' positions (truncating the
+    matrix instead silently pairs almost every article with a wrong vector).
+    """
+    art = art.copy()
+    art["entry"] = _entry_days(art["date"], trading_index)
+    art = art[art["entry"].notna()]
+    keep = art.index.to_numpy()
+    keep = keep[keep < len(emb)]  # embeddings may lag a fresh parquet
+    return art.loc[keep].reset_index(drop=True), emb[keep]
+
+
+def _src_bucket(s: str) -> int:
+    """Stable source -> embedding-row map. Python's hash() is salted per
+    process, which would silently remap every source whenever a saved
+    checkpoint is re-applied in a new process."""
+    import zlib
+    return zlib.crc32(str(s).encode("utf-8")) % N_SRC_BUCKETS
+
+
 def _day_tensors(torch, art, emb):
     """Group articles by entry day -> list of (day, emb_t, src_t, cat_t)."""
-    src_ids = (art["source"].fillna("?")
-               .map(lambda s: hash(s) % N_SRC_BUCKETS).to_numpy())
+    src_ids = art["source"].fillna("?").map(_src_bucket).to_numpy()
     cat_ids = art["category"].map({c: i for i, c in enumerate(CATS)}).to_numpy()
     days = []
     for day, idx in art.groupby("entry").indices.items():
@@ -101,7 +126,8 @@ def _day_tensors(torch, art, emb):
     return days
 
 
-def train(holdout_start: pd.Timestamp, epochs: int = 60) -> None:
+def train(holdout_start: pd.Timestamp, epochs: int = 60,
+          nested: bool = False) -> None:
     torch = _torch()
     from data.prices import load_prices
 
@@ -109,9 +135,7 @@ def train(holdout_start: pd.Timestamp, epochs: int = 60) -> None:
     emb = np.load(EMB_PATH).astype(np.float32)
     px, _ = load_prices()
     fwd = (px["Open"].shift(-1) / px["Open"] - 1)
-    art["entry"] = _entry_days(art["date"], px.index)
-    art = art[art["entry"].notna()].reset_index(drop=True)
-    emb = emb[: len(art)] if len(emb) > len(art) else emb
+    art, emb = _aligned(art, emb, px.index)
 
     days = _day_tensors(torch, art, emb)
     labeled = [(d, e, s, c, fwd.get(d)) for d, e, s, c in days
@@ -154,14 +178,15 @@ def train(holdout_start: pd.Timestamp, epochs: int = 60) -> None:
             break
 
     model.load_state_dict(best_state)
+    net_path = NET_NESTED_PATH if nested else NET_PATH
     torch.save({"state": best_state,
-                "trained_before": str(holdout_start.date())}, NET_PATH)
-    log.info("NewsNet saved -> %s (val %.4f)", NET_PATH.name, best)
+                "trained_before": str(holdout_start.date())}, net_path)
+    log.info("NewsNet saved -> %s (val %.4f)", net_path.name, best)
 
 
-def build_features() -> pd.DataFrame:
+def build_features(nested: bool = False) -> pd.DataFrame:
     """Apply the frozen net to every day; emit daily features + the learned
-    source-impact table."""
+    source-impact table (production net only)."""
     torch = _torch()
     from data.news import atomic_to_csv
     from data.prices import load_prices
@@ -169,12 +194,13 @@ def build_features() -> pd.DataFrame:
     art = pd.read_parquet(ART_PATH)
     emb = np.load(EMB_PATH).astype(np.float32)
     px, _ = load_prices()
-    art["entry"] = _entry_days(art["date"], px.index)
-    art = art[art["entry"].notna()].reset_index(drop=True)
-    emb = emb[: len(art)] if len(emb) > len(art) else emb
+    # extended index: articles since the last close map to the UPCOMING
+    # session, so the live signal's entry-day row exists in the file
+    art, emb = _aligned(art, emb, _entry_index(px.index))
 
     model = _build_model(torch)
-    model.load_state_dict(torch.load(NET_PATH)["state"])
+    net_path = NET_NESTED_PATH if nested else NET_PATH
+    model.load_state_dict(torch.load(net_path)["state"])
     model.eval()
 
     rows, src_rows = [], []
@@ -192,26 +218,28 @@ def build_features() -> pd.DataFrame:
                 {"w_contrib": wn * np.abs(art_dir.numpy())},
                 index=s.numpy()))
     feats = pd.DataFrame(rows).set_index("date").sort_index()
-    atomic_to_csv(feats, FEATURES_PATH)
+    atomic_to_csv(feats, FEATURES_NESTED_PATH if nested else FEATURES_PATH)
 
-    # learned source impact: map hash buckets back to the most common name
-    src_ids = art["source"].fillna("?").map(
-        lambda x: hash(x) % N_SRC_BUCKETS)
-    names = art.groupby(src_ids.to_numpy())["source"] \
-        .agg(lambda g: g.mode().iat[0])
-    impact = (pd.concat(src_rows).groupby(level=0)["w_contrib"]
-              .agg(["mean", "count"]))
-    impact["source"] = names
-    impact = (impact[impact["count"] >= 200]
-              .sort_values("mean", ascending=False).head(30)
-              [["source", "mean", "count"]])
-    impact.to_csv(SOURCES_PATH, index=False)
-    log.info("NewsNet features: %d days; top source by learned impact: %s",
-             len(feats), impact.iloc[0]["source"] if len(impact) else "n/a")
+    if not nested:
+        # learned source impact: map hash buckets back to the common name
+        src_ids = art["source"].fillna("?").map(_src_bucket)
+        names = art.groupby(src_ids.to_numpy())["source"] \
+            .agg(lambda g: g.mode().iat[0])
+        impact = (pd.concat(src_rows).groupby(level=0)["w_contrib"]
+                  .agg(["mean", "count"]))
+        impact["source"] = names
+        impact = (impact[impact["count"] >= 200]
+                  .sort_values("mean", ascending=False).head(30)
+                  [["source", "mean", "count"]])
+        impact.to_csv(SOURCES_PATH, index=False)
+        log.info("NewsNet features: %d days; top source by learned impact: "
+                 "%s", len(feats),
+                 impact.iloc[0]["source"] if len(impact) else "n/a")
     return feats
 
 
-def load_newsnet_features() -> pd.DataFrame | None:
-    if not FEATURES_PATH.exists():
+def load_newsnet_features(nested: bool = False) -> pd.DataFrame | None:
+    path = FEATURES_NESTED_PATH if nested else FEATURES_PATH
+    if not path.exists():
         return None
-    return pd.read_csv(FEATURES_PATH, index_col="date", parse_dates=["date"])
+    return pd.read_csv(path, index_col="date", parse_dates=["date"])

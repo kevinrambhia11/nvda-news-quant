@@ -96,11 +96,40 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         earn_dates = None
     aux = news_mod.load_aux_gdelt()
     ds = build_dataset(px_ext, bench, gdelt, earn_dates=earn_dates, aux=aux)
+    # A news-candidate winner carries n2_*/nn_* features: join the
+    # production news-vector features (built from articles strictly before
+    # each entry day - same convention as training rows).
+    if any(f.startswith(("n2_", "nn_")) for f in feat_names):
+        try:
+            from model.news2vec import load_news2_features
+            from model.newsnet import load_newsnet_features
+            for loader in (load_news2_features, load_newsnet_features):
+                extra = loader()
+                if extra is not None:
+                    ds = ds.join(extra, how="left")
+        except Exception as exc:
+            log.warning("news-vector features unavailable (%s)", exc)
     missing = [f for f in feat_names if f not in ds.columns]
+    newsish = [f for f in missing if f.startswith(("n2_", "nn_"))]
+    if newsish:
+        # degrade, don't die: HGB routes NaN to a learned missing branch
+        log.warning("News-vector feature files absent (%s) - filling NaN so "
+                    "the signal still generates", newsish)
+        for c in newsish:
+            ds[c] = np.nan
+        missing = [f for f in missing if f not in newsish]
     if missing:
         raise RuntimeError(
             f"Saved model expects features {missing} that the current pipeline "
             "no longer produces - re-run `python main.py train`")
+    nv = [f for f in feat_names if f.startswith(("n2_", "nn_"))]
+    if nv and ds.iloc[-1][nv].isna().all():
+        log.warning("News-vector features are all NaN for entry day %s - "
+                    "the feature files predate this session (they refresh "
+                    "with the weekly retrain: article top-up + `news2` + "
+                    "`newsnet`). The model runs on its missing-value paths "
+                    "meanwhile; treat the direction line with extra "
+                    "skepticism today", next_day.date())
     row = ds.iloc[[-1]][feat_names]
     prob_up = float(model.predict_proba(row)[0, 1])
 
