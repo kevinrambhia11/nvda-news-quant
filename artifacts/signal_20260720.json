@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-07-20T17:01:04",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-20",
+  "last_close": 202.81,
+  "model_trained_through": "2026-07-16",
+  "model_prob_up": 0.8839,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0493,
+  "headline_count": 187,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 3,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.7761,
+  "most_negative": [
+    {
+      "title": "$NVDA !!!http://Investing.com -- Taiwan prosecutors on Monday indicted a former TSMC employee on charges of stealing trade secrets involving technologies designated by Taiwan as national core technologies for use in China.\n\nTSMC is the world&#39;s largest contract chipmaker.\n\nThis is the first lawsuit in Taiwan involving the alleged leakage of national core technology trade secrets to China, according to the prosecution.\n\nThe prosecution is seeking a seven-year prison sentence.",
+      "source": "stocktwits",
+      "score": -0.952,
+      "url": null
+    },
+    {
+      "title": "Kimi: Threat or menace? - TechCrunch",
+      "source": "TechCrunch",
+      "score": -0.765,
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE12Q2tPdkstSDlqZUszdGdKNVU1MVprTjJGVGl6QXR6cEdBOXgxaDhhajhJRDRTcnlrMFRaZUpvSjBRcFR3ZEhZS3BIV0taRkthLWJ3SWt0X0ltX0MzeGVXNFowbElWbEE?oc=5"
+    },
+    {
+      "title": "Sudan denounces latest US sanctions over chemical weapons claims - Latest news from Azerbaijan",
+      "source": "Latest news from Azerbaijan",
+      "score": -0.7,
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPb2NTVFVqQzBFNlRPMWdxUk9XajN2N3hmMThlN0lsalNQSkpValZmbjNGTnJza2c2SGdFUWhnZHVkRk5jYUtndVRxQm1FQ0FLVFB2MjZFT2g0anFac3pQRjlqNjI3V2JNSUZiSk4tclVKbFU1eXk2QVkyRkp6M1E5b0h6OHl2T2NGVGJZLU1B?oc=5"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Here's How Much Apple Stock Has to Gain to Overtake Nvidia as the Most Valuable Company in the World. Hint: It Could Happen by the Time You Read This. - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.778,
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVkRnc0lTblUyMFpERzFiR0piaTgtOXZMZmlRMTY4dWJKY09CTDJuVVNZQ0NJSEp1cUNFM0lBekUwRktURG0weV8wOWZycUU1aEJaanB1TlNocUF4Q0RhYnlOUGFnbEZDZDdGaUF0SGRVMjRhOEkwd0UxRDdDVDdWbzBwSFhsUU1zUnhXaU5GdmVxemN6VDI4?oc=5"
+    },
+    {
+      "title": "Apple tops Nvidia as world's most valuable company as AI bets shift",
+      "source": "finviz",
+      "score": 0.771,
+      "url": "https://finance.yahoo.com/video/apple-tops-nvidia-worlds-most-164824890.html"
+    },
+    {
+      "title": "3 Defense Stocks Poised to Benefit From Rising Global Military Budgets",
+      "source": "yahoo_rss",
+      "score": 0.67,
+      "url": "https://www.fool.com/investing/2026/07/20/3-defense-stocks-poised-to-benefit-from-rising-glo/?.tsrc=rss"
+    }
+  ]
+}

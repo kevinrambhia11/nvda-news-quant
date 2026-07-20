@@ -11,7 +11,8 @@
   GBM deep + cross        0.67   0.521  0.487  51.9%
   GBM deep + news2        1.37   0.541  0.539  60.8%
   GBM deep + newsnet      6.24   0.800  0.730  56.5%
+  (news2/newsnet rows: selection numbers are memorized - ineligible to win until nested-split validation)
 ------------------------------------------------------------------
-  WINNER (by selection Sharpe): GBM deep + newsnet
-  Untouched holdout: Sharpe 1.23 (buy&hold 1.26) | AUC 0.527 | acc 0.522 | exposure 51.7%
+  WINNER (by selection Sharpe): GBM deep + vol
+  Untouched holdout: Sharpe 0.96 (buy&hold 1.26) | AUC 0.475 | acc 0.499 | exposure 61.1%
 ==================================================================
