@@ -30,11 +30,13 @@ artifacts/cache/*
 !artifacts/cache/gdelt_competitors.csv
 !artifacts/cache/gdelt_industry.csv
 
-# news2 daily aggregates/features are small and tracked; the 785k-article
-# parquet (~50 MB) and embeddings (~600 MB) are rebuildable via one BigQuery
-# query + local encoding, so they stay out of the repo
+# news2 assets: the article parquet (~36 MB) IS tracked after a OneDrive
+# incident wiped the only local copy - a re-pull costs ~320 GB of BigQuery
+# quota, so the repo is now its backup. Embeddings (~600 MB) stay local
+# (rebuildable in ~20 min from the parquet).
 !artifacts/cache/news2_daily.csv
 !artifacts/cache/news2_features.csv
+!artifacts/cache/news2_articles.parquet
 
 # Display artifacts for the hosted dashboard (Streamlit Community Cloud
 # renders whatever the repo carries; push after retraining to refresh it)
