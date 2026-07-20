@@ -39,6 +39,15 @@ def evaluate(dataset: pd.DataFrame) -> str:
           if c in data.columns and not data[c].isna().all()]
     candidates = [("price-only", FULL_FEATURES),
                   ("price + news2", FULL_FEATURES + n2)]
+    try:
+        from model.newsnet import NEWSNET_FEATURES
+        nn = [c for c in NEWSNET_FEATURES
+              if c in data.columns and not data[c].isna().all()]
+        if len(nn) >= 3:
+            candidates.append(("price + newsnet", FULL_FEATURES + nn))
+            candidates.append(("price + both", FULL_FEATURES + n2 + nn))
+    except Exception:
+        pass
 
     oos_start = config.MIN_TRAIN_DAYS
     oos_idx = data.index[oos_start:]

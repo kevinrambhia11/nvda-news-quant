@@ -68,6 +68,13 @@ def _build() -> pd.DataFrame:
             ds = ds.join(n2, how="left")
     except Exception as exc:
         log.warning("news2 features unavailable (%s)", exc)
+    try:
+        from model.newsnet import load_newsnet_features
+        nn = load_newsnet_features()
+        if nn is not None:
+            ds = ds.join(nn, how="left")
+    except Exception as exc:
+        log.warning("newsnet features unavailable (%s)", exc)
     ds.to_csv(config.FEATURES_PATH)
     log.info("Dataset: %d rows x %d cols (aux series: %s) -> %s", len(ds),
              ds.shape[1], sorted(aux) or "none", config.FEATURES_PATH)
@@ -125,6 +132,20 @@ def cmd_bq_probe() -> None:
 def cmd_bqml() -> None:
     from model.bqml import run_experiments
     print(run_experiments())
+
+
+def cmd_newsnet() -> None:
+    """Train the attention-pooling NewsNet on pre-holdout days, build its
+    daily features, and re-run the magnitude evaluation."""
+    from model.magnitude import evaluate
+    from model.newsnet import build_features, train
+    from model.train import _clean
+    data = _clean(_build())
+    oos_idx = data.index[config.MIN_TRAIN_DAYS:]
+    split = oos_idx[int(len(oos_idx) * (1 - config.HOLDOUT_FRACTION))]
+    train(split)
+    build_features()
+    print(evaluate(_build()))
 
 
 def cmd_news2() -> None:
@@ -188,7 +209,8 @@ def main() -> None:
                         choices=["fetch", "train", "backtest", "signal",
                                  "vol-train", "vol-forecast", "fuse",
                                  "intraday-study", "log-headlines",
-                                 "bq-probe", "bqml", "news2", "all"])
+                                 "bq-probe", "bqml", "news2", "newsnet",
+                                 "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
     parser.add_argument("--no-finbert", action="store_true",
@@ -223,6 +245,8 @@ def main() -> None:
         cmd_bqml()
     elif args.command == "news2":
         cmd_news2()
+    elif args.command == "newsnet":
+        cmd_newsnet()
     elif args.command == "all":
         cmd_fetch(refresh=args.refresh)
         cmd_train()

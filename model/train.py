@@ -96,6 +96,16 @@ def active_candidates(data: pd.DataFrame) -> list:
             log.info("news2 candidate active with %d features", len(n2))
     except Exception:
         pass
+    try:
+        from model.newsnet import NEWSNET_FEATURES
+        nn = [c for c in NEWSNET_FEATURES
+              if c in data.columns and not data[c].isna().all()]
+        if len(nn) >= 3:
+            cands.append(("GBM deep + newsnet", FULL_FEATURES + nn,
+                          _gbm_deep, None))
+            log.info("newsnet candidate active with %d features", len(nn))
+    except Exception:
+        pass
     return cands
 
 

@@ -158,9 +158,9 @@ st.caption("News-sentiment direction signal + EMH-consistent volatility desk. "
            "Educational tool - not financial advice.")
 
 (tab_today, tab_dir, tab_vol, tab_tech, tab_links,
- tab_news) = st.tabs(
+ tab_news, tab_arch) = st.tabs(
     ["Desk today", "Direction model", "Volatility", "Technical charts",
-     "Today's news", "News & data"])
+     "Today's news", "News & data", "Architecture"])
 
 
 @st.cache_data(ttl=900, show_spinner="Collecting today's news...")
@@ -654,3 +654,67 @@ with tab_news:
             st.dataframe(df, use_container_width=True, hide_index=True,
                          column_config={
                              "link": st.column_config.LinkColumn("link")})
+
+
+# ---------------------------------------------------------------------------
+# Tab 7: Architecture
+# ---------------------------------------------------------------------------
+with tab_arch:
+    st.caption("**What this page is:** how the desk is built - data flows "
+               "top to bottom. Green = the product path (trusted, trades "
+               "risk). Slate-blue = advisory (shown, never trusted). Amber "
+               "= provisionally promoted, on probation until the next "
+               "tournament re-earns it.")
+    st.graphviz_chart("""
+digraph desk {
+  rankdir=TB; bgcolor=transparent;
+  node [shape=box, style="rounded,filled", fillcolor="#eef1ec",
+        color="#8a988e", fontname="Consolas", fontsize=11,
+        fontcolor="#26302a", margin="0.18,0.1"];
+  edge [color="#8a988e", arrowsize=0.7];
+
+  subgraph cluster_src {
+    label="SOURCES (all free)"; fontname="Consolas"; fontsize=11;
+    color="#8a988e"; fontcolor="#5f6d64";
+    GD [label="GDELT DOC API\\nNVDA daily tone + volume"];
+    BQ [label="BigQuery GDELT archive\\n707k articles / 6 categories\\ncompetitors - vetted sources"];
+    YF [label="Yahoo prices\\n3-source fallback chain"];
+    EC [label="Earnings calendar\\n39 verified dates"];
+    LV [label="Live curated feeds\\nReuters Bloomberg BBC FT CNBC\\n+ Finviz StockTwits"];
+  }
+  subgraph cluster_feat {
+    label="FEATURES (leak-free: news thru d-1, prices thru prior close)";
+    fontname="Consolas"; fontsize=11; color="#8a988e"; fontcolor="#5f6d64";
+    FB [label="tone - technicals - GK vol\\nearnings events - regime - cross"];
+    NN [label="NewsNet (neural)\\nfrozen MiniLM encoder\\n-> attention pooling over each day's articles\\n-> learned source + category weights\\n-> conflict = disagreement of articles"];
+  }
+  subgraph cluster_mod {
+    label="MODELS (tournament + untouched holdout)";
+    fontname="Consolas"; fontsize=11; color="#8a988e"; fontcolor="#5f6d64";
+    VOL [label="VOLATILITY - HAR + events\\nOOS R2 0.37 / 0.45", fillcolor="#2e7d5b", fontcolor="#f6f8f5"];
+    DIR [label="DIRECTION - GBM tournament\\n7x no holdout edge", fillcolor="#5b7a99", fontcolor="#f6f8f5"];
+    MAG [label="MAGNITUDE - P(big move)\\n+news vectors: AUC .540 -> .558", fillcolor="#b07f35", fontcolor="#f6f8f5"];
+  }
+  subgraph cluster_out {
+    label="OUTPUTS (daily 17:00, auto-published)";
+    fontname="Consolas"; fontsize=11; color="#8a988e"; fontcolor="#5f6d64";
+    SZ [label="POSITION SIZE + VaR\\ntarget-vol 30% - earnings derisk", fillcolor="#2e7d5b", fontcolor="#f6f8f5"];
+    AD [label="advisory direction + headlines", fillcolor="#5b7a99", fontcolor="#f6f8f5"];
+    DB [label="dashboard - local + cloud"];
+    GH [label="GitHub paper trail\\ncloud app self-updates"];
+  }
+
+  GD -> FB; BQ -> FB; YF -> FB; EC -> FB;
+  BQ -> NN; LV -> AD;
+  FB -> VOL; FB -> DIR; FB -> MAG;
+  NN -> MAG; NN -> DIR;
+  VOL -> SZ; DIR -> AD;
+  MAG -> VOL [style=dashed, label="feeds sizing next", fontname="Consolas", fontsize=9, fontcolor="#b07f35", color="#b07f35"];
+  SZ -> DB; AD -> DB; SZ -> GH; DB -> GH [style=dashed, dir=back];
+}
+""")
+    st.caption("Automation: headline logger every 30 min - daily signal "
+               "weekdays 17:00 (auto-push) - full retrain Saturdays 14:00. "
+               "Every loader degrades to labeled stale caches instead of "
+               "failing. Verdict ledger and the full research history live "
+               "in the Direction/Volatility tabs and the repo reports.")
