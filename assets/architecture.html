@@ -1,0 +1,347 @@
+<title>NVDA Quant Desk — Architecture</title>
+<style>
+  :root {
+    --paper: #f6f4ee; --card: #fdfcf9; --ink: #212b25; --muted: #5f6d64;
+    --line: #d9d6ca; --green: #2e7d5b; --green-soft: #e2ede7;
+    --slate: #5b7a99; --slate-soft: #e4eaf1; --amber: #b07f35;
+    --amber-soft: #f2e8d8; --red: #a05242; --red-soft: #f0e2dd;
+    --grey-soft: #ecebe4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131a16; --card: #1a231e; --ink: #e7e9e2; --muted: #9aa79d;
+      --line: #2c352f; --green: #4aa47e; --green-soft: #1d2f26;
+      --slate: #7d9cbc; --slate-soft: #1e2833; --amber: #cf9c50;
+      --amber-soft: #322817; --red: #c07a67; --red-soft: #33211c;
+      --grey-soft: #222a25;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #131a16; --card: #1a231e; --ink: #e7e9e2; --muted: #9aa79d;
+    --line: #2c352f; --green: #4aa47e; --green-soft: #1d2f26;
+    --slate: #7d9cbc; --slate-soft: #1e2833; --amber: #cf9c50;
+    --amber-soft: #322817; --red: #c07a67; --red-soft: #33211c;
+    --grey-soft: #222a25;
+  }
+  :root[data-theme="light"] {
+    --paper: #f6f4ee; --card: #fdfcf9; --ink: #212b25; --muted: #5f6d64;
+    --line: #d9d6ca; --green: #2e7d5b; --green-soft: #e2ede7;
+    --slate: #5b7a99; --slate-soft: #e4eaf1; --amber: #b07f35;
+    --amber-soft: #f2e8d8; --red: #a05242; --red-soft: #f0e2dd;
+    --grey-soft: #ecebe4;
+  }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.55; margin: 0; padding: 2.2rem 1.2rem 3.5rem;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .mono {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  }
+  h1 {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 1.7rem; letter-spacing: -0.02em; margin: 0 0 0.4rem;
+    text-wrap: balance;
+  }
+  .kicker {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.72rem;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 0.7rem;
+  }
+  .thesis { color: var(--muted); max-width: 62ch; margin: 0 0 1.4rem; }
+  .thesis strong { color: var(--ink); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 2rem; }
+  .chip {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem;
+    letter-spacing: 0.06em; padding: 0.28rem 0.65rem; border-radius: 99px;
+    display: inline-flex; align-items: center; gap: 0.45rem;
+  }
+  .chip .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .chip.g { background: var(--green-soft); }  .chip.g .dot { background: var(--green); }
+  .chip.s { background: var(--slate-soft); }  .chip.s .dot { background: var(--slate); }
+  .chip.a { background: var(--amber-soft); }  .chip.a .dot { background: var(--amber); }
+  .chip.r { background: var(--red-soft); }    .chip.r .dot { background: var(--red); }
+
+  .stage { margin: 0; }
+  .stage-head { display: flex; align-items: baseline; gap: 0.8rem; margin-bottom: 0.3rem; }
+  .stage-num {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.72rem;
+    color: var(--muted); letter-spacing: 0.1em;
+  }
+  .stage-name {
+    font-family: ui-monospace, Consolas, monospace; font-size: 1.02rem;
+    font-weight: 700; letter-spacing: 0.02em;
+  }
+  .stage-why { color: var(--muted); font-size: 0.9rem; max-width: 68ch; margin: 0 0 1rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.7rem; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 10px; padding: 0.8rem 0.95rem; position: relative;
+  }
+  .card h3 {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.82rem;
+    margin: 0 0 0.35rem; letter-spacing: 0.02em; padding-right: 5.2rem;
+  }
+  .card p { margin: 0; font-size: 0.83rem; color: var(--muted); }
+  .card .num { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .pill {
+    position: absolute; top: 0.7rem; right: 0.75rem;
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.58rem;
+    letter-spacing: 0.1em; padding: 0.16rem 0.5rem; border-radius: 99px;
+    white-space: nowrap;
+  }
+  .pill.g { background: var(--green-soft); color: var(--green); }
+  .pill.s { background: var(--slate-soft); color: var(--slate); }
+  .pill.a { background: var(--amber-soft); color: var(--amber); }
+  .pill.r { background: var(--red-soft); color: var(--red); }
+
+  .flow {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 0.55rem 0 0.65rem; color: var(--muted);
+  }
+  .flow .lbl {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem;
+    letter-spacing: 0.05em; background: var(--grey-soft);
+    padding: 0.2rem 0.7rem; border-radius: 99px; margin: 0.25rem 0;
+  }
+  .flow .bar { width: 1px; height: 14px; background: var(--line); }
+  .flow .tip {
+    width: 0; height: 0; border-left: 5px solid transparent;
+    border-right: 5px solid transparent; border-top: 7px solid var(--line);
+  }
+
+  .era { margin: 1.1rem 0 0.2rem; }
+  .era-bar { display: flex; border-radius: 7px; overflow: hidden; height: 30px; border: 1px solid var(--line); }
+  .era-seg { display: flex; align-items: center; justify-content: center; }
+  .era-seg span {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.6rem;
+    letter-spacing: 0.05em; white-space: nowrap; overflow: hidden;
+  }
+  .era-labels { display: flex; margin-top: 0.3rem; }
+  .era-labels div {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.6rem;
+    color: var(--muted); white-space: nowrap;
+  }
+  .era-notes { font-size: 0.82rem; color: var(--muted); margin-top: 0.7rem; }
+  .era-notes b { color: var(--ink); font-weight: 600; }
+
+  .sched { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.7rem; margin-top: 0.9rem; }
+  .sched .when {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.66rem;
+    color: var(--green); letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem;
+  }
+
+  table { border-collapse: collapse; width: 100%; font-size: 0.84rem; margin-top: 0.9rem; }
+  th {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.66rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line);
+  }
+  td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.v { text-align: right; white-space: nowrap; }
+  .yes, .no, .prov {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.66rem;
+    letter-spacing: 0.06em; padding: 0.16rem 0.5rem; border-radius: 99px;
+  }
+  .yes { background: var(--green-soft); color: var(--green); }
+  .no { background: var(--red-soft); color: var(--red); }
+  .prov { background: var(--amber-soft); color: var(--amber); }
+  .tblwrap { overflow-x: auto; }
+
+  h2 {
+    font-family: ui-monospace, Consolas, monospace; font-size: 1rem;
+    margin: 2.4rem 0 0.3rem; letter-spacing: 0.02em;
+  }
+  .sub { color: var(--muted); font-size: 0.88rem; margin: 0 0 0.5rem; max-width: 68ch; }
+  .foot {
+    margin-top: 2.6rem; padding-top: 1rem; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 0.78rem;
+    font-family: ui-monospace, Consolas, monospace;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .live-dot { animation: pulse 2.2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: 0.35 } }
+  }
+</style>
+
+<div class="wrap">
+  <div class="kicker">NVDA news-quant desk &middot; system architecture &middot; 2026-07-22</div>
+  <h1>News goes in. A position size comes out.<br>Everything in between has to earn trust.</h1>
+  <p class="thesis">The desk reads global news and NVDA prices every day, turns them
+  into a <strong>position size with hard risk limits</strong> (its one trusted product),
+  plus advisory context it deliberately does not trust. Its core finding, tested nine
+  ways: <strong>news predicts how BIG tomorrow's move will be &mdash; not which
+  direction.</strong></p>
+
+  <div class="legend">
+    <span class="chip g"><span class="dot"></span>PRODUCT &mdash; trusted, sizes real risk</span>
+    <span class="chip a"><span class="dot"></span>ON PROBATION &mdash; promising, being graded live</span>
+    <span class="chip s"><span class="dot"></span>ADVISORY &mdash; shown, never trusted</span>
+    <span class="chip r"><span class="dot"></span>RETIRED &mdash; tested honestly, lost</span>
+  </div>
+
+  <!-- STAGE 1 -->
+  <section class="stage">
+    <div class="stage-head"><span class="stage-num">STAGE 1</span><span class="stage-name">SOURCES &mdash; what the desk reads</span></div>
+    <p class="stage-why">Five independent, free feeds. If any one throttles or dies, the others carry the day.</p>
+    <div class="cards">
+      <div class="card"><h3>Global news firehose</h3><p>GDELT: daily tone + volume of NVIDIA's worldwide coverage, <span class="num">every day since 2017</span></p></div>
+      <div class="card"><h3>Article archive</h3><p><span class="num">708k headlines</span> in 6 verticals &mdash; NVDA, competitors, hyperscalers, AI labs, macro, brokers &mdash; topped up daily from BigQuery</p></div>
+      <div class="card"><h3>Prices</h3><p>NVDA + QQQ daily bars, <span class="num">3-source fallback chain</span> (Yahoo &rarr; chart API &rarr; Stooq)</p></div>
+      <div class="card"><h3>Earnings calendar</h3><p><span class="num">39 verified print dates</span>, 2017 &rarr; Aug 2026 &mdash; the desk de-risks every print night</p></div>
+      <div class="card"><h3>Live headlines</h3><p>Reuters &middot; Bloomberg &middot; BBC &middot; FT &middot; CNBC + Finviz/StockTwits, logged <span class="num">every 30 min</span></p></div>
+    </div>
+  </section>
+
+  <div class="flow"><div class="bar"></div><span class="lbl">raw headlines, prices, dates</span><div class="bar"></div><div class="tip"></div></div>
+
+  <!-- STAGE 2 -->
+  <section class="stage">
+    <div class="stage-head"><span class="stage-num">STAGE 2</span><span class="stage-name">MEMORY &mdash; cache first, degrade, never die</span></div>
+    <p class="stage-why">Everything lands in local caches. When a source fails, the desk serves
+    yesterday's data with a warning instead of skipping a day &mdash; a signal has shipped every
+    scheduled day since automation began.</p>
+    <div class="cards">
+      <div class="card"><h3>Price + tone caches</h3><p>Plain CSVs; only <em>complete</em> daily buckets &mdash; a half-finished day never enters</p></div>
+      <div class="card"><h3>Article parquet</h3><p>The 708k-headline archive; snapshot backed up to GitHub weekly</p></div>
+      <div class="card"><h3>Meaning vectors</h3><p>Every headline becomes a <span class="num">384-number embedding</span> (MiniLM) &mdash; how the models "read" text</p></div>
+      <div class="card"><h3>Headline log</h3><p>The desk's own growing real-time news history, 30-min ticks</p></div>
+    </div>
+  </section>
+
+  <div class="flow"><div class="bar"></div><span class="lbl">clean, complete history</span><div class="bar"></div><div class="tip"></div></div>
+
+  <!-- STAGE 3 -->
+  <section class="stage">
+    <div class="stage-head"><span class="stage-num">STAGE 3</span><span class="stage-name">FEATURES &mdash; the numbers models may see</span></div>
+    <p class="stage-why">The iron rule: the row for trading day D uses only news through
+    yesterday and prices through yesterday's close &mdash; exactly the information you would
+    actually have before the open. No exceptions, by construction.</p>
+    <div class="cards">
+      <div class="card"><h3>Market features</h3><p>Returns, trend, Garman-Klass volatility, earnings-window flags, drawdown regime, competitor tone</p></div>
+      <div class="card"><h3>news2 vectors</h3><span class="pill a">THE NEWS EDGE</span><p>Ridge scorers read each headline's embedding and estimate its impact &rarr; daily impact-weighted tone, disagreement between articles, novelty vs the trailing month</p></div>
+      <div class="card"><h3>NewsNet</h3><span class="pill r">RETIRED</span><p>Attention neural net over the same embeddings. Tested honestly: added nothing beyond ridge. Kept in the code, out of the models.</p></div>
+    </div>
+  </section>
+
+  <div class="flow"><div class="bar"></div><span class="lbl">one leak-free row per trading day</span><div class="bar"></div><div class="tip"></div></div>
+
+  <!-- STAGE 4 -->
+  <section class="stage">
+    <div class="stage-head"><span class="stage-num">STAGE 4</span><span class="stage-name">THE TOURNAMENT &mdash; where trust is earned</span></div>
+    <p class="stage-why">Nothing gets promoted by argument. Candidate models compete on a
+    judging window their feature-builders never saw, and the winner's real grade comes from a
+    holdout that nothing was ever tuned on. Every Saturday, every seat is re-contested.</p>
+    <div class="cards">
+      <div class="card"><h3>VOLATILITY &mdash; how big is tomorrow?</h3><span class="pill g">PRODUCT</span>
+        <p>HAR + earnings events. Holdout R&sup2; <span class="num">0.31</span> (1-day) / <span class="num">0.42</span> (5-day).
+        News vectors challenged it for the seat &mdash; and lost. This model alone sizes real risk.</p></div>
+      <div class="card"><h3>MAGNITUDE &mdash; bigger than normal?</h3><span class="pill a">ON PROBATION</span>
+        <p>P(move &gt; its trailing median). News lifts holdout AUC <span class="num">0.537 &rarr; 0.567</span>, calibrated so the
+        probabilities mean what they say. Published daily; graded live on the Track record tab.</p></div>
+      <div class="card"><h3>DIRECTION &mdash; up or down?</h3><span class="pill s">ADVISORY</span>
+        <p><span class="num">Nine architectures</span>, none beat buy-and-hold on the holdout &mdash; consistent
+        with an efficient market. Shown for context, never trusted with money.</p></div>
+    </div>
+
+    <div class="era">
+      <div class="era-bar">
+        <div class="era-seg" style="width:24%; background:var(--grey-soft)"><span>warm-up</span></div>
+        <div class="era-seg" style="width:27%; background:var(--slate-soft)"><span>scorer training</span></div>
+        <div class="era-seg" style="width:18%; background:var(--amber-soft)"><span>clean judging</span></div>
+        <div class="era-seg" style="width:26%; background:var(--green-soft)"><span>untouched holdout</span></div>
+        <div class="era-seg" style="width:5%; background:var(--green)"><span class="live-dot" style="color:#fff">live</span></div>
+      </div>
+      <div class="era-labels">
+        <div style="width:24%">2017-01</div>
+        <div style="width:27%">2019-05</div>
+        <div style="width:18%">2021-12</div>
+        <div style="width:26%">2023-09</div>
+        <div style="width:5%">now</div>
+      </div>
+      <p class="era-notes"><b>How the timeline keeps everyone honest:</b> models may learn from the
+      past on their left only. News scorers train on <b>scorer training</b> years; every candidate is
+      compared on the <b>clean judging</b> window those scorers never saw; the crowned winner's real
+      grade comes from the <b>untouched holdout</b> &mdash; and the boundaries are pinned dates, so
+      weekly retrains can never quietly nibble at them. <b>Live</b> is the only test that can't be
+      gamed at all: forecasts published before the open, scored after.</p>
+    </div>
+  </section>
+
+  <div class="flow"><div class="bar"></div><span class="lbl">only the trusted model sizes risk</span><div class="bar"></div><div class="tip"></div></div>
+
+  <!-- STAGE 5 -->
+  <section class="stage">
+    <div class="stage-head"><span class="stage-num">STAGE 5</span><span class="stage-name">DESK OUTPUT &mdash; before every US open</span></div>
+    <p class="stage-why">Published at 17:00 IST, hours before the bell. The desk recommends;
+    a human decides. Nothing here ever touches a broker.</p>
+    <div class="cards">
+      <div class="card"><h3>Position size + VaR</h3><span class="pill g">PRODUCT</span>
+        <p>Target-vol sizing (<span class="num">30%</span> annual), 95/99% one-day loss floors,
+        automatic de-risking on earnings-print nights</p></div>
+      <div class="card"><h3>P(big move)</h3><span class="pill a">ON PROBATION</span>
+        <p>The calibrated news-magnitude line &mdash; "how loud will tomorrow be?"</p></div>
+      <div class="card"><h3>Direction + headline mood</h3><span class="pill s">ADVISORY</span>
+        <p>Model P(up), scraped-headline sentiment, StockTwits mood &mdash; context only</p></div>
+      <div class="card"><h3>Dashboard + paper trail</h3>
+        <p>Local + hosted dashboard; every forecast archived to GitHub. The <b>Track record</b> tab
+        grades them against reality &mdash; late-published rows excluded from scoring.</p></div>
+    </div>
+  </section>
+
+  <h2>The clock &mdash; runs without anyone</h2>
+  <p class="sub">Windows Task Scheduler owns the rhythm; every job degrades gracefully and
+  refuses to publish half-finished work.</p>
+  <div class="sched">
+    <div class="card"><h3>Headline logger</h3><span class="when">EVERY 30 MIN &middot; 24/7</span>
+      <p>Archives timestamped headlines from all verticals</p></div>
+    <div class="card"><h3>Daily signal</h3><span class="when">WEEKDAYS 17:00 IST</span>
+      <p>News top-up &rarr; vol forecast &rarr; size + VaR &rarr; P(big move) &rarr; advisory &rarr; push (the hosted dashboard updates itself)</p></div>
+    <div class="card"><h3>Weekly retrain</h3><span class="when">SATURDAYS 14:00 IST</span>
+      <p>Scorers refresh against pinned boundaries; both tournaments re-run; failures abort the publish</p></div>
+    <div class="card"><h3>Industry migration</h3><span class="when">AUG 1 &middot; ONE-SHOT</span>
+      <p>Quota-guarded BigQuery backfill; retried weekly until it lands</p></div>
+  </div>
+
+  <h2>The verdict ledger &mdash; what was tested, what survived</h2>
+  <p class="sub">Every hypothesis met the same judge: compete on days nothing was tuned on.
+  Most lost. That is the point.</p>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th>Hypothesis</th><th>Evidence</th><th style="text-align:right">Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>Volatility is predictable</td>
+          <td>HAR + events beats every benchmark and every challenger, news included; holdout R&sup2; 0.31 / 0.42</td>
+          <td class="v"><span class="yes">YES &mdash; the product</span></td></tr>
+      <tr><td>News predicts move <em>size</em></td>
+          <td>Honest windows: holdout AUC 0.537 &rarr; 0.567 with news2 vectors; calibrated Brier 0.250</td>
+          <td class="v"><span class="prov">ON PROBATION &mdash; strongest news result</span></td></tr>
+      <tr><td>News predicts <em>direction</em></td>
+          <td>Nine architectures over four toolchains; best holdout still under buy-and-hold; news2 direction AUC 0.466</td>
+          <td class="v"><span class="no">NO &mdash; advisory only</span></td></tr>
+      <tr><td>A neural net reads news better than ridge</td>
+          <td>NewsNet's early edge traced to a data bug (98% of articles paired with wrong embeddings); on fixed inputs it adds nothing</td>
+          <td class="v"><span class="no">NO &mdash; artifact of the bug</span></td></tr>
+      <tr><td>News improves the vol forecast (sizing)</td>
+          <td>News-vector candidates mid-pack at both horizons on the clean window</td>
+          <td class="v"><span class="no">NO</span></td></tr>
+      <tr><td>Premium sources (Reuters/Bloomberg/FT) predict direction</td>
+          <td>Dead last of the field &mdash; vetted coverage is priced fastest</td>
+          <td class="v"><span class="no">NO</span></td></tr>
+      <tr><td>Competitor / industry news predicts direction</td>
+          <td>Mid-pack, no holdout edge</td>
+          <td class="v"><span class="no">NO</span></td></tr>
+      <tr><td>Minutes-scale news trading on free feeds</td>
+          <td>Event study: price fully moved before the 15-min feed even updated</td>
+          <td class="v"><span class="no">NO-GO</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    github.com/kevinrambhia11/nvda-news-quant &middot; signals only, never orders &middot;
+    educational tool &mdash; not financial advice
+  </div>
+</div>

@@ -1,4 +1,4 @@
-"""NVDA Quant Desk - Streamlit dashboard.
+﻿"""NVDA Quant Desk - Streamlit dashboard.
 
 Run:  streamlit run dashboard.py   (or via .claude/launch.json, port 8502)
 
@@ -24,7 +24,7 @@ if str(ROOT) not in sys.path:
 
 import config  # noqa: E402
 
-st.set_page_config(page_title="NVDA Quant Desk", page_icon="📈", layout="wide")
+st.set_page_config(page_title="NVDA Quant Desk", page_icon="ðŸ“ˆ", layout="wide")
 
 
 @st.cache_data(ttl=300)
@@ -825,61 +825,10 @@ with tab_news:
 # Tab 7: Architecture
 # ---------------------------------------------------------------------------
 with tab_arch:
-    st.caption("**What this page is:** how the desk is built - data flows "
-               "top to bottom. Green = the product path (trusted, trades "
-               "risk). Slate-blue = advisory (shown, never trusted). Amber "
-               "= provisionally promoted, on probation until the next "
-               "tournament re-earns it.")
-    st.graphviz_chart("""
-digraph desk {
-  rankdir=TB; bgcolor=transparent;
-  node [shape=box, style="rounded,filled", fillcolor="#eef1ec",
-        color="#8a988e", fontname="Consolas", fontsize=11,
-        fontcolor="#26302a", margin="0.18,0.1"];
-  edge [color="#8a988e", arrowsize=0.7];
-
-  subgraph cluster_src {
-    label="SOURCES (all free)"; fontname="Consolas"; fontsize=11;
-    color="#8a988e"; fontcolor="#5f6d64";
-    GD [label="GDELT DOC API\\nNVDA daily tone + volume"];
-    BQ [label="BigQuery GDELT archive\\n707k articles / 6 categories\\ncompetitors - vetted sources"];
-    YF [label="Yahoo prices\\n3-source fallback chain"];
-    EC [label="Earnings calendar\\n39 verified dates"];
-    LV [label="Live curated feeds\\nReuters Bloomberg BBC FT CNBC\\n+ Finviz StockTwits"];
-  }
-  subgraph cluster_feat {
-    label="FEATURES (leak-free: news thru d-1, prices thru prior close)";
-    fontname="Consolas"; fontsize=11; color="#8a988e"; fontcolor="#5f6d64";
-    FB [label="tone - technicals - GK vol\\nearnings events - regime - cross"];
-    NN [label="news vectors\\nMiniLM embeddings of 707k headlines\\nnews2 ridge scorers (carry the edge)\\n+ NewsNet attention net (adds nothing\\nbeyond ridge once inputs were fixed)"];
-  }
-  subgraph cluster_mod {
-    label="MODELS (tournament + untouched holdout)";
-    fontname="Consolas"; fontsize=11; color="#8a988e"; fontcolor="#5f6d64";
-    VOL [label="VOLATILITY - HAR + events\\nholdout R2 0.31 / 0.42\\nnews vectors tried - not selected", fillcolor="#2e7d5b", fontcolor="#f6f8f5"];
-    DIR [label="DIRECTION - GBM tournament\\n9x no holdout edge\\n(incl. nested-validated news)", fillcolor="#5b7a99", fontcolor="#f6f8f5"];
-    MAG [label="MAGNITUDE - P(big move)\\n+news2: holdout AUC .537 -> .567\\ncalibrated Brier .250", fillcolor="#b07f35", fontcolor="#f6f8f5"];
-  }
-  subgraph cluster_out {
-    label="OUTPUTS (daily 17:00, auto-published)";
-    fontname="Consolas"; fontsize=11; color="#8a988e"; fontcolor="#5f6d64";
-    SZ [label="POSITION SIZE + VaR\\ntarget-vol 30% - earnings derisk", fillcolor="#2e7d5b", fontcolor="#f6f8f5"];
-    AD [label="advisory direction + headlines", fillcolor="#5b7a99", fontcolor="#f6f8f5"];
-    DB [label="dashboard - local + cloud"];
-    GH [label="GitHub paper trail\\ncloud app self-updates"];
-  }
-
-  GD -> FB; BQ -> FB; YF -> FB; EC -> FB;
-  BQ -> NN; LV -> AD;
-  FB -> VOL; FB -> DIR; FB -> MAG;
-  NN -> MAG; NN -> DIR;
-  VOL -> SZ; DIR -> AD;
-  MAG -> VOL [style=dashed, label="tested 07-20: HAR+events still wins", fontname="Consolas", fontsize=9, fontcolor="#5b7a99", color="#5b7a99"];
-  SZ -> DB; AD -> DB; SZ -> GH; DB -> GH [style=dashed, dir=back];
-}
-""")
-    st.caption("Automation: headline logger every 30 min - daily signal "
-               "weekdays 17:00 (auto-push) - full retrain Saturdays 14:00. "
-               "Every loader degrades to labeled stale caches instead of "
-               "failing. Verdict ledger and the full research history live "
-               "in the Direction/Volatility tabs and the repo reports.")
+    arch_path = ROOT / "assets" / "architecture.html"
+    if arch_path.exists():
+        import streamlit.components.v1 as components
+        components.html(arch_path.read_text(encoding="utf-8"),
+                        height=3300, scrolling=True)
+    else:
+        st.info("assets/architecture.html missing - pull the latest repo")
