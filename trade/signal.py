@@ -51,6 +51,28 @@ def _load_model_bundle() -> tuple:
     return bundle["model"], bundle["features"], trained_through
 
 
+def _load_magnitude_bundle() -> dict | None:
+    """The calibrated P(big move) head - the desk's validated news edge.
+    Absent or stale bundles degrade to omission, never to a crash."""
+    if not config.MAG_MODEL_PATH.exists():
+        return None
+    try:
+        bundle = joblib.load(config.MAG_MODEL_PATH)
+        trained_through = bundle.get("trained_through")
+        if trained_through:
+            age = (pd.Timestamp.now().normalize()
+                   - pd.Timestamp(trained_through)).days
+            if age > config.MAX_MODEL_AGE_DAYS:
+                log.warning("Magnitude bundle is %d days old - line "
+                            "omitted; re-run `python main.py magnitude`",
+                            age)
+                return None
+        return bundle
+    except Exception as exc:
+        log.warning("Magnitude bundle unreadable (%s) - line omitted", exc)
+        return None
+
+
 def generate_signal(prefer_finbert: bool = True) -> dict:
     model, feat_names, trained_through = _load_model_bundle()
 
@@ -96,10 +118,14 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         earn_dates = None
     aux = news_mod.load_aux_gdelt()
     ds = build_dataset(px_ext, bench, gdelt, earn_dates=earn_dates, aux=aux)
-    # A news-candidate winner carries n2_*/nn_* features: join the
-    # production news-vector features (built from articles strictly before
-    # each entry day - same convention as training rows).
-    if any(f.startswith(("n2_", "nn_")) for f in feat_names):
+    # News-vector features are needed when the direction winner carries
+    # them OR when the magnitude bundle (always price+news2) will run.
+    # They are built from articles strictly before each entry day - same
+    # convention as training rows.
+    mag_bundle = _load_magnitude_bundle()
+    need_news = any(f.startswith(("n2_", "nn_")) for f in feat_names) \
+        or mag_bundle is not None
+    if need_news:
         try:
             from model.news2vec import load_news2_features
             from model.newsnet import load_newsnet_features
@@ -132,6 +158,32 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
                     "skepticism today", next_day.date())
     row = ds.iloc[[-1]][feat_names]
     prob_up = float(model.predict_proba(row)[0, 1])
+
+    # Calibrated P(big move) - the validated news-magnitude edge. Threshold
+    # parity note: training uses the trailing 63-day median of |open-open|
+    # moves through d-1, whose newest term needs today's open; pre-open we
+    # serve the same median one day older (a 63-day median barely moves in
+    # a day). Failures degrade to omission.
+    prob_big, big_thr = None, None
+    if mag_bundle is not None:
+        try:
+            mfeats = mag_bundle["features"]
+            mag_missing = [f for f in mfeats if f not in ds.columns]
+            if mag_missing:
+                log.warning("Magnitude features %s absent - NaN-filled",
+                            mag_missing)
+                for c in mag_missing:
+                    ds[c] = np.nan
+            raw = float(mag_bundle["model"]
+                        .predict_proba(ds.iloc[[-1]][mfeats])[0, 1])
+            prob_big = float(mag_bundle["iso"].predict(
+                np.array([raw]))[0])
+            oo = (px["Open"].shift(-1) / px["Open"] - 1).abs()
+            med = oo.rolling(63, min_periods=30).median().dropna()
+            big_thr = float(med.iloc[-1]) if len(med) else None
+        except Exception as exc:
+            log.warning("Magnitude line failed (%s) - omitted", exc)
+            prob_big, big_thr = None, None
 
     # The traded action uses the model probability - the rule that was
     # actually backtested.
@@ -175,6 +227,8 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         "last_close": round(float(px["Close"].iloc[-1]), 2),
         "model_trained_through": trained_through,
         "model_prob_up": round(prob_up, 4),
+        "prob_big_move": round(prob_big, 4) if prob_big is not None else None,
+        "big_move_threshold": round(big_thr, 4) if big_thr is not None else None,
         "action": action,
         "headline_sentiment": round(headline_mean, 4),
         "headline_count": len(scores),
@@ -206,6 +260,11 @@ def format_signal(signal: dict) -> str:
         "=" * 62,
         f"  Model P(up)          : {signal['model_prob_up']:.1%} "
         f"(long > {config.LONG_ENTER}, exit < {config.LONG_EXIT})",
+        *([f"  P(move > {signal['big_move_threshold']:.2%}) : "
+           f"{signal['prob_big_move']:.1%} calibrated - the news-magnitude "
+           "edge (size, not direction)"]
+          if signal.get("prob_big_move") is not None
+          and signal.get("big_move_threshold") is not None else []),
         f"  Headline sentiment   : {signal['headline_sentiment']:+.3f} "
         f"({signal['headline_count']} items, {signal['sentiment_backend']})"
         f"{degraded_note}",

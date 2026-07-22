@@ -211,8 +211,51 @@ def cmd_nested() -> None:
 
 
 def cmd_magnitude() -> None:
-    from model.magnitude import evaluate
-    print(evaluate(_build()))
+    from model.magnitude import evaluate, train_final
+    ds = _build()
+    print(evaluate(ds))
+    print(train_final(ds))
+
+
+def cmd_news_topup() -> None:
+    """Incremental article-archive refresh from BigQuery: pull missing
+    days, extend embeddings, rebuild production news features. Never fails
+    the caller - the signal must run on stale coverage rather than not run.
+    """
+    from data.articles import topup
+    try:
+        info = topup()
+        print(f"News archive: +{info['new_articles']} articles, "
+              f"{info.get('embedded', 0)} embedded, through {info['through']}")
+    except Exception as exc:
+        log.warning("News top-up failed (%s) - live features keep their "
+                    "previous coverage", exc)
+
+
+def cmd_industry_backfill() -> None:
+    """One-shot BigQuery backfill for the industry series (scheduled for a
+    fresh monthly quota; the weekly retrain retries it until it lands).
+    Refuses to run without ~300 GB of headroom; once the cache exists,
+    config auto-routes the series to BigQuery forever."""
+    from data.bigquery_gdelt import daily_series, load_bq_daily, month_usage_gb
+    cache = config.CACHE / "bq_industry.csv"
+    if cache.exists():
+        print("Industry series already migrated to BigQuery - nothing to do")
+        return
+    terms = config.AUX_SERIES["industry"]["terms"]
+    end = str((pd.Timestamp.now(tz="UTC").tz_localize(None).normalize()
+               + pd.Timedelta(days=1)).date())
+    cost = daily_series(terms, config.TRAIN_START, end,
+                        dry_run=True) / 1024 ** 3
+    used = month_usage_gb()
+    print(f"Month usage {used:.0f} GB; backfill needs {cost:.0f} GB")
+    if used + cost > 700:
+        sys.exit("Not enough quota headroom this month - re-run after "
+                 "the monthly reset")
+    df = load_bq_daily("bq_industry", terms, refresh=True)
+    print(f"Industry series backfilled: {len(df)} days "
+          f"({df.index.min().date()} -> {df.index.max().date()}); the "
+          "series now routes to BigQuery permanently")
 
 
 def cmd_news2() -> None:
@@ -275,7 +318,8 @@ def main() -> None:
                                  "vol-train", "vol-forecast", "fuse",
                                  "intraday-study", "log-headlines",
                                  "bq-probe", "bqml", "news2", "newsnet",
-                                 "nested", "magnitude", "all"])
+                                 "nested", "magnitude", "news-topup",
+                                 "industry-backfill", "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
     parser.add_argument("--no-finbert", action="store_true",
@@ -316,6 +360,10 @@ def main() -> None:
         cmd_nested()
     elif args.command == "magnitude":
         cmd_magnitude()
+    elif args.command == "news-topup":
+        cmd_news_topup()
+    elif args.command == "industry-backfill":
+        cmd_industry_backfill()
     elif args.command == "all":
         cmd_fetch(refresh=args.refresh)
         cmd_train()

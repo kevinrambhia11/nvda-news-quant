@@ -59,6 +59,32 @@ def embed_articles(batch_size: int = 512) -> None:
     log.info("Saved %s embeddings -> %s", emb.shape, EMB_PATH)
 
 
+def embed_new(batch_size: int = 512) -> int:
+    """Encode only the articles appended since the last embedding run and
+    extend the matrix on disk. Relies on the archive's append-only order
+    invariant (embedding row i == parquet row i, forever)."""
+    import os
+    art = pd.read_parquet(ART_PATH)
+    emb = np.load(EMB_PATH)
+    if len(emb) >= len(art):
+        log.info("Embeddings already cover all %d articles", len(art))
+        return 0
+    from sentence_transformers import SentenceTransformer
+    new_slugs = art["slug"].iloc[len(emb):].tolist()
+    log.info("Embedding %d new slugs (%d -> %d) ...", len(new_slugs),
+             len(emb), len(art))
+    model = SentenceTransformer(MODEL_NAME, device="cpu")
+    add = model.encode(new_slugs, batch_size=batch_size,
+                       show_progress_bar=False, normalize_embeddings=True)
+    merged = np.concatenate([emb, add.astype(emb.dtype)])
+    # np.save appends ".npy" to any path not already ending in it - name
+    # the temp file with the suffix so the atomic replace targets reality
+    tmp = EMB_PATH.with_name("news2_emb_tmp.npy")
+    np.save(tmp, merged)
+    os.replace(f"{tmp}", EMB_PATH)
+    return len(new_slugs)
+
+
 def _entry_days(article_dates: pd.Series, trading_index: pd.DatetimeIndex):
     """Map each article's calendar day D to the first trading day > D."""
     pos = trading_index.searchsorted(article_dates.to_numpy(), side="right")

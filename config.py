@@ -44,11 +44,23 @@ QUALITY_DOMAINS = [
     "fortune.com", "techcrunch.com", "theverge.com", "tomshardware.com",
 ]
 
+# Paths are needed below for the industry-source switch. The BigQuery
+# cache carries a bq_ prefix: gdelt_industry.csv stays reserved for any
+# DOC-API data, so an off-office DOC bootstrap can never masquerade as the
+# BigQuery series (the two corpora must never splice).
+_ROOT = Path(__file__).resolve().parent
+_INDUSTRY_BQ_CACHE = _ROOT / "artifacts" / "cache" / "bq_industry.csv"
+
 # Auxiliary news series: competitor and industry coverage also moves NVDA.
 # Each becomes a cached daily tone/volume series and cross features for the
 # direction model. Sources are permanent per series (never spliced):
 #   bigquery  - GKG organization matching via the service account (instant)
 #   gdelt_api - the DOC API full-text search (rate-limited on this network)
+# The industry series MIGRATES to BigQuery the moment its BQ cache exists
+# (created by `main.py industry-backfill` - scheduled for the Aug 1 quota
+# reset). Until then it stays on the blocked-at-office DOC API and degrades
+# to stale caches as before. The series has no DOC history, so this is a
+# clean source assignment, not a splice.
 AUX_SERIES = {
     "competitors": {
         "source": "bigquery",
@@ -57,10 +69,14 @@ AUX_SERIES = {
         "label": "AMD / Intel / TSMC / Broadcom / Qualcomm (BigQuery GKG)",
     },
     "industry": {
-        "source": "gdelt_api",
+        "source": ("bigquery" if _INDUSTRY_BQ_CACHE.exists()
+                   else "gdelt_api"),
+        "bq_name": "bq_industry",
+        "terms": ["semiconductor", "chipmaker", "micron technology",
+                  "asml", "sk hynix"],
         "query": ('(semiconductors OR chipmakers OR "AI chips") '
                   'sourcelang:english'),
-        "label": "semiconductor industry coverage (GDELT DOC API)",
+        "label": "semiconductor industry coverage",
     },
     "quality": {
         "source": "bigquery",
@@ -105,6 +121,10 @@ ALLOW_SHORT = False         # shorting off by default
 
 # Backtest assumptions
 COST_PER_TURNOVER = 0.0005  # 5 bps per unit of position change (slippage + fees)
+
+# Live magnitude head: P(|next-day move| > trailing median), the desk's
+# validated news edge, served calibrated in the daily signal
+MAG_MODEL_PATH = ARTIFACTS / "magnitude_model.joblib"
 
 # Live signal: advisory blend of model probability and freshly scraped
 # headline sentiment (the traded ACTION uses the backtested model rule only)

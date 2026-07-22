@@ -128,3 +128,63 @@ def evaluate(dataset: pd.DataFrame) -> str:
     report = "\n".join(lines)
     MAGNITUDE_REPORT.write_text(report, encoding="utf-8")
     return report
+
+
+def train_final(dataset: pd.DataFrame) -> str:
+    """Deployable magnitude bundle for the daily signal: GBM on price +
+    news2 (the nested-validated edge; NewsNet excluded - retired), with an
+    isotonic calibrator fitted on honest out-of-sample probabilities.
+
+    Calibration honesty: production news2 features are memorized before the
+    holdout boundary, so the calibrator is fitted on NESTED-frame
+    walk-forward probs from the inner boundary onward (the honest region).
+    The map transfers to the production-feature model approximately - both
+    produce similarly-scaled GBM scores - and live errors show up in the
+    dashboard's track record either way."""
+    import joblib
+
+    data = _clean(dataset)
+    thresh = (data["fwd_ret"].abs().rolling(63, min_periods=30)
+              .median().shift(1))
+    data = data[thresh.notna()].copy()
+    data["y"] = (data["fwd_ret"].abs() > thresh[thresh.notna()]).astype(int)
+
+    n2 = [c for c in NEWS2_FEATURES
+          if c in data.columns and not data[c].isna().all()]
+    if len(n2) < 6:
+        raise RuntimeError("news2 features missing - run `python main.py "
+                           "news2` before training the magnitude bundle")
+    feats = FULL_FEATURES + n2
+
+    meta = nested_meta()
+    ndata = nested_data(data) if meta is not None else None
+    if ndata is None:
+        # No honest calibration sample exists without the nested scorers:
+        # production news2 probs are memorized pre-holdout and a calibrator
+        # fitted on saturated in-sample scores ships systematic
+        # overconfidence. Refuse rather than mislabel.
+        raise RuntimeError("nested artifacts required for honest "
+                           "calibration - run `python main.py nested` first")
+    cal_start = meta["inner"]
+    probs = walk_forward_probs(ndata, feats, _gbm_deep)
+    cal_mask = probs.notna() & (data.index >= cal_start)
+    if meta["features_through"] is not None:
+        # past feature coverage the nested probs come from missing-value
+        # branches - a score regime the live (news-present) model won't be in
+        cal_mask &= data.index <= meta["features_through"]
+    iso = IsotonicRegression(y_min=0.0, y_max=1.0, out_of_bounds="clip")
+    iso.fit(probs[cal_mask].to_numpy(), data.loc[cal_mask, "y"].to_numpy())
+
+    model = _gbm_deep().fit(data[feats], data["y"])
+    joblib.dump({"model": model, "features": feats, "iso": iso,
+                 "name": "GBM deep price+news2, isotonic-calibrated",
+                 "trained_through": str(data.index.max().date()),
+                 "cal_window": f"{cal_start.date()} -> "
+                               f"{data.index.max().date()}",
+                 "n_cal": int(cal_mask.sum())},
+                config.MAG_MODEL_PATH)
+    msg = (f"Magnitude bundle saved: price+news2 GBM, isotonic on "
+           f"{int(cal_mask.sum())} honest OOS days "
+           f"(from {cal_start.date()}) -> {config.MAG_MODEL_PATH.name}")
+    log.info(msg)
+    return msg

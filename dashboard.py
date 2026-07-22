@@ -158,9 +158,9 @@ st.caption("News-sentiment direction signal + EMH-consistent volatility desk. "
            "Educational tool - not financial advice.")
 
 (tab_today, tab_dir, tab_vol, tab_tech, tab_links,
- tab_news, tab_arch) = st.tabs(
+ tab_track, tab_news, tab_arch) = st.tabs(
     ["Desk today", "Direction model", "Volatility", "Technical charts",
-     "Today's news", "News & data", "Architecture"])
+     "Today's news", "Track record", "News & data", "Architecture"])
 
 
 @st.cache_data(ttl=900, show_spinner="Collecting today's news...")
@@ -565,6 +565,171 @@ with tab_links:
                              f"mean sentiment {mean_s:+.3f}",
                              expanded=(cat in ("finance", "macro"))):
                 headline_lines(grp[:25])
+
+
+# ---------------------------------------------------------------------------
+# Tab: Track record (live forecasts vs realized outcomes)
+# ---------------------------------------------------------------------------
+@st.cache_data(ttl=1800, show_spinner=False)
+def load_track_record():
+    """Join every archived daily forecast against what actually happened.
+    Returns a frame indexed by entry day; rows whose outcome is not yet
+    realized carry NaN outcomes and are shown as pending."""
+    import glob
+    import json as _json
+
+    def _late(entry: pd.Timestamp, generated) -> bool:
+        """True when the forecast was published after its session opened.
+        Timestamps are naive IST (the desk machine's clock); the US open is
+        19:00 IST during daylight time - a late row would be scored on an
+        outcome window it could partly see, so it must never count."""
+        if generated is None:
+            return True
+        try:
+            g = pd.Timestamp(generated)
+        except Exception:
+            return True
+        return g >= entry + pd.Timedelta(hours=19)
+
+    rows = {}
+    for path in sorted(glob.glob(str(config.ARTIFACTS / "signal_*.json"))):
+        try:
+            s = _json.loads(Path(path).read_text(encoding="utf-8"))
+            d = pd.Timestamp(s["entry_day"])
+            rows.setdefault(d, {})
+            rows[d].update({
+                "prob_up": s.get("model_prob_up"),
+                "action": s.get("action"),
+                "prob_big": s.get("prob_big_move"),
+                "big_thr": s.get("big_move_threshold"),
+                "late": _late(d, s.get("generated_at")),
+            })
+        except Exception:
+            continue
+    for path in sorted(glob.glob(str(config.ARTIFACTS / "vol_forecast_*.json"))):
+        try:
+            v = _json.loads(Path(path).read_text(encoding="utf-8"))
+            d = pd.Timestamp(v["entry_day"])
+            h1 = v.get("horizons", {}).get("1", {})
+            rows.setdefault(d, {})
+            late_v = _late(d, v.get("generated_at"))
+            rows[d].update({
+                "fc_vol": h1.get("total_daily_vol", h1.get("daily_vol")),
+                "weight": h1.get("target_vol_weight"),
+                "var95": h1.get("var_95"),
+                "late": bool(rows[d].get("late", False)) or late_v,
+            })
+        except Exception:
+            continue
+    if not rows:
+        return pd.DataFrame()
+    track = pd.DataFrame.from_dict(rows, orient="index").sort_index()
+    # fixed schema: a deploy that has only ever produced one artifact
+    # family must degrade, not KeyError on a missing column
+    track = track.reindex(columns=["prob_up", "action", "prob_big",
+                                   "big_thr", "fc_vol", "weight", "var95",
+                                   "late"])
+    track["late"] = track["late"].fillna(True).astype(bool)
+
+    px = read_csv(str(config.CACHE / f"prices_{config.TICKER}.csv"))
+    if px is None or "Open" not in px.columns:
+        track["realized_ret"] = float("nan")
+        return track
+    opens = px["Open"]
+    entry_open = opens.reindex(track.index)
+    pos = opens.index.searchsorted(track.index) + 1
+    next_open = pd.Series(
+        [opens.iloc[p] if p < len(opens) else float("nan") for p in pos],
+        index=track.index)
+    track["realized_ret"] = next_open / entry_open - 1
+    return track
+
+
+with tab_track:
+    st.caption("**What this page is:** the fresh test. Every scored row is "
+               "a forecast the desk published BEFORE its session opened - "
+               "none of these outcomes existed when any model was chosen, "
+               "so this is the only evidence immune to backtest flattery. "
+               "Rows published late (e.g. a catch-up run after a stale "
+               "cache) are flagged and excluded from every metric. Judge "
+               "the desk here.")
+    track = load_track_record()
+    if track.empty:
+        st.info("No archived forecasts yet - the daily 17:00 task fills "
+                "this page in automatically.")
+    else:
+        scored = track[track["realized_ret"].notna() & ~track["late"]]
+        c1, c2, c3, c4 = st.columns(4)
+        n = len(scored)
+        c1.metric("Sessions scored", f"{n}",
+                  help="Days with a published forecast AND a realized "
+                       "open-to-open outcome")
+        dirs = scored.dropna(subset=["prob_up"])
+        if len(dirs):
+            hit = ((dirs["prob_up"] > 0.5)
+                   == (dirs["realized_ret"] > 0)).mean()
+            c2.metric("Direction hit rate", f"{hit:.0%}",
+                      help="Advisory line - expect ~coin flip; that is the "
+                           "honest holdout verdict")
+        vols = scored.dropna(subset=["fc_vol"])
+        if len(vols):
+            z = vols["realized_ret"].abs() / vols["fc_vol"]
+            c3.metric("|move| / forecast vol", f"{z.median():.2f}x",
+                      help="Median absolute move over forecast vol - "
+                           "~0.7x is healthy (median of |N(0,1)| = 0.67); "
+                           ">1 means vol is underforecast")
+            var_breach = (vols["realized_ret"] < -1.645 * vols["fc_vol"]).mean()
+            c4.metric("VaR95 breaches", f"{var_breach:.0%}",
+                      help="Share of days the loss exceeded the 95% VaR - "
+                           "should settle near 5%")
+        mags = scored.dropna(subset=["prob_big", "big_thr"])
+        if len(mags) >= 5:
+            realized_big = (mags["realized_ret"].abs()
+                            > mags["big_thr"]).astype(int)
+            brier = float(((mags["prob_big"] - realized_big) ** 2).mean())
+            base = float(realized_big.mean())
+            st.metric("Magnitude head Brier (live)", f"{brier:.4f}",
+                      help=f"P(big move) vs outcomes; base rate {base:.0%}. "
+                           "Compare against 0.25 (coin flip). This is the "
+                           "news edge on trial.")
+        pending = int(track["realized_ret"].isna().sum())
+        late_n = int((track["late"] & track["realized_ret"].notna()).sum())
+        st.caption(f"{pending} forecast(s) pending outcomes"
+                   + (f"; {late_n} excluded as late-published." if late_n
+                      else "."))
+
+        show = track.copy().sort_index(ascending=False)
+        show.index = show.index.date
+        st.dataframe(show.rename(columns={
+            "prob_up": "P(up)", "prob_big": "P(big move)",
+            "big_thr": "big-move bar", "fc_vol": "forecast vol",
+            "weight": "position size", "var95": "VaR95 $",
+            "late": "late (unscored)",
+            "realized_ret": "realized move"}), use_container_width=True)
+        vols_chart = scored.dropna(subset=["fc_vol"]).reset_index(
+            names="entry")
+        if len(vols_chart) >= 3:
+            vols_chart["+band"] = vols_chart["fc_vol"]
+            vols_chart["-band"] = -vols_chart["fc_vol"]
+            base_ch = alt.Chart(vols_chart).encode(
+                x=alt.X("entry:T", title=None))
+            band = base_ch.mark_area(opacity=0.25).encode(
+                y=alt.Y("-band:Q", title="daily move",
+                        axis=alt.Axis(format="%")),
+                y2="+band:Q")
+            pts = base_ch.mark_circle(size=60).encode(
+                y="realized_ret:Q",
+                color=alt.condition(
+                    "abs(datum.realized_ret) > datum.fc_vol",
+                    alt.value("#b0563a"), alt.value("#2e7d5b")),
+                tooltip=["entry:T", alt.Tooltip("realized_ret:Q", format=".2%"),
+                         alt.Tooltip("fc_vol:Q", format=".2%")])
+            st.altair_chart((band + pts).properties(height=260),
+                            use_container_width=True)
+            st.caption("Realized open-to-open move (dots) vs the "
+                       "previous evening's +-1-sigma vol forecast (band). "
+                       "Red dots landed outside the band - roughly a "
+                       "third should, if the forecast is honest.")
 
 
 # ---------------------------------------------------------------------------

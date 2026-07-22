@@ -106,10 +106,26 @@ def daily_series(terms: list[str], start: str, end: str,
     return df
 
 
+MONTH_BUDGET_GB = 900  # full rebuilds must fit inside the free monthly TB
+
+
+def month_usage_gb() -> float:
+    """Bytes billed this calendar month, from the project's job history."""
+    _, client = _client()
+    sql = ("SELECT IFNULL(SUM(total_bytes_billed), 0) / POW(1024, 3) AS gb "
+           "FROM `region-us`.INFORMATION_SCHEMA.JOBS_BY_PROJECT "
+           "WHERE creation_time >= TIMESTAMP_TRUNC(CURRENT_TIMESTAMP(), "
+           "MONTH) AND job_type = 'QUERY'")
+    return float(list(client.query(sql).result())[0].gb)
+
+
 def load_bq_daily(name: str, terms: list[str], refresh: bool = False,
                   domains: list[str] | None = None) -> pd.DataFrame:
     """Cached BigQuery daily series; full rebuild once, tiny incremental
-    top-ups thereafter (a few GB/month of the 1 TB quota)."""
+    top-ups thereafter (a few GB/month of the 1 TB quota). Top-up failures
+    degrade to the stale cache; full rebuilds are refused when they would
+    blow the monthly budget (so a lost cache cannot silently burn the
+    quota every other series depends on)."""
     from data.news import atomic_to_csv
     cache_file = config.CACHE / f"{name}.csv"
     today = pd.Timestamp.now(tz="UTC").tz_localize(None).normalize()
@@ -119,16 +135,29 @@ def load_bq_daily(name: str, terms: list[str], refresh: bool = False,
             last = cached.index.max()
             if last >= today - pd.Timedelta(days=1):
                 return cached
-            fresh = daily_series(terms,
-                                 str((last - pd.Timedelta(days=3)).date()),
-                                 str((today + pd.Timedelta(days=1)).date()),
-                                 domains=domains)
+            try:
+                fresh = daily_series(terms,
+                                     str((last - pd.Timedelta(days=3)).date()),
+                                     str((today + pd.Timedelta(days=1)).date()),
+                                     domains=domains)
+            except Exception as exc:
+                log.warning("BigQuery top-up failed for %s (%s); serving "
+                            "cache through %s", name, exc, last.date())
+                return cached
             merged = pd.concat([cached, fresh])
             merged = merged[~merged.index.duplicated(keep="last")].sort_index()
             atomic_to_csv(merged, cache_file)
             return merged
-    df = daily_series(terms, config.TRAIN_START,
-                      str((today + pd.Timedelta(days=1)).date()),
+    end = str((today + pd.Timedelta(days=1)).date())
+    cost_gb = daily_series(terms, config.TRAIN_START, end, dry_run=True,
+                           domains=domains) / 1024 ** 3
+    used_gb = month_usage_gb()
+    if used_gb + cost_gb > MONTH_BUDGET_GB:
+        raise RuntimeError(
+            f"full rebuild of {name} needs {cost_gb:.0f} GB with "
+            f"{used_gb:.0f} GB already billed this month "
+            f"(budget {MONTH_BUDGET_GB}) - deferred to the next reset")
+    df = daily_series(terms, config.TRAIN_START, end,
                       cap_bytes=DEFAULT_CAP_BYTES, domains=domains)
     if df.empty:
         raise RuntimeError(f"BigQuery returned no rows for {name} ({terms})")

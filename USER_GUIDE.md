@@ -121,3 +121,28 @@ Manual runs write the same artifacts as scheduled ones, so prefer
 
 *Educational software — not financial advice. Past performance does not
 predict future results. Single-stock strategies carry concentration risk.*
+
+## Update (2026-07-22): self-refreshing news, live P(big move), track record
+
+- **Daily news top-up** - the 17:00 signal task now runs `python main.py
+  news-topup` first: it pulls the article archive's missing days from
+  BigQuery (validated to match the original corpus construction), embeds
+  the new headlines, and rebuilds the news features. Failures degrade to
+  the previous coverage; the signal always runs.
+- **P(big move) in the signal** - the desk's validated news edge is now a
+  daily line: a calibrated probability that tomorrow's move exceeds its
+  trailing-median bar (`magnitude_model.joblib`, refreshed by the weekly
+  retrain). Direction remains advisory; this is about SIZE.
+- **Track record tab** - the dashboard scores every archived forecast
+  against what actually happened (direction hit rate, realized moves vs
+  the vol band, VaR95 breaches, live Brier for the magnitude head).
+  Late-published rows are flagged and excluded. This page is the desk's
+  judge: nothing on it existed when the models were chosen.
+- **Industry series migration** - a quota-guarded one-shot backfill runs
+  Aug 1 at 10:00 (retried by each weekly retrain until it lands), after
+  which the industry series routes to BigQuery permanently and stops
+  depending on the office-blocked GDELT API.
+- **Repo hygiene** - the live article parquet is no longer committed
+  daily; the weekly retrain snapshots it to
+  `news2_articles_backup.parquet`. On a fresh clone, copy the backup over
+  the live name and run `news-topup`.
