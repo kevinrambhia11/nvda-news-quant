@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-07-22T17:02:09",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-22",
+  "last_close": 207.29,
+  "model_trained_through": "2026-07-16",
+  "model_prob_up": 0.2903,
+  "prob_big_move": 0.5288,
+  "big_move_threshold": 0.0135,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0992,
+  "headline_count": 200,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 3,
+  "stocktwits_bears": 7,
+  "advisory_composite": 0.3681,
+  "most_negative": [
+    {
+      "title": "$NVDA hello ugly losers",
+      "source": "stocktwits",
+      "score": -0.772,
+      "url": null
+    },
+    {
+      "title": "A violent AI unwind is hiding beneath a resilient stock market: Chart of the Day",
+      "source": "finviz",
+      "score": -0.727,
+      "url": "https://finance.yahoo.com/markets/article/a-violent-ai-unwind-is-hiding-beneath-a-resilient-stock-market-chart-of-the-day-100000350.html"
+    },
+    {
+      "title": "Had You Parked $5,000 in Nvidia Stock in 1999, Here's the Shocking Amount You'd Have Today - The Motley Fool",
+      "source": "google_news",
+      "score": -0.681,
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYXItWi16cXEwTDhxT0phZXFMb0VxSnVfRno3cTBQWWU1T0VBbG5KcWNwcGdJOXQ2RWJyTGc1YURrUTJUNzYwb19yUUxTYUF1Q2VXNmFVSUI2X1hrTEhDY2hSY2RPRWVKZ29WNDZ2Q0N3RlBia2FfVm1IUkhNOGkxTzZyUHgxVy1lRHhMV3pZUE9NTWJ5MnVr?oc=5"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "This Unsung Artificial Intelligence (AI) Hero Just Announced Incredible News. Is It Still a Buy?",
+      "source": "yahoo_rss",
+      "score": 0.772,
+      "url": "https://www.fool.com/investing/2026/07/22/this-unsung-artificial-intelligence-ai-hero-just-a/?.tsrc=rss"
+    },
+    {
+      "title": "Nvidia Stock Steadies, But It Needs Help for Real Gains - Barron's",
+      "source": "Barron's",
+      "score": 0.768,
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBNMWFMRzBHVEpyUGI4aklRRHlmXzJYWFU5ZFFxNk9Xa0ZwUzFwQWdBMXRQS1lpT3RzNlg3Y2FFWm5FYmpwUVNNM2Q5WnRlbDF4NzdhRXhIeDNvU2lzSWRLRWxvcWJjOTN4OVBrRkxHNkNWR1A0R3B4MGJTUFRVeXc?oc=5"
+    },
+    {
+      "title": "$NVDA 26 business days to next ER winners of the NVDA type.   :)",
+      "source": "stocktwits",
+      "score": 0.727,
+      "url": null
+    }
+  ]
+}
