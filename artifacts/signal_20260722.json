@@ -1,27 +1,58 @@
 {
-  "generated_at": "2026-07-22T17:02:09",
+  "generated_at": "2026-07-22T18:15:49",
   "ticker": "NVDA",
   "entry_day": "2026-07-22",
   "last_close": 207.29,
-  "model_trained_through": "2026-07-16",
-  "model_prob_up": 0.2903,
-  "prob_big_move": 0.5288,
+  "model_trained_through": "2026-07-20",
+  "model_prob_up": 0.5969,
+  "prob_big_move": 0.5029,
   "big_move_threshold": 0.0135,
-  "action": "EXIT / STAY FLAT",
-  "headline_sentiment": 0.0992,
-  "headline_count": 200,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0941,
+  "headline_count": 193,
   "headlines_degraded": false,
   "sentiment_backend": "vader",
-  "stocktwits_bulls": 3,
-  "stocktwits_bears": 7,
-  "advisory_composite": 0.3681,
-  "most_negative": [
+  "stocktwits_bulls": 0,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.5819,
+  "brain_top_news": [
     {
-      "title": "$NVDA hello ugly losers",
-      "source": "stocktwits",
-      "score": -0.772,
-      "url": null
+      "headline": "stock market rotation is driving volatility not weakness",
+      "source": "forbes.com",
+      "category": "competitors",
+      "weight": 0.0071,
+      "impact": -0.0157
     },
+    {
+      "headline": "is the war in iran spiraling out of control",
+      "source": "reason.com",
+      "category": "ai_companies",
+      "weight": 0.0061,
+      "impact": 0.08285
+    },
+    {
+      "headline": "family lawsuit woman threw herself into traffic chatgpt prophet death",
+      "source": "dailycaller.com",
+      "category": "ai_companies",
+      "weight": 0.0058,
+      "impact": 0.02876
+    },
+    {
+      "headline": "trump gutted civil rights agency",
+      "source": "pilotonline.com",
+      "category": "brokers",
+      "weight": 0.0056,
+      "impact": -0.03347
+    },
+    {
+      "headline": "lawsuit months of disturbing conversations with chatgpt led to womans suicide by walking into traffic",
+      "source": "breitbart.com",
+      "category": "ai_companies",
+      "weight": 0.0056,
+      "impact": 0.02551
+    }
+  ],
+  "most_negative": [
     {
       "title": "A violent AI unwind is hiding beneath a resilient stock market: Chart of the Day",
       "source": "finviz",
@@ -33,26 +64,32 @@
       "source": "google_news",
       "score": -0.681,
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYXItWi16cXEwTDhxT0phZXFMb0VxSnVfRno3cTBQWWU1T0VBbG5KcWNwcGdJOXQ2RWJyTGc1YURrUTJUNzYwb19yUUxTYUF1Q2VXNmFVSUI2X1hrTEhDY2hSY2RPRWVKZ29WNDZ2Q0N3RlBia2FfVm1IUkhNOGkxTzZyUHgxVy1lRHhMV3pZUE9NTWJ5MnVr?oc=5"
+    },
+    {
+      "title": "Supermicro stock jumps on gross margin raise amid record $60 billion backlog",
+      "source": "finviz",
+      "score": -0.477,
+      "url": "https://finance.yahoo.com/markets/article/supermicro-stock-jumps-on-gross-margin-raise-amid-record-60-billion-backlog-223037795.html"
     }
   ],
   "most_positive": [
     {
-      "title": "This Unsung Artificial Intelligence (AI) Hero Just Announced Incredible News. Is It Still a Buy?",
-      "source": "yahoo_rss",
-      "score": 0.772,
-      "url": "https://www.fool.com/investing/2026/07/22/this-unsung-artificial-intelligence-ai-hero-just-a/?.tsrc=rss"
+      "title": "At Last, Some Good News for Super Micro Stock",
+      "source": "finviz",
+      "score": 0.778,
+      "url": "https://www.barrons.com/articles/super-micro-stock-price-smci-news-3a0221fd?mod=bar_FV"
+    },
+    {
+      "title": "Here's How Much Apple Stock Has to Gain to Overtake Nvidia as the Most Valuable Company in the World. Hint: It Could Happen by the Time You Read This. - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.778,
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVkRnc0lTblUyMFpERzFiR0piaTgtOXZMZmlRMTY4dWJKY09CTDJuVVNZQ0NJSEp1cUNFM0lBekUwRktURG0weV8wOWZycUU1aEJaanB1TlNocUF4Q0RhYnlOUGFnbEZDZDdGaUF0SGRVMjRhOEkwd0UxRDdDVDdWbzBwSFhsUU1zUnhXaU5GdmVxemN6VDI4?oc=5"
     },
     {
       "title": "Nvidia Stock Steadies, But It Needs Help for Real Gains - Barron's",
       "source": "Barron's",
       "score": 0.768,
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBNMWFMRzBHVEpyUGI4aklRRHlmXzJYWFU5ZFFxNk9Xa0ZwUzFwQWdBMXRQS1lpT3RzNlg3Y2FFWm5FYmpwUVNNM2Q5WnRlbDF4NzdhRXhIeDNvU2lzSWRLRWxvcWJjOTN4OVBrRkxHNkNWR1A0R3B4MGJTUFRVeXc?oc=5"
-    },
-    {
-      "title": "$NVDA 26 business days to next ER winners of the NVDA type.   :)",
-      "source": "stocktwits",
-      "score": 0.727,
-      "url": null
     }
   ]
 }

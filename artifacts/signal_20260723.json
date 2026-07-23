@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-07-23T17:04:27",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-23",
+  "last_close": 212.06,
+  "model_trained_through": "2026-07-20",
+  "model_prob_up": 0.482,
+  "prob_big_move": 0.5029,
+  "big_move_threshold": 0.0135,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0894,
+  "headline_count": 217,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 8,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5008,
+  "brain_top_news": [
+    {
+      "headline": "lawsuit months of disturbing conversations with chatgpt led to womans suicide by walking into traffic",
+      "source": "breitbart.com",
+      "category": "ai_companies",
+      "weight": 0.0056,
+      "impact": 0.02551
+    },
+    {
+      "headline": "can spacex fire all cylinders",
+      "source": "zerohedge.com",
+      "category": "competitors",
+      "weight": 0.0043,
+      "impact": 0.02359
+    },
+    {
+      "headline": "can spacex fire all cylinders",
+      "source": "zerohedge.com",
+      "category": "brokers",
+      "weight": 0.004,
+      "impact": 0.03806
+    },
+    {
+      "headline": "samsung galaxy z fold 8 ultra vs motorola razr fold",
+      "source": "zdnet.com",
+      "category": "competitors",
+      "weight": 0.0039,
+      "impact": 0.03809
+    },
+    {
+      "headline": "original xbox games backwards compatible pc",
+      "source": "stuff.tv",
+      "category": "nvda",
+      "weight": 0.0038,
+      "impact": 0.06075
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "$NVDA seriously - WTF is up with this stock. All indicators are green - it goes down. I\u2019ve been trading for 30+years. Never seen this sort of consistently counterintuitive behavior.",
+      "source": "stocktwits",
+      "score": -0.738,
+      "url": null
+    },
+    {
+      "title": "White House accuses Moonshot of violating US export controls using Nvidia hardware",
+      "source": "finviz",
+      "score": -0.71,
+      "url": "https://finance.yahoo.com/technology/ai/articles/white-house-accuses-moonshot-violating-163307373.html"
+    },
+    {
+      "title": "Trump tech official accuses China\u2019s Moonshot AI of \u2018large-scale\u2019 plot to steal from Anthropic - New York Post",
+      "source": "New York Post",
+      "score": -0.681,
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWlV5ZHcyZS1RZ1g1aUtVcGJWTEYtcWdPQmg3OEE4YlRteXlUcVQ1M1BUbTNJYm42S2xNcElicjdjUi1ERTVQRGgwSXJyVTQtejkxb09ERFN5OG02TFNZUFR6bXlnT3haWDc3OFB3ejJFN3N4UjFveUM0bzVTRFAzcVZKeDZKRTNUSExPVVNaaGthVDN2SG1KdHl4WXFaY1I5b3YtdnNSRkxUYkF1SWpqcFlyVk5YWlZPbnhYRmRrRHpQaDA?oc=5"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Elon Musk doesnt really buy stocks  but says these 2 picks will be pretty valuable in the future. Build wealth now",
+      "source": "finviz",
+      "score": 0.929,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-doesn-t-really-133000446.html"
+    },
+    {
+      "title": "$NVDA So, Google os spending more than investors like, but it means Nvidia will do better, so why aren\u2019t investors dancing happy feet about that?",
+      "source": "stocktwits",
+      "score": 0.895,
+      "url": null
+    },
+    {
+      "title": "$NVDA Just remember there are 24 Billion shares outstanding, the fast easy money has already been made. From now on it&#39;s a slow grind higher, one must be patient.",
+      "source": "stocktwits",
+      "score": 0.844,
+      "url": null
+    }
+  ]
+}
