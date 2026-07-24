@@ -1,0 +1,76 @@
+{
+  "entry_day": "2026-07-24",
+  "generated_at": "2026-07-24T17:27:03",
+  "articles": [
+    {
+      "headline": "how south koreas stock market volatility is impacting us stocks",
+      "source": "morningstar.com",
+      "category": "competitors",
+      "weight": 0.0076,
+      "impact": -0.04579
+    },
+    {
+      "headline": "union accuses bethesda of violating labour laws in canada following layoffs at montreal studio",
+      "source": "gamesindustry.biz",
+      "category": "hyperscalers",
+      "weight": 0.0046,
+      "impact": 0.00867
+    },
+    {
+      "headline": "pastor sues openai over bad medical advice from chatgpt that nearly killed him",
+      "source": "abajournal.com",
+      "category": "ai_companies",
+      "weight": 0.0043,
+      "impact": 0.00366
+    },
+    {
+      "headline": "supreme court rejects ethics deal after judge asked black defendant about chopping cotton",
+      "source": "wctv.tv",
+      "category": "macro",
+      "weight": 0.0043,
+      "impact": -0.01206
+    },
+    {
+      "headline": "michael j fox says going public parkinsons hell wife tracy pollan",
+      "source": "foxnews.com",
+      "category": "ai_companies",
+      "weight": 0.0042,
+      "impact": 0.01304
+    },
+    {
+      "headline": "samsung galaxy z fold8 ultra z fold8 and z flip8 foldables perfected for every way of living",
+      "source": "sydneysun.com",
+      "category": "competitors",
+      "weight": 0.0037,
+      "impact": 0.02569
+    },
+    {
+      "headline": "openai faces chatgpt health advice lawsuit after pastor alleges near fatal medical ordeal.htm",
+      "source": "itechpost.com",
+      "category": "ai_companies",
+      "weight": 0.0037,
+      "impact": -0.00189
+    },
+    {
+      "headline": "samsung galaxy z fold8 ultra z fold8 and z flip8 foldables perfected for every way of living",
+      "source": "malaysiasun.com",
+      "category": "competitors",
+      "weight": 0.0037,
+      "impact": 0.02695
+    },
+    {
+      "headline": "i went hands on with samsung galaxy z fold 8 ultra its peak foldable in an old garb",
+      "source": "digitaltrends.com",
+      "category": "competitors",
+      "weight": 0.0037,
+      "impact": 0.02303
+    },
+    {
+      "headline": "doc iniiuskx1497997.shtml",
+      "source": "sina.com.cn",
+      "category": "competitors",
+      "weight": 0.0036,
+      "impact": -0.00807
+    }
+  ]
+}

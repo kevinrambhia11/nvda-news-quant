@@ -104,9 +104,13 @@ def _entry_index(px_index: pd.DatetimeIndex) -> pd.DatetimeIndex:
         pd.DatetimeIndex([next_trading_day(px_index.max())]))
 
 
-def learn_impact(holdout_start: pd.Timestamp, nested: bool = False) -> dict:
+def learn_impact(holdout_start: pd.Timestamp, nested: bool = False,
+                 out_path=None) -> dict:
     """Ridge scorers from embedding space onto next-day signed and absolute
-    NVDA returns, trained strictly before `holdout_start`."""
+    NVDA returns, trained strictly before `holdout_start`. `out_path`
+    overrides the artifact location (used by the LIVE daily-learning layer,
+    which trains through yesterday and must never touch evaluation files).
+    """
     from sklearn.linear_model import Ridge
     from data.prices import load_prices
 
@@ -129,18 +133,22 @@ def learn_impact(holdout_start: pd.Timestamp, nested: bool = False) -> dict:
     bundle = {"dir": dir_model, "mag": mag_model,
               "trained_before": str(holdout_start.date()),
               "n_articles": int(len(y))}
-    joblib.dump(bundle, IMPACT_NESTED_PATH if nested else IMPACT_PATH)
+    dest = out_path or (IMPACT_NESTED_PATH if nested else IMPACT_PATH)
+    joblib.dump(bundle, dest)
     return bundle
 
 
-def build_daily_features(nested: bool = False) -> pd.DataFrame:
+def build_daily_features(nested: bool = False, impact_path=None,
+                         out_path=None) -> pd.DataFrame:
     """Apply the frozen impact scorers to every article and aggregate to
-    entry-day features. Writes news2_features.csv and returns it."""
+    entry-day features. Writes news2_features.csv and returns it. Path
+    overrides route the LIVE daily-learning layer to its own files."""
     from data.prices import load_prices
 
     art = pd.read_parquet(ART_PATH)
     emb = np.load(EMB_PATH).astype(np.float32)
-    bundle = joblib.load(IMPACT_NESTED_PATH if nested else IMPACT_PATH)
+    bundle = joblib.load(impact_path
+                         or (IMPACT_NESTED_PATH if nested else IMPACT_PATH))
     px, _ = load_prices()
     entry_idx = _entry_index(px.index)
 
@@ -194,10 +202,10 @@ def build_daily_features(nested: bool = False) -> pd.DataFrame:
     feats.index.name = "date"
     feats = feats.sort_index()
     from data.news import atomic_to_csv
-    out_path = FEATURES_NESTED_PATH if nested else FEATURES_PATH
-    atomic_to_csv(feats, out_path)
+    dest = out_path or (FEATURES_NESTED_PATH if nested else FEATURES_PATH)
+    atomic_to_csv(feats, dest)
     log.info("news2 daily features: %d rows x %d cols -> %s",
-             len(feats), feats.shape[1], out_path.name)
+             len(feats), feats.shape[1], dest.name)
     return feats
 
 

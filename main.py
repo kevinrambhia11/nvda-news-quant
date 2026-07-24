@@ -217,6 +217,32 @@ def cmd_magnitude() -> None:
     print(train_final(ds))
 
 
+def cmd_learn() -> None:
+    """Daily loop: grade yesterday's forecasts against what actually
+    happened, then the ALREADY-TRAINED brain reads today's news and
+    assigns its learned weights (pure inference - no weights change).
+    The brain's education happens weekly via `train-brain`."""
+    from model.live import apply_brain, score_yesterday
+    try:
+        print(score_yesterday())
+    except Exception as exc:
+        log.warning("Yesterday-scoring failed (%s)", exc)
+    try:
+        apply_brain()
+    except Exception as exc:
+        log.warning("Brain application failed (%s) - the signal falls back "
+                    "to the weekly production features", exc)
+
+
+def cmd_train_brain() -> None:
+    """Weekly education: retrain the live brain (ridge scorers + NewsNet)
+    on all labeled history and refit the deployed heads on the fresh
+    features. Runs inside the Saturday retrain."""
+    from model.live import refit_heads, train_brain
+    train_brain()
+    print(refit_heads())
+
+
 def cmd_news_topup() -> None:
     """Incremental article-archive refresh from BigQuery: pull missing
     days, extend embeddings, rebuild production news features. Never fails
@@ -319,7 +345,8 @@ def main() -> None:
                                  "intraday-study", "log-headlines",
                                  "bq-probe", "bqml", "news2", "newsnet",
                                  "nested", "magnitude", "news-topup",
-                                 "industry-backfill", "all"])
+                                 "learn", "train-brain", "industry-backfill",
+                                 "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
     parser.add_argument("--no-finbert", action="store_true",
@@ -362,6 +389,10 @@ def main() -> None:
         cmd_magnitude()
     elif args.command == "news-topup":
         cmd_news_topup()
+    elif args.command == "learn":
+        cmd_learn()
+    elif args.command == "train-brain":
+        cmd_train_brain()
     elif args.command == "industry-backfill":
         cmd_industry_backfill()
     elif args.command == "all":

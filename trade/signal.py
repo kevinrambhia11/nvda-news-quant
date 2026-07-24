@@ -127,12 +127,25 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         or mag_bundle is not None
     if need_news:
         try:
-            from model.news2vec import load_news2_features
-            from model.newsnet import load_newsnet_features
-            for loader in (load_news2_features, load_newsnet_features):
-                extra = loader()
+            # LIVE features first (weekly-educated brain applied daily) -
+            # but ONLY if they cover this entry day: a failed `learn` run
+            # must never silently serve today from yesterday's news.
+            from model.live import load_live_features
+            extra = load_live_features()
+            if extra is not None and extra.index.max() >= next_day:
+                ds = ds.join(extra, how="left")
+                log.info("Using LIVE news features (brain applied today)")
+            else:
                 if extra is not None:
-                    ds = ds.join(extra, how="left")
+                    log.warning("Live features end %s < entry day %s - "
+                                "falling back to weekly production features",
+                                extra.index.max().date(), next_day.date())
+                from model.news2vec import load_news2_features
+                from model.newsnet import load_newsnet_features
+                for loader in (load_news2_features, load_newsnet_features):
+                    weekly = loader()
+                    if weekly is not None:
+                        ds = ds.join(weekly, how="left")
         except Exception as exc:
             log.warning("news-vector features unavailable (%s)", exc)
     missing = [f for f in feat_names if f not in ds.columns]
@@ -218,6 +231,18 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
           if h.get("source") == "stocktwits" and h.get("declared_sentiment")]
     bulls = sum(1 for h in st if h["declared_sentiment"] == "Bullish")
 
+    # what the daily-trained brain weighted for this entry day (written by
+    # `main.py learn`; omitted when absent or for a different session)
+    brain_news = []
+    try:
+        from model.live import TODAY_WEIGHTS
+        if TODAY_WEIGHTS.exists():
+            tw = json.loads(TODAY_WEIGHTS.read_text(encoding="utf-8"))
+            if tw.get("entry_day") == str(next_day.date()):
+                brain_news = tw.get("articles", [])[:5]
+    except Exception as exc:
+        log.warning("Brain weights unavailable (%s)", exc)
+
     ranked = sorted((h for h in headlines if "score" in h),
                     key=lambda h: h["score"])
     signal = {
@@ -237,6 +262,7 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         "stocktwits_bulls": bulls,
         "stocktwits_bears": len(st) - bulls,
         "advisory_composite": round(float(advisory), 4),
+        "brain_top_news": brain_news,
         "most_negative": [{k: h.get(k) for k in ("title", "source", "score",
                                                  "url")}
                           for h in ranked[:3]],
@@ -274,6 +300,13 @@ def format_signal(signal: dict) -> str:
         "-" * 62,
         f"  ADVISORY direction (no demonstrated holdout edge): "
         f"{signal['action']}",
+        *([
+            "-" * 62,
+            "  What the brain weighted for this session:",
+            *[f"    w={a['weight']:.3f} [{a['category']}/{a['source']}] "
+              f"{a['headline'][:60]}"
+              for a in signal.get("brain_top_news", [])[:5]],
+        ] if signal.get("brain_top_news") else []),
         "-" * 62,
         "  Most positive headlines:",
         *[f"    {h['score']:+.2f} [{h['source']}] {h['title'][:70]}"

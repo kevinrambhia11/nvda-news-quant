@@ -57,6 +57,8 @@ artifacts/cache/*
 !artifacts/intraday_events.csv
 !artifacts/signal_*.json
 !artifacts/vol_forecast_*.json
+!artifacts/learning_log.csv
+!artifacts/today_news_weights.json
 
 # Streamlit
 .streamlit/
