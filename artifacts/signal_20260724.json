@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-07-24T17:25:05",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-24",
+  "last_close": 208.76,
+  "model_trained_through": "2026-07-20",
+  "model_prob_up": 0.7989,
+  "prob_big_move": 0.537,
+  "big_move_threshold": 0.0141,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0532,
+  "headline_count": 208,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 5,
+  "stocktwits_bears": 5,
+  "advisory_composite": 0.7172,
+  "brain_top_news": [
+    {
+      "headline": "how south koreas stock market volatility is impacting us stocks",
+      "source": "morningstar.com",
+      "category": "competitors",
+      "weight": 0.0076,
+      "impact": -0.04579
+    },
+    {
+      "headline": "union accuses bethesda of violating labour laws in canada following layoffs at montreal studio",
+      "source": "gamesindustry.biz",
+      "category": "hyperscalers",
+      "weight": 0.0046,
+      "impact": 0.00867
+    },
+    {
+      "headline": "pastor sues openai over bad medical advice from chatgpt that nearly killed him",
+      "source": "abajournal.com",
+      "category": "ai_companies",
+      "weight": 0.0043,
+      "impact": 0.00366
+    },
+    {
+      "headline": "supreme court rejects ethics deal after judge asked black defendant about chopping cotton",
+      "source": "wctv.tv",
+      "category": "macro",
+      "weight": 0.0043,
+      "impact": -0.01206
+    },
+    {
+      "headline": "michael j fox says going public parkinsons hell wife tracy pollan",
+      "source": "foxnews.com",
+      "category": "ai_companies",
+      "weight": 0.0042,
+      "impact": 0.01304
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "$NVDA !!!http://Investing.com - Futures on major U.S. stock indexes are pointing higher as investors weigh escalating hostilities in the Middle East and a slew of technology sector reports this week. Iran has reportedly rejected another U.S. ceasefire offer, as the conflict between the two threatens to spread to other parts of the Gulf and further disrupt global oil supplies. U.S. President Donald Trump is imposing double-digit new tariffs on a range of countries, while the artificial intelligence boom is helping chipmaker Intel post better-than-expected quarterly sales.",
+      "source": "stocktwits",
+      "score": -0.806,
+      "url": null
+    },
+    {
+      "title": "$NVDA I expect them to drop this 2% at open to kill options",
+      "source": "stocktwits",
+      "score": -0.778,
+      "url": null
+    },
+    {
+      "title": "$NVDA hello ugly losers",
+      "source": "stocktwits",
+      "score": -0.772,
+      "url": null
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "How Nvidia Stock Could Be the Biggest Winner from Super Micro\u2019s Preliminary Results - Barchart.com",
+      "source": "google_news",
+      "score": 0.827,
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZ0o2YlFFM0o1Q185MFhzV05QRGFTeU45dUQ2Wk1CcDg3VmZFeTdHWDBSeDlKTlB1YWlUckRUc3hZMjFmTzh1ZjczOU13Zzc4YWxObmQ2LVVkOTZGVWZXSV82eWRhc0dTcjRKVThKbGpSdlZMWTFoXy1QVmthUTlzLVk2MDhXZ3FhWVREb3JmOXV0bnhwMksxWTVIUm4yWUo2ZXRHcm5VYWF6SHRDMHlHZ2d3Tk5CX1RXbk0yYlB3a3RPaTNW?oc=5"
+    },
+    {
+      "title": "Nvidia details Rubin architectural optimizations for inference \u2013 improvements target better performance and efficiency from the GPU to the rack - Tom's Hardware",
+      "source": "Tom's Hardware",
+      "score": 0.823,
+      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPVWVsTkZQMnVjS3gzRDNiNWc4YWVLMGt5REtLMHZtM1NWREgzSnhGSjljTzhneGRyZS1JQTc4alhsRzZOS29VYV9BNjVnNnBpUFNKaXd2VTRqckx2cUxfQWd6Y3h1eDQ2MUlFY0o2YUY3ZWxVT1pMeUhHcWJqSlNNUy14bkdVWXdadnJkOEtEREpVSDF5d3dyZ1JxZWZ4VGc1czF6MkNBNnNNaWtnTkFhbktjUWljSmNJS1dkdEI0T0F2UVd4WWRVZ1l2VVlkYjVhb3hINl9OaHFDZTNDeU0xNWVsT3ZFZkc2TG1IMWZadXVKS1dWcXNyX3dYTE1zdE5uYnMyNVJjcFlzbUFBTHhvSnJ1RWtPZXJa?oc=5"
+    },
+    {
+      "title": "FT: EU to let Greek company keep shipping Russian gas to win approval for new sanctions package - Meduza",
+      "source": "Meduza",
+      "score": 0.784,
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQYmp6Z1czdm82MFd1cW42d0xXcUY5ZWhKaGhsakxuTVV5bUJfLWlqZDVndzR6eEhKdXBscm45S2p0ejdsTUV6Q2xtdVZkdzJ6OWVFTFk2OWpxLV92MExhU05GWGozVldMOGhxT2J4aUxBZEM2R0VzUmJ4RlhUMVd0d3F5N3ZKV3hGVTJhMnpUZEFIR0RWU3RoNHlEVmNnQ0gxQnJ1aURpV0ZsNEw3NTg4X2FuVVNvTTZkWVFOMmVqZzZIWHFPdjJROHBZMm9fS2c40gHQAUFVX3lxTFBianpnVzN2bzYwV3VxbjZ3TFdxRjllaEpoaGxqTG5NVXltQl8taWpkNWd3NHp4SEp1cGxybjlLanR6N2xNRXpDbG11VmR3Mno5ZUVMWTY5anEtX3YwTGFTTkZYajNWV0w4aHFPYnhpTEFkQzZHRXNSYnhGWFQxV3R3cXk3dkpXeEZVMmEyelRkQUhHRFZTdGg0eURWY2dDSDFCcnVpRGlXRmw0TDc1ODhfYW5VU29NNmRZUU4yZWpnNkhYcU92MlE4cFkyb19LZzg?oc=5"
+    }
+  ]
+}
