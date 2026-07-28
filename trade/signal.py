@@ -302,7 +302,8 @@ def format_signal(signal: dict) -> str:
         f"  generated {signal['generated_at']}  |  last close ${signal['last_close']}",
         "=" * 62,
         f"  Model P(up)          : {signal['model_prob_up']:.1%} "
-        f"(long > {config.LONG_ENTER}, exit < {config.LONG_EXIT})",
+        f"(long > {config.LONG_ENTER}, exit < {config.LONG_EXIT}; "
+        f"bet = entry open -> next open, graded at the next open)",
         *([f"  P(move > {signal['big_move_threshold']:.2%}) : "
            f"{signal['prob_big_move']:.1%} calibrated - the news-magnitude "
            "edge (size, not direction)"]

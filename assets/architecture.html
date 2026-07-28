@@ -484,8 +484,12 @@
       no account size is configured. Scale to actual capital.</td></tr>
       <tr><td class="mono">P(move &gt; 1.35%)</td><td>Probability the next move exceeds its
       recent median. The threshold adjusts as volatility regimes change.</td></tr>
-      <tr><td class="mono">P(up) 91.5%</td><td>Should be discounted: the direction model has
-      no demonstrated holdout edge regardless of how confident a given reading appears.</td></tr>
+      <tr><td class="mono">P(up) 91.5%</td><td>The bet covers the entry day's open to the
+      NEXT session's open and is graded at that next open. A gap down at the entry open is
+      not a miss - it belongs to the previous day's bet, and the model simply enters at the
+      lower price. The number itself should be discounted: it is uncalibrated and the
+      direction model has no demonstrated holdout edge, so read it as a lean, judged only
+      by the running track record.</td></tr>
     </tbody>
   </table>
   </div>

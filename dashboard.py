@@ -182,13 +182,22 @@ with tab_today:
                     f"**{signal['action']}** - entry day "
                     f"{signal['entry_day']}, generated "
                     f"{signal['generated_at']}")
+            st.caption(f"This bet covers **{signal['entry_day']}'s open "
+                       f"&rarr; the NEXT session's open** and is graded at "
+                       "that next open - not before. A red or green open "
+                       "this morning belongs to YESTERDAY's bet (which the "
+                       "Track record grades automatically). No single day "
+                       "grades a probability either way - only the running "
+                       "score does.")
 
     if signal:
         m = st.columns(5)
         m[0].metric("Model P(up)", f"{signal['model_prob_up']:.1%}",
                     help=f"Long > {config.LONG_ENTER}, exit < {config.LONG_EXIT}")
-        m[0].caption("Model's odds that NVDA rises into tomorrow's open - "
-                     "advisory only, no proven edge.")
+        m[0].caption("Model's lean that the OPEN-to-OPEN return (today's "
+                     "open to tomorrow's open) is positive. Uncalibrated - "
+                     "treat as a lean, not a literal probability. Advisory "
+                     "only, no proven edge.")
         m[1].metric("Headline sentiment", f"{signal['headline_sentiment']:+.3f}",
                     help=f"{signal['headline_count']} items, "
                          f"{signal['sentiment_backend']}")
