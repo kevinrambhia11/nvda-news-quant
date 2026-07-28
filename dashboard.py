@@ -824,11 +824,77 @@ with tab_news:
 # ---------------------------------------------------------------------------
 # Tab 7: Architecture
 # ---------------------------------------------------------------------------
+# Streamlit embeds a component in a FIXED-height iframe, which gives the
+# guide its own scrollbar on top of the dashboard's - two scrollbars. Fix:
+# report the real content height outward so the frame (and the wrapper
+# Streamlit sizes from the height= argument) grows to fit exactly, leaving
+# one scrollbar. Lives here rather than in architecture.html so the shared
+# file stays clean for the published artifact, which sizes itself.
+ARCH_AUTOFIT = """
+<script>
+(function () {
+  function fit() {
+    try {
+      var fr = window.frameElement;
+      var b = document.body;
+      if (!fr || !b) return;
+      // Measure the BODY box, never documentElement.scrollHeight - the
+      // latter is floored by the frame's own height, so the panel could
+      // grow but never shrink back to a snug fit.
+      var content = Math.max(b.scrollHeight,
+                             Math.ceil(b.getBoundingClientRect().height));
+      if (content < 200) return;          // tab still hidden, nothing to size
+      var target = content + 4;
+      // Hysteresis is essential: resizing the frame re-measures content
+      // inside it, so an unconditional set plus any buffer becomes a
+      // runaway loop that creeps taller on every observer tick.
+      if (Math.abs(target - (fr.clientHeight || 0)) > 12) {
+        fr.style.height = target + 'px';
+        fr.setAttribute('height', target);
+        var box = fr.closest('[data-testid="stElementContainer"]');
+        if (box) box.style.setProperty('height', target + 'px', 'important');
+      }
+      // Suppress the frame's own scrollbar ONLY once it genuinely fits.
+      // Setting 'no' while short would make the tail of the guide
+      // unreachable - always prefer a temporary scrollbar to clipping.
+      fr.setAttribute('scrolling', fr.clientHeight >= content ? 'no' : 'auto');
+    } catch (e) {}
+  }
+  function refit() {
+    fit();
+    requestAnimationFrame(fit);
+    setTimeout(fit, 150);
+    setTimeout(fit, 500);   // re-measure after reflow settles
+  }
+  refit();
+  window.addEventListener('load', refit);
+  window.addEventListener('resize', refit);
+  if (window.ResizeObserver) {
+    // Observe BODY, not documentElement: this panel is first rendered
+    // while its tab is hidden (zero height, nothing to measure), and
+    // documentElement's height is pinned to the frame so it never
+    // reports the change when the tab becomes visible.
+    var ro = new ResizeObserver(fit);
+    if (document.body) ro.observe(document.body);
+  }
+  document.addEventListener('toggle', fit, true);   // <details> sections
+  document.addEventListener('visibilitychange', refit);
+  setInterval(fit, 2000);   // cheap safety net; a no-op once fitted
+})();
+</script>
+"""
+
 with tab_arch:
     arch_path = ROOT / "assets" / "architecture.html"
     if arch_path.exists():
         import streamlit.components.v1 as components
-        components.html(arch_path.read_text(encoding="utf-8"),
-                        height=4600, scrolling=True)
+        # height=/scrolling= are only the pre-script fallback: the shim
+        # resizes the frame to the true content height (~14k, taller as
+        # cards stack or <details> open) and switches scrolling off once it
+        # fits. scrolling stays True here so that if the shim cannot run at
+        # all, the panel degrades to its own scrollbar rather than clipping
+        # the tail of the guide.
+        components.html(arch_path.read_text(encoding="utf-8") + ARCH_AUTOFIT,
+                        height=13200, scrolling=True)
     else:
         st.info("assets/architecture.html missing - pull the latest repo")
