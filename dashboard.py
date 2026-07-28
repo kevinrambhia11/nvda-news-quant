@@ -108,59 +108,13 @@ def read_text(path_str: str):
     return p.read_text(encoding="utf-8") if p.exists() else None
 
 
-# ---------------------------------------------------------------------------
-# Local backtest helpers (parameterized, so sliders never mutate config)
-# ---------------------------------------------------------------------------
-
-def positions(probs: pd.Series, enter: float, exit_: float,
-              allow_short: bool) -> pd.Series:
-    pos = np.zeros(len(probs))
-    current = 0.0
-    for i, p in enumerate(probs.to_numpy()):
-        if p > enter:
-            current = 1.0
-        elif allow_short and p < 1 - enter:
-            current = -1.0
-        elif current > 0 and p < exit_:
-            current = 0.0
-        elif allow_short and current < 0 and p > 1 - exit_:
-            current = 0.0
-        pos[i] = current
-    return pd.Series(pos, index=probs.index)
-
-
-def quick_backtest(oos: pd.DataFrame, enter: float, exit_: float,
-                   allow_short: bool, cost: float):
-    df = oos.copy()
-    df["pos"] = positions(df["prob_up"], enter, exit_, allow_short)
-    df["turnover"] = df["pos"].diff().abs()
-    df.iloc[0, df.columns.get_loc("turnover")] = abs(df["pos"].iloc[0])
-    df["strat_ret"] = df["pos"] * df["fwd_ret"] - df["turnover"] * cost
-    df["strategy"] = (1 + df["strat_ret"]).cumprod()
-    df["buy_hold"] = (1 + df["fwd_ret"]).cumprod()
-    years = len(df) / 252
-    sd = df["strat_ret"].std()
-    stats = {
-        "cagr": df["strategy"].iloc[-1] ** (1 / years) - 1,
-        "sharpe": df["strat_ret"].mean() / sd * np.sqrt(252) if sd > 0 else np.nan,
-        "maxdd": (df["strategy"] / df["strategy"].cummax() - 1).min(),
-        "exposure": (df["pos"] != 0).mean(),
-        "bh_cagr": df["buy_hold"].iloc[-1] ** (1 / years) - 1,
-        "bh_sharpe": df["fwd_ret"].mean() / df["fwd_ret"].std() * np.sqrt(252),
-        "bh_maxdd": (df["buy_hold"] / df["buy_hold"].cummax() - 1).min(),
-        "changes": int((df["turnover"] > 0).sum()),
-    }
-    return stats, df
-
-
 st.title("NVDA Quant Desk")
 st.caption("News-sentiment direction signal + EMH-consistent volatility desk. "
            "Educational tool - not financial advice.")
 
-(tab_today, tab_dir, tab_vol, tab_tech, tab_links,
- tab_track, tab_news, tab_arch) = st.tabs(
-    ["Desk today", "Direction model", "Volatility", "Technical charts",
-     "Today's news", "Track record", "News & data", "Architecture"])
+(tab_today, tab_vol, tab_links, tab_track, tab_arch) = st.tabs(
+    ["Desk today", "Volatility", "Today's news", "Track record",
+     "Architecture"])
 
 
 @st.cache_data(ttl=900, show_spinner="Collecting today's news...")
@@ -321,64 +275,26 @@ with tab_today:
                                "latest scrape.")
 
 
-# ---------------------------------------------------------------------------
-# Tab 2: Direction model
-# ---------------------------------------------------------------------------
-with tab_dir:
-    st.caption("**What this page is:** the direction model's report card. "
-               "Candidates compete on a selection window and the winner is "
-               "judged on data it never saw (the holdout) - that honest "
-               "verdict is why direction is only advisory. The sliders let "
-               "you replay the backtest under different trading rules; the "
-               "fusion table shows what combining direction with vol-sizing "
-               "would have done.")
-    selection = read_text(str(config.MODEL_SELECTION_PATH))
-    if selection:
-        st.subheader("Candidate selection (selection window vs holdout)")
-        st.code(selection, language=None)
-
-    oos = read_csv(str(config.OOS_PREDICTIONS_PATH))
-    if oos is None:
-        st.info("No out-of-sample predictions - run `python main.py train`.")
-    else:
-        st.subheader("Threshold explorer (out-of-sample, recomputed live)")
-        s1, s2, s3, s4 = st.columns(4)
-        enter = s1.slider("Long enter (P(up) >)", 0.50, 0.70,
-                          float(config.LONG_ENTER), 0.01)
-        exit_ = s2.slider("Long exit (P(up) <)", 0.30, 0.55,
-                          float(config.LONG_EXIT), 0.01)
-        cost = s3.slider("Cost per change (bps)", 0, 30,
-                         int(config.COST_PER_TURNOVER * 10_000), 1) / 10_000
-        allow_short = s4.checkbox("Allow shorts", value=config.ALLOW_SHORT)
-        if exit_ >= enter:
-            st.error("Exit threshold must be below the entry threshold.")
-        else:
-            stats, bt = quick_backtest(oos, enter, exit_, allow_short, cost)
-            k = st.columns(6)
-            k[0].metric("CAGR", f"{stats['cagr']:.1%}",
-                        f"{stats['cagr'] - stats['bh_cagr']:+.1%} vs B&H")
-            k[1].metric("Sharpe", f"{stats['sharpe']:.2f}",
-                        f"{stats['sharpe'] - stats['bh_sharpe']:+.2f} vs B&H")
-            k[2].metric("Max drawdown", f"{stats['maxdd']:.1%}",
-                        f"{stats['maxdd'] - stats['bh_maxdd']:+.1%} vs B&H",
-                        delta_color="inverse")
-            k[3].metric("Exposure", f"{stats['exposure']:.0%}")
-            k[4].metric("Position changes", stats["changes"])
-            k[5].metric("B&H Sharpe", f"{stats['bh_sharpe']:.2f}")
-
-            st.caption("Growth of $1 (log scale)")
-            st.line_chart(np.log10(bt[["strategy", "buy_hold"]]))
-            st.caption("21-day average model probability")
-            st.line_chart(oos["prob_up"].rolling(21).mean())
-
-    fused_report = read_text(str(config.FUSED_REPORT_PATH))
-    if fused_report:
-        st.subheader("Direction x volatility fusion")
-        st.code(fused_report, language=None)
-        fused = read_csv(str(config.FUSED_CURVE_PATH))
-        if fused is not None:
-            st.caption("Growth of $1 (log scale)")
-            st.line_chart(np.log10(fused))
+    with st.expander("Data freshness (all caches)"):
+        st.caption("Last data day and file modification time for every "
+                   "cache the desk reads. If a number above ever looks "
+                   "stale, this shows why.")
+        _rows = []
+        for _f in sorted(config.CACHE.glob("*.csv")):
+            try:
+                _last = pd.read_csv(_f, index_col=0,
+                                    parse_dates=[0]).index.max()
+            except Exception:
+                _last = None
+            _rows.append({
+                "file": _f.name,
+                "last data day": str(_last.date()) if _last is not None
+                else "?",
+                "modified": datetime.fromtimestamp(
+                    _f.stat().st_mtime).strftime("%Y-%m-%d %H:%M")})
+        if _rows:
+            st.dataframe(pd.DataFrame(_rows), use_container_width=True,
+                         hide_index=True)
 
 
 # ---------------------------------------------------------------------------
@@ -419,127 +335,6 @@ with tab_vol:
         c[1].metric("VaR 95%", f"${1.645 * daily * notional:,.0f}")
         c[2].metric("VaR 99%", f"${2.326 * daily * notional:,.0f}")
         st.caption("Parametric/normal - real tails are fatter; treat as a floor.")
-
-
-# ---------------------------------------------------------------------------
-# Tab 4: Technical charts
-# ---------------------------------------------------------------------------
-with tab_tech:
-    st.caption("**What this page is:** classic trader charts computed from "
-               "the desk's own price history. Trend (SMAs), stretch "
-               "(Bollinger), momentum (RSI, MACD), realized volatility "
-               "(the raw material behind your position sizing), drawdown, "
-               "and volume. Context for reading the market - none of these "
-               "drive the desk's recommendation directly.")
-    px_full = read_csv(str(config.CACHE / f"prices_{config.TICKER}.csv"))
-    if px_full is None or len(px_full) < 260:
-        st.info("Price cache not ready - run `python main.py fetch`.")
-    else:
-        window = st.radio("Window", ["6M", "1Y", "2Y"], index=1,
-                          horizontal=True)
-        n = {"6M": 126, "1Y": 252, "2Y": 504}[window]
-        c, v = px_full["Close"], px_full["Volume"]
-
-        # --- price with SMAs and Bollinger band (full width) ---------------
-        mid, sd = c.rolling(20).mean(), c.rolling(20).std()
-        tail = c.index[-n:]
-        band = pd.DataFrame({"date": tail,
-                             "upper": (mid + 2 * sd).iloc[-n:].to_numpy(),
-                             "lower": (mid - 2 * sd).iloc[-n:].to_numpy()})
-        price_df = pd.DataFrame({"close": c.iloc[-n:],
-                                 "SMA50": c.rolling(50).mean().iloc[-n:],
-                                 "SMA200": c.rolling(200).mean().iloc[-n:]})
-        lo = float(min(band["lower"].min(), price_df.min().min()))
-        hi = float(max(band["upper"].max(), price_df.max().max()))
-        pad = (hi - lo) * 0.05
-        area = (alt.Chart(band).mark_area(opacity=0.15)
-                .encode(x=alt.X("date:T", title=None),
-                        y=alt.Y("lower:Q", title="price ($)",
-                                scale=alt.Scale(domain=[lo - pad, hi + pad])),
-                        y2="upper:Q"))
-        st.caption("Price with SMA50 / SMA200 and Bollinger band (20, 2 sd)")
-        st.altair_chart(area + fitted_lines(price_df, height=340),
-                        use_container_width=True)
-
-        col_l, col_r = st.columns(2)
-
-        with col_l:
-            # --- RSI(14) with 30/70 guides ---------------------------------
-            delta = c.diff()
-            gain = delta.clip(lower=0).rolling(14).mean()
-            loss = (-delta.clip(upper=0)).rolling(14).mean()
-            rsi = (100 - 100 / (1 + gain / loss)).iloc[-n:]
-            st.caption("RSI (14) - overbought > 70, oversold < 30")
-            rsi_data = rsi.rename_axis("date").reset_index(name="RSI")
-            rsi_line = (alt.Chart(rsi_data).mark_line()
-                        .encode(x=alt.X("date:T", title=None),
-                                y=alt.Y("RSI:Q",
-                                        scale=alt.Scale(domain=[0, 100])),
-                                tooltip=["date:T",
-                                         alt.Tooltip("RSI:Q", format=".1f")]))
-            guides = (alt.Chart(pd.DataFrame({"y": [30, 70]}))
-                      .mark_rule(strokeDash=[4, 4], opacity=0.6)
-                      .encode(y="y:Q"))
-            st.altair_chart((rsi_line + guides).properties(height=220),
-                            use_container_width=True)
-
-            # --- realized volatility ---------------------------------------
-            from features.build import garman_klass_vol
-            gk_ann = (garman_klass_vol(px_full).rolling(21).mean()
-                      * np.sqrt(252) * 100).iloc[-n:]
-            cc_ann = (c.pct_change().rolling(21).std()
-                      * np.sqrt(252) * 100).iloc[-n:]
-            st.caption("Realized volatility, 21-day, annualized (%)")
-            st.altair_chart(fitted_lines(pd.DataFrame(
-                {"Garman-Klass": gk_ann, "close-to-close": cc_ann}),
-                y_title="vol (%)", height=220, fmt=".1f"),
-                use_container_width=True)
-
-        with col_r:
-            # --- MACD (12, 26, 9) ------------------------------------------
-            ema12 = c.ewm(span=12, adjust=False).mean()
-            ema26 = c.ewm(span=26, adjust=False).mean()
-            macd = (ema12 - ema26).iloc[-n:]
-            sig = (ema12 - ema26).ewm(span=9, adjust=False).mean().iloc[-n:]
-            hist = (macd - sig)
-            st.caption("MACD (12, 26, 9)")
-            hist_data = hist.rename_axis("date").reset_index(name="hist")
-            bars = (alt.Chart(hist_data).mark_bar(opacity=0.4)
-                    .encode(x=alt.X("date:T", title=None),
-                            y=alt.Y("hist:Q", title="MACD"),
-                            color=alt.condition(alt.datum.hist > 0,
-                                                alt.value("#2a9d64"),
-                                                alt.value("#c0504d"))))
-            macd_lines = fitted_lines(pd.DataFrame(
-                {"MACD": macd, "signal": sig}), y_title="MACD", height=220)
-            st.altair_chart(bars + macd_lines, use_container_width=True)
-
-            # --- drawdown ---------------------------------------------------
-            dd = (c / c.cummax() - 1).iloc[-n:] * 100
-            st.caption("Drawdown from all-time high (%)")
-            dd_data = dd.rename_axis("date").reset_index(name="drawdown")
-            st.altair_chart(
-                (alt.Chart(dd_data).mark_area(opacity=0.5, color="#c0504d")
-                 .encode(x=alt.X("date:T", title=None),
-                         y=alt.Y("drawdown:Q", title="drawdown (%)"),
-                         tooltip=["date:T",
-                                  alt.Tooltip("drawdown:Q", format=".1f")])
-                 .properties(height=220)), use_container_width=True)
-
-        # --- volume (full width) --------------------------------------------
-        st.caption("Volume with 20-day average")
-        vol_data = (v.iloc[-n:] / 1e6).rename_axis("date").reset_index(name="volume")
-        vol_bars = (alt.Chart(vol_data).mark_bar(opacity=0.5)
-                    .encode(x=alt.X("date:T", title=None),
-                            y=alt.Y("volume:Q", title="shares (millions)"),
-                            tooltip=["date:T",
-                                     alt.Tooltip("volume:Q", format=".0f")]))
-        vol_avg = ((v.rolling(20).mean() / 1e6).iloc[-n:]
-                   .rename_axis("date").reset_index(name="avg20"))
-        avg_line = (alt.Chart(vol_avg).mark_line(color="#e8a838")
-                    .encode(x="date:T", y="avg20:Q"))
-        st.altair_chart((vol_bars + avg_line).properties(height=200),
-                        use_container_width=True)
 
 
 # ---------------------------------------------------------------------------
@@ -742,95 +537,6 @@ with tab_track:
                        "previous evening's +-1-sigma vol forecast (band). "
                        "Red dots landed outside the band - roughly a "
                        "third should, if the forecast is honest.")
-
-
-# ---------------------------------------------------------------------------
-# Tab 6: News & data
-# ---------------------------------------------------------------------------
-with tab_news:
-    st.caption("**What this page is:** what the desk reads. The news-tone "
-               "and volume series that feed the models (GDELT monitors "
-               "global online media), competitor and industry coverage, "
-               "the freshness of every data cache, and an on-demand live "
-               "headline scan. If a number on the front page ever looks "
-               "stale, this page shows you why.")
-    g = read_csv(str(config.CACHE / "gdelt_daily.csv"))
-    if g is not None:
-        st.subheader("GDELT news tone (30-day average) and article volume")
-        st.line_chart(g["tone"].rolling(30).mean())
-        st.area_chart(g["art_count"].rolling(7).mean())
-
-    st.subheader("Competitors & industry")
-    st.caption("Cross-name news series feeding the direction model's "
-               "'GBM deep + cross' candidate. Parameters live in "
-               "config.AUX_SERIES.")
-    tone_panel = {}
-    for series, spec in config.AUX_SERIES.items():
-        a = read_csv(str(config.CACHE / f"gdelt_{series}.csv"))
-        c1, c2 = st.columns([1, 3])
-        with c1:
-            st.markdown(f"**{series}**")
-            st.caption(spec["label"])
-        with c2:
-            if a is None or a.empty:
-                st.info("Series not bootstrapped yet - history download "
-                        "pending (GDELT rate limits).")
-            else:
-                m = st.columns(3)
-                m[0].metric("Last tone", f"{a['tone'].iloc[-1]:+.2f}")
-                m[1].metric("Tone 7d avg",
-                            f"{a['tone'].rolling(7).mean().iloc[-1]:+.2f}")
-                base = a["art_count"].rolling(30).mean().iloc[-1]
-                spike = (a["art_count"].iloc[-1] / base) if base else np.nan
-                m[2].metric("Volume vs 30d", f"{spike:.1f}x")
-                tone_panel[series] = a["tone"].rolling(7).mean()
-    if tone_panel:
-        nv = read_csv(str(config.CACHE / "gdelt_daily.csv"))
-        if nv is not None:
-            tone_panel["NVIDIA"] = nv["tone"].rolling(7).mean()
-        st.caption("7-day average tone: NVIDIA vs competitors vs industry")
-        st.line_chart(pd.DataFrame(tone_panel))
-
-    st.subheader("Data caches")
-    rows = []
-    for f in sorted(config.CACHE.glob("*.csv")):
-        try:
-            head = pd.read_csv(f, index_col=0, parse_dates=[0], nrows=0)
-            last = pd.read_csv(f, index_col=0, parse_dates=[0]).index.max()
-        except Exception:
-            last = None
-        rows.append({"file": f.name,
-                     "last data day": str(last.date()) if last is not None else "?",
-                     "modified": datetime.fromtimestamp(
-                         f.stat().st_mtime).strftime("%Y-%m-%d %H:%M")})
-    if rows:
-        st.dataframe(pd.DataFrame(rows), use_container_width=True,
-                     hide_index=True)
-
-    st.subheader("Live headline scan")
-    if st.button("Scrape and score headlines now"):
-        with st.spinner("Scraping Google News, Yahoo, Finviz, StockTwits..."):
-            from data.news import collect_live_headlines
-            from sentiment.analyzer import SentimentAnalyzer
-            items = collect_live_headlines()
-            scores = SentimentAnalyzer(prefer_finbert=False).score(
-                [h.get("title", "") for h in items])
-        if not items:
-            st.warning("No headlines returned - sources may be blocked "
-                       "on this network.")
-        else:
-            df = pd.DataFrame({
-                "score": scores,
-                "source": [h["source"] for h in items],
-                "vertical": [h.get("vertical", "") for h in items],
-                "headline": [h["title"] for h in items],
-                "link": [h.get("url", "") for h in items],
-            }).sort_values("score")
-            st.metric("Mean sentiment", f"{df['score'].mean():+.3f}",
-                      help=f"{len(df)} unique items")
-            st.dataframe(df, use_container_width=True, hide_index=True,
-                         column_config={
-                             "link": st.column_config.LinkColumn("link")})
 
 
 # ---------------------------------------------------------------------------
