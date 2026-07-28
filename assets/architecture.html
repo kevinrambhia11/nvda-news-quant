@@ -1,4 +1,4 @@
-<title>NVDA Quant Desk — How It Works</title>
+<title>NVDA Quant Desk — System Reference</title>
 <style>
   :root {
     --paper: #f6f4ee; --card: #fdfcf9; --ink: #212b25; --muted: #5f6d64;
@@ -35,542 +35,264 @@
     font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
     line-height: 1.6; margin: 0; padding: 2.2rem 1.2rem 3.5rem;
   }
-  .wrap { max-width: 900px; margin: 0 auto; }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  p { max-width: 70ch; }
   h1 {
     font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
-    font-size: 1.65rem; letter-spacing: -0.02em; margin: 0 0 0.4rem;
-    text-wrap: balance;
+    font-size: 1.35rem; letter-spacing: -0.01em; margin: 0 0 0.5rem;
   }
   .kicker {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.72rem;
-    letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
-    margin-bottom: 0.7rem;
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 0.6rem;
   }
-  .thesis { color: var(--muted); max-width: 64ch; margin: 0 0 1.3rem; }
-  .thesis strong { color: var(--ink); }
-  p { max-width: 68ch; }
+  .lede { color: var(--muted); max-width: 70ch; margin: 0 0 1.4rem; }
+  h2 {
+    font-family: ui-monospace, Consolas, monospace; font-size: 1rem;
+    margin: 2.4rem 0 0.5rem; letter-spacing: 0.01em; scroll-margin-top: 1rem;
+  }
+  h3 {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.85rem;
+    margin: 1.4rem 0 0.35rem;
+  }
+  .sub { color: var(--muted); font-size: 0.88rem; margin: 0 0 0.6rem; max-width: 70ch; }
 
   .nav {
-    display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 2rem;
-    padding: 0.8rem 0; border-top: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 1.8rem;
+    padding: 0.75rem 0; border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
   .nav a {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem;
-    letter-spacing: 0.04em; color: var(--muted); text-decoration: none;
-    padding: 0.24rem 0.6rem; border: 1px solid var(--line);
-    border-radius: 99px;
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.69rem;
+    color: var(--muted); text-decoration: none; padding: 0.22rem 0.58rem;
+    border: 1px solid var(--line); border-radius: 99px;
   }
   .nav a:hover, .nav a:focus { color: var(--ink); border-color: var(--muted); }
 
-  h2 {
-    font-family: ui-monospace, Consolas, monospace; font-size: 1.05rem;
-    margin: 2.8rem 0 0.3rem; letter-spacing: 0.01em; scroll-margin-top: 1rem;
-  }
-  h3 {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.88rem;
-    margin: 1.6rem 0 0.4rem; letter-spacing: 0.01em;
-  }
-  .sub { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.7rem; max-width: 68ch; }
-
-  .legend { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.6rem; }
-  .chip {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem;
-    letter-spacing: 0.05em; padding: 0.28rem 0.65rem; border-radius: 99px;
-    display: inline-flex; align-items: center; gap: 0.45rem;
-  }
-  .chip .dot { width: 8px; height: 8px; border-radius: 50%; }
-  .chip.g { background: var(--green-soft); }  .chip.g .dot { background: var(--green); }
-  .chip.s { background: var(--slate-soft); }  .chip.s .dot { background: var(--slate); }
-  .chip.a { background: var(--amber-soft); }  .chip.a .dot { background: var(--amber); }
-  .chip.r { background: var(--red-soft); }    .chip.r .dot { background: var(--red); }
-
-  .stage-head { display: flex; align-items: baseline; gap: 0.8rem; margin: 2.2rem 0 0.3rem; }
-  .stage-num {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.72rem;
-    color: var(--muted); letter-spacing: 0.1em;
-  }
-  .stage-name {
-    font-family: ui-monospace, Consolas, monospace; font-size: 1rem;
-    font-weight: 700; letter-spacing: 0.02em;
-  }
-  .stage-why { color: var(--muted); font-size: 0.9rem; max-width: 68ch; margin: 0 0 1rem; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.7rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.65rem; }
   .card {
     background: var(--card); border: 1px solid var(--line);
-    border-radius: 10px; padding: 0.8rem 0.95rem; position: relative;
+    border-radius: 10px; padding: 0.75rem 0.9rem; position: relative;
   }
   .card h4 {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.82rem;
-    margin: 0 0 0.35rem; letter-spacing: 0.02em; padding-right: 5.4rem;
-    font-weight: 700;
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.8rem;
+    margin: 0 0 0.3rem; padding-right: 5.2rem; font-weight: 700;
   }
-  .card p { margin: 0; font-size: 0.83rem; color: var(--muted); max-width: none; }
+  .card p { margin: 0; font-size: 0.82rem; color: var(--muted); max-width: none; }
   .card .num { color: var(--ink); font-variant-numeric: tabular-nums; }
   .pill {
-    position: absolute; top: 0.72rem; right: 0.75rem;
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.57rem;
-    letter-spacing: 0.09em; padding: 0.16rem 0.5rem; border-radius: 99px;
+    position: absolute; top: 0.7rem; right: 0.7rem;
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.56rem;
+    letter-spacing: 0.08em; padding: 0.15rem 0.48rem; border-radius: 99px;
     white-space: nowrap;
   }
   .pill.g { background: var(--green-soft); color: var(--green); }
   .pill.s { background: var(--slate-soft); color: var(--slate); }
   .pill.a { background: var(--amber-soft); color: var(--amber); }
-  .pill.r { background: var(--red-soft); color: var(--red); }
   .pill.n { background: var(--grey-soft); color: var(--muted); }
 
-  .flow {
-    display: flex; flex-direction: column; align-items: center;
-    padding: 0.5rem 0 0.6rem; color: var(--muted);
-  }
-  .flow .lbl {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.68rem;
-    letter-spacing: 0.04em; background: var(--grey-soft);
-    padding: 0.2rem 0.7rem; border-radius: 99px; margin: 0.22rem 0;
-  }
-  .flow .bar { width: 1px; height: 13px; background: var(--line); }
-  .flow .tip {
-    width: 0; height: 0; border-left: 5px solid transparent;
-    border-right: 5px solid transparent; border-top: 7px solid var(--line);
-  }
-
   .note {
-    border-left: 3px solid var(--amber); background: var(--amber-soft);
-    padding: 0.7rem 0.9rem; margin: 1rem 0; border-radius: 0;
-    font-size: 0.86rem;
+    border-left: 3px solid var(--line); background: var(--card);
+    padding: 0.7rem 0.9rem; margin: 0.9rem 0; font-size: 0.85rem;
   }
-  .note b { font-weight: 700; }
   .note p { margin: 0; max-width: none; }
 
-  .tl { display: grid; gap: 0; margin: 1rem 0 0; }
   .tl-row {
-    display: grid; grid-template-columns: 92px 1fr; gap: 0.9rem;
-    padding: 0.75rem 0; border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 104px 1fr; gap: 0.9rem;
+    padding: 0.6rem 0; border-top: 1px solid var(--line); font-size: 0.86rem;
   }
-  .tl-row:last-child { border-bottom: 1px solid var(--line); }
+  .tl-row:last-of-type { border-bottom: 1px solid var(--line); }
   .tl-time {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.7rem;
-    color: var(--green); letter-spacing: 0.04em; padding-top: 0.15rem;
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.68rem;
+    color: var(--muted); padding-top: 0.15rem;
   }
-  .tl-what { font-size: 0.88rem; }
-  .tl-what b { font-family: ui-monospace, Consolas, monospace; font-size: 0.82rem; }
-  .tl-what span { display: block; color: var(--muted); font-size: 0.83rem; margin-top: 0.2rem; }
 
-  .era { margin: 1.2rem 0 0.2rem; }
-  .era-bar { display: flex; border-radius: 7px; overflow: hidden; height: 30px; border: 1px solid var(--line); }
+  .era { margin: 0.9rem 0 0.2rem; }
+  .era-bar { display: flex; border-radius: 6px; overflow: hidden; height: 26px; border: 1px solid var(--line); }
   .era-seg { display: flex; align-items: center; justify-content: center; }
   .era-seg span {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.6rem;
-    letter-spacing: 0.04em; white-space: nowrap; overflow: hidden;
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.58rem;
+    white-space: nowrap; overflow: hidden;
   }
-  .era-labels { display: flex; margin-top: 0.3rem; }
+  .era-labels { display: flex; margin-top: 0.28rem; }
   .era-labels div {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.6rem;
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.58rem;
     color: var(--muted); white-space: nowrap;
-  }
-
-  .sched { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.7rem; margin-top: 0.9rem; }
-  .sched .when {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.66rem;
-    color: var(--green); letter-spacing: 0.07em; display: block; margin-bottom: 0.25rem;
   }
 
   pre.out {
     background: var(--card); border: 1px solid var(--line); border-radius: 10px;
-    padding: 0.9rem 1rem; overflow-x: auto; font-size: 0.76rem;
+    padding: 0.85rem 0.95rem; overflow-x: auto; font-size: 0.75rem;
     font-family: ui-monospace, Consolas, monospace; line-height: 1.55;
-    color: var(--ink); margin: 1rem 0;
+    margin: 0.9rem 0;
   }
-  pre.out .hi { color: var(--green); font-weight: 700; }
-  pre.out .lo { color: var(--muted); }
 
-  table { border-collapse: collapse; width: 100%; font-size: 0.84rem; margin-top: 0.9rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.83rem; margin-top: 0.8rem; }
   th {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.65rem;
-    letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted);
-    text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line);
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.63rem;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+    text-align: left; padding: 0.42rem 0.55rem; border-bottom: 1px solid var(--line);
   }
-  td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td { padding: 0.48rem 0.55rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.mono { font-family: ui-monospace, Consolas, monospace; font-size: 0.77rem; white-space: nowrap; }
   td.v { text-align: right; white-space: nowrap; }
-  td.mono, th.mono { font-family: ui-monospace, Consolas, monospace; font-size: 0.78rem; }
-  .yes, .no, .prov {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.65rem;
-    letter-spacing: 0.05em; padding: 0.16rem 0.5rem; border-radius: 99px;
+  .tag {
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.63rem;
+    padding: 0.15rem 0.45rem; border-radius: 99px;
   }
-  .yes { background: var(--green-soft); color: var(--green); }
-  .no { background: var(--red-soft); color: var(--red); }
-  .prov { background: var(--amber-soft); color: var(--amber); }
+  .tag.y { background: var(--green-soft); color: var(--green); }
+  .tag.n { background: var(--red-soft); color: var(--red); }
+  .tag.p { background: var(--amber-soft); color: var(--amber); }
   .tblwrap { overflow-x: auto; }
 
-  .gl { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.6rem; margin-top: 0.8rem; }
+  ul { max-width: 70ch; font-size: 0.88rem; padding-left: 1.15rem; }
+  li { margin: 0.35rem 0; }
+
+  .gl { display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 0.5rem; margin-top: 0.7rem; }
   .gl div {
     background: var(--card); border: 1px solid var(--line);
-    border-radius: 8px; padding: 0.6rem 0.8rem;
+    border-radius: 8px; padding: 0.55rem 0.75rem;
   }
   .gl b {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.78rem;
-    display: block; margin-bottom: 0.15rem;
+    font-family: ui-monospace, Consolas, monospace; font-size: 0.76rem;
+    display: block; margin-bottom: 0.12rem;
   }
-  .gl span { font-size: 0.82rem; color: var(--muted); }
-
-  details {
-    border: 1px solid var(--line); border-radius: 10px;
-    padding: 0.7rem 0.95rem; margin: 0.6rem 0; background: var(--card);
-  }
-  summary {
-    font-family: ui-monospace, Consolas, monospace; font-size: 0.82rem;
-    cursor: pointer; font-weight: 700;
-  }
-  details p, details ul { font-size: 0.86rem; color: var(--muted); }
-  details ul { padding-left: 1.1rem; }
-  details li { margin: 0.3rem 0; }
+  .gl span { font-size: 0.8rem; color: var(--muted); }
 
   .foot {
-    margin-top: 2.8rem; padding-top: 1rem; border-top: 1px solid var(--line);
-    color: var(--muted); font-size: 0.78rem;
+    margin-top: 2.4rem; padding-top: 0.9rem; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 0.76rem;
     font-family: ui-monospace, Consolas, monospace;
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .live-dot { animation: pulse 2.2s ease-in-out infinite; }
-    @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: 0.35 } }
   }
 </style>
 
 <div class="wrap">
-  <div class="kicker">NVDA news-quant desk &middot; complete guide &middot; updated 2026-07-28</div>
-  <h1>News goes in. A position size comes out.<br>Everything in between has to earn trust.</h1>
-  <p class="thesis">This page explains the whole system from scratch &mdash; no finance or
-  machine-learning background assumed. The desk reads the world's news about NVIDIA every
-  day and turns it into <strong>one number you can act on</strong>: how much NVDA to hold
-  so your risk stays constant. Its central finding, tested nine different ways:
-  <strong>news tells you how BIG tomorrow's move will be &mdash; not which direction.</strong></p>
+  <div class="kicker">NVDA news-quant desk &middot; system reference &middot; 2026-07-28</div>
+  <h1>System reference</h1>
+  <p class="lede">A daily pipeline that reads news and price data for NVDA and outputs a
+  position size with risk limits. It runs unattended on one machine, produces
+  recommendations only, and never places trades. Three models are trained and reported
+  separately, and they are relied on to different degrees.</p>
 
   <nav class="nav">
-    <a href="#start">Start here</a>
-    <a href="#day">A day in the life</a>
-    <a href="#pipeline">The five stages</a>
-    <a href="#brain">Inside the brain</a>
-    <a href="#honesty">Keeping it honest</a>
-    <a href="#output">Reading the output</a>
-    <a href="#clock">The clock</a>
-    <a href="#ledger">Verdict ledger</a>
-    <a href="#limits">What's wrong with it</a>
+    <a href="#outputs">Outputs</a>
+    <a href="#data">Data</a>
+    <a href="#features">Features</a>
+    <a href="#news">News representation</a>
+    <a href="#models">Models</a>
+    <a href="#validation">Validation</a>
+    <a href="#ops">Operation</a>
+    <a href="#example">Daily output</a>
+    <a href="#results">Results</a>
+    <a href="#limits">Limitations</a>
     <a href="#glossary">Glossary</a>
   </nav>
 
-  <div class="legend">
-    <span class="chip g"><span class="dot"></span>trusted &mdash; sizes real risk</span>
-    <span class="chip a"><span class="dot"></span>on trial &mdash; graded live before anyone leans on it</span>
-    <span class="chip s"><span class="dot"></span>advisory &mdash; shown, never trusted</span>
-  </div>
-  <p class="sub" style="margin-top:-1rem">Those three colours appear on every card below.
-  They are the single most important thing on this page: the desk is explicit about which
-  of its own outputs have earned trust and which have not.</p>
-
-  <h2 id="start">Start here &mdash; the system in 60 seconds</h2>
-  <p class="sub">If you read only one section, read this one.</p>
-
-  <p>Every weekday evening, a program on one laptop wakes up, downloads the day's news
-  and prices, and answers three questions. It has been graded on years of history for
-  each one, and it is trusted very differently on each.</p>
-
+  <h2 id="outputs">Outputs</h2>
+  <p class="sub">The pipeline answers three questions each evening. Status labels below are
+  used consistently throughout this page.</p>
   <div class="cards">
-    <div class="card"><h4>How wild will tomorrow be?</h4><span class="pill g">TRUSTED</span>
-      <p>The one question it answers well. Volatility is predictable because calm days
-      cluster with calm days and wild days with wild days. This answer sets your position
-      size: <span class="num">wilder forecast &rarr; smaller position</span>, so your risk
-      stays roughly constant instead of swinging with the market.</p></div>
-    <div class="card"><h4>Will the move be unusually big?</h4><span class="pill a">ON TRIAL</span>
-      <p>A yes/no probability, and the one place news genuinely helps. Reading the actual
-      news beats using price data alone by a small but repeated margin. Published daily and
-      graded live before anyone relies on it.</p></div>
-    <div class="card"><h4>Will the stock go up or down?</h4><span class="pill s">NOT TRUSTED</span>
-      <p>Nine different model designs all failed to beat simply holding the stock.
-      This is what an efficient market looks like: by the time you read the news,
-      the price already reflects it. Printed as context only.</p></div>
+    <div class="card"><h4>Expected volatility</h4><span class="pill g">SIZES POSITION</span>
+      <p>Forecast size of tomorrow's move, either direction. Converted into a position
+      weight and one-day loss limits. The only output used to size risk.</p></div>
+    <div class="card"><h4>Probability of a large move</h4><span class="pill a">UNDER EVALUATION</span>
+      <p>Calibrated probability that the next move exceeds its own recent median. The one
+      place news measurably contributes. Published daily and graded after the fact.</p></div>
+    <div class="card"><h4>Direction</h4><span class="pill s">ADVISORY</span>
+      <p>Probability of an up move. Nine model designs failed to beat holding the stock,
+      so this is printed as context and not used for sizing.</p></div>
   </div>
 
-  <div class="note"><p><b>What the desk will never do:</b> place a trade, touch a broker,
-  or move money. It produces a recommendation on a screen; a human decides everything.
-  It is also a single-stock research instrument, not proven investment advice &mdash;
-  see <a href="#limits">what's wrong with it</a> before acting on anything here.</p></div>
-
-  <h3>Why volatility instead of direction?</h3>
-  <p>This surprises people, so it is worth stating plainly. If a model could reliably
-  predict direction, that model would print money, and enough professionals hunt for it
-  that any easy version is already gone &mdash; the price moves the instant news lands,
-  long before a laptop in Mumbai reads it. Volatility is different: nobody gets rich
-  knowing a stock will move 3% without knowing which way, so the pattern survives. That
-  is why the desk's trusted product is a <em>risk</em> forecast, not a price forecast.</p>
-
-  <h2 id="day">A day in the life &mdash; what actually happens, and when</h2>
-  <p class="sub">All times India Standard Time. The US market opens at 19:00 IST during
-  daylight-saving months, so everything below finishes before the bell.</p>
-
-  <div class="tl">
-    <div class="tl-row"><div class="tl-time">EVERY 30 MIN</div><div class="tl-what">
-      <b>headline logger</b>
-      <span>Saves a timestamped copy of headlines from Reuters, Bloomberg, BBC, FT, CNBC
-      and others. This builds the desk's own news history for future research; it does
-      not feed today's models.</span></div></div>
-    <div class="tl-row"><div class="tl-time">17:00</div><div class="tl-what">
-      <b>step 1 &middot; news top-up</b>
-      <span>Downloads the article days missing from the archive (usually one day, a few
-      hundred megabytes of database quota), removes duplicates, and converts the new
-      headlines into numbers. If the download fails, the system continues on yesterday's
-      news and says so &mdash; it never skips a day silently.</span></div></div>
-    <div class="tl-row"><div class="tl-time">17:01</div><div class="tl-what">
-      <b>step 2 &middot; grade yesterday</b>
-      <span>Before predicting anything new, it looks up what the stock actually did and
-      scores its own previous forecast: was the direction right, was the big-move call
-      right, how did the realized move compare to the forecast volatility? Appended
-      permanently to a learning log.</span></div></div>
-    <div class="tl-row"><div class="tl-time">17:02</div><div class="tl-what">
-      <b>step 3 &middot; apply the brain</b>
-      <span>The trained neural network reads every article attached to the upcoming
-      session and assigns each one a significance weight. No learning happens here &mdash;
-      it is applying judgment it already has, the way a trained radiologist reads a new
-      scan without re-attending medical school.</span></div></div>
-    <div class="tl-row"><div class="tl-time">17:03</div><div class="tl-what">
-      <b>step 4 &middot; predict</b>
-      <span>Builds one row of about 53 numbers describing the world as of this moment,
-      runs it through the three trained models, and writes the desk output: position
-      size, loss limits, probability of a big move, advisory direction.</span></div></div>
-    <div class="tl-row"><div class="tl-time">17:04</div><div class="tl-what">
-      <b>step 5 &middot; publish</b>
-      <span>Saves the forecast to a permanent archive and pushes it online, which updates
-      the hosted dashboard. The archive is what the track record later grades &mdash;
-      forecasts are timestamped before the market opens, so they cannot be quietly
-      revised afterwards.</span></div></div>
-    <div class="tl-row"><div class="tl-time">FRI 15:00</div><div class="tl-what">
-      <b>weekly re-education</b>
-      <span>The only time anything learns. The brain retrains on all history, every model
-      re-competes for its job in a tournament, and reports regenerate. Finishes about an
-      hour before Friday's own signal, which therefore runs on fresh models.</span></div></div>
+  <h2 id="data">Data</h2>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th>Source</th><th>Coverage</th><th>Use</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">Article archive</td><td>710,188 headlines, 6 categories, 2018 to 2026-07-27</td><td>Article-level news features</td></tr>
+      <tr><td class="mono">GDELT daily series</td><td>Tone and article volume, 2017 to present</td><td>Aggregate news tone and volume features</td></tr>
+      <tr><td class="mono">Prices</td><td>2,403 daily bars, NVDA and QQQ benchmark</td><td>Targets, technical and volatility features</td></tr>
+      <tr><td class="mono">Earnings calendar</td><td>39 verified dates, 2017 to 2026-08</td><td>Event features, print-night de-risking</td></tr>
+      <tr><td class="mono">Live headlines</td><td>Scraped at signal time, logged every 30 min</td><td>Human context only; excluded from models</td></tr>
+    </tbody>
+  </table>
   </div>
+  <p class="sub" style="margin-top:0.7rem">The six article categories are NVIDIA,
+  competitors, hyperscalers, AI companies, macro (tariffs, sanctions, central banks) and
+  brokers. All sources are free. Loaders are cache-first and fall back to labeled stale
+  data rather than failing.</p>
 
-  <h2 id="pipeline">The five stages &mdash; how data becomes a decision</h2>
-  <p class="sub">Read top to bottom; this is the order the data actually travels.</p>
+  <h2 id="features">Feature construction</h2>
+  <p>Each row represents one trading day <em>d</em>. Features may use news published
+  through calendar day <em>d&minus;1</em> and prices through the previous close. The
+  prediction target is the open(<em>d</em>) to open(<em>d+1</em>) return. Roughly 53
+  features per row: price and technical, realized volatility, earnings events, market
+  regime, cross-name news, and news-derived features.</p>
+  <div class="note"><p>The same code builds historical training rows and the live row, so
+  a feature that could see the future in testing would have to see the future in
+  production, which is not possible. This makes lookahead structurally excluded rather
+  than a matter of discipline.</p></div>
 
-  <div class="stage-head"><span class="stage-num">STAGE 1</span><span class="stage-name">SOURCES &mdash; what the desk reads</span></div>
-  <p class="stage-why">Five independent, entirely free feeds. Independence is deliberate:
-  when one source throttles or breaks, the others still carry the day.</p>
+  <h2 id="news">News representation</h2>
+  <p>Headlines are encoded by MiniLM, a frozen pre-trained sentence encoder, into
+  384-dimensional vectors. Similar meanings map to nearby vectors, which allows headlines
+  to be compared numerically. Two layers read those vectors.</p>
   <div class="cards">
-    <div class="card"><h4>Global news firehose</h4><p>GDELT, a public project that monitors
-    news worldwide, provides a daily summary of NVIDIA's coverage: how much was written and
-    how positive or negative the language was, <span class="num">every day since 2017</span>.</p></div>
-    <div class="card"><h4>Article archive</h4><p><span class="num">710,188 headlines</span>
-    through 2026-07-27 across six verticals &mdash; NVIDIA itself, competitors,
-    hyperscalers, AI companies, macro (tariffs, sanctions, central banks) and brokers.
-    Topped up daily.</p></div>
-    <div class="card"><h4>Prices</h4><p><span class="num">2,403 daily bars</span> for NVDA
-    plus the Nasdaq-100 ETF as a market benchmark, fetched through a three-source fallback
-    chain so one provider's outage cannot stop the desk.</p></div>
-    <div class="card"><h4>Earnings calendar</h4><p><span class="num">39 verified</span>
-    past and upcoming report dates. Earnings nights are the single most dangerous session
-    for a stock like this, and the desk automatically shrinks the position for them.</p></div>
-    <div class="card"><h4>Live headlines</h4><p>Scraped at signal time for human context
-    and a rough mood score. Deliberately kept out of the models &mdash; it is the one
-    input that could not be tested honestly on history.</p></div>
+    <div class="card"><h4>Ridge impact scorers</h4><span class="pill n">TRAINED LOCALLY</span>
+      <p>Map each article's vector to expected next-day signed and absolute return.
+      Aggregated per day into <span class="num">11</span> features: impact-weighted tone,
+      disagreement between same-day articles, novelty against the trailing month, and
+      per-category volume anomalies.</p></div>
+    <div class="card"><h4>NewsNet</h4><span class="pill n">TRAINED LOCALLY</span>
+      <p>An attention network. For each article it computes an importance score, then
+      normalizes all scores to sum to 1 across the day, and blends the articles into one
+      day-level vector. Yields <span class="num">5</span> features plus per-source impact
+      estimates. Trained on 1,923 labeled days; stopped at epoch 9 by early stopping.</p></div>
+    <div class="card"><h4>Decay layer</h4><span class="pill n">TRAINED LOCALLY</span>
+      <p>Carries the above forward as exponentially-weighted averages at
+      <span class="num">3</span> and <span class="num">10</span> day half-lives, so news
+      influence fades instead of expiring after one day. Adds
+      <span class="num">10</span> features.</p></div>
   </div>
+  <p class="sub" style="margin-top:0.7rem">Attention determines how conflicting same-day
+  articles are handled: rather than averaging them, the network allocates a fixed weight
+  budget across them, and the residual disagreement is recorded as its own feature. Note
+  that the models read URL slugs, not full article text.</p>
 
-  <div class="flow"><div class="bar"></div><span class="lbl">raw headlines, prices, dates</span><div class="bar"></div><div class="tip"></div></div>
-
-  <div class="stage-head"><span class="stage-num">STAGE 2</span><span class="stage-name">MEMORY &mdash; cache first, degrade, never die</span></div>
-  <p class="stage-why">Everything downloaded is stored locally first. When a source fails,
-  the desk serves slightly stale data with a warning rather than producing nothing &mdash;
-  a labelled imperfect answer beats a missing one. A signal has been produced on every
-  scheduled day since automation began.</p>
-  <div class="cards">
-    <div class="card"><h4>Price and tone caches</h4><p>Plain spreadsheet files. Only
-    <em>complete</em> days are ever admitted, so a half-finished trading day can never
-    contaminate a forecast.</p></div>
-    <div class="card"><h4>Article archive</h4><p>The 710k-headline store, backed up
-    online weekly. Rebuilding it from scratch would cost hundreds of gigabytes of database
-    quota, so it is treated as precious.</p></div>
-    <div class="card"><h4>Meaning vectors</h4><p>Every headline stored as
-    <span class="num">384 numbers</span> &mdash; its position on a map of meaning. This is
-    the "vector database", explained in <a href="#brain">inside the brain</a>.</p></div>
-    <div class="card"><h4>Learning log</h4><p>Every graded forecast, permanently. This is
-    the file that answers "is this thing actually working?" without any possibility of
-    hindsight editing.</p></div>
+  <h2 id="models">Models</h2>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th>Head</th><th>Method</th><th>Holdout result</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">Volatility</td>
+          <td>HAR: linear regression on 1, 5 and 22-day realized volatility plus earnings flags</td>
+          <td>R&sup2; 0.30 (1-day), 0.42 (5-day)</td>
+          <td class="v"><span class="tag y">sizes position</span></td></tr>
+      <tr><td class="mono">Magnitude</td>
+          <td>Gradient-boosted trees; probability that |move| exceeds its trailing 63-day median; isotonic-calibrated</td>
+          <td>AUC 0.533 price-only, 0.558 with news, 0.568 with decayed news</td>
+          <td class="v"><span class="tag p">under evaluation</span></td></tr>
+      <tr><td class="mono">Direction</td>
+          <td>Gradient-boosted trees, 9 architectures across 4 toolchains</td>
+          <td>Sharpe 0.92 vs 1.27 buy-and-hold; AUC 0.491</td>
+          <td class="v"><span class="tag n">advisory</span></td></tr>
+    </tbody>
+  </table>
   </div>
+  <p class="sub" style="margin-top:0.7rem">Position weight = min(1, 0.30 / forecast
+  annualized volatility). Value at risk uses a normal approximation on total volatility
+  including the overnight gap, and is therefore a floor rather than a worst case.
+  Earnings nights receive an additional gap-variance adjustment.</p>
 
-  <div class="flow"><div class="bar"></div><span class="lbl">clean, complete history</span><div class="bar"></div><div class="tip"></div></div>
-
-  <div class="stage-head"><span class="stage-num">STAGE 3</span><span class="stage-name">FEATURES &mdash; the numbers a model may look at</span></div>
-  <p class="stage-why">A model cannot read a newspaper; it reads a row of numbers. Each
-  row describes one trading day. There is exactly one rule governing what may go in it,
-  and everything else in the system depends on it holding.</p>
-
-  <div class="note"><p><b>The iron rule.</b> The row for trading day D may only contain
-  news published through the end of day D&minus;1 and prices through the previous close.
-  The thing being predicted is the move from D's opening price to the next day's opening
-  price. In other words: every number in the row is something you genuinely could have
-  known before the opening bell. This makes cheating structurally impossible rather than
-  merely forbidden &mdash; the same code builds the historical training rows and today's
-  live row, so if it could see the future in testing, it would have to see the future
-  live too, which is impossible.</p></div>
-
-  <div class="cards">
-    <div class="card"><h4>Market features</h4><p>Recent returns, trend distance from moving
-    averages, a momentum gauge, realized volatility over several windows, drawdown depth,
-    plus how the wider Nasdaq behaved. About 20 numbers.</p></div>
-    <div class="card"><h4>Event features</h4><p>Days until and since earnings, whether an
-    earnings report lands inside tonight's holding window, and whether today is the
-    morning after one.</p></div>
-    <div class="card"><h4>News tone features</h4><p>How positive coverage was, how unusual
-    that is versus the last 60 days, and how much was written versus normal &mdash; the
-    "loudness" signal.</p></div>
-    <div class="card"><h4>Article-level features</h4><span class="pill a">THE NEWS EDGE</span>
-      <p>Eleven numbers distilled from the individual headlines: impact-weighted tone,
-      disagreement between same-day articles, novelty versus the trailing month, and
-      volume anomalies per category.</p></div>
-    <div class="card"><h4>News memory (decay)</h4><span class="pill n">NEW</span>
-      <p>Ten more numbers: the same article signals carried forward with a fading
-      half-life of <span class="num">3 and 10 days</span>, so a big story keeps
-      influencing the desk for a week or more instead of vanishing overnight. Explained
-      below.</p></div>
-    <div class="card"><h4>Brain features</h4><p>Five numbers out of the neural network:
-    its direction and size readings for the day, how much the articles disagreed, and
-    whether attention concentrated on one story or spread thin.</p></div>
-  </div>
-
-  <h3>Why "news memory" was added</h3>
-  <p>Until recently each article influenced exactly one trading day and then disappeared
-  completely &mdash; a pulse. That is clearly wrong about how markets digest news: a major
-  export-control announcement matters for days, and earnings drift on for a week or more.
-  The decay layer fixes it by accumulating news with a half-life, so yesterday's story
-  still counts at half weight, the day before at a quarter, and so on. It was added as a
-  head-to-head competitor against the old pulse version, and it won in all three
-  tournaments &mdash; the strongest single vote for the idea being right.</p>
-
-  <div class="flow"><div class="bar"></div><span class="lbl">one leak-free row per trading day</span><div class="bar"></div><div class="tip"></div></div>
-
-  <div class="stage-head"><span class="stage-num">STAGE 4</span><span class="stage-name">THE TOURNAMENT &mdash; where trust is earned</span></div>
-  <p class="stage-why">Nothing here gets promoted by argument or intuition. Rival model
-  designs compete on data their feature-builders never saw, and the winner's real grade
-  comes from a stretch of history nothing was ever tuned against. Every Friday, every
-  seat is re-contested from scratch &mdash; a model cannot keep its job by seniority.</p>
-
-  <div class="cards">
-    <div class="card"><h4>Volatility &mdash; how big is tomorrow?</h4><span class="pill g">PRODUCT</span>
-      <p>A deliberately simple linear formula blending yesterday's, last week's and last
-      month's realized movement, plus earnings flags. Explains
-      <span class="num">30%</span> of next-day and <span class="num">42%</span> of
-      next-week variation on untouched data. Fancier machine learning and news features
-      both challenged it and lost.</p></div>
-    <div class="card"><h4>Magnitude &mdash; bigger than normal?</h4><span class="pill a">ON TRIAL</span>
-      <p>Decision trees estimating the chance tomorrow's move exceeds its own recent
-      typical size. Reading the news lifts accuracy from
-      <span class="num">0.533 to 0.568</span> (see the glossary for what those mean), and
-      the probabilities are calibrated so a stated 60% really means 60%.</p></div>
-    <div class="card"><h4>Direction &mdash; up or down?</h4><span class="pill s">ADVISORY</span>
-      <p><span class="num">Nine designs</span>, four different toolchains, including the
-      neural network and the news memory. Best honest result:
-      <span class="num">Sharpe 0.92 against 1.27</span> for simply holding the stock.
-      Shown for context, never trusted with sizing.</p></div>
-  </div>
-
-  <h3>How a walk-forward test works</h3>
-  <p>A naive backtest trains on all history then tests on the same history, which is like
-  marking your own exam with the answer sheet open. Instead, this desk marches through
-  time: train on everything up to a date, predict the next month blindly, step forward,
-  retrain, repeat. Every prediction ever scored was made by a model that had not yet seen
-  the answer. The extra safeguard is a one-day gap at each retraining point, because the
-  most recent day's outcome is not actually known at the moment a real signal would be
-  generated.</p>
-
-  <div class="flow"><div class="bar"></div><span class="lbl">only the trusted model sizes risk</span><div class="bar"></div><div class="tip"></div></div>
-
-  <div class="stage-head"><span class="stage-num">STAGE 5</span><span class="stage-name">DESK OUTPUT &mdash; before every US open</span></div>
-  <p class="stage-why">Published two hours before the bell. The desk recommends; a human
-  decides and executes. Nothing here reaches a broker.</p>
-  <div class="cards">
-    <div class="card"><h4>Position size and loss limits</h4><span class="pill g">PRODUCT</span>
-      <p>What fraction of a full position to hold so annualized risk stays near the
-      <span class="num">30%</span> target, plus the worst plausible one-day loss at 95%
-      and 99% confidence, and automatic de-risking on earnings nights.</p></div>
-    <div class="card"><h4>Probability of a big move</h4><span class="pill a">ON TRIAL</span>
-      <p>The calibrated news-magnitude reading &mdash; "how loud will tomorrow be?" Useful
-      for deciding whether to be present at the screen.</p></div>
-    <div class="card"><h4>Direction and mood</h4><span class="pill s">ADVISORY</span>
-      <p>Model odds of an up move, scraped-headline sentiment, retail crowd positioning.
-      Context for a human, with a printed reminder that it has no proven edge.</p></div>
-    <div class="card"><h4>Brain's weighted headlines</h4><p>The five stories the neural
-    network judged most significant for this session, with their weights &mdash; so you
-    can see what the machine is reacting to, not just its conclusion.</p></div>
-  </div>
-
-  <h2 id="brain">Inside the brain &mdash; the neural network, plainly</h2>
-  <p class="sub">The part most people find mysterious. It is simpler than it sounds.</p>
-
-  <p>A neural network is a machine with a few hundred thousand adjustable dials. Numbers
-  go in, numbers come out, and the dials decide how. Training means showing it an example,
-  measuring how wrong the output was, then nudging every dial a fraction in the direction
-  that would have been less wrong &mdash; repeated hundreds of thousands of times until
-  the dials settle into a configuration that captures real patterns. There is no
-  understanding involved, just a very flexible function shaped by experience.</p>
-
-  <p>This desk uses two, doing completely different jobs.</p>
-
-  <div class="cards">
-    <div class="card"><h4>MiniLM &mdash; the reader</h4><span class="pill n">BORROWED, FROZEN</span>
-      <p>Trained by others on billions of sentences; we never change it. Its only job is
-      translation: hand it a headline, it returns 384 numbers &mdash; coordinates on a map
-      of meaning where similar meanings land close together. "Nvidia beats earnings" and
-      "NVDA tops estimates" share almost no words but end up nearly on top of each other.
-      <em>This is what makes the vector database a map rather than a keyword index.</em></p></div>
-    <div class="card"><h4>NewsNet &mdash; the judge</h4><span class="pill n">TRAINED BY US</span>
-      <p>Never sees text, only MiniLM's coordinates plus which outlet published it and
-      which category it belongs to. Its job is the one you actually care about: given
-      roughly 180 articles today, which ones matter, and what do they imply?</p></div>
-  </div>
-
-  <h3>Attention &mdash; the idea worth understanding</h3>
-  <p>This answers the hardest question anyone asks of a news model: <em>what happens when
-  three or four articles on the same day contradict each other?</em></p>
-  <p>The naive answer is to average them. Attention does something better. For every
-  article the network computes an importance score, then squashes all the scores so they
-  sum to exactly 1. It is allocating a fixed budget of attention across the day's news
-  &mdash; if one story deserves 31%, everything else must share the remaining 69%. Then it
-  blends all the articles using those weights into a single summary of the day.</p>
-  <p>So conflict is handled twice over. The brain may simply not listen equally &mdash; one
-  Reuters export-control story can outweigh a hundred syndicated reposts. And the
-  disagreement itself becomes a measurement the downstream models can use: one number
-  records how far apart the articles' implications were, another whether attention
-  concentrated on a single story or smeared across many. A day with one loud story and a
-  day with a hundred quiet ones look completely different to the desk.</p>
-
-  <h3>How it was taught, and when it stops</h3>
-  <p>It saw <span class="num">1,923 trading days</span>. For each: guess, compare against
-  what the stock actually did next session, nudge the dials. One pass over all days is
-  called an epoch. After every epoch it is tested on 213 recent days it never trained on,
-  and the moment those scores stop improving, training halts &mdash; that is the signal it
-  has begun memorizing quirks instead of learning patterns. In the latest run it stopped
-  at <span class="num">epoch 9</span>, which is early, and honestly tells you the genuine
-  signal in headline text is thin.</p>
-
-  <div class="note"><p><b>The honest scorecard on the brain.</b> It does exactly what it
-  was designed to do and it makes the system's reasoning visible &mdash; you can read
-  which stories it weighted and which outlets it learned to respect. But on measured
-  accuracy it does <em>not</em> beat plain old ridge regression on the same inputs, and
-  an earlier apparent edge turned out to be a data-alignment bug that has since been
-  fixed. Its current value is transparency more than predictive power. The tournament
-  keeps testing it every Friday; if the live record ever shows the attention weights
-  adding real value, it gets promoted on evidence.</p></div>
-
-  <h2 id="honesty">Keeping it honest &mdash; the machinery that stops self-deception</h2>
-  <p class="sub">The hardest problem in this field is not building a model. It is
-  knowing whether the model is real.</p>
-
+  <h2 id="validation">Validation</h2>
+  <p class="sub">Walk-forward with monthly refits and a one-row embargo: every scored
+  prediction was produced by a model fitted only on earlier data.</p>
   <div class="era">
     <div class="era-bar">
       <div class="era-seg" style="width:24%; background:var(--grey-soft)"><span>warm-up</span></div>
       <div class="era-seg" style="width:27%; background:var(--slate-soft)"><span>scorer training</span></div>
       <div class="era-seg" style="width:18%; background:var(--amber-soft)"><span>clean judging</span></div>
-      <div class="era-seg" style="width:26%; background:var(--green-soft)"><span>untouched holdout</span></div>
-      <div class="era-seg" style="width:5%; background:var(--green)"><span class="live-dot" style="color:#fff">live</span></div>
+      <div class="era-seg" style="width:26%; background:var(--green-soft)"><span>holdout</span></div>
+      <div class="era-seg" style="width:5%; background:var(--green)"><span style="color:#fff">live</span></div>
     </div>
     <div class="era-labels">
       <div style="width:24%">2017-01</div>
@@ -580,364 +302,194 @@
       <div style="width:5%">now</div>
     </div>
   </div>
+  <ul style="margin-top:0.9rem">
+    <li>News scorers train on the scorer-training era only. Candidates are compared on the
+    clean judging window (2021-12 to 2023-08), which those scorers never saw, so a model
+    that memorized its own training era cannot win on that basis.</li>
+    <li>The crowned model is then reported on the holdout (2023-09 onward), which is not
+    used for selection. All boundaries are fixed calendar dates, so weekly retraining
+    cannot shift them.</li>
+    <li>Reports print Sharpe standard errors. Over the judging window that error is
+    approximately &plusmn;0.77, which is larger than most differences between candidates.</li>
+    <li>Archived daily forecasts are graded after the fact. Because they are timestamped
+    before the market opens and cannot be revised, this is the only evaluation unaffected
+    by repeated reading of the holdout.</li>
+  </ul>
 
-  <p style="margin-top:0.9rem">Models may only ever learn from history to their left.
-  The news scorers train on the <b>scorer training</b> years. Every candidate is then
-  compared on the <b>clean judging</b> window, which those scorers never saw &mdash;
-  without this, a model that had memorized its own training era would post
-  spectacular-looking numbers and win on a mirage. The crowned winner's real grade comes
-  from the <b>untouched holdout</b>. All these boundaries are fixed calendar dates, so
-  weekly retraining cannot quietly nibble the holdout away.</p>
+  <h2 id="ops">Operation</h2>
+  <div class="tl-row"><div class="tl-time">every 30 min</div><div>Headline logger archives
+  timestamped headlines from all verticals. Builds a news history for later research; does
+  not feed current models.</div></div>
+  <div class="tl-row"><div class="tl-time">weekdays 17:00</div><div>Article top-up, then
+  prior forecasts are graded against realized outcomes, then the trained models are applied
+  to current news, then the output is written and published. No training occurs.</div></div>
+  <div class="tl-row"><div class="tl-time">Fridays 15:00</div><div>News layers retrained on
+  all labeled history and both tournaments re-run; deployed models refitted. Finishes
+  roughly an hour before that evening's signal. Any stage failing aborts publication.</div></div>
+  <div class="tl-row"><div class="tl-time">2026-08-01</div><div>One-shot database backfill
+  to migrate the industry news series off a rate-limited source, retried weekly until it
+  completes.</div></div>
+  <p class="sub" style="margin-top:0.8rem">All times India Standard Time; the US market
+  opens at 19:00 IST during daylight-saving months. Model files are written
+  atomically, so an overrunning retrain cannot leave a partially written model for the
+  evening signal to load.</p>
 
-  <p>Four more safeguards worth knowing about:</p>
-  <details>
-    <summary>Standard errors are printed next to every score</summary>
-    <p>A Sharpe ratio measured over 430 days carries roughly &plusmn;0.77 of uncertainty.
-    That means a candidate scoring 1.6 versus another at 1.3 is not meaningfully better
-    &mdash; the gap is smaller than the measurement error. Printing the error bar next to
-    every number makes false victories obvious instead of exciting.</p>
-  </details>
-  <details>
-    <summary>The winner's curse, and why the tournament is suspicious of its own winner</summary>
-    <p>Run nine coin-flipping models and the luckiest will look skilled. With nine
-    candidates and that much noise, the expected best score under pure chance is around
-    1.1 &mdash; so a winner scoring 1.6 is barely outside what luck alone produces.
-    This is exactly why no candidate is trusted on its selection score, only on the
-    untouched holdout, and why the direction model remains advisory despite "winning".</p>
-  </details>
-  <details>
-    <summary>Calibration &mdash; making probabilities mean what they say</summary>
-    <p>A model can rank days correctly while being systematically overconfident, saying
-    "80%" when it means 60%. Because a position size derived from a probability needs the
-    number to be literally true, the magnitude head's output passes through a correction
-    fitted on honest out-of-sample predictions. Raw score 0.276 improves to 0.251 after
-    correction (lower is better).</p>
-  </details>
-  <details>
-    <summary>The one test that cannot be gamed</summary>
-    <p>Every historical safeguard above has a limit: the holdout has now been read around
-    forty times across this project's experiments, which slowly turns it into a second
-    selection window. The remedy is the live paper trail &mdash; forecasts timestamped and
-    published before the market opens, graded afterwards, with no possibility of revision.
-    The dashboard's Track Record tab is that scoreboard, and it is the only evidence
-    immune to hindsight.</p>
-  </details>
-
-  <h2 id="output">Reading the daily output &mdash; a real example</h2>
-  <p class="sub">This is the actual desk output for entry day 2026-07-28, annotated.</p>
-
-  <pre class="out">  <span class="hi">DESK POSITION (primary): hold NVDA at 65% of full size</span>
+  <h2 id="example">Daily output</h2>
+  <p class="sub">Actual output for entry day 2026-07-28.</p>
+  <pre class="out">  DESK POSITION (primary): hold NVDA at 65% of full size
   1-day intraday vol: 2.253%/day  (35.8% annualized)  [HAR +events]
   1-day TOTAL vol (incl. overnight gap): 2.907%/day (46.2% ann)
-  Target-vol sizing (30% ann target): <span class="hi">65.0% of full position</span>
+  Target-vol sizing (30% ann target): 65.0% of full position
   1-day VaR on $1,000,000: 95% $47,820 | 99% $67,617
-  <span class="lo">(parametric/normal - real tails are fatter; treat as a floor)</span>
-  --------------------------------------------------------------
-  Model P(up)          : 91.5%   <span class="lo">(advisory only)</span>
-  P(move &gt; 1.35%)      : 52.9% calibrated - the news-magnitude edge
-  Headline sentiment   : +0.09 (189 items)
-  <span class="lo">ADVISORY direction (no demonstrated holdout edge): BUY / HOLD LONG</span>
-  --------------------------------------------------------------
-  What the brain weighted for this session:
-    w=0.007 [competitors/forbes.com] stock market rotation is driving...</pre>
-
+  Model P(up)          : 91.5%   (advisory only)
+  P(move &gt; 1.35%)      : 52.9% calibrated
+  ADVISORY direction (no demonstrated holdout edge): BUY / HOLD LONG</pre>
   <div class="tblwrap">
   <table>
-    <thead><tr><th class="mono">Line</th><th>What it means</th><th>How to use it</th></tr></thead>
+    <thead><tr><th>Line</th><th>Interpretation</th></tr></thead>
     <tbody>
-      <tr><td class="mono">65% of full size</td>
-          <td>The desk's actual recommendation. Forecast risk is high (46% annualized
-          against a 30% target), so it advises holding roughly two-thirds of a full
-          position.</td>
-          <td class="v">The number to act on</td></tr>
-      <tr><td class="mono">intraday vs TOTAL vol</td>
-          <td>Intraday measures movement during the session; total adds the overnight gap,
-          where news actually lands for a stock like this. Sizing and loss limits use the
-          total.</td>
-          <td class="v">Context</td></tr>
-      <tr><td class="mono">VaR 95% / 99%</td>
-          <td>On a million dollars held, a bad day (worst 1 in 20) loses about $47,820;
-          a very bad day (worst 1 in 100) about $67,617. Scale to your own capital.</td>
-          <td class="v">Sanity check on size</td></tr>
-      <tr><td class="mono">P(move &gt; 1.35%)</td>
-          <td>A 52.9% chance tomorrow's move exceeds its own recent typical size. The bar
-          adjusts itself as markets get calmer or wilder.</td>
-          <td class="v">Expect noise, not direction</td></tr>
-      <tr><td class="mono">Model P(up) 91.5%</td>
-          <td>Looks dramatic and should be discounted heavily. Nine model generations
-          failed to beat buy-and-hold on this axis; a confident-looking number does not
-          change that record.</td>
-          <td class="v">Ignore for sizing</td></tr>
-      <tr><td class="mono">brain weights</td>
-          <td>Near-uniform weights (0.007 across ~180 articles) mean no single story
-          dominated &mdash; a diffuse news day. A concentrated weight would flag one story
-          driving the session.</td>
-          <td class="v">Interpretability</td></tr>
+      <tr><td class="mono">65% of full size</td><td>The operative recommendation. Forecast
+      risk (46% annualized) exceeds the 30% target, so the position is reduced
+      proportionally.</td></tr>
+      <tr><td class="mono">intraday vs total vol</td><td>Intraday covers the session only;
+      total adds the overnight gap, where news for this stock typically arrives. Sizing and
+      VaR use the total.</td></tr>
+      <tr><td class="mono">VaR 95% / 99%</td><td>Quoted per $1,000,000 of position because
+      no account size is configured. Scale to actual capital.</td></tr>
+      <tr><td class="mono">P(move &gt; 1.35%)</td><td>Probability the next move exceeds its
+      recent median. The threshold adjusts as volatility regimes change.</td></tr>
+      <tr><td class="mono">P(up) 91.5%</td><td>Should be discounted: the direction model has
+      no demonstrated holdout edge regardless of how confident a given reading appears.</td></tr>
     </tbody>
   </table>
   </div>
 
-  <h2 id="clock">The clock &mdash; runs without anyone</h2>
-  <p class="sub">Windows Task Scheduler owns the rhythm. Every job degrades gracefully
-  and refuses to publish half-finished work.</p>
-  <div class="sched">
-    <div class="card"><h4>Headline logger</h4><span class="when">EVERY 30 MIN &middot; 24/7</span>
-      <p>Archives timestamped headlines from all verticals.</p></div>
-    <div class="card"><h4>Daily learn + signal</h4><span class="when">WEEKDAYS 17:00 IST</span>
-      <p>Top-up &rarr; grade yesterday &rarr; apply the brain &rarr; size, VaR, P(big move),
-      advisory &rarr; publish.</p></div>
-    <div class="card"><h4>Weekly re-education</h4><span class="when">FRIDAYS 15:00 IST</span>
-      <p>Brain retrained on all history; both tournaments re-run; a failure anywhere
-      aborts the publish rather than shipping mixed results.</p></div>
-    <div class="card"><h4>Industry migration</h4><span class="when">AUG 1 &middot; ONE-SHOT</span>
-      <p>Quota-guarded database backfill, retried weekly until it lands.</p></div>
-  </div>
-
-  <h2 id="ledger">The verdict ledger &mdash; what was tested, what survived</h2>
-  <p class="sub">Every hypothesis met the same judge: compete on days nothing was tuned
-  on. Most lost. That is the point &mdash; a research system that never rejects anything
-  is not testing, it is decorating.</p>
+  <h2 id="results">Results</h2>
+  <p class="sub">Each hypothesis was evaluated on data not used for selection.</p>
   <div class="tblwrap">
   <table>
-    <thead><tr><th>Hypothesis</th><th>Evidence</th><th style="text-align:right">Verdict</th></tr></thead>
+    <thead><tr><th>Hypothesis</th><th>Evidence</th><th style="text-align:right">Outcome</th></tr></thead>
     <tbody>
       <tr><td>Volatility is predictable</td>
-          <td>A simple linear model beats every benchmark and every challenger, news
-          included; explains 30% / 42% of variation on untouched data</td>
-          <td class="v"><span class="yes">YES &mdash; the product</span></td></tr>
-      <tr><td>News predicts move <em>size</em></td>
-          <td>Accuracy 0.533 &rarr; 0.558 with article features, &rarr; 0.568 with news
-          memory; calibrated and repeated</td>
-          <td class="v"><span class="prov">ON TRIAL &mdash; best news result</span></td></tr>
-      <tr><td>News memory beats a same-day pulse</td>
-          <td>Won in all three tournaments independently &mdash; magnitude, direction and
-          volatility</td>
-          <td class="v"><span class="prov">PROMISING</span></td></tr>
-      <tr><td>News predicts <em>direction</em></td>
-          <td>Nine architectures, four toolchains; best honest Sharpe 0.92 against 1.27
-          for buy-and-hold</td>
-          <td class="v"><span class="no">NO &mdash; advisory only</span></td></tr>
-      <tr><td>A neural net reads news better than ridge regression</td>
-          <td>Early edge traced to a data-alignment bug; on fixed inputs it adds nothing
-          beyond the simpler model</td>
-          <td class="v"><span class="no">NO</span></td></tr>
+          <td>HAR with event features beats every benchmark and challenger, news included; holdout R&sup2; 0.30 and 0.42</td>
+          <td class="v"><span class="tag y">supported</span></td></tr>
+      <tr><td>News predicts move size</td>
+          <td>Holdout AUC 0.533 to 0.558 with article features, 0.568 with decay; calibrated Brier 0.251</td>
+          <td class="v"><span class="tag p">provisional</span></td></tr>
+      <tr><td>Decayed news beats same-day news</td>
+          <td>Won in all three tournaments independently</td>
+          <td class="v"><span class="tag p">provisional</span></td></tr>
+      <tr><td>News predicts direction</td>
+          <td>Nine architectures; best holdout Sharpe 0.92 against 1.27 for buy-and-hold</td>
+          <td class="v"><span class="tag n">not supported</span></td></tr>
+      <tr><td>Attention network beats ridge regression</td>
+          <td>Initial advantage traced to an embedding-alignment defect; on corrected inputs it adds no measurable accuracy</td>
+          <td class="v"><span class="tag n">not supported</span></td></tr>
       <tr><td>News improves the volatility forecast</td>
           <td>News-vector candidates mid-pack at both horizons on the clean window</td>
-          <td class="v"><span class="no">NO</span></td></tr>
-      <tr><td>Premium sources (Reuters, Bloomberg, FT) predict direction</td>
-          <td>Dead last of the field &mdash; the best-read coverage is priced fastest</td>
-          <td class="v"><span class="no">NO</span></td></tr>
-      <tr><td>Competitor and industry news predicts direction</td>
+          <td class="v"><span class="tag n">not supported</span></td></tr>
+      <tr><td>Premium sources predict direction</td>
+          <td>Last of the field; widely-read coverage appears to be priced fastest</td>
+          <td class="v"><span class="tag n">not supported</span></td></tr>
+      <tr><td>Competitor and industry news predict direction</td>
           <td>Mid-pack, no holdout edge</td>
-          <td class="v"><span class="no">NO</span></td></tr>
+          <td class="v"><span class="tag n">not supported</span></td></tr>
       <tr><td>Minutes-scale news trading on free feeds</td>
-          <td>Event study: the price had fully moved before the 15-minute feed even
-          updated</td>
-          <td class="v"><span class="no">NO-GO</span></td></tr>
+          <td>Event study: price had fully adjusted before the 15-minute feed updated</td>
+          <td class="v"><span class="tag n">not supported</span></td></tr>
     </tbody>
   </table>
   </div>
 
-  <h2 id="limits">What's wrong with it &mdash; read before acting</h2>
-  <p class="sub">From a four-lens independent audit. These are not bugs; they are the
-  honest limits of what this design can prove.</p>
+  <h2 id="limits">Limitations</h2>
+  <ul>
+    <li><b>No demonstrated advantage over buy-and-hold.</b> On the holdout, volatility-sized
+    long returns 44.6% annually at Sharpe 1.29, against 63.7% and 1.26 for holding the
+    stock. The risk-adjusted difference is smaller than its standard error and costs 19
+    percentage points of return. Drawdown is shallower (&minus;30% vs &minus;43%), but a
+    static partial position would achieve much of that without turnover.</li>
+    <li><b>Single stock, single regime.</b> All results come from NVDA across one AI-driven
+    bull market, on a ticker selected because it became that market's central name. The
+    drawdown benefit has not been observed in a regime where volatility rises without a
+    subsequent recovery.</li>
+    <li><b>The holdout has been read roughly forty times</b> across the project, and
+    decisions followed those readings. Both surviving positive results are of a size that
+    repeated testing can produce by chance, so recent findings are exploratory.</li>
+    <li><b>The volatility model is not tested against its strongest baseline.</b> A
+    zero-parameter smoothing formula beats it on the project's own selection metric at both
+    horizons, but analytic baselines cannot win the seat. The model also forecasts intraday
+    range while sizing requires total risk including overnight gaps.</li>
+    <li><b>Practical gaps.</b> No account size is configured, so risk figures are quoted per
+    million. No numeric criterion defines when to stop trusting the system. Indian tax
+    treatment of frequent US-equity turnover, currency conversion and idle-cash drag are
+    unmodeled and could exceed the measured edge. Two hours pass between signal and market
+    open with no defined protocol for news arriving in between. One evening's signal has
+    already failed without alerting anyone.</li>
+    <li><b>News data is thinner than the headline count suggests.</b> About 58% of the
+    archive is unique, English-leaning, multi-word text; the models read URL slugs rather
+    than article bodies, and roughly two-thirds of NVIDIA-category slugs contain no
+    NVIDIA-related term. The measured news effect may partly reflect attention and
+    news-flow patterns rather than the content of specific stories.</li>
+  </ul>
 
-  <details>
-    <summary>It has not actually beaten buy-and-hold</summary>
-    <p>On the untouched holdout the flagship leg returns 44.6% annually with a Sharpe of
-    1.29, against 63.7% and 1.26 for simply holding NVDA. The risk-adjusted edge of 0.03
-    is far smaller than its own measurement error, and it costs 19 percentage points of
-    return to obtain. What survives honestly is a genuinely shallower drawdown
-    (&minus;30% versus &minus;43%). A static "hold 75% and keep 25% in cash" would achieve
-    something similar with no effort and no tax churn &mdash; a comparison the desk should
-    run on itself and currently does not.</p>
-  </details>
-  <details>
-    <summary>Everything was validated in one stock, one regime</summary>
-    <p>All conclusions come from NVDA over a single AI bull market, on a ticker chosen
-    precisely <em>because</em> it became the dominant AI story. Any long-tilted rule looks
-    good in that window, and the drawdown benefit has never been observed in a regime
-    where volatility spikes and the stock does not recover. Treat every number as
-    descriptive of NVDA 2023&ndash;2026, not as a law.</p>
-  </details>
-  <details>
-    <summary>The holdout is spent, so recent findings are suggestive only</summary>
-    <p>Around forty separate evaluations have now been read off the same stretch of
-    history, and decisions were taken after reading them. Both surviving positive results
-    are about the size that pure multiple-comparisons noise produces. This is why the live
-    track record matters more than any backtest number on this page.</p>
-  </details>
-  <details>
-    <summary>The volatility model has a rival it is not allowed to lose to</summary>
-    <p>A zero-parameter industry-standard smoothing formula actually beats the crowned
-    model on the desk's own selection metric at both horizons, but analytic baselines are
-    structurally barred from winning the seat. Separately, the model forecasts intraday
-    range while sizing needs total risk including overnight gaps &mdash; which is exactly
-    where news for this stock lands. Both are open items.</p>
-  </details>
-  <details>
-    <summary>Practical gaps for a real operator</summary>
-    <ul>
-      <li>No capital base is configured, so the loss limits are quoted per million dollars
-      rather than on real money.</li>
-      <li>No written stop-trusting rule: nothing defines the drawdown or error rate at
-      which a human should switch the system off.</li>
-      <li>Indian tax treatment of frequent US-equity turnover is unmodelled and would
-      plausibly erase a thin edge entirely. Currency conversion, remittance charges and
-      idle-cash drag are likewise unpriced.</li>
-      <li>Two hours pass between the signal and the market open, and macro releases land
-      in that window with no defined protocol for what to do about it.</li>
-      <li>Silent failure is possible: one recent evening's signal simply did not run, and
-      nothing alerted anyone.</li>
-    </ul>
-  </details>
-  <details>
-    <summary>The news data is thinner than 710,000 headlines suggests</summary>
-    <p>Roughly 58% of the archive is unique, English-leaning, multi-word headline text; the
-    rest is identifier junk, non-English, or syndicated duplicates. More importantly the
-    models read URL slugs rather than full articles, and about two-thirds of NVDA-category
-    slugs contain no NVDA-related word at all. So the measured news edge may partly reflect
-    attention and news-flow patterns rather than the meaning of specific stories &mdash; a
-    humbler claim, still a useful one.</p>
-  </details>
+  <h2 id="glossary">Glossary</h2>
 
-  <h2 id="glossary">Glossary &mdash; every term on this page</h2>
-  <p class="sub">Alphabetical within each group. If a word on this page confused you, it
-  should be here.</p>
-
-  <h3>Risk and money</h3>
+  <h3>Risk and return</h3>
   <div class="gl">
-    <div><b>Volatility</b><span>How much a price moves, regardless of direction. Usually
-    quoted per day or annualized. High volatility means big swings either way.</span></div>
-    <div><b>Annualized</b><span>A daily figure scaled to a yearly rate, so numbers are
-    comparable. A 2% daily move is roughly 32% annualized.</span></div>
-    <div><b>Target-vol sizing</b><span>Holding a smaller position when forecast volatility
-    is high and a larger one when it is low, so your risk stays constant instead of
-    swinging with the market. The desk's core mechanism.</span></div>
-    <div><b>VaR (value at risk)</b><span>A loss threshold at a confidence level. "95% VaR
-    of $47,820" means on the worst 1 day in 20 you would lose about that much or
-    more.</span></div>
-    <div><b>Drawdown</b><span>The peak-to-trough fall in an account's value. The most
-    emotionally relevant risk number, because it is what you actually live through.</span></div>
-    <div><b>Sharpe ratio</b><span>Return divided by volatility &mdash; reward per unit of
-    risk. Above 1 is respectable. Crucially, it is measured with error: over three years
-    that error is roughly &plusmn;0.6.</span></div>
-    <div><b>Buy-and-hold</b><span>Just owning the stock and doing nothing. The benchmark
-    every strategy must beat to justify its existence, and the one this desk has not
-    yet cleared.</span></div>
-    <div><b>Exposure</b><span>The share of time, or fraction of capital, actually invested.
-    Lower exposure usually means lower return and lower risk.</span></div>
-    <div><b>Open-to-open return</b><span>The change from one morning's opening price to the
-    next. The desk uses this because it is what you actually capture by trading at the open
-    on an evening signal.</span></div>
-    <div><b>Turnover / basis point</b><span>Turnover is how much you trade; a basis point
-    is one hundredth of a percent. The backtest charges 5 basis points per position
-    change to represent trading costs.</span></div>
+    <div><b>Volatility</b><span>How much a price moves, regardless of direction; quoted per day or annualized.</span></div>
+    <div><b>Annualized</b><span>A daily figure scaled to a yearly rate. A 2% daily move is roughly 32% annualized.</span></div>
+    <div><b>Target-vol sizing</b><span>Holding less when forecast volatility is high and more when it is low, so risk stays approximately constant.</span></div>
+    <div><b>Value at risk (VaR)</b><span>A loss threshold at a confidence level. A 95% VaR of $47,820 means the worst 1 day in 20 loses at least that.</span></div>
+    <div><b>Drawdown</b><span>Peak-to-trough decline in account value.</span></div>
+    <div><b>Sharpe ratio</b><span>Return divided by volatility. Measured with error: roughly &plusmn;0.6 over three years.</span></div>
+    <div><b>Buy-and-hold</b><span>Owning the stock and doing nothing. The benchmark any strategy must beat.</span></div>
+    <div><b>Exposure</b><span>Fraction of capital, or share of days, actually invested.</span></div>
+    <div><b>Open-to-open return</b><span>Change from one session's opening price to the next; what an evening signal can actually capture.</span></div>
+    <div><b>Basis point</b><span>One hundredth of a percent. The backtest charges 5 per unit of position change.</span></div>
   </div>
 
-  <h3>Models and machine learning</h3>
+  <h3>Models</h3>
   <div class="gl">
-    <div><b>Feature</b><span>One input number describing a day &mdash; yesterday's return,
-    today's news tone, days until earnings. A model sees only features, never the
-    world.</span></div>
-    <div><b>Training vs inference</b><span>Training adjusts a model's internal settings
-    from examples. Inference applies an already-trained model to new data. This desk trains
-    weekly and infers daily.</span></div>
-    <div><b>Linear regression</b><span>The simplest model: multiply each input by a weight
-    and add them up. The volatility winner is one of these, and simplicity is why it
-    generalizes so well.</span></div>
-    <div><b>HAR</b><span>The specific volatility recipe: blend yesterday's, last week's and
-    last month's realized movement. A finance-standard approach that repeatedly beats
-    fancier alternatives.</span></div>
-    <div><b>Gradient-boosted trees</b><span>Hundreds of small yes/no decision trees, each
-    correcting the previous one's mistakes. Powerful on tabular data, used for the direction
-    and magnitude heads.</span></div>
-    <div><b>Ridge regression</b><span>Linear regression with a penalty that discourages
-    extreme weights, which keeps it stable when inputs are numerous and noisy. The article
-    impact scorers are ridge models &mdash; and they beat the neural network.</span></div>
-    <div><b>Embedding</b><span>A list of numbers representing a piece of text's meaning
-    (here 384 of them). Similar meanings produce nearby lists, which is what allows
-    mathematical comparison of headlines.</span></div>
-    <div><b>Attention</b><span>A mechanism that assigns each item in a group an importance
-    weight, with all weights summing to 1. It is how the brain decides which of today's
-    articles to listen to.</span></div>
-    <div><b>Epoch / early stopping</b><span>One epoch is a full pass over the training
-    examples. Early stopping halts training when performance on held-back data stops
-    improving, preventing memorization.</span></div>
-    <div><b>Calibration (isotonic)</b><span>Adjusting a model's probabilities so they mean
-    what they claim &mdash; days labelled 60% should happen about 60% of the time. Isotonic
-    is the specific order-preserving method used here.</span></div>
-    <div><b>AUC</b><span>Ranking accuracy from 0.5 (coin flip) to 1.0 (perfect). The
-    magnitude head's 0.568 is a real but modest edge; the direction model's 0.491 is
-    literally worse than a coin flip.</span></div>
-    <div><b>Brier score</b><span>Average squared error of probabilities &mdash; lower is
-    better, 0.25 is what pure guessing scores. It punishes confident wrong answers, which
-    is why calibration matters.</span></div>
-    <div><b>QLIKE / R²</b><span>QLIKE scores volatility forecasts (lower is better). R²
-    is the share of variation explained: the volatility model's 0.30 means it accounts for
-    about 30% of what happens.</span></div>
-    <div><b>Half-life / decay (EWMA)</b><span>How long news keeps mattering. A 3-day
-    half-life means a story retains half its weight after 3 days, a quarter after 6. EWMA
-    is the exponentially-weighted average that implements it.</span></div>
-    <div><b>Pulse vs decay</b><span>Pulse: news affects exactly one day then vanishes.
-    Decay: news fades gradually. The desk now tests both against each other, and decay is
-    winning.</span></div>
+    <div><b>Feature</b><span>One input number describing a day. Models see features, not the world.</span></div>
+    <div><b>Training vs inference</b><span>Training adjusts internal parameters from examples; inference applies a fixed model to new data. This system trains weekly and infers daily.</span></div>
+    <div><b>HAR</b><span>Volatility model blending 1, 5 and 22-day realized volatility. A standard approach that often beats more complex alternatives.</span></div>
+    <div><b>Gradient-boosted trees</b><span>Many small decision trees, each correcting the previous one's errors. Used for the direction and magnitude heads.</span></div>
+    <div><b>Ridge regression</b><span>Linear regression penalizing large coefficients, which keeps it stable with numerous noisy inputs.</span></div>
+    <div><b>Embedding</b><span>A vector representing text meaning; here 384 numbers per headline. Similar meanings produce nearby vectors.</span></div>
+    <div><b>Attention</b><span>Assigning each item in a group a weight, with weights summing to 1. Determines which of a day's articles the network relies on.</span></div>
+    <div><b>Epoch, early stopping</b><span>An epoch is one pass over the training data; early stopping halts training when held-back performance stops improving.</span></div>
+    <div><b>Calibration (isotonic)</b><span>Adjusting probabilities so a stated 60% occurs about 60% of the time, order-preserving.</span></div>
+    <div><b>AUC</b><span>Ranking accuracy, 0.5 is chance and 1.0 perfect. The magnitude head reaches 0.568; the direction model 0.491.</span></div>
+    <div><b>Brier score</b><span>Mean squared error of probabilities; lower is better and 0.25 corresponds to guessing.</span></div>
+    <div><b>QLIKE, R&sup2;</b><span>QLIKE scores volatility forecasts, lower better. R&sup2; is the share of variation explained.</span></div>
+    <div><b>Half-life, EWMA</b><span>An exponentially-weighted average in which a value retains half its weight after the stated interval.</span></div>
   </div>
 
-  <h3>Honesty and testing</h3>
+  <h3>Testing</h3>
   <div class="gl">
-    <div><b>Walk-forward</b><span>Testing by marching through time &mdash; train, predict
-    the next stretch blindly, step forward, retrain. Every scored prediction was made
-    without access to its answer.</span></div>
-    <div><b>Selection window</b><span>The stretch of history used to choose between rival
-    models. Scores here are optimistic by construction, because the winner was picked for
-    scoring well on them.</span></div>
-    <div><b>Holdout</b><span>History deliberately set aside and never used for any choice,
-    so the winner's score on it is an honest estimate. Its power erodes each time it is
-    read, which is why this one is now considered spent.</span></div>
-    <div><b>Nested split</b><span>An extra safeguard: train the news scorers on an early
-    slice only, so the judging window is genuinely unseen by them. Without it, models that
-    had memorized their training era won on mirages.</span></div>
-    <div><b>Leakage / lookahead</b><span>When a model accidentally sees information from
-    after the moment it is predicting. The single most common way backtests lie, and the
-    reason for the iron rule.</span></div>
-    <div><b>Multiplicity</b><span>Test enough ideas and some will look good by luck alone.
-    With about forty evaluations on one holdout, small positive results should be assumed
-    to be noise until confirmed live.</span></div>
-    <div><b>Standard error</b><span>The uncertainty around a measurement. If two models
-    differ by less than their error bars, they are not distinguishable &mdash; a fact this
-    desk prints next to every score.</span></div>
-    <div><b>Winner's curse</b><span>The tendency of a contest winner's score to be inflated
-    by luck, so real future performance disappoints. The reason no candidate is trusted on
-    its selection score.</span></div>
+    <div><b>Walk-forward</b><span>Train, predict the next period blindly, step forward, retrain. Prevents any prediction from seeing its own answer.</span></div>
+    <div><b>Selection window</b><span>History used to choose between models. Scores here are optimistic because the winner was chosen for them.</span></div>
+    <div><b>Holdout</b><span>History reserved from all decisions, so the winner's score is unbiased. Its value degrades each time it is examined.</span></div>
+    <div><b>Nested split</b><span>Training news scorers on an early slice only, so the judging window is genuinely unseen by them.</span></div>
+    <div><b>Lookahead / leakage</b><span>A model accidentally using information from after the moment it predicts. The most common source of misleading backtests.</span></div>
+    <div><b>Multiplicity</b><span>Testing many ideas causes some to appear successful by chance; results must be discounted accordingly.</span></div>
+    <div><b>Standard error</b><span>Uncertainty around a measurement. Differences smaller than the error bars are not meaningful.</span></div>
+    <div><b>Winner's curse</b><span>A contest winner's score is inflated by luck, so subsequent performance typically disappoints.</span></div>
   </div>
 
   <h3>News data</h3>
   <div class="gl">
-    <div><b>GDELT</b><span>A free public project that monitors news worldwide and publishes
-    machine-readable summaries. The desk's primary news source, both for daily tone and the
-    article archive.</span></div>
-    <div><b>Slug</b><span>The readable tail of a web address, which usually contains the
-    headline. It is what the models actually read &mdash; not the full article, an
-    important limitation.</span></div>
-    <div><b>Tone</b><span>An automated positivity score for coverage language. Useful in
-    aggregate, unreliable per article, and notoriously bad at sarcasm.</span></div>
-    <div><b>Category / vertical</b><span>The six news buckets: NVIDIA, competitors,
-    hyperscalers, AI companies, macro, brokers. The desk tracks each separately because
-    they move the stock differently.</span></div>
-    <div><b>Syndication</b><span>The same wire story republished by many outlets. About 10%
-    of the archive, and it inflates apparent news volume without adding
-    information.</span></div>
-    <div><b>Novelty</b><span>How far today's news sits from the trailing month's average
-    position on the meaning map. High novelty means genuinely new subject matter rather
-    than more of the same.</span></div>
-    <div><b>Conflict</b><span>How much same-day articles disagree about direction. The
-    desk's answer to "what if four stories contradict each other" &mdash; it measures the
-    disagreement instead of averaging it away.</span></div>
+    <div><b>GDELT</b><span>A public project monitoring worldwide news and publishing machine-readable summaries.</span></div>
+    <div><b>Slug</b><span>The readable tail of a web address, usually containing the headline. What the models actually read.</span></div>
+    <div><b>Tone</b><span>An automated positivity score for coverage language; useful in aggregate, unreliable per article.</span></div>
+    <div><b>Category</b><span>One of six news buckets, tracked separately because each relates to the stock differently.</span></div>
+    <div><b>Syndication</b><span>The same story republished by many outlets, inflating apparent volume without adding information.</span></div>
+    <div><b>Novelty</b><span>Distance between today's news and the trailing month's average, measured in embedding space.</span></div>
+    <div><b>Conflict</b><span>Degree to which same-day articles disagree in implied direction; recorded as a feature rather than averaged away.</span></div>
   </div>
 
   <div class="foot">
-    github.com/kevinrambhia11/nvda-news-quant &middot; signals only, never orders &middot;
-    educational tool &mdash; not financial advice
+    github.com/kevinrambhia11/nvda-news-quant &middot; recommendations only, no order
+    execution &middot; educational tool, not financial advice
   </div>
 </div>
