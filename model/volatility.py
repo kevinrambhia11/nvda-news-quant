@@ -278,7 +278,8 @@ def train_and_report() -> str:
         trained_through = max(trained_through or "", str(data.index.max().date()))
     lines.append("=" * 66)
 
-    joblib.dump({"models": models,
+    from data.news import atomic_dump
+    atomic_dump({"models": models,
                  "trained_through": trained_through}, config.VOL_MODEL_PATH)
     log.info("Volatility models saved -> %s", config.VOL_MODEL_PATH)
     report = "\n".join(lines)

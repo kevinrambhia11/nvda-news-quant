@@ -29,6 +29,17 @@ def atomic_to_csv(df: pd.DataFrame, path) -> None:
     df.to_csv(tmp)
     os.replace(tmp, path)
 
+
+def atomic_dump(obj, path) -> None:
+    """Write-then-rename for joblib bundles. Matters because the weekly
+    retrain (Fridays 15:00 IST) now overlaps the same weekday as the 17:00
+    signal: an overrunning retrain must never leave a half-written model
+    file for the signal to load."""
+    import joblib
+    tmp = path.with_name(path.name + ".tmp")
+    joblib.dump(obj, tmp)
+    os.replace(tmp, path)
+
 log = logging.getLogger(__name__)
 
 GDELT_URL = "https://api.gdeltproject.org/api/v2/doc/doc"

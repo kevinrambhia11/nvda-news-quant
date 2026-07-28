@@ -12,7 +12,7 @@ Separation of concerns (important):
     the freshest possible brain for today. Their files carry a _live
     suffix and overwrite only the deployed bundles the signal reads.
   * EVALUATION artifacts (nested/production nets, tournament reports) keep
-    their pinned boundaries and are rebuilt only by the Saturday retrain.
+    their pinned boundaries and are rebuilt only by the weekly (Friday) retrain.
     The two never share files, so daily learning cannot quietly corrupt
     the honesty machinery - and the tournament + Track Record tab remain
     the judges of whether daily learning actually helps.
@@ -26,7 +26,7 @@ APPLIES its learning daily.
        today's news, assigns each article its learned significance
        weight (today_news_weights.json), and the frozen impact scorers
        rescore; live feature files refresh. No weights change.
-  Weekly (main.py `train-brain`, inside the Saturday retrain):
+  Weekly (main.py `train-brain`, inside the weekly (Friday) retrain):
     3. train_brain()     - re-educate: ridge scorers + NewsNet retrain on
        all labeled history, then apply.
     4. refit_heads()     - refit the deployed direction / magnitude / vol
@@ -371,7 +371,7 @@ def refit_heads() -> str:
     All bundles are fitted first and saved (atomically) only when every
     fit succeeded, so a partial failure can never leave heads from two
     feature generations deployed together. The isotonic calibrator is not
-    refit here (it needs honest walk-forward probabilities); the Saturday
+    refit here (it needs honest walk-forward probabilities); the Friday
     tournament refreshes it.
 
     Honesty note: the live scorers saw every historical row's own label,

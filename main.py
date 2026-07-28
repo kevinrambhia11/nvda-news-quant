@@ -237,7 +237,7 @@ def cmd_learn() -> None:
 def cmd_train_brain() -> None:
     """Weekly education: retrain the live brain (ridge scorers + NewsNet)
     on all labeled history and refit the deployed heads on the fresh
-    features. Runs inside the Saturday retrain."""
+    features. Runs inside the weekly (Friday) retrain."""
     from model.live import refit_heads, train_brain
     train_brain()
     print(refit_heads())

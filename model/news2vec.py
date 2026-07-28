@@ -143,7 +143,8 @@ def learn_impact(holdout_start: pd.Timestamp, nested: bool = False,
               "trained_before": str(holdout_start.date()),
               "n_articles": int(len(y))}
     dest = out_path or (IMPACT_NESTED_PATH if nested else IMPACT_PATH)
-    joblib.dump(bundle, dest)
+    from data.news import atomic_dump
+    atomic_dump(bundle, dest)
     return bundle
 
 

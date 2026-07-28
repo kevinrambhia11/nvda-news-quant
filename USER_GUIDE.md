@@ -81,7 +81,7 @@ Three Windows scheduled tasks on the desk machine:
 |---|---|---|
 | Headline Logger | every 30 min, 24/7 | archives timestamped news |
 | Daily Signal | weekdays 17:00 IST (pre-US-open) | position + VaR + advisory; pushes so the hosted dashboard self-updates |
-| Weekly Retrain | Saturdays 14:00 IST | re-runs both model tournaments on the week's data |
+| Weekly Retrain | Fridays 15:00 IST | re-educates the brain and re-runs both model tournaments on the week's data (finishes ~1h before that evening's signal, which then uses the fresh models) |
 
 Every run appends to `artifacts\scheduler.log`. When a data source fails
 (they do), the desk degrades to slightly-stale data and *says so* in the

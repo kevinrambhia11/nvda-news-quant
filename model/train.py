@@ -328,7 +328,8 @@ def select_and_train(dataset: pd.DataFrame) -> str:
 
     train_slice = data if win_window is None else data.iloc[-win_window:]
     final = win_factory().fit(train_slice[win_feats], train_slice["y"])
-    joblib.dump({"model": final, "features": win_feats, "name": winner,
+    from data.news import atomic_dump
+    atomic_dump({"model": final, "features": win_feats, "name": winner,
                  "window": win_window,
                  "trained_through": str(data.index.max().date()),
                  "n_rows": len(train_slice)}, config.MODEL_PATH)

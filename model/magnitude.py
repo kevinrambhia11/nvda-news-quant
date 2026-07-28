@@ -187,7 +187,8 @@ def train_final(dataset: pd.DataFrame) -> str:
     iso.fit(probs[cal_mask].to_numpy(), data.loc[cal_mask, "y"].to_numpy())
 
     model = _gbm_deep().fit(data[feats], data["y"])
-    joblib.dump({"model": model, "features": feats, "iso": iso,
+    from data.news import atomic_dump
+    atomic_dump({"model": model, "features": feats, "iso": iso,
                  "name": "GBM deep price+news2, isotonic-calibrated",
                  "trained_through": str(data.index.max().date()),
                  "cal_window": f"{cal_start.date()} -> "

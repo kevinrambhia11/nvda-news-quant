@@ -222,7 +222,7 @@
     <div class="cards">
       <div class="card"><h3>Market features</h3><p>Returns, trend, Garman-Klass volatility, earnings-window flags, drawdown regime, competitor tone</p></div>
       <div class="card"><h3>news2 vectors</h3><span class="pill a">THE NEWS EDGE</span><p>Ridge scorers read each headline's embedding and estimate its impact &rarr; daily impact-weighted tone, disagreement between articles, novelty vs the trailing month</p></div>
-      <div class="card"><h3>NewsNet &mdash; the brain</h3><span class="pill a">APPLIES DAILY</span><p>Attention neural net over the same embeddings &mdash; educated on history every Saturday, and every day it APPLIES that learning: reads all of today's news and assigns each article a significance weight for the session (shown in the signal). Its evaluation record is honest and mixed &mdash; the tournament and track record keep grading it.</p></div>
+      <div class="card"><h3>NewsNet &mdash; the brain</h3><span class="pill a">APPLIES DAILY</span><p>Attention neural net over the same embeddings &mdash; educated on history every Friday, and every day it APPLIES that learning: reads all of today's news and assigns each article a significance weight for the session (shown in the signal). Its evaluation record is honest and mixed &mdash; the tournament and track record keep grading it.</p></div>
     </div>
   </section>
 
@@ -233,7 +233,7 @@
     <div class="stage-head"><span class="stage-num">STAGE 4</span><span class="stage-name">THE TOURNAMENT &mdash; where trust is earned</span></div>
     <p class="stage-why">Nothing gets promoted by argument. Candidate models compete on a
     judging window their feature-builders never saw, and the winner's real grade comes from a
-    holdout that nothing was ever tuned on. Every Saturday, every seat is re-contested.</p>
+    holdout that nothing was ever tuned on. Every Friday, every seat is re-contested.</p>
     <div class="cards">
       <div class="card"><h3>VOLATILITY &mdash; how big is tomorrow?</h3><span class="pill g">PRODUCT</span>
         <p>HAR + earnings events. Holdout R&sup2; <span class="num">0.31</span> (1-day) / <span class="num">0.42</span> (5-day).
@@ -300,7 +300,7 @@
     <div class="card"><h3>Daily learn + signal</h3><span class="when">WEEKDAYS 17:00 IST</span>
       <p>News top-up &rarr; grade yesterday's calls &rarr; retrain the brain on everything through
       yesterday &rarr; refit heads &rarr; size + VaR + P(big move) + advisory &rarr; push</p></div>
-    <div class="card"><h3>Weekly retrain</h3><span class="when">SATURDAYS 14:00 IST</span>
+    <div class="card"><h3>Weekly retrain</h3><span class="when">FRIDAYS 15:00 IST</span>
       <p>Scorers refresh against pinned boundaries; both tournaments re-run; failures abort the publish</p></div>
     <div class="card"><h3>Industry migration</h3><span class="when">AUG 1 &middot; ONE-SHOT</span>
       <p>Quota-guarded BigQuery backfill; retried weekly until it lands</p></div>
