@@ -880,6 +880,38 @@ ARCH_AUTOFIT = """
   document.addEventListener('toggle', fit, true);   // <details> sections
   document.addEventListener('visibilitychange', refit);
   setInterval(fit, 2000);   // cheap safety net; a no-op once fitted
+
+  // In-page anchors (the section nav pills) must be intercepted here: a
+  // srcdoc iframe has no URL of its own, so a plain click on href="#data"
+  // resolves against the INHERITED base URL and navigates this frame to
+  // the Streamlit app itself - rendering the whole dashboard inside its
+  // own Architecture tab. Scroll to the target instead of navigating.
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest
+        ? ev.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    ev.preventDefault();
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    var fr = window.frameElement;
+    if (!el || !fr) return;
+    try {
+      // scrollIntoView stops at the iframe boundary here, so scroll the
+      // dashboard's own scroll container (same-origin, reachable). The
+      // frame is full-height/non-scrolling, so an element's viewport
+      // offset inside it IS its offset from the frame's top.
+      var pdoc = window.parent.document;
+      var main = pdoc.querySelector('[data-testid="stMain"]')
+          || pdoc.scrollingElement;
+      var top = el.getBoundingClientRect().top
+              + fr.getBoundingClientRect().top
+              + main.scrollTop - 16;
+      // instant, not smooth: smooth scrolling is animation-frame driven
+      // and silently stalls in background/non-composited tabs
+      main.scrollTop = Math.max(0, top);
+    } catch (e) {
+      el.scrollIntoView({block: 'start'});
+    }
+  }, true);
 })();
 </script>
 """
