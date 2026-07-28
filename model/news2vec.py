@@ -56,6 +56,69 @@ NEWS2_DECAY_FEATURES = [f"{b}_d{int(h)}" for b in _DECAY_BASE
                         for h in config.DECAY_HALFLIVES]
 
 
+# Article eligibility for FEATURE construction (the archive itself is never
+# filtered). Three rules, from the data-quality audit:
+#   form    - the slug must read like a headline: >=3 tokens with a real
+#             word, not a bare article ID ("132451732.cms", hex strings);
+#   anchor  - the slug must visibly relate to its category (GKG tags orgs
+#             from article FULL TEXT, but our models only see the slug, so
+#             an unanchored slug is pure noise to them - local-news weather
+#             roundups were landing in hyperscalers this way);
+#   dedup   - one copy per (entry day, slug): syndicated wire stories
+#             otherwise overweight day means and suppress the conflict
+#             feature, and duplicates surfaced in the brain's top-weights.
+CATEGORY_ANCHORS = {
+    "nvda": (r"nvidia|nvda|jensen|geforce|rtx|blackwell|hopper|rubin|cuda"
+             r"|h100|h200|b200|gb200|\bgpu"),
+    "competitors": (r"\bamd\b|advanced micro|\bintel\b|tsmc|taiwan semi"
+                    r"|broadcom|qualcomm|semiconductor|chipmaker|\bchips?\b"),
+    "hyperscalers": (r"microsoft|google|alphabet|amazon|\baws\b|\bmeta\b"
+                     r"|facebook|oracle|azure|\bcloud\b|datacenter"
+                     r"|data center|hyperscaler"),
+    "ai_companies": (r"openai|anthropic|deepmind|chatgpt|claude|gemini"
+                     r"|mistral|hugging face|\bai\b"
+                     r"|artificial intelligence|\bllms?\b"),
+    # macro and brokers are deliberately absent: they are THEME categories
+    # whose relevant vocabulary cannot be enumerated (a central-bank
+    # resignation in Jakarta is macro news with none of the obvious
+    # keywords). They get the form and dedup rules only - an anchor list
+    # tried here kept just 5% of macro, ~2.5 articles/day, too thin for
+    # stable day-level features.
+}
+
+
+def informative_mask(art: pd.DataFrame) -> np.ndarray:
+    """Boolean mask over `art` rows (which must carry `entry`) selecting
+    articles worth reading for features. Position-aligned with `art`, so
+    callers can subset the embedding matrix by the same positions."""
+    slugs = art["slug"].fillna("").astype(str)
+    formish = (slugs.str.count(" ").ge(2)
+               & slugs.str.contains(r"[a-z]{3}", regex=True))
+    # categories without an anchor list (macro, brokers) pass by default
+    anchored = ~art["category"].isin(CATEGORY_ANCHORS)
+    for cat, pat in CATEGORY_ANCHORS.items():
+        m = (art["category"] == cat).to_numpy()
+        if m.any():
+            anchored[m] = slugs[m].str.contains(pat, regex=True)
+    ok = (formish & anchored).to_numpy()
+    # Dedup ONLY among eligible rows, and per (entry, CATEGORY, slug):
+    #  - dedup over all rows would let a rejected first copy permanently
+    #    shadow an eligible later copy (measured: 3,494 stories would
+    #    vanish from every category);
+    #  - a key without category would strip dual-tagged stories from all
+    #    but their parquet-first category (measured: nvda would lose
+    #    6,344 articles, mostly the NVDA-vs-competitor head-to-heads).
+    #    One copy per category matches the archive's multi-tag semantics.
+    keep = np.zeros(len(art), dtype=bool)
+    pos = np.flatnonzero(ok)
+    if len(pos):
+        sub = art.iloc[pos]
+        first = ~sub.assign(_slug=slugs.iloc[pos]).duplicated(
+            subset=["entry", "category", "_slug"])
+        keep[pos[first.to_numpy()]] = True
+    return keep
+
+
 def embed_articles(batch_size: int = 512) -> None:
     """One-time (then incremental) encoding of article slugs to vectors."""
     from sentence_transformers import SentenceTransformer
@@ -128,12 +191,16 @@ def learn_impact(holdout_start: pd.Timestamp, nested: bool = False,
     px, _ = load_prices()
     fwd = (px["Open"].shift(-1) / px["Open"] - 1)
 
+    # trim to the embedding frontier BEFORE the informative mask, so a
+    # not-yet-embedded copy can never shadow an embedded duplicate out of
+    # the training set
+    if len(emb) < len(art):
+        art = art.iloc[: len(emb)].copy()
     art["entry"] = _entry_days(art["date"], px.index)
     art["fwd"] = art["entry"].map(fwd)
     mask = art["fwd"].notna() & (art["entry"] < holdout_start)
-    # embeddings may lag a fresh parquet - only rows with a vector count
-    mask &= art.index < len(emb)
-    X, y = emb[mask.to_numpy()[: len(emb)]], art.loc[mask, "fwd"].to_numpy()
+    mask &= pd.Series(informative_mask(art), index=art.index)
+    X, y = emb[: len(art)][mask.to_numpy()], art.loc[mask, "fwd"].to_numpy()
     log.info("Impact training set: %d articles (< %s)", len(y),
              holdout_start.date())
 
@@ -169,6 +236,11 @@ def build_daily_features(nested: bool = False, impact_path=None,
     art = art.loc[keep]
     emb = emb[keep]
     art = art.reset_index(drop=True)
+    inf = informative_mask(art)
+    art = art.loc[inf].reset_index(drop=True)
+    emb = emb[inf]
+    log.info("Informative filter: %d of %d articles feed features",
+             len(art), len(inf))
 
     art["dir_score"] = bundle["dir"].predict(emb)
     art["mag_score"] = bundle["mag"].predict(emb)

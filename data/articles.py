@@ -90,6 +90,19 @@ def _base_cte() -> str:
     )"""
 
 
+def _anchor_case() -> str:
+    """SQL CASE ranking anchor-matching slugs first, built from the same
+    CATEGORY_ANCHORS the feature filter uses (RE2 accepts these patterns;
+    backslashes doubled for the SQL string literal)."""
+    from model.news2vec import CATEGORY_ANCHORS
+    whens = []
+    for cat, pat in CATEGORY_ANCHORS.items():
+        sql_pat = pat.replace("\\", "\\\\").replace("'", "\\'")
+        whens.append(f"WHEN '{cat}' THEN "
+                     f"IF(REGEXP_CONTAINS(slug, '{sql_pat}'), 0, 1)")
+    return "CASE category " + " ".join(whens) + " ELSE 0 END"
+
+
 def _articles_sql() -> str:
     # slug: last URL path segment, separators -> spaces, lowercased -
     # matching the archive's existing slug format
@@ -109,14 +122,17 @@ def _articles_sql() -> str:
       FROM slugged
       WHERE slug IS NOT NULL AND LENGTH(slug) >= 1
     ),
-    -- sampling prefers headline-like (multi-word) slugs and falls back to
-    -- ID-style slugs only when the day runs short - matching the archive's
-    -- observed ~0-6% single-token rate without excluding sparse days
+    -- sampling preference, best first: category-anchored multi-word slugs
+    -- (what the informative feature filter will actually read), then other
+    -- multi-word slugs, then ID-style slugs only when the day runs short.
+    -- The anchor preference multiplies informative yield inside the 60/day
+    -- cap at zero extra quota cost.
     sampled AS (
       SELECT date, category, source, slug, tone,
              ROW_NUMBER() OVER (
                  PARTITION BY category, date
                  ORDER BY IF(STRPOS(slug, ' ') > 0, 0, 1),
+                          """ + _anchor_case() + """,
                           FARM_FINGERPRINT(url)) AS rk
       FROM deduped WHERE dup_rank = 1
     )

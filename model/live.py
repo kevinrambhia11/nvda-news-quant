@@ -243,7 +243,7 @@ def apply_brain() -> None:
                          out_path=LIVE_N2_FEATURES)
 
     torch = _torch()
-    art, emb, days, _ = _load_corpus(torch)
+    art, emb, days, px = _load_corpus(torch)
     model = _build_model(torch)
     model.load_state_dict(torch.load(LIVE_NET_PATH)["state"])
     model.eval()
@@ -267,6 +267,14 @@ def apply_brain() -> None:
     # articles in frame order (never via _day_tensors, whose >400-article
     # subsampling would silently misalign weight -> headline)
     upcoming = art["entry"].max()
+    expected = _entry_index(px.index).max()
+    if pd.Timestamp(upcoming) < expected:
+        # every article since the last close failed the informative
+        # filter (or none arrived) - the weights file will carry a prior
+        # session and the signal's entry-day guard will hide the section
+        log.warning("No informative articles map to the upcoming session "
+                    "%s (latest covered: %s)", expected.date(),
+                    pd.Timestamp(upcoming).date())
     sub = art[art["entry"] == upcoming]
     today = []
     if len(sub):

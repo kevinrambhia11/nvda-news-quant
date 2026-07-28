@@ -89,16 +89,20 @@ def _build_model(torch):
 
 def _aligned(art: pd.DataFrame, emb: np.ndarray, trading_index):
     """Row-aligned (articles, embeddings) after dropping articles with no
-    entry day. The parquet is NOT date-sorted, so dropped rows sit mid-file:
-    embeddings must be selected by the kept rows' positions (truncating the
-    matrix instead silently pairs almost every article with a wrong vector).
-    """
+    entry day, plus the informative filter (headline-like, category-
+    anchored, deduped per entry day - see news2vec.informative_mask). The
+    parquet is NOT date-sorted, so dropped rows sit mid-file: embeddings
+    must be selected by the kept rows' positions (truncating the matrix
+    instead silently pairs almost every article with a wrong vector)."""
+    from model.news2vec import informative_mask
     art = art.copy()
     art["entry"] = _entry_days(art["date"], trading_index)
     art = art[art["entry"].notna()]
     keep = art.index.to_numpy()
     keep = keep[keep < len(emb)]  # embeddings may lag a fresh parquet
-    return art.loc[keep].reset_index(drop=True), emb[keep]
+    art, emb = art.loc[keep].reset_index(drop=True), emb[keep]
+    inf = informative_mask(art)
+    return art.loc[inf].reset_index(drop=True), emb[inf]
 
 
 def _src_bucket(s: str) -> int:
