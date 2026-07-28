@@ -243,7 +243,21 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
     except Exception as exc:
         log.warning("Brain weights unavailable (%s)", exc)
 
-    ranked = sorted((h for h in headlines if "score" in h),
+    # The most-positive/negative display only admits headlines that are
+    # (a) linkable, (b) from news sources rather than StockTwits chatter
+    # (posts have no URL and VADER misreads their sarcasm; the bull/bear
+    # tally covers that crowd), and (c) visibly about NVDA - Yahoo's
+    # ticker feed in particular carries general-market stories that would
+    # otherwise top the list on sentiment alone. The full unfiltered
+    # scrape still feeds the advisory composite above.
+    import re
+    relevant = re.compile(
+        r"(?i)\b(nvidia|nvda|jensen|geforce|rtx|blackwell|hopper|rubin"
+        r"|cuda|h100|h200|b200|gb200|gpu)\b")
+    ranked = sorted((h for h in headlines
+                     if "score" in h and h.get("url")
+                     and h.get("source") != "stocktwits"
+                     and relevant.search(str(h.get("title", "")))),
                     key=lambda h: h["score"])
     signal = {
         "generated_at": pd.Timestamp.now().isoformat(timespec="seconds"),
@@ -263,12 +277,15 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         "stocktwits_bears": len(st) - bulls,
         "advisory_composite": round(float(advisory), 4),
         "brain_top_news": brain_news,
+        # sign is required, not just rank: with a small eligible pool the
+        # old top/bottom-3 slicing could list one headline on both sides,
+        # or crown a negative headline "most positive"
         "most_negative": [{k: h.get(k) for k in ("title", "source", "score",
                                                  "url")}
-                          for h in ranked[:3]],
+                          for h in ranked if h["score"] < -0.1][:3],
         "most_positive": [{k: h.get(k) for k in ("title", "source", "score",
                                                  "url")}
-                          for h in ranked[-3:][::-1]],
+                          for h in reversed(ranked) if h["score"] > 0.1][:3],
     }
     out_path = config.ARTIFACTS / f"signal_{next_day.strftime('%Y%m%d')}.json"
     out_path.write_text(json.dumps(signal, indent=2), encoding="utf-8")
@@ -307,13 +324,17 @@ def format_signal(signal: dict) -> str:
               f"{a['headline'][:60]}"
               for a in signal.get("brain_top_news", [])[:5]],
         ] if signal.get("brain_top_news") else []),
-        "-" * 62,
-        "  Most positive headlines:",
-        *[f"    {h['score']:+.2f} [{h['source']}] {h['title'][:70]}"
-          for h in signal["most_positive"]],
-        "  Most negative headlines:",
-        *[f"    {h['score']:+.2f} [{h['source']}] {h['title'][:70]}"
-          for h in signal["most_negative"]],
+        *([
+            "-" * 62,
+            "  Most positive headlines:",
+            *[f"    {h['score']:+.2f} [{h['source']}] {h['title'][:70]}"
+              for h in signal["most_positive"]],
+        ] if signal.get("most_positive") else []),
+        *([
+            "  Most negative headlines:",
+            *[f"    {h['score']:+.2f} [{h['source']}] {h['title'][:70]}"
+              for h in signal["most_negative"]],
+        ] if signal.get("most_negative") else []),
         "=" * 62,
         "  Educational tool - not financial advice. You decide the trade.",
         "=" * 62,

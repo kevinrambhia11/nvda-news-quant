@@ -300,13 +300,25 @@ with tab_today:
             }), height=260), use_container_width=True)
 
     if signal:
-        cpos, cneg = st.columns(2)
-        with cpos:
-            st.subheader("Most positive headlines")
-            headline_lines(signal["most_positive"])
-        with cneg:
-            st.subheader("Most negative headlines")
-            headline_lines(signal["most_negative"])
+        # Only linkable, NVDA-relevant news headlines are shown here (the
+        # signal filters at generation time; the url guard also covers
+        # archived signals written before that filter existed).
+        pos = [h for h in signal.get("most_positive", []) if h.get("url")]
+        neg = [h for h in signal.get("most_negative", []) if h.get("url")]
+        if pos or neg:
+            cpos, cneg = st.columns(2)
+            with cpos:
+                st.subheader("Most positive headlines")
+                headline_lines(pos)
+                if not pos:
+                    st.caption("No clearly positive NVDA headline in the "
+                               "latest scrape.")
+            with cneg:
+                st.subheader("Most negative headlines")
+                headline_lines(neg)
+                if not neg:
+                    st.caption("No clearly negative NVDA headline in the "
+                               "latest scrape.")
 
 
 # ---------------------------------------------------------------------------

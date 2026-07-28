@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-28T11:42:04",
+  "generated_at": "2026-07-28T16:08:56",
   "ticker": "NVDA",
   "entry_day": "2026-07-28",
   "last_close": 196.51,
-  "model_trained_through": "2026-07-20",
-  "model_prob_up": 0.9153,
-  "prob_big_move": 0.5288,
+  "model_trained_through": "2026-07-24",
+  "model_prob_up": 0.6067,
+  "prob_big_move": 0.5089,
   "big_move_threshold": 0.0135,
   "action": "BUY / HOLD LONG",
-  "headline_sentiment": 0.04,
-  "headline_count": 189,
+  "headline_sentiment": 0.0144,
+  "headline_count": 201,
   "headlines_degraded": false,
   "sentiment_backend": "vader",
-  "stocktwits_bulls": 4,
-  "stocktwits_bears": 6,
-  "advisory_composite": 0.7967,
+  "stocktwits_bulls": 7,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.5768,
   "brain_top_news": [
     {
       "headline": "isolated shower or storm overnight",
@@ -54,42 +54,42 @@
   ],
   "most_negative": [
     {
-      "title": "$NVDA Omg. Shut UP.. Shut. The. F Up. None of any of these fears ppl make up have come to fruition. NONE. You\u2019re just wrecking people\u2019s lives speculating on something that might happen one day, if a frog had wings. So just SHUT the f up! \u2026 Have you actually used an Asian model?! \u2026 I just discovered personally this is pure propaganda bullshit!! It\u2019s not close to any US model when you really get to using it a while. Yes it uses less tokens, BUT It takes forever to provide an answer,  and you have to remind it of the context or facts 100 times every 3 minutes, I wanted to get a mallet and smash it. Not to mention it requires a highly significant more amount of memory, higher processing and data throughput. Which STILL COSTS MORE. They are so far from being real competition to any other AI model it\u2019s not even funny. \n\nNone of these damn fears ppl have been making up has happened.  Yall just spread nonsense and fuck up people lives messing with their wealth. So just shut the f up!",
-      "source": "stocktwits",
-      "score": -0.886,
-      "url": null
+      "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.612,
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5"
     },
     {
-      "title": "$NVDA The headline sounds worse than the facts. \n\nTaiwan has reportedly detained an NVIDIA employee as part of a wider AI chip smuggling investigation. At this stage, there is no public allegation that NVIDIA itself is the target. Markets hate uncertainty, so expect volatility, but the long-term AI story hasn\u2019t changed based on what\u2019s been reported. \ud83d\udcc8",
-      "source": "stocktwits",
-      "score": -0.823,
-      "url": null
+      "title": "Nvidia drops 4%, leading chip stocks lower amid renewed worries of circular financing",
+      "source": "finviz",
+      "score": -0.612,
+      "url": "https://finance.yahoo.com/markets/article/nvidia-drops-4-leading-chip-stocks-lower-amid-renewed-worries-of-circular-financing-193309793.html"
     },
     {
-      "title": "Ukraine dismisses Iranian threats as Caspian Sea strike directly links wars - BBC",
-      "source": "BBC",
-      "score": -0.784,
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5mNzZHRE1BRG8ycmNVNFVoaHVuc0NGSFVkZlVOYVZzZHAxTUlFVXFVNGs5QV9uZ0FJd3VYR2ZQRngyWDNWOG1TbVhkWjNtWDEzNW9WNzk1VzFSSlF4?oc=5"
+      "title": "\u201cI Saw the Movie. I Don\u2019t Want the Sequel.\u201d Jim Cramer Warns Nvidia\u2019s Latest $250 Billion Deal Is How Companies Died in Dot Com Bubble - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.572,
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNXZzbDhDbWc3X29tbkxlZmRjaExBc3hMQzNZWWRQNjFpNWRIV0o5VmN0LUJEQkdua0VSWUFHV21FY1JfX0xBTnJwS01uTm5sS2pKd3NEc0lDNmZGdHB5S0RNRUt0eXk3QWVUUklWa3BGU1J1ZGloVHZGZ2lmWFQzOVJnSktKR0Y2bWJ3M0pn?oc=5"
     }
   ],
   "most_positive": [
     {
-      "title": "Tether AI is building the Stable Intelligence layer, a highly efficient platform designed to scale on edge devices, made for the people - TechCrunch",
-      "source": "TechCrunch",
-      "score": 0.812,
-      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQQVMyYXMteXBDa3FxR1NoMlE2U1VEVkdWZ3NyNEY1Rmw2ZENEUG5YZ29uaUNfQWx4NTR1SmltbVZXM2JEM3NvcVI0WGZ6YWFIeXpJRTZvdEpEb3hzNmNKRU0zZlVlUmdqVVZBbDlpZ3dhZ1FTM1Z1S2JjdThtWWJzUFZPQW90NTh5dDVwa0QxOHpORVZzeEt5aE8wc0w1cTU1bWhyNzVmQ08xN2tsUzdIX2FVVnRVM3lMRExEZWpibWtPem5US1MzN1JmaWhyblQ5N2hHbXF6c25MM1lhU3NYd0l0NV9jMXJ3akNmbDZlUGNqTV9yV3pjdmlwWU5zdkNf?oc=5"
-    },
-    {
-      "title": "The Dow Had a Good Day. 2 Stealth AI Stocks Kept It From Being Great.",
-      "source": "finviz",
-      "score": 0.772,
-      "url": "https://www.barrons.com/livecoverage/stock-market-news-today-072726/card/the-dow-had-a-good-day-2-stealth-ai-stocks-kept-it-from-being-great--ClMUjx4tINeAz8PEgos5?mod=bar_FV"
-    },
-    {
       "title": "Dow Jones Futures: U.S.-Iran Peace Hopes Send Oil Prices Plunging; Nvidia, Micron, Sandisk, SpaceX, Tesla Sell Off",
-      "source": "yahoo_rss",
+      "source": "finviz",
       "score": 0.743,
-      "url": "https://finance.yahoo.com/m/f6a0377f-20ac-3aa0-a98d-a97312e14871/dow-jones-futures%3A-u.s.-iran.html?.tsrc=rss"
+      "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-us-iran-oil-prices-nvidia-micron-sandisk-spacex-tesla?mod=IBD_FV"
+    },
+    {
+      "title": "Nvidia Stock: Buy Right Now or Wait for a Better Opportunity? - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.691,
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOWg3d1BiT1J4UDB1RHI2Yjh6VWxvYUNyWk5KS3lCRkVkcEtkX1llakptM0dOOWpEeWpQYkM5UXZPTmJXdDl2bi1iMjZPYndsZndoN3YzdlhjTnl1NmloQVV3TjBWdDdadHBYQjdmMTBnS0ZGSkRYTHdvUFRYVW5qWloyT1pnTTJKTDdPOHBxUFlvR2d2?oc=5"
+    },
+    {
+      "title": "Nvidia leads new Open Secure AI Alliance to build shared cybersecurity defenses",
+      "source": "finviz",
+      "score": 0.67,
+      "url": "https://www.digitimes.com/news/a20260728VL201/cybersecurity-nvidia-alliance-security-technology.html"
     }
   ]
 }
