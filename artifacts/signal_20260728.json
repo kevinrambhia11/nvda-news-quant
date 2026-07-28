@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-07-28T11:42:04",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-28",
+  "last_close": 196.51,
+  "model_trained_through": "2026-07-20",
+  "model_prob_up": 0.9153,
+  "prob_big_move": 0.5288,
+  "big_move_threshold": 0.0135,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.04,
+  "headline_count": 189,
+  "headlines_degraded": false,
+  "sentiment_backend": "vader",
+  "stocktwits_bulls": 4,
+  "stocktwits_bears": 6,
+  "advisory_composite": 0.7967,
+  "brain_top_news": [
+    {
+      "headline": "isolated shower or storm overnight",
+      "source": "witn.com",
+      "category": "hyperscalers",
+      "weight": 0.0259,
+      "impact": 0.02181
+    },
+    {
+      "headline": "oil prices fall iran war",
+      "source": "cnn.com",
+      "category": "brokers",
+      "weight": 0.006,
+      "impact": 0.016
+    },
+    {
+      "headline": "oil prices fall iran war",
+      "source": "cnn.com",
+      "category": "brokers",
+      "weight": 0.006,
+      "impact": 0.016
+    },
+    {
+      "headline": "breaking bi governor perry warjiyo resigns",
+      "source": "thejakartapost.com",
+      "category": "macro",
+      "weight": 0.0058,
+      "impact": 0.03227
+    },
+    {
+      "headline": "shein flags tariff hits after quarterly loss ahead of hong kong ipo",
+      "source": "freemalaysiatoday.com",
+      "category": "brokers",
+      "weight": 0.0039,
+      "impact": -0.0633
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "$NVDA Omg. Shut UP.. Shut. The. F Up. None of any of these fears ppl make up have come to fruition. NONE. You\u2019re just wrecking people\u2019s lives speculating on something that might happen one day, if a frog had wings. So just SHUT the f up! \u2026 Have you actually used an Asian model?! \u2026 I just discovered personally this is pure propaganda bullshit!! It\u2019s not close to any US model when you really get to using it a while. Yes it uses less tokens, BUT It takes forever to provide an answer,  and you have to remind it of the context or facts 100 times every 3 minutes, I wanted to get a mallet and smash it. Not to mention it requires a highly significant more amount of memory, higher processing and data throughput. Which STILL COSTS MORE. They are so far from being real competition to any other AI model it\u2019s not even funny. \n\nNone of these damn fears ppl have been making up has happened.  Yall just spread nonsense and fuck up people lives messing with their wealth. So just shut the f up!",
+      "source": "stocktwits",
+      "score": -0.886,
+      "url": null
+    },
+    {
+      "title": "$NVDA The headline sounds worse than the facts. \n\nTaiwan has reportedly detained an NVIDIA employee as part of a wider AI chip smuggling investigation. At this stage, there is no public allegation that NVIDIA itself is the target. Markets hate uncertainty, so expect volatility, but the long-term AI story hasn\u2019t changed based on what\u2019s been reported. \ud83d\udcc8",
+      "source": "stocktwits",
+      "score": -0.823,
+      "url": null
+    },
+    {
+      "title": "Ukraine dismisses Iranian threats as Caspian Sea strike directly links wars - BBC",
+      "source": "BBC",
+      "score": -0.784,
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5mNzZHRE1BRG8ycmNVNFVoaHVuc0NGSFVkZlVOYVZzZHAxTUlFVXFVNGs5QV9uZ0FJd3VYR2ZQRngyWDNWOG1TbVhkWjNtWDEzNW9WNzk1VzFSSlF4?oc=5"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Tether AI is building the Stable Intelligence layer, a highly efficient platform designed to scale on edge devices, made for the people - TechCrunch",
+      "source": "TechCrunch",
+      "score": 0.812,
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQQVMyYXMteXBDa3FxR1NoMlE2U1VEVkdWZ3NyNEY1Rmw2ZENEUG5YZ29uaUNfQWx4NTR1SmltbVZXM2JEM3NvcVI0WGZ6YWFIeXpJRTZvdEpEb3hzNmNKRU0zZlVlUmdqVVZBbDlpZ3dhZ1FTM1Z1S2JjdThtWWJzUFZPQW90NTh5dDVwa0QxOHpORVZzeEt5aE8wc0w1cTU1bWhyNzVmQ08xN2tsUzdIX2FVVnRVM3lMRExEZWpibWtPem5US1MzN1JmaWhyblQ5N2hHbXF6c25MM1lhU3NYd0l0NV9jMXJ3akNmbDZlUGNqTV9yV3pjdmlwWU5zdkNf?oc=5"
+    },
+    {
+      "title": "The Dow Had a Good Day. 2 Stealth AI Stocks Kept It From Being Great.",
+      "source": "finviz",
+      "score": 0.772,
+      "url": "https://www.barrons.com/livecoverage/stock-market-news-today-072726/card/the-dow-had-a-good-day-2-stealth-ai-stocks-kept-it-from-being-great--ClMUjx4tINeAz8PEgos5?mod=bar_FV"
+    },
+    {
+      "title": "Dow Jones Futures: U.S.-Iran Peace Hopes Send Oil Prices Plunging; Nvidia, Micron, Sandisk, SpaceX, Tesla Sell Off",
+      "source": "yahoo_rss",
+      "score": 0.743,
+      "url": "https://finance.yahoo.com/m/f6a0377f-20ac-3aa0-a98d-a97312e14871/dow-jones-futures%3A-u.s.-iran.html?.tsrc=rss"
+    }
+  ]
+}
