@@ -205,11 +205,14 @@
   </div>
 
   <h2 id="diagram">Architecture diagram</h2>
-  <p class="sub">Data flows top to bottom. Colors match the status labels used
-  throughout this page.</p>
-  <svg viewBox="0 0 720 552" width="100%" role="img" style="max-width:860px; display:block"
+  <p class="sub">Data flows top to bottom; every solid arrow runs daily at 17:00 IST -
+  the data passes <em>through</em> the neural layer with its weights frozen. Dashed
+  arrows are the exceptions: the Friday re-education (the only time weights change)
+  and the grade-yesterday loop. Colors match the status labels used throughout this
+  page.</p>
+  <svg viewBox="0 0 720 660" width="100%" role="img" style="max-width:860px; display:block"
        xmlns="http://www.w3.org/2000/svg">
-    <title>System architecture: sources to storage to features to three models to outputs</title>
+    <title>System architecture: sources through the neural layer to features, models, outputs and the grading loop</title>
     <defs>
       <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6"
               markerHeight="6" orient="auto">
@@ -238,71 +241,91 @@
       <text x="643" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">live headlines</text>
       <text x="643" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">context only</text>
 
-      <line x1="360" y1="54" x2="360" y2="86" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="360" y1="54" x2="360" y2="80" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <text x="372" y="72" style="fill:var(--muted); font-size:10px">new headlines, every day</text>
 
-      <rect x="14" y="90" width="220" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
-      <text x="124" y="109" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">local caches</text>
-      <text x="124" y="124" text-anchor="middle" style="fill:var(--muted); font-size:10px">complete days only</text>
+      <rect x="14" y="84" width="180" height="50" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="104" y="104" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">local caches</text>
+      <text x="104" y="120" text-anchor="middle" style="fill:var(--muted); font-size:10px">prices &#183; tone &#183; events</text>
 
-      <rect x="250" y="90" width="220" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
-      <text x="360" y="109" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">embeddings</text>
-      <text x="360" y="124" text-anchor="middle" style="fill:var(--muted); font-size:10px">MiniLM, 384 per headline</text>
+      <rect x="210" y="84" width="300" height="50" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="360" y="104" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">MiniLM (frozen) &#8594; vector database</text>
+      <text x="360" y="120" text-anchor="middle" style="fill:var(--muted); font-size:10px">each headline &#8594; 384 numbers &#183; grows daily</text>
 
-      <rect x="486" y="90" width="220" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
-      <text x="596" y="109" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">learning log</text>
-      <text x="596" y="124" text-anchor="middle" style="fill:var(--muted); font-size:10px">graded forecasts</text>
+      <rect x="526" y="84" width="180" height="50" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="616" y="104" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">learning log</text>
+      <text x="616" y="120" text-anchor="middle" style="fill:var(--muted); font-size:10px">graded forecasts</text>
 
-      <line x1="360" y1="136" x2="360" y2="168" style="stroke:var(--muted)" marker-end="url(#arw)"/>
-      <text x="372" y="157" style="fill:var(--muted); font-size:10px">informative filter: on-topic, deduped</text>
+      <line x1="360" y1="134" x2="360" y2="160" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <text x="372" y="152" style="fill:var(--muted); font-size:10px">informative filter: on-topic, deduped</text>
 
-      <rect x="60" y="172" width="600" height="58" rx="7" style="fill:var(--card); stroke:var(--line)"/>
-      <text x="360" y="194" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">feature matrix - one leak-free row per trading day (~53 numbers)</text>
-      <text x="360" y="212" text-anchor="middle" style="fill:var(--muted); font-size:10px">market &#183; events &#183; tone &#183; article vectors &#183; news memory (decay) &#183; brain weights</text>
+      <rect x="60" y="164" width="600" height="56" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="360" y="185" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">news brain - reads every article daily, weights frozen</text>
+      <text x="360" y="203" text-anchor="middle" style="fill:var(--muted); font-size:10px">NewsNet attention weight per article &#183; ridge impact score &#183; decay memory (3 / 10 day)</text>
 
-      <line x1="129" y1="230" x2="129" y2="262" style="stroke:var(--muted)" marker-end="url(#arw)"/>
-      <line x1="360" y1="230" x2="360" y2="262" style="stroke:var(--muted)" marker-end="url(#arw)"/>
-      <line x1="591" y1="230" x2="591" y2="262" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="360" y1="220" x2="360" y2="246" style="stroke:var(--muted)" marker-end="url(#arw)"/>
 
-      <rect x="24" y="266" width="210" height="62" rx="7" style="fill:var(--green-soft); stroke:var(--green)"/>
-      <text x="129" y="288" text-anchor="middle" style="fill:var(--green); font-size:11px; font-weight:700">volatility - HAR</text>
-      <text x="129" y="303" text-anchor="middle" style="fill:var(--muted); font-size:10px">how big is tomorrow?</text>
-      <text x="129" y="317" text-anchor="middle" style="fill:var(--muted); font-size:10px">R&#178; 0.30 / 0.42</text>
+      <rect x="60" y="250" width="600" height="56" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="360" y="271" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">feature matrix - one leak-free row per trading day (~53 numbers)</text>
+      <text x="360" y="289" text-anchor="middle" style="fill:var(--muted); font-size:10px">market &#183; events &#183; tone &#183; article scores &#183; news memory &#183; brain weights</text>
 
-      <rect x="255" y="266" width="210" height="62" rx="7" style="fill:var(--amber-soft); stroke:var(--amber)"/>
-      <text x="360" y="288" text-anchor="middle" style="fill:var(--amber); font-size:11px; font-weight:700">magnitude - trees</text>
-      <text x="360" y="303" text-anchor="middle" style="fill:var(--muted); font-size:10px">bigger than normal?</text>
-      <text x="360" y="317" text-anchor="middle" style="fill:var(--muted); font-size:10px">AUC 0.533 &#8594; 0.556 with news</text>
+      <line x1="129" y1="306" x2="129" y2="332" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="360" y1="306" x2="360" y2="332" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="591" y1="306" x2="591" y2="332" style="stroke:var(--muted)" marker-end="url(#arw)"/>
 
-      <rect x="486" y="266" width="210" height="62" rx="7" style="fill:var(--slate-soft); stroke:var(--slate)"/>
-      <text x="591" y="288" text-anchor="middle" style="fill:var(--slate); font-size:11px; font-weight:700">direction - trees</text>
-      <text x="591" y="303" text-anchor="middle" style="fill:var(--muted); font-size:10px">up or down?</text>
-      <text x="591" y="317" text-anchor="middle" style="fill:var(--muted); font-size:10px">no ranking skill on holdout</text>
+      <rect x="24" y="336" width="210" height="62" rx="7" style="fill:var(--green-soft); stroke:var(--green)"/>
+      <text x="129" y="358" text-anchor="middle" style="fill:var(--green); font-size:11px; font-weight:700">volatility - HAR</text>
+      <text x="129" y="373" text-anchor="middle" style="fill:var(--muted); font-size:10px">how big is tomorrow?</text>
+      <text x="129" y="387" text-anchor="middle" style="fill:var(--muted); font-size:10px">R&#178; 0.30 / 0.42</text>
 
-      <line x1="129" y1="328" x2="129" y2="360" style="stroke:var(--muted)" marker-end="url(#arw)"/>
-      <line x1="360" y1="328" x2="360" y2="360" style="stroke:var(--muted)" marker-end="url(#arw)"/>
-      <line x1="591" y1="328" x2="591" y2="360" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <rect x="255" y="336" width="210" height="62" rx="7" style="fill:var(--amber-soft); stroke:var(--amber)"/>
+      <text x="360" y="358" text-anchor="middle" style="fill:var(--amber); font-size:11px; font-weight:700">magnitude - trees</text>
+      <text x="360" y="373" text-anchor="middle" style="fill:var(--muted); font-size:10px">bigger than normal?</text>
+      <text x="360" y="387" text-anchor="middle" style="fill:var(--muted); font-size:10px">AUC 0.533 &#8594; 0.556 with news</text>
 
-      <rect x="24" y="364" width="210" height="58" rx="7" style="fill:var(--green-soft); stroke:var(--green)"/>
-      <text x="129" y="386" text-anchor="middle" style="fill:var(--green); font-size:11px; font-weight:700">position size + VaR</text>
-      <text x="129" y="402" text-anchor="middle" style="fill:var(--muted); font-size:10px">sizes real risk</text>
+      <rect x="486" y="336" width="210" height="62" rx="7" style="fill:var(--slate-soft); stroke:var(--slate)"/>
+      <text x="591" y="358" text-anchor="middle" style="fill:var(--slate); font-size:11px; font-weight:700">direction - trees</text>
+      <text x="591" y="373" text-anchor="middle" style="fill:var(--muted); font-size:10px">up or down?</text>
+      <text x="591" y="387" text-anchor="middle" style="fill:var(--muted); font-size:10px">no ranking skill on holdout</text>
 
-      <rect x="255" y="364" width="210" height="58" rx="7" style="fill:var(--amber-soft); stroke:var(--amber)"/>
-      <text x="360" y="386" text-anchor="middle" style="fill:var(--amber); font-size:11px; font-weight:700">P(big move)</text>
-      <text x="360" y="402" text-anchor="middle" style="fill:var(--muted); font-size:10px">under evaluation</text>
+      <line x1="129" y1="398" x2="129" y2="424" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="360" y1="398" x2="360" y2="424" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="591" y1="398" x2="591" y2="424" style="stroke:var(--muted)" marker-end="url(#arw)"/>
 
-      <rect x="486" y="364" width="210" height="58" rx="7" style="fill:var(--slate-soft); stroke:var(--slate)"/>
-      <text x="591" y="386" text-anchor="middle" style="fill:var(--slate); font-size:11px; font-weight:700">advisory direction</text>
-      <text x="591" y="402" text-anchor="middle" style="fill:var(--muted); font-size:10px">shown, not trusted</text>
+      <rect x="24" y="428" width="210" height="56" rx="7" style="fill:var(--green-soft); stroke:var(--green)"/>
+      <text x="129" y="450" text-anchor="middle" style="fill:var(--green); font-size:11px; font-weight:700">position size + VaR</text>
+      <text x="129" y="466" text-anchor="middle" style="fill:var(--muted); font-size:10px">sizes real risk</text>
 
-      <line x1="129" y1="422" x2="352" y2="466" style="stroke:var(--muted)" marker-end="url(#arw)"/>
-      <line x1="360" y1="422" x2="360" y2="466" style="stroke:var(--muted)" marker-end="url(#arw)"/>
-      <line x1="591" y1="422" x2="368" y2="466" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <rect x="255" y="428" width="210" height="56" rx="7" style="fill:var(--amber-soft); stroke:var(--amber)"/>
+      <text x="360" y="450" text-anchor="middle" style="fill:var(--amber); font-size:11px; font-weight:700">P(big move)</text>
+      <text x="360" y="466" text-anchor="middle" style="fill:var(--muted); font-size:10px">under evaluation</text>
 
-      <rect x="180" y="470" width="360" height="52" rx="7" style="fill:var(--card); stroke:var(--line)"/>
-      <text x="360" y="491" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">published pre-open, archived, graded</text>
-      <text x="360" y="507" text-anchor="middle" style="fill:var(--muted); font-size:10px">track record: the one test that cannot be revised</text>
+      <rect x="486" y="428" width="210" height="56" rx="7" style="fill:var(--slate-soft); stroke:var(--slate)"/>
+      <text x="591" y="450" text-anchor="middle" style="fill:var(--slate); font-size:11px; font-weight:700">advisory direction</text>
+      <text x="591" y="466" text-anchor="middle" style="fill:var(--muted); font-size:10px">shown, not trusted</text>
 
-      <text x="360" y="544" text-anchor="middle" style="fill:var(--muted); font-size:10px">daily 17:00 IST: apply only &#183; Fridays 15:00 IST: retrain everything</text>
+      <line x1="129" y1="484" x2="352" y2="524" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="360" y1="484" x2="360" y2="524" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="591" y1="484" x2="368" y2="524" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+
+      <rect x="180" y="528" width="360" height="52" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="360" y="549" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">published pre-open, archived, graded</text>
+      <text x="360" y="565" text-anchor="middle" style="fill:var(--muted); font-size:10px">track record: the one test that cannot be revised</text>
+
+      <path d="M540,554 L688,554 L688,150 L616,150 L616,138"
+            style="fill:none; stroke:var(--muted); stroke-dasharray:5 4" marker-end="url(#arw)"/>
+      <text x="684" y="350" text-anchor="middle" style="fill:var(--muted); font-size:10px" transform="rotate(-90 694 350)">graded next morning</text>
+
+      <rect x="14" y="596" width="230" height="50" rx="7" style="fill:var(--card); stroke:var(--muted); stroke-dasharray:5 4"/>
+      <text x="129" y="616" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">Friday 15:00 re-education</text>
+      <text x="129" y="632" text-anchor="middle" style="fill:var(--muted); font-size:10px">the only time weights change</text>
+      <path d="M40,596 L40,192 L56,192"
+            style="fill:none; stroke:var(--muted); stroke-dasharray:5 4" marker-end="url(#arw)"/>
+      <path d="M129,596 L129,570 L20,570 L20,472 L21,472"
+            style="fill:none; stroke:var(--muted); stroke-dasharray:5 4" marker-end="url(#arw)"/>
+
+      <text x="290" y="616" style="fill:var(--muted); font-size:10px">solid arrows = the daily 17:00 flow: data passes THROUGH</text>
+      <text x="290" y="632" style="fill:var(--muted); font-size:10px">frozen models &#183; dashed = weight changes + grading loop</text>
     </g>
   </svg>
 
