@@ -933,12 +933,15 @@ with tab_arch:
     if arch_path.exists():
         import streamlit.components.v1 as components
         # height=/scrolling= are only the pre-script fallback: the shim
-        # resizes the frame to the true content height (~14k, taller as
-        # cards stack or <details> open) and switches scrolling off once it
-        # fits. scrolling stays True here so that if the shim cannot run at
-        # all, the panel degrades to its own scrollbar rather than clipping
-        # the tail of the guide.
+        # grows the frame to the true content height. The fallback must sit
+        # BELOW typical content, not above it: Streamlit reserves this many
+        # pixels for the panel wrapper and that reservation resists inline
+        # overrides, so a too-large fallback leaves thousands of pixels of
+        # dead scroll after the footer (the frame growing LARGER than the
+        # wrapper is fine - ancestors are overflow:visible and the page
+        # scrolls to the frame's real bottom). scrolling=True keeps the
+        # no-JS degradation a scrollbar rather than clipped content.
         components.html(arch_path.read_text(encoding="utf-8") + ARCH_AUTOFIT,
-                        height=13200, scrolling=True)
+                        height=4200, scrolling=True)
     else:
         st.info("assets/architecture.html missing - pull the latest repo")

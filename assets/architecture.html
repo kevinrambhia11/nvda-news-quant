@@ -176,6 +176,7 @@
 
   <nav class="nav">
     <a href="#outputs">Outputs</a>
+    <a href="#diagram">Diagram</a>
     <a href="#data">Data</a>
     <a href="#features">Features</a>
     <a href="#news">News representation</a>
@@ -202,6 +203,108 @@
       <p>Probability of an up move. Nine model designs failed to beat holding the stock,
       so this is printed as context and not used for sizing.</p></div>
   </div>
+
+  <h2 id="diagram">Architecture diagram</h2>
+  <p class="sub">Data flows top to bottom. Colors match the status labels used
+  throughout this page.</p>
+  <svg viewBox="0 0 720 552" width="100%" role="img" style="max-width:860px; display:block"
+       xmlns="http://www.w3.org/2000/svg">
+    <title>System architecture: sources to storage to features to three models to outputs</title>
+    <defs>
+      <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6"
+              markerHeight="6" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/>
+      </marker>
+    </defs>
+
+    <g style="font-family:ui-monospace,Consolas,monospace">
+      <rect x="10" y="8" width="130" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="75" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">GDELT tone</text>
+      <text x="75" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">daily, 2017+</text>
+
+      <rect x="152" y="8" width="130" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="217" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">article archive</text>
+      <text x="217" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">710k, 6 categories</text>
+
+      <rect x="294" y="8" width="130" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="359" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">prices</text>
+      <text x="359" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">NVDA + QQQ</text>
+
+      <rect x="436" y="8" width="130" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="501" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">earnings dates</text>
+      <text x="501" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">39 verified</text>
+
+      <rect x="578" y="8" width="130" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="643" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">live headlines</text>
+      <text x="643" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">context only</text>
+
+      <line x1="360" y1="54" x2="360" y2="86" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+
+      <rect x="14" y="90" width="220" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="124" y="109" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">local caches</text>
+      <text x="124" y="124" text-anchor="middle" style="fill:var(--muted); font-size:10px">complete days only</text>
+
+      <rect x="250" y="90" width="220" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="360" y="109" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">embeddings</text>
+      <text x="360" y="124" text-anchor="middle" style="fill:var(--muted); font-size:10px">MiniLM, 384 per headline</text>
+
+      <rect x="486" y="90" width="220" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="596" y="109" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">learning log</text>
+      <text x="596" y="124" text-anchor="middle" style="fill:var(--muted); font-size:10px">graded forecasts</text>
+
+      <line x1="360" y1="136" x2="360" y2="168" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <text x="372" y="157" style="fill:var(--muted); font-size:10px">informative filter: on-topic, deduped</text>
+
+      <rect x="60" y="172" width="600" height="58" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="360" y="194" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">feature matrix - one leak-free row per trading day (~53 numbers)</text>
+      <text x="360" y="212" text-anchor="middle" style="fill:var(--muted); font-size:10px">market &#183; events &#183; tone &#183; article vectors &#183; news memory (decay) &#183; brain weights</text>
+
+      <line x1="129" y1="230" x2="129" y2="262" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="360" y1="230" x2="360" y2="262" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="591" y1="230" x2="591" y2="262" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+
+      <rect x="24" y="266" width="210" height="62" rx="7" style="fill:var(--green-soft); stroke:var(--green)"/>
+      <text x="129" y="288" text-anchor="middle" style="fill:var(--green); font-size:11px; font-weight:700">volatility - HAR</text>
+      <text x="129" y="303" text-anchor="middle" style="fill:var(--muted); font-size:10px">how big is tomorrow?</text>
+      <text x="129" y="317" text-anchor="middle" style="fill:var(--muted); font-size:10px">R&#178; 0.30 / 0.42</text>
+
+      <rect x="255" y="266" width="210" height="62" rx="7" style="fill:var(--amber-soft); stroke:var(--amber)"/>
+      <text x="360" y="288" text-anchor="middle" style="fill:var(--amber); font-size:11px; font-weight:700">magnitude - trees</text>
+      <text x="360" y="303" text-anchor="middle" style="fill:var(--muted); font-size:10px">bigger than normal?</text>
+      <text x="360" y="317" text-anchor="middle" style="fill:var(--muted); font-size:10px">AUC 0.533 &#8594; 0.556 with news</text>
+
+      <rect x="486" y="266" width="210" height="62" rx="7" style="fill:var(--slate-soft); stroke:var(--slate)"/>
+      <text x="591" y="288" text-anchor="middle" style="fill:var(--slate); font-size:11px; font-weight:700">direction - trees</text>
+      <text x="591" y="303" text-anchor="middle" style="fill:var(--muted); font-size:10px">up or down?</text>
+      <text x="591" y="317" text-anchor="middle" style="fill:var(--muted); font-size:10px">no ranking skill on holdout</text>
+
+      <line x1="129" y1="328" x2="129" y2="360" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="360" y1="328" x2="360" y2="360" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="591" y1="328" x2="591" y2="360" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+
+      <rect x="24" y="364" width="210" height="58" rx="7" style="fill:var(--green-soft); stroke:var(--green)"/>
+      <text x="129" y="386" text-anchor="middle" style="fill:var(--green); font-size:11px; font-weight:700">position size + VaR</text>
+      <text x="129" y="402" text-anchor="middle" style="fill:var(--muted); font-size:10px">sizes real risk</text>
+
+      <rect x="255" y="364" width="210" height="58" rx="7" style="fill:var(--amber-soft); stroke:var(--amber)"/>
+      <text x="360" y="386" text-anchor="middle" style="fill:var(--amber); font-size:11px; font-weight:700">P(big move)</text>
+      <text x="360" y="402" text-anchor="middle" style="fill:var(--muted); font-size:10px">under evaluation</text>
+
+      <rect x="486" y="364" width="210" height="58" rx="7" style="fill:var(--slate-soft); stroke:var(--slate)"/>
+      <text x="591" y="386" text-anchor="middle" style="fill:var(--slate); font-size:11px; font-weight:700">advisory direction</text>
+      <text x="591" y="402" text-anchor="middle" style="fill:var(--muted); font-size:10px">shown, not trusted</text>
+
+      <line x1="129" y1="422" x2="352" y2="466" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="360" y1="422" x2="360" y2="466" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+      <line x1="591" y1="422" x2="368" y2="466" style="stroke:var(--muted)" marker-end="url(#arw)"/>
+
+      <rect x="180" y="470" width="360" height="52" rx="7" style="fill:var(--card); stroke:var(--line)"/>
+      <text x="360" y="491" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">published pre-open, archived, graded</text>
+      <text x="360" y="507" text-anchor="middle" style="fill:var(--muted); font-size:10px">track record: the one test that cannot be revised</text>
+
+      <text x="360" y="544" text-anchor="middle" style="fill:var(--muted); font-size:10px">daily 17:00 IST: apply only &#183; Fridays 15:00 IST: retrain everything</text>
+    </g>
+  </svg>
 
   <h2 id="data">Data</h2>
   <div class="tblwrap">
