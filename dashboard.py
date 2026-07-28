@@ -829,6 +829,6 @@ with tab_arch:
     if arch_path.exists():
         import streamlit.components.v1 as components
         components.html(arch_path.read_text(encoding="utf-8"),
-                        height=3300, scrolling=True)
+                        height=4600, scrolling=True)
     else:
         st.info("assets/architecture.html missing - pull the latest repo")
