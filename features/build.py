@@ -54,6 +54,19 @@ QUALITY_FEATURES = ["quality_tone_1d", "quality_tone_rel",
 DAILY_VOL_FLOOR = 1e-4  # 1bp-per-day floor so logs never blow up on odd bars
 
 
+def decay_ewma(s: pd.Series, half_life: float) -> pd.Series:
+    """Leak-free 'news memory': the value at row d is an exponentially-
+    weighted average of that row and earlier rows, recent weighted more,
+    fading with `half_life`. The half-life is counted in NEWS-OBSERVATION
+    rows, not calendar/trading days: `ignore_na=True` skips rows where this
+    series has no news, so for an always-covered series (NVDA) a half-life
+    of 3 is ~3 trading days, but for an intermittently-covered category
+    (macro/brokers on quiet days) it fades over 3 *covered* days, i.e.
+    somewhat faster in calendar time. The input is already leak-free per
+    row (news through d-1), so its backward EWMA is too."""
+    return s.ewm(halflife=half_life, ignore_na=True, min_periods=1).mean()
+
+
 def garman_klass_vol(px: pd.DataFrame) -> pd.Series:
     """Daily Garman-Klass volatility (per day, not annualized). Uses only
     OHLC ratios, so it is invariant to dividend/split adjustment scaling."""

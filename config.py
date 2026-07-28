@@ -122,6 +122,13 @@ ALLOW_SHORT = False         # shorting off by default
 # Backtest assumptions
 COST_PER_TURNOVER = 0.0005  # 5 bps per unit of position change (slippage + fees)
 
+# News-decay ("news memory") layer: instead of news influencing only the
+# next session and vanishing, a story's weight fades with a half-life (in
+# TRADING days). Two half-lives are built so the tournament can judge which
+# timescale, if any, beats the same-day pulse - near-term attention decay
+# vs slower post-event drift. Leak-free (EWMA over the already-d-1 series).
+DECAY_HALFLIVES = (3, 10)
+
 # Live magnitude head: P(|next-day move| > trailing median), the desk's
 # validated news edge, served calibrated in the daily signal
 MAG_MODEL_PATH = ARTIFACTS / "magnitude_model.joblib"

@@ -53,6 +53,15 @@ def evaluate(dataset: pd.DataFrame) -> str:
     news_flags = {"price-only": False, "price + news2": True}
     candidates = [("price-only", FULL_FEATURES),
                   ("price + news2", FULL_FEATURES + n2)]
+    # news-decay: the same-day pulse features replaced by their fading
+    # memory, so this row is a clean A/B against "price + news2" - does
+    # carrying news forward with a half-life beat the single-day pulse?
+    from model.news2vec import NEWS2_DECAY_FEATURES
+    n2d = [c for c in NEWS2_DECAY_FEATURES
+           if c in data.columns and not data[c].isna().all()]
+    if len(n2d) >= 4:
+        candidates.append(("price + news2-decay", FULL_FEATURES + n2d))
+        news_flags["price + news2-decay"] = True
     try:
         from model.newsnet import NEWSNET_FEATURES
         nn = [c for c in NEWSNET_FEATURES
@@ -95,6 +104,8 @@ def evaluate(dataset: pd.DataFrame) -> str:
               " memorized;"),
              "   hold Brier* = after isotonic recalibration fitted on the"
              " judged window)",
+             "   news2 / news2-decay rows are EXPLORATORY second-use on an"
+             " already-read holdout - the live paper trail is the verdict",
              "=" * 72,
              f"  {'candidate':<16}{'sel AUC':>9}{'sel Brier':>11}"
              f"{'hold AUC':>10}{'hold Brier':>12}{'hold Brier*':>12}"]

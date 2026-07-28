@@ -46,6 +46,15 @@ NEWS2_FEATURES = [
     "n2_cross_divergence", "n2_nvda_count_z", "n2_macro_count_z",
 ]
 
+# News-decay layer: the directional/magnitude LEVEL features carried
+# forward with a fading half-life (config.DECAY_HALFLIVES). Dispersion,
+# novelty and count-z features are not decayed (they are already
+# windowed/relative). Judged against the same-day pulse in the tournament.
+_DECAY_BASE = ["n2_nvda_dir", "n2_nvda_mag", "n2_macro_mag", "n2_hyper_dir",
+               "n2_brokers_dir"]
+NEWS2_DECAY_FEATURES = [f"{b}_d{int(h)}" for b in _DECAY_BASE
+                        for h in config.DECAY_HALFLIVES]
+
 
 def embed_articles(batch_size: int = 512) -> None:
     """One-time (then incremental) encoding of article slugs to vectors."""
@@ -201,6 +210,16 @@ def build_daily_features(nested: bool = False, impact_path=None,
 
     feats.index.name = "date"
     feats = feats.sort_index()
+
+    # news-decay layer: fade each level feature forward (leak-free EWMA
+    # over entry days). Built here so the nested, production and live
+    # feature files all carry identical decay columns.
+    from features.build import decay_ewma
+    for base in _DECAY_BASE:
+        if base in feats.columns:
+            for h in config.DECAY_HALFLIVES:
+                feats[f"{base}_d{int(h)}"] = decay_ewma(feats[base], h)
+
     from data.news import atomic_to_csv
     dest = out_path or (FEATURES_NESTED_PATH if nested else FEATURES_PATH)
     atomic_to_csv(feats, dest)

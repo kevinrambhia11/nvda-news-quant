@@ -87,13 +87,20 @@ def active_candidates(data: pd.DataFrame) -> list:
                       _gbm_deep, None))
         log.info("Quality-sources candidate active with features: %s", qual)
     try:
-        from model.news2vec import NEWS2_FEATURES
+        from model.news2vec import NEWS2_DECAY_FEATURES, NEWS2_FEATURES
         n2 = [c for c in NEWS2_FEATURES
               if c in data.columns and not data[c].isna().all()]
         if len(n2) >= 6:
             cands.append(("GBM deep + news2", FULL_FEATURES + n2,
                           _gbm_deep, None))
             log.info("news2 candidate active with %d features", len(n2))
+        n2d = [c for c in NEWS2_DECAY_FEATURES
+               if c in data.columns and not data[c].isna().all()]
+        if len(n2d) >= 4:
+            cands.append(("GBM deep + news2-decay", FULL_FEATURES + n2d,
+                          _gbm_deep, None))
+            log.info("news2-decay candidate active with %d features",
+                     len(n2d))
     except Exception:
         pass
     try:
@@ -109,7 +116,8 @@ def active_candidates(data: pd.DataFrame) -> list:
     return cands
 
 
-NEWS_CANDIDATES = {"GBM deep + news2", "GBM deep + newsnet"}
+NEWS_CANDIDATES = {"GBM deep + news2", "GBM deep + news2-decay",
+                   "GBM deep + newsnet"}
 
 
 def nested_meta() -> dict | None:
@@ -137,14 +145,16 @@ def nested_data(data: pd.DataFrame) -> pd.DataFrame | None:
     schema-incomplete - callers must then treat news candidates as
     contaminated (a silent partial swap would leave memorized production
     values in the 'clean' frame)."""
-    from model.news2vec import NEWS2_FEATURES, load_news2_features
+    from model.news2vec import (NEWS2_DECAY_FEATURES, NEWS2_FEATURES,
+                                load_news2_features)
     from model.newsnet import NEWSNET_FEATURES, load_newsnet_features
     n2 = load_news2_features(nested=True)
     nn = load_newsnet_features(nested=True)
     if n2 is None or nn is None:
         return None
     out = data.copy()
-    for frame, cols in ((n2, NEWS2_FEATURES), (nn, NEWSNET_FEATURES)):
+    for frame, cols in ((n2, NEWS2_FEATURES + NEWS2_DECAY_FEATURES),
+                        (nn, NEWSNET_FEATURES)):
         missing = [c for c in cols if c in out.columns
                    and c not in frame.columns]
         if missing:
@@ -262,6 +272,8 @@ def select_and_train(dataset: pd.DataFrame) -> str:
               f"< {meta['inner'].date()})" if clean_news else
               "  judged on the full selection window (nested artifacts "
               "absent/stale - news candidates ineligible)"),
+             "  news2 / news2-decay / newsnet rows are EXPLORATORY second-use"
+             " on a spent holdout - the live paper trail is the verdict",
              "=" * 66,
              f"  {'candidate':<20}{'Sharpe':>7}{'+-SE':>6}{'AUC':>8}"
              f"{'acc':>7}{'expo':>7}"]

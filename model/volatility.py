@@ -39,6 +39,11 @@ EWMA_ALPHA = 0.06  # RiskMetrics lambda = 0.94
 # judged with NESTED scorers on the clean window - see model/train.py.
 NEWSVEC_FEATURES = ["nn_mag", "nn_conflict", "n2_nvda_mag", "n2_macro_mag",
                     "n2_nvda_count_z"]
+# Decayed magnitude features (news memory) for the vol decay candidate -
+# vol persistence is where a fading news half-life is most plausible.
+from model.news2vec import NEWS2_DECAY_FEATURES as _N2D
+NEWSVEC_DECAY = [c for c in _N2D if c.startswith(("n2_nvda_mag_d",
+                                                  "n2_macro_mag_d"))]
 
 
 def _linreg_imputed():
@@ -64,7 +69,7 @@ def _join_newsvec(df: pd.DataFrame, nested: bool):
             f = None
         if f is None:
             continue
-        for c in NEWSVEC_FEATURES:
+        for c in NEWSVEC_FEATURES + NEWSVEC_DECAY:
             if c in f.columns:
                 out[c] = f[c].reindex(out.index).to_numpy()
                 cols.append(c)
@@ -168,10 +173,22 @@ def evaluate_horizon(px: pd.DataFrame, bench: pd.DataFrame,
         live_join, nv_live = _join_newsvec(data, nested=False)
         if len(nv) >= 3 and sorted(nv) == sorted(nv_live):
             data_eval, data_live = eval_join, live_join
+            base = [c for c in nv if c in NEWSVEC_FEATURES]
             cands += [("GBM +ev+newsvec",
-                       VOL_FEATURES + EVENT_FEATURES + nv, _gbm),
+                       VOL_FEATURES + EVENT_FEATURES + base, _gbm),
                       ("HAR +ev+newsvec",
-                       HAR_FEATURES + EVENT_FEATURES + nv, _linreg_imputed)]
+                       HAR_FEATURES + EVENT_FEATURES + base, _linreg_imputed)]
+            # decay variant: swap the pulse magnitude features for their
+            # faded memory (keeps nn_mag/conflict/count-z for parity) so
+            # the holdout measures pulse-news vs decayed-news for sizing
+            decay = [c for c in nv if c in NEWSVEC_DECAY] + \
+                [c for c in base if c not in ("n2_nvda_mag", "n2_macro_mag")]
+            if len([c for c in nv if c in NEWSVEC_DECAY]) >= 2:
+                cands += [("GBM +ev+decay",
+                           VOL_FEATURES + EVENT_FEATURES + decay, _gbm),
+                          ("HAR +ev+decay",
+                           HAR_FEATURES + EVENT_FEATURES + decay,
+                           _linreg_imputed)]
         else:
             meta = None
     y = data["y_vol"]
@@ -301,7 +318,8 @@ def forecast() -> dict:
     for horizon, spec in bundle["models"].items():
         ds = build_vol_dataset(px_ext, bench, gdelt, horizon=horizon,
                                earn_dates=earn_dates)
-        nv_used = [c for c in spec["features"] if c in NEWSVEC_FEATURES]
+        nv_used = [c for c in spec["features"]
+                   if c in NEWSVEC_FEATURES + NEWSVEC_DECAY]
         if nv_used:
             ds, _ = _join_newsvec(ds, nested=False)
             absent = [c for c in nv_used if c not in ds.columns]

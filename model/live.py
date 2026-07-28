@@ -320,7 +320,7 @@ def _live_dataset() -> pd.DataFrame:
     from data.news import load_aux_gdelt, load_gdelt_daily
     from data.prices import load_prices
     from features.build import build_dataset
-    from model.news2vec import NEWS2_FEATURES
+    from model.news2vec import NEWS2_DECAY_FEATURES, NEWS2_FEATURES
     from model.newsnet import NEWSNET_FEATURES
 
     px, bench = load_prices()
@@ -336,7 +336,8 @@ def _live_dataset() -> pd.DataFrame:
     live = load_live_features()
     if live is None:
         raise RuntimeError("live features missing - run retrain_brain first")
-    for c in list(NEWS2_FEATURES) + list(NEWSNET_FEATURES):
+    for c in (list(NEWS2_FEATURES) + list(NEWS2_DECAY_FEATURES)
+              + list(NEWSNET_FEATURES)):
         if c in live.columns:
             ds[c] = live[c].reindex(ds.index).to_numpy()
     return ds
