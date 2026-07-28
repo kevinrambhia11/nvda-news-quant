@@ -1,58 +1,64 @@
 {
-  "generated_at": "2026-07-28T16:08:56",
+  "generated_at": "2026-07-28T17:03:02",
   "ticker": "NVDA",
   "entry_day": "2026-07-28",
   "last_close": 196.51,
   "model_trained_through": "2026-07-24",
-  "model_prob_up": 0.6067,
-  "prob_big_move": 0.5089,
+  "model_prob_up": 0.6426,
+  "prob_big_move": 0.4066,
   "big_move_threshold": 0.0135,
   "action": "BUY / HOLD LONG",
-  "headline_sentiment": 0.0144,
+  "headline_sentiment": 0.008,
   "headline_count": 201,
   "headlines_degraded": false,
   "sentiment_backend": "vader",
-  "stocktwits_bulls": 7,
-  "stocktwits_bears": 3,
-  "advisory_composite": 0.5768,
+  "stocktwits_bulls": 10,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.601,
   "brain_top_news": [
     {
-      "headline": "isolated shower or storm overnight",
-      "source": "witn.com",
-      "category": "hyperscalers",
-      "weight": 0.0259,
-      "impact": 0.02181
-    },
-    {
       "headline": "oil prices fall iran war",
       "source": "cnn.com",
       "category": "brokers",
-      "weight": 0.006,
-      "impact": 0.016
-    },
-    {
-      "headline": "oil prices fall iran war",
-      "source": "cnn.com",
-      "category": "brokers",
-      "weight": 0.006,
+      "weight": 0.0081,
       "impact": 0.016
     },
     {
       "headline": "breaking bi governor perry warjiyo resigns",
       "source": "thejakartapost.com",
       "category": "macro",
-      "weight": 0.0058,
+      "weight": 0.0079,
       "impact": 0.03227
     },
     {
       "headline": "shein flags tariff hits after quarterly loss ahead of hong kong ipo",
       "source": "freemalaysiatoday.com",
       "category": "brokers",
-      "weight": 0.0039,
+      "weight": 0.0053,
       "impact": -0.0633
+    },
+    {
+      "headline": "sharron lea anglin",
+      "source": "northcoastjournal.com",
+      "category": "brokers",
+      "weight": 0.0051,
+      "impact": -0.00717
+    },
+    {
+      "headline": "1585233 shein flags tariff hits after posting quarterly loss",
+      "source": "rte.ie",
+      "category": "brokers",
+      "weight": 0.0047,
+      "impact": -0.05247
     }
   ],
   "most_negative": [
+    {
+      "title": "More Than $1 Trillion Wiped Out as China Chip Fears Slam Nvidia, SK Hynix, Micron and Memory Stocks: ETFs - Benzinga",
+      "source": "google_news",
+      "score": -0.66,
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeDBka2FXa2dqSmtqSlg1TUNTQS0yRGJwMGlJSEpReWVWclhaTk9kQm15MHluZWltaXMyZDRXdEx0N25TN1dLTjNKeWthVmtiY1lzVl9nUWdXOHpKNWhVODNZWnhRZnk3bElwQnUzOURtTnE5bEJ3UkxxS0JUdnlkaGlHZjhZMEpxNjRpeEtvOHViNzVrTjJSclBaZ3N0ZEdWekxkMHh3M3d5cW9nSU9ZSw?oc=5"
+    },
     {
       "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
       "source": "google_news",
@@ -64,12 +70,6 @@
       "source": "finviz",
       "score": -0.612,
       "url": "https://finance.yahoo.com/markets/article/nvidia-drops-4-leading-chip-stocks-lower-amid-renewed-worries-of-circular-financing-193309793.html"
-    },
-    {
-      "title": "\u201cI Saw the Movie. I Don\u2019t Want the Sequel.\u201d Jim Cramer Warns Nvidia\u2019s Latest $250 Billion Deal Is How Companies Died in Dot Com Bubble - Yahoo Finance",
-      "source": "google_news",
-      "score": -0.572,
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNXZzbDhDbWc3X29tbkxlZmRjaExBc3hMQzNZWWRQNjFpNWRIV0o5VmN0LUJEQkdua0VSWUFHV21FY1JfX0xBTnJwS01uTm5sS2pKd3NEc0lDNmZGdHB5S0RNRUt0eXk3QWVUUklWa3BGU1J1ZGloVHZGZ2lmWFQzOVJnSktKR0Y2bWJ3M0pn?oc=5"
     }
   ],
   "most_positive": [

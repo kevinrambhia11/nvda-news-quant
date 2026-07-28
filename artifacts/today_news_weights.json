@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-07-28",
-  "generated_at": "2026-07-28T11:40:42",
+  "generated_at": "2026-07-28T17:02:06",
   "articles": [
     {
-      "headline": "isolated shower or storm overnight",
-      "source": "witn.com",
-      "category": "hyperscalers",
-      "weight": 0.0259,
-      "impact": 0.02181
-    },
-    {
       "headline": "oil prices fall iran war",
       "source": "cnn.com",
       "category": "brokers",
-      "weight": 0.006,
-      "impact": 0.016
-    },
-    {
-      "headline": "oil prices fall iran war",
-      "source": "cnn.com",
-      "category": "brokers",
-      "weight": 0.006,
+      "weight": 0.0081,
       "impact": 0.016
     },
     {
       "headline": "breaking bi governor perry warjiyo resigns",
       "source": "thejakartapost.com",
       "category": "macro",
-      "weight": 0.0058,
+      "weight": 0.0079,
       "impact": 0.03227
     },
     {
       "headline": "shein flags tariff hits after quarterly loss ahead of hong kong ipo",
       "source": "freemalaysiatoday.com",
       "category": "brokers",
-      "weight": 0.0039,
+      "weight": 0.0053,
       "impact": -0.0633
     },
     {
       "headline": "sharron lea anglin",
       "source": "northcoastjournal.com",
       "category": "brokers",
-      "weight": 0.0038,
+      "weight": 0.0051,
       "impact": -0.00717
     },
     {
-      "headline": "morning bid markets dare to hope as us iran put war on hold",
-      "source": "933thedrive.com",
-      "category": "competitors",
-      "weight": 0.0036,
-      "impact": -0.01349
+      "headline": "1585233 shein flags tariff hits after posting quarterly loss",
+      "source": "rte.ie",
+      "category": "brokers",
+      "weight": 0.0047,
+      "impact": -0.05247
     },
     {
-      "headline": "best day trips chicago according locals",
-      "source": "islands.com",
-      "category": "hyperscalers",
-      "weight": 0.0036,
-      "impact": 0.07397
+      "headline": "oil falls more than 7 as iran and us pause strikes over strait of hormuz",
+      "source": "irishtimes.com",
+      "category": "brokers",
+      "weight": 0.0047,
+      "impact": 0.02158
     },
     {
-      "headline": "doc inikfhfe8388430.shtml",
-      "source": "sina.com.cn",
+      "headline": "qualcomm alza prezzi chip smartphone wearable pc costeranno settembre 892562.html",
+      "source": "tech.everyeye.it",
       "category": "competitors",
-      "weight": 0.0035,
-      "impact": -0.00539
+      "weight": 0.0047,
+      "impact": 0.00977
     },
     {
-      "headline": "doc inikfhfk9907064.shtml",
-      "source": "sina.com.cn",
+      "headline": "qualcomm price increase could make valves steam frame more expensive than expected",
+      "source": "eteknix.com",
       "category": "competitors",
-      "weight": 0.0035,
-      "impact": -0.00613
+      "weight": 0.0046,
+      "impact": 0.01416
+    },
+    {
+      "headline": "penurie de composants qualcomm repercute ses couts avec une hausse a deux chiffres 499008.htm",
+      "source": "zdnet.fr",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": 0.01101
+    },
+    {
+      "headline": "preco dos celulares vai subir qualcomm prepara reajuste de dois digitos",
+      "source": "canaltech.com.br",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": 0.01312
     }
   ]
 }
