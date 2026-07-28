@@ -1,55 +1,55 @@
 {
-  "generated_at": "2026-07-28T17:03:02",
+  "generated_at": "2026-07-28T17:26:07",
   "ticker": "NVDA",
   "entry_day": "2026-07-28",
   "last_close": 196.51,
   "model_trained_through": "2026-07-24",
-  "model_prob_up": 0.6426,
-  "prob_big_move": 0.4066,
+  "model_prob_up": 0.8111,
+  "prob_big_move": 0.5089,
   "big_move_threshold": 0.0135,
   "action": "BUY / HOLD LONG",
-  "headline_sentiment": 0.008,
-  "headline_count": 201,
+  "headline_sentiment": 0.021,
+  "headline_count": 197,
   "headlines_degraded": false,
   "sentiment_backend": "vader",
-  "stocktwits_bulls": 10,
-  "stocktwits_bears": 2,
-  "advisory_composite": 0.601,
+  "stocktwits_bulls": 4,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.7209,
   "brain_top_news": [
     {
-      "headline": "oil prices fall iran war",
-      "source": "cnn.com",
-      "category": "brokers",
-      "weight": 0.0081,
-      "impact": 0.016
+      "headline": "should you buy broadcom stock while its under 400",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.03854
     },
     {
-      "headline": "breaking bi governor perry warjiyo resigns",
-      "source": "thejakartapost.com",
-      "category": "macro",
-      "weight": 0.0079,
-      "impact": 0.03227
+      "headline": "broadcom dip gift 142000448.html",
+      "source": "yahoo.com",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.03087
     },
     {
-      "headline": "shein flags tariff hits after quarterly loss ahead of hong kong ipo",
-      "source": "freemalaysiatoday.com",
-      "category": "brokers",
-      "weight": 0.0053,
-      "impact": -0.0633
+      "headline": "oil prices sink 4 while asian shares gain as chinese chipmaker cxmt soars in shanghai trading debut",
+      "source": "clickorlando.com",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.02202
     },
     {
-      "headline": "sharron lea anglin",
-      "source": "northcoastjournal.com",
-      "category": "brokers",
-      "weight": 0.0051,
-      "impact": -0.00717
+      "headline": "oil prices sink 5 and asian shares gain as chinese chipmaker cxmt soars in shanghai trading debut",
+      "source": "local10.com",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.01835
     },
     {
-      "headline": "1585233 shein flags tariff hits after posting quarterly loss",
-      "source": "rte.ie",
-      "category": "brokers",
-      "weight": 0.0047,
-      "impact": -0.05247
+      "headline": "south koreas naver jumps 10 cent nvidias 12b investment plan",
+      "source": "asiaone.com",
+      "category": "nvda",
+      "weight": 0.0056,
+      "impact": -0.0144
     }
   ],
   "most_negative": [

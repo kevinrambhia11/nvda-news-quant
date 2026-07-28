@@ -16,10 +16,10 @@
   GBM +events                0.3401   0.2911   0.187
   HAR (classic)              0.3276   0.2762   0.245
   HAR +events                0.3255   0.2687   0.255
-  GBM +ev+newsvec            0.3446   0.3080   0.165
-  HAR +ev+newsvec            0.3379   0.3055   0.197
-  GBM +ev+decay              0.3432   0.3087   0.172
-  HAR +ev+decay              0.3356   0.2962   0.208
+  GBM +ev+newsvec            0.3423   0.3046   0.176
+  HAR +ev+newsvec            0.3368   0.3053   0.202
+  GBM +ev+decay              0.3372   0.2960   0.200
+  HAR +ev+decay              0.3348   0.2969   0.212
   -> selected: HAR +events (best selection QLIKE among fitted candidates)
      untouched holdout: RMSE 0.3585 | QLIKE 0.3069 | R2 0.303
 
@@ -34,10 +34,10 @@
   GBM +events                0.2379   0.1357   0.222
   HAR (classic)              0.2117   0.1062   0.384
   HAR +events                0.2085   0.1018   0.403
-  GBM +ev+newsvec            0.2394   0.1412   0.212
-  HAR +ev+newsvec            0.2259   0.1244   0.299
-  GBM +ev+decay              0.2371   0.1381   0.227
-  HAR +ev+decay              0.2242   0.1215   0.309
+  GBM +ev+newsvec            0.2329   0.1349   0.254
+  HAR +ev+newsvec            0.2249   0.1235   0.305
+  GBM +ev+decay              0.2312   0.1328   0.265
+  HAR +ev+decay              0.2265   0.1240   0.295
   -> selected: HAR +events (best selection QLIKE among fitted candidates)
      untouched holdout: RMSE 0.2375 | QLIKE 0.1340 | R2 0.422
 ==================================================================
