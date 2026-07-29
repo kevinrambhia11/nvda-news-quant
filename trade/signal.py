@@ -247,9 +247,13 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
     # Freshly scraped headlines, scored now - advisory context only.
     headlines = news_mod.collect_live_headlines()
     analyzer = SentimentAnalyzer(prefer_finbert=prefer_finbert)
-    scores = analyzer.score([h.get("title", "") for h in headlines])
-    for h, sc in zip(headlines, scores):
+    raw_scores = analyzer.score([h.get("title", "") for h in headlines])
+    for h, sc in zip(headlines, raw_scores):
         h["score"] = round(float(sc), 3)
+    # sentiment is averaged over STORIES, not articles: a wire story
+    # syndicated by four outlets gets one vote, not four
+    stories = news_mod.cluster_headlines(headlines)
+    scores = [s["score"] for s in stories if s.get("score") is not None]
     if scores:
         headline_mean = float(np.mean(scores))
         headline_prob = (headline_mean + 1) / 2  # map [-1, 1] -> [0, 1]
@@ -289,7 +293,7 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
     relevant = re.compile(
         r"(?i)\b(nvidia|nvda|jensen|geforce|rtx|blackwell|hopper|rubin"
         r"|cuda|h100|h200|b200|gb200|gpu)\b")
-    ranked = sorted((h for h in headlines
+    ranked = sorted((h for h in stories
                      if "score" in h and h.get("url")
                      and h.get("source") != "stocktwits"
                      and relevant.search(str(h.get("title", "")))),
@@ -306,7 +310,8 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         "big_move_threshold": round(big_thr, 4) if big_thr is not None else None,
         "action": action,
         "headline_sentiment": round(headline_mean, 4),
-        "headline_count": len(scores),
+        "headline_count": len(scores),       # stories after clustering
+        "article_count": len(headlines),     # raw articles before clustering
         "headlines_degraded": degraded,
         "sentiment_backend": analyzer.backend,
         "stocktwits_bulls": bulls,
@@ -317,10 +322,12 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         # old top/bottom-3 slicing could list one headline on both sides,
         # or crown a negative headline "most positive"
         "most_negative": [{k: h.get(k) for k in ("title", "source", "score",
-                                                 "url")}
+                                                 "url", "n_sources",
+                                                 "also_from")}
                           for h in ranked if h["score"] < -0.1][:3],
         "most_positive": [{k: h.get(k) for k in ("title", "source", "score",
-                                                 "url")}
+                                                 "url", "n_sources",
+                                                 "also_from")}
                           for h in reversed(ranked) if h["score"] > 0.1][:3],
     }
     out_path = config.ARTIFACTS / f"signal_{next_day.strftime('%Y%m%d')}.json"
@@ -355,8 +362,10 @@ def format_signal(signal: dict) -> str:
           if signal.get("prob_big_move") is not None
           and signal.get("big_move_threshold") is not None else []),
         f"  Headline sentiment   : {signal['headline_sentiment']:+.3f} "
-        f"({signal['headline_count']} items, {signal['sentiment_backend']})"
-        f"{degraded_note}",
+        f"({signal['headline_count']} stories"
+        + (f" from {signal['article_count']} articles"
+           if signal.get("article_count") else "")
+        + f", {signal['sentiment_backend']}){degraded_note}",
         f"  StockTwits bull/bear : {signal['stocktwits_bulls']}/{signal['stocktwits_bears']}",
         f"  Advisory composite   : {signal['advisory_composite']:.3f} "
         f"(context only - not the traded rule)",
@@ -372,13 +381,17 @@ def format_signal(signal: dict) -> str:
         ] if signal.get("brain_top_news") else []),
         *([
             "-" * 62,
-            "  Most positive headlines:",
-            *[f"    {h['score']:+.2f} [{h['source']}] {h['title'][:70]}"
+            "  Most positive stories:",
+            *[f"    {h['score']:+.2f} [{h['source']}"
+              + (f" +{h['n_sources'] - 1} more" if h.get("n_sources", 1) > 1
+                 else "") + f"] {h['title'][:70]}"
               for h in signal["most_positive"]],
         ] if signal.get("most_positive") else []),
         *([
-            "  Most negative headlines:",
-            *[f"    {h['score']:+.2f} [{h['source']}] {h['title'][:70]}"
+            "  Most negative stories:",
+            *[f"    {h['score']:+.2f} [{h['source']}"
+              + (f" +{h['n_sources'] - 1} more" if h.get("n_sources", 1) > 1
+                 else "") + f"] {h['title'][:70]}"
               for h in signal["most_negative"]],
         ] if signal.get("most_negative") else []),
         "=" * 62,

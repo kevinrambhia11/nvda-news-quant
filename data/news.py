@@ -375,3 +375,90 @@ def collect_live_headlines() -> list[dict]:
             seen.add(key)
             unique.append(it)
     return unique
+
+
+# Words that appear in most finance headlines and therefore carry no
+# story identity - excluded before comparing titles.
+_STORY_STOP = {
+    "the", "a", "an", "and", "or", "of", "to", "in", "on", "for", "as",
+    "at", "by", "with", "after", "amid", "over", "into", "from", "its",
+    "his", "her", "is", "are", "was", "be", "has", "have", "will",
+    "would", "could", "may", "says", "say", "said", "report", "reports",
+    "reportedly", "sources", "source", "news", "update", "stock",
+    "stocks", "shares", "here", "why", "how", "what", "this", "that",
+}
+
+
+def _stem(w: str) -> str:
+    """Poor-man's stem: strip one inflection suffix, then truncate to 5
+    chars. Enough to make leads/leading, detains/detained, tops/topped
+    compare equal; not a real stemmer (dropped -> 'dropp' still misses
+    'drops' - other shared tokens have to carry those clusters)."""
+    if w.endswith("ing") and len(w) > 5:
+        w = w[:-3]
+    elif w.endswith("ed") and len(w) > 4:
+        w = w[:-2]
+    elif w.endswith("s") and not w.endswith("ss") and len(w) > 3:
+        w = w[:-1]
+    return w[:5]
+
+
+def _story_tokens(title: str) -> frozenset:
+    """Crude-stemmed identity tokens for a headline: lowercase words,
+    stopwords out, suffix-stripped 5-char stems (detains / detained ->
+    'detai', staffer / staff -> 'staff', leads / leading -> 'lead')."""
+    words = re.findall(r"[a-z0-9]+", (title or "").lower())
+    return frozenset(_stem(w) for w in words
+                     if w not in _STORY_STOP and len(w) > 2)
+
+
+def cluster_headlines(items: list[dict]) -> list[dict]:
+    """Group different outlets' rewrites of the SAME story so syndication
+    cannot vote multiple times in any sentiment average. Greedy token-
+    overlap clustering: two titles belong to one story when their stemmed
+    vocabularies overlap enough (Jaccard >= 0.30, or 60% containment for
+    short-vs-long rewrites, always with at least 3 shared tokens).
+
+    Returns one representative dict per story, ordered as encountered,
+    with: score = mean of the cluster's scores (a steadier read than any
+    single rewrite), n_sources = cluster size, also_from = other outlets.
+    Heuristic by design - it catches most rewrites, not all."""
+    reps: list[dict] = []
+    rep_tokens: list[frozenset] = []
+    for it in items:
+        toks = _story_tokens(it.get("title", ""))
+        home = None
+        if len(toks) >= 3:
+            for i, rt in enumerate(rep_tokens):
+                inter = len(toks & rt)
+                if inter < 3:
+                    continue
+                union = len(toks | rt)
+                contain = inter / min(len(toks), len(rt))
+                if inter / union >= 0.30 or contain >= 0.60:
+                    home = i
+                    break
+        if home is None:
+            rep = dict(it)
+            rep["n_sources"] = 1
+            rep["also_from"] = []
+            rep["_scores"] = [it.get("score")] \
+                if it.get("score") is not None else []
+            reps.append(rep)
+            rep_tokens.append(toks)
+        else:
+            rep = reps[home]
+            rep["n_sources"] += 1
+            src = it.get("source", "")
+            if src and src != rep.get("source"):
+                rep["also_from"].append(src)
+            if it.get("score") is not None:
+                rep["_scores"].append(it["score"])
+            # widen the story's vocabulary so later rewrites still match
+            rep_tokens[home] = rep_tokens[home] | toks
+    for rep in reps:
+        if rep["_scores"]:
+            rep["score"] = round(float(sum(rep["_scores"])
+                                       / len(rep["_scores"])), 3)
+        del rep["_scores"]
+    return reps

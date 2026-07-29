@@ -76,10 +76,14 @@ def headline_lines(items):
         prefix = f"`{h.get('score', 0):+.2f}` [{h.get('source', '')}] "
         title = str(h.get("title", ""))[:160]
         url = h.get("url")
-        if url:
-            st.markdown(prefix + f"[{title}]({url})")
-        else:
-            st.markdown(prefix + title)
+        line = prefix + (f"[{title}]({url})" if url else title)
+        extra = h.get("also_from") or []
+        if extra:
+            shown = ", ".join(dict.fromkeys(extra[:3]))
+            more = len(extra) - 3
+            line += (f"  &middot; *also: {shown}"
+                     + (f" +{more} more" if more > 0 else "") + "*")
+        st.markdown(line)
 
 
 # ---------------------------------------------------------------------------
@@ -119,14 +123,18 @@ st.caption("News-sentiment direction signal + EMH-consistent volatility desk. "
 
 @st.cache_data(ttl=900, show_spinner="Collecting today's news...")
 def todays_news():
-    from data.news import collect_live_headlines
+    from data.news import cluster_headlines, collect_live_headlines
     from sentiment.analyzer import SentimentAnalyzer
     items = collect_live_headlines()
     scores = SentimentAnalyzer(prefer_finbert=False).score(
         [h.get("title", "") for h in items])
     for h, s in zip(items, scores):
         h["score"] = round(float(s), 3)
-    return items
+    # one entry per STORY: outlets rewriting the same event are grouped,
+    # so a story syndicated four times gets one vote, not four; its score
+    # is the mean of its rewrites (steadier than any single one)
+    stories = cluster_headlines(items)
+    return stories, len(items)
 
 
 # ---------------------------------------------------------------------------
@@ -208,10 +216,13 @@ with tab_today:
                      "treat as a lean, not a literal probability. Advisory "
                      "only, no proven edge.")
         m[1].metric("Headline sentiment", f"{signal['headline_sentiment']:+.3f}",
-                    help=f"{signal['headline_count']} items, "
-                         f"{signal['sentiment_backend']}")
-        m[1].caption("Average mood of live headlines, from -1 (bearish) "
-                     "to +1 (bullish).")
+                    help=f"{signal['headline_count']} stories"
+                         + (f" from {signal['article_count']} articles"
+                            if signal.get("article_count") else "")
+                         + f", {signal['sentiment_backend']}")
+        m[1].caption("Average mood of live news stories, from -1 (bearish) "
+                     "to +1 (bullish). Syndicated copies of the same story "
+                     "are grouped first, so each story gets one vote.")
         m[2].metric("StockTwits bulls/bears",
                     f"{signal['stocktwits_bulls']}/{signal['stocktwits_bears']}")
         m[2].caption("How the retail crowd says it is positioned right now.")
@@ -280,16 +291,16 @@ with tab_today:
         if pos or neg:
             cpos, cneg = st.columns(2)
             with cpos:
-                st.subheader("Most positive headlines")
+                st.subheader("Most positive stories")
                 headline_lines(pos)
                 if not pos:
-                    st.caption("No clearly positive NVDA headline in the "
+                    st.caption("No clearly positive NVDA story in the "
                                "latest scrape.")
             with cneg:
-                st.subheader("Most negative headlines")
+                st.subheader("Most negative stories")
                 headline_lines(neg)
                 if not neg:
-                    st.caption("No clearly negative NVDA headline in the "
+                    st.caption("No clearly negative NVDA story in the "
                                "latest scrape.")
 
 
@@ -368,14 +379,17 @@ with tab_links:
             todays_news.clear()
             st.rerun()
     try:
-        items = todays_news()
+        items, n_raw = todays_news()
     except Exception as exc:
-        items = []
+        items, n_raw = [], 0
         st.warning(f"Collection failed: {exc}")
     if items:
         with c2:
-            st.metric("Articles collected", len(items),
+            st.metric("Stories collected", len(items),
                       f"mean sentiment {np.mean([h['score'] for h in items]):+.3f}")
+            st.caption(f"{n_raw} articles grouped into {len(items)} "
+                       "stories - outlets rewriting the same event count "
+                       "once, and every mean is over stories, not copies.")
         order = ["finance", "ai", "semiconductors", "hyperscalers", "macro",
                  "brokers"]
         groups: dict = {}
@@ -386,7 +400,9 @@ with tab_links:
                 continue
             grp = sorted(groups[cat], key=lambda h: -abs(h.get("score", 0)))
             mean_s = np.mean([h.get("score", 0) for h in grp])
-            with st.expander(f"{cat}  -  {len(grp)} articles, "
+            n_arts = sum(h.get("n_sources", 1) for h in grp)
+            with st.expander(f"{cat}  -  {len(grp)} stories "
+                             f"({n_arts} articles), "
                              f"mean sentiment {mean_s:+.3f}",
                              expanded=(cat in ("finance", "macro"))):
                 headline_lines(grp[:25])
