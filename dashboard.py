@@ -220,9 +220,16 @@ with tab_today:
                          + (f" from {signal['article_count']} articles"
                             if signal.get("article_count") else "")
                          + f", {signal['sentiment_backend']}")
+        _ft = signal.get("fulltext") or {}
         m[1].caption("Average mood of live news stories, from -1 (bearish) "
                      "to +1 (bullish). Syndicated copies of the same story "
-                     "are grouped first, so each story gets one vote.")
+                     "are grouped first, so each story gets one vote."
+                     + (f" Article bodies were read for "
+                        f"{_ft['read_full']} stories in full and "
+                        f"{_ft['read_partial']} partially (blocked sites "
+                        f"fall back to another outlet's copy); "
+                        f"{_ft['headline_only']} scored headline-only."
+                        if _ft else ""))
         m[2].metric("StockTwits bulls/bears",
                     f"{signal['stocktwits_bulls']}/{signal['stocktwits_bears']}")
         m[2].caption("How the retail crowd says it is positioned right now.")

@@ -139,6 +139,23 @@ MODEL_WEIGHT = 0.7
 HEADLINE_WEIGHT = 0.3
 MAX_MODEL_AGE_DAYS = 45    # refuse to generate signals from a stale model
 
+# Full-article reading for the live signal (data/fulltext.py): fetch each
+# story's body so sentiment sees more than the headline. Bounded hard so a
+# slow website can never hang the 17:00 task; on any failure a story simply
+# degrades to headline-only scoring.
+FULLTEXT_ENABLED = True
+FULLTEXT_TIMEOUT = 10          # seconds per HTTP request (also the TOTAL
+                               # streamed-read cap - see fetch_and_extract)
+FULLTEXT_MAX_BYTES = 2_000_000  # per-page download cap
+FULLTEXT_WORKERS = 8           # parallel fetch threads
+FULLTEXT_BUDGET_S = 300        # wall-clock budget for the whole enrichment
+FULLTEXT_LEAD_CHARS = 2500     # article lead kept per story (local cache only)
+FULLTEXT_SCORE_CHARS = 600     # body chars fed to sentiment (FinBERT drifts
+                               # neutral on long multi-topic text - verified)
+FULLTEXT_MAX_ALT_SEARCHES = 12  # same-story-elsewhere lookups per run
+FULLTEXT_CACHE_DIR = CACHE / "fulltext"   # NOT gitignore-whitelisted:
+FULLTEXT_CACHE_TTL_DAYS = 3               # article text never enters the repo
+
 # Desk volatility model (EMH-consistent: forecasts the second moment)
 VOL_MODEL_PATH = ARTIFACTS / "vol_model.joblib"
 VOL_OOS_PATH = ARTIFACTS / "vol_oos_predictions.csv"

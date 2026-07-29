@@ -253,6 +253,43 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
     # sentiment is averaged over STORIES, not articles: a wire story
     # syndicated by four outlets gets one vote, not four
     stories = news_mod.cluster_headlines(headlines)
+
+    # Read the article bodies, not just the headlines. Blocked sites fall
+    # back to another outlet's copy of the same story (cluster members),
+    # then to a same-story search. Sentiment then blends the title score
+    # 50/50 with a "title + opening of the body" score - the opening only,
+    # because FinBERT verifiably drifts to neutral on long multi-topic
+    # text (a -0.92 headline washed to 0.0 with a 2000-char lead).
+    fulltext_stats = None
+    if config.FULLTEXT_ENABLED:
+        try:
+            from data import fulltext
+            stats = fulltext.read_stories(stories)
+            read = [s for s in stories if s.get("body")]
+            units = [f"{s.get('title', '').rstrip('. ')}. "
+                     f"{s['body'][:config.FULLTEXT_SCORE_CHARS]}"
+                     for s in read]
+            for s, body_sc in zip(read, analyzer.score(units)):
+                s["title_score"] = s.get("score")
+                s["body_score"] = round(float(body_sc), 3)
+                if s.get("score") is not None:
+                    s["score"] = round(0.5 * s["score"]
+                                       + 0.5 * s["body_score"], 3)
+                else:
+                    s["score"] = s["body_score"]
+            # published only after the blend succeeds: the artifact must
+            # never claim bodies were read while scores are title-only
+            fulltext_stats = stats
+        except Exception as exc:
+            log.warning("Full-article reading failed (%s); scoring "
+                        "headlines only", exc)
+            for s in stories:   # scrub per-story claims for the same reason
+                if "title_score" in s:   # un-blend any partially blended
+                    s["score"] = s.pop("title_score")
+                for k in ("read_status", "read_from", "read_via",
+                          "body", "body_chars", "body_score"):
+                    s.pop(k, None)
+
     scores = [s["score"] for s in stories if s.get("score") is not None]
     if scores:
         headline_mean = float(np.mean(scores))
@@ -312,6 +349,7 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         "headline_sentiment": round(headline_mean, 4),
         "headline_count": len(scores),       # stories after clustering
         "article_count": len(headlines),     # raw articles before clustering
+        "fulltext": fulltext_stats,          # body-reading counters (no text)
         "headlines_degraded": degraded,
         "sentiment_backend": analyzer.backend,
         "stocktwits_bulls": bulls,
@@ -323,11 +361,13 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         # or crown a negative headline "most positive"
         "most_negative": [{k: h.get(k) for k in ("title", "source", "score",
                                                  "url", "n_sources",
-                                                 "also_from")}
+                                                 "also_from", "read_status",
+                                                 "read_from")}
                           for h in ranked if h["score"] < -0.1][:3],
         "most_positive": [{k: h.get(k) for k in ("title", "source", "score",
                                                  "url", "n_sources",
-                                                 "also_from")}
+                                                 "also_from", "read_status",
+                                                 "read_from")}
                           for h in reversed(ranked) if h["score"] > 0.1][:3],
     }
     out_path = config.ARTIFACTS / f"signal_{next_day.strftime('%Y%m%d')}.json"
@@ -366,6 +406,10 @@ def format_signal(signal: dict) -> str:
         + (f" from {signal['article_count']} articles"
            if signal.get("article_count") else "")
         + f", {signal['sentiment_backend']}){degraded_note}",
+        *([f"  Articles read        : {ft['read_full']} in full, "
+           f"{ft['read_partial']} partially, {ft['headline_only']} "
+           f"headline-only ({ft['elapsed_s']:.0f}s)"]
+          if (ft := signal.get("fulltext")) else []),
         f"  StockTwits bull/bear : {signal['stocktwits_bulls']}/{signal['stocktwits_bears']}",
         f"  Advisory composite   : {signal['advisory_composite']:.3f} "
         f"(context only - not the traded rule)",

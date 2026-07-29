@@ -1,28 +1,36 @@
 {
-  "generated_at": "2026-07-29T18:06:44",
+  "generated_at": "2026-07-29T19:09:25",
   "ticker": "NVDA",
   "entry_day": "2026-07-29",
   "last_close": 197.01,
   "model_trained_through": "2026-07-24",
   "gap_context": {
-    "prev_close": 196.51,
-    "latest": 196.51,
-    "gap_pct": 0.0,
-    "session": "pre-market",
-    "as_of_et": "08:36 ET"
+    "prev_close": 197.01,
+    "latest": 196.03,
+    "gap_pct": -0.005,
+    "session": "live session",
+    "as_of_et": "09:39 ET"
   },
   "model_prob_up": 0.807,
   "prob_big_move": 0.5089,
   "big_move_threshold": 0.0141,
   "action": "BUY / HOLD LONG",
-  "headline_sentiment": -0.0295,
-  "headline_count": 166,
-  "article_count": 214,
+  "headline_sentiment": -0.0676,
+  "headline_count": 179,
+  "article_count": 219,
+  "fulltext": {
+    "stories": 179,
+    "read_full": 121,
+    "read_partial": 21,
+    "headline_only": 37,
+    "alt_searches": 12,
+    "elapsed_s": 44.0
+  },
   "headlines_degraded": false,
   "sentiment_backend": "finbert",
-  "stocktwits_bulls": 4,
-  "stocktwits_bears": 3,
-  "advisory_composite": 0.7105,
+  "stocktwits_bulls": 10,
+  "stocktwits_bears": 6,
+  "advisory_composite": 0.7047,
   "brain_top_news": [
     {
       "headline": "ukraines zelensky arrives for trump talks at white house",
@@ -62,54 +70,71 @@
   ],
   "most_negative": [
     {
-      "title": "Nvidia leads AI chip stocks lower after $500B partnership with SK Group - Seeking Alpha",
-      "source": "google_news",
-      "score": -0.969,
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWmNRQjZxX0FWeHVHQWx2ejRZSHBuODF1cU5nZ3V5UVFYM2J1RHB4bUh0dUk3a1gzbmo5QzhLX0Rrc2l4ZE5UWk04NWkwNE5TekpmT2NWeGc4N2ZXVDFxTmlFdmxOWmg5aFRSOWxxQ3ZSbEtiakFHcURHZmhjY3lrZ0R6TTdtUlExNWQ4WTA3blF1ajhoeWZvRlphXzZXc3FBTFcxblpFNVlpZ3Vm?oc=5",
-      "n_sources": 1,
-      "also_from": []
-    },
-    {
       "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
       "source": "google_news",
-      "score": -0.967,
+      "score": -0.97,
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5",
       "n_sources": 1,
-      "also_from": []
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
     },
     {
-      "title": "Nvidia slips 4% as blockbuster AI spending spree triggers balance sheet jitters - Yahoo Finance",
+      "title": "Nvidia leads AI chip stocks lower after $500B partnership with SK Group - Seeking Alpha",
       "source": "google_news",
-      "score": -0.961,
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNOWoyRnp2YllSRlBJV0ltaVFoeUdJc0hKUml0RUhIdUtXSUtMbjFLNjVmd29RYllHQ1RYckdrTEFrdFpLSDF2RmVkYlZhbHdjYVZBd3EtTTdBa3lSd013QVhQN0p6UzlxM0tUWnBJdjUtYkNxbWU0MHkyOHo0NlFTYTNHTDVkRjk2WVJDeFFPWEs3VVIxT1VWbw?oc=5",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWmNRQjZxX0FWeHVHQWx2ejRZSHBuODF1cU5nZ3V5UVFYM2J1RHB4bUh0dUk3a1gzbmo5QzhLX0Rrc2l4ZE5UWk04NWkwNE5TekpmT2NWeGc4N2ZXVDFxTmlFdmxOWmg5aFRSOWxxQ3ZSbEtiakFHcURHZmhjY3lrZ0R6TTdtUlExNWQ4WTA3blF1ajhoeWZvRlphXzZXc3FBTFcxblpFNVlpZ3Vm?oc=5",
       "n_sources": 1,
-      "also_from": []
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "seekingalpha.com"
+    },
+    {
+      "title": "AI Chip Stocks Tumble as Nvidia, AMD Lead Market Selloff Over Spending Fears - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.964,
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZW1iYU11dkNWendLY1kxejFrMXRjQVlDcEp2eUhYNlNXQVZKdjBSX09kMzk1VEM1WmVOQk10Z0VtN0lwTjhVeGhQenFVVl9qa2hIU29sWUFSOWxZNy1xbEJJbHNxTDNhVVpjeWZmcEM0Q1N6ZFpOaXZXUlk4N3huU0ZEaVMzVG5URkpvMVZ5T2JsaW0zWVpB?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
     }
   ],
   "most_positive": [
     {
-      "title": "MSI and Colorful raise Nvidia RTX 50-series prices in China by up to 59% across the entire lineup \u2014 change in distributer pricing suggests GPU price hikes are on the way - Tom's Hardware",
-      "source": "Tom's Hardware",
-      "score": 0.94,
-      "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxPLTc5MTBFcGV6c2FqTEpEelRIYl9WUjhxLWJLQVBVSnRvdUZtU3FNMWQxSkhxdmVqaXh3alNoUU5laUZLV1NKUE1xTzBtYVpWZXZxa0V2cDVDVFdzUWVGS2VTSGhvc0RsemJwb2dqVlFUQUVJT3loTTRyVV9VQkJOVEZlNFBmZlN4LUFSck9SeXNDb191QnR0b3FNcXJPM01NRm9FeEdLY0kybTBMZnF1Vm1tX3VSRzJZSTk5VVF1ZjNlaWhxbjljZFFPN0pab2hNUlVNUlhqdVhpX1lZZmdBT2sxLW5LT1QzMW9icm05LUR0MHVSY1Y1UWpQcExHeFZTZ0JwcXpXa1JyQTBsQkFFeW9Qc3FLSS1Hd2E0NG5INXc5dUtRWXY5OUhpcnZQTUFvQzFnYzhpSWNoWlRIYWxIR19KZXk?oc=5",
-      "n_sources": 1,
-      "also_from": []
-    },
-    {
       "title": "CRWV, NBIS Stocks Climb \u2013 Nvidia\u2019s $250B OpenAI Guarantee Is A \u2018Constructive\u2019 Signal, Says Analyst - TradingView",
       "source": "TradingView",
-      "score": 0.923,
+      "score": 0.934,
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPbTAyb29IX2diU0IySGFnWUJfa2VCQjc4elRFbVk5bU9YdU5HdnMtV3hLV2o0dXhzX1ZXNVBsUDZfcDBKRFBURm94NWtSVUxSNjFtWlZQdUFSS0g4a01Gcjk5VjFfMDdGVG1adDFMREUwV0NSR3FFaWVoVldJM1o0X0gydUZKTjdJRGppeV9IdG1YNFBYTGJ0SFIwMXRUdEp1eVQ1Qk1Zd09pbDRRQmxfUWFGT3RPbEQyYXhtdTNYQnA1TDgyRjZWLV9vOWt0SGtTUTFxVmVmRHI5OGxwdHlEOXdsZWZvNWM?oc=5",
       "n_sources": 1,
-      "also_from": []
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.tradingview.com"
     },
     {
       "title": "Apple overtakes Nvidia as most valuable company as iPhone maker avoids 'capex pitfalls' - Yahoo Finance",
       "source": "google_news",
-      "score": 0.888,
+      "score": 0.911,
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNNmd0M05vNUFOZG84MEpPeF80RmdtQXZKRHVnaVdfU0h1SUUweEtZZ21Da2JBczFsdEFmU1VQMGVBc0N3VUxjUm4tNkpHQ1U4aklWZVctVnNFZElmbnhSMi1jaXBNc0xQckJKM3E1ZDRXejkyd2JjMmh1a09Mb2FfWXJTYkNwNmpJeFZXeWE2YjlFVUhwSmVwQ01kbFNhMnpXY2x0Zko2eXZ1SURZd0FhSmFmWExJQ2ppWERwWHlvN0JqUzhGNmZoNEdIdmZtSWlNMnJ6V0p6eEMydw?oc=5",
       "n_sources": 1,
-      "also_from": []
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia partner ChipAgents raises $60 million to accelerate chip design with AI agents - Reuters",
+      "source": "Reuters",
+      "score": 0.883,
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRkRHaGJwMjZBLUt2QTBKcTQ2TXJIclVZdjNDSUF6U1d3aFFTa0FtMHIzYXBxNmxRanlKNjA3eG1KYU1uY255d3JhS2dQb0l3dHJUd0ptSk5rSDhGT2xMdlZCVThNMENpMHJYaVZXZjVMMWZRMVlma2MzRER1WlZZMlNSMjRsNWpDYjRZb0hYaENfVks0cVlBMDVBRnJIakdMYUVRTWVmVlk2UDRzT05tZ2RmMVYtb0ttaVFj?oc=5",
+      "n_sources": 3,
+      "also_from": [
+        "yahoo_rss",
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "qz.com"
     }
   ]
 }

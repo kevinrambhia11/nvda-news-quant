@@ -421,7 +421,9 @@ def cluster_headlines(items: list[dict]) -> list[dict]:
 
     Returns one representative dict per story, ordered as encountered,
     with: score = mean of the cluster's scores (a steadier read than any
-    single rewrite), n_sources = cluster size, also_from = other outlets.
+    single rewrite), n_sources = cluster size, also_from = other outlets,
+    members = every copy's (source, url, title) so a body fetch can fall
+    back to another outlet when the representative's site blocks us.
     Heuristic by design - it catches most rewrites, not all."""
     reps: list[dict] = []
     rep_tokens: list[frozenset] = []
@@ -438,10 +440,13 @@ def cluster_headlines(items: list[dict]) -> list[dict]:
                 if inter / union >= 0.30 or contain >= 0.60:
                     home = i
                     break
+        member = {"source": it.get("source"), "url": it.get("url"),
+                  "title": it.get("title")}
         if home is None:
             rep = dict(it)
             rep["n_sources"] = 1
             rep["also_from"] = []
+            rep["members"] = [member]
             rep["_scores"] = [it.get("score")] \
                 if it.get("score") is not None else []
             reps.append(rep)
@@ -449,6 +454,7 @@ def cluster_headlines(items: list[dict]) -> list[dict]:
         else:
             rep = reps[home]
             rep["n_sources"] += 1
+            rep["members"].append(member)
             src = it.get("source", "")
             if src and src != rep.get("source"):
                 rep["also_from"].append(src)

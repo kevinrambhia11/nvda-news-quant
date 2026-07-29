@@ -19,8 +19,13 @@ class SentimentAnalyzer:
         if prefer_finbert:
             try:
                 from transformers import pipeline
+                # max_length pinned explicitly: without it, safe truncation
+                # of article-length inputs depends on the model repo's
+                # tokenizer_config - and an untruncated 512+-token text
+                # crashes the whole 16-text batch it rides in
                 self._finbert = pipeline(
-                    "sentiment-analysis", model="ProsusAI/finbert", truncation=True
+                    "sentiment-analysis", model="ProsusAI/finbert",
+                    truncation=True, max_length=512,
                 )
                 self.backend = "finbert"
                 log.info("Using FinBERT for sentiment scoring")
