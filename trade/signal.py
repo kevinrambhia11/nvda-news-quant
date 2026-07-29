@@ -51,6 +51,41 @@ def _load_model_bundle() -> tuple:
     return bundle["model"], bundle["features"], trained_through
 
 
+def _gap_context() -> dict | None:
+    """Yesterday's close vs the latest traded price (pre-market included):
+    the live answer to 'how is it opening compared to yesterday's close?'.
+    This is deliberately the TAPE, not a model - by signal time the US
+    pre-market has been trading for hours and prices the gap in real time;
+    a model frozen on yesterday's features cannot compete with that.
+    Degrades to omission when the quote source throttles."""
+    import requests
+    from data.prices import HEADERS, YAHOO_CHART_URL
+    try:
+        r = requests.get(YAHOO_CHART_URL.format(symbol=config.TICKER),
+                         params={"range": "1d", "interval": "5m",
+                                 "includePrePost": "true"},
+                         headers=HEADERS, timeout=15)
+        r.raise_for_status()
+        res = r.json()["chart"]["result"][0]
+        prev = float(res["meta"].get("chartPreviousClose") or 0)
+        ts = pd.to_datetime(res["timestamp"], unit="s",
+                            utc=True).tz_convert("America/New_York")
+        closes = pd.Series(res["indicators"]["quote"][0]["close"],
+                           index=ts, dtype=float).dropna()
+        if not len(closes) or not prev:
+            return None
+        last_t, last_p = closes.index[-1], float(closes.iloc[-1])
+        hm = (last_t.hour, last_t.minute)
+        session = ("pre-market" if hm < (9, 30)
+                   else "live session" if hm < (16, 0) else "after-hours")
+        return {"prev_close": round(prev, 2), "latest": round(last_p, 2),
+                "gap_pct": round(last_p / prev - 1, 4), "session": session,
+                "as_of_et": last_t.strftime("%H:%M ET")}
+    except Exception as exc:
+        log.warning("Gap context unavailable (%s) - line omitted", exc)
+        return None
+
+
 def _load_magnitude_bundle() -> dict | None:
     """The calibrated P(big move) head - the desk's validated news edge.
     Absent or stale bundles degrade to omission, never to a crash."""
@@ -265,6 +300,7 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         "entry_day": str(next_day.date()),
         "last_close": round(float(px["Close"].iloc[-1]), 2),
         "model_trained_through": trained_through,
+        "gap_context": _gap_context(),
         "model_prob_up": round(prob_up, 4),
         "prob_big_move": round(prob_big, 4) if prob_big is not None else None,
         "big_move_threshold": round(big_thr, 4) if big_thr is not None else None,
@@ -300,6 +336,15 @@ def format_signal(signal: dict) -> str:
         "=" * 62,
         f"  {signal['ticker']} signal for entry day {signal['entry_day']}",
         f"  generated {signal['generated_at']}  |  last close ${signal['last_close']}",
+        *([
+            f"  Vs yesterday's close : ${signal['gap_context']['latest']} "
+            f"{signal['gap_context']['session']} "
+            f"({signal['gap_context']['gap_pct']:+.1%} vs "
+            f"${signal['gap_context']['prev_close']}) "
+            f"as of {signal['gap_context']['as_of_et']}",
+            "  (that gap belongs to YESTERDAY's bet - tonight's bet starts "
+            "at the open)",
+        ] if signal.get("gap_context") else []),
         "=" * 62,
         f"  Model P(up)          : {signal['model_prob_up']:.1%} "
         f"(long > {config.LONG_ENTER}, exit < {config.LONG_EXIT}; "

@@ -189,6 +189,15 @@ with tab_today:
                        "Track record grades automatically). No single day "
                        "grades a probability either way - only the running "
                        "score does.")
+            gc = signal.get("gap_context")
+            if gc:
+                st.caption(f"Heading into the open: **${gc['latest']}** "
+                           f"({gc['session']}, {gc['gap_pct']:+.1%} vs "
+                           f"yesterday's close ${gc['prev_close']}, as of "
+                           f"{gc['as_of_et']}). The live tape prices this "
+                           "gap in real time - the desk reports it rather "
+                           "than modeling it; tonight's bet starts at "
+                           "whatever the open turns out to be.")
 
     if signal:
         m = st.columns(5)
