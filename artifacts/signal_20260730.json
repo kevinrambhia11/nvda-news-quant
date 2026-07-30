@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-07-30T17:25:49",
+  "generated_at": "2026-07-30T17:39:06",
   "ticker": "NVDA",
   "entry_day": "2026-07-30",
   "last_close": 190.01,
   "model_trained_through": "2026-07-24",
   "gap_context": {
-    "prev_close": 197.01,
-    "latest": 193.57,
-    "gap_pct": -0.0175,
+    "prev_close": 190.01,
+    "latest": 194.01,
+    "gap_pct": 0.0211,
     "session": "pre-market",
-    "as_of_et": "07:55 ET"
+    "as_of_et": "08:09 ET"
   },
   "model_prob_up": 0.9184,
   "prob_big_move": 0.48,
   "big_move_threshold": 0.0135,
   "action": "BUY / HOLD LONG",
-  "headline_sentiment": -0.0813,
-  "headline_count": 157,
-  "article_count": 213,
+  "headline_sentiment": -0.0645,
+  "headline_count": 156,
+  "article_count": 214,
   "fulltext": {
-    "stories": 157,
-    "read_full": 100,
-    "read_partial": 20,
-    "headline_only": 37,
+    "stories": 156,
+    "read_full": 98,
+    "read_partial": 19,
+    "headline_only": 39,
     "alt_searches": 12,
-    "elapsed_s": 21.6
+    "elapsed_s": 15.2
   },
   "headlines_degraded": false,
   "sentiment_backend": "finbert",
-  "stocktwits_bulls": 7,
-  "stocktwits_bears": 2,
-  "advisory_composite": 0.7807,
+  "stocktwits_bulls": 9,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.7832,
   "brain_top_news": [
     {
       "headline": "amazon rooftop tent",
@@ -70,16 +70,6 @@
   ],
   "most_negative": [
     {
-      "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
-      "source": "google_news",
-      "score": -0.97,
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "full",
-      "read_from": "finance.yahoo.com"
-    },
-    {
       "title": "NVDA, NBIS, SKHY, SNDK Stock Losses Reportedly Force Ex-OpenAI Researcher\u2019s $20B Fund To Seek Capital",
       "source": "yahoo_rss",
       "score": -0.97,
@@ -90,6 +80,16 @@
       ],
       "read_status": "full",
       "read_from": "stocktwits.com"
+    },
+    {
+      "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - finance.yahoo.com",
+      "source": "google_news",
+      "score": -0.969,
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
     },
     {
       "title": "NVIDIA Stock Falls 2.3% as AI-Chip Selloff Deepens",
@@ -124,14 +124,14 @@
       "read_from": "www.morningstar.com"
     },
     {
-      "title": "Ilya Sutskever\u2019s Safe Superintelligence partners with Nvidia to scale its AI research - TechCrunch",
-      "source": "TechCrunch",
-      "score": 0.855,
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTEpWM0dmdzBOcXF0V09UNldRRlJyWFVJdXZFRmt5cFBuc0QweWhoMm1TR3hZU0ttNFBnUVdtN2h5WkNabHJmdmZxc3FhNVhXRS1mQ2txMVNjNHdYVTA5dE15SE1zeGdoMjJMWE5lTEN4cHRDWTBJZmtObUlYSUZFbEZKT3BVTUlab1BxVEFHV2NWVmJCcUlXRUR5c2UzdXItZW5rTV9YcllVODJsTlB1eVcyMjdiOVV2VWhB?oc=5",
+      "title": "Prediction: Nvidia-SK Hynix Partnership Will Make Both Stocks Big Winners - The Motley Fool",
+      "source": "google_news",
+      "score": 0.873,
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTTJhOTJqUXVBUVJPM3BOLWlDNExLUnN2enZ0dW1FY1MyZDVNcXdscVdCdnNUdnF2ZUE1UDJIcmx4SHhXc3lMZEhud3U5Y3J1N2hQWnpKeFh3TEhKZ2xaX2c5NExlUmdMd3pIaXBQemxiUkJYQ2dkRFcwUUFubGotZmJjUUhhdmV5ekFDRVExRVR2M0ZZRkE?oc=5",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
-      "read_from": "techcrunch.com"
+      "read_from": "www.fool.com"
     }
   ]
 }

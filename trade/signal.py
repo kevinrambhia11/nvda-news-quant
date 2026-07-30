@@ -67,17 +67,28 @@ def _gap_context() -> dict | None:
                          headers=HEADERS, timeout=15)
         r.raise_for_status()
         res = r.json()["chart"]["result"][0]
-        prev = float(res["meta"].get("chartPreviousClose") or 0)
+        prev_chart = float(res["meta"].get("chartPreviousClose") or 0)
+        reg_price = float(res["meta"].get("regularMarketPrice") or 0)
         ts = pd.to_datetime(res["timestamp"], unit="s",
                             utc=True).tz_convert("America/New_York")
         closes = pd.Series(res["indicators"]["quote"][0]["close"],
                            index=ts, dtype=float).dropna()
-        if not len(closes) or not prev:
+        if not len(closes):
             return None
         last_t, last_p = closes.index[-1], float(closes.iloc[-1])
         hm = (last_t.hour, last_t.minute)
         session = ("pre-market" if hm < (9, 30)
                    else "live session" if hm < (16, 0) else "after-hours")
+        # "yesterday's close" must be the most recent REGULAR close.
+        # During a live session Yahoo's chartPreviousClose is exactly
+        # that, but outside regular hours it lags one session (during the
+        # 7/30 pre-market it still pointed at 7/28's close and printed a
+        # -1.8% gap when the tape was really +1.9%). regularMarketPrice
+        # holds the last regular trade - the close a gap forms against.
+        prev = (prev_chart if session == "live session"
+                else (reg_price or prev_chart))
+        if not prev:
+            return None
         return {"prev_close": round(prev, 2), "latest": round(last_p, 2),
                 "gap_pct": round(last_p / prev - 1, 4), "session": session,
                 "as_of_et": last_t.strftime("%H:%M ET")}
