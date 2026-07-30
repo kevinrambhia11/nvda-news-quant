@@ -1,62 +1,103 @@
 {
-  "generated_at": "2026-07-30T12:50:40",
+  "generated_at": "2026-07-30T17:02:51",
   "ticker": "NVDA",
   "entry_day": "2026-07-30",
   "last_close": 190.01,
   "model_trained_through": "2026-07-24",
   "gap_context": {
     "prev_close": 197.01,
-    "latest": 191.26,
-    "gap_pct": -0.0292,
-    "session": "after-hours",
-    "as_of_et": "19:59 ET"
+    "latest": 193.11,
+    "gap_pct": -0.0198,
+    "session": "pre-market",
+    "as_of_et": "07:32 ET"
   },
-  "model_prob_up": 0.9295,
-  "prob_big_move": 0.5089,
+  "model_prob_up": 0.9184,
+  "prob_big_move": 0.48,
   "big_move_threshold": 0.0135,
   "action": "BUY / HOLD LONG",
-  "headline_sentiment": -0.0491,
-  "headline_count": 137,
-  "article_count": 160,
+  "headline_sentiment": 0.1466,
+  "headline_count": 159,
+  "article_count": 217,
   "fulltext": {
-    "stories": 137,
-    "read_full": 83,
-    "read_partial": 17,
-    "headline_only": 37,
+    "stories": 159,
+    "read_full": 95,
+    "read_partial": 22,
+    "headline_only": 42,
     "alt_searches": 12,
-    "elapsed_s": 61.7
+    "elapsed_s": 39.8
   },
   "headlines_degraded": false,
-  "sentiment_backend": "finbert",
+  "sentiment_backend": "vader",
   "stocktwits_bulls": 7,
-  "stocktwits_bears": 0,
-  "advisory_composite": 0.7933,
-  "brain_top_news": [],
-  "most_negative": [
+  "stocktwits_bears": 4,
+  "advisory_composite": 0.8148,
+  "brain_top_news": [
     {
-      "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
-      "source": "google_news",
-      "score": -0.97,
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "full",
-      "read_from": "finance.yahoo.com"
+      "headline": "amazon rooftop tent",
+      "source": "goodhousekeeping.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.04296
     },
     {
-      "title": "Nvidia Stock Falls Below $200 Again, Bernstein Gives Buy Rating (NVDA) - Watcher Guru",
-      "source": "Watcher Guru",
-      "score": -0.95,
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOanBMUUdIVnFQaTNRN3IwY2V5RFdhd09WejQ1Tl8xc0lXVVFybmhTR0NHM2k3TGRtdXM4cmhQY05INGg3aFZ4c19HVzF5cV9uNm1qNDF1MEliV3dFM2lXSmJibkZMZTB0NkIyclZFb3QtQmhKSlRrbGh1ckEtYzZ2WnpQY05ITS1qSnV6eWJJQnpIdDRmOF9B?oc=5",
-      "n_sources": 1,
-      "also_from": [],
+      "headline": "asia global 500 tsmc tencent wistron sk hynix chery daikin coupang",
+      "source": "fortune.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.02212
+    },
+    {
+      "headline": "asian chip stocks drop as sk hynix earnings disappoint",
+      "source": "forbes.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.02325
+    },
+    {
+      "headline": "qualcomm forecasts weak quarterly profit sees faster drop in apple revenue",
+      "source": "macdailynews.com",
+      "category": "competitors",
+      "weight": 0.0047,
+      "impact": -0.02374
+    },
+    {
+      "headline": "article qualcomm profit earning wall street apple",
+      "source": "theglobeandmail.com",
+      "category": "competitors",
+      "weight": 0.0047,
+      "impact": -0.02381
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia Stock: It\u2019s Time to Stop Worrying About Circular Financing - Barron's",
+      "source": "Barron's",
+      "score": -0.656,
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeG9PLUNGTGhiMkJ5bzVUaEpnOVhMQ2RhVldwTkZWRXBaSFZlRFh4dVNCVFpOVWVjR2hFVjNjT3dmYkFZZ3FLaDlnZ3phUlVabUVLTnpHaEkxemZrOXBaTTBUUTZOU0h5akV0ZWVpU0tJYVNJbXhwd1JCRHAzSmRKZnktY3ZIRElrVnZEd3RIWGcxZE1xY3VlMF9pYnFmaHlxaFZrUDVFTVA?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "google_news"
+      ],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "Taiwan Detains Nvidia Employee in China Chip Smuggling Probe - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "score": -0.612,
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPaUtDQjNDTzYxbGFhVXNfOFVCcFFLZnZyc2hoUTdjdkpPVU1FeG9VVnNvVEhXTTVEV050OXprbnZoX3FMangzWFV3U1owR2QwT01LenFLNGZQRjB1MS1XM2NlTlpvd2lHZjU1aGIydmpiZ3BXQWJwd1NJVk9BcTdRVVZYcGtoNVA2RzlHU3VXLW93VVd5SF9tdWxxNm5jb05BSGZMT0lORTF5bnhab09URw?oc=5",
+      "n_sources": 3,
+      "also_from": [
+        "Barron's",
+        "Forbes"
+      ],
       "read_status": "full",
-      "read_from": "watcher.guru"
+      "read_from": "www.forbes.com"
     },
     {
       "title": "Bad News For Nvidia Stock Fans - TradingView",
       "source": "google_news",
-      "score": -0.937,
+      "score": -0.557,
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWmc5VERmVUJwb0JiQ3lISjdVV1pQdG9TSTdubkFYMHNKZHI5UG1CX0hNTVhyaEE0QU8td21qSVB6eDVwb085NlVGS0t1TkdORmpWbmxRVFpkY0stQkQ2dzZSblZ2bzdRMXpFM1hma3k0TUFJeGxyajFPUGVOa1dLYVFaTGpxTUt4WV94V2l6UHdJTjJl?oc=5",
       "n_sources": 1,
       "also_from": [],
@@ -66,34 +107,37 @@
   ],
   "most_positive": [
     {
-      "title": "CRWV, NBIS Stocks Climb \u2013 Nvidia\u2019s $250B OpenAI Guarantee Is A \u2018Constructive\u2019 Signal, Says Analyst - TradingView",
-      "source": "TradingView",
-      "score": 0.934,
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPbTAyb29IX2diU0IySGFnWUJfa2VCQjc4elRFbVk5bU9YdU5HdnMtV3hLV2o0dXhzX1ZXNVBsUDZfcDBKRFBURm94NWtSVUxSNjFtWlZQdUFSS0g4a01Gcjk5VjFfMDdGVG1adDFMREUwV0NSR3FFaWVoVldJM1o0X0gydUZKTjdJRGppeV9IdG1YNFBYTGJ0SFIwMXRUdEp1eVQ1Qk1Zd09pbDRRQmxfUWFGT3RPbEQyYXhtdTNYQnA1TDgyRjZWLV9vOWt0SGtTUTFxVmVmRHI5OGxwdHlEOXdsZWZvNWM?oc=5",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "full",
-      "read_from": "www.tradingview.com"
-    },
-    {
-      "title": "Prediction: Nvidia-SK Hynix Partnership Will Make Both Stocks Big Winners - The Motley Fool",
+      "title": "Nvidia: This Onetime Market Darling Is Now Surprisingly Undervalued - Morningstar",
       "source": "google_news",
-      "score": 0.873,
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTTJhOTJqUXVBUVJPM3BOLWlDNExLUnN2enZ0dW1FY1MyZDVNcXdscVdCdnNUdnF2ZUE1UDJIcmx4SHhXc3lMZEhud3U5Y3J1N2hQWnpKeFh3TEhKZ2xaX2c5NExlUmdMd3pIaXBQemxiUkJYQ2dkRFcwUUFubGotZmJjUUhhdmV5ekFDRVExRVR2M0ZZRkE?oc=5",
+      "score": 0.85,
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPT2tzZTJUc0xMSkhjbmpfOEwwQlZCalVpdmtta1VJNmVKWFZ0TGxGTm1OMHpRM1lvZ1AwVDMxMWhCU21HWjZCVWxRbkM4SFgzMWoyMEtZUGJUMWJfY0dralhOclhiQUNvZjdiZjVaYnNPS1VUNzFzOTdpSFdkSlNwQnROc05ab3BURUFQRGNrVFpwSlExZS1qczl3?oc=5",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
-      "read_from": "www.fool.com"
+      "read_from": "www.morningstar.com"
     },
     {
-      "title": "Ilya Sutskever\u2019s Safe Superintelligence partners with Nvidia to scale its AI research - TechCrunch",
-      "source": "TechCrunch",
-      "score": 0.855,
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTEpWM0dmdzBOcXF0V09UNldRRlJyWFVJdXZFRmt5cFBuc0QweWhoMm1TR3hZU0ttNFBnUVdtN2h5WkNabHJmdmZxc3FhNVhXRS1mQ2txMVNjNHdYVTA5dE15SE1zeGdoMjJMWE5lTEN4cHRDWTBJZmtObUlYSUZFbEZKT3BVTUlab1BxVEFHV2NWVmJCcUlXRUR5c2UzdXItZW5rTV9YcllVODJsTlB1eVcyMjdiOVV2VWhB?oc=5",
+      "title": "Apple ends day as world's most valuable company, passing Nvidia - CNBC",
+      "source": "CNBC",
+      "score": 0.746,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE01cWI2eS1PTkp0QlphT2h1a2t6Y2hOZWJweHE0WHVRcng2SHRJZWdka0wyZVd4VVNWU3FuOVMtTENyZVZwR3pIcXluT1RBMHNXVmktT1RjcnZSaDhjMFBvOW9WanFkdWRPV3ZwVEduRVd0b3U2VDlTTDBxMNIBgAFBVV95cUxQd1prSjRSQnNHQnlXbFVBSHlfVDUyX2JRdkt5Q011NjI4TGo5dXI1bzVGLUhfRERPU290WGhfakZoUzlkdHFEbWNYTFo4clNEUk1ua1RzR1V6akV6d3lJYWQwdFhrRzBPdkZzbHdWZFBlaHAwOHV4Q3VnU09ZcFN1OA?oc=5",
+      "n_sources": 3,
+      "also_from": [
+        "Barron's",
+        "google_news"
+      ],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Nvidia forms industry alliance for open AI security after Hugging Face hack - Reuters",
+      "source": "Reuters",
+      "score": 0.742,
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPLTA5S2htM2dsTTR2MTQxOHV6UXNETUJHTHgtQXBUQzExYkhmdlZEWmhRdU93NzF0bzMyaTFVUXJob2VCRXpIa180WmRUTDlNUHFhclk2amxvcHczaGpzTVpYenBaX3ZWVHNoUlBlRkJ1ZjB3bG5sdy1sQUhob2xTWXZYek9vN1RnVTltcUNTenRHYU4wSlk3bDFlTDZXbnMxTTQ5TXFEcnVmUnhscFlJTHRXWHpkQ1U?oc=5",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
-      "read_from": "techcrunch.com"
+      "read_from": "cryptobriefing.com"
     }
   ]
 }

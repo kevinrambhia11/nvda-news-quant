@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-07-29",
-  "generated_at": "2026-07-29T17:03:36",
+  "entry_day": "2026-07-30",
+  "generated_at": "2026-07-30T17:00:51",
   "articles": [
     {
-      "headline": "ukraines zelensky arrives for trump talks at white house",
-      "source": "vanguardngr.com",
-      "category": "macro",
-      "weight": 0.0056,
-      "impact": -0.04132
+      "headline": "amazon rooftop tent",
+      "source": "goodhousekeeping.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.04296
     },
     {
-      "headline": "world shares are mixed while south koreas kospi sinks nearly 11 on heavy selling of chipmakers",
-      "source": "bnnbloomberg.ca",
+      "headline": "asia global 500 tsmc tencent wistron sk hynix chery daikin coupang",
+      "source": "fortune.com",
       "category": "competitors",
-      "weight": 0.0053,
-      "impact": -0.03369
+      "weight": 0.0048,
+      "impact": -0.02212
     },
     {
-      "headline": "wall street chip sell off",
-      "source": "bostonherald.com",
+      "headline": "asian chip stocks drop as sk hynix earnings disappoint",
+      "source": "forbes.com",
       "category": "competitors",
-      "weight": 0.0053,
-      "impact": -0.02625
+      "weight": 0.0048,
+      "impact": -0.02325
     },
     {
-      "headline": "samsung broadcom enter into a new collaborative partnership",
-      "source": "phandroid.com",
+      "headline": "qualcomm forecasts weak quarterly profit sees faster drop in apple revenue",
+      "source": "macdailynews.com",
       "category": "competitors",
-      "weight": 0.0053,
-      "impact": -0.02706
+      "weight": 0.0047,
+      "impact": -0.02374
     },
     {
-      "headline": "ruane cunniff goldfarb l p has 408 38 million holdings in taiwan semiconductor manufacturing company ltd tsm.html",
-      "source": "tickerreport.com",
+      "headline": "article qualcomm profit earning wall street apple",
+      "source": "theglobeandmail.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.00326
+      "weight": 0.0047,
+      "impact": -0.02381
     },
     {
-      "headline": "broadcom stock yields just 0 145400360.html",
+      "headline": "taiwan detains nvidia employee in super micro probe taiwan media says",
+      "source": "nikkei.com",
+      "category": "nvda",
+      "weight": 0.0047,
+      "impact": -0.00856
+    },
+    {
+      "headline": "qualcomm q3 earnings top revenue expectations as smartphone market slows 160509349.html",
       "source": "yahoo.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.02394
+      "weight": 0.0047,
+      "impact": -0.02644
     },
     {
-      "headline": "lenovo thinkpad t14s gen 7 launches with snapdragon x2 chips",
-      "source": "propakistani.pk",
-      "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.00015
-    },
-    {
-      "headline": "taiwan detains nvidia employee china chip smuggling",
-      "source": "thenextweb.com",
+      "headline": "apple 5 trillion how steve jobs and steve wozniak built apple to overtake nvidia in market cap 253954",
+      "source": "newsx.com",
       "category": "nvda",
-      "weight": 0.0052,
-      "impact": -0.01662
+      "weight": 0.0047,
+      "impact": -0.01496
     },
     {
-      "headline": "taiwan detains nvidia worker in chip smuggling probe",
-      "source": "freemalaysiatoday.com",
+      "headline": "some retailers restrict geforce rtx 5080 sales to prebuilt pcs",
+      "source": "eteknix.com",
       "category": "nvda",
-      "weight": 0.0052,
-      "impact": -0.01062
+      "weight": 0.0047,
+      "impact": -0.01749
     },
     {
-      "headline": "before the bell wall street mixed early as chip sell off continues",
-      "source": "wptf.com",
+      "headline": "bmw selects qualcomm chips for upcoming vehicle platforms",
+      "source": "news.az",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.0158
+      "weight": 0.0047,
+      "impact": -0.0187
     }
   ]
 }
