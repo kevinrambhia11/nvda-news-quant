@@ -379,7 +379,12 @@ with tab_vol:
 with tab_links:
     st.caption("**What this page is:** every article the desk can see right "
                "now, grouped by category, scored for sentiment, and linked "
-               "to the original source. Refreshes at most every 15 minutes.")
+               "to the original source. Refreshes at most every 15 minutes. "
+               "Scores here are a quick live read: lexicon-based (VADER), "
+               "headlines only. The Desk today number is a different, "
+               "deeper measurement - FinBERT over each story's title plus "
+               "the opening of its article body, frozen at signal time - "
+               "so the two will not match, by design.")
     c1, c2 = st.columns([1, 5])
     with c1:
         if st.button("Refresh now"):
@@ -393,10 +398,13 @@ with tab_links:
     if items:
         with c2:
             st.metric("Stories collected", len(items),
-                      f"mean sentiment {np.mean([h['score'] for h in items]):+.3f}")
+                      f"mean headline tone {np.mean([h['score'] for h in items]):+.3f}")
             st.caption(f"{n_raw} articles grouped into {len(items)} "
                        "stories - outlets rewriting the same event count "
-                       "once, and every mean is over stories, not copies.")
+                       "once, and every mean is over stories, not copies. "
+                       "Tone is VADER on headlines; the desk's own "
+                       "sentiment (Desk today) reads article bodies with "
+                       "FinBERT and will differ.")
         order = ["finance", "ai", "semiconductors", "hyperscalers", "macro",
                  "brokers"]
         groups: dict = {}
