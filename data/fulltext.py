@@ -31,6 +31,7 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import os
 import re
 import threading
 import time
@@ -169,7 +170,6 @@ def _dump_json(path, obj) -> None:
     half-written file into place; a losing replace() (Windows raises
     PermissionError while the destination is open) is logged, not fatal -
     these are caches."""
-    import os
     tmp = path.with_suffix(f".{os.getpid()}.tmp")
     try:
         tmp.write_text(json.dumps(obj), encoding="utf-8")
@@ -405,11 +405,12 @@ def fetch_and_extract(url: str) -> dict:
         if r.status_code == 429:
             r.close()
             return {"status": "error", "text": None, "chars": 0,
-                    "domain": domain, "note": "http 429"}
+                    "domain": domain, "url": url, "note": "http 429"}
         if r.status_code in _BLOCK_STATUSES or r.status_code >= 400:
             r.close()
             return {"status": "blocked", "text": None, "chars": 0,
-                    "domain": domain, "note": f"http {r.status_code}"}
+                    "domain": domain, "url": url,
+                    "note": f"http {r.status_code}"}
         read_deadline = time.monotonic() + config.FULLTEXT_TIMEOUT
         chunks, size = [], 0
         for chunk in r.iter_content(chunk_size=65536):
@@ -420,14 +421,14 @@ def fetch_and_extract(url: str) -> dict:
             if time.monotonic() > read_deadline:
                 r.close()
                 return {"status": "error", "text": None, "chars": 0,
-                        "domain": domain, "note": "slow read"}
+                        "domain": domain, "url": url, "note": "slow read"}
         enc = r.encoding if (r.encoding
                              and r.encoding.lower() != "iso-8859-1") \
             else "utf-8"
         html = b"".join(chunks).decode(enc, errors="replace")
     except requests.RequestException as exc:
         return {"status": "error", "text": None, "chars": 0,
-                "domain": domain, "note": type(exc).__name__}
+                "domain": domain, "url": url, "note": type(exc).__name__}
     text = extract_text(html, url) or ""
     low = html.lower()
     paywalled = ((_PAYWALL_STRONG.search(low) and len(text) < _FULL_TEXT_MIN)
@@ -438,9 +439,9 @@ def fetch_and_extract(url: str) -> dict:
         status = "partial"     # teaser/lede: some context beats none
     else:
         return {"status": "empty", "text": None, "chars": 0,
-                "domain": domain}
+                "domain": domain, "url": url}
     return {"status": status, "text": text, "chars": len(text),
-            "domain": domain}
+            "domain": domain, "url": url}
 
 
 # --------------------------------------------------------------------------
@@ -524,6 +525,7 @@ def _fetch_cached(url: str, body_cache: dict, lock: threading.Lock,
         with lock:
             hit = body_cache.get(key)
             if hit is not None:
+                hit.setdefault("url", url)   # pre-url-era cache entries
                 return hit
             ev = inflight.get(key)
             if ev is None:
@@ -533,14 +535,16 @@ def _fetch_cached(url: str, body_cache: dict, lock: threading.Lock,
         with lock:
             hit = body_cache.get(key)
         if hit is not None:
+            hit.setdefault("url", url)
             return hit
         # first fetcher failed transiently and cached nothing
         return {"status": "error", "text": None, "chars": 0,
-                "domain": urlparse(url).netloc}
+                "domain": urlparse(url).netloc, "url": url}
     try:
         res = fetch_and_extract(url)
         if res.get("text"):
             res["text"] = res["text"][:config.FULLTEXT_LEAD_CHARS]
+            res["chars"] = len(res["text"])   # truth after truncation
         if res["status"] != "error":
             with lock:
                 body_cache[key] = {**res, "ts": time.time()}
@@ -556,6 +560,7 @@ def _attach(story: dict, res: dict, via: str) -> None:
     story["body_chars"] = res["chars"]
     story["read_status"] = "full" if res["status"] == "ok" else "partial"
     story["read_from"] = res["domain"]
+    story["read_url"] = res.get("url")   # the copy actually read
     story["read_via"] = via
 
 
@@ -743,3 +748,187 @@ def read_stories(stories: list[dict]) -> dict:
     log.info("fulltext: %(read_full)d full + %(read_partial)d partial of "
              "%(stories)d stories in %(elapsed_s).0fs", stats)
     return stats
+
+
+# --------------------------------------------------------------------------
+# Permanent body corpus (phase 1 of a body-aware brain)
+#
+# The brain trains on titles because the 710k-article history has no
+# bodies. Every body fetched today is training data that cannot be
+# recovered later (old pages die), so live-story and top-up bodies are
+# appended to a permanent LOCAL parquet. It lives under the gitignored
+# cache dir: copyrighted article text must never enter the public repo,
+# and it is deliberately excluded from the tracked weekly backups too.
+# --------------------------------------------------------------------------
+
+_ARCHIVE_COLS = ["date", "kind", "category", "source", "slug", "title",
+                 "url", "status", "chars", "text", "read_via", "fetched_at"]
+_ARCHIVE_LOCK = threading.Lock()
+_LOCK_STALE_S = 180
+
+
+def _corpus_lock_path():
+    return config.FULLTEXT_ARCHIVE_PATH.with_suffix(".lock")
+
+
+def _acquire_corpus_lock(timeout_s: float = 30.0) -> int | None:
+    """Cross-process mutex via an O_CREAT|O_EXCL sidecar file: the 17:00
+    task (topup, then signal) and a dashboard 'Regenerate signal' click
+    are SEPARATE processes appending the same parquet - a threading.Lock
+    alone was proven to lose whole batches (last writer wins). Locks
+    older than _LOCK_STALE_S are broken so a crashed holder can't wedge
+    the corpus forever. Returns an fd, or None on timeout."""
+    lock = _corpus_lock_path()
+    deadline = time.monotonic() + timeout_s
+    while True:
+        try:
+            fd = os.open(str(lock), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.write(fd, str(os.getpid()).encode())
+            return fd
+        except FileExistsError:
+            try:
+                if time.time() - lock.stat().st_mtime > _LOCK_STALE_S:
+                    lock.unlink()
+                    continue
+            except OSError:
+                pass
+            if time.monotonic() > deadline:
+                return None
+            time.sleep(0.25)
+        except OSError:
+            return None
+
+
+def _release_corpus_lock(fd: int) -> None:
+    try:
+        os.close(fd)
+        _corpus_lock_path().unlink()
+    except OSError:
+        pass
+
+
+def fetch_bodies(urls: list[str], budget_s: float) -> dict:
+    """Bulk best-effort body fetch -> {url: result}. Shares the 3-day
+    fetch cache with read_stories; same hard budget semantics."""
+    deadline = time.monotonic() + budget_s
+    config.FULLTEXT_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    body_cache = _load_json(_BODY_CACHE_PATH)
+    cutoff = time.time() - config.FULLTEXT_CACHE_TTL_DAYS * 86400
+    body_cache = {k: v for k, v in body_cache.items()
+                  if v.get("ts", 0) > cutoff}
+    lock = threading.Lock()
+    inflight: dict = {}
+    out: dict = {}
+
+    def _one(u: str):
+        if time.monotonic() > deadline:
+            return u, None
+        return u, _fetch_cached(u, body_cache, lock, inflight)
+
+    with ThreadPoolExecutor(max_workers=config.FULLTEXT_WORKERS) as pool:
+        futs = [pool.submit(_one, u) for u in urls]
+        try:
+            for f in as_completed(futs,
+                                  timeout=max(0.1, deadline - time.monotonic())):
+                try:
+                    u, res = f.result()
+                except Exception:
+                    continue
+                if res is not None:
+                    out[u] = res
+        except TimeoutError:
+            pool.shutdown(wait=False, cancel_futures=True)
+    _dump_json(_BODY_CACHE_PATH, body_cache)
+    return out
+
+
+def append_bodies(rows: list[dict]) -> int:
+    """Append body rows to the permanent corpus; returns net new URLs.
+
+    Dedup is per URL and status-aware: a full body replaces a stored
+    partial teaser, never the reverse; ties keep the earliest copy.
+    Date semantics: live_story rows carry the ENTRY trading day,
+    archive_article rows the GDELT publish day.
+
+    Best-effort for callers (a corpus hiccup never fails topup/signal)
+    but never silently destructive: if the cross-process lock or the
+    final replace can't be won, the batch spills to a per-pid parquet
+    that the next successful append merges back in."""
+    import pandas as pd
+    rows = [r for r in rows if r.get("url") and r.get("text")]
+    if not rows:
+        return 0
+    new = pd.DataFrame(rows).reindex(columns=_ARCHIVE_COLS)
+    new["text"] = new["text"].str.slice(0, config.FULLTEXT_LEAD_CHARS)
+    new["chars"] = new["text"].str.len()
+    new["fetched_at"] = pd.Timestamp.now().isoformat(timespec="seconds")
+    new = new[~new["url"].duplicated()]
+    path = config.FULLTEXT_ARCHIVE_PATH
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    def _spill(df) -> int:
+        sp = path.with_suffix(f".spill.{os.getpid()}.parquet")
+        try:
+            df.to_parquet(sp, index=False)
+            log.warning("Body corpus busy: %d rows spilled to %s (merged "
+                        "by the next append)", len(df), sp.name)
+        except OSError as exc:
+            log.warning("Body corpus spill failed too (%s): %d rows lost",
+                        exc, len(df))
+        return 0
+
+    with _ARCHIVE_LOCK:
+        fd = _acquire_corpus_lock()
+        if fd is None:
+            return _spill(new)
+        try:
+            frames = [new]
+            spills = [p for p in path.parent.glob(
+                path.stem + ".spill.*.parquet")]
+            for sp in spills:
+                try:
+                    frames.append(pd.read_parquet(sp)
+                                  .reindex(columns=_ARCHIVE_COLS))
+                except OSError:
+                    pass
+            n_old = 0
+            if path.exists():
+                old = pd.read_parquet(path).reindex(columns=_ARCHIVE_COLS)
+                n_old = len(old)
+                frames.insert(0, old)
+            merged = pd.concat(frames, ignore_index=True)
+            merged = (merged
+                      .assign(_pref=(merged["status"] != "full").astype(int))
+                      .sort_values(["url", "_pref", "chars"],
+                                   ascending=[True, True, False],
+                                   kind="mergesort")
+                      .drop_duplicates("url")
+                      .drop(columns="_pref")
+                      .sort_values("fetched_at", kind="mergesort")
+                      .reset_index(drop=True))
+            tmp = path.with_suffix(f".{os.getpid()}.tmp")
+            for attempt in range(4):
+                try:
+                    merged.to_parquet(tmp, index=False)
+                    tmp.replace(path)
+                    break
+                except OSError:
+                    # a concurrent reader can hold the destination open on
+                    # Windows; readers are brief, so short retries win
+                    if attempt == 3:
+                        try:
+                            tmp.unlink(missing_ok=True)
+                        except OSError:
+                            pass
+                        return _spill(new)
+                    time.sleep(0.5)
+            for sp in spills:
+                try:
+                    sp.unlink()
+                except OSError:
+                    pass
+            added = max(0, len(merged) - n_old)
+            log.info("Body corpus: +%d rows -> %d total", added, len(merged))
+            return added
+        finally:
+            _release_corpus_lock(fd)

@@ -149,12 +149,21 @@ FULLTEXT_TIMEOUT = 10          # seconds per HTTP request (also the TOTAL
 FULLTEXT_MAX_BYTES = 2_000_000  # per-page download cap
 FULLTEXT_WORKERS = 8           # parallel fetch threads
 FULLTEXT_BUDGET_S = 300        # wall-clock budget for the whole enrichment
-FULLTEXT_LEAD_CHARS = 2500     # article lead kept per story (local cache only)
+FULLTEXT_LEAD_CHARS = 8000     # article text kept per story (local
+                               # cache/corpus only, never the repo)
 FULLTEXT_SCORE_CHARS = 600     # body chars fed to sentiment (FinBERT drifts
                                # neutral on long multi-topic text - verified)
 FULLTEXT_MAX_ALT_SEARCHES = 12  # same-story-elsewhere lookups per run
 FULLTEXT_CACHE_DIR = CACHE / "fulltext"   # NOT gitignore-whitelisted:
 FULLTEXT_CACHE_TTL_DAYS = 3               # article text never enters the repo
+
+# Permanent LOCAL body corpus (phase 1 of a body-aware brain): every body
+# fetched for live stories and daily top-up articles is appended here -
+# old pages die, so each unfetched day is training data lost forever.
+# Local-only (copyright); a future body-trained scorer must still earn a
+# seat through the tournaments / live paper trail like everything else.
+FULLTEXT_ARCHIVE_PATH = CACHE / "fulltext" / "bodies_archive.parquet"
+FULLTEXT_TOPUP_BUDGET_S = 240   # body-fetch budget inside the daily top-up
 
 # Desk volatility model (EMH-consistent: forecasts the second moment)
 VOL_MODEL_PATH = ARTIFACTS / "vol_model.joblib"

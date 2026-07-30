@@ -128,7 +128,7 @@ def _articles_sql() -> str:
     -- The anchor preference multiplies informative yield inside the 60/day
     -- cap at zero extra quota cost.
     sampled AS (
-      SELECT date, category, source, slug, tone,
+      SELECT date, category, source, slug, tone, url,
              ROW_NUMBER() OVER (
                  PARTITION BY category, date
                  ORDER BY IF(STRPOS(slug, ' ') > 0, 0, 1),
@@ -136,7 +136,10 @@ def _articles_sql() -> str:
                           FARM_FINGERPRINT(url)) AS rk
       FROM deduped WHERE dup_rank = 1
     )
-    SELECT date, category, source, slug, tone
+    -- url is kept from 2026-07-30 on (older archive rows have none): it
+    -- feeds the article-body corpus for a future body-aware brain, and
+    -- without it historical bodies would need a BigQuery re-pull
+    SELECT date, category, source, slug, tone, url
     FROM sampled WHERE rk <= @per_day_cap
     ORDER BY date, category, slug
     """
@@ -233,6 +236,12 @@ def topup() -> dict:
     fresh_art = fresh_art.loc[~fresh_keys.isin(existing)]
 
     if len(fresh_art):
+        # schema v2 (2026-07-30): the archive keeps article URLs so bodies
+        # can be fetched for the corpus; pre-v2 rows have none. Without
+        # this migration the column subset below would silently drop the
+        # freshly pulled urls on the first post-upgrade run.
+        if "url" not in art.columns:
+            art["url"] = pd.NA
         fresh_art = fresh_art[art.columns.tolist()]
         merged = pd.concat([art, fresh_art], ignore_index=True)
         merged["date"] = merged["date"].astype("datetime64[ms]")
@@ -242,6 +251,18 @@ def topup() -> dict:
         log.info("Archive: +%d articles -> %d total (through %s)",
                  len(fresh_art), len(merged),
                  merged["date"].max().date())
+
+    # body corpus - immediately after the parquet commit point and fully
+    # exception-isolated: it must neither fail the top-up NOR be forfeited
+    # by a later embed/feature failure (the dedup against the committed
+    # parquet means these URLs are never presented again; bodies not
+    # fetched today are lost - old pages die)
+    n_bodies = 0
+    try:
+        n_bodies = _archive_bodies(fresh_art)
+    except Exception as exc:
+        log.warning("article body fetch failed (%s) - corpus resumes "
+                    "tomorrow", exc)
 
     from model.news2vec import embed_new
     n_emb = embed_new()
@@ -257,7 +278,41 @@ def topup() -> dict:
         log.warning("newsnet feature rebuild failed (%s) - news2 features "
                     "are current, nn_* stay at previous coverage", exc)
     return {"new_articles": int(len(fresh_art)), "embedded": int(n_emb),
-            "through": str(end.date())}
+            "bodies": n_bodies, "through": str(end.date())}
+
+
+def _archive_bodies(fresh_art: pd.DataFrame) -> int:
+    """Fetch and permanently store bodies for the day's informative
+    articles (the only ones the brain will ever read - junk that the
+    feature filter drops would waste the fetch budget). Uses entry=date
+    as the dedup key: exact entry mapping doesn't matter for a 1-2 day
+    fetch window, and the corpus dedups by URL anyway."""
+    from data import fulltext
+    from model.news2vec import informative_mask
+
+    if fresh_art.empty or "url" not in fresh_art.columns:
+        return 0
+    mask = (informative_mask(fresh_art.assign(entry=fresh_art["date"]))
+            & fresh_art["url"].notna().to_numpy())
+    sub = fresh_art.loc[mask]
+    if sub.empty:
+        return 0
+    urls = sub["url"].drop_duplicates().tolist()
+    results = fulltext.fetch_bodies(urls, config.FULLTEXT_TOPUP_BUDGET_S)
+    rows = []
+    for _, r in sub.drop_duplicates(subset="url").iterrows():
+        res = results.get(r["url"])
+        if res and res.get("text"):
+            rows.append({
+                "date": str(pd.Timestamp(r["date"]).date()),
+                "kind": "archive_article",
+                "category": r["category"], "source": r["source"],
+                "slug": r["slug"], "title": None, "url": r["url"],
+                "status": "full" if res["status"] == "ok" else "partial",
+                "chars": res["chars"], "text": res["text"],
+                "read_via": "direct",
+            })
+    return fulltext.append_bodies(rows)
 
 
 def validate_overlap(days: int = 4) -> str:

@@ -1,0 +1,99 @@
+{
+  "generated_at": "2026-07-30T12:50:40",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-30",
+  "last_close": 190.01,
+  "model_trained_through": "2026-07-24",
+  "gap_context": {
+    "prev_close": 197.01,
+    "latest": 191.26,
+    "gap_pct": -0.0292,
+    "session": "after-hours",
+    "as_of_et": "19:59 ET"
+  },
+  "model_prob_up": 0.9295,
+  "prob_big_move": 0.5089,
+  "big_move_threshold": 0.0135,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.0491,
+  "headline_count": 137,
+  "article_count": 160,
+  "fulltext": {
+    "stories": 137,
+    "read_full": 83,
+    "read_partial": 17,
+    "headline_only": 37,
+    "alt_searches": 12,
+    "elapsed_s": 61.7
+  },
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 7,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.7933,
+  "brain_top_news": [],
+  "most_negative": [
+    {
+      "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Stock Falls Below $200 Again, Bernstein Gives Buy Rating (NVDA) - Watcher Guru",
+      "source": "Watcher Guru",
+      "score": -0.95,
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOanBMUUdIVnFQaTNRN3IwY2V5RFdhd09WejQ1Tl8xc0lXVVFybmhTR0NHM2k3TGRtdXM4cmhQY05INGg3aFZ4c19HVzF5cV9uNm1qNDF1MEliV3dFM2lXSmJibkZMZTB0NkIyclZFb3QtQmhKSlRrbGh1ckEtYzZ2WnpQY05ITS1qSnV6eWJJQnpIdDRmOF9B?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "watcher.guru"
+    },
+    {
+      "title": "Bad News For Nvidia Stock Fans - TradingView",
+      "source": "google_news",
+      "score": -0.937,
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWmc5VERmVUJwb0JiQ3lISjdVV1pQdG9TSTdubkFYMHNKZHI5UG1CX0hNTVhyaEE0QU8td21qSVB6eDVwb085NlVGS0t1TkdORmpWbmxRVFpkY0stQkQ2dzZSblZ2bzdRMXpFM1hma3k0TUFJeGxyajFPUGVOa1dLYVFaTGpxTUt4WV94V2l6UHdJTjJl?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.tradingview.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "CRWV, NBIS Stocks Climb \u2013 Nvidia\u2019s $250B OpenAI Guarantee Is A \u2018Constructive\u2019 Signal, Says Analyst - TradingView",
+      "source": "TradingView",
+      "score": 0.934,
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPbTAyb29IX2diU0IySGFnWUJfa2VCQjc4elRFbVk5bU9YdU5HdnMtV3hLV2o0dXhzX1ZXNVBsUDZfcDBKRFBURm94NWtSVUxSNjFtWlZQdUFSS0g4a01Gcjk5VjFfMDdGVG1adDFMREUwV0NSR3FFaWVoVldJM1o0X0gydUZKTjdJRGppeV9IdG1YNFBYTGJ0SFIwMXRUdEp1eVQ1Qk1Zd09pbDRRQmxfUWFGT3RPbEQyYXhtdTNYQnA1TDgyRjZWLV9vOWt0SGtTUTFxVmVmRHI5OGxwdHlEOXdsZWZvNWM?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.tradingview.com"
+    },
+    {
+      "title": "Prediction: Nvidia-SK Hynix Partnership Will Make Both Stocks Big Winners - The Motley Fool",
+      "source": "google_news",
+      "score": 0.873,
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTTJhOTJqUXVBUVJPM3BOLWlDNExLUnN2enZ0dW1FY1MyZDVNcXdscVdCdnNUdnF2ZUE1UDJIcmx4SHhXc3lMZEhud3U5Y3J1N2hQWnpKeFh3TEhKZ2xaX2c5NExlUmdMd3pIaXBQemxiUkJYQ2dkRFcwUUFubGotZmJjUUhhdmV5ekFDRVExRVR2M0ZZRkE?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.fool.com"
+    },
+    {
+      "title": "Ilya Sutskever\u2019s Safe Superintelligence partners with Nvidia to scale its AI research - TechCrunch",
+      "source": "TechCrunch",
+      "score": 0.855,
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTEpWM0dmdzBOcXF0V09UNldRRlJyWFVJdXZFRmt5cFBuc0QweWhoMm1TR3hZU0ttNFBnUVdtN2h5WkNabHJmdmZxc3FhNVhXRS1mQ2txMVNjNHdYVTA5dE15SE1zeGdoMjJMWE5lTEN4cHRDWTBJZmtObUlYSUZFbEZKT3BVTUlab1BxVEFHV2NWVmJCcUlXRUR5c2UzdXItZW5rTV9YcllVODJsTlB1eVcyMjdiOVV2VWhB?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "techcrunch.com"
+    }
+  ]
+}

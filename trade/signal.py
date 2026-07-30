@@ -280,6 +280,23 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
             # published only after the blend succeeds: the artifact must
             # never claim bodies were read while scores are title-only
             fulltext_stats = stats
+            # feed the permanent body corpus (phase 1 of the body-aware
+            # brain) - best-effort, never fails the signal
+            try:
+                fulltext.append_bodies([
+                    {"date": str(next_day.date()), "kind": "live_story",
+                     "category": None, "source": s.get("source"),
+                     "slug": None, "title": s.get("title"),
+                     "url": s.get("read_url"),
+                     "status": s.get("read_status"),
+                     "chars": s.get("body_chars"), "text": s.get("body"),
+                     # the text may come from ANOTHER outlet's copy
+                     # (cluster fallback / alternate search) - keep the
+                     # provenance so training can weigh that
+                     "read_via": s.get("read_via")}
+                    for s in read])
+            except Exception as exc:
+                log.warning("body corpus append failed (%s)", exc)
         except Exception as exc:
             log.warning("Full-article reading failed (%s); scoring "
                         "headlines only", exc)
