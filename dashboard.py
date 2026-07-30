@@ -121,6 +121,49 @@ st.caption("News-sentiment direction signal + EMH-consistent volatility desk. "
      "Architecture"])
 
 
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_pup_calibration():
+    """P(up) honesty table: what the direction model said out-of-sample
+    vs how often the next open-to-open was actually up. Computed from
+    oos_predictions.csv (walk-forward, appended by every retrain) so the
+    table stays current as evidence accumulates. Returns (table, base
+    rate, n_days) or None when the file is absent."""
+    try:
+        df = pd.read_csv(config.ARTIFACTS / "oos_predictions.csv",
+                         parse_dates=[0], index_col=0)
+        assert {"y", "prob_up"} <= set(df.columns) and len(df) >= 200
+    except Exception:
+        return None
+    edges = [0, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    labels = ["under 40%", "40-50%", "50-60%", "60-70%", "70-80%",
+              "80-90%", "90-100%"]
+    cut = pd.cut(df["prob_up"], edges, labels=labels)
+    g = df.groupby(cut, observed=False)
+    tab = pd.DataFrame({
+        "model said": labels,
+        "days": g.size().reindex(labels).fillna(0).astype(int).values,
+        "actually up next day": [
+            f"{v:.0%}" if pd.notna(v) else "-"
+            for v in g["y"].mean().reindex(labels).values],
+    })
+
+    return tab, float(df["y"].mean()), len(df)
+
+
+# module-level (NOT inside the cached loader: st.cache_data pickles
+# return values and a closure would not survive that)
+_PUP_EDGES = [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+_PUP_LABELS = ["under 40%", "40-50%", "50-60%", "60-70%", "70-80%",
+               "80-90%", "90-100%"]
+
+
+def _pup_bucket(p: float) -> str:
+    for hi, lab in zip(_PUP_EDGES, _PUP_LABELS):
+        if p <= hi:
+            return lab
+    return _PUP_LABELS[-1]
+
+
 @st.cache_data(ttl=900, show_spinner="Collecting today's news...")
 def todays_news():
     from data.news import cluster_headlines, collect_live_headlines
@@ -212,9 +255,9 @@ with tab_today:
         m[0].metric("Model P(up)", f"{signal['model_prob_up']:.1%}",
                     help=f"Long > {config.LONG_ENTER}, exit < {config.LONG_EXIT}")
         m[0].caption("Model's lean that the OPEN-to-OPEN return (today's "
-                     "open to tomorrow's open) is positive. Uncalibrated - "
-                     "treat as a lean, not a literal probability. Advisory "
-                     "only, no proven edge.")
+                     "open to tomorrow's open) is positive. NOT a literal "
+                     "probability - see 'What does this percentage really "
+                     "mean?' below the metrics.")
         m[1].metric("Headline sentiment", f"{signal['headline_sentiment']:+.3f}",
                     help=f"{signal['headline_count']} stories"
                          + (f" from {signal['article_count']} articles"
@@ -259,6 +302,46 @@ with tab_today:
         v[3].metric("VaR 99% ($1M)", f"${h1['var_99']:,.0f}")
         v[3].caption("A very bad day (worst 1-in-100) - treat as a floor, "
                      "tails are fatter.")
+
+    if signal:
+        with st.expander("What does the P(up) percentage really mean?"):
+            st.markdown(
+                "**What it is.** The direction model's raw score that the "
+                "open-to-open return will be positive, from a gradient-"
+                "boosted tree trained walk-forward (each day's forecast "
+                "uses only data available before it). The traded rule only "
+                "checks thresholds: above "
+                f"{config.LONG_ENTER} → long, below {config.LONG_EXIT} "
+                "→ flat. **A 93% and a 60% reading produce the exact "
+                "same action** - the size of the number beyond the "
+                "threshold changes nothing.\n\n"
+                "**What it is not: a real probability.** The table below "
+                "is the model's own out-of-sample record - every forecast "
+                "it made on days it had never seen, against what actually "
+                "happened next:")
+            cal = load_pup_calibration()
+            if cal is not None:
+                tab, base, n_days = cal
+                p_now = signal.get("model_prob_up")
+                if p_now is not None:
+                    tab = tab.copy()
+                    tab.loc[tab["model said"] == _pup_bucket(p_now),
+                            "model said"] += "  ← today"
+                st.table(tab.set_index("model said")[
+                    ["days", "actually up next day"]])
+                st.markdown(
+                    f"Base rate over these {n_days:,} days: NVDA opened-to-"
+                    f"opened up **{base:.0%}** of the time regardless of "
+                    "what any model said. Readings in the 90-100% zone "
+                    "have historically been followed by up-days LESS often "
+                    "than that base rate - extreme confidence has been "
+                    "noise, not extra signal. This is why the desk calls "
+                    "the number advisory, sizes positions with the "
+                    "volatility model instead, and lets the Track Record "
+                    "tab keep score.")
+            else:
+                st.caption("Out-of-sample history unavailable in this "
+                           "deployment - the number remains advisory.")
 
     st.subheader("Charts")
     c_live, c_hist = st.columns(2)
