@@ -388,8 +388,8 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
                           for h in reversed(ranked) if h["score"] > 0.1][:3],
     }
     out_path = config.ARTIFACTS / f"signal_{next_day.strftime('%Y%m%d')}.json"
-    out_path.write_text(json.dumps(signal, indent=2), encoding="utf-8")
-    log.info("Signal saved -> %s", out_path)
+    from model.volatility import save_entry_artifact
+    save_entry_artifact(out_path, signal, next_day)
     return signal
 
 

@@ -371,9 +371,30 @@ def forecast() -> dict:
         out["horizons"][str(horizon)] = entry
 
     path = config.ARTIFACTS / f"vol_forecast_{next_day.strftime('%Y%m%d')}.json"
-    path.write_text(json.dumps(out, indent=2), encoding="utf-8")
-    log.info("Vol forecast saved -> %s", path)
+    save_entry_artifact(path, out, next_day)
     return out
+
+
+def save_entry_artifact(path, payload: dict, entry_day) -> None:
+    """Write a per-entry-day forecast artifact - UNLESS an on-time version
+    already exists and this run is post-open. The Track record tab scores
+    these files as THE desk's published forecast: a rerun after the 19:00
+    IST open (tests, manual regeneration) that overwrites an on-time
+    record gets the whole row excluded as late-published. Happened on
+    2026-07-29 - a 19:09 test rerun masked the 17:05 scheduled record."""
+    try:
+        if path.exists():
+            prev = json.loads(path.read_text(encoding="utf-8"))
+            cutoff = pd.Timestamp(entry_day) + pd.Timedelta(hours=19)
+            if (pd.Timestamp(prev.get("generated_at")) < cutoff
+                    <= pd.Timestamp(payload.get("generated_at"))):
+                log.warning("%s: keeping the on-time record; this "
+                            "post-open rerun is not archived", path.name)
+                return
+    except Exception:
+        pass   # unparseable previous file: overwriting it can only help
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    log.info("Saved -> %s", path)
 
 
 def format_forecast(f: dict) -> str:
