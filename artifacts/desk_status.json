@@ -1,0 +1,25 @@
+{
+  "stages": {
+    "bq-probe": {
+      "last_run": "2026-07-30T18:46:07",
+      "ok": true,
+      "note": null,
+      "secs": 12.3,
+      "last_ok": "2026-07-30T18:46:07",
+      "fails_since_ok": 0
+    },
+    "news-topup": {
+      "last_run": "2026-07-30T18:50:31",
+      "ok": true,
+      "note": null,
+      "secs": 36.2,
+      "last_ok": "2026-07-30T18:50:31",
+      "fails_since_ok": 0
+    }
+  },
+  "updated": "2026-07-30T18:50:31",
+  "data_warnings": [
+    "gdelt_daily.csv last has 2026-07-13 (17 days old)"
+  ],
+  "data_checked": "2026-07-30T18:50:31"
+}

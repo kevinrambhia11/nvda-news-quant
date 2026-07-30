@@ -234,6 +234,7 @@ def topup() -> dict:
                        .astype(str).to_numpy()))
     fresh_keys = fresh_art[key_cols].astype(str).apply(tuple, axis=1)
     fresh_art = fresh_art.loc[~fresh_keys.isin(existing)]
+    fresh_art = _respect_day_cap(fresh_art, art, start)
 
     if len(fresh_art):
         # schema v2 (2026-07-30): the archive keeps article URLs so bodies
@@ -279,6 +280,40 @@ def topup() -> dict:
                     "are current, nn_* stay at previous coverage", exc)
     return {"new_articles": int(len(fresh_art)), "embedded": int(n_emb),
             "bodies": n_bodies, "through": str(end.date())}
+
+
+def _respect_day_cap(fresh_art: pd.DataFrame, art: pd.DataFrame,
+                     start: pd.Timestamp) -> pd.DataFrame:
+    """Keep every (day, category) at or under PER_DAY_CAP.
+
+    The top-up deliberately re-pulls its boundary day (that day may have
+    been mid-progress), and BigQuery re-samples it independently: rows
+    that differ only by source/slug survive the dedup and stack on top of
+    the ones already stored. Measured effect before this guard: 8 of
+    18,412 groups held 81-116 articles instead of 60, all on re-pull
+    boundary days, which skews that day's article-count and dispersion
+    features relative to every other day.
+
+    Prevention only - existing over-cap rows are left alone on purpose.
+    The embeddings matrix is positional and append-only, so DELETING
+    archive rows would misalign every vector after the deletion (the bug
+    class that once invalidated weeks of NewsNet results)."""
+    if fresh_art.empty:
+        return fresh_art
+    have = (art.loc[art["date"] >= start]
+            .groupby(["date", "category"]).size())
+    keep_idx = []
+    for (day, cat), grp in fresh_art.groupby(["date", "category"], sort=False):
+        room = PER_DAY_CAP - int(have.get((day, cat), 0))
+        if room >= len(grp):
+            keep_idx.extend(grp.index)
+        elif room > 0:
+            keep_idx.extend(grp.index[:room])
+    dropped = len(fresh_art) - len(keep_idx)
+    if dropped:
+        log.info("Day cap: %d re-pulled rows dropped to keep days at "
+                 "<= %d articles/category", dropped, PER_DAY_CAP)
+    return fresh_art.loc[fresh_art.index.isin(keep_idx)]
 
 
 def _archive_bodies(fresh_art: pd.DataFrame) -> int:

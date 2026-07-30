@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import logging
 import sys
+import time
 
 import pandas as pd
 
@@ -355,6 +356,25 @@ def main() -> None:
                         help="backtest with zero transaction costs")
     args = parser.parse_args()
 
+    # Every command records its outcome so a silent scheduled-task failure
+    # becomes a dashboard banner instead of a line in a log nobody reads.
+    # Health bookkeeping never changes a command's exit status.
+    from data import health
+    health.rotate_log()
+    started = time.monotonic()
+    try:
+        _dispatch(args)
+    except BaseException as exc:
+        health.record_run(args.command, False,
+                          f"{type(exc).__name__}: {exc}", started)
+        raise
+    health.record_run(args.command, True, None, started)
+    if args.command in ("signal", "news-topup", "learn"):
+        for w in health.record_data_snapshot():
+            log.warning("STALE INPUT: %s", w)
+
+
+def _dispatch(args) -> None:
     if args.command == "fetch":
         cmd_fetch(refresh=args.refresh)
     elif args.command == "train":

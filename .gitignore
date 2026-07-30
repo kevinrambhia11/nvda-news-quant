@@ -60,6 +60,11 @@ artifacts/cache/*
 !artifacts/learning_log.csv
 !artifacts/today_news_weights.json
 
+# Desk health record (run outcomes + input staleness, no article text):
+# committed so the HOSTED dashboard can alert on a failed scheduled task,
+# not just the desk machine
+!artifacts/desk_status.json
+
 # Streamlit
 .streamlit/
 

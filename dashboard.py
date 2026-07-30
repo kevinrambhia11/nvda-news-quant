@@ -116,6 +116,28 @@ st.title("NVDA Quant Desk")
 st.caption("News-sentiment direction signal + EMH-consistent volatility desk. "
            "Educational tool - not financial advice.")
 
+
+@st.cache_data(ttl=120, show_spinner=False)
+def desk_health():
+    """Run outcomes + input staleness, from the committed status file (so
+    the hosted app alerts too, not just the desk machine)."""
+    try:
+        from data.health import summarize
+        return summarize()
+    except Exception:
+        return None
+
+
+# Health banner ABOVE the tabs: a failed scheduled task or a stale input
+# must be impossible to miss, not buried in an expander.
+_h = desk_health()
+if _h and _h["alerts"]:
+    _box = st.error if _h["level"] == "alert" else st.warning
+    _box("**Desk health**\n\n"
+         + "\n".join(f"- {a}" for a in _h["alerts"])
+         + (f"\n\nStatus recorded {_h['updated']}." if _h.get("updated")
+            else ""))
+
 (tab_today, tab_vol, tab_links, tab_track, tab_arch) = st.tabs(
     ["Desk today", "Volatility", "Today's news", "Track record",
      "Architecture"])

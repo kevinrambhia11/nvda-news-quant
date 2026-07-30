@@ -97,6 +97,16 @@ def _gap_context() -> dict | None:
         return None
 
 
+def _data_warnings() -> list[str]:
+    """Input-staleness notes for the artifact; never fails the signal."""
+    try:
+        from data.health import data_warnings
+        return data_warnings()
+    except Exception as exc:
+        log.warning("Freshness check unavailable (%s)", exc)
+        return []
+
+
 def _load_magnitude_bundle() -> dict | None:
     """The calibrated P(big move) head - the desk's validated news edge.
     Absent or stale bundles degrade to omission, never to a crash."""
@@ -378,6 +388,10 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
         "headline_count": len(scores),       # stories after clustering
         "article_count": len(headlines),     # raw articles before clustering
         "fulltext": fulltext_stats,          # body-reading counters (no text)
+        # stale inputs are stated on the artifact itself: downstream fills
+        # missing tone days with 0.0, which reads as "a quiet news day"
+        # rather than "no data" - a reader must be able to discount that
+        "data_warnings": _data_warnings(),
         "headlines_degraded": degraded,
         "sentiment_backend": analyzer.backend,
         "stocktwits_bulls": bulls,
@@ -438,6 +452,8 @@ def format_signal(signal: dict) -> str:
            f"{ft['read_partial']} partially, {ft['headline_only']} "
            f"headline-only ({ft['elapsed_s']:.0f}s)"]
           if (ft := signal.get("fulltext")) else []),
+        *([f"  !! STALE INPUT       : {w}"
+           for w in signal.get("data_warnings") or []]),
         f"  StockTwits bull/bear : {signal['stocktwits_bulls']}/{signal['stocktwits_bears']}",
         f"  Advisory composite   : {signal['advisory_composite']:.3f} "
         f"(context only - not the traded rule)",
