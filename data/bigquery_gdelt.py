@@ -136,9 +136,15 @@ def load_bq_daily(name: str, terms: list[str], refresh: bool = False,
             if last >= today - pd.Timedelta(days=1):
                 return cached
             try:
+                # end = today (exclusive in SQL): the current UTC partition
+                # is still filling and must never be aggregated as a day.
+                # Committed proof of the old behavior: every boundary row of
+                # gdelt_competitors.csv was later revised 2.2-3.8x in count
+                # (07-27 committed as 225 articles, final 503) - and the
+                # freshness gate then served that half-day for a full day.
                 fresh = daily_series(terms,
                                      str((last - pd.Timedelta(days=3)).date()),
-                                     str((today + pd.Timedelta(days=1)).date()),
+                                     str(today.date()),
                                      domains=domains)
             except Exception as exc:
                 log.warning("BigQuery top-up failed for %s (%s); serving "
@@ -148,7 +154,7 @@ def load_bq_daily(name: str, terms: list[str], refresh: bool = False,
             merged = merged[~merged.index.duplicated(keep="last")].sort_index()
             atomic_to_csv(merged, cache_file)
             return merged
-    end = str((today + pd.Timedelta(days=1)).date())
+    end = str(today.date())   # exclusive: complete UTC partitions only
     cost_gb = daily_series(terms, config.TRAIN_START, end, dry_run=True,
                            domains=domains) / 1024 ** 3
     used_gb = month_usage_gb()

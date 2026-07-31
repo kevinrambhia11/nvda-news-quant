@@ -24,8 +24,12 @@ import config
 
 
 def atomic_to_csv(df: pd.DataFrame, path) -> None:
-    """Write-then-rename so an interrupted write never leaves a torn cache."""
-    tmp = path.with_name(path.name + ".tmp")
+    """Write-then-rename so an interrupted write never leaves a torn cache.
+    The tmp name is per-process: with a shared fixed name, two concurrent
+    writers (the 17:00 task vs a manual/dashboard run) truncate each
+    other's tmp mid-write and os.replace installs a torn file - defeating
+    the exact protection this helper exists for."""
+    tmp = path.with_name(f"{path.name}.{os.getpid()}.tmp")
     df.to_csv(tmp)
     os.replace(tmp, path)
 
@@ -34,9 +38,10 @@ def atomic_dump(obj, path) -> None:
     """Write-then-rename for joblib bundles. Matters because the weekly
     retrain (Fridays 15:00 IST) now overlaps the same weekday as the 17:00
     signal: an overrunning retrain must never leave a half-written model
-    file for the signal to load."""
+    file for the signal to load. Per-process tmp name for the same reason
+    as atomic_to_csv."""
     import joblib
-    tmp = path.with_name(path.name + ".tmp")
+    tmp = path.with_name(f"{path.name}.{os.getpid()}.tmp")
     joblib.dump(obj, tmp)
     os.replace(tmp, path)
 
@@ -158,6 +163,12 @@ def fetch_gdelt_daily(start: str, end: str | None = None,
         cursor = chunk_end + timedelta(days=1)
     df = pd.concat(parts).sort_index()
     df = df[~df.index.duplicated(keep="last")]
+    # Trim today's still-filling UTC bucket from the RETURNED frame too.
+    # The chunk-cache guard above already refuses to persist it, but
+    # load_gdelt_daily concatenates whatever comes back into the committed
+    # gdelt_daily.csv - and a half-day tone/volume row masquerading as a
+    # complete day is exactly the newest row the next signal reads.
+    df = df[df.index < pd.Timestamp(today)]
     df.index.name = "date"
     if df.empty:
         raise RuntimeError(

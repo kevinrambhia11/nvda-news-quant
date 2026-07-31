@@ -172,7 +172,12 @@ def train(holdout_start: pd.Timestamp, epochs: int = 60,
                          torch.tensor(abs(float(y)) * RET_SCALE))).item()
                 for d, e, s, c, y in val_days]))
         if vloss < best - 1e-4:
-            best, best_state, patience = vloss, model.state_dict(), 0
+            # state_dict() returns LIVE references - later optimizer steps
+            # would mutate the "best" snapshot in place, making early
+            # stopping a no-op that silently saves the final epoch
+            best, patience = vloss, 0
+            best_state = {k: v.detach().clone()
+                          for k, v in model.state_dict().items()}
         else:
             patience += 1
         if epoch % 10 == 0:

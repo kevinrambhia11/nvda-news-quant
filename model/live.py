@@ -37,6 +37,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 
 import joblib
 import numpy as np
@@ -114,9 +115,8 @@ def score_yesterday() -> str:
             new = pd.concat([pd.read_csv(LEARNING_LOG,
                                          parse_dates=["entry_day"]), new],
                             ignore_index=True)
-        tmp = LEARNING_LOG.with_suffix(".csv.tmp")
+        tmp = LEARNING_LOG.with_name(f"{LEARNING_LOG.name}.{os.getpid()}.tmp")
         new.to_csv(tmp, index=False)
-        import os
         os.replace(tmp, LEARNING_LOG)
 
     if not rows:
@@ -214,7 +214,11 @@ def train_brain(epochs: int = 40) -> None:
                          torch.tensor(abs(float(y)) * RET_SCALE))).item()
                 for d, e, s, c, y in val_days]))
         if vloss < best - 1e-4:
-            best, best_state, patience = vloss, model.state_dict(), 0
+            # a real copy: state_dict() aliases the live tensors and the
+            # optimizer would keep mutating the "best" snapshot in place
+            best, patience = vloss, 0
+            best_state = {k: v.detach().clone()
+                          for k, v in model.state_dict().items()}
         else:
             patience += 1
         if patience >= 6:
@@ -295,8 +299,7 @@ def apply_brain() -> None:
                           "category": str(r["category"]),
                           "weight": round(float(wn[j]), 4),
                           "impact": round(float(an[j]), 5)})
-    import os
-    tmp = TODAY_WEIGHTS.with_suffix(".json.tmp")
+    tmp = TODAY_WEIGHTS.with_name(f"{TODAY_WEIGHTS.name}.{os.getpid()}.tmp")
     tmp.write_text(json.dumps(
         {"entry_day": str(pd.Timestamp(upcoming).date()),
          "generated_at": pd.Timestamp.now().isoformat(timespec="seconds"),
@@ -352,8 +355,7 @@ def _live_dataset() -> pd.DataFrame:
 
 
 def _atomic_dump(bundle: dict, path) -> None:
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp = path.with_name(f"{path.name}.{os.getpid()}.tmp")
     joblib.dump(bundle, tmp)
     os.replace(tmp, path)
 

@@ -352,8 +352,13 @@ def forecast() -> dict:
             gk_var = garman_klass_vol(px) ** 2
             win_gk, win_gap = gk_var.iloc[-504:], gap.iloc[-504:]
             ratio = float((win_gk + win_gap ** 2).mean() / win_gk.mean())
-            print_tonight = bool(float(row["earn_window"].iloc[0]) == 1.0) \
-                if "earn_window" in row.columns else False
+            # read the flag from the FULL frame, not the model's feature
+            # slice: if the crowned h=1 model carries no event features,
+            # `row` has no earn_window and print-night gap sizing would
+            # silently vanish on the single riskiest day of the quarter
+            # (position ~3x too large, VaR ~3x understated)
+            print_tonight = bool(float(ds["earn_window"].iloc[-1]) == 1.0) \
+                if "earn_window" in ds.columns else False
             if print_tonight and earn_dates is not None and len(earn_dates):
                 from features.build import print_gap_sq
                 gap_var = float(print_gap_sq(px, earn_dates).mean())

@@ -224,7 +224,7 @@ def topup() -> dict:
     daily = daily[daily["date"] < start]
     daily = pd.concat([daily, fresh_agg], ignore_index=True) \
         .sort_values(["date", "category"])
-    tmp = DAILY_PATH.with_suffix(".csv.tmp")
+    tmp = DAILY_PATH.with_name(f"{DAILY_PATH.name}.{os.getpid()}.tmp")
     daily.to_csv(tmp, index=False)
     os.replace(tmp, DAILY_PATH)
 
@@ -246,7 +246,7 @@ def topup() -> dict:
         fresh_art = fresh_art[art.columns.tolist()]
         merged = pd.concat([art, fresh_art], ignore_index=True)
         merged["date"] = merged["date"].astype("datetime64[ms]")
-        tmp = ART_PATH.with_suffix(".parquet.tmp")
+        tmp = ART_PATH.with_name(f"{ART_PATH.name}.{os.getpid()}.tmp")
         merged.to_parquet(tmp, index=False)
         os.replace(tmp, ART_PATH)
         log.info("Archive: +%d articles -> %d total (through %s)",

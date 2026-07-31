@@ -268,11 +268,19 @@ def build_daily_features(nested: bool = False, impact_path=None,
     brok = art[art["category"] == "brokers"].groupby("entry")
     feats["n2_brokers_dir"] = brok["dir_score"].mean()
 
-    # exact daily aggregates: dispersion + volume anomalies + divergence
+    # exact daily aggregates: dispersion + volume anomalies + divergence.
+    # A Monday/post-holiday entry absorbs 2-4 calendar days of news, and
+    # pivot_table's default aggfunc='mean' was AVERAGING the article count
+    # across them - so a real weekend news burst read as an ordinary day
+    # and n2_*_count_z carried a spurious day-of-week signal. Counts are
+    # volumes: sum them. Tone stays a mean (a level, not a volume).
     daily = pd.read_csv(DAILY_PATH, parse_dates=["date"])
     daily["entry"] = _entry_days(daily["date"], entry_idx)
     dv = daily.pivot_table(index="entry", columns="category",
-                           values=["day_tone", "day_tone_sd", "day_n"])
+                           values=["day_tone", "day_tone_sd", "day_n"],
+                           aggfunc={"day_tone": "mean",
+                                    "day_tone_sd": "mean",
+                                    "day_n": "sum"})
     feats["n2_macro_tone_sd"] = dv[("day_tone_sd", "macro")]
     feats["n2_cross_divergence"] = dv["day_tone"].std(axis=1)
     for cat, col in (("nvda", "n2_nvda_count_z"),
