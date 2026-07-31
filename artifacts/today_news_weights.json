@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-07-30",
-  "generated_at": "2026-07-30T17:00:51",
+  "generated_at": "2026-07-31T13:18:24",
   "articles": [
     {
-      "headline": "amazon rooftop tent",
-      "source": "goodhousekeeping.com",
-      "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.04296
-    },
-    {
-      "headline": "asia global 500 tsmc tencent wistron sk hynix chery daikin coupang",
-      "source": "fortune.com",
-      "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.02212
-    },
-    {
-      "headline": "asian chip stocks drop as sk hynix earnings disappoint",
-      "source": "forbes.com",
-      "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.02325
-    },
-    {
-      "headline": "qualcomm forecasts weak quarterly profit sees faster drop in apple revenue",
-      "source": "macdailynews.com",
-      "category": "competitors",
-      "weight": 0.0047,
-      "impact": -0.02374
-    },
-    {
-      "headline": "article qualcomm profit earning wall street apple",
-      "source": "theglobeandmail.com",
-      "category": "competitors",
-      "weight": 0.0047,
-      "impact": -0.02381
-    },
-    {
-      "headline": "taiwan detains nvidia employee in super micro probe taiwan media says",
-      "source": "nikkei.com",
+      "headline": "mark cuban michael burry nvidia ai deals boom microchips infrastructure 2026 7",
+      "source": "businessinsider.com",
       "category": "nvda",
-      "weight": 0.0047,
-      "impact": -0.00856
+      "weight": 0.0053,
+      "impact": -0.0216
     },
     {
-      "headline": "qualcomm q3 earnings top revenue expectations as smartphone market slows 160509349.html",
-      "source": "yahoo.com",
-      "category": "competitors",
-      "weight": 0.0047,
-      "impact": -0.02644
-    },
-    {
-      "headline": "apple 5 trillion how steve jobs and steve wozniak built apple to overtake nvidia in market cap 253954",
-      "source": "newsx.com",
+      "headline": "nvidia would die for these margins precigenetics sells its microfluidic environment chips for 200000 each at an implied ",
+      "source": "wccftech.com",
       "category": "nvda",
-      "weight": 0.0047,
-      "impact": -0.01496
+      "weight": 0.0053,
+      "impact": -0.00692
     },
     {
-      "headline": "some retailers restrict geforce rtx 5080 sales to prebuilt pcs",
-      "source": "eteknix.com",
+      "headline": "nvidias stiller favorit fuer die naechste ki welle 20405787.html",
+      "source": "deraktionaer.de",
       "category": "nvda",
-      "weight": 0.0047,
-      "impact": -0.01749
+      "weight": 0.0053,
+      "impact": -0.0088
     },
     {
-      "headline": "bmw selects qualcomm chips for upcoming vehicle platforms",
-      "source": "news.az",
+      "headline": "fcc blacklists foreign robots on huawei list as surveillance fears grow striking nvidia partner unitree as well",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0051,
+      "impact": -0.00328
+    },
+    {
+      "headline": "nvidia is reportedly ready to back a 250 billion openai data center and wall street is watching closely",
+      "source": "lnt.ma",
+      "category": "nvda",
+      "weight": 0.0051,
+      "impact": -0.00879
+    },
+    {
+      "headline": "nvidia moonshot blackwell chips startup.html",
+      "source": "digitimes.com",
+      "category": "nvda",
+      "weight": 0.0051,
+      "impact": -0.01096
+    },
+    {
+      "headline": "taiwanese retailer restricts rtx 5080 to bundles and pc builds as gpus witness another price hike",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0051,
+      "impact": -0.00776
+    },
+    {
+      "headline": "don t close the door jensen huang warns us against open weight ai curbs after china s kimi k3 breakthrough 13986375.html",
+      "source": "moneycontrol.com",
+      "category": "nvda",
+      "weight": 0.005,
+      "impact": -0.00922
+    },
+    {
+      "headline": "qualcomm price hikes q2 2026 earnings",
+      "source": "theverge.com",
       "category": "competitors",
-      "weight": 0.0047,
-      "impact": -0.0187
+      "weight": 0.005,
+      "impact": -0.00171
+    },
+    {
+      "headline": "nvidia ceo jensen huang meets us officials scrutiny grows over china chip access",
+      "source": "scmp.com",
+      "category": "nvda",
+      "weight": 0.005,
+      "impact": -0.00374
     }
   ]
 }
