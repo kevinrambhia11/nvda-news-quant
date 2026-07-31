@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-07-30",
-  "generated_at": "2026-07-31T15:54:11",
+  "entry_day": "2026-07-31",
+  "generated_at": "2026-07-31T17:03:48",
   "articles": [
     {
-      "headline": "mark cuban michael burry nvidia ai deals boom microchips infrastructure 2026 7",
+      "headline": "amds helios rack reportedly costs 40 more than nvidias vera rubin yet microsoft hedges its bets by committing to deploy ",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0052,
+      "impact": -0.00684
+    },
+    {
+      "headline": "retail traders ai trade tech ai etfs nvda pltr mu 2026 7",
       "source": "businessinsider.com",
       "category": "nvda",
-      "weight": 0.0053,
-      "impact": -0.0216
-    },
-    {
-      "headline": "nvidia would die for these margins precigenetics sells its microfluidic environment chips for 200000 each at an implied ",
-      "source": "wccftech.com",
-      "category": "nvda",
-      "weight": 0.0053,
-      "impact": -0.00692
-    },
-    {
-      "headline": "nvidias stiller favorit fuer die naechste ki welle 20405787.html",
-      "source": "deraktionaer.de",
-      "category": "nvda",
-      "weight": 0.0053,
-      "impact": -0.0088
-    },
-    {
-      "headline": "fcc blacklists foreign robots on huawei list as surveillance fears grow striking nvidia partner unitree as well",
-      "source": "wccftech.com",
-      "category": "nvda",
       "weight": 0.0051,
-      "impact": -0.00328
+      "impact": -0.02216
     },
     {
-      "headline": "nvidia is reportedly ready to back a 250 billion openai data center and wall street is watching closely",
-      "source": "lnt.ma",
-      "category": "nvda",
-      "weight": 0.0051,
-      "impact": -0.00879
-    },
-    {
-      "headline": "nvidia moonshot blackwell chips startup.html",
+      "headline": "amd nvidia cuda software anthropic.html",
       "source": "digitimes.com",
       "category": "nvda",
       "weight": 0.0051,
-      "impact": -0.01096
+      "impact": -0.00102
     },
     {
-      "headline": "taiwanese retailer restricts rtx 5080 to bundles and pc builds as gpus witness another price hike",
+      "headline": "lenovo yoga 9n first nvidia rtx spark laptop specs",
       "source": "wccftech.com",
       "category": "nvda",
       "weight": 0.0051,
-      "impact": -0.00776
+      "impact": 6e-05
     },
     {
-      "headline": "don t close the door jensen huang warns us against open weight ai curbs after china s kimi k3 breakthrough 13986375.html",
-      "source": "moneycontrol.com",
+      "headline": "nvidia required pc fix path of exile 2 bug",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0051,
+      "impact": -0.00119
+    },
+    {
+      "headline": "nvidia naver infrastructure investment data center.html",
+      "source": "digitimes.com",
       "category": "nvda",
       "weight": 0.005,
-      "impact": -0.00922
+      "impact": -0.00692
     },
     {
-      "headline": "qualcomm price hikes q2 2026 earnings",
-      "source": "theverge.com",
+      "headline": "lenovos leaked yoga 9n could be the first rtx spark powered convertible laptop",
+      "source": "digitaltrends.com",
+      "category": "nvda",
+      "weight": 0.005,
+      "impact": -0.00946
+    },
+    {
+      "headline": "apple nvidia 5 trillion ai spending",
+      "source": "memeburn.com",
+      "category": "nvda",
+      "weight": 0.005,
+      "impact": -0.00523
+    },
+    {
+      "headline": "qualcomm acquisition software infrastructure hardware.html",
+      "source": "digitimes.com",
       "category": "competitors",
       "weight": 0.005,
-      "impact": -0.00171
+      "impact": -0.00542
     },
     {
-      "headline": "nvidia ceo jensen huang meets us officials scrutiny grows over china chip access",
-      "source": "scmp.com",
+      "headline": "nvidias fastest graphics cards get us price increase at best buy amazon astral rtx 5080 now costs more than 5090s msrp f",
+      "source": "tomshardware.com",
       "category": "nvda",
       "weight": 0.005,
-      "impact": -0.00374
+      "impact": -0.00334
     }
   ]
 }

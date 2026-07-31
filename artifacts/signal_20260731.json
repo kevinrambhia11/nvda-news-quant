@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-07-31T17:07:10",
+  "ticker": "NVDA",
+  "entry_day": "2026-07-31",
+  "last_close": 195.04,
+  "model_trained_through": "2026-07-29",
+  "gap_context": {
+    "prev_close": 195.04,
+    "latest": 197.37,
+    "gap_pct": 0.012,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.294,
+  "prob_big_move": 0.4872,
+  "big_move_threshold": 0.0135,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0248,
+  "headline_count": 161,
+  "article_count": 203,
+  "fulltext": {
+    "stories": 161,
+    "read_full": 107,
+    "read_partial": 16,
+    "headline_only": 38,
+    "alt_searches": 12,
+    "elapsed_s": 93.7
+  },
+  "data_warnings": [
+    "gdelt_daily.csv last has 2026-07-13 (18 days old)"
+  ],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 7,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.3595,
+  "brain_top_news": [
+    {
+      "headline": "amds helios rack reportedly costs 40 more than nvidias vera rubin yet microsoft hedges its bets by committing to deploy ",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0052,
+      "impact": -0.00684
+    },
+    {
+      "headline": "retail traders ai trade tech ai etfs nvda pltr mu 2026 7",
+      "source": "businessinsider.com",
+      "category": "nvda",
+      "weight": 0.0051,
+      "impact": -0.02216
+    },
+    {
+      "headline": "amd nvidia cuda software anthropic.html",
+      "source": "digitimes.com",
+      "category": "nvda",
+      "weight": 0.0051,
+      "impact": -0.00102
+    },
+    {
+      "headline": "lenovo yoga 9n first nvidia rtx spark laptop specs",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0051,
+      "impact": 6e-05
+    },
+    {
+      "headline": "nvidia required pc fix path of exile 2 bug",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0051,
+      "impact": -0.00119
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia Stock Slumps After Data-Center Report - WSJ",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNYVFLVEUxZ3c2Rlc2MHNiRkk0YkJzZ2dIVEMzZlJhbkowbUhqNm1CaXNRUzA1XzJWUnF1cnhjVFRnSWRmTFJiXzRUU2xWajdCNHlFLUczeHZXQmpiYXg4YkVkTDRTZ1pzY0dtWW90N0ZsNHRTSlIzRnVpQy1haWZydjJSS1hjVy1Pd1N1T21WZmhFTUZ3V3VXV1hvbmtTNUNvMmd6VEx0SXJjQm9UQWpHYW1OTWZWbHBWeHZfVE9JWTZqZFhWMlJtc1dQZzRDSGRUWjh5M0NWUmlEaEpxcEhuNWltWk1TQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.tradingkey.com"
+    },
+    {
+      "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang Personally Joined a Closed-Door Morgan Stanley Roadshow to Address 3 Investor Concerns. Nvidia Stock Is Down 4% Since He Spoke. - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.939,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVExlSDVVWlRYUDBzRFhQaWF6Z1UxN0swUFltVjBFd2Z0czVzckd3dFUyd2NHMjR0STFjQm8tbGI5VEJMTldZYWQ5UUltRTkxVU82b2xGbEgxX0p2cEpuX2EtM1JZWThfSldhYU9fTXFwcG1UYzI5V3pTTU9yYVd6VlFXeHNhVXdDZGRTTnR4R19DejBON1ZEcHk0UXpoNzhW?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Stock Rises As Microsoft Soars On Capex Control, Earnings Beat; Is Nvidia A Buy Now? - Investor's Business Daily",
+      "source": "google_news",
+      "score": 0.917,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1IOTFNSTh1UElRQXRZei1FOWM3TE92NXhheDRqdUltVUdyZkNMMGg3YjBuNTNWLW9RMWxvSUNCX21TcEhscDQ1NTRFTHpqT1BLSnd6SXhSTEJGQWFLR0JaNnpONnJJVWc3el9uck1mMUh2dHlVWUh2MGdaQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Prediction: Nvidia-SK Hynix Partnership Will Make Both Stocks Big Winners - The Motley Fool",
+      "source": "google_news",
+      "score": 0.873,
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTTJhOTJqUXVBUVJPM3BOLWlDNExLUnN2enZ0dW1FY1MyZDVNcXdscVdCdnNUdnF2ZUE1UDJIcmx4SHhXc3lMZEhud3U5Y3J1N2hQWnpKeFh3TEhKZ2xaX2c5NExlUmdMd3pIaXBQemxiUkJYQ2dkRFcwUUFubGotZmJjUUhhdmV5ekFDRVExRVR2M0ZZRkE?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.fool.com"
+    },
+    {
+      "title": "Nvidia partner ChipAgents raises $60 million to accelerate chip design with AI agents - Reuters",
+      "source": "Reuters",
+      "score": 0.754,
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRkRHaGJwMjZBLUt2QTBKcTQ2TXJIclVZdjNDSUF6U1d3aFFTa0FtMHIzYXBxNmxRanlKNjA3eG1KYU1uY255d3JhS2dQb0l3dHJUd0ptSk5rSDhGT2xMdlZCVThNMENpMHJYaVZXZjVMMWZRMVlma2MzRER1WlZZMlNSMjRsNWpDYjRZb0hYaENfVks0cVlBMDVBRnJIakdMYUVRTWVmVlk2UDRzT05tZ2RmMVYtb0ttaVFj?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "m.economictimes.com"
+    }
+  ]
+}
