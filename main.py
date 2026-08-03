@@ -279,7 +279,8 @@ def cmd_industry_backfill() -> None:
     if used + cost > 700:
         sys.exit("Not enough quota headroom this month - re-run after "
                  "the monthly reset")
-    df = load_bq_daily("bq_industry", terms, refresh=True)
+    df = load_bq_daily("bq_industry", terms, refresh=True,
+                       allow_rebuild=True)
     print(f"Industry series backfilled: {len(df)} days "
           f"({df.index.min().date()} -> {df.index.max().date()}); the "
           "series now routes to BigQuery permanently")
