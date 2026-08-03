@@ -208,8 +208,12 @@
   <p class="sub">Data flows top to bottom; every solid arrow runs daily at 17:00 IST -
   the data passes <em>through</em> the neural layer with its weights frozen. Dashed
   arrows are the exceptions: the Friday re-education (the only time weights change)
-  and the grade-yesterday loop. Colors match the status labels used throughout this
-  page.</p>
+  and the grade-yesterday loop. Live stories take a side path not drawn here: they
+  are clustered, their article bodies fetched (blocked sites fall back to another
+  outlet's copy), scored with FinBERT, and feed the published output's SENTIMENT
+  line directly - never the trained models - while every body fetched joins a local
+  corpus for a future body-trained brain. Colors match the status labels used
+  throughout this page.</p>
   <svg viewBox="0 0 720 660" width="100%" role="img" style="max-width:860px; display:block"
        xmlns="http://www.w3.org/2000/svg">
     <title>System architecture: sources through the neural layer to features, models, outputs and the grading loop</title>
@@ -222,12 +226,12 @@
 
     <g style="font-family:ui-monospace,Consolas,monospace">
       <rect x="10" y="8" width="130" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
-      <text x="75" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">GDELT tone</text>
-      <text x="75" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">daily, 2017+</text>
+      <text x="75" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">news tone</text>
+      <text x="75" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">BigQuery, 2017+</text>
 
       <rect x="152" y="8" width="130" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
       <text x="217" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">article archive</text>
-      <text x="217" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">710k, 6 categories</text>
+      <text x="217" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">711k+, 6 categories</text>
 
       <rect x="294" y="8" width="130" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
       <text x="359" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">prices</text>
@@ -238,8 +242,8 @@
       <text x="501" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">39 verified</text>
 
       <rect x="578" y="8" width="130" height="46" rx="7" style="fill:var(--card); stroke:var(--line)"/>
-      <text x="643" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">live headlines</text>
-      <text x="643" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">context only</text>
+      <text x="643" y="27" text-anchor="middle" style="fill:var(--ink); font-size:11px; font-weight:700">live stories</text>
+      <text x="643" y="42" text-anchor="middle" style="fill:var(--muted); font-size:10px">grouped &#183; bodies read</text>
 
       <line x1="75" y1="54" x2="75" y2="66" style="stroke:var(--muted)"/>
       <line x1="217" y1="54" x2="217" y2="66" style="stroke:var(--muted)"/>
@@ -344,11 +348,11 @@
   <table>
     <thead><tr><th>Source</th><th>Coverage</th><th>Use</th></tr></thead>
     <tbody>
-      <tr><td class="mono">Article archive</td><td>710,188 headlines, 6 categories, 2018 to 2026-07-27</td><td>Article-level news features</td></tr>
-      <tr><td class="mono">GDELT daily series</td><td>Tone and article volume, 2017 to present</td><td>Aggregate news tone and volume features</td></tr>
-      <tr><td class="mono">Prices</td><td>2,403 daily bars, NVDA and QQQ benchmark</td><td>Targets, technical and volatility features</td></tr>
+      <tr><td class="mono">Article archive</td><td>711k+ headlines, 6 categories, 2018 to present; URLs kept from 2026-07-30</td><td>Article-level news features; article bodies accumulate in a local corpus for a future body-trained brain</td></tr>
+      <tr><td class="mono">News tone series</td><td>Tone and article volume, 2017 to present. Sourced from BigQuery's GDELT archive since 2026-08-03 (the free DOC API stopped serving; that history is frozen, the whole series rebuilt from one source - never spliced)</td><td>Aggregate news tone and volume features</td></tr>
+      <tr><td class="mono">Prices</td><td>Daily bars, NVDA and QQQ benchmark</td><td>Targets, technical and volatility features</td></tr>
       <tr><td class="mono">Earnings calendar</td><td>39 verified dates, 2017 to 2026-08</td><td>Event features, print-night de-risking</td></tr>
-      <tr><td class="mono">Live headlines</td><td>Scraped at signal time, logged every 30 min</td><td>Human context only; excluded from models</td></tr>
+      <tr><td class="mono">Live stories</td><td>~200 articles scraped at signal time, clustered into ~150 stories (syndicated rewrites get one vote); article bodies fetched, with blocked sites falling back to another outlet's copy of the same story</td><td>FinBERT title+body sentiment on the published output - advisory only, never a trained-model input</td></tr>
     </tbody>
   </table>
   </div>
@@ -456,19 +460,24 @@
   <div class="tl-row"><div class="tl-time">every 30 min</div><div>Headline logger archives
   timestamped headlines from all verticals. Builds a news history for later research; does
   not feed current models.</div></div>
-  <div class="tl-row"><div class="tl-time">weekdays 17:00</div><div>Article top-up, then
-  prior forecasts are graded against realized outcomes, then the trained models are applied
-  to current news, then the output is written and published. No training occurs.</div></div>
+  <div class="tl-row"><div class="tl-time">daily 06:30</div><div>Early data top-up:
+  prices and the BigQuery tone series refresh in GDELT's quiet hours (catches up at boot
+  if the machine was off).</div></div>
+  <div class="tl-row"><div class="tl-time">weekdays 17:00</div><div>Article top-up (with
+  body fetches into the corpus), then prior forecasts are graded against realized
+  outcomes, then the trained models are applied to current news, live stories are
+  clustered and their bodies read, and the output is written and published. No training
+  occurs. Every stage records its outcome to a health file the dashboard renders as a
+  banner.</div></div>
   <div class="tl-row"><div class="tl-time">Fridays 15:00</div><div>News layers retrained on
   all labeled history and both tournaments re-run; deployed models refitted. Finishes
-  roughly an hour before that evening's signal. Any stage failing aborts publication.</div></div>
-  <div class="tl-row"><div class="tl-time">2026-08-01</div><div>One-shot database backfill
-  to migrate the industry news series off a rate-limited source, retried weekly until it
-  completes.</div></div>
+  roughly an hour before that evening's signal. Any stage failing aborts publication -
+  except the health record, which is pushed alone so the hosted dashboard still raises
+  the alarm.</div></div>
   <p class="sub" style="margin-top:0.8rem">All times India Standard Time; the US market
   opens at 19:00 IST during daylight-saving months. Model files are written
-  atomically, so an overrunning retrain cannot leave a partially written model for the
-  evening signal to load.</p>
+  atomically with per-process temp names, so an overrunning retrain or a concurrent
+  manual run cannot leave a torn model for the evening signal to load.</p>
 
   <h2 id="example">Daily output</h2>
   <p class="sub">Actual output for entry day 2026-07-28.</p>
@@ -565,13 +574,17 @@
     million. No numeric criterion defines when to stop trusting the system. Indian tax
     treatment of frequent US-equity turnover, currency conversion and idle-cash drag are
     unmodeled and could exceed the measured edge. Two hours pass between signal and market
-    open with no defined protocol for news arriving in between. One evening's signal has
-    already failed without alerting anyone.</li>
+    open with no defined protocol for news arriving in between. (An earlier gap - one
+    evening's signal failing without anyone noticing - is closed: failed or stale runs
+    now raise a dashboard banner, including on the hosted app.)</li>
     <li><b>News data is thinner than the headline count suggests.</b> About 58% of the
-    archive is unique, English-leaning, multi-word text; the models read URL slugs rather
-    than article bodies, and roughly two-thirds of NVIDIA-category slugs contain no
-    NVIDIA-related term. The measured news effect may partly reflect attention and
-    news-flow patterns rather than the content of specific stories.</li>
+    archive is unique, English-leaning, multi-word text; the TRAINED models still read
+    URL slugs rather than article bodies, and roughly two-thirds of NVIDIA-category slugs
+    contain no NVIDIA-related term. The measured news effect may partly reflect attention
+    and news-flow patterns rather than the content of specific stories. (Since 2026-07-29
+    the published sentiment line does read article bodies, and a body corpus accumulates
+    daily - but a body-trained scorer must first earn a seat through the tournaments,
+    which needs months of collected text.)</li>
   </ul>
 
   <h2 id="glossary">Glossary</h2>
