@@ -1,38 +1,74 @@
 {
-  "generated_at": "2026-08-03T12:29:27",
+  "generated_at": "2026-08-03T17:05:12",
   "ticker": "NVDA",
   "entry_day": "2026-08-03",
   "last_close": 200.75,
   "model_trained_through": "2026-07-30",
   "gap_context": {
     "prev_close": 200.75,
-    "latest": 198.95,
-    "gap_pct": -0.009,
-    "session": "after-hours",
-    "as_of_et": "19:59 ET"
+    "latest": 199.8,
+    "gap_pct": -0.0047,
+    "session": "pre-market",
+    "as_of_et": "07:35 ET"
   },
   "model_prob_up": 0.5,
-  "prob_big_move": 0.473,
+  "prob_big_move": 0.5191,
   "big_move_threshold": 0.0135,
   "action": "HOLD (keep current position)",
-  "headline_sentiment": -0.0375,
+  "headline_sentiment": -0.0638,
   "headline_count": 164,
-  "article_count": 193,
+  "article_count": 199,
   "fulltext": {
     "stories": 164,
-    "read_full": 115,
-    "read_partial": 10,
-    "headline_only": 39,
+    "read_full": 111,
+    "read_partial": 9,
+    "headline_only": 44,
     "alt_searches": 12,
-    "elapsed_s": 100.6
+    "elapsed_s": 42.0
   },
   "data_warnings": [],
   "headlines_degraded": false,
   "sentiment_backend": "finbert",
-  "stocktwits_bulls": 4,
+  "stocktwits_bulls": 5,
   "stocktwits_bears": 3,
-  "advisory_composite": 0.4944,
-  "brain_top_news": [],
+  "advisory_composite": 0.4904,
+  "brain_top_news": [
+    {
+      "headline": "wall street rises as amazon and chip stocks jump e",
+      "source": "lasvegassun.com",
+      "category": "competitors",
+      "weight": 0.0029,
+      "impact": -0.02142
+    },
+    {
+      "headline": "got 1000 taiwan semiconductors 100 billion arizona",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0028,
+      "impact": -0.01329
+    },
+    {
+      "headline": "wall street rises amazon chip stocks oil prices",
+      "source": "dailydemocrat.com",
+      "category": "competitors",
+      "weight": 0.0028,
+      "impact": -0.02308
+    },
+    {
+      "headline": "wall street ai trade chip stocks volatility sox selloff",
+      "source": "fortune.com",
+      "category": "competitors",
+      "weight": 0.0028,
+      "impact": -0.01752
+    },
+    {
+      "headline": "us stock market rises as amazon and chipmaker gains oil prices hike prompt worries amid inflation concerns 1017855062840",
+      "source": "hindustantimes.com",
+      "category": "competitors",
+      "weight": 0.0028,
+      "impact": -0.02066
+    }
+  ],
   "most_negative": [
     {
       "title": "Nvidia Stock Slumps After Data-Center Report - WSJ",
@@ -77,24 +113,26 @@
       "read_from": null
     },
     {
-      "title": "NVDA Stock Hovers Near $6 Trillion Market Cap, US Reportedly Clears Path for AI Chip Sales to China - Stocktwits",
-      "source": "Stocktwits",
-      "score": 0.89,
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOT3BrWWFUbnZZcXdnRlhjenFUanczY05pLWVZVEJpTEJuOGdZelBRWDZTWWs3LVBGWEhRX2ZSMjU3LUNqdUVjTEtPbFRRTE80SzNlYnljNDNPZTlUQUF6dVA5OXdfTFY5ay1aNnlzZERpNnVWQ05TQTFPWU9MQmg5WjZkYmNhUmpzOHRhcEVJdnRBSEZnaHg2TVhfU3c1Wm9NVDFRUnphQW9fZ1ZnM0VNSlAtdng2S2FTMFJidjZfZmF2UEZvMmRBblV5NVFBeWtKWk44bUdyWEw5LU1JVkZ6aWhWYXItNEpsSHhRcXh2OWdEcHc?oc=5",
+      "title": "Nvidia Is Back on Top as Most Valuable Company After Apple Stumbles - Barron's",
+      "source": "Barron's",
+      "score": 0.772,
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9wY2RJT0FkTDdTZE85WlpnSXR2SWY4cUlsN3NYR3V5MTRPaUlqWkhYVlB2WERBdzhIdGRNVGF4MjF2VjJrVzdrWkF4eGxvWjhLZEd1Qjh2YTRiZndBTjdRQy1rbUlfd0tBWk5MYXhrU2ZJdVBFUkE?oc=5",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
-      "read_from": "stocktwits.com"
+      "read_from": "www.ibtimes.co.uk"
     },
     {
-      "title": "Nvidia: Reported OpenAI Deal Raises Circular Deal Fears, but We Think the Stock Is Undervalued - Morningstar",
-      "source": "google_news",
-      "score": 0.701,
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNc2E4OUJQRXFRQXBDOTU2TzNqLUk1cGVQRU9VVjlhd2EwX3BLQzBWRHJENGZ6ZmdNRERxY190a3hycVF4VUNfdXhGNkFEakQzVlB6NHVjU2V2R21hb1MtbkE4YnBTdERpcDNTMUNkZnV2X3RleWVuNk5nNW9ENTEtSHEwUUN1M0pQWWx0TG5FN0hEbm1ob2R6c05mTTktV21EMVVEdlhXT1ZSU0hpOHFKYm1BM3BGLTVXdWgxS253T3FxOVA1WlpN?oc=5",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "headline_only",
-      "read_from": null
+      "title": "NVDA Stock Hovers Near $6 Trillion Market Cap, US Reportedly Clears Path for AI Chip Sales to China - Stocktwits",
+      "source": "Stocktwits",
+      "score": 0.68,
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOT3BrWWFUbnZZcXdnRlhjenFUanczY05pLWVZVEJpTEJuOGdZelBRWDZTWWs3LVBGWEhRX2ZSMjU3LUNqdUVjTEtPbFRRTE80SzNlYnljNDNPZTlUQUF6dVA5OXdfTFY5ay1aNnlzZERpNnVWQ05TQTFPWU9MQmg5WjZkYmNhUmpzOHRhcEVJdnRBSEZnaHg2TVhfU3c1Wm9NVDFRUnphQW9fZ1ZnM0VNSlAtdng2S2FTMFJidjZfZmF2UEZvMmRBblV5NVFBeWtKWk44bUdyWEw5LU1JVkZ6aWhWYXItNEpsSHhRcXh2OWdEcHc?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "stocktwits"
+      ],
+      "read_status": "full",
+      "read_from": "stocktwits.com"
     }
   ]
 }

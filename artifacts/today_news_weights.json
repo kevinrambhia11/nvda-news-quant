@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-07-31",
-  "generated_at": "2026-08-03T12:25:24",
+  "entry_day": "2026-08-03",
+  "generated_at": "2026-08-03T17:03:20",
   "articles": [
     {
-      "headline": "oil prices slip and asian shares are mostly lower as investors sell chipmaker stocks",
-      "source": "news4jax.com",
+      "headline": "wall street rises as amazon and chip stocks jump e",
+      "source": "lasvegassun.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.02472
+      "weight": 0.0029,
+      "impact": -0.02142
     },
     {
-      "headline": "qualcomm forecasts weak quarterly profit expects apple revenue drop to accelerate",
-      "source": "thestar.com.my",
+      "headline": "got 1000 taiwan semiconductors 100 billion arizona",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.02287
+      "weight": 0.0028,
+      "impact": -0.01329
     },
     {
-      "headline": "tsmc ranks 82nd fortune global 500 first time 741.htm",
-      "source": "newkerala.com",
+      "headline": "wall street rises amazon chip stocks oil prices",
+      "source": "dailydemocrat.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.02146
+      "weight": 0.0028,
+      "impact": -0.02308
     },
     {
-      "headline": "tech chip makers stocks lose trillion sell off",
-      "source": "mashable.com",
+      "headline": "wall street ai trade chip stocks volatility sox selloff",
+      "source": "fortune.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01764
+      "weight": 0.0028,
+      "impact": -0.01752
     },
     {
-      "headline": "oil prices slip and asian shares are mostly lower as investors sell chipmaker stocks,160115",
-      "source": "sitkasentinel.com",
+      "headline": "us stock market rises as amazon and chipmaker gains oil prices hike prompt worries amid inflation concerns 1017855062840",
+      "source": "hindustantimes.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.02245
+      "weight": 0.0028,
+      "impact": -0.02066
     },
     {
-      "headline": "qualcomm says its apple revenue will decline faster than expected",
-      "source": "mactech.com",
+      "headline": "intel nasdaq intc swings to positive operating margin even as foundry burns 2 1 billion per quarter",
+      "source": "foreignpolicyjournal.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01936
+      "weight": 0.0028,
+      "impact": -0.01447
     },
     {
-      "headline": "qualcomm growth apple revenue price.html",
-      "source": "digitimes.com",
+      "headline": "chip crunch puts apples best selling devices at risk",
+      "source": "techstory.in",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01915
+      "weight": 0.0028,
+      "impact": -0.00982
     },
     {
-      "headline": "99b57 oil prices slip and asian shares are mostly lower as investors sell chipmaker stocks",
-      "source": "wral.com",
+      "headline": "jim cramer reveals why intel corporation nasdaqintc is about more than just selling computer chips 1805886",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.02076
+      "weight": 0.0028,
+      "impact": -0.013
     },
     {
-      "headline": "qualcomms apple business shrinking due supply constraints.htm",
-      "source": "itechpost.com",
+      "headline": "wall street s favorite bet comes undone as chips whipsaw market 13991314.html",
+      "source": "moneycontrol.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.02086
+      "weight": 0.0028,
+      "impact": -0.01449
     },
     {
-      "headline": "samsung reports record profit as south korean chip giants benefit from global ai boom.html",
-      "source": "theyeshivaworld.com",
+      "headline": "1 incredible reason buy qualcomm stock right now",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00957
+      "weight": 0.0028,
+      "impact": -0.01621
     }
   ]
 }
