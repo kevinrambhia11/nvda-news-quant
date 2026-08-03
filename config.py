@@ -86,6 +86,33 @@ AUX_SERIES = {
     },
 }
 
+# ---------------------------------------------------------------------------
+# PRIMARY tone series source
+# ---------------------------------------------------------------------------
+# The desk's main NVDA tone/volume series. Two permanent, never-spliced
+# corpora exist:
+#   "doc" - GDELT DOC 2.0 full-text search -> artifacts/cache/gdelt_daily.csv
+#           FROZEN at 2026-07-13: the free endpoint has been throttled from
+#           every network tried since, so that cache stopped advancing.
+#   "bq"  - GDELT GKG organization tagging via BigQuery -> bq_nvda_tone.csv
+#           The same service-account machinery that has served the
+#           competitors series reliably for weeks.
+# Switched to "bq" on 2026-08-03 after a wholesale full-history rebuild and
+# a like-for-like comparison (artifacts/bq_tone_comparison.txt: daily tone
+# r=+0.90, art_count r=+0.82 across the 2017->2026-07-13 overlap, and
+# between +0.82 and +0.95 in every individual year).
+# Flipping back to "doc" reproduces the pre-switch desk; the DOC cache stays
+# in the repo as frozen legacy history. The two must NEVER be concatenated:
+# BigQuery carries ~1.6x the article volume, so a spliced column would show
+# a structural break that the models would happily read as news.
+TONE_SOURCE = "bq"                  # "bq" | "doc"
+TONE_BQ_NAME = "bq_nvda_tone"       # cache stem under artifacts/cache/
+TONE_BQ_TERMS = ["nvidia"]          # GKG V2Organizations match, mirroring
+                                    # articles.CATEGORY_CONDITIONS["nvda"]
+TONE_DOC_NAME = "gdelt_daily"       # frozen legacy DOC-corpus cache stem
+TONE_CACHE_NAME = (f"{TONE_BQ_NAME}.csv" if TONE_SOURCE == "bq"
+                   else f"{TONE_DOC_NAME}.csv")
+
 # Data range (GDELT DOC 2.0 API coverage begins January 2017)
 TRAIN_START = "2017-01-01"
 

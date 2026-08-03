@@ -15,7 +15,14 @@ artifacts/cache/*
 
 # Keep the GDELT history cache: it took a cross-network workaround to
 # bootstrap (GDELT rate-limits some corporate IPs) and is only ~75 KB.
+# FROZEN at 2026-07-13 - kept as legacy history and as the "doc" side of
+# config.TONE_SOURCE, no longer the series the desk trades on.
 !artifacts/cache/gdelt_daily.csv
+
+# PRIMARY tone series since 2026-08-03 (config.TONE_SOURCE = "bq"). The
+# hosted Streamlit app reads this straight from the repo, so it has to be
+# committed exactly like gdelt_daily.csv was.
+!artifacts/cache/bq_nvda_tone.csv
 
 # Keep the verified earnings calendar (Yahoo rate-limits this network too)
 !artifacts/cache/earnings_NVDA.csv

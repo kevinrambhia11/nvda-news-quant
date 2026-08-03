@@ -40,7 +40,10 @@ MAX_LOG_BYTES = 5_000_000
 # tone lands a day behind, earnings only change quarterly.
 STALE_LIMITS = {
     "prices_NVDA.csv": 4,
-    "gdelt_daily.csv": 4,
+    # The PRIMARY tone cache follows config.TONE_SOURCE. The other corpus is
+    # deliberately NOT age-checked: the frozen DOC cache would otherwise
+    # raise a permanent staleness alarm nobody can act on.
+    config.TONE_CACHE_NAME: 4,
     "news2_features.csv": 4,
     "news2_daily.csv": 4,
     "earnings_NVDA.csv": 400,

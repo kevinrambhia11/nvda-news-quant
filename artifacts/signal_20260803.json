@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-08-03T12:29:27",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-03",
+  "last_close": 200.75,
+  "model_trained_through": "2026-07-30",
+  "gap_context": {
+    "prev_close": 200.75,
+    "latest": 198.95,
+    "gap_pct": -0.009,
+    "session": "after-hours",
+    "as_of_et": "19:59 ET"
+  },
+  "model_prob_up": 0.5,
+  "prob_big_move": 0.473,
+  "big_move_threshold": 0.0135,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.0375,
+  "headline_count": 164,
+  "article_count": 193,
+  "fulltext": {
+    "stories": 164,
+    "read_full": 115,
+    "read_partial": 10,
+    "headline_only": 39,
+    "alt_searches": 12,
+    "elapsed_s": 100.6
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 4,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.4944,
+  "brain_top_news": [],
+  "most_negative": [
+    {
+      "title": "Nvidia Stock Slumps After Data-Center Report - WSJ",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNYVFLVEUxZ3c2Rlc2MHNiRkk0YkJzZ2dIVEMzZlJhbkowbUhqNm1CaXNRUzA1XzJWUnF1cnhjVFRnSWRmTFJiXzRUU2xWajdCNHlFLUczeHZXQmpiYXg4YkVkTDRTZ1pzY0dtWW90N0ZsNHRTSlIzRnVpQy1haWZydjJSS1hjVy1Pd1N1T21WZmhFTUZ3V3VXV1hvbmtTNUNvMmd6VEx0SXJjQm9UQWpHYW1OTWZWbHBWeHZfVE9JWTZqZFhWMlJtc1dQZzRDSGRUWjh5M0NWUmlEaEpxcEhuNWltWk1TQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.tradingkey.com"
+    },
+    {
+      "title": "Morningstar says Nvidia's recent market woes put it in an unfamiliar spot: an 'undervalued' high-upside stock play - Business Insider",
+      "source": "google_news",
+      "score": -0.956,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUXZXaUtOWTZOVlNLdERTVEd6czVFOVQ1TE1BNE9iTktsS2YzVzcybjE2V1lOc3V3MnJxaUJQbVZ0QUg3dXhET0VPSVc5T3huRmhON0I2NjgwbEd2V1p3YktNU3JBZzBFR1VWT3l5MDJsX2xtajRWUEdPRzhsVEM2VmlSSW1fY3ZFMnhMc01FWlJadFhka0xqS29MMDVGUjZB?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.businessinsider.com"
+    },
+    {
+      "title": "Nvidia stock is sagging. Here's what's behind the negative short-term trend. - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.941,
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZFZHaS1uNkVEc0N5R1NlVVdCeFVMZDY3d3dydUhlR0hVX2IwZWJFWjIxM04yOFVqaG9Cam5WaXhXeW1ZcmpsaFByc2RfMlh5WVBpNjRKZ3VSNW1RWjFlM0I2ZkM5OVI0Q0duOEpPQWdnUkRfLXJObnVYUVhNdEE5QzRFQzdLRWxxU3cyWlU2bkNYZ1BqQ0xGWFJWMm9td1RYNU1zSUpDZ3QwYVNtbzBEUk5Pc1JUSHBheV9QY19MdUJvUW45LUZIMzA3Qnl6N3A5Wnc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Stock Rises As Microsoft Soars On Capex Control, Earnings Beat; Is Nvidia A Buy Now? - Investor's Business Daily",
+      "source": "google_news",
+      "score": 0.917,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1IOTFNSTh1UElRQXRZei1FOWM3TE92NXhheDRqdUltVUdyZkNMMGg3YjBuNTNWLW9RMWxvSUNCX21TcEhscDQ1NTRFTHpqT1BLSnd6SXhSTEJGQWFLR0JaNnpONnJJVWc3el9uck1mMUh2dHlVWUh2MGdaQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "NVDA Stock Hovers Near $6 Trillion Market Cap, US Reportedly Clears Path for AI Chip Sales to China - Stocktwits",
+      "source": "Stocktwits",
+      "score": 0.89,
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOT3BrWWFUbnZZcXdnRlhjenFUanczY05pLWVZVEJpTEJuOGdZelBRWDZTWWs3LVBGWEhRX2ZSMjU3LUNqdUVjTEtPbFRRTE80SzNlYnljNDNPZTlUQUF6dVA5OXdfTFY5ay1aNnlzZERpNnVWQ05TQTFPWU9MQmg5WjZkYmNhUmpzOHRhcEVJdnRBSEZnaHg2TVhfU3c1Wm9NVDFRUnphQW9fZ1ZnM0VNSlAtdng2S2FTMFJidjZfZmF2UEZvMmRBblV5NVFBeWtKWk44bUdyWEw5LU1JVkZ6aWhWYXItNEpsSHhRcXh2OWdEcHc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "stocktwits.com"
+    },
+    {
+      "title": "Nvidia: Reported OpenAI Deal Raises Circular Deal Fears, but We Think the Stock Is Undervalued - Morningstar",
+      "source": "google_news",
+      "score": 0.701,
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNc2E4OUJQRXFRQXBDOTU2TzNqLUk1cGVQRU9VVjlhd2EwX3BLQzBWRHJENGZ6ZmdNRERxY190a3hycVF4VUNfdXhGNkFEakQzVlB6NHVjU2V2R21hb1MtbkE4YnBTdERpcDNTMUNkZnV2X3RleWVuNk5nNW9ENTEtSHEwUUN1M0pQWWx0TG5FN0hEbm1ob2R6c05mTTktV21EMVVEdlhXT1ZSU0hpOHFKYm1BM3BGLTVXdWgxS253T3FxOVA1WlpN?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}

@@ -150,10 +150,11 @@ def fetch_gdelt_daily(start: str, end: str | None = None,
             backoffs = [] if quick else None  # quick: one shot, fail fast
             tone = _gdelt_timeline_chunk("timelinetone", cursor, chunk_end,
                                          query, backoffs)
-            time.sleep(6.5)  # GDELT allows max one request per 5 seconds
+            time.sleep(12)  # GDELT documents 1 req/5s, but 429s were observed
+                            # 7s after the previous request - 12s is safe
             vol = _gdelt_timeline_chunk("timelinevolraw", cursor, chunk_end,
                                         query, backoffs)
-            time.sleep(6.5)
+            time.sleep(12)
             part = pd.DataFrame({"tone": tone, "art_count": vol})
             part.index.name = "date"
             # Never cache empty frames or today's still-partial UTC bucket
@@ -177,10 +178,29 @@ def fetch_gdelt_daily(start: str, end: str | None = None,
     return df
 
 
-def load_gdelt_daily(refresh: bool = False, name: str = "gdelt_daily",
+def load_gdelt_daily(refresh: bool = False, name: str | None = None,
                      query: str = config.GDELT_QUERY,
                      quick: bool = False) -> pd.DataFrame:
-    """Cached GDELT daily series; incrementally extends the cache when stale."""
+    """Cached GDELT daily series; incrementally extends the cache when stale.
+
+    name=None means the desk's PRIMARY tone series, whose corpus is selected
+    by config.TONE_SOURCE - BigQuery GKG ("bq", current) or the frozen
+    DOC-API cache ("doc"). Every caller that just wants "the tone series"
+    passes nothing and so follows the switch; passing an explicit name always
+    addresses a DOC-corpus cache by hand (the aux series do exactly that).
+    On the BigQuery path `query`/`quick` do not apply - term matching and
+    one-shot behaviour are properties of that loader instead.
+    """
+    if name is None:
+        if config.TONE_SOURCE == "bq":
+            # Own cache, own corpus, own top-up: routed through the same
+            # budget-guarded loader the competitors/industry series use, so
+            # the daily extension is dry-run priced and byte-capped like
+            # every other BigQuery call the desk makes.
+            from data.bigquery_gdelt import load_bq_daily
+            return load_bq_daily(config.TONE_BQ_NAME, config.TONE_BQ_TERMS,
+                                 refresh)
+        name = config.TONE_DOC_NAME
     cache_file = config.CACHE / f"{name}.csv"
     today_utc = pd.Timestamp.now(tz="UTC").tz_localize(None).normalize()
     if cache_file.exists() and not refresh:

@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-07-31",
-  "generated_at": "2026-07-31T17:03:48",
+  "generated_at": "2026-08-03T12:25:24",
   "articles": [
     {
-      "headline": "amds helios rack reportedly costs 40 more than nvidias vera rubin yet microsoft hedges its bets by committing to deploy ",
-      "source": "wccftech.com",
-      "category": "nvda",
-      "weight": 0.0052,
-      "impact": -0.00684
+      "headline": "oil prices slip and asian shares are mostly lower as investors sell chipmaker stocks",
+      "source": "news4jax.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.02472
     },
     {
-      "headline": "retail traders ai trade tech ai etfs nvda pltr mu 2026 7",
-      "source": "businessinsider.com",
-      "category": "nvda",
-      "weight": 0.0051,
-      "impact": -0.02216
+      "headline": "qualcomm forecasts weak quarterly profit expects apple revenue drop to accelerate",
+      "source": "thestar.com.my",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.02287
     },
     {
-      "headline": "amd nvidia cuda software anthropic.html",
-      "source": "digitimes.com",
-      "category": "nvda",
-      "weight": 0.0051,
-      "impact": -0.00102
+      "headline": "tsmc ranks 82nd fortune global 500 first time 741.htm",
+      "source": "newkerala.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.02146
     },
     {
-      "headline": "lenovo yoga 9n first nvidia rtx spark laptop specs",
-      "source": "wccftech.com",
-      "category": "nvda",
-      "weight": 0.0051,
-      "impact": 6e-05
+      "headline": "tech chip makers stocks lose trillion sell off",
+      "source": "mashable.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.01764
     },
     {
-      "headline": "nvidia required pc fix path of exile 2 bug",
-      "source": "wccftech.com",
-      "category": "nvda",
-      "weight": 0.0051,
-      "impact": -0.00119
+      "headline": "oil prices slip and asian shares are mostly lower as investors sell chipmaker stocks,160115",
+      "source": "sitkasentinel.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.02245
     },
     {
-      "headline": "nvidia naver infrastructure investment data center.html",
-      "source": "digitimes.com",
-      "category": "nvda",
-      "weight": 0.005,
-      "impact": -0.00692
+      "headline": "qualcomm says its apple revenue will decline faster than expected",
+      "source": "mactech.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.01936
     },
     {
-      "headline": "lenovos leaked yoga 9n could be the first rtx spark powered convertible laptop",
-      "source": "digitaltrends.com",
-      "category": "nvda",
-      "weight": 0.005,
-      "impact": -0.00946
-    },
-    {
-      "headline": "apple nvidia 5 trillion ai spending",
-      "source": "memeburn.com",
-      "category": "nvda",
-      "weight": 0.005,
-      "impact": -0.00523
-    },
-    {
-      "headline": "qualcomm acquisition software infrastructure hardware.html",
+      "headline": "qualcomm growth apple revenue price.html",
       "source": "digitimes.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00542
+      "weight": 0.0058,
+      "impact": -0.01915
     },
     {
-      "headline": "nvidias fastest graphics cards get us price increase at best buy amazon astral rtx 5080 now costs more than 5090s msrp f",
-      "source": "tomshardware.com",
-      "category": "nvda",
-      "weight": 0.005,
-      "impact": -0.00334
+      "headline": "99b57 oil prices slip and asian shares are mostly lower as investors sell chipmaker stocks",
+      "source": "wral.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.02076
+    },
+    {
+      "headline": "qualcomms apple business shrinking due supply constraints.htm",
+      "source": "itechpost.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.02086
+    },
+    {
+      "headline": "samsung reports record profit as south korean chip giants benefit from global ai boom.html",
+      "source": "theyeshivaworld.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00957
     }
   ]
 }

@@ -1,0 +1,76 @@
+======================================================================
+  NVDA tone series: BigQuery GKG vs frozen GDELT DOC 2.0
+======================================================================
+  Generated for the Aug 2026 source switch. The two corpora are
+  RELATED BUT DIFFERENT (GKG organization tagging vs DOC full-text
+  search), so this compares them as candidate replacements - it is
+  NOT a data-quality audit of either, and the two are never spliced.
+
+  Overlap window   : 2017-01-01 -> 2026-07-13
+  Calendar days    : 3481
+  Paired days      : 3455
+
+----------------------------------------------------------------------
+  COVERAGE
+----------------------------------------------------------------------
+  DOC rows in window :  3456   missing calendar days:   25
+  BQ  rows in window :  3463   missing calendar days:   18
+  DOC missing sample : 2017-12-01, 2017-12-02, 2020-10-20, 2023-03-23, 2025-06-15, 2025-06-16, 2025-06-17, 2025-06-18
+  BQ  missing sample : 2017-08-29, 2025-06-15, 2025-06-16, 2025-06-17, 2025-06-18, 2025-06-19, 2025-06-20, 2025-06-21
+  DOC full range     : 2017-01-01 -> 2026-07-13 (3456 rows)
+  BQ  full range     : 2017-01-01 -> 2026-08-02 (3483 rows)
+
+----------------------------------------------------------------------
+  LEVEL AND SCALE (paired days only)
+----------------------------------------------------------------------
+                          DOC          BQ         diff (BQ-DOC)
+  tone      mean       0.7002      0.6464     -0.0538
+  tone      sd         0.7058      0.6938     -0.0120
+  tone      min       -3.8840     -3.7004
+  tone      max        3.4900      3.3409
+  art_count mean        177.6       287.4       109.8
+  art_count sd          140.6       303.9       163.3
+  art_count median      142.0       175.0
+  volume ratio (BQ/DOC, on means): 1.62x
+
+----------------------------------------------------------------------
+  CO-MOVEMENT
+----------------------------------------------------------------------
+  tone      Pearson  r = +0.8987      <-- HARD GATE (>= 0.60)
+  tone      Spearman r = +0.8839
+  tone      5d-mean  r = +0.9358
+  tone      d/dt     r = +0.8463
+  art_count Pearson  r = +0.8177
+  art_count Spearman r = +0.8713
+  art_count d/dt     r = +0.8231
+
+----------------------------------------------------------------------
+  TONE CORRELATION BY YEAR
+----------------------------------------------------------------------
+  2017 : r = +0.8483  (n= 362)  DOC mean +1.035 / BQ mean +1.066
+  2018 : r = +0.8980  (n= 365)  DOC mean +0.543 / BQ mean +0.532
+  2019 : r = +0.9247  (n= 365)  DOC mean +0.738 / BQ mean +0.808
+  2020 : r = +0.9162  (n= 365)  DOC mean +0.777 / BQ mean +0.686
+  2021 : r = +0.8885  (n= 365)  DOC mean +0.766 / BQ mean +0.675
+  2022 : r = +0.8205  (n= 365)  DOC mean +0.417 / BQ mean +0.197
+  2023 : r = +0.8910  (n= 364)  DOC mean +0.760 / BQ mean +0.686
+  2024 : r = +0.9493  (n= 366)  DOC mean +0.809 / BQ mean +0.731
+  2025 : r = +0.9293  (n= 348)  DOC mean +0.519 / BQ mean +0.464
+  2026 : r = +0.8871  (n= 190)  DOC mean +0.568 / BQ mean +0.584
+
+======================================================================
+  VERDICT
+======================================================================
+  Daily tone correlation is +0.899 against a 0.60 gate: PASS.
+
+  In plain language: the two series track the same day-to-day swings in how NVIDIA is being written about.
+  Article volume runs 1.62x the DOC level, and tone sits -0.054 points
+  away from it with a tighter spread (sd 0.694 vs 0.706). Level and scale
+  differences like these are absorbed by retraining - every model is
+  refit end to end on the new series - but they are the reason the two
+  histories must never be spliced into one column.
+
+  PROCEED: rebuild the feature stack on bq_nvda_tone.csv and retrain
+  every head. Compare the resulting tournament numbers against the
+  DOC baselines before trusting any of them.
+======================================================================
