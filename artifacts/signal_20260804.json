@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-08-04T18:47:47",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-04",
+  "last_close": 206.64,
+  "model_trained_through": "2026-07-30",
+  "gap_context": {
+    "prev_close": 206.64,
+    "latest": 210.16,
+    "gap_pct": 0.017,
+    "session": "pre-market",
+    "as_of_et": "09:17 ET"
+  },
+  "model_prob_up": 0.4946,
+  "prob_big_move": 0.5191,
+  "big_move_threshold": 0.0135,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0693,
+  "headline_count": 161,
+  "article_count": 186,
+  "fulltext": {
+    "stories": 161,
+    "read_full": 96,
+    "read_partial": 7,
+    "headline_only": 58,
+    "alt_searches": 12,
+    "elapsed_s": 29.7
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 9,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5066,
+  "brain_top_news": [],
+  "most_negative": [
+    {
+      "title": "Nvidia Stock Slumps After Data-Center Report - WSJ",
+      "source": "google_news",
+      "score": -0.967,
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNYVFLVEUxZ3c2Rlc2MHNiRkk0YkJzZ2dIVEMzZlJhbkowbUhqNm1CaXNRUzA1XzJWUnF1cnhjVFRnSWRmTFJiXzRUU2xWajdCNHlFLUczeHZXQmpiYXg4YkVkTDRTZ1pzY0dtWW90N0ZsNHRTSlIzRnVpQy1haWZydjJSS1hjVy1Pd1N1T21WZmhFTUZ3V3VXV1hvbmtTNUNvMmd6VEx0SXJjQm9UQWpHYW1OTWZWbHBWeHZfVE9JWTZqZFhWMlJtc1dQZzRDSGRUWjh5M0NWUmlEaEpxcEhuNWltWk1TQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia stock is sagging. Here's what's behind the negative short-term trend. - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.941,
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZFZHaS1uNkVEc0N5R1NlVVdCeFVMZDY3d3dydUhlR0hVX2IwZWJFWjIxM04yOFVqaG9Cam5WaXhXeW1ZcmpsaFByc2RfMlh5WVBpNjRKZ3VSNW1RWjFlM0I2ZkM5OVI0Q0duOEpPQWdnUkRfLXJObnVYUVhNdEE5QzRFQzdLRWxxU3cyWlU2bkNYZ1BqQ0xGWFJWMm9td1RYNU1zSUpDZ3QwYVNtbzBEUk5Pc1JUSHBheV9QY19MdUJvUW45LUZIMzA3Qnl6N3A5Wnc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Stock Is in a $200 Rut, and Big Tech Earnings Aren\u2019t Helping - Barron's",
+      "source": "Barron's",
+      "score": -0.928,
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQ21hMnNpYzBPT1Jwc2JuLWdWQzdFckZEem1QV0lacDIwWGt4RXZXZzVvU0xmMDFUdjM4bXUxOG5rQ0RpRW5Pc3lxYkFfOHVEaTJmTmVDdUJYRnRHZDNDdmk3NTJxMmtKWnJSUGtLdTVOVEYxQnZ4RUp0cHZUQ0EzajhyM2s?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Stock Rises As Microsoft Soars On Capex Control, Earnings Beat; Is Nvidia A Buy Now? - Investor's Business Daily",
+      "source": "google_news",
+      "score": 0.917,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1IOTFNSTh1UElRQXRZei1FOWM3TE92NXhheDRqdUltVUdyZkNMMGg3YjBuNTNWLW9RMWxvSUNCX21TcEhscDQ1NTRFTHpqT1BLSnd6SXhSTEJGQWFLR0JaNnpONnJJVWc3el9uck1mMUh2dHlVWUh2MGdaQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia: This Onetime Market Darling Is Now Surprisingly Undervalued | Morningstar Nordics - Morningstar",
+      "source": "google_news",
+      "score": 0.896,
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ25OeWVRT2phWnVJVWdnb1ZjVnA4UlFWV1I3bldfU09aRHFubU9kNFY5REhvRUVFbkYxUUxuVHktazZlZWNWRDVjc3habFhuWnZnYXNtXzQzel80WDN2R0tXbUJzSjdjNU9uTHZwV29HUUh3aUUxdG0wX2E5ZUZtWURGeGhOUQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.morningstar.com.au"
+    },
+    {
+      "title": "CRWVs Deep NVDA Integration Makes It A Go-To Choice, Says Morningstar  Analysts Say META's Planned Cloud Move Reinforces AI Compute Boom",
+      "source": "finviz",
+      "score": 0.895,
+      "url": "https://finance.yahoo.com/m/1233ed64-971e-3a01-98a3-30e8e5f1a531/crwv%E2%80%99s-deep-nvda-integration.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
