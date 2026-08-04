@@ -164,6 +164,20 @@ def generate_signal(prefer_finbert: bool = True) -> dict:
     # Append the next actual trading day (NYSE calendar) so the last row's
     # features use everything known now, exactly as a training row would.
     next_day = next_trading_day(px.index.max())
+    # A stale price frontier must fail LOUDLY, never sign a backdated bet.
+    # On 2026-08-04 a malformed Monday bar left the cache ending Friday:
+    # this line resolved the entry day to Monday - a session already
+    # traded - and the on-time-record guard rightly refused the artifact
+    # write, so the run "succeeded" while publishing nothing and nobody
+    # was told. Refusing here instead routes the failure to the health
+    # banner. 19:00 IST is the same open convention the tracker uses
+    # (conservative by an hour in US winter, like everything else).
+    if pd.Timestamp.now() >= next_day + pd.Timedelta(hours=19):
+        raise RuntimeError(
+            f"computed entry day {next_day.date()} has already opened - "
+            f"the price cache ends {px.index.max().date()}, so its next "
+            f"session is in the past. Refresh prices (data source likely "
+            f"served a malformed latest bar) and rerun before an open.")
     px_ext = px.reindex(px.index.append(pd.DatetimeIndex([next_day])))
     try:
         from data.earnings import load_earnings_dates

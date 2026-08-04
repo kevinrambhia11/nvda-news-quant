@@ -108,20 +108,47 @@ def _fetch_stooq(ticker: str, start: str) -> pd.DataFrame:
 
 def fetch_prices(ticker: str, start: str = config.TRAIN_START) -> pd.DataFrame:
     """Adjusted daily OHLCV, indexed by naive trading dates. Walks the source
-    chain (yfinance -> Yahoo chart API -> Stooq) until one succeeds."""
+    chain (yfinance -> Yahoo chart API -> Stooq) until one succeeds.
+
+    "Succeeds" means fresh AFTER sanitization: on 2026-08-04 yfinance
+    returned Monday's bar with a null close, the sanitizer rightly dropped
+    it, and the "successful" result quietly ended three sessions back - the
+    fallback sources never got asked, the desk signed a bet for the wrong
+    entry day, and no artifact was published. A source whose sanitized
+    frontier is older than the last completed session now counts as failed
+    so the chain keeps walking (and the freshest result wins if ALL of
+    them are stale)."""
+    from trade.calendar import NYSEHolidays
+    last_bday = (pd.Timestamp.now().normalize()
+                 - pd.offsets.CustomBusinessDay(1, calendar=NYSEHolidays()))
     sources = [("yfinance", _fetch_yahoo),
                ("yahoo-chart", _fetch_yahoo_chart),
                ("stooq", _fetch_stooq)]
     last_exc: Exception | None = None
+    best: pd.DataFrame | None = None
     for name, fn in sources:
         try:
             df = _sanitize(fn(ticker, start))
-            log.info("%s: %d rows from %s (through %s)",
-                     ticker, len(df), name, df.index.max().date())
-            return df
+            if df.empty:
+                raise ValueError("no rows after sanitization")
+            if df.index.max() >= last_bday:
+                log.info("%s: %d rows from %s (through %s)",
+                         ticker, len(df), name, df.index.max().date())
+                return df
+            log.warning("%s from %s ends %s after dropping malformed rows "
+                        "(< last completed session %s); trying next source",
+                        ticker, name, df.index.max().date(),
+                        last_bday.date())
+            if best is None or df.index.max() > best.index.max():
+                best = df
         except Exception as exc:
             last_exc = exc
             log.warning("%s failed for %s (%s); trying next source", name, ticker, exc)
+    if best is not None:
+        log.warning("%s: every source is stale after sanitization; using "
+                    "the freshest (through %s)", ticker,
+                    best.index.max().date())
+        return best
     raise RuntimeError(f"All price sources failed for {ticker}") from last_exc
 
 
