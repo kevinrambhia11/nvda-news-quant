@@ -218,6 +218,19 @@ def cmd_magnitude() -> None:
     print(train_final(ds))
 
 
+def cmd_grade() -> None:
+    """Grade newly realized forecasts, standalone. Runs shortly after the
+    US open (20:15 IST task) so yesterday's bet is scored the same evening
+    its outcome settles - the 17:00 run happens BEFORE the open and can
+    only grade a day late, which is how 'was I right yesterday?' kept
+    arriving a session behind (Kevin, 2026-08-05). The live session bar's
+    Open is final once printed; only completed bars enter the cache."""
+    from data.prices import load_prices
+    from model.live import score_yesterday
+    load_prices(refresh=True)
+    print(score_yesterday())
+
+
 def cmd_learn() -> None:
     """Daily loop: grade yesterday's forecasts against what actually
     happened, then the ALREADY-TRAINED brain reads today's news and
@@ -347,7 +360,8 @@ def main() -> None:
                                  "intraday-study", "log-headlines",
                                  "bq-probe", "bqml", "news2", "newsnet",
                                  "nested", "magnitude", "news-topup",
-                                 "learn", "train-brain", "industry-backfill",
+                                 "learn", "grade", "train-brain",
+                                 "industry-backfill",
                                  "all"])
     parser.add_argument("--refresh", action="store_true",
                         help="force re-download of cached data")
@@ -412,6 +426,8 @@ def _dispatch(args) -> None:
         cmd_news_topup()
     elif args.command == "learn":
         cmd_learn()
+    elif args.command == "grade":
+        cmd_grade()
     elif args.command == "train-brain":
         cmd_train_brain()
     elif args.command == "industry-backfill":

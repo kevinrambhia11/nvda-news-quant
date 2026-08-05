@@ -131,7 +131,12 @@ def fetch_prices(ticker: str, start: str = config.TRAIN_START) -> pd.DataFrame:
             df = _sanitize(fn(ticker, start))
             if df.empty:
                 raise ValueError("no rows after sanitization")
-            if df.index.max() >= last_bday:
+            # freshness = the last COMPLETED session's bar is present, not
+            # merely "the frontier looks recent": during a live session a
+            # source could serve today's in-progress bar while yesterday's
+            # completed bar is missing/malformed - a frontier check alone
+            # would call that success
+            if last_bday in df.index:
                 log.info("%s: %d rows from %s (through %s)",
                          ticker, len(df), name, df.index.max().date())
                 return df
@@ -150,6 +155,18 @@ def fetch_prices(ticker: str, start: str = config.TRAIN_START) -> pd.DataFrame:
                     best.index.max().date())
         return best
     raise RuntimeError(f"All price sources failed for {ticker}") from last_exc
+
+
+def _drop_live_bar(df: pd.DataFrame) -> pd.DataFrame:
+    """Trim today's in-progress session bar (clock convention shared with
+    trade/signal.py and model/live._load_corpus)."""
+    from trade.calendar import session_close_hour_et
+    now_et = pd.Timestamp.now(tz="America/New_York")
+    today_et = now_et.tz_localize(None).normalize()
+    if len(df) and df.index.max() == today_et \
+            and now_et.hour < session_close_hour_et(today_et):
+        return df.loc[df.index < today_et]
+    return df
 
 
 def load_prices(refresh: bool = False) -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -174,7 +191,16 @@ def load_prices(refresh: bool = False) -> tuple[pd.DataFrame, pd.DataFrame]:
         if df is None:
             try:
                 df = fetch_prices(ticker)
-                atomic_to_csv(df, cache_file)
+                # Cache COMPLETED sessions only. The evening grading run
+                # (20:15 IST) fetches DURING the US session; today's live
+                # bar has a final Open (what grading needs, served via the
+                # returned frame) but a still-moving high/low/close -
+                # caching those would poison tomorrow's range-based vol
+                # features, because the freshness check would then skip
+                # the refetch. Consumers of the RETURNED frame that care
+                # (signal, brain corpus) already drop in-progress bars by
+                # the same clock convention.
+                atomic_to_csv(_drop_live_bar(df), cache_file)
             except Exception as exc:
                 if cached is not None and not cached.empty:
                     # Degrade, don't die: a one-day-stale frame yields a
