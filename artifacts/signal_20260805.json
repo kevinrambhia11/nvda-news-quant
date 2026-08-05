@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-08-05T17:07:09",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-05",
+  "last_close": 211.94,
+  "model_trained_through": "2026-07-30",
+  "gap_context": {
+    "prev_close": 211.94,
+    "latest": 215.72,
+    "gap_pct": 0.0178,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.3582,
+  "prob_big_move": 0.5191,
+  "big_move_threshold": 0.0141,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": -0.0127,
+  "headline_count": 135,
+  "article_count": 188,
+  "fulltext": {
+    "stories": 135,
+    "read_full": 79,
+    "read_partial": 12,
+    "headline_only": 44,
+    "alt_searches": 12,
+    "elapsed_s": 79.3
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 8,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.3989,
+  "brain_top_news": [
+    {
+      "headline": "advanced micro devices nasdaqamd trading 7 higher on strong earnings.html",
+      "source": "themarketsdaily.com",
+      "category": "competitors",
+      "weight": 0.0071,
+      "impact": -0.00978
+    },
+    {
+      "headline": "galaxy tab s12 ultra a benchmark confirms the mediatek dimensity 9500 chip ahead of its launch",
+      "source": "myhostnews.com",
+      "category": "competitors",
+      "weight": 0.0071,
+      "impact": -0.01213
+    },
+    {
+      "headline": "tsmc targets 100000 monthly 2nm wafers by the end of 2026",
+      "source": "eteknix.com",
+      "category": "competitors",
+      "weight": 0.007,
+      "impact": -0.00984
+    },
+    {
+      "headline": "advanced micro devices vs intel which technology stock is a better buy in 2026",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.007,
+      "impact": -0.00706
+    },
+    {
+      "headline": "intel shares surge semiconductor sector rally 1873544",
+      "source": "ibtimes.com.au",
+      "category": "competitors",
+      "weight": 0.007,
+      "impact": -0.01339
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "AMD Just Fell 8% After Record Earnings. Here\u2019s What It Means for Nvidia, Micron and SanDisk. - Stocks Down Under",
+      "source": "google_news",
+      "score": -0.951,
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFByODFURHJUWXFWUVFlOHBnZGVCLWhjYkRMX0J5eklLVDAyQXNUMFA4dHJ2Q0xDa3ZYUlJCVU9nUUJCOWtIcmVaV3pPZ2p1aHVHQ0NiaE9KNE55UFpBUmFiVzRRRVZZTEQxSjZNVTg0NUdZVFBqdUhv?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia stock is sagging. Here's what's behind the negative short-term trend. - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.941,
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZFZHaS1uNkVEc0N5R1NlVVdCeFVMZDY3d3dydUhlR0hVX2IwZWJFWjIxM04yOFVqaG9Cam5WaXhXeW1ZcmpsaFByc2RfMlh5WVBpNjRKZ3VSNW1RWjFlM0I2ZkM5OVI0Q0duOEpPQWdnUkRfLXJObnVYUVhNdEE5QzRFQzdLRWxxU3cyWlU2bkNYZ1BqQ0xGWFJWMm9td1RYNU1zSUpDZ3QwYVNtbzBEUk5Pc1JUSHBheV9QY19MdUJvUW45LUZIMzA3Qnl6N3A5Wnc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "AMD Stock Tumbles Overnight As CapEx Surge And SpaceX\u2019s Nvidia Switch Overshadow Q2 Beat - Stocktwits",
+      "source": "google_news",
+      "score": -0.922,
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNYl9rSGdSTTE3aVpJV0hhMXlNelVET3hQVUNGT1dOdnZSZ19iV19McTgwbVgtajBzV1A3WF83VXZEM3pvN3JkRzZoTE5vRWNuOWFDdUtyeDdyckFoODBaWktlYU52UFk2ZXdpRV9PeHdDWnBSZlBudzgtT0FEYjEwRDBsb3hSa3BKYU53VWlod29GVUoyVXlkc09ld0ttY19zdHdSai1CM2xTZ2x5ekwzVXpKUHFXaEluNXFkT05XMUlEY0xZaFhnNTQ3dHgxYUtLUG1RT3NLekw5T05KUmNUaVhOanIwd1VvM0E?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "stocktwits.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVDA Stock Bucks Selloff Premarket On SpaceX Boost, Foxconns Sales Update",
+      "source": "finviz",
+      "score": 0.91,
+      "url": "https://finance.yahoo.com/m/c7ab2370-d5be-3d2b-921b-50b7d19a0739/nvda-stock-bucks-selloff.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Is Back on Top as Most Valuable Company After Apple Stumbles - Barron's",
+      "source": "google_news",
+      "score": 0.746,
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9wY2RJT0FkTDdTZE85WlpnSXR2SWY4cUlsN3NYR3V5MTRPaUlqWkhYVlB2WERBdzhIdGRNVGF4MjF2VjJrVzdrWkF4eGxvWjhLZEd1Qjh2YTRiZndBTjdRQy1rbUlfd0tBWk5MYXhrU2ZJdVBFUkE?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Analysis: AMD and Nvidia take opposite paths to capture next wave of AI infrastructure spending",
+      "source": "finviz",
+      "score": 0.711,
+      "url": "https://www.digitimes.com/news/a20260805VL210/amd-nvidia-ai-infrastructure-earnings-revenue.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}
