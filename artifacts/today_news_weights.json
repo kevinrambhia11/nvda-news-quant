@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-08-05",
-  "generated_at": "2026-08-05T17:04:25",
+  "generated_at": "2026-08-07T15:43:07",
   "articles": [
     {
-      "headline": "advanced micro devices nasdaqamd trading 7 higher on strong earnings.html",
-      "source": "themarketsdaily.com",
-      "category": "competitors",
+      "headline": "big short michael burry ai chip stocks soxx nvidia substack 2026 8",
+      "source": "businessinsider.com",
+      "category": "nvda",
+      "weight": 0.0082,
+      "impact": -0.02636
+    },
+    {
+      "headline": "gigabyte hikes gpu prices by up to 40 japanese retailer cancels pre orders it can no longer honor",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0073,
+      "impact": -0.00827
+    },
+    {
+      "headline": "battlefield studios roll out fix for battlefield 6 crash on rtx 50 cards",
+      "source": "wccftech.com",
+      "category": "nvda",
       "weight": 0.0071,
-      "impact": -0.00978
+      "impact": -0.00134
     },
     {
-      "headline": "galaxy tab s12 ultra a benchmark confirms the mediatek dimensity 9500 chip ahead of its launch",
-      "source": "myhostnews.com",
-      "category": "competitors",
+      "headline": "redditor snags ibuypower rtx 5070 pc at walmart clearance for 800 slashing 1100 off its usual price",
+      "source": "wccftech.com",
+      "category": "nvda",
       "weight": 0.0071,
-      "impact": -0.01213
+      "impact": -0.00631
     },
     {
-      "headline": "tsmc targets 100000 monthly 2nm wafers by the end of 2026",
-      "source": "eteknix.com",
-      "category": "competitors",
+      "headline": "asus rog equalizer rtx 5090 voltage drop 12vhpwr",
+      "source": "wccftech.com",
+      "category": "nvda",
       "weight": 0.007,
-      "impact": -0.00984
+      "impact": 0.00044
     },
     {
-      "headline": "advanced micro devices vs intel which technology stock is a better buy in 2026",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.00706
+      "headline": "delta electronics shipments nvidia infrastructure.html",
+      "source": "digitimes.com",
+      "category": "nvda",
+      "weight": 0.0065,
+      "impact": -0.00952
     },
     {
-      "headline": "intel shares surge semiconductor sector rally 1873544",
-      "source": "ibtimes.com.au",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.01339
+      "headline": "valar atomics raises 1b build factory nuclear after powering nvidias ai chip.htm",
+      "source": "techtimes.com",
+      "category": "nvda",
+      "weight": 0.0065,
+      "impact": -0.00503
     },
     {
-      "headline": "cathie woods ark sold 12 million of amd stock",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.00821
+      "headline": "anthropics 10b norway compute deal gives nvidias ecosystem its first jpmorgan credit backstop.htm",
+      "source": "techtimes.com",
+      "category": "nvda",
+      "weight": 0.0065,
+      "impact": -0.01465
     },
     {
-      "headline": "why amd stock popped today",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.01171
+      "headline": "the nvidia ai shipment that sparked a debate over india s import process 13994061.html",
+      "source": "moneycontrol.com",
+      "category": "nvda",
+      "weight": 0.0065,
+      "impact": -0.00688
     },
     {
-      "headline": "ionq vs advanced micro devices comparing revenue trends between a quantum computing innovator and an artificial intellig",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.0054
-    },
-    {
-      "headline": "why broadcom stock rallied today",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.01224
-    },
-    {
-      "headline": "huaweis top scientist warns of chip limit nvidia will soon face",
-      "source": "thestar.com.my",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.0158
+      "headline": "nvidia moves to accelerate storage access boost industry cooperation.html",
+      "source": "networkworld.com",
+      "category": "nvda",
+      "weight": 0.0064,
+      "impact": 0.00147
     }
   ]
 }

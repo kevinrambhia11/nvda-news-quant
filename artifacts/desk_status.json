@@ -17,99 +17,99 @@
       "fails_since_ok": 0
     },
     "log-headlines": {
-      "last_run": "2026-08-06T20:00:28",
+      "last_run": "2026-08-07T14:30:23",
       "ok": true,
       "note": null,
-      "secs": 21.4,
-      "last_ok": "2026-08-06T20:00:28",
+      "secs": 19.3,
+      "last_ok": "2026-08-07T14:30:23",
       "fails_since_ok": 0
     },
     "industry-backfill": {
-      "last_run": "2026-08-03T11:39:51",
+      "last_run": "2026-08-07T15:00:01",
       "ok": true,
       "note": null,
-      "secs": 35.5,
-      "last_ok": "2026-08-03T11:39:51",
+      "secs": 0.0,
+      "last_ok": "2026-08-07T15:00:01",
       "fails_since_ok": 0
     },
     "nested": {
-      "last_run": "2026-08-03T11:47:14",
+      "last_run": "2026-08-07T15:01:50",
       "ok": true,
       "note": null,
-      "secs": 80.4,
-      "last_ok": "2026-08-03T11:47:14",
+      "secs": 106.6,
+      "last_ok": "2026-08-07T15:01:50",
       "fails_since_ok": 0
     },
     "fetch": {
-      "last_run": "2026-08-06T13:29:24",
+      "last_run": "2026-08-07T12:00:25",
       "ok": true,
       "note": null,
-      "secs": 16.2,
-      "last_ok": "2026-08-06T13:29:24",
+      "secs": 20.1,
+      "last_ok": "2026-08-07T12:00:25",
       "fails_since_ok": 0
     },
     "news2": {
-      "last_run": "2026-08-03T11:55:22",
+      "last_run": "2026-08-07T15:08:45",
       "ok": true,
       "note": null,
-      "secs": 325.1,
-      "last_ok": "2026-08-03T11:55:22",
+      "secs": 411.1,
+      "last_ok": "2026-08-07T15:08:45",
       "fails_since_ok": 0
     },
     "newsnet": {
-      "last_run": "2026-08-03T12:02:07",
+      "last_run": "2026-08-07T15:16:57",
       "ok": true,
       "note": null,
-      "secs": 379.6,
-      "last_ok": "2026-08-03T12:02:07",
+      "secs": 489.2,
+      "last_ok": "2026-08-07T15:16:57",
       "fails_since_ok": 0
     },
     "train": {
-      "last_run": "2026-08-03T12:13:54",
+      "last_run": "2026-08-07T15:29:17",
       "ok": true,
       "note": null,
-      "secs": 678.6,
-      "last_ok": "2026-08-03T12:13:54",
+      "secs": 736.8,
+      "last_ok": "2026-08-07T15:29:17",
       "fails_since_ok": 0
     },
     "magnitude": {
-      "last_run": "2026-08-03T12:21:20",
+      "last_run": "2026-08-07T15:37:23",
       "ok": true,
       "note": null,
-      "secs": 403.2,
-      "last_ok": "2026-08-03T12:21:20",
+      "secs": 483.4,
+      "last_ok": "2026-08-07T15:37:23",
       "fails_since_ok": 0
     },
     "vol-train": {
-      "last_run": "2026-08-03T12:23:48",
+      "last_run": "2026-08-07T15:41:17",
       "ok": true,
       "note": null,
-      "secs": 135.0,
-      "last_ok": "2026-08-03T12:23:48",
+      "secs": 231.1,
+      "last_ok": "2026-08-07T15:41:17",
       "fails_since_ok": 0
     },
     "train-brain": {
-      "last_run": "2026-08-03T12:25:27",
+      "last_run": "2026-08-07T15:43:14",
       "ok": true,
       "note": null,
-      "secs": 88.0,
-      "last_ok": "2026-08-03T12:25:27",
+      "secs": 114.5,
+      "last_ok": "2026-08-07T15:43:14",
       "fails_since_ok": 0
     },
     "backtest": {
-      "last_run": "2026-08-03T12:25:41",
+      "last_run": "2026-08-07T15:43:20",
       "ok": true,
       "note": null,
-      "secs": 1.8,
-      "last_ok": "2026-08-03T12:25:41",
+      "secs": 1.9,
+      "last_ok": "2026-08-07T15:43:20",
       "fails_since_ok": 0
     },
     "fuse": {
-      "last_run": "2026-08-03T12:25:56",
+      "last_run": "2026-08-07T15:43:22",
       "ok": true,
       "note": null,
-      "secs": 0.3,
-      "last_ok": "2026-08-03T12:25:56",
+      "secs": 0.2,
+      "last_ok": "2026-08-07T15:43:22",
       "fails_since_ok": 0
     },
     "learn": {
@@ -137,7 +137,7 @@
       "fails_since_ok": 0
     }
   },
-  "updated": "2026-08-06T20:15:14",
+  "updated": "2026-08-07T15:43:22",
   "data_warnings": [],
   "data_checked": "2026-08-05T17:07:09"
 }
