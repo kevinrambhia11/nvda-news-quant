@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-08-07T17:05:30",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-07",
+  "last_close": 218.99,
+  "model_trained_through": "2026-08-05",
+  "gap_context": {
+    "prev_close": 218.99,
+    "latest": 220.53,
+    "gap_pct": 0.007,
+    "session": "pre-market",
+    "as_of_et": "07:35 ET"
+  },
+  "model_prob_up": 0.6056,
+  "prob_big_move": 0.5081,
+  "big_move_threshold": 0.0145,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0117,
+  "headline_count": 150,
+  "article_count": 202,
+  "fulltext": {
+    "stories": 150,
+    "read_full": 82,
+    "read_partial": 8,
+    "headline_only": 60,
+    "alt_searches": 12,
+    "elapsed_s": 114.6
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 7,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5756,
+  "brain_top_news": [],
+  "most_negative": [
+    {
+      "title": "Weaker technical forecast for NVIDIA as stock downgraded to Hold/Accumulate - StockInvest.us",
+      "source": "google_news",
+      "score": -0.946,
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQM1V3YnhTN25KazlmbmdwQmV2RWpIQjV6b1RSblFIN3U0WVNZT0VBclZDQ1pHbU1wbFpvb1ZaR2lSVlY4QTJtdG9lYzhHdFRIOXE1ZTI4akFaY1pVdTI5d1BTVk1TZlFGVmFlOWlMd1Qtdi1lUUk3SkpzaGRUUEUydVRUUlBvTW1LbGRITllrcHVOeE1xOTM0YzM5cGNMWVROVm5waEZ1RGJoQ1dYc3E1eVhrMDNRNExPb2E0?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "stockinvest.us"
+    },
+    {
+      "title": "Nvidia stock is sagging. Here's what's behind the negative short-term trend. - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.941,
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZFZHaS1uNkVEc0N5R1NlVVdCeFVMZDY3d3dydUhlR0hVX2IwZWJFWjIxM04yOFVqaG9Cam5WaXhXeW1ZcmpsaFByc2RfMlh5WVBpNjRKZ3VSNW1RWjFlM0I2ZkM5OVI0Q0duOEpPQWdnUkRfLXJObnVYUVhNdEE5QzRFQzdLRWxxU3cyWlU2bkNYZ1BqQ0xGWFJWMm9td1RYNU1zSUpDZ3QwYVNtbzBEUk5Pc1JUSHBheV9QY19MdUJvUW45LUZIMzA3Qnl6N3A5Wnc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Stocks Fall On Spiking Oil Prices, Tumbling AI Plays Sandisk, Western Digital; Nvidia Above Buy Trigger - Investor's Business Daily",
+      "source": "google_news",
+      "score": -0.864,
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQ2ZwRXhCeVZxVnEwY2UyclFwUFJ4TDdwUFpoUlFRaGgyX1NpVWE2U1J1bzZXaDVqQUc3QmU4QjZTZUhPc1BMRnpsMFFBZmxGQUxZMUQ5Q2xIWXlVdGN4c1ZDMkNpTXhpcUJkRUZVdGl0U3h0SWIySXhNZUI3LWhDTUZNWk5YQ1c4alFsRmlUYklLNUFsRXhmTl95WnBnTW81UEVOb1ltcGJkR0Z4UUlz?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVIDIA stock price up 3.43% on Wednesday - StockInvest.us",
+      "source": "google_news",
+      "score": 0.944,
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTUhCd05RRVUycnJhOEtyaHRmVTV0UGRnd1l4cGVqQndaRHdCY180ZTVDWXVKSFNJdHZ4clFjZ21uUXhUVFBkclBPWjFWc1ZaU1hRZDF6bXV0Z0tQT2hFYy1vVVVnUUVHWHVVYWlrd0J4VWo3M2xuX0cyaVBMR3FBOHdheXp6VS1iZWhR?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "stockinvest.us"
+    },
+    {
+      "title": "NVIDIA Stock: 5 Straight Green Days, Up 15% - Trefis",
+      "source": "google_news",
+      "score": 0.94,
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZnVRUE9oU0o1Ym5IeWlGV1k1U1hHaEQzbWtMWnBybUlFal9lMjRWNnBVSWQwQU5ycGhPSHZ4Wkw3ZnU0enV5TWtQb05nYWFKZ1RWeENEYm9zQWJKMFZKRnotLXNMYXF2aklWMVRvTmpqcnBCdTVMeWp6dnVKWWhzZ2FIUmRvNmY0MTZuRzdCa1JTWlV3Rl9aWVZWTFBZR0ZpQWZB?oc=5",
+      "n_sources": 2,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Firmus nearly doubles valuation to over $10.5 billion in Nvidia-backed fundraise - TradingView",
+      "source": "TradingView",
+      "score": 0.873,
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOclRnbnFSNFA3S0FJNG5zLWJMM1h6SndWMWdhZ0RSeEVVcWhaa05WUUtGcTZKZUd1STlyUWhnSmdMZ3BTR055ZmZqck0waEk5S1BsYnZtdGZ0OGFOTUFUNGRLMnB1YlNKejlfcVUwTm1ja2h0a01qT3JuOWZobjhJMllseU9VRnRkLUJucTNmR1RrV01JVmhYTVpDenZSNDJwSURiZC1UU01FUTRWTTQzd0E0RVJ3Qjg3VVdnWFc3bHpmeWFiUkxPUkV1WVQyb196cm56XzFyV2JrOUVELUtZNGhLcw?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

@@ -17,11 +17,11 @@
       "fails_since_ok": 0
     },
     "log-headlines": {
-      "last_run": "2026-08-07T14:30:23",
+      "last_run": "2026-08-07T16:30:27",
       "ok": true,
       "note": null,
-      "secs": 19.3,
-      "last_ok": "2026-08-07T14:30:23",
+      "secs": 22.8,
+      "last_ok": "2026-08-07T16:30:27",
       "fails_since_ok": 0
     },
     "industry-backfill": {
@@ -113,19 +113,19 @@
       "fails_since_ok": 0
     },
     "learn": {
-      "last_run": "2026-08-05T17:04:25",
+      "last_run": "2026-08-07T17:01:43",
       "ok": true,
       "note": null,
-      "secs": 34.0,
-      "last_ok": "2026-08-05T17:04:25",
+      "secs": 28.4,
+      "last_ok": "2026-08-07T17:01:43",
       "fails_since_ok": 0
     },
     "signal": {
-      "last_run": "2026-08-05T17:07:09",
+      "last_run": "2026-08-07T17:05:30",
       "ok": true,
       "note": null,
-      "secs": 158.7,
-      "last_ok": "2026-08-05T17:07:09",
+      "secs": 222.9,
+      "last_ok": "2026-08-07T17:05:30",
       "fails_since_ok": 0
     },
     "grade": {
@@ -137,7 +137,7 @@
       "fails_since_ok": 0
     }
   },
-  "updated": "2026-08-07T15:43:22",
+  "updated": "2026-08-07T17:05:30",
   "data_warnings": [],
-  "data_checked": "2026-08-05T17:07:09"
+  "data_checked": "2026-08-07T17:05:30"
 }

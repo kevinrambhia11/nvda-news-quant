@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-08-07T17:01:49",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-07",
+  "model_trained_through": "2026-07-31",
+  "var_notional": 1000000,
+  "horizons": {
+    "1": {
+      "model": "HAR +events",
+      "daily_vol": 0.0201,
+      "annualized_vol": 0.319,
+      "earnings_print_tonight": false,
+      "total_daily_vol": 0.02594,
+      "total_annualized_vol": 0.4118,
+      "var_95": 42678.0,
+      "var_99": 60345.0,
+      "target_vol_weight": 0.728
+    },
+    "5": {
+      "model": "HAR +events",
+      "daily_vol": 0.02143,
+      "annualized_vol": 0.3402
+    }
+  }
+}
