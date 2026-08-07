@@ -174,12 +174,27 @@ def summarize(status: dict | None = None, now=None) -> dict:
                           + (f" - {e['note']}" if e.get("note") else ""))
             level = "alert" if n > 1 or level == "alert" else "warn"
 
-    # The daily signal is the product: if it has not succeeded within the
-    # last ~2 calendar days (weekend-tolerant), say so loudly.
+    # The daily signal is the product. Two alarms, tight to loose:
+    # (a) SAME-EVENING: on a weekday after 17:45 IST, today's 17:00 run
+    #     should have succeeded - if it hasn't, say so tonight, not in two
+    #     days. (On 2026-08-06 the run was killed 23s in - someone closed
+    #     the console window - and the old 48h grace stayed silent; the
+    #     operator noticed before the health system did.)
+    # (b) BACKSTOP: no success in ~2 days (weekend-tolerant).
     sig = stages.get("signal", {})
     if sig.get("last_ok"):
         try:
-            age_h = (now - pd.Timestamp(sig["last_ok"])).total_seconds() / 3600
+            last_ok = pd.Timestamp(sig["last_ok"])
+            is_weekday = now.dayofweek < 5
+            past_run = now >= now.normalize() + pd.Timedelta(hours=17,
+                                                             minutes=45)
+            if (is_weekday and past_run
+                    and last_ok < now.normalize() + pd.Timedelta(hours=16)):
+                alerts.append("today's 17:00 signal has NOT succeeded "
+                              f"(last success: {sig['last_ok']}) - "
+                              "tonight's entry day will have no forecast")
+                level = "alert"
+            age_h = (now - last_ok).total_seconds() / 3600
             grace = 96 if now.dayofweek in (5, 6, 0) else 48
             if age_h > grace:
                 alerts.append(f"no successful `signal` run in "
