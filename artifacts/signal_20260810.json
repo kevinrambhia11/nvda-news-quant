@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-08-10T17:08:39",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-10",
+  "last_close": 223.96,
+  "model_trained_through": "2026-08-05",
+  "gap_context": {
+    "prev_close": 223.96,
+    "latest": 224.49,
+    "gap_pct": 0.0024,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.2257,
+  "prob_big_move": 0.5081,
+  "big_move_threshold": 0.0141,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0631,
+  "headline_count": 154,
+  "article_count": 188,
+  "fulltext": {
+    "stories": 154,
+    "read_full": 92,
+    "read_partial": 8,
+    "headline_only": 54,
+    "alt_searches": 12,
+    "elapsed_s": 108.6
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 11,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.3174,
+  "brain_top_news": [
+    {
+      "headline": "nvidia ai data center designer engineer more efficient less visible 2026 8",
+      "source": "businessinsider.com",
+      "category": "nvda",
+      "weight": 0.0031,
+      "impact": -0.01739
+    },
+    {
+      "headline": "tsmc researchers make big breakthrough in chip transistor technology as part of push towards developing sub 1 nanometer ",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0029,
+      "impact": 0.00045
+    },
+    {
+      "headline": "nvidia cmp 170hx 8 10 gb prices explode over 1000 usd as tool unlocks hidden 64 80gb vram",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0029,
+      "impact": -0.00699
+    },
+    {
+      "headline": "zotac us rma upgrades customer rtx 4090 to rtx 5090 free",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0027,
+      "impact": -0.00546
+    },
+    {
+      "headline": "nvidia rtx spark 20 core cpu geekbench 7 m4 max benchmark",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0027,
+      "impact": -0.00331
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "SpaceX\u2019s Nvidia deal could be bad news for neoclouds like CoreWeave and Nebius, analysts say - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOSHVtd2o4bW0zMHhSWDVjejlRTXExOU55UmwtV2lyWTNQa1FZTlJ4RXNwMkd5U25nY1Y0d1g0cUxDbHZYRVVRQkEtQ3l2aHdXOERJYlQtemlEaVdiYjlyRS1xc281UTAtaGRRTzBPdUYtUzc3WkhWNmtpaFZzTDhzSUhlTFdGd0Z5SzJmMUR5cktsQWdlZ0hLZ3lJRnJnSVFJY2pvUkVJRlJZSlhuUnVucmpCT3k1d2lSV3lERFF2OF81MDNTRDFZUDJhSXVydw?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "cryptobriefing.com"
+    },
+    {
+      "title": "Nvidia\u2019s valuation is lowest in 10 years despite mind-blowing AI demand, BofA say - Investing.com",
+      "source": "google_news",
+      "score": -0.95,
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNRWd5UGtPemdWS1NGcHFLak9KQ2cwV3JvU000NFJYbnB6UEE5LWJGdlVhVVRuYldocV9LRHBwcmtocDhCNFFsM2JsZUg3a3lVMURxWGUyQjJyQjNlRENiMUVIQlk0TEkyNXRRRTRsbm5CRjNSMHpES25QT3NoR2lwVVc1UTd5WGhxSmdlUmVKcTFBWVpuMm16SFU5RmRtZmFCcUJMcWhvVTZJd3F6Xy13bHRaMW80em5pamVmNUU4dVpxdWd0VUhJdF9Ua2thcXZM?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia stock is sagging. Here's what's behind the negative short-term trend. - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.941,
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZFZHaS1uNkVEc0N5R1NlVVdCeFVMZDY3d3dydUhlR0hVX2IwZWJFWjIxM04yOFVqaG9Cam5WaXhXeW1ZcmpsaFByc2RfMlh5WVBpNjRKZ3VSNW1RWjFlM0I2ZkM5OVI0Q0duOEpPQWdnUkRfLXJObnVYUVhNdEE5QzRFQzdLRWxxU3cyWlU2bkNYZ1BqQ0xGWFJWMm9td1RYNU1zSUpDZ3QwYVNtbzBEUk5Pc1JUSHBheV9QY19MdUJvUW45LUZIMzA3Qnl6N3A5Wnc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Stock Eyes All-Time High as Key Metrics Points to Bargain Status - NVIDIA (NASDAQ:NVDA) - Benzinga",
+      "source": "google_news",
+      "score": 0.941,
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaXZ6d2E0TE9xaHR1eHJKbjF6WmlqU1M1U29QbTFBRlNIRlpGTWJMMVdJWi1EbWVjaFI0emJha1Jyc1BuRnFUVi11SmIwcmpoTWs2YmJ3aXNHaEg5REM5Zk4tZGp5QkdTdXVHUWdJY2NIZ0RrbC1hYnlSUkpjU3lFX1NFTlRtNHZUMGxYczAzSjBCckpQVXpQWXRBWkR5U0hvMUJrbUt3STZsU0dLeUhseXMzVkg4cGx2aGFaaS1VS2U5SDZIclVn?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.benzinga.com"
+    },
+    {
+      "title": "Nvidia ends week up more than 10% as AI chip fears ease - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.927,
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWlUwSF90TElSOV8xOUlmTnRnNS16VWZRMGItMlk1UTA2NHplenJqalVFMVdtbnRZWk5mV0xrQ3QyNFNEa2hVNWNFWlFfd05Ub01wel9MUWpXSEZCcGRQdlgzeGhMbnd0RW91aDlOSHdlZzFXajV2SjgyY2VocWdPSUZaVjMzdkxiNHFkcXRZNmFlRENkUzhOWEV3VWgxalNMSDB6MkZHbUdiWnUtMkpGZWlucEs?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Stock Forecast: NVDA Targets Record-High After New $2 Billion AI Deal - BeInCrypto",
+      "source": "google_news",
+      "score": 0.925,
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5aZGVxakM1b2hiemY1R20yMURsTDUxRnltX2dVWTVDU3FNVHhtaGZmaGQtVDZPcnRNX0l5ZFM3MlBuOWhOSm1qY0F1ZW5BX25MeWtKLUM4c0cwczR6bTc1MkNHRV96MUp4U0tz?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "beincrypto.com"
+    }
+  ]
+}

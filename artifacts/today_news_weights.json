@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-05",
-  "generated_at": "2026-08-07T17:01:43",
+  "entry_day": "2026-08-10",
+  "generated_at": "2026-08-10T17:05:26",
   "articles": [
     {
-      "headline": "big short michael burry ai chip stocks soxx nvidia substack 2026 8",
+      "headline": "nvidia ai data center designer engineer more efficient less visible 2026 8",
       "source": "businessinsider.com",
       "category": "nvda",
-      "weight": 0.0082,
-      "impact": -0.02636
+      "weight": 0.0031,
+      "impact": -0.01739
     },
     {
-      "headline": "gigabyte hikes gpu prices by up to 40 japanese retailer cancels pre orders it can no longer honor",
+      "headline": "tsmc researchers make big breakthrough in chip transistor technology as part of push towards developing sub 1 nanometer ",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0029,
+      "impact": 0.00045
+    },
+    {
+      "headline": "nvidia cmp 170hx 8 10 gb prices explode over 1000 usd as tool unlocks hidden 64 80gb vram",
       "source": "wccftech.com",
       "category": "nvda",
-      "weight": 0.0073,
-      "impact": -0.00827
+      "weight": 0.0029,
+      "impact": -0.00699
     },
     {
-      "headline": "battlefield studios roll out fix for battlefield 6 crash on rtx 50 cards",
+      "headline": "zotac us rma upgrades customer rtx 4090 to rtx 5090 free",
       "source": "wccftech.com",
       "category": "nvda",
-      "weight": 0.0071,
-      "impact": -0.00134
+      "weight": 0.0027,
+      "impact": -0.00546
     },
     {
-      "headline": "redditor snags ibuypower rtx 5070 pc at walmart clearance for 800 slashing 1100 off its usual price",
+      "headline": "nvidia rtx spark 20 core cpu geekbench 7 m4 max benchmark",
       "source": "wccftech.com",
       "category": "nvda",
-      "weight": 0.0071,
-      "impact": -0.00631
+      "weight": 0.0027,
+      "impact": -0.00331
     },
     {
-      "headline": "asus rog equalizer rtx 5090 voltage drop 12vhpwr",
-      "source": "wccftech.com",
+      "headline": "ais biggest opportunity by 2027 nvidia vs micron",
+      "source": "247wallst.com",
       "category": "nvda",
-      "weight": 0.007,
-      "impact": 0.00044
+      "weight": 0.0026,
+      "impact": -0.00594
     },
     {
-      "headline": "delta electronics shipments nvidia infrastructure.html",
-      "source": "digitimes.com",
+      "headline": "forget smh the chip fund that owns less nvidia is beating it by 20 points",
+      "source": "247wallst.com",
       "category": "nvda",
-      "weight": 0.0065,
-      "impact": -0.00952
+      "weight": 0.0026,
+      "impact": -0.01235
     },
     {
-      "headline": "valar atomics raises 1b build factory nuclear after powering nvidias ai chip.htm",
-      "source": "techtimes.com",
+      "headline": "nvidia and micron have driven the sp 500s 2026 rally to record highs history says its not over",
+      "source": "247wallst.com",
       "category": "nvda",
-      "weight": 0.0065,
-      "impact": -0.00503
+      "weight": 0.0026,
+      "impact": -0.00986
     },
     {
-      "headline": "anthropics 10b norway compute deal gives nvidias ecosystem its first jpmorgan credit backstop.htm",
-      "source": "techtimes.com",
-      "category": "nvda",
-      "weight": 0.0065,
-      "impact": -0.01465
+      "headline": "advanced micro devices amd price prediction how much a 5000 investment could be worth by 2031",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0026,
+      "impact": -0.0092
     },
     {
-      "headline": "the nvidia ai shipment that sparked a debate over india s import process 13994061.html",
+      "headline": "nvidia to invest up to 3 billion in lancium the information reports 13998460.html",
       "source": "moneycontrol.com",
       "category": "nvda",
-      "weight": 0.0065,
-      "impact": -0.00688
-    },
-    {
-      "headline": "nvidia moves to accelerate storage access boost industry cooperation.html",
-      "source": "networkworld.com",
-      "category": "nvda",
-      "weight": 0.0064,
-      "impact": 0.00147
+      "weight": 0.0025,
+      "impact": -0.01222
     }
   ]
 }
