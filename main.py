@@ -227,8 +227,10 @@ def cmd_grade() -> None:
     Open is final once printed; only completed bars enter the cache."""
     from data.prices import load_prices
     from model.live import score_yesterday
-    load_prices(refresh=True)
-    print(score_yesterday())
+    px, _ = load_prices(refresh=True)
+    # pass the fetched frame through: its live bar holds tonight's final
+    # Open, which the cache (completed bars only) deliberately lacks
+    print(score_yesterday(px=px))
 
 
 def cmd_learn() -> None:

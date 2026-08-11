@@ -61,12 +61,21 @@ TODAY_WEIGHTS = config.ARTIFACTS / "today_news_weights.json"
 # 1. Grade yesterday
 # ---------------------------------------------------------------------------
 
-def score_yesterday() -> str:
+def score_yesterday(px: pd.DataFrame | None = None) -> str:
     """Score every archived forecast whose outcome has realized since the
     last scoring run; append to learning_log.csv and return a printable
-    grade for the most recent scored day."""
-    from data.prices import load_prices
-    px, _ = load_prices()
+    grade for the most recent scored day.
+
+    `px` lets the evening grade (20:15 IST, mid-session) pass its freshly
+    fetched frame, whose LIVE bar carries tonight's final Open - the exact
+    number that settles yesterday's bet. Reloading here instead would read
+    the cache, which stores completed bars only, so the evening run would
+    silently grade nothing and the verdict would slip back to the next
+    day's 17:00 run (the lag the evening task exists to remove - it no-oped
+    exactly that way every night from 2026-08-05 to 08-10)."""
+    if px is None:
+        from data.prices import load_prices
+        px, _ = load_prices()
     opens = px["Open"]
     opens = opens[~opens.index.duplicated(keep="last")]
 
