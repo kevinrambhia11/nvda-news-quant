@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-10",
-  "generated_at": "2026-08-10T17:05:26",
+  "entry_day": "2026-08-11",
+  "generated_at": "2026-08-11T17:03:50",
   "articles": [
     {
-      "headline": "nvidia ai data center designer engineer more efficient less visible 2026 8",
-      "source": "businessinsider.com",
-      "category": "nvda",
-      "weight": 0.0031,
-      "impact": -0.01739
-    },
-    {
-      "headline": "tsmc researchers make big breakthrough in chip transistor technology as part of push towards developing sub 1 nanometer ",
-      "source": "wccftech.com",
-      "category": "competitors",
-      "weight": 0.0029,
-      "impact": 0.00045
-    },
-    {
-      "headline": "nvidia cmp 170hx 8 10 gb prices explode over 1000 usd as tool unlocks hidden 64 80gb vram",
+      "headline": "nvidia and amds china market share to drop to 10 by 2026 as domestic chips seize 90 says report",
       "source": "wccftech.com",
       "category": "nvda",
-      "weight": 0.0029,
-      "impact": -0.00699
+      "weight": 0.0071,
+      "impact": -0.00839
     },
     {
-      "headline": "zotac us rma upgrades customer rtx 4090 to rtx 5090 free",
-      "source": "wccftech.com",
+      "headline": "wall street giants to partner with nvidia on 500 b",
+      "source": "spokesman.com",
       "category": "nvda",
-      "weight": 0.0027,
-      "impact": -0.00546
+      "weight": 0.0065,
+      "impact": -0.00633
     },
     {
-      "headline": "nvidia rtx spark 20 core cpu geekbench 7 m4 max benchmark",
-      "source": "wccftech.com",
-      "category": "nvda",
-      "weight": 0.0027,
-      "impact": -0.00331
-    },
-    {
-      "headline": "ais biggest opportunity by 2027 nvidia vs micron",
-      "source": "247wallst.com",
-      "category": "nvda",
-      "weight": 0.0026,
-      "impact": -0.00594
-    },
-    {
-      "headline": "forget smh the chip fund that owns less nvidia is beating it by 20 points",
-      "source": "247wallst.com",
-      "category": "nvda",
-      "weight": 0.0026,
-      "impact": -0.01235
-    },
-    {
-      "headline": "nvidia and micron have driven the sp 500s 2026 rally to record highs history says its not over",
-      "source": "247wallst.com",
-      "category": "nvda",
-      "weight": 0.0026,
-      "impact": -0.00986
-    },
-    {
-      "headline": "advanced micro devices amd price prediction how much a 5000 investment could be worth by 2031",
+      "headline": "intel falls 5 on proposed 15b share sale as amd nvidia broadcom hold steady",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0026,
-      "impact": -0.0092
+      "weight": 0.0064,
+      "impact": -0.01147
     },
     {
-      "headline": "nvidia to invest up to 3 billion in lancium the information reports 13998460.html",
-      "source": "moneycontrol.com",
+      "headline": "tsmc july revenue rises to usd 1603 billion up 447 yoy",
+      "source": "chinanationalnews.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.00667
+    },
+    {
+      "headline": "one of silicon valleys smartest investors just sold nearly half his nvidia shares is the ai boom starting to scare even ",
+      "source": "lnt.ma",
       "category": "nvda",
-      "weight": 0.0025,
-      "impact": -0.01222
+      "weight": 0.0063,
+      "impact": -0.01154
+    },
+    {
+      "headline": "yapay zeka yatirimlarinda dev adim nvidia 500 milyar dolarlik sermayeyi harekete geciriyor haberi 835716",
+      "source": "dunya.com",
+      "category": "nvda",
+      "weight": 0.0063,
+      "impact": -0.00788
+    },
+    {
+      "headline": "why this investor just bought nvidia nvda 1808333",
+      "source": "insidermonkey.com",
+      "category": "nvda",
+      "weight": 0.0063,
+      "impact": -0.01414
+    },
+    {
+      "headline": "nvidia ve amdnin pazar payi dusecek",
+      "source": "shiftdelete.net",
+      "category": "nvda",
+      "weight": 0.0062,
+      "impact": -0.00348
+    },
+    {
+      "headline": "nvidia aktie 500 milliarden finanzpaket mit wall street konsortium 937488",
+      "source": "boerse-express.com",
+      "category": "nvda",
+      "weight": 0.0061,
+      "impact": -0.00061
+    },
+    {
+      "headline": "sony tsmc sensor nikkei production.html",
+      "source": "digitimes.com",
+      "category": "competitors",
+      "weight": 0.0061,
+      "impact": -0.00474
     }
   ]
 }

@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-08-11T17:07:08",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-11",
+  "last_close": 217.55,
+  "model_trained_through": "2026-08-05",
+  "gap_context": {
+    "prev_close": 217.55,
+    "latest": 219.83,
+    "gap_pct": 0.0105,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.6337,
+  "prob_big_move": 0.5081,
+  "big_move_threshold": 0.0141,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.0249,
+  "headline_count": 141,
+  "article_count": 184,
+  "fulltext": {
+    "stories": 141,
+    "read_full": 83,
+    "read_partial": 16,
+    "headline_only": 42,
+    "alt_searches": 12,
+    "elapsed_s": 103.1
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 5,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5898,
+  "brain_top_news": [
+    {
+      "headline": "nvidia and amds china market share to drop to 10 by 2026 as domestic chips seize 90 says report",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0071,
+      "impact": -0.00839
+    },
+    {
+      "headline": "wall street giants to partner with nvidia on 500 b",
+      "source": "spokesman.com",
+      "category": "nvda",
+      "weight": 0.0065,
+      "impact": -0.00633
+    },
+    {
+      "headline": "intel falls 5 on proposed 15b share sale as amd nvidia broadcom hold steady",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01147
+    },
+    {
+      "headline": "tsmc july revenue rises to usd 1603 billion up 447 yoy",
+      "source": "chinanationalnews.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.00667
+    },
+    {
+      "headline": "one of silicon valleys smartest investors just sold nearly half his nvidia shares is the ai boom starting to scare even ",
+      "source": "lnt.ma",
+      "category": "nvda",
+      "weight": 0.0063,
+      "impact": -0.01154
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia Stock Slips as Its AI Investments Draw Fresh Scrutiny - Barron's",
+      "source": "Barron's",
+      "score": -0.964,
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPazlIVnY5UGhPVTFhbmJxVm4tSl9JZHpYM1pXLVJ6dUhnSktvYnpVeEd0SS1NMU0tYUJSaGtFQXRpakdkd3B0MzU1QXZoWmtobG85TFlZb1dQcFVEQ25yVnFkZTJsR1lKc0FrWEl6cS1KZWFzZnI3NVNWQ0tLb2hZZkNIOHI3OVhud1E?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "Nvidia (NVDA) Suffers a Larger Drop Than the General Market: Key Insights - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.963,
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOM0FWZV9hMWhsdGVZUGNUNDc5M3ZLUW9OZG5wUlpsd09XMlV2ZGYxM0ZrZXJWSWtBVzF1NkZVa3NrWWQ3ZHFRVTh1VFM0NTBrVmx4LU9lQUs2dnA3aEx3QmNEaXozdk5GQ2NJb2gxQkdWeWhtWVZfeWl3VkVUTUFtNGp1TGJyc2pReFM2X3pPeDNWblVwdUVuSDd3MC0?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Red day on Monday for NVIDIA stock after losing 2.86% - StockInvest.us",
+      "source": "google_news",
+      "score": -0.958,
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOV1docUZscnVVTUpvUFpDTkxKOXZEOFdZQmF2LTZZNlg1NldmVE5LeFdBTk05dEJsV29mQm1qcXJsUXR4Ym9XN05iWkprbDNTTUplMC1lQ3I1ZTVqSDhvYzQtcmFhNHlCSmNmeGxsYXdTS2tMSjFlb2Uza2VLT0Zsa3A0S2dTT3l0NkVHQzBVbWR2czA4bjcxN0xLVWo?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "stockinvest.us"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "BofA: Nvidia's next earnings report could kick off a \"multi-quarter upgrade cycle\" - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.897,
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQV19rbTdmSlR6WnRCcjVSenRPOWIyU3pXNG1zdzRYN1IwQjZYZDl6V01vWUExZWkyb2tiN0lxMVNPajFIT1JVWUJNVWlEdFZxbG5zZW1zdDZ0NEt0VDFwMGRIanpyUHoxaFJCVGk4bmxhU3NHcm1vd2JKMkp4OUduVUdRcmdnd1RBb0JyQ0hyM3V2SDlVa0VxcUtsSC1aZzg?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Stock: This Onetime Market Darling Is Now Surprisingly Undervalued - Morningstar",
+      "source": "google_news",
+      "score": 0.81,
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPd3M0UUZfRnBqNW15X2tEQkVsYUhGVklLdTh2dG5XUXdEMDhCcFFJNUxMbG82N1hybXdSc3ExYkcxaVZZNzNobVFkbnlhd1hxNGM4bzIxeDBqUWZ3TDNEanp6RTRsYkFSbFd4WWRjUVhTVzdxeUlTMEtHU2dxY19qb3NDRmEtX3ZLYm0wNFo3THV3b1Z2UVJ2SXU3clRKQm1CSG9MYkM4akZIa3VEWXZnb1JBUnlZOFE?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia Poised for Second-Quarter Sales Beat, Upbeat Guidance, BofA Says - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.801,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQa3ZSS195djFENThBTTEyLUNNUVZJbmRybjdMR0FRSTJKQWdwdXhqOXZJYWRfaUJ0czBzaFVVTHJ2cmdNR3gzblZBQkstSDVhWlM4QWhSOWZGNUd5em1rWTY1VkxoQ09hdXdUX3BOb0lubkhUNnk5MnlGNVdjekt1dk9paWlmWkNPVG56SFA2Q0U1bWNOQW95ME9FXzVQOERy?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
