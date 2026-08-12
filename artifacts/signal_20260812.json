@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-08-12T17:07:28",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-12",
+  "last_close": 217.5,
+  "model_trained_through": "2026-08-05",
+  "gap_context": {
+    "prev_close": 217.5,
+    "latest": 219.35,
+    "gap_pct": 0.0085,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.4087,
+  "prob_big_move": 0.5081,
+  "big_move_threshold": 0.0135,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0994,
+  "headline_count": 167,
+  "article_count": 212,
+  "fulltext": {
+    "stories": 167,
+    "read_full": 91,
+    "read_partial": 23,
+    "headline_only": 53,
+    "alt_searches": 12,
+    "elapsed_s": 106.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 14,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.451,
+  "brain_top_news": [
+    {
+      "headline": "samsung joins tsmc in stalling asmls high na euv rollout pushing the costly machines to 1nm chips",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0084,
+      "impact": 0.00117
+    },
+    {
+      "headline": "nvidias rtx 5060 ti 16gb median price surges to 805 now 88 above its launch msrp",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0082,
+      "impact": -0.00747
+    },
+    {
+      "headline": "nvidia building 1 trillion parameter nemotron 4 to rival open ai models",
+      "source": "bnnbloomberg.ca",
+      "category": "nvda",
+      "weight": 0.008,
+      "impact": 0.01045
+    },
+    {
+      "headline": "ibm together ai ink 240 million deal for nvidia powered ai inference cluster",
+      "source": "bnnbloomberg.ca",
+      "category": "nvda",
+      "weight": 0.0079,
+      "impact": 0.0073
+    },
+    {
+      "headline": "oblivion remastered switch 2 outshines xbox series s as nvidia dlss secret weapon",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0079,
+      "impact": 0.00106
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Intel Falls 5% on Proposed $15B Share Sale as AMD, NVIDIA, Broadcom Hold Steady - 24/7 Wall St.",
+      "source": "google_news",
+      "score": -0.95,
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUXowOG11TVRBdl9kX2FLM3BlanVXYWkzejhaRG8yYkRURjNNSi1kb2hYaklNSXE0SmQ5bWN0Y3NXN3c1THc3anQ2WW1kNmJSMmxYWFgtZXlrMWMxaHNNTGloTkQ4ZGt3YmJSRm82aEZFTnV0V2FPWU1KU1FLd2JYMF9LWVFkRHd0THJLcFVhb0JKcmVkTnpKZVJEWldjUUE0bEdMRy14NS1OckJKeTdzbmFrbHYtdWhuRGJF?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "247wallst.com"
+    },
+    {
+      "title": "Here\u2019s Why Nvidia Stock Is Down Today - Forbes",
+      "source": "google_news",
+      "score": -0.949,
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxORnVlbW1pSGlNdkVWNVo2bTdHRTdTM29vRUxMckNQVVFKWGRtQXlSVFJobGwzSnI4eUxlc0JWZ1RZUzdmUFFXVEVETGNKLWRkRzgtWGJXczFITFhIcGZTNlBkZF9KMmh0SjI2Ty1XYkVUajNDUV92YWJNZ0xtVTZveUtYSVFXVDJIX1pXSlRJLUZfdmttQmUzZGVKNFpmYm9fcTJKZGlqTjd4OTdqN2prNVdUZkl5QW5ZT2dULThzSGx5b2pxUUh3NDNUQ0FHTHdwZzZ2MlF0TEdWNHNFWUJGeFFwS3hISno5X01fSjNLc1psZw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.forbes.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "BofA sends strong message on Nvidia\u2019s weak spot - thestreet.com",
+      "source": "google_news",
+      "score": 0.912,
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOWVM0RjJQTjhORWFNc0RNUWxMcU5MU3M0WDJNOXQxZ3hoZGl5Wi0xTENiT0FhNXZrNmRYandkNGlKNGw3cEQybFFQZG5TRkxzZ2dWcXlzQ0dSdVktOHg1MXNFQTlETDRfdkdoSXFTNEZOaG5mdzBEV0puX1VvelFvLXdKakNrZmdsZjNyaTRiMlU0THA5?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "NVIDIA Signs MOUs With Apollo Global, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to Mobilize $500B for AI - Brave New Coin",
+      "source": "Brave New Coin",
+      "score": 0.849,
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNRjZlc01URTFkN19ySzh1NmxNSUUyWTFiSTR3UHJ2a1ViZEhqMkU1SGs5eEV4V2kzR3FpQ3JOWndIMFR0dnlRXzNjQlQ4NEdYX2cwUmlvYW1vMXZCaC1XaGxMa2Z5bnU0TGVULUZwQVBPNDFYZGVhMlduUkJudVBVZFltWURielp6TGJwVUdjWGpZanhrWF9wVktxU0VYQkVtWUVFODRwa1U2czJHaklZeGhnYjZtd0ZSc2VJUkVDVGNUeThiRDhwYzhaWU1qczhvRFN0SGRjZnBYenNOQ1J0R0ZB?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "bravenewcoin.com"
+    },
+    {
+      "title": "Nvidia just soothed a major market fear about AI, analysts say - MarketWatch",
+      "source": "MarketWatch",
+      "score": 0.824,
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdWFEb2ZIaDhnckRyQ2pRUzdDT2lyX05NYWE0d01TZjBRZUxfdnh6ZFQ4V2JkTkNud3hQUUtrdm1nbW5MSTRSdXczNUR0ZmNnR1psWmh4N2c5TnhBRGN5Zl90WVhXdWg2em5ObGNYLWpBVmgtN19IaTdWNXQ4dW5GRWlvLWMzeFVEOTcza2ZPMzBEMGhpaFg1MUdYTTRHSWZhSG0xRTQ0SQ?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ]
+}

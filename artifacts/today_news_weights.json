@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-11",
-  "generated_at": "2026-08-11T17:03:50",
+  "entry_day": "2026-08-12",
+  "generated_at": "2026-08-12T17:04:02",
   "articles": [
     {
-      "headline": "nvidia and amds china market share to drop to 10 by 2026 as domestic chips seize 90 says report",
+      "headline": "samsung joins tsmc in stalling asmls high na euv rollout pushing the costly machines to 1nm chips",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0084,
+      "impact": 0.00117
+    },
+    {
+      "headline": "nvidias rtx 5060 ti 16gb median price surges to 805 now 88 above its launch msrp",
       "source": "wccftech.com",
       "category": "nvda",
-      "weight": 0.0071,
-      "impact": -0.00839
+      "weight": 0.0082,
+      "impact": -0.00747
     },
     {
-      "headline": "wall street giants to partner with nvidia on 500 b",
-      "source": "spokesman.com",
+      "headline": "nvidia building 1 trillion parameter nemotron 4 to rival open ai models",
+      "source": "bnnbloomberg.ca",
       "category": "nvda",
-      "weight": 0.0065,
-      "impact": -0.00633
+      "weight": 0.008,
+      "impact": 0.01045
     },
     {
-      "headline": "intel falls 5 on proposed 15b share sale as amd nvidia broadcom hold steady",
+      "headline": "ibm together ai ink 240 million deal for nvidia powered ai inference cluster",
+      "source": "bnnbloomberg.ca",
+      "category": "nvda",
+      "weight": 0.0079,
+      "impact": 0.0073
+    },
+    {
+      "headline": "oblivion remastered switch 2 outshines xbox series s as nvidia dlss secret weapon",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0079,
+      "impact": 0.00106
+    },
+    {
+      "headline": "nvidia wall st firms plan 500b ai infrastructure push",
+      "source": "edenmagnet.com.au",
+      "category": "nvda",
+      "weight": 0.0076,
+      "impact": -0.00511
+    },
+    {
+      "headline": "geforce now yer alan bir acikla windows masaustune erisim saglandi h222229.html",
+      "source": "webtekno.com",
+      "category": "nvda",
+      "weight": 0.0076,
+      "impact": -0.00822
+    },
+    {
+      "headline": "jensen huangs 500 billion wall street ai deal sounds brilliant until you consider the risks",
       "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.01147
-    },
-    {
-      "headline": "tsmc july revenue rises to usd 1603 billion up 447 yoy",
-      "source": "chinanationalnews.com",
-      "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.00667
-    },
-    {
-      "headline": "one of silicon valleys smartest investors just sold nearly half his nvidia shares is the ai boom starting to scare even ",
-      "source": "lnt.ma",
       "category": "nvda",
-      "weight": 0.0063,
-      "impact": -0.01154
+      "weight": 0.0074,
+      "impact": -0.01336
     },
     {
-      "headline": "yapay zeka yatirimlarinda dev adim nvidia 500 milyar dolarlik sermayeyi harekete geciriyor haberi 835716",
-      "source": "dunya.com",
-      "category": "nvda",
-      "weight": 0.0063,
-      "impact": -0.00788
-    },
-    {
-      "headline": "why this investor just bought nvidia nvda 1808333",
+      "headline": "qumulusai qmls signs nvidia drw blackwell deal can contract momentum translate into revenue 1809269",
       "source": "insidermonkey.com",
       "category": "nvda",
-      "weight": 0.0063,
-      "impact": -0.01414
+      "weight": 0.0073,
+      "impact": -0.01229
     },
     {
-      "headline": "nvidia ve amdnin pazar payi dusecek",
-      "source": "shiftdelete.net",
+      "headline": "nvidia nvda is going beyond gpus in the 500 billion ai boom wells fargo says 1809193",
+      "source": "insidermonkey.com",
       "category": "nvda",
-      "weight": 0.0062,
-      "impact": -0.00348
-    },
-    {
-      "headline": "nvidia aktie 500 milliarden finanzpaket mit wall street konsortium 937488",
-      "source": "boerse-express.com",
-      "category": "nvda",
-      "weight": 0.0061,
-      "impact": -0.00061
-    },
-    {
-      "headline": "sony tsmc sensor nikkei production.html",
-      "source": "digitimes.com",
-      "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00474
+      "weight": 0.0073,
+      "impact": -0.00846
     }
   ]
 }
