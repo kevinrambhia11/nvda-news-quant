@@ -17,11 +17,11 @@
       "fails_since_ok": 0
     },
     "log-headlines": {
-      "last_run": "2026-08-12T16:30:25",
+      "last_run": "2026-08-12T20:00:29",
       "ok": true,
       "note": null,
-      "secs": 21.5,
-      "last_ok": "2026-08-12T16:30:25",
+      "secs": 25.2,
+      "last_ok": "2026-08-12T20:00:29",
       "fails_since_ok": 0
     },
     "industry-backfill": {
@@ -129,15 +129,15 @@
       "fails_since_ok": 0
     },
     "grade": {
-      "last_run": "2026-08-11T20:15:11",
+      "last_run": "2026-08-13T11:48:21",
       "ok": true,
       "note": null,
-      "secs": 7.9,
-      "last_ok": "2026-08-11T20:15:11",
+      "secs": 11.3,
+      "last_ok": "2026-08-13T11:48:21",
       "fails_since_ok": 0
     }
   },
-  "updated": "2026-08-12T17:07:29",
+  "updated": "2026-08-13T11:48:21",
   "data_warnings": [],
   "data_checked": "2026-08-12T17:07:29"
 }
