@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-08-13T17:09:12",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-13",
+  "last_close": 224.09,
+  "model_trained_through": "2026-08-05",
+  "gap_context": {
+    "prev_close": 224.09,
+    "latest": 224.1,
+    "gap_pct": 0.0001,
+    "session": "pre-market",
+    "as_of_et": "07:39 ET"
+  },
+  "model_prob_up": 0.4409,
+  "prob_big_move": 0.5081,
+  "big_move_threshold": 0.0129,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0721,
+  "headline_count": 149,
+  "article_count": 197,
+  "fulltext": {
+    "stories": 149,
+    "read_full": 84,
+    "read_partial": 18,
+    "headline_only": 47,
+    "alt_searches": 12,
+    "elapsed_s": 81.7
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 5,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.4695,
+  "brain_top_news": [
+    {
+      "headline": "nvidia turning massive cash pile into next competitive moat 2026 8",
+      "source": "businessinsider.com",
+      "category": "nvda",
+      "weight": 0.0078,
+      "impact": -0.02775
+    },
+    {
+      "headline": "tsmc exec makes big announcement confirms 98 yield for cowos packaged ai chips",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0069,
+      "impact": 0.00201
+    },
+    {
+      "headline": "nvidia 96 gb rtx pro 6000 blackwell now costs 16000 usd double its original price",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0069,
+      "impact": -0.00793
+    },
+    {
+      "headline": "intel is up 176 this year is it time to take profits on intc amd broadcom and nvidia",
+      "source": "247wallst.com",
+      "category": "nvda",
+      "weight": 0.0064,
+      "impact": -0.01119
+    },
+    {
+      "headline": "ibm together ai ink 240 million deal for nvidia po",
+      "source": "spokesman.com",
+      "category": "nvda",
+      "weight": 0.0063,
+      "impact": -0.00291
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Alphabet\u2019s stock slips as Nvidia\u2019s $500 billion financing deal threatens custom chips - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.967,
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQODA2MXNGd2lmeFU3bVhjeTM0NVJRQ3lTZjdCckR3UE5nTlNXZEdiLVBZRGtfUlR2OXJfdFprV1NSWThrcGpRRi1Hc2F6RHFiemFQdnB1N0xJOUVTU3FkLUJRdFpNalowd3hnd1hKU3M1cWVxMmtrSmxZa0xydkdqSlVvU3ZOV0JaY1BGSlRMdXItZkxBRVZBTU85YkNOQU9BcjUtV3JVbU1FLU1NWTZNcXAzaXpIVlQxajRLWUUzMnVNUnM?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia Stock Slips as Its AI Investments Draw Fresh Scrutiny - Barron's",
+      "source": "Barron's",
+      "score": -0.961,
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPazlIVnY5UGhPVTFhbmJxVm4tSl9JZHpYM1pXLVJ6dUhnSktvYnpVeEd0SS1NMU0tYUJSaGtFQXRpakdkd3B0MzU1QXZoWmtobG85TFlZb1dQcFVEQ25yVnFkZTJsR1lKc0FrWEl6cS1KZWFzZnI3NVNWQ0tLb2hZZkNIOHI3OVhud1E?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "This Nvidia-Backed Cloud Company\u2019s Stock Is Soaring on Stronger-Than-Expected Earnings - investopedia.com",
+      "source": "google_news",
+      "score": 0.926,
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOcEpQWTVrd19iMGVZM3BDLVZ6TTdkNEZnU0R0ei0wUHRpLTRyWVlpRHEyclQ3RHU4VTcxRlF5NS1EbTUxY1BuSXdad2Q4Mm9wTzY1TXYwTVhsaWZkWXBqZUJ0WjlsS2MyeU1xX1BYODc2MWV2QWVrSU1EaG45VDNKc0Vxb1lHRkFBa3lmRzFjdHpIa1I3dG01UEJFSFN6aVh2OUFoVDE2TUlVeTFKd1JIeUxQSVEyMUF1RFVPMjZnZDFVcjN3QUI4NXRWeGtmR3ZpV3VvZXN0Umo?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "US Stock Market Movements | NVIDIA (NVDA.US) Rises Nearly 3% Intraday Amid Reports of Development of Top-Tier Global Open-Source Model - Moomoo",
+      "source": "google_news",
+      "score": 0.915,
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQcElaMDB4bjR2VndfdHN5V2FsZnI2QWRvbE9GVG5xWXBld0hHeG9VWndsallJNVBkczVVa2FDcXN6WDk2Y0E5RlUzQksyRTcwTTN6aHRmOFp3bU9JbVNCZDA1NnRNVUlYbGJtQ2lYQUJOY204NVVOZWNLZ0FNY000d2hkeTBHYWVSRHM4QUE5YllGMmx1bFcwY01SZ1hkWlZiOUtqbUJFYU8?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Market Today: CPI Eases, Wendy's Takeover Buzz, Nvidia's $500B A - GuruFocus",
+      "source": "GuruFocus",
+      "score": 0.892,
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORGNPVXl3VTRIZFlteE9Hend4QnJXVWxKSTRzMExqbm1UU3Vxd3lEUXZEN25WVDc3WlF4SWNiaU1VOThVSlNFTnlCOUdzTTdOLWNwMFp1bHJkSUVqSzdZMjZzSnN6S09FVlB1OHZmQ1FRQVVGa1N2MmNhanN5VVU2VlZnQ3RIeXdaMkF0RzFyTm10RHVyT1FGMTR6SnJMSUtXekNFT2hR?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}
