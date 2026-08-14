@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-08-14T17:08:03",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-14",
+  "last_close": 225.3,
+  "model_trained_through": "2026-08-12",
+  "gap_context": {
+    "prev_close": 225.3,
+    "latest": 225.82,
+    "gap_pct": 0.0023,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.5407,
+  "prob_big_move": 0.4951,
+  "big_move_threshold": 0.0129,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0905,
+  "headline_count": 155,
+  "article_count": 194,
+  "fulltext": {
+    "stories": 155,
+    "read_full": 95,
+    "read_partial": 19,
+    "headline_only": 41,
+    "alt_searches": 12,
+    "elapsed_s": 122.4
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 11,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5421,
+  "brain_top_news": [
+    {
+      "headline": "tim cook warned of a 100 year flood in memory chip",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.00855
+    },
+    {
+      "headline": "tsmc and sony team up china s ai stocks swing",
+      "source": "nikkei.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.00581
+    },
+    {
+      "headline": "3 semiconductor stocks to buy before the next ai earnings wave in august",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.01498
+    },
+    {
+      "headline": "intel ceo hints that chipzilla might return to making memory",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.00749
+    },
+    {
+      "headline": "sony tsmc to invest 47 billion in image sensor joint venture 103260813141125215.htm",
+      "source": "news.tuoitre.vn",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.01028
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia drops nearly 5%, leading chip stocks lower amid renewed worries of circular financing - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaXFDbHVlcXROeDRFRXlmM1NQM3UwUUdPZ19ocmh0MjNZSzlJYjI1NTROYTVDeGoydGZKV3JoSzFXSWRSUVFaNkhkTzdHNUlmcGN0VTZUX3RjLTAtU2xYWjZ4TktnR0lscm9qbG8yN29Sd1hMbnUyZFNqbWQxWnVxZmRWRzZVLTNGNFNYZGtPbVdBcHAteGttWGVSNWI2Y3ZyUDhhUjZ0M3huQk0zYVBmdkQ4NXJjSkIzYUFpX2VDTG1tbTlqTUoyMFo4Wm4tMThINVg2YmllWnZtWS1WSENpSg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Alphabet\u2019s stock slips as Nvidia\u2019s $500 billion financing deal threatens custom chips - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQODA2MXNGd2lmeFU3bVhjeTM0NVJRQ3lTZjdCckR3UE5nTlNXZEdiLVBZRGtfUlR2OXJfdFprV1NSWThrcGpRRi1Hc2F6RHFiemFQdnB1N0xJOUVTU3FkLUJRdFpNalowd3hnd1hKU3M1cWVxMmtrSmxZa0xydkdqSlVvU3ZOV0JaY1BGSlRMdXItZkxBRVZBTU85YkNOQU9BcjUtV3JVbU1FLU1NWTZNcXAzaXpIVlQxajRLWUUzMnVNUnM?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia Stock Slips as Its AI Investments Draw Fresh Scrutiny - Barron's",
+      "source": "google_news",
+      "score": -0.961,
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPazlIVnY5UGhPVTFhbmJxVm4tSl9JZHpYM1pXLVJ6dUhnSktvYnpVeEd0SS1NMU0tYUJSaGtFQXRpakdkd3B0MzU1QXZoWmtobG85TFlZb1dQcFVEQ25yVnFkZTJsR1lKc0FrWEl6cS1KZWFzZnI3NVNWQ0tLb2hZZkNIOHI3OVhud1E?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "LG and Nvidia Expand Partnership Across Robotics, AI Factories and Mobility",
+      "source": "finviz",
+      "score": 0.925,
+      "url": "/news/382256/lg-and-nvidia-expand-partnership-across-robotics-ai-factories-and-mobility",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Boost Run Secures Long-Term Lease with 10X Capital to Expand GPU Compute Capacity",
+      "source": "yahoo_rss",
+      "score": 0.902,
+      "url": "https://finance.yahoo.com/technology/ai/articles/boost-run-secures-long-term-112500811.html?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Dell Rallies 2% After Lenovo's AI Server Pipeline Hits $54 Billion, Fueling Nvidia Demand Optimism",
+      "source": "finviz",
+      "score": 0.9,
+      "url": "https://finance.yahoo.com/m/3840e1a0-502b-3523-8f4a-173a2a8c638e/dell-rallies-2%25-after.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

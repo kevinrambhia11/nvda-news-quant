@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-13",
-  "generated_at": "2026-08-14T15:48:17",
+  "entry_day": "2026-08-14",
+  "generated_at": "2026-08-14T17:04:12",
   "articles": [
     {
-      "headline": "qualcomm nasdaq qcom stock price slides after earnings miss as management points to china recovery",
-      "source": "foreignpolicyjournal.com",
+      "headline": "tim cook warned of a 100 year flood in memory chip",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01425
+      "weight": 0.0052,
+      "impact": -0.00855
     },
     {
-      "headline": "sony tsmc deal brings overseas investment in japan chipmaking to 37bn",
+      "headline": "tsmc and sony team up china s ai stocks swing",
       "source": "nikkei.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01176
+      "weight": 0.0052,
+      "impact": -0.00581
     },
     {
-      "headline": "broadcom trades at 71 times earnings and 27 times",
-      "source": "fool.com",
+      "headline": "3 semiconductor stocks to buy before the next ai earnings wave in august",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01827
+      "weight": 0.0052,
+      "impact": -0.01498
     },
     {
-      "headline": "intel boosts share sale to usd20 billion as turnaround gains pace",
-      "source": "australiannews.net",
+      "headline": "intel ceo hints that chipzilla might return to making memory",
+      "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01332
+      "weight": 0.0052,
+      "impact": -0.00749
     },
     {
-      "headline": "tsmc revenue surges 45",
-      "source": "memeburn.com",
+      "headline": "sony tsmc to invest 47 billion in image sensor joint venture 103260813141125215.htm",
+      "source": "news.tuoitre.vn",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01127
+      "weight": 0.0052,
+      "impact": -0.01028
     },
     {
-      "headline": "5 semiconductor stocks jim cramer 171441263.html",
+      "headline": "202530961 sony semiconductor solutions and tsmc agreed to establish joint venture for next generation image sensors",
+      "source": "design-reuse.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.01008
+    },
+    {
+      "headline": "qualcomm reveals snapdragon c specs for budget laptops and intel could have a serious headache",
+      "source": "digitaltrends.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.01147
+    },
+    {
+      "headline": "broadcom trades 71 times earnings 084700900.html",
       "source": "yahoo.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01609
+      "weight": 0.0051,
+      "impact": -0.01806
     },
     {
-      "headline": "taiwan semiconductors july revenue rose 45 and the",
-      "source": "fool.com",
+      "headline": "127282 tsmc and sony team up chinas ai stocks swing",
+      "source": "chinatechnews.com",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.01211
+      "weight": 0.0051,
+      "impact": -0.008
     },
     {
-      "headline": "hudson value partners llc has 6 15 million stock holdings in advanced micro devices inc amd.html",
-      "source": "tickerreport.com",
+      "headline": "nvidia nvda and broadcom avgo deepen ai financing push but wolfe sees long term risks 1810055",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00935
-    },
-    {
-      "headline": "sony semiconductor and tsmc join forces to make nextgen imaging processors news 74135.php",
-      "source": "gsmarena.com",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00066
-    },
-    {
-      "headline": "intel secures usd20 billion to fund foundry growth amid ai demand",
-      "source": "sandiegosun.com",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00271
+      "weight": 0.0051,
+      "impact": -0.01184
     }
   ]
 }
