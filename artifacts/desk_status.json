@@ -9,19 +9,19 @@
       "fails_since_ok": 0
     },
     "news-topup": {
-      "last_run": "2026-08-14T17:03:41",
+      "last_run": "2026-08-18T17:06:14",
       "ok": true,
       "note": null,
-      "secs": 218.7,
-      "last_ok": "2026-08-14T17:03:41",
+      "secs": 371.9,
+      "last_ok": "2026-08-18T17:06:14",
       "fails_since_ok": 0
     },
     "log-headlines": {
-      "last_run": "2026-08-14T16:30:28",
+      "last_run": "2026-08-18T16:30:24",
       "ok": true,
       "note": null,
-      "secs": 25.1,
-      "last_ok": "2026-08-14T16:30:28",
+      "secs": 21.0,
+      "last_ok": "2026-08-18T16:30:24",
       "fails_since_ok": 0
     },
     "industry-backfill": {
@@ -41,11 +41,11 @@
       "fails_since_ok": 0
     },
     "fetch": {
-      "last_run": "2026-08-13T12:00:16",
+      "last_run": "2026-08-17T00:10:00",
       "ok": true,
       "note": null,
-      "secs": 7.1,
-      "last_ok": "2026-08-13T12:00:16",
+      "secs": 20.0,
+      "last_ok": "2026-08-17T00:10:00",
       "fails_since_ok": 0
     },
     "news2": {
@@ -113,20 +113,20 @@
       "fails_since_ok": 0
     },
     "learn": {
-      "last_run": "2026-08-14T17:04:12",
+      "last_run": "2026-08-18T17:07:01",
       "ok": true,
       "note": null,
-      "secs": 26.2,
-      "last_ok": "2026-08-14T17:04:12",
+      "secs": 40.3,
+      "last_ok": "2026-08-18T17:07:01",
       "fails_since_ok": 0
     },
     "signal": {
-      "last_run": "2026-08-14T17:08:04",
-      "ok": true,
-      "note": null,
-      "secs": 226.8,
+      "last_run": "2026-08-18T17:07:24",
+      "ok": false,
+      "note": "RuntimeError: computed entry day 2026-08-17 has already opened - the price cache ends 2026-08-14, so its next session is in the past. Refresh prices (data source likely served a malformed latest bar) and rerun before an open.",
+      "secs": 18.9,
       "last_ok": "2026-08-14T17:08:04",
-      "fails_since_ok": 0
+      "fails_since_ok": 1
     },
     "grade": {
       "last_run": "2026-08-14T11:48:48",
@@ -137,7 +137,7 @@
       "fails_since_ok": 0
     }
   },
-  "updated": "2026-08-14T17:08:04",
+  "updated": "2026-08-18T17:07:24",
   "data_warnings": [],
-  "data_checked": "2026-08-14T17:08:04"
+  "data_checked": "2026-08-18T17:07:01"
 }

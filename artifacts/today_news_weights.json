@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-14",
-  "generated_at": "2026-08-14T17:04:12",
+  "entry_day": "2026-08-17",
+  "generated_at": "2026-08-18T17:07:01",
   "articles": [
     {
-      "headline": "tim cook warned of a 100 year flood in memory chip",
-      "source": "fool.com",
+      "headline": "broadcom nasdaq avgo leads peers in profit margins but trails in stock returns and growth",
+      "source": "foreignpolicyjournal.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.00855
+      "weight": 0.0021,
+      "impact": -0.01573
     },
     {
-      "headline": "tsmc and sony team up china s ai stocks swing",
-      "source": "nikkei.com",
+      "headline": "institutional investors trim tech giants and semiconductors in q2 13f filings signaling cautious market mood nasdaq msft",
+      "source": "foreignpolicyjournal.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.00581
+      "weight": 0.0021,
+      "impact": -0.01297
     },
     {
-      "headline": "3 semiconductor stocks to buy before the next ai earnings wave in august",
-      "source": "247wallst.com",
+      "headline": "amd ryzen firmware security flaws let hackers fake device health checks patch now.htm",
+      "source": "techtimes.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.01498
+      "weight": 0.0021,
+      "impact": -0.00128
     },
     {
-      "headline": "intel ceo hints that chipzilla might return to making memory",
-      "source": "wccftech.com",
+      "headline": "qualcomms 300 laptops will be netbooks not neo competitors",
+      "source": "theverge.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.00749
+      "weight": 0.0021,
+      "impact": -0.01172
     },
     {
-      "headline": "sony tsmc to invest 47 billion in image sensor joint venture 103260813141125215.htm",
-      "source": "news.tuoitre.vn",
+      "headline": "tiger global cuts stakes in major tech firms adds amd and spacex",
+      "source": "azerbaijannews.net",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.01028
+      "weight": 0.0021,
+      "impact": -0.01367
     },
     {
-      "headline": "202530961 sony semiconductor solutions and tsmc agreed to establish joint venture for next generation image sensors",
-      "source": "design-reuse.com",
-      "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.01008
-    },
-    {
-      "headline": "qualcomm reveals snapdragon c specs for budget laptops and intel could have a serious headache",
-      "source": "digitaltrends.com",
-      "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.01147
-    },
-    {
-      "headline": "broadcom trades 71 times earnings 084700900.html",
-      "source": "yahoo.com",
-      "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.01806
-    },
-    {
-      "headline": "127282 tsmc and sony team up chinas ai stocks swing",
-      "source": "chinatechnews.com",
-      "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.008
-    },
-    {
-      "headline": "nvidia nvda and broadcom avgo deepen ai financing push but wolfe sees long term risks 1810055",
+      "headline": "taiwan semiconductor tsm remains at the center of the ai boom 1810346",
       "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.01184
+      "weight": 0.0021,
+      "impact": -0.00702
+    },
+    {
+      "headline": "google tensor g6 in pixel 11 uses tsmcs 3nm process not 2nm",
+      "source": "gfwadvertiser.ca",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.00506
+    },
+    {
+      "headline": "broadcom is down over 3 months one wall street pro sees 60 gains ahead",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.01357
+    },
+    {
+      "headline": "broadcoms highest paid executives in 2025 ceo hock tan earns 205 28 million 97778",
+      "source": "infotechlead.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.01334
+    },
+    {
+      "headline": "president bush qualcomm the ctia broadcom and the itc square up 2026 08",
+      "source": "electronicsweekly.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.00888
     }
   ]
 }
