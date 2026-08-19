@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-08-19T17:08:09",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-19",
+  "last_close": 219.74,
+  "model_trained_through": "2026-08-12",
+  "gap_context": {
+    "prev_close": 219.74,
+    "latest": 219.75,
+    "gap_pct": 0.0,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.5407,
+  "prob_big_move": 0.4944,
+  "big_move_threshold": 0.0129,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.1136,
+  "headline_count": 151,
+  "article_count": 176,
+  "fulltext": {
+    "stories": 151,
+    "read_full": 92,
+    "read_partial": 21,
+    "headline_only": 38,
+    "alt_searches": 12,
+    "elapsed_s": 123.9
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 2,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5114,
+  "brain_top_news": [
+    {
+      "headline": "famous billionaires were rushing to buy taiwan semiconductor tsm heres why 1811750",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.0068,
+      "impact": -0.0146
+    },
+    {
+      "headline": "why might case taiwan semiconductor 142028082.html",
+      "source": "yahoo.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.0116
+    },
+    {
+      "headline": "4634387 soros capital makes most dramatic bet on taiwan semiconductor in q2",
+      "source": "seekingalpha.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.01238
+    },
+    {
+      "headline": "where will qualcomm stock be in 5 years",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.01636
+    },
+    {
+      "headline": "intel and amd fall 4 as 13f filings reveal concentrated chip bets",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.00582
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "NVIDIA Shares Drop 2.3% as $105 Billion Guarantee Amounts to 2.1x Quarterly Cash Flow - TechStock\u00b2",
+      "source": "TechStock\u00b2",
+      "score": -0.972,
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPc2Y3dzE0QjNLOEpTREZPTzBIaFV5dllQVk9rc3dQeHQyZVdvSVhrNEhoMHZUSFNGazRzLVk5eTctZGdILTR0MUNvdlM5YjdDaE50TVVSYzJ4X3RrVEpzbllyWjlCdldUZWVEYVM2TWIwanF0QldZbHNEbXNJa0k1TE0wSkd2bXk4dkZCMzVDTThzdmZFQ19iM3lLaHlkXzQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "ts2.tech"
+    },
+    {
+      "title": "Why Nvidia stock is down over 2% on Tuesday - TradingView",
+      "source": "google_news",
+      "score": -0.969,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWFhRTEZETkV1SUVidUZQMjcwa0ZTdno2MjRvU3ZlaEpWMUE4M3NtMjhmY1BNVm5HSGo0eE5HUlRGMXVDQ3hYcFkzZG5DNUFhRHJ0dzFDMWxFaENDbGJmM1BMemdFNmhVeGpsaFJKdnlkSThmS3FmYWRwSk9IejQtS3ZnVVpDOTFOUW0wZi02OGV6eG1QQ2N2cUd6NHc5ZmVx?oc=5",
+      "n_sources": 2,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.tradingview.com"
+    },
+    {
+      "title": "Nvidia Stock Drops as Bond Yields Attack AI Valuations",
+      "source": "finviz",
+      "score": -0.965,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-stock-drops-bond-yields-202537086.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Cerebras Says Its New Computer Boosts AI Speed Advantage Over Nvidia - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "score": 0.927,
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOMnFoUjI4UUxyOFVyMkszMlJWR09FU3JmbC1kbzNNQ0RTSlFLS3RRODV3QnJKOFAwcmNVa2RXOC01V0Z4NE0tbDVFbW56UHpOcUFndG9SX2hLa2JoMzhtY2FuTnNDNk9vbV8wdkNQZ3RjMm1rTVdFNmRrcXJyNy1aOTFSRy1mZXlBSHpFOUl5cjczS1ZOV3VvUlRIWEdXR0lId0dZR1BlS2ZxNXgtQmZaU1RTRktFVVJyWVF2ZFVxYWU3UQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbctv18.com"
+    },
+    {
+      "title": "After TSMC, Samsung Is Also Reportedly Planning To Hike Chip Prices Amid Demand Surge Fueled By Nvidia, Apple, Tesla And Others",
+      "source": "yahoo_rss",
+      "score": 0.887,
+      "url": "https://stocktwits.com/news-articles/markets/equity/samsung-hikes-chip-prices-15-percent-tsmc-capacity-crunch-nvidia-apple/cZYdhI1RJkr?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "stocktwits.com"
+    },
+    {
+      "title": "Here\u2019s the case for Nvidia\u2019s stock to climb 55%, according to BofA - marketwatch.com",
+      "source": "marketwatch.com",
+      "score": 0.887,
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQREN2WV9jRmpPT29iUjVvWV95WUVkYUtkM3JLR2JQLTFOMTJTb0hZTzFWeWJXaENUeGQ4S2pPeXNuQV9Xem4ydmtwUEtYbk1RS3FyOTVSYTNNOGtxZkZIaXA1RlE4QkRQNENlUEtDczFvZEFQR3Y1MzZhbWhxMExPZ2dZUXNoTjBQNUZSWTZHSlN1TU15S3EzZjdzbTVnS0ZQRWc3Q3hXbGd5b3huRjBCa1lCU21xZw?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ]
+}

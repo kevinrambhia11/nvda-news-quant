@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-17",
-  "generated_at": "2026-08-18T17:07:01",
+  "entry_day": "2026-08-19",
+  "generated_at": "2026-08-19T17:04:21",
   "articles": [
     {
-      "headline": "broadcom nasdaq avgo leads peers in profit margins but trails in stock returns and growth",
-      "source": "foreignpolicyjournal.com",
-      "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.01573
-    },
-    {
-      "headline": "institutional investors trim tech giants and semiconductors in q2 13f filings signaling cautious market mood nasdaq msft",
-      "source": "foreignpolicyjournal.com",
-      "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.01297
-    },
-    {
-      "headline": "amd ryzen firmware security flaws let hackers fake device health checks patch now.htm",
-      "source": "techtimes.com",
-      "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00128
-    },
-    {
-      "headline": "qualcomms 300 laptops will be netbooks not neo competitors",
-      "source": "theverge.com",
-      "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.01172
-    },
-    {
-      "headline": "tiger global cuts stakes in major tech firms adds amd and spacex",
-      "source": "azerbaijannews.net",
-      "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.01367
-    },
-    {
-      "headline": "taiwan semiconductor tsm remains at the center of the ai boom 1810346",
+      "headline": "famous billionaires were rushing to buy taiwan semiconductor tsm heres why 1811750",
       "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00702
+      "weight": 0.0068,
+      "impact": -0.0146
     },
     {
-      "headline": "google tensor g6 in pixel 11 uses tsmcs 3nm process not 2nm",
-      "source": "gfwadvertiser.ca",
+      "headline": "why might case taiwan semiconductor 142028082.html",
+      "source": "yahoo.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00506
+      "weight": 0.0067,
+      "impact": -0.0116
     },
     {
-      "headline": "broadcom is down over 3 months one wall street pro sees 60 gains ahead",
+      "headline": "4634387 soros capital makes most dramatic bet on taiwan semiconductor in q2",
+      "source": "seekingalpha.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.01238
+    },
+    {
+      "headline": "where will qualcomm stock be in 5 years",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.01636
+    },
+    {
+      "headline": "intel and amd fall 4 as 13f filings reveal concentrated chip bets",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.01357
+      "weight": 0.0067,
+      "impact": -0.00582
     },
     {
-      "headline": "broadcoms highest paid executives in 2025 ceo hock tan earns 205 28 million 97778",
-      "source": "infotechlead.com",
+      "headline": "broadcom s ai financing could reach usd370 billion but it s not as bad as it sounds",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.01334
+      "weight": 0.0067,
+      "impact": -0.01011
     },
     {
-      "headline": "president bush qualcomm the ctia broadcom and the itc square up 2026 08",
-      "source": "electronicsweekly.com",
+      "headline": "why intel stock is falling today",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00888
+      "weight": 0.0067,
+      "impact": -0.01031
+    },
+    {
+      "headline": "united microelectronics falls 7 tower semiconductor sinks 10 globalfoundries drops 7 as ai spending fears hit foundries",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.0087
+    },
+    {
+      "headline": "broadcom s stock has beaten the market in 12 of the past 13 years and it could do it again in 2026",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.0125
+    },
+    {
+      "headline": "broadcoms stock beaten market 12 173523788.html",
+      "source": "yahoo.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.01477
     }
   ]
 }
