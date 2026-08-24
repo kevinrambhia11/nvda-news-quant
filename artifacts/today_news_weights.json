@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-19",
-  "generated_at": "2026-08-19T17:04:21",
+  "entry_day": "2026-08-24",
+  "generated_at": "2026-08-24T17:07:52",
   "articles": [
     {
-      "headline": "famous billionaires were rushing to buy taiwan semiconductor tsm heres why 1811750",
-      "source": "insidermonkey.com",
+      "headline": "broadcom cds explodes it seeks 100 billion massive balance sheet debt deal",
+      "source": "zerohedge.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.0146
+      "weight": 0.002,
+      "impact": -0.01491
     },
     {
-      "headline": "why might case taiwan semiconductor 142028082.html",
-      "source": "yahoo.com",
+      "headline": "investing in semiconductors",
+      "source": "livetradingnews.com",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.0116
+      "weight": 0.002,
+      "impact": -0.01733
     },
     {
-      "headline": "4634387 soros capital makes most dramatic bet on taiwan semiconductor in q2",
-      "source": "seekingalpha.com",
+      "headline": "xiaomi xring o3 chip 4ghz mix fold 5",
+      "source": "memeburn.com",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01238
+      "weight": 0.002,
+      "impact": -0.01265
     },
     {
-      "headline": "where will qualcomm stock be in 5 years",
-      "source": "fool.com",
+      "headline": "broadcom is primed for a big gain how to trade it while protecting against risk.html",
+      "source": "cnbc.com",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01636
+      "weight": 0.002,
+      "impact": -0.01397
     },
     {
-      "headline": "intel and amd fall 4 as 13f filings reveal concentrated chip bets",
+      "headline": "heres why im buying more broadcom as spiking treasury yields rock ai stocks",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.00582
+      "weight": 0.002,
+      "impact": -0.01291
     },
     {
-      "headline": "broadcom s ai financing could reach usd370 billion but it s not as bad as it sounds",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01011
-    },
-    {
-      "headline": "why intel stock is falling today",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01031
-    },
-    {
-      "headline": "united microelectronics falls 7 tower semiconductor sinks 10 globalfoundries drops 7 as ai spending fears hit foundries",
+      "headline": "d e shaw just disclosed a 912 million spacex stake and a 58 broadcom cut in the same quarter",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.0087
+      "weight": 0.002,
+      "impact": -0.01588
     },
     {
-      "headline": "broadcom s stock has beaten the market in 12 of the past 13 years and it could do it again in 2026",
+      "headline": "broadcom debt deal expected to reach upwards of 70 billion sources.html",
+      "source": "cnbc.com",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.01012
+    },
+    {
+      "headline": "chip stocks didn t fall on chip news this week they fell on a 19 year high in the 30 year treasury yield",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.0125
+      "weight": 0.002,
+      "impact": -0.00965
     },
     {
-      "headline": "broadcoms stock beaten market 12 173523788.html",
-      "source": "yahoo.com",
+      "headline": "qualcomm sells 184 crore shadowfax stake",
+      "source": "freepressjournal.in",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01477
+      "weight": 0.002,
+      "impact": -0.01514
+    },
+    {
+      "headline": "samsung prepara novo celular ultra premium com chip extremo diz leaker",
+      "source": "canaltech.com.br",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.00733
     }
   ]
 }

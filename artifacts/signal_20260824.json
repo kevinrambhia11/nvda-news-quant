@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-08-24T17:11:48",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-24",
+  "last_close": 214.72,
+  "model_trained_through": "2026-08-12",
+  "gap_context": {
+    "prev_close": 214.72,
+    "latest": 214.81,
+    "gap_pct": 0.0004,
+    "session": "pre-market",
+    "as_of_et": "07:41 ET"
+  },
+  "model_prob_up": 0.5407,
+  "prob_big_move": 0.5111,
+  "big_move_threshold": 0.0129,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0039,
+  "headline_count": 145,
+  "article_count": 193,
+  "fulltext": {
+    "stories": 145,
+    "read_full": 92,
+    "read_partial": 14,
+    "headline_only": 39,
+    "alt_searches": 12,
+    "elapsed_s": 134.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 8,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.5291,
+  "brain_top_news": [
+    {
+      "headline": "broadcom cds explodes it seeks 100 billion massive balance sheet debt deal",
+      "source": "zerohedge.com",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.01491
+    },
+    {
+      "headline": "investing in semiconductors",
+      "source": "livetradingnews.com",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.01733
+    },
+    {
+      "headline": "xiaomi xring o3 chip 4ghz mix fold 5",
+      "source": "memeburn.com",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.01265
+    },
+    {
+      "headline": "broadcom is primed for a big gain how to trade it while protecting against risk.html",
+      "source": "cnbc.com",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.01397
+    },
+    {
+      "headline": "heres why im buying more broadcom as spiking treasury yields rock ai stocks",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.01291
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Earnings Preview | Amid the surge in token-based inference, NVIDIA (NVDA.US) faces scrutiny over cyclical financing as it reports results; Market anticipates Rubin to ignite the \"$6 trillion\" narrative - Moomoo",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQOVUzSmNxdVpZcFhJOUVDdG9tbU8yTk9FbU5RTjdZb19qY3FNOWtuV3lFSm5tYmprUkNIcnhMUTBLYUx2RGU5Y0VNOEFMZXpFcElyaVpBZEhIbWYtWVhKTURFUTQ2TFpUZVY1S21YVlFLX19RU2lLOS15ZFpudlZrX1BQcEpQdDRtRjk0YjFLN25OTGdVTmVpd1NPQnZoZ01JOHpUVXVYSlE?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Stocks Set to Open Lower as Chipmakers Get Hit, Nvidia Earnings and Warsh\u2019s Jackson Hole Speech Awaited - Barchart.com",
+      "source": "google_news",
+      "score": -0.953,
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNYm1vcHRKNlNYTUlBRTkzRzhKX2p2RUE1bzl2N0pUcVcwNS1fMnROTlF1X1RhbjNXLWprOGM1aTVwT0hlQ0JmXzY2SDdINDc1VnZFZFRZeGlfM0lESXVjcEkxVFZ0QTRlRUFFRUFCbENIc0FMdExyTHZ5aGF5R1RPWkY5V1BfVjhiWGFSZXd3VmJFbVhMa1lMV2NJMk1WTUl3aWlHVm5wZTlYT3RiVmRSNGsxLTQ5eUw0TFZTYWFCb191eEtneEg0LWI4MktZeGtUMFY5eW5VRjBBY2pwT2c?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.barchart.com"
+    },
+    {
+      "title": "Nasdaq poised to fall as traders wait for Nvidia results",
+      "source": "finviz",
+      "score": -0.953,
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-nvidia-earnings-results-jackson-hole/card/nasdaq-poised-to-fall-as-traders-wait-for-nvidia-results-Ij4iEZLhCiaVXMjOec0s?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Citi expects Nvidia stock to trade higher post earnings",
+      "source": "finviz",
+      "score": 0.953,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/citi-expects-nvidia-stock-trade-114707114.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia's strikes US$6B licensing deal with Poolside to accelerate Nemotron models",
+      "source": "finviz",
+      "score": 0.929,
+      "url": "https://www.digitimes.com/news/a20260824VL209/nvidia-licensing-startup-open-source-technology.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Here\u2019s the case for Nvidia\u2019s stock to climb 55%, according to BofA - MarketWatch",
+      "source": "google_news",
+      "score": 0.881,
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQREN2WV9jRmpPT29iUjVvWV95WUVkYUtkM3JLR2JQLTFOMTJTb0hZTzFWeWJXaENUeGQ4S2pPeXNuQV9Xem4ydmtwUEtYbk1RS3FyOTVSYTNNOGtxZkZIaXA1RlE4QkRQNENlUEtDczFvZEFQR3Y1MzZhbWhxMExPZ2dZUXNoTjBQNUZSWTZHSlN1TU15S3EzZjdzbTVnS0ZQRWc3Q3hXbGd5b3huRjBCa1lCU21xZw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ]
+}
