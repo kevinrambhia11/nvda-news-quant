@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-24",
-  "generated_at": "2026-08-24T17:07:52",
+  "entry_day": "2026-08-25",
+  "generated_at": "2026-08-25T17:04:32",
   "articles": [
     {
-      "headline": "broadcom cds explodes it seeks 100 billion massive balance sheet debt deal",
-      "source": "zerohedge.com",
+      "headline": "samsungs next galaxy chip could deliver faster performance while using less power",
+      "source": "digitaltrends.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01491
+      "weight": 0.0049,
+      "impact": -0.00046
     },
     {
-      "headline": "investing in semiconductors",
-      "source": "livetradingnews.com",
+      "headline": "xiaomi xring o3 tsmc 3nm in house chip 2026",
+      "source": "domain-b.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01733
+      "weight": 0.0049,
+      "impact": -0.01151
     },
     {
-      "headline": "xiaomi xring o3 chip 4ghz mix fold 5",
-      "source": "memeburn.com",
+      "headline": "broader us stocks close lower with chip ai stocks under pressure",
+      "source": "investinglive.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01265
+      "weight": 0.0049,
+      "impact": -0.00974
     },
     {
-      "headline": "broadcom is primed for a big gain how to trade it while protecting against risk.html",
-      "source": "cnbc.com",
+      "headline": "intel stock pressure equity offering semiconductor weakness 1874494",
+      "source": "ibtimes.com.au",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01397
+      "weight": 0.0049,
+      "impact": -0.01549
     },
     {
-      "headline": "heres why im buying more broadcom as spiking treasury yields rock ai stocks",
+      "headline": "chinas advanced chip supply surge 2035 despite equipment bottlenecks goldman says",
+      "source": "scmp.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00638
+    },
+    {
+      "headline": "nvidias trillion dollar chip market has friends and foes closing in",
+      "source": "mercurynews.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.01191
+    },
+    {
+      "headline": "hbm google sk hynix chips silicon.html",
+      "source": "digitimes.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.01009
+    },
+    {
+      "headline": "xiaomi unveils xring o3 chip for flagship foldable phone 1750246",
+      "source": "econotimes.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00714
+    },
+    {
+      "headline": "the ai opportunity qualcomm investors may be underestimating",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01291
+      "weight": 0.0049,
+      "impact": -0.01153
     },
     {
-      "headline": "d e shaw just disclosed a 912 million spacex stake and a 58 broadcom cut in the same quarter",
-      "source": "247wallst.com",
+      "headline": "intel s cpu market share falls to 31 year low as ai mania fuels record growth",
+      "source": "crn.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01588
-    },
-    {
-      "headline": "broadcom debt deal expected to reach upwards of 70 billion sources.html",
-      "source": "cnbc.com",
-      "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01012
-    },
-    {
-      "headline": "chip stocks didn t fall on chip news this week they fell on a 19 year high in the 30 year treasury yield",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.00965
-    },
-    {
-      "headline": "qualcomm sells 184 crore shadowfax stake",
-      "source": "freepressjournal.in",
-      "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01514
-    },
-    {
-      "headline": "samsung prepara novo celular ultra premium com chip extremo diz leaker",
-      "source": "canaltech.com.br",
-      "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.00733
+      "weight": 0.0049,
+      "impact": -0.00822
     }
   ]
 }
