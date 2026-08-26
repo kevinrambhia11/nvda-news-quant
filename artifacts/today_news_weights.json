@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-25",
-  "generated_at": "2026-08-25T17:04:32",
+  "entry_day": "2026-08-26",
+  "generated_at": "2026-08-26T17:05:02",
   "articles": [
     {
-      "headline": "samsungs next galaxy chip could deliver faster performance while using less power",
-      "source": "digitaltrends.com",
+      "headline": "berkshire hathaway rose while every major chip stock fell monday",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00046
+      "weight": 0.005,
+      "impact": -0.01759
     },
     {
-      "headline": "xiaomi xring o3 tsmc 3nm in house chip 2026",
-      "source": "domain-b.com",
+      "headline": "apple switches to intel processors macs look back",
+      "source": "pcmag.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.01151
+      "weight": 0.005,
+      "impact": -0.00861
     },
     {
-      "headline": "broader us stocks close lower with chip ai stocks under pressure",
-      "source": "investinglive.com",
+      "headline": "stocks making the biggest moves midday dks mrvl amd kura.html",
+      "source": "cnbc.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00974
+      "weight": 0.005,
+      "impact": -0.00834
     },
     {
-      "headline": "intel stock pressure equity offering semiconductor weakness 1874494",
-      "source": "ibtimes.com.au",
+      "headline": "taiwan indicts nvidia manager after chip smuggling probe",
+      "source": "businesstimes.com.sg",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.01549
+      "weight": 0.005,
+      "impact": -0.01057
     },
     {
-      "headline": "chinas advanced chip supply surge 2035 despite equipment bottlenecks goldman says",
-      "source": "scmp.com",
+      "headline": "stocks making the biggest moves premarket dks amd kura.html",
+      "source": "cnbc.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00638
+      "weight": 0.005,
+      "impact": -0.00717
     },
     {
-      "headline": "nvidias trillion dollar chip market has friends and foes closing in",
-      "source": "mercurynews.com",
+      "headline": "xring o3 xiaomi will es mit apple qualcomm co aufnehmen 11425154.html",
+      "source": "heise.de",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.01191
+      "impact": -0.00888
     },
     {
-      "headline": "hbm google sk hynix chips silicon.html",
-      "source": "digitimes.com",
+      "headline": "analyzing broadcom nasdaqavgo silex systems otcmktssilxy.html",
+      "source": "tickerreport.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.01009
+      "impact": -0.00615
     },
     {
-      "headline": "xiaomi unveils xring o3 chip for flagship foldable phone 1750246",
-      "source": "econotimes.com",
+      "headline": "this semiconductor stock could soon overtake intel raymond james says.html",
+      "source": "cnbc.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.00714
+      "impact": -0.00909
     },
     {
-      "headline": "the ai opportunity qualcomm investors may be underestimating",
-      "source": "247wallst.com",
+      "headline": "qualcomm just broke the 5ghz barrier with its next snapdragon chip",
+      "source": "androidcentral.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.01153
+      "impact": -0.01364
     },
     {
-      "headline": "intel s cpu market share falls to 31 year low as ai mania fuels record growth",
-      "source": "crn.com",
+      "headline": "113608 xiaomi takes another shot qualcomm mediatek xring o3.html",
+      "source": "techspot.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.00822
+      "impact": -0.01199
     }
   ]
 }

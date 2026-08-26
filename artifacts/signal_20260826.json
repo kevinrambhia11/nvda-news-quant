@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-08-26T17:08:54",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-26",
+  "last_close": 213.05,
+  "model_trained_through": "2026-08-12",
+  "gap_context": {
+    "prev_close": 213.05,
+    "latest": 212.91,
+    "gap_pct": -0.0007,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.5407,
+  "prob_big_move": 0.5158,
+  "big_move_threshold": 0.0132,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.0751,
+  "headline_count": 168,
+  "article_count": 206,
+  "fulltext": {
+    "stories": 168,
+    "read_full": 94,
+    "read_partial": 22,
+    "headline_only": 52,
+    "alt_searches": 12,
+    "elapsed_s": 125.2
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 7,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5172,
+  "brain_top_news": [
+    {
+      "headline": "berkshire hathaway rose while every major chip stock fell monday",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.01759
+    },
+    {
+      "headline": "apple switches to intel processors macs look back",
+      "source": "pcmag.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00861
+    },
+    {
+      "headline": "stocks making the biggest moves midday dks mrvl amd kura.html",
+      "source": "cnbc.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00834
+    },
+    {
+      "headline": "taiwan indicts nvidia manager after chip smuggling probe",
+      "source": "businesstimes.com.sg",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.01057
+    },
+    {
+      "headline": "stocks making the biggest moves premarket dks amd kura.html",
+      "source": "cnbc.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00717
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Volatility expectations for the chip sector has dived as Nvidia earnings loom",
+      "source": "finviz",
+      "score": -0.967,
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-nvidia-earnings-results-inflation-data-crowdstrike-salesforce/card/volatility-expectations-for-the-chip-sector-has-dived-as-nvidia-earnings-loom-YBih5YJdXu0MjfqFJkwZ?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Dow Futures Drop; Nvidia Results and 4.7% Yield Challenge Equities - TechStock\u00b2",
+      "source": "TechStock\u00b2",
+      "score": -0.96,
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNX28zOWwyN09DN19jRHpMeEMxV3lGMUl5WFUyTTFBeFFQQlFIekI3cF9hVWRSSU4tMHNlTnpmWHhQMF9VRTRuWTM3LTVaX3hUa2lqczV5dzl3TXBaNzNFeF9XYjFxLVlnUkRPek1nc2xvcFN4NWc3SHM5T19fTUhnSHhpc091clFQNGtwOGRLd2k?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "ts2.tech"
+    },
+    {
+      "title": "Nvidia Has Fallen After Four Straight Earnings Beats. Here\u2019s Why It Could Happen Again. - 24/7 Wall St.",
+      "source": "google_news",
+      "score": -0.96,
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQSlBZWUxFWExERmt2Sy1aMUd0RXhnZ040UGcyczRRV3FBLTh6ZGROQlhvbV95dFljQTZidTJvRTIzcm04dllYdlQ1bk9ySVlERUhhenpRdGNhZXBYcnlYajZrMmtCQ20tdndyMS1aR2JibVFONjRRWWV1bVp2NTFEQy11MEI0NW5aOFhvTVZtZ2hWTjQ0NXpSUDM4X2lIVTFpSnpVMFNZb2VmSFNxdnItZ2FIVkZXVUNLUU9iQUI3WnlPd0EwUEo4?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "247wallst.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia is expected to show a doubling of profits",
+      "source": "finviz",
+      "score": 0.935,
+      "url": "https://www.marketwatch.com/livecoverage/nvidia-earnings-stock-results-guidance-nvda-q2/card/nvidia-is-expected-to-show-a-doubling-of-profits-v4YT5WO0raAYDjut1rbX?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "OpenAI Claims Its New Chips Can Outperform Nvidia Processors in Tests - Bloomberg",
+      "source": "Bloomberg",
+      "score": 0.935,
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQS0xINWRaSDFhQkxzcWtKd3Q4ZmNhUndScGdaQWl4U0J6dURXY1J0UmJ6aE96ajBIdzZHa3hGWUE2dktKYjJkdE44N05YZ1E3MmR1WXJ5Wm1xTWNFQW5oUHl0bEZXZklvd1RhaFFTSFBmcXFNX3pFYWRkLXpIQ1FleW4xdlhmTXcwdUlCQUZkUFpYWl9mSnA2cTFGWGtsT1Jad1RsaGRVYTdyREpiSUtXemx4djJHNkhrS1lUMw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "SK hynix adds second major customer as Nvidia misses Samsung's top five",
+      "source": "finviz",
+      "score": 0.866,
+      "url": "https://www.digitimes.com/news/a20260825VL223/sk-hynix-samsung-hbm4-revenue-sales-nvidia.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}
