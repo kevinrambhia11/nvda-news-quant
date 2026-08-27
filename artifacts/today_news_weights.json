@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-26",
-  "generated_at": "2026-08-26T17:05:02",
+  "entry_day": "2026-08-27",
+  "generated_at": "2026-08-27T17:06:11",
   "articles": [
     {
-      "headline": "berkshire hathaway rose while every major chip stock fell monday",
-      "source": "fool.com",
+      "headline": "goldman sees china chip gap narrowing 34 2035 lithography still binding limit.htm",
+      "source": "techtimes.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.01759
+      "weight": 0.0054,
+      "impact": -0.00902
     },
     {
-      "headline": "apple switches to intel processors macs look back",
-      "source": "pcmag.com",
+      "headline": "sound shore fund sees qualcomm nasdaq qcom as undervalued play on the massive ai opportunity",
+      "source": "foreignpolicyjournal.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00861
+      "weight": 0.0054,
+      "impact": -0.01344
     },
     {
-      "headline": "stocks making the biggest moves midday dks mrvl amd kura.html",
-      "source": "cnbc.com",
+      "headline": "jim cramer points to government stake for intel intc drop 1822849",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00834
+      "weight": 0.0054,
+      "impact": -0.01586
     },
     {
-      "headline": "taiwan indicts nvidia manager after chip smuggling probe",
-      "source": "businesstimes.com.sg",
+      "headline": "wall streets ai trade just flipped software stocks climb chips fall 3806771",
+      "source": "ibtimes.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.01057
+      "weight": 0.0054,
+      "impact": -0.01101
     },
     {
-      "headline": "stocks making the biggest moves premarket dks amd kura.html",
-      "source": "cnbc.com",
+      "headline": "nvidia groq 3 lpx chip pushes samsung foundry closer to profitability",
+      "source": "californiatelegraph.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00717
+      "weight": 0.0054,
+      "impact": -0.01472
     },
     {
-      "headline": "xring o3 xiaomi will es mit apple qualcomm co aufnehmen 11425154.html",
-      "source": "heise.de",
+      "headline": "nvidias groq 3 lpx chip pushes samsung foundry closer to profitability20260826171353",
+      "source": "aninews.in",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00888
+      "weight": 0.0054,
+      "impact": -0.01272
     },
     {
-      "headline": "analyzing broadcom nasdaqavgo silex systems otcmktssilxy.html",
+      "headline": "osmosis investment management uk ltd makes new 649000 investment in qualcomm incorporated qcom.html",
       "source": "tickerreport.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00615
+      "weight": 0.0054,
+      "impact": -0.0098
     },
     {
-      "headline": "this semiconductor stock could soon overtake intel raymond james says.html",
-      "source": "cnbc.com",
+      "headline": "wall street analyst upgrade amd stock bull",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00909
+      "weight": 0.0054,
+      "impact": -0.01143
     },
     {
-      "headline": "qualcomm just broke the 5ghz barrier with its next snapdragon chip",
-      "source": "androidcentral.com",
+      "headline": "its fast qualcomms new oryon cpu hits 5ghz",
+      "source": "droid-life.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.01364
+      "weight": 0.0054,
+      "impact": -0.00894
     },
     {
-      "headline": "113608 xiaomi takes another shot qualcomm mediatek xring o3.html",
-      "source": "techspot.com",
+      "headline": "sony group sony and taiwan semiconductor tsm are betting 4 7 billion on the eyes of ai machines 1821583",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.01199
+      "weight": 0.0054,
+      "impact": -0.00591
     }
   ]
 }

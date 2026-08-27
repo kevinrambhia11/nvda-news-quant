@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-08-27T17:10:03",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-27",
+  "last_close": 209.66,
+  "model_trained_through": "2026-08-12",
+  "gap_context": {
+    "prev_close": 209.66,
+    "latest": 221.75,
+    "gap_pct": 0.0577,
+    "session": "pre-market",
+    "as_of_et": "07:40 ET"
+  },
+  "model_prob_up": 0.5407,
+  "prob_big_move": 0.5158,
+  "big_move_threshold": 0.0129,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0442,
+  "headline_count": 161,
+  "article_count": 195,
+  "fulltext": {
+    "stories": 161,
+    "read_full": 76,
+    "read_partial": 28,
+    "headline_only": 57,
+    "alt_searches": 12,
+    "elapsed_s": 108.6
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 6,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.5351,
+  "brain_top_news": [
+    {
+      "headline": "goldman sees china chip gap narrowing 34 2035 lithography still binding limit.htm",
+      "source": "techtimes.com",
+      "category": "competitors",
+      "weight": 0.0054,
+      "impact": -0.00902
+    },
+    {
+      "headline": "sound shore fund sees qualcomm nasdaq qcom as undervalued play on the massive ai opportunity",
+      "source": "foreignpolicyjournal.com",
+      "category": "competitors",
+      "weight": 0.0054,
+      "impact": -0.01344
+    },
+    {
+      "headline": "jim cramer points to government stake for intel intc drop 1822849",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.0054,
+      "impact": -0.01586
+    },
+    {
+      "headline": "wall streets ai trade just flipped software stocks climb chips fall 3806771",
+      "source": "ibtimes.com",
+      "category": "competitors",
+      "weight": 0.0054,
+      "impact": -0.01101
+    },
+    {
+      "headline": "nvidia groq 3 lpx chip pushes samsung foundry closer to profitability",
+      "source": "californiatelegraph.com",
+      "category": "competitors",
+      "weight": 0.0054,
+      "impact": -0.01472
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "European shares fall as Nvidia boost fails to offset sectoral weakness",
+      "source": "finviz",
+      "score": -0.963,
+      "url": "https://finance.yahoo.com/markets/world-indices/articles/european-shares-fall-nvidia-boost-090107802.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Britain's FTSE 100 slips as Nvidia optimism fails to lift market - Reuters",
+      "source": "google_news",
+      "score": -0.958,
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWFJ0THQ0Y01NSzdrSWpJOENTbGtXcFNJOUY0clExZHN4c1hvckltM1lZOXhyZ1Zrd3lVTXYtZlQ1Z0hnMlFfb1hSbFF2N1pEUzctVmcycWVpMUdVbU9IYzhOT0Q3SnhDV2JfQlRrTExZM0x6Vml2cDZadnRPb1MyQUdUbXh5V21UQXhRNGJoRDlkeVFfOERVeVdWdFVRRHc0aENiRQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Wall Street stocks end tad lower after hot inflation data ahead of Nvidia earnings - Reuters",
+      "source": "google_news",
+      "score": -0.954,
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNV3N4UlJubUVvNndNbHlFSTFtWlpoek1URGE5c3J4SDJEYlZ2aWYzaUNRWDluMnRua19BSENVRWdZZEFzZEh0VWFINF9Va3RPYVEtamhja1Rud3hVUFFWQUZBS1JlWE5wMk0yZUEyQ3lpV3pETVRMMnUxLWZ4Rm92OGZmVGpjY3BVZXl1dDBrR3RtX3RWZG9DOEFEMzFlV2NRSTVKYkxQb0hCZU0?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.devdiscourse.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia net income more than doubles to $59.7bn as revenue climbs 106%",
+      "source": "finviz",
+      "score": 0.953,
+      "url": "https://finance.yahoo.com/m/bf990ff4-5fb1-3711-bc52-dab18e973b5d/nvidia-net-income-more-than.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia bets on another blockbuster year, guiding for 70% growth into 2028",
+      "source": "finviz",
+      "score": 0.948,
+      "url": "https://finance.yahoo.com/m/de28f253-1436-3d9a-97e5-a6f8dd972e82/nvidia-bets-on-another.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Earnings Send Chip Stocks Higher, But Reported New Trump Tariff Plans Could Broaden The Trade Fight",
+      "source": "finviz",
+      "score": 0.933,
+      "url": "https://finance.yahoo.com/m/86a9e55f-f4e3-3377-8732-4604cc6c676b/nvidia-earnings-send-chip.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
