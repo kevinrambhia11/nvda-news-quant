@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-08-27",
-  "generated_at": "2026-08-27T17:06:11",
+  "generated_at": "2026-08-28T15:59:02",
   "articles": [
+    {
+      "headline": "jim cramer points to government stake for intel intc drop 1822849",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.0068,
+      "impact": -0.01567
+    },
     {
       "headline": "goldman sees china chip gap narrowing 34 2035 lithography still binding limit.htm",
       "source": "techtimes.com",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.00902
+      "weight": 0.0068,
+      "impact": -0.00887
     },
     {
       "headline": "sound shore fund sees qualcomm nasdaq qcom as undervalued play on the massive ai opportunity",
       "source": "foreignpolicyjournal.com",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.01344
-    },
-    {
-      "headline": "jim cramer points to government stake for intel intc drop 1822849",
-      "source": "insidermonkey.com",
-      "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.01586
-    },
-    {
-      "headline": "wall streets ai trade just flipped software stocks climb chips fall 3806771",
-      "source": "ibtimes.com",
-      "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.01101
-    },
-    {
-      "headline": "nvidia groq 3 lpx chip pushes samsung foundry closer to profitability",
-      "source": "californiatelegraph.com",
-      "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.01472
+      "weight": 0.0067,
+      "impact": -0.01251
     },
     {
       "headline": "nvidias groq 3 lpx chip pushes samsung foundry closer to profitability20260826171353",
       "source": "aninews.in",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.01272
+      "weight": 0.0067,
+      "impact": -0.01223
+    },
+    {
+      "headline": "nvidia q2 earnings preview ai demand financing memory chip stocks 2026 8",
+      "source": "businessinsider.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.01233
+    },
+    {
+      "headline": "wall streets ai trade just flipped software stocks climb chips fall 3806771",
+      "source": "ibtimes.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.01145
+    },
+    {
+      "headline": "nvidia groq 3 lpx chip pushes samsung foundry closer to profitability",
+      "source": "californiatelegraph.com",
+      "category": "competitors",
+      "weight": 0.0067,
+      "impact": -0.01427
+    },
+    {
+      "headline": "2710 shares in broadcom inc avgo acquired by prospect financial services llc.html",
+      "source": "themarketsdaily.com",
+      "category": "competitors",
+      "weight": 0.0066,
+      "impact": -0.00824
+    },
+    {
+      "headline": "tsmcs july surge raises bar 190325583.html",
+      "source": "yahoo.com",
+      "category": "competitors",
+      "weight": 0.0066,
+      "impact": -0.00878
     },
     {
       "headline": "osmosis investment management uk ltd makes new 649000 investment in qualcomm incorporated qcom.html",
       "source": "tickerreport.com",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.0098
-    },
-    {
-      "headline": "wall street analyst upgrade amd stock bull",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.01143
-    },
-    {
-      "headline": "its fast qualcomms new oryon cpu hits 5ghz",
-      "source": "droid-life.com",
-      "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.00894
-    },
-    {
-      "headline": "sony group sony and taiwan semiconductor tsm are betting 4 7 billion on the eyes of ai machines 1821583",
-      "source": "insidermonkey.com",
-      "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.00591
+      "weight": 0.0066,
+      "impact": -0.00852
     }
   ]
 }
