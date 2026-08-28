@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-27",
-  "generated_at": "2026-08-28T15:59:02",
+  "entry_day": "2026-08-28",
+  "generated_at": "2026-08-28T17:03:52",
   "articles": [
     {
-      "headline": "jim cramer points to government stake for intel intc drop 1822849",
-      "source": "insidermonkey.com",
+      "headline": "202531031 tsmc s hbm packaging yield issues help intel analysts say",
+      "source": "design-reuse.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.01567
+      "weight": 0.0074,
+      "impact": -0.01468
     },
     {
-      "headline": "goldman sees china chip gap narrowing 34 2035 lithography still binding limit.htm",
-      "source": "techtimes.com",
+      "headline": "ai industry says trump plans to tax chips in the single dumbest way imaginable",
+      "source": "arstechnica.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.00887
+      "weight": 0.0074,
+      "impact": -0.00846
     },
     {
-      "headline": "sound shore fund sees qualcomm nasdaq qcom as undervalued play on the massive ai opportunity",
-      "source": "foreignpolicyjournal.com",
+      "headline": "forget smh and its 87 year three semiconductor funds did much better",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01251
+      "weight": 0.0074,
+      "impact": -0.01592
     },
     {
-      "headline": "nvidias groq 3 lpx chip pushes samsung foundry closer to profitability20260826171353",
-      "source": "aninews.in",
+      "headline": "mexico arizona semiconductor agreement ebrard 2026",
+      "source": "riotimesonline.com",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01223
+      "weight": 0.0073,
+      "impact": -0.00874
     },
     {
-      "headline": "nvidia q2 earnings preview ai demand financing memory chip stocks 2026 8",
-      "source": "businessinsider.com",
+      "headline": "nvidias quarter was bigger than tsmcs entire year",
+      "source": "it-online.co.za",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01233
+      "weight": 0.0073,
+      "impact": -0.00806
     },
     {
-      "headline": "wall streets ai trade just flipped software stocks climb chips fall 3806771",
-      "source": "ibtimes.com",
+      "headline": "ai boom lifts chip stocks as big tech slumps",
+      "source": "nbcpalmsprings.com",
       "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01145
-    },
-    {
-      "headline": "nvidia groq 3 lpx chip pushes samsung foundry closer to profitability",
-      "source": "californiatelegraph.com",
-      "category": "competitors",
-      "weight": 0.0067,
-      "impact": -0.01427
-    },
-    {
-      "headline": "2710 shares in broadcom inc avgo acquired by prospect financial services llc.html",
-      "source": "themarketsdaily.com",
-      "category": "competitors",
-      "weight": 0.0066,
+      "weight": 0.0073,
       "impact": -0.00824
     },
     {
-      "headline": "tsmcs july surge raises bar 190325583.html",
-      "source": "yahoo.com",
+      "headline": "5 reasons buy broadcom stock 174300000.html",
+      "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0066,
-      "impact": -0.00878
+      "weight": 0.0072,
+      "impact": -0.01282
     },
     {
-      "headline": "osmosis investment management uk ltd makes new 649000 investment in qualcomm incorporated qcom.html",
+      "headline": "forget smh 87 three semiconductor 211541000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.01056
+    },
+    {
+      "headline": "mitsubishi ufj asset management co ltd invests 4 46 billion in broadcom inc avgo.html",
       "source": "tickerreport.com",
       "category": "competitors",
-      "weight": 0.0066,
-      "impact": -0.00852
+      "weight": 0.0072,
+      "impact": -0.00793
+    },
+    {
+      "headline": "history says happen broadcom stock 113000000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.01072
     }
   ]
 }

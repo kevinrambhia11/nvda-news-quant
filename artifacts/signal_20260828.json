@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-08-28T17:07:33",
+  "ticker": "NVDA",
+  "entry_day": "2026-08-28",
+  "last_close": 227.98,
+  "model_trained_through": "2026-08-26",
+  "gap_context": {
+    "prev_close": 227.98,
+    "latest": 227.21,
+    "gap_pct": -0.0034,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.536,
+  "prob_big_move": 0.4964,
+  "big_move_threshold": 0.0129,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0574,
+  "headline_count": 181,
+  "article_count": 219,
+  "fulltext": {
+    "stories": 181,
+    "read_full": 93,
+    "read_partial": 27,
+    "headline_only": 61,
+    "alt_searches": 12,
+    "elapsed_s": 120.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 9,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.5338,
+  "brain_top_news": [
+    {
+      "headline": "202531031 tsmc s hbm packaging yield issues help intel analysts say",
+      "source": "design-reuse.com",
+      "category": "competitors",
+      "weight": 0.0074,
+      "impact": -0.01468
+    },
+    {
+      "headline": "ai industry says trump plans to tax chips in the single dumbest way imaginable",
+      "source": "arstechnica.com",
+      "category": "competitors",
+      "weight": 0.0074,
+      "impact": -0.00846
+    },
+    {
+      "headline": "forget smh and its 87 year three semiconductor funds did much better",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0074,
+      "impact": -0.01592
+    },
+    {
+      "headline": "mexico arizona semiconductor agreement ebrard 2026",
+      "source": "riotimesonline.com",
+      "category": "competitors",
+      "weight": 0.0073,
+      "impact": -0.00874
+    },
+    {
+      "headline": "nvidias quarter was bigger than tsmcs entire year",
+      "source": "it-online.co.za",
+      "category": "competitors",
+      "weight": 0.0073,
+      "impact": -0.00806
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia earnings preview: Jensen Huang under pressure after stock's 7-day losing streak - Axios",
+      "source": "google_news",
+      "score": -0.956,
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBlWm81VklmRHd6Ry11TGYyN0NQQ3ZhVGtheE1mZzM2RDRYd3R1eHozREJiNDZRMTFlRm8zcldUQ1dMeVhkZHQ3bXdHMEl2VE8zamxhMHlicTRqRURNaEs5UVZveFg5T0JETUhfenowRjhyaU45cjZpZjFFRE0?oc=5",
+      "n_sources": 2,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Here\u2019s Why Nvidia Stock Is Down Today\u2014Again - Forbes",
+      "source": "google_news",
+      "score": -0.923,
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWGFuejdLcFlEYk1wTVhLZGZQTHNIT3NSRGJoOWY1NWZOU2VWU1FNQl9BeUdNdjY4RWhqRE9WYXFpYmRQcTBjTHFZRXVUa290OVVTdHlidVMwUVlqNWRzOTkzbTVwTnU1dHc4RERWYUJhOTZkQ1NVS0dQWXd1dFRmZTNrSG5UdGdtZWtZcE5SV1FmellEVkpqTUdreWFvNk85WWVPeHFoUkRieWFpYlhJZlVpTnMtcVhDT0ZSN1VOT1NUeV82djZuUkp5czc1c3c?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Huawei's Ascend 910C sold out in China, but Nvidia's H200 supply gap persists",
+      "source": "finviz",
+      "score": -0.864,
+      "url": "https://www.digitimes.com/news/a20260828PD207/huawei-ascend-nvidia-chips-china-2026.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia achieves its largest one-day market cap gain on record",
+      "source": "finviz",
+      "score": 0.946,
+      "url": "https://www.marketwatch.com/livecoverage/nvidia-earnings-stock-results-guidance-nvda-q2/card/nvidia-achieves-its-largest-one-day-market-cap-gain-on-record-G6SPrbDpQLEdBmfnfnrS?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Stock Market News, Aug. 27, 2026: Nvidia\u2019s Bullish Forecast Lifts Investors\u2019 Spirits - WSJ",
+      "source": "google_news",
+      "score": 0.939,
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOdm9wcnRGcW1mTkt4M3VVRER6UXI2VUc4Mi1CbnV0X3pkdWw1UUVDdzd2UkFwV1o4UFNmUDEwVDZaeTV6RXBBeEZMV2tXX2xQZC1vRGktcl94c1pOZ1EzNk5zWmtFaGhSNUs3Y3lVcnhZdUEyVjVBR2JCT1B2MDhvNF9YM0lOWVU?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "eurasiabusinessnews.com"
+    },
+    {
+      "title": "Nvidia Earnings: Raising Fair Value as AI Buildouts are Accelerating - Morningstar",
+      "source": "google_news",
+      "score": 0.908,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdXVZVjlpUUtad1FDaHBMbndHZmp2RW1RX2xvUFFnazA1MmgzT0daSHoxV2xyN19Na3ZvX25zTU9qYW9SR3VxN3dYZUlCN0hKYlpSU0MydkNLazRhVThOekI4aE1sbDdLb2xOZkdFckEwODloRXd6VmF6amwya19XZjlucmV2Q1FpUVVQT1E4d3lvWmJSOEUxaUpRX3VFVFNo?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.morningstar.com"
+    }
+  ]
+}
