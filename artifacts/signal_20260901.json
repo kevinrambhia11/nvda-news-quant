@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-09-01T17:08:33",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-01",
+  "last_close": 220.78,
+  "model_trained_through": "2026-08-26",
+  "gap_context": {
+    "prev_close": 220.78,
+    "latest": 218.0,
+    "gap_pct": -0.0126,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.536,
+  "prob_big_move": 0.4871,
+  "big_move_threshold": 0.0135,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0518,
+  "headline_count": 154,
+  "article_count": 196,
+  "fulltext": {
+    "stories": 154,
+    "read_full": 93,
+    "read_partial": 22,
+    "headline_only": 39,
+    "alt_searches": 12,
+    "elapsed_s": 142.1
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 3,
+  "stocktwits_bears": 5,
+  "advisory_composite": 0.533,
+  "brain_top_news": [
+    {
+      "headline": "us taiwan ties never been stronger as chip investments reshape american industry",
+      "source": "slguardian.org",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.0135
+    },
+    {
+      "headline": "broadcom introduces truesource for open source software security",
+      "source": "sdtimes.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.00363
+    },
+    {
+      "headline": "broadcom reports earnings this week mike khouw says this trade could be a winner.html",
+      "source": "cnbc.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.01487
+    },
+    {
+      "headline": "nvidia invest us3 5 billion chipmaker mediatek",
+      "source": "businesstimes.com.sg",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.01701
+    },
+    {
+      "headline": "nvidia to invest 3 5 billion in chipmaker mediatek 14019154.html",
+      "source": "moneycontrol.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.01638
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia Shares Drop 4.6%, Wiping Out $251 Billion After Margin Outlook Cools Earnings Surge - TechStock\u00b2",
+      "source": "TechStock\u00b2",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdnhET2lGVkFTUjd2SWdtVktzb3ZJd01Tb3BqX081UVhYRnVmVmgzSlh5ZExKTVpsaU9BOEZodzN3Rmk3V1plYVRTTmtWbmRHMVdFby1KVExjbWV3dlJhTlY5aUFQVlFGUnFVUnVKbC1SSTdISEJ3T2plU2U3MmEyR1NQRmdrTGpsZGRmOWRrWmZ6cTZPclZHUnVtY0s4dGF6WlVN?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "ts2.tech"
+    },
+    {
+      "title": "Nasdaq, Dow, S&P 500 Futures Begin September On Weak Footing: Why NVDA, AAPL, TSLA, PANW, DELL, SLS, HUT Are In Focus",
+      "source": "finviz",
+      "score": -0.962,
+      "url": "https://finance.yahoo.com/m/3a3c08a4-1998-3d2d-9c67-6a77c1475750/nasdaq%2C-dow%2C-s%26p-500-futures.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "S&P500, Dow End Lower On US-Iran Flare-Up, While Dow Records Fifth Straight Month Of Gains  NVDA, META, AON, MSTR, TSLA In Focus",
+      "source": "finviz",
+      "score": -0.954,
+      "url": "https://finance.yahoo.com/m/50e225ee-71d4-3603-b00e-b061ebe894b5/s%26p500%2C-dow-end-lower-on.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Stock Up 1.5% as $20 Billion Buyback Represents 0.4% of Market Cap - TechStock\u00b2",
+      "source": "google_news",
+      "score": 0.897,
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaXBvOWVlVFk5cXJMVzJMSzdGRnRVNmtaOXd1UThUbGRTT1FyNmE1NDF0a1ljZGZKN0ZjeTBzalZKVU5wNEk5Ylk0X1JwTjRGLURFMDJVbHdaLWpwN1ptZlFrZFVKNmRoZmZSbFlZSTA0dG03SW9Iak85UzZBVnZhUUt5TkpnbnhfRzRmZmZ2VzllczA?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "ts2.tech"
+    },
+    {
+      "title": "Qualcomm rival MediaTek jumps 10% after $3.5 billion Nvidia AI chip deal - CNBC",
+      "source": "CNBC",
+      "score": 0.882,
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE05RTBTampvUXh0LUFDY0FCb09GSlFTTXNtUkVtYUl4bGFsdkVVRHF6a1dwYjUzZUFFYVV0Vl9aQ1BwcFFMQ29Yemdjd0tiVGFTWHRVT2E5aDZTN3ppOTlOWkxPWGFNNFhuYk1zakFkRlhIUdIBd0FVX3lxTE1aeWtQaTBtd3NfV1BWT1NWcjhIdmo5WndPTmNQNG5OVkZRVTRrVzBLbTEtRDlKTHluejh1bVNYMHNKWHBzNjFuY2JrVUc0a3V1X1ZlSnEtTnRxbnE3UUp2YTc5dEI0T2xvaTNRNTJCLXVad3hVSGYw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Nvidia to invest $3.5 billion in chipmaker MediaTek, expand partnership - Reuters",
+      "source": "Reuters",
+      "score": 0.881,
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNGg1el9MUWRYTnBSbW42NnllVGxRSmwxLUloa1ppa01jamtTRXhiMEo0cUd0dk5iMDVPZEpMdDFBbGMtd2FzSVJFRjRIM3BSVVU1RFhEaTB1TDhHQzVNb2VnLTZWXzhQMmthTG5VRzk1STBaRVlsNENZOHNnWTJ4TURjR2hPUDNlS1VtSDd4NlB0UUxBLXprTnRJM25XOXNLVWt4amprQ3YyeWM?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "Intellectia AI"
+      ],
+      "read_status": "full",
+      "read_from": "intellectia.ai"
+    }
+  ]
+}

@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-08-28",
-  "generated_at": "2026-08-31T17:05:59",
+  "entry_day": "2026-09-01",
+  "generated_at": "2026-09-01T17:04:23",
   "articles": [
     {
-      "headline": "202531031 tsmc s hbm packaging yield issues help intel analysts say",
-      "source": "design-reuse.com",
+      "headline": "us taiwan ties never been stronger as chip investments reshape american industry",
+      "source": "slguardian.org",
       "category": "competitors",
-      "weight": 0.0074,
-      "impact": -0.01468
+      "weight": 0.0072,
+      "impact": -0.0135
     },
     {
-      "headline": "ai industry says trump plans to tax chips in the single dumbest way imaginable",
-      "source": "arstechnica.com",
+      "headline": "broadcom introduces truesource for open source software security",
+      "source": "sdtimes.com",
       "category": "competitors",
-      "weight": 0.0074,
-      "impact": -0.00846
+      "weight": 0.0072,
+      "impact": -0.00363
     },
     {
-      "headline": "forget smh and its 87 year three semiconductor funds did much better",
-      "source": "247wallst.com",
+      "headline": "broadcom reports earnings this week mike khouw says this trade could be a winner.html",
+      "source": "cnbc.com",
       "category": "competitors",
-      "weight": 0.0074,
-      "impact": -0.01592
+      "weight": 0.0072,
+      "impact": -0.01487
     },
     {
-      "headline": "mexico arizona semiconductor agreement ebrard 2026",
-      "source": "riotimesonline.com",
+      "headline": "nvidia invest us3 5 billion chipmaker mediatek",
+      "source": "businesstimes.com.sg",
       "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.00874
+      "weight": 0.0072,
+      "impact": -0.01701
     },
     {
-      "headline": "nvidias quarter was bigger than tsmcs entire year",
-      "source": "it-online.co.za",
+      "headline": "nvidia to invest 3 5 billion in chipmaker mediatek 14019154.html",
+      "source": "moneycontrol.com",
       "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.00806
+      "weight": 0.0072,
+      "impact": -0.01638
     },
     {
-      "headline": "ai boom lifts chip stocks as big tech slumps",
-      "source": "nbcpalmsprings.com",
-      "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.00824
-    },
-    {
-      "headline": "5 reasons buy broadcom stock 174300000.html",
+      "headline": "broadcom trailed p 500 shouldnt 190500000.html",
       "source": "aol.com",
       "category": "competitors",
       "weight": 0.0072,
-      "impact": -0.01282
+      "impact": -0.01112
     },
     {
-      "headline": "forget smh 87 three semiconductor 211541000.html",
-      "source": "aol.com",
+      "headline": "jobs report broadcom results pose next hurdles for stock market rally",
+      "source": "newstribune.com",
       "category": "competitors",
       "weight": 0.0072,
-      "impact": -0.01056
+      "impact": -0.00903
     },
     {
-      "headline": "mitsubishi ufj asset management co ltd invests 4 46 billion in broadcom inc avgo.html",
-      "source": "tickerreport.com",
+      "headline": "taiwan stock exchange tsmc ipos sherman lin",
+      "source": "fortune.com",
       "category": "competitors",
       "weight": 0.0072,
-      "impact": -0.00793
+      "impact": -0.01055
     },
     {
-      "headline": "history says happen broadcom stock 113000000.html",
-      "source": "aol.com",
+      "headline": "semicon taiwan 2026 kicks off ai chips bottleneck wires connecting them.htm",
+      "source": "techtimes.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.01072
+      "weight": 0.0071,
+      "impact": -0.00246
+    },
+    {
+      "headline": "2nm apple capacity expansion mediatek semiconductor industry.html",
+      "source": "digitimes.com",
+      "category": "competitors",
+      "weight": 0.0071,
+      "impact": -0.01191
     }
   ]
 }
