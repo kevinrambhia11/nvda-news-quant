@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-01",
-  "generated_at": "2026-09-01T17:04:23",
+  "entry_day": "2026-09-02",
+  "generated_at": "2026-09-02T17:04:15",
   "articles": [
     {
-      "headline": "us taiwan ties never been stronger as chip investments reshape american industry",
-      "source": "slguardian.org",
+      "headline": "broadcom has floundered for several months a respected wall street team expects 80 returns ahead",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.0135
+      "weight": 0.0076,
+      "impact": -0.01797
     },
     {
-      "headline": "broadcom introduces truesource for open source software security",
-      "source": "sdtimes.com",
+      "headline": "semiconductor stocks slide as global bond selloff lifts yields intel drops 3 nvidia and amd slip",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.00363
+      "weight": 0.0074,
+      "impact": -0.01436
     },
     {
-      "headline": "broadcom reports earnings this week mike khouw says this trade could be a winner.html",
-      "source": "cnbc.com",
-      "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.01487
-    },
-    {
-      "headline": "nvidia invest us3 5 billion chipmaker mediatek",
-      "source": "businesstimes.com.sg",
-      "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.01701
-    },
-    {
-      "headline": "nvidia to invest 3 5 billion in chipmaker mediatek 14019154.html",
-      "source": "moneycontrol.com",
-      "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.01638
-    },
-    {
-      "headline": "broadcom trailed p 500 shouldnt 190500000.html",
+      "headline": "semiconductor stocks slide global bond 131516000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.01112
+      "weight": 0.0074,
+      "impact": -0.00986
     },
     {
-      "headline": "jobs report broadcom results pose next hurdles for stock market rally",
-      "source": "newstribune.com",
+      "headline": "broadcom launches truesource for secure open source",
+      "source": "itbrief.co.nz",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.00903
+      "weight": 0.0074,
+      "impact": -0.00732
     },
     {
-      "headline": "taiwan stock exchange tsmc ipos sherman lin",
-      "source": "fortune.com",
+      "headline": "qualcomm islemcilere yeni zam telefon fiyatlari artacak mi  209967",
+      "source": "donanimhaber.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.01055
+      "weight": 0.0074,
+      "impact": -0.00932
     },
     {
-      "headline": "semicon taiwan 2026 kicks off ai chips bottleneck wires connecting them.htm",
-      "source": "techtimes.com",
+      "headline": "kolejny dzien podwyzek qualcomm rewiduje cennik na kluczowe podzespoly.html",
+      "source": "computerworld.pl",
       "category": "competitors",
-      "weight": 0.0071,
-      "impact": -0.00246
+      "weight": 0.0074,
+      "impact": -0.01061
     },
     {
-      "headline": "2nm apple capacity expansion mediatek semiconductor industry.html",
-      "source": "digitimes.com",
+      "headline": "stockstory 2026 9 1 broadcom avgo reports earnings tomorrow what to expect",
+      "source": "financialcontent.com",
       "category": "competitors",
-      "weight": 0.0071,
-      "impact": -0.01191
+      "weight": 0.0073,
+      "impact": -0.00982
+    },
+    {
+      "headline": "custom silicon kings choose broadcom 114123000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0073,
+      "impact": -0.01033
+    },
+    {
+      "headline": "broadcom floundered several months respected 125358577.html",
+      "source": "yahoo.com",
+      "category": "competitors",
+      "weight": 0.0073,
+      "impact": -0.01433
+    },
+    {
+      "headline": "qualcomm cip fiyatlari cift haneli zam 2026",
+      "source": "teknoblog.com",
+      "category": "competitors",
+      "weight": 0.0073,
+      "impact": -0.00833
     }
   ]
 }

@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-09-02T17:08:10",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-02",
+  "last_close": 217.44,
+  "model_trained_through": "2026-08-26",
+  "gap_context": {
+    "prev_close": 217.44,
+    "latest": 217.08,
+    "gap_pct": -0.0017,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.536,
+  "prob_big_move": 0.5214,
+  "big_move_threshold": 0.0129,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0204,
+  "headline_count": 178,
+  "article_count": 215,
+  "fulltext": {
+    "stories": 178,
+    "read_full": 114,
+    "read_partial": 29,
+    "headline_only": 35,
+    "alt_searches": 12,
+    "elapsed_s": 125.8
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 12,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5283,
+  "brain_top_news": [
+    {
+      "headline": "broadcom has floundered for several months a respected wall street team expects 80 returns ahead",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0076,
+      "impact": -0.01797
+    },
+    {
+      "headline": "semiconductor stocks slide as global bond selloff lifts yields intel drops 3 nvidia and amd slip",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0074,
+      "impact": -0.01436
+    },
+    {
+      "headline": "semiconductor stocks slide global bond 131516000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0074,
+      "impact": -0.00986
+    },
+    {
+      "headline": "broadcom launches truesource for secure open source",
+      "source": "itbrief.co.nz",
+      "category": "competitors",
+      "weight": 0.0074,
+      "impact": -0.00732
+    },
+    {
+      "headline": "qualcomm islemcilere yeni zam telefon fiyatlari artacak mi  209967",
+      "source": "donanimhaber.com",
+      "category": "competitors",
+      "weight": 0.0074,
+      "impact": -0.00932
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "NVIDIA stock price down 1.51% on Tuesday - StockInvest.us",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPT0JnZmZqb3EwY1pfTW95RjI5ZnlreDlkV0RIdERtZ242OTdCTy0yN1g3UDlWcy1fTHF4bU9xRWpGNnZITmhWaDdFQ1lKb0cwa1U3d1VyZURUbWtDV0JmYmwzS1FkeUc2Y0VESW5VMzBHaklCbzFpUmk5UExmaVpwMmluT3dpYmJpaEtZ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "stockinvest.us"
+    },
+    {
+      "title": "Semiconductor Stocks Slide as Global Bond Selloff Lifts Yields: Intel Drops 3%, NVIDIA and AMD Slip - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcUxpU3pxOFdrUHZmYjhubFVGU3RYLTRTelN3MV9VWWcxRXNCajBYazEzc2Noenlnbk1aWVZ6VXlIRVFlYll1X3A4MEtsdEZQRVQteGpycjl0cGNLOVhqVmdla09QN0dkdXpYanFzVGNjRTRMNDBVNVdQa2ZDQWpHb01SRGV2TklvSTcxdnhyeGdkTTZHTDVQZFU5LVlYREQ0dzZZSWl3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "NVIDIA Tokenized Stock Dips As S&P 500 Declines - MarketForces Africa",
+      "source": "google_news",
+      "score": -0.964,
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5NNUtocVhXRnR1NnBxU1J0MjNnbWhjT2NnSWxPTkctZVlFd3I1NGxvMVQ4Ylc4TjdQLTBOeW9Wd3M3ZUZkbFBHRDBrcUZOVVYzaS1uMVZKM3Q5QnJNV0FwV2VDTDJIeGM4S0JpWk1nY0JpTWxVLU5nNXpTcTNNUQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "dmarketforces.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Stock Market News, Aug. 27, 2026: Nvidia\u2019s Bullish Forecast Lifts Investors\u2019 Spirits - WSJ",
+      "source": "google_news",
+      "score": 0.939,
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOdm9wcnRGcW1mTkt4M3VVRER6UXI2VUc4Mi1CbnV0X3pkdWw1UUVDdzd2UkFwV1o4UFNmUDEwVDZaeTV6RXBBeEZMV2tXX2xQZC1vRGktcl94c1pOZ1EzNk5zWmtFaGhSNUs3Y3lVcnhZdUEyVjVBR2JCT1B2MDhvNF9YM0lOWVU?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "eurasiabusinessnews.com"
+    },
+    {
+      "title": "Nvidia just made a $3.5 billion move that could expand its AI empire - MarketWatch",
+      "source": "MarketWatch",
+      "score": 0.892,
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUkhSa3RCbUhlUVhHNjhvZGxfTFdvTzRhYU1YbjFVbUdiYVh4MGdNSEJDb1BaamJfMlM1eU1oOFI2ZTZqM0RLNVZEZHJVNkFkYThleWw3RXBkejZkM01Ca3FmR1FYSWM0MVpLN05qVmJrNnVUOFEwR21xZFI3SkhrM1U4OEZ5djFBTXh0MDRZSW9QOTVhZ3dfNUIwQzVRZ19nWDJvSDBfc0ZnWm1MVkJV?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "MediaTek Partners with Nvidia to Expand Data Center Market - intellectia.ai",
+      "source": "intellectia.ai",
+      "score": 0.892,
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNNnVlZnNRS2RYeGloNzFEZXhOR2VZVGdlM3BlLXU2RmpPa3NXeTFpWVN1WWQ2dFpfaWI1NnZpeTF2b29uM0xLaHJYa1UwcUJhX2IwVV9KVi1zYUdYTGFEYTdZbWZEeEdqa1dyYzFabnRRbGpndU12OWRDUURtS2JPdVkyYlFmM1pkXzhzZDh3clJjYnJRRlJB?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "intellectia.ai"
+    }
+  ]
+}
