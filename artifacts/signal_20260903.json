@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-09-03T17:09:52",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-03",
+  "last_close": 224.41,
+  "model_trained_through": "2026-08-26",
+  "gap_context": {
+    "prev_close": 224.41,
+    "latest": 224.17,
+    "gap_pct": -0.0011,
+    "session": "pre-market",
+    "as_of_et": "07:39 ET"
+  },
+  "model_prob_up": 0.536,
+  "prob_big_move": 0.4964,
+  "big_move_threshold": 0.0124,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.1398,
+  "headline_count": 167,
+  "article_count": 197,
+  "fulltext": {
+    "stories": 167,
+    "read_full": 99,
+    "read_partial": 28,
+    "headline_only": 40,
+    "alt_searches": 12,
+    "elapsed_s": 122.1
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 5,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5462,
+  "brain_top_news": [
+    {
+      "headline": "live will broadcom crush q3 earnings tonight after the market closes",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0065,
+      "impact": -0.0158
+    },
+    {
+      "headline": "italys largest parliamentary delegation visits taiwan amid eu semiconductor talks 6082562",
+      "source": "theepochtimes.com",
+      "category": "competitors",
+      "weight": 0.0065,
+      "impact": -0.01515
+    },
+    {
+      "headline": "live oak private wealth llc decreases stake in qualcomm incorporated qcom.html",
+      "source": "themarketsdaily.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01313
+    },
+    {
+      "headline": "broadcom stock avgo fiscal q3 2026 earnings",
+      "source": "investors.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01423
+    },
+    {
+      "headline": "broadcom stock sinks chipmaker results 205929000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01136
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Micron Stock Is Down 23% From Its Highs. Did Nvidia's CFO Just Give It the Green Light for a Turnaround? - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.963,
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTDRDRXQ5UHU0OEtnand4VU5Haldnbk1Qb21QdkVVc1N0V1dfYS12SE1zalY3U09wSVp3SFBVd2R5ZTBNRzMyVHR1ODIwRVhYd3JacjItRlNDT0h1R2daemFGbEktRTBJX0VGbWQ0Wk5JeFpycTRkQWo0OWl1aGIxZkZBekd6OGtDTk5CbXgxOFFUcUFlM3c?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Slips As AI Circular Financing Fears Rise Amid $3.5 Billion Deal; Is Nvidia A Buy Now? - Investor's Business Daily",
+      "source": "google_news",
+      "score": -0.946,
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQanE4V1lHUmtESWZrY2pRdFF4RFdCYlo4ZWNVTjhaZW5TWXhhQkRNYUJicnhZYkdwNzJ1LWtNanVJQkVEc0l3NzlKVjBFY0JTejJScTVtSDZqbzFxcmxkbUFJR2V2T3BpZnlmbk5tN3k1c2xKLUk4cGJUVEdrU0J2dg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia Jumps On AI Bid, Software Stocks Dip: Stock Market Today - Benzinga",
+      "source": "google_news",
+      "score": -0.687,
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMVBCUkVFSUxTSlV1QmhZR3AtR1QxZFltVmpMVE94bWF4T2l6ZHNBSExqcnFOZ1hHcnQ3TVlxRHZZM1JhZ2czNlh0a3FOb1pDbW03TUEwYmVIdEJ3N1JpMkk3SXF3ZFpLM2hQN1VhOHdZTi1XaFBJS1hVUXNRNnBHSFJhQ0RKRkQyZmtQX2Y5V3FoQU9HSDJldVhBZVRxemZURzhLMHJDTm5sczRkMXNlUWo2TDROMVRUeUJ3akRxOXF1b2wxRncwTXBTQUtyUldKWFNJNmdyX0Z5V2RL?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.benzinga.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia\u2019s stock is climbing as investors get more confidence in an expanding base of AI customers - MarketWatch",
+      "source": "MarketWatch",
+      "score": 0.948,
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNOGlyenN4Rm5hbWtkaHk0MXJod3hTc09nazZQa1pGVXJDeXFhS1duX2VLYmQ0WmZGRDNLTzBLN2gxSVBTaFRvS25PN3cyN1lqeS1Ca1hmamtrcnhwbVhCMmpIc0NBM25XT3lOVENDdHJCVk41MG80eXBfX2dOai11WGRlM2plUXowcVVTRVQwNUhvNFpOZGZ0djJsVFRVTUhPWEJ5NGQwYUhlcEZmODFvMTlzMWxpNFFnVTVrLTRZd1ptSWNnUWdrN0lhVVN0RVlvWEFyUA?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia Leads Chip Stocks Higher Amid Renewed Confidence In AI Spending - Investor's Business Daily",
+      "source": "google_news",
+      "score": 0.939,
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQeXdEWkFIalBmUF9HbFdhN0pwMlNIdU9FNDRoT2lZU01mYUtaV2FDVVhSOW5yVTByUXJKVzQ3cl9BNGgzaTFQRFZXYl91MVRkdW5ZcC1kRkt0SU1hczUza0xvZkhWSVZVSGFZSUlFLTBqMHljMGxMUlN5aGN0WE0wcFdpR0ZJM3RtR09F?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Equinix Shares Rise 2% After Launch of AI Inference Program With Nvidia and Together AI",
+      "source": "finviz",
+      "score": 0.921,
+      "url": "https://finance.yahoo.com/m/0993f762-6a0f-3f75-8241-bcc540a2c553/equinix-shares-rise-2%25-after.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

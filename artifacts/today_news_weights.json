@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-02",
-  "generated_at": "2026-09-02T17:04:15",
+  "entry_day": "2026-09-03",
+  "generated_at": "2026-09-03T17:05:20",
   "articles": [
     {
-      "headline": "broadcom has floundered for several months a respected wall street team expects 80 returns ahead",
+      "headline": "live will broadcom crush q3 earnings tonight after the market closes",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0076,
-      "impact": -0.01797
+      "weight": 0.0065,
+      "impact": -0.0158
     },
     {
-      "headline": "semiconductor stocks slide as global bond selloff lifts yields intel drops 3 nvidia and amd slip",
+      "headline": "italys largest parliamentary delegation visits taiwan amid eu semiconductor talks 6082562",
+      "source": "theepochtimes.com",
+      "category": "competitors",
+      "weight": 0.0065,
+      "impact": -0.01515
+    },
+    {
+      "headline": "live oak private wealth llc decreases stake in qualcomm incorporated qcom.html",
+      "source": "themarketsdaily.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01313
+    },
+    {
+      "headline": "broadcom stock avgo fiscal q3 2026 earnings",
+      "source": "investors.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01423
+    },
+    {
+      "headline": "broadcom stock sinks chipmaker results 205929000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01136
+    },
+    {
+      "headline": "semiconductor stocks to own now",
+      "source": "livetradingnews.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01672
+    },
+    {
+      "headline": "broadcom shares flat ahead of q3 earnings heres what wall street expects from the chipmaker 11788355667154.html",
+      "source": "livemint.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01514
+    },
+    {
+      "headline": "broadcom q3 2026 earnings avgo 01m1hx207g9d64z38jwrpy5fdm",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0074,
-      "impact": -0.01436
+      "weight": 0.0064,
+      "impact": -0.01298
     },
     {
-      "headline": "semiconductor stocks slide global bond 131516000.html",
-      "source": "aol.com",
+      "headline": "nvlink fusion vs ualink why alphabet funding both sides ai chip interconnect war.htm",
+      "source": "techtimes.com",
       "category": "competitors",
-      "weight": 0.0074,
-      "impact": -0.00986
+      "weight": 0.0064,
+      "impact": -0.00176
     },
     {
-      "headline": "broadcom launches truesource for secure open source",
-      "source": "itbrief.co.nz",
+      "headline": "broadcom inc reveals rise in q3 bottom line 1036517297",
+      "source": "finanzen.ch",
       "category": "competitors",
-      "weight": 0.0074,
-      "impact": -0.00732
-    },
-    {
-      "headline": "qualcomm islemcilere yeni zam telefon fiyatlari artacak mi  209967",
-      "source": "donanimhaber.com",
-      "category": "competitors",
-      "weight": 0.0074,
-      "impact": -0.00932
-    },
-    {
-      "headline": "kolejny dzien podwyzek qualcomm rewiduje cennik na kluczowe podzespoly.html",
-      "source": "computerworld.pl",
-      "category": "competitors",
-      "weight": 0.0074,
-      "impact": -0.01061
-    },
-    {
-      "headline": "stockstory 2026 9 1 broadcom avgo reports earnings tomorrow what to expect",
-      "source": "financialcontent.com",
-      "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.00982
-    },
-    {
-      "headline": "custom silicon kings choose broadcom 114123000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.01033
-    },
-    {
-      "headline": "broadcom floundered several months respected 125358577.html",
-      "source": "yahoo.com",
-      "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.01433
-    },
-    {
-      "headline": "qualcomm cip fiyatlari cift haneli zam 2026",
-      "source": "teknoblog.com",
-      "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.00833
+      "weight": 0.0064,
+      "impact": -0.01531
     }
   ]
 }
