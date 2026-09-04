@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-09-03",
-  "generated_at": "2026-09-03T17:05:20",
+  "generated_at": "2026-09-04T15:56:07",
   "articles": [
     {
-      "headline": "live will broadcom crush q3 earnings tonight after the market closes",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.0065,
-      "impact": -0.0158
-    },
-    {
-      "headline": "italys largest parliamentary delegation visits taiwan amid eu semiconductor talks 6082562",
-      "source": "theepochtimes.com",
-      "category": "competitors",
-      "weight": 0.0065,
-      "impact": -0.01515
-    },
-    {
-      "headline": "live oak private wealth llc decreases stake in qualcomm incorporated qcom.html",
-      "source": "themarketsdaily.com",
-      "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.01313
-    },
-    {
-      "headline": "broadcom stock avgo fiscal q3 2026 earnings",
-      "source": "investors.com",
-      "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.01423
-    },
-    {
-      "headline": "broadcom stock sinks chipmaker results 205929000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.01136
-    },
-    {
-      "headline": "semiconductor stocks to own now",
-      "source": "livetradingnews.com",
-      "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.01672
-    },
-    {
-      "headline": "broadcom shares flat ahead of q3 earnings heres what wall street expects from the chipmaker 11788355667154.html",
-      "source": "livemint.com",
-      "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.01514
-    },
-    {
-      "headline": "broadcom q3 2026 earnings avgo 01m1hx207g9d64z38jwrpy5fdm",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.01298
-    },
-    {
-      "headline": "nvlink fusion vs ualink why alphabet funding both sides ai chip interconnect war.htm",
-      "source": "techtimes.com",
-      "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.00176
-    },
-    {
-      "headline": "broadcom inc reveals rise in q3 bottom line 1036517297",
-      "source": "finanzen.ch",
-      "category": "competitors",
-      "weight": 0.0064,
+      "headline": "grab this 100 google play gift card and get a 15 gift card for free",
+      "source": "androidpolice.com",
+      "category": "hyperscalers",
+      "weight": 0.0053,
       "impact": -0.01531
+    },
+    {
+      "headline": "microsoft exchange exploit requires no password 22000 servers exposed esu ends october.htm",
+      "source": "techtimes.com",
+      "category": "hyperscalers",
+      "weight": 0.0052,
+      "impact": -0.01108
+    },
+    {
+      "headline": "google advertising monopoly spared breakup",
+      "source": "mercurynews.com",
+      "category": "hyperscalers",
+      "weight": 0.0052,
+      "impact": -0.01308
+    },
+    {
+      "headline": "rusyadan google telegram ve pintereste milyonluk ceza",
+      "source": "mansethaber.com",
+      "category": "hyperscalers",
+      "weight": 0.0052,
+      "impact": -0.00843
+    },
+    {
+      "headline": "amazon werbeauktionen ftc aufschlag",
+      "source": "drweb.de",
+      "category": "hyperscalers",
+      "weight": 0.0052,
+      "impact": -0.01017
+    },
+    {
+      "headline": "whats wrong with amazon stock honest answer",
+      "source": "fool.com",
+      "category": "hyperscalers",
+      "weight": 0.0052,
+      "impact": -0.01371
+    },
+    {
+      "headline": "norden becomes first maritime carrier to deliver verified emissions reductions through the rsb book claim registry to mi",
+      "source": "hellenicshippingnews.com",
+      "category": "hyperscalers",
+      "weight": 0.0052,
+      "impact": -0.0131
+    },
+    {
+      "headline": "bay area data center boom backlash regulation",
+      "source": "siliconvalley.com",
+      "category": "hyperscalers",
+      "weight": 0.0052,
+      "impact": -0.01513
+    },
+    {
+      "headline": "aws sets 2026 opening date for saudi cloud region",
+      "source": "computerweekly.com",
+      "category": "hyperscalers",
+      "weight": 0.0052,
+      "impact": -0.00207
+    },
+    {
+      "headline": "now good time buy amazon 081500000.html",
+      "source": "aol.com",
+      "category": "hyperscalers",
+      "weight": 0.0052,
+      "impact": -0.01006
     }
   ]
 }

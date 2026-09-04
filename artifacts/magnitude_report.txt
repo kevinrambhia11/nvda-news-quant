@@ -1,15 +1,15 @@
 ========================================================================
   Magnitude head - P(|next-day move| > trailing median)
   base rate 50.2% | news2 features: 11
-  judged window 2021-12-14 -> 2023-09-01 | holdout -> 2026-08-26
+  judged window 2021-12-14 -> 2023-09-01 | holdout -> 2026-09-02
   (news candidates use NESTED scorers; judged window is clean
    hold Brier* = after isotonic recalibration fitted on the judged window)
    news2 / news2-decay rows are EXPLORATORY second-use on an already-read holdout - the live paper trail is the verdict
 ========================================================================
   candidate         sel AUC  sel Brier  hold AUC  hold Brier hold Brier*
-  price-only          0.494     0.2980     0.536      0.2778      0.2506
-  price + news2       0.466     0.3154     0.549      0.2755      0.2500
-  price + news2-decay    0.476     0.3090     0.550      0.2762      0.2529
-  price + newsnet     0.536     0.2925     0.545      0.2793      0.2495
-  price + both        0.515     0.3007     0.538      0.2823      0.2499
+  price-only          0.504     0.2951     0.531      0.2795      0.2535
+  price + news2       0.471     0.3131     0.543      0.2777      0.2502
+  price + news2-decay    0.458     0.3141     0.547      0.2768      0.2503
+  price + newsnet     0.538     0.2928     0.543      0.2800      0.2499
+  price + both        0.500     0.3067     0.545      0.2783      0.2492
 ========================================================================
