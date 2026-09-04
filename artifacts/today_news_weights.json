@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-03",
-  "generated_at": "2026-09-04T15:56:07",
+  "entry_day": "2026-09-04",
+  "generated_at": "2026-09-04T17:04:51",
   "articles": [
     {
-      "headline": "grab this 100 google play gift card and get a 15 gift card for free",
-      "source": "androidpolice.com",
+      "headline": "meta settlement a good start to protect kids from",
+      "source": "lasvegassun.com",
       "category": "hyperscalers",
-      "weight": 0.0053,
-      "impact": -0.01531
+      "weight": 0.0049,
+      "impact": -0.02302
     },
     {
-      "headline": "microsoft exchange exploit requires no password 22000 servers exposed esu ends october.htm",
-      "source": "techtimes.com",
+      "headline": "sony microsoft say they have no obligation to offer refunds for tariff based price hikes",
+      "source": "gamingbolt.com",
       "category": "hyperscalers",
-      "weight": 0.0052,
-      "impact": -0.01108
+      "weight": 0.0049,
+      "impact": -0.01864
     },
     {
-      "headline": "google advertising monopoly spared breakup",
-      "source": "mercurynews.com",
+      "headline": "make no mistake us settlement is a win for meta",
+      "source": "irishtimes.com",
       "category": "hyperscalers",
-      "weight": 0.0052,
-      "impact": -0.01308
+      "weight": 0.0049,
+      "impact": -0.01781
     },
     {
-      "headline": "rusyadan google telegram ve pintereste milyonluk ceza",
-      "source": "mansethaber.com",
+      "headline": "1414760 sony and microsoft seeking to dismiss consumer lawsuits demanding tariff refunds",
+      "source": "thenews.com.pk",
       "category": "hyperscalers",
-      "weight": 0.0052,
-      "impact": -0.00843
+      "weight": 0.0049,
+      "impact": -0.01256
     },
     {
-      "headline": "amazon werbeauktionen ftc aufschlag",
-      "source": "drweb.de",
+      "headline": "why microsoft investors should fear amazon more than google",
+      "source": "247wallst.com",
       "category": "hyperscalers",
-      "weight": 0.0052,
-      "impact": -0.01017
+      "weight": 0.0049,
+      "impact": -0.01442
     },
     {
-      "headline": "whats wrong with amazon stock honest answer",
+      "headline": "microsoft earnings changes azure revenue",
+      "source": "theverge.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.01073
+    },
+    {
+      "headline": "microsoft azure revenue business growth.html",
+      "source": "digitimes.com",
+      "category": "hyperscalers",
+      "weight": 0.0048,
+      "impact": -0.0105
+    },
+    {
+      "headline": "federal judge rules in favor of googles advertising monopoly in blow to independent media",
+      "source": "worldtribune.com",
+      "category": "hyperscalers",
+      "weight": 0.0048,
+      "impact": -0.00861
+    },
+    {
+      "headline": "amazon vs microsoft 1 key metric identifies the su",
       "source": "fool.com",
       "category": "hyperscalers",
-      "weight": 0.0052,
-      "impact": -0.01371
+      "weight": 0.0048,
+      "impact": -0.00536
     },
     {
-      "headline": "norden becomes first maritime carrier to deliver verified emissions reductions through the rsb book claim registry to mi",
-      "source": "hellenicshippingnews.com",
+      "headline": "google ad exchange no divestiture brinkema ruling eu adtech 2 95bn structural remedy dma",
+      "source": "thenextweb.com",
       "category": "hyperscalers",
-      "weight": 0.0052,
-      "impact": -0.0131
-    },
-    {
-      "headline": "bay area data center boom backlash regulation",
-      "source": "siliconvalley.com",
-      "category": "hyperscalers",
-      "weight": 0.0052,
-      "impact": -0.01513
-    },
-    {
-      "headline": "aws sets 2026 opening date for saudi cloud region",
-      "source": "computerweekly.com",
-      "category": "hyperscalers",
-      "weight": 0.0052,
-      "impact": -0.00207
-    },
-    {
-      "headline": "now good time buy amazon 081500000.html",
-      "source": "aol.com",
-      "category": "hyperscalers",
-      "weight": 0.0052,
-      "impact": -0.01006
+      "weight": 0.0048,
+      "impact": -0.00612
     }
   ]
 }

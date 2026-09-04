@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-09-04T17:08:26",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-04",
+  "last_close": 228.45,
+  "model_trained_through": "2026-09-02",
+  "gap_context": {
+    "prev_close": 228.45,
+    "latest": 231.0,
+    "gap_pct": 0.0112,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.2749,
+  "prob_big_move": 0.5185,
+  "big_move_threshold": 0.0129,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0444,
+  "headline_count": 161,
+  "article_count": 211,
+  "fulltext": {
+    "stories": 161,
+    "read_full": 102,
+    "read_partial": 23,
+    "headline_only": 36,
+    "alt_searches": 12,
+    "elapsed_s": 118.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 10,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.3491,
+  "brain_top_news": [
+    {
+      "headline": "meta settlement a good start to protect kids from",
+      "source": "lasvegassun.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.02302
+    },
+    {
+      "headline": "sony microsoft say they have no obligation to offer refunds for tariff based price hikes",
+      "source": "gamingbolt.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.01864
+    },
+    {
+      "headline": "make no mistake us settlement is a win for meta",
+      "source": "irishtimes.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.01781
+    },
+    {
+      "headline": "1414760 sony and microsoft seeking to dismiss consumer lawsuits demanding tariff refunds",
+      "source": "thenews.com.pk",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.01256
+    },
+    {
+      "headline": "why microsoft investors should fear amazon more than google",
+      "source": "247wallst.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.01442
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia earnings: Stock jumps as revenue expected to grow 70%, but 'extreme' memory costs pressure margins - Business Insider",
+      "source": "google_news",
+      "score": -0.738,
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNX3Yxbi1BZ2o0UlJoUlkxZFRrYlQ4LU5vZGFjWGdYdEs2YVZXZUE2ZFNuNkdEXzZvV1k5T1dfM1FBV1prdWJZSjJVOW1WUzlycXlVdmh6Qzd3ZFl4S2ZlUy1BYXdSWmdsVHZWQVFZa0x2aFd5aFJCWWpsTzNfYUt1a1NzS29xN3ByWU95TU1VbVUzQVZGQWlybWdB?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.businessinsider.com"
+    },
+    {
+      "title": "Prediction: $1,104 Invested in Nvidia Today Will Be Worth This Much by 2030 - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.476,
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNUTVaWDVoNmJPQmhPd0VlUWJLVVl0Z3pYVzRyVUVvdTdhTURjV2ZGX09hZUNCandjVy1HR3FZR0dqUmo0MjBEcEsyRkRUOEpRVnQ4SmFlVWZiMEdxZG1PenpOMlBMaWdIdE93eW0wZUg1b3U0VUoxY0FGcS1rUlNRcFhfeWxnaDZWNEpBN3dmbEw2bThBeDRWSkt4Rk41dw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Is Now Paying to Train Plumbers, and the Stock That Should Benefit Most Just Hit a 52-Week Low - 24/7 Wall St.",
+      "source": "google_news",
+      "score": -0.447,
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdGJaMGhXRlo0S1RjbzhBM1AxS1ZmN2ZQTm1PVDdCU2VlVUJ0cDQzaXRnR19JZl9tS3ZXbEl2OXE4NGlmY21TVjBiZ2xWOXZMb1pDTWllVVBDWmhuclhKSUdJQjJGWjNHOEtqZ0Y4UDFJV3hXbWtvSEVFdFl4QVZfMmdMSElEZHhFMzdhd21SMzd4ajdYc2VreWl5dDlwcEJyMEVIb3Rfb3lRM293cjUtZlJsVk5tQ0xhbHZKamxBWjFaX1Fwanh6M0kzeWhOTkpZVGZZRzdIc180clBN?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "247wallst.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Leads Chip Stocks Higher Amid Renewed Confidence In AI Spending - Investor's Business Daily",
+      "source": "google_news",
+      "score": 0.948,
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQeXdEWkFIalBmUF9HbFdhN0pwMlNIdU9FNDRoT2lZU01mYUtaV2FDVVhSOW5yVTByUXJKVzQ3cl9BNGgzaTFQRFZXYl91MVRkdW5ZcC1kRkt0SU1hczUza0xvZkhWSVZVSGFZSUlFLTBqMHljMGxMUlN5aGN0WE0wcFdpR0ZJM3RtR09F?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia\u2019s stock is climbing as investors get more confidence in an expanding base of AI customers - MarketWatch",
+      "source": "MarketWatch",
+      "score": 0.948,
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNOGlyenN4Rm5hbWtkaHk0MXJod3hTc09nazZQa1pGVXJDeXFhS1duX2VLYmQ0WmZGRDNLTzBLN2gxSVBTaFRvS25PN3cyN1lqeS1Ca1hmamtrcnhwbVhCMmpIc0NBM25XT3lOVENDdHJCVk41MG80eXBfX2dOai11WGRlM2plUXowcVVTRVQwNUhvNFpOZGZ0djJsVFRVTUhPWEJ5NGQwYUhlcEZmODFvMTlzMWxpNFFnVTVrLTRZd1ptSWNnUWdrN0lhVVN0RVlvWEFyUA?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia Rises 1.4% After $12.93 Billion Hugging Face Acquisition, Valued at 86x Sales - TechStock\u00b2",
+      "source": "TechStock\u00b2",
+      "score": 0.942,
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMWZoRkFEY3NNbTliYl83Ti03NS1wRlQ2Snhfc1NlY1pPTlZ2Y0dFblMzLXhoRXA2bkVSdTczUEREamdZalZiMUpIUHA0dm96ZTlRdUNIZFl4R0ZjMnY3NVh3SVpuU05zYTU3N0RwRnY3Q01LMGQ4aFZVcVkyV0RXY1dBblVBNUwzR1FEM2xIbHV4N1FYUGsxUkg4V3dWNVJHSVJIMUZn?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "ts2.tech"
+    }
+  ]
+}
