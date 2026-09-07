@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-04",
-  "generated_at": "2026-09-04T17:04:51",
+  "entry_day": "2026-09-08",
+  "generated_at": "2026-09-07T17:05:20",
   "articles": [
     {
-      "headline": "meta settlement a good start to protect kids from",
-      "source": "lasvegassun.com",
+      "headline": "us judge rejects bid to force google to sell ad exchange",
+      "source": "myanmarnews.net",
       "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.02302
+      "weight": 0.0022,
+      "impact": -0.01668
     },
     {
-      "headline": "sony microsoft say they have no obligation to offer refunds for tariff based price hikes",
-      "source": "gamingbolt.com",
+      "headline": "can not switch from samsung to google ecosystem because of this single app",
+      "source": "androidpolice.com",
       "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.01864
+      "weight": 0.0022,
+      "impact": -0.01557
     },
     {
-      "headline": "make no mistake us settlement is a win for meta",
-      "source": "irishtimes.com",
+      "headline": "karnataka seizes rs 4 lakh medicines from two unlicensed amazon facilities 101788707765227.html",
+      "source": "hindustantimes.com",
       "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.01781
+      "weight": 0.0022,
+      "impact": -0.0071
     },
     {
-      "headline": "1414760 sony and microsoft seeking to dismiss consumer lawsuits demanding tariff refunds",
-      "source": "thenews.com.pk",
-      "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.01256
-    },
-    {
-      "headline": "why microsoft investors should fear amazon more than google",
-      "source": "247wallst.com",
-      "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.01442
-    },
-    {
-      "headline": "microsoft earnings changes azure revenue",
-      "source": "theverge.com",
-      "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.01073
-    },
-    {
-      "headline": "microsoft azure revenue business growth.html",
-      "source": "digitimes.com",
-      "category": "hyperscalers",
-      "weight": 0.0048,
-      "impact": -0.0105
-    },
-    {
-      "headline": "federal judge rules in favor of googles advertising monopoly in blow to independent media",
-      "source": "worldtribune.com",
-      "category": "hyperscalers",
-      "weight": 0.0048,
-      "impact": -0.00861
-    },
-    {
-      "headline": "amazon vs microsoft 1 key metric identifies the su",
+      "headline": "buy amazon 10000 10 discount predict 10 years",
       "source": "fool.com",
       "category": "hyperscalers",
-      "weight": 0.0048,
-      "impact": -0.00536
+      "weight": 0.0022,
+      "impact": -0.01192
     },
     {
-      "headline": "google ad exchange no divestiture brinkema ruling eu adtech 2 95bn structural remedy dma",
-      "source": "thenextweb.com",
+      "headline": "saudi arabias paytabs group acquires amazon payments mena for 100mln 479057",
+      "source": "zawya.com",
       "category": "hyperscalers",
-      "weight": 0.0048,
-      "impact": -0.00612
+      "weight": 0.0022,
+      "impact": -0.01268
+    },
+    {
+      "headline": "microsoft to impose time limits on xbox game pass subscribers",
+      "source": "baystreet.ca",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.01506
+    },
+    {
+      "headline": "editorial meta settlement good start to protect kids from tech",
+      "source": "bostonherald.com",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.01591
+    },
+    {
+      "headline": "amazon cargo plane crashes at miami airport after it overshoots runway",
+      "source": "thefrontierpost.com",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.00472
+    },
+    {
+      "headline": "google avoids breakup of ad tech business in us antitrust case",
+      "source": "memphissun.com",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.01297
+    },
+    {
+      "headline": "sergey brin google dragonfly superyacht spain fuel cost luxury 138948106.html",
+      "source": "bhaskar.com",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.00806
     }
   ]
 }

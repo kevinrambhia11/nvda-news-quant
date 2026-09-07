@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-09-07T17:08:34",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-08",
+  "last_close": 230.36,
+  "model_trained_through": "2026-09-02",
+  "gap_context": {
+    "prev_close": 230.36,
+    "latest": 229.5,
+    "gap_pct": -0.0037,
+    "session": "after-hours",
+    "as_of_et": "19:59 ET"
+  },
+  "model_prob_up": 0.4709,
+  "prob_big_move": 0.5185,
+  "big_move_threshold": 0.0129,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0412,
+  "headline_count": 151,
+  "article_count": 186,
+  "fulltext": {
+    "stories": 151,
+    "read_full": 96,
+    "read_partial": 21,
+    "headline_only": 34,
+    "alt_searches": 12,
+    "elapsed_s": 104.0
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 10,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.4858,
+  "brain_top_news": [
+    {
+      "headline": "us judge rejects bid to force google to sell ad exchange",
+      "source": "myanmarnews.net",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.01668
+    },
+    {
+      "headline": "can not switch from samsung to google ecosystem because of this single app",
+      "source": "androidpolice.com",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.01557
+    },
+    {
+      "headline": "karnataka seizes rs 4 lakh medicines from two unlicensed amazon facilities 101788707765227.html",
+      "source": "hindustantimes.com",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.0071
+    },
+    {
+      "headline": "buy amazon 10000 10 discount predict 10 years",
+      "source": "fool.com",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.01192
+    },
+    {
+      "headline": "saudi arabias paytabs group acquires amazon payments mena for 100mln 479057",
+      "source": "zawya.com",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.01268
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "China\u2019s Nvidia challenger crashed 20% in a reality check for an AI darling - Business Insider",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPckZHdUhVT2dnUG1pdEVyTF9ob1NGS25PQU9YcGVGV0xWZnljWmJiNC1IeU5QcmVsbUM2aDF1QXBRX2JYOG1xQ0hMeV9RaDNCdnhlbklTT1NhX05uUGpfVWVkb3dOX042VTh1cjNlaWlCZENJQ0VZREFXejY0Y25CY3ZCOFZNZHlfT19HQzIwSVhYVm9NLWpuZjUzRDBybmRNT0E?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.businessinsider.com"
+    },
+    {
+      "title": "S&P 500, Dow End Lower As Blowout Jobs Report Fans Rate Hike Fears, While Chipmaker Strength Aids Nasdaq TSLA, NFLX, BE, NVDA In Focus",
+      "source": "finviz",
+      "score": -0.937,
+      "url": "https://finance.yahoo.com/m/d6f02ce0-eec4-3306-ac5d-3570217a5bac/s%26p-500%2C-dow-end-lower-as.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Here\u2019s Why Nvidia Stock Is Down Today\u2014Again - Forbes",
+      "source": "google_news",
+      "score": -0.909,
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWGFuejdLcFlEYk1wTVhLZGZQTHNIT3NSRGJoOWY1NWZOU2VWU1FNQl9BeUdNdjY4RWhqRE9WYXFpYmRQcTBjTHFZRXVUa290OVVTdHlidVMwUVlqNWRzOTkzbTVwTnU1dHc4RERWYUJhOTZkQ1NVS0dQWXd1dFRmZTNrSG5UdGdtZWtZcE5SV1FmellEVkpqTUdreWFvNk85WWVPeHFoUkRieWFpYlhJZlVpTnMtcVhDT0ZSN1VOT1NUeV82djZuUkp5czc1c3c?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.fool.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVDA Stock On Track To Hit Over 2-Month High  Analyst Calls $12.9B Hugging Face Deal Strategically Valuable",
+      "source": "finviz",
+      "score": 0.919,
+      "url": "https://finance.yahoo.com/m/5efd76cf-4469-3367-9d36-49350be6271e/nvda-stock-on-track-to-hit.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia stock moves closer to all-time high - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.874,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNUhYQzNDeE0tUk5IOExEUk9IcG5ydGZwQ3cwNGFVb2d0bWZIMXpFNGR2d0ZpczA3UlhVa2EzT0VtNXczV1VZWllzMkJZQ0dPc25zNWd6OXo3aDV6TFhjVndOX3pKUkxVOEJsSktsbEpKLWlSTHVvdkdEZUdtU3ZrbnZZU1p4QjhlWFlOY0lfejFNZUZ4eFNEQ3lVUVkxRXk3?oc=5",
+      "n_sources": 2,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Shares Rise 2.6% Amid Hugging Face Deal, Blowout Earnings As Analysts Stay Bullish Heading Into Fall - International Business Times Australia",
+      "source": "International Business Times Australia",
+      "score": 0.79,
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQVDRnbmxoOU1ialdGZm9HeTZLRXJVaWtTbmJVMFlFdlJZdGVoRTNBQ0d1VmduTTZKMnhrd0l5cVJkWEx0MUR6UTJXR0pqWGFwM0ZkSGVLYWEwMVdwelRpenRJdUNhNEpmc2MxU3pWUlJpNktISnhVYl96LXJIMTdLYQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.ibtimes.com.au"
+    }
+  ]
+}
