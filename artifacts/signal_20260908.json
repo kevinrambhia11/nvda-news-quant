@@ -1,75 +1,95 @@
 {
-  "generated_at": "2026-09-07T17:08:34",
+  "generated_at": "2026-09-08T17:07:15",
   "ticker": "NVDA",
   "entry_day": "2026-09-08",
   "last_close": 230.36,
   "model_trained_through": "2026-09-02",
   "gap_context": {
     "prev_close": 230.36,
-    "latest": 229.5,
-    "gap_pct": -0.0037,
-    "session": "after-hours",
-    "as_of_et": "19:59 ET"
+    "latest": 231.06,
+    "gap_pct": 0.003,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
   },
-  "model_prob_up": 0.4709,
+  "model_prob_up": 0.4701,
   "prob_big_move": 0.5185,
   "big_move_threshold": 0.0129,
   "action": "EXIT / STAY FLAT",
-  "headline_sentiment": 0.0412,
-  "headline_count": 151,
-  "article_count": 186,
+  "headline_sentiment": 0.0892,
+  "headline_count": 156,
+  "article_count": 185,
   "fulltext": {
-    "stories": 151,
-    "read_full": 96,
-    "read_partial": 21,
-    "headline_only": 34,
+    "stories": 156,
+    "read_full": 103,
+    "read_partial": 15,
+    "headline_only": 38,
     "alt_searches": 12,
-    "elapsed_s": 104.0
+    "elapsed_s": 83.9
   },
   "data_warnings": [],
   "headlines_degraded": false,
   "sentiment_backend": "finbert",
-  "stocktwits_bulls": 10,
+  "stocktwits_bulls": 9,
   "stocktwits_bears": 0,
-  "advisory_composite": 0.4858,
+  "advisory_composite": 0.4925,
   "brain_top_news": [
+    {
+      "headline": "sony and microsoft may be forced to go all%e2%80%91digital next%e2%80%91gen as disc drive components disappear",
+      "source": "kitguru.net",
+      "category": "hyperscalers",
+      "weight": 0.0016,
+      "impact": -0.00963
+    },
+    {
+      "headline": "free microsoft 365 alternatives word excel powerpoint outlook",
+      "source": "makeuseof.com",
+      "category": "hyperscalers",
+      "weight": 0.0016,
+      "impact": -0.00872
+    },
+    {
+      "headline": "google messages chat theme issues 3707811",
+      "source": "androidauthority.com",
+      "category": "hyperscalers",
+      "weight": 0.0016,
+      "impact": -0.01687
+    },
     {
       "headline": "us judge rejects bid to force google to sell ad exchange",
       "source": "myanmarnews.net",
       "category": "hyperscalers",
-      "weight": 0.0022,
+      "weight": 0.0016,
       "impact": -0.01668
     },
     {
-      "headline": "can not switch from samsung to google ecosystem because of this single app",
-      "source": "androidpolice.com",
+      "headline": "i spoke to the microsoft pm rebuilding windows 11 for nvidia rtx spark the radical reinvention building the first true m",
+      "source": "tomsguide.com",
       "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.01557
-    },
-    {
-      "headline": "karnataka seizes rs 4 lakh medicines from two unlicensed amazon facilities 101788707765227.html",
-      "source": "hindustantimes.com",
-      "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.0071
-    },
-    {
-      "headline": "buy amazon 10000 10 discount predict 10 years",
-      "source": "fool.com",
-      "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.01192
-    },
-    {
-      "headline": "saudi arabias paytabs group acquires amazon payments mena for 100mln 479057",
-      "source": "zawya.com",
-      "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.01268
+      "weight": 0.0016,
+      "impact": -0.00811
     }
   ],
   "most_negative": [
+    {
+      "title": "Nvidia supplier Wistron's shares drop after it announces $1.5 billion global stock sale - CNBC",
+      "source": "CNBC",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3cUkxRTNkckFPV0E1alVORURUem9QV3RSYWxaV1RScXY5X200LWRWVU02WVdjUHlrTElOd1loNlYwcmFJdTRUWGUwX01GdUcydjJySHlxVGVJWFEycjlHQW1RQm93czVPdEdvMTB3eVcwX1Uwb0N4R2NoZ9IBgAFBVV95cUxQSlprSjA1bjhJMlUtdzVaX2NKc05GSlhfRHBaVVdzSll4QzM4bGtrRGt0T3gyMnVxLWRQSHJSVWlDcno5UlhJaTVtczloMVFLRm1WdEZUc3kwQTZQMEhQeWRDZzNtNG13bi1GLUV5bnhXT3FVME9oa3lzOG5aTlo2Mg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Tencent Slips 1% While Its AI-Chip Bet Attacks Nvidia's China Moat",
+      "source": "finviz",
+      "score": -0.966,
+      "url": "https://finance.yahoo.com/technology/ai/articles/tencent-slips-1-while-ai-215226124.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
     {
       "title": "China\u2019s Nvidia challenger crashed 20% in a reality check for an AI darling - Business Insider",
       "source": "google_news",
@@ -79,34 +99,24 @@
       "also_from": [],
       "read_status": "partial",
       "read_from": "www.businessinsider.com"
-    },
+    }
+  ],
+  "most_positive": [
     {
-      "title": "S&P 500, Dow End Lower As Blowout Jobs Report Fans Rate Hike Fears, While Chipmaker Strength Aids Nasdaq TSLA, NFLX, BE, NVDA In Focus",
+      "title": "NVDA Rises Overnight After Strong Week: CEO Jensen Huang Pumps Nvidia Chips As Highly Rentable Money-Minting Assets",
       "source": "finviz",
-      "score": -0.937,
-      "url": "https://finance.yahoo.com/m/d6f02ce0-eec4-3306-ac5d-3570217a5bac/s%26p-500%2C-dow-end-lower-as.html",
+      "score": 0.942,
+      "url": "https://finance.yahoo.com/m/67034af4-46ea-38cb-a822-ac8116c5113e/nvda-rises-overnight-after.html",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
       "read_from": "finance.yahoo.com"
     },
     {
-      "title": "Here\u2019s Why Nvidia Stock Is Down Today\u2014Again - Forbes",
+      "title": "Nvidia (NVDA)\u2019s First-Ever Year-Ahead Forecast Puts It on a Path to Pass Apple and Alphabet - Yahoo Finance",
       "source": "google_news",
-      "score": -0.909,
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWGFuejdLcFlEYk1wTVhLZGZQTHNIT3NSRGJoOWY1NWZOU2VWU1FNQl9BeUdNdjY4RWhqRE9WYXFpYmRQcTBjTHFZRXVUa290OVVTdHlidVMwUVlqNWRzOTkzbTVwTnU1dHc4RERWYUJhOTZkQ1NVS0dQWXd1dFRmZTNrSG5UdGdtZWtZcE5SV1FmellEVkpqTUdreWFvNk85WWVPeHFoUkRieWFpYlhJZlVpTnMtcVhDT0ZSN1VOT1NUeV82djZuUkp5czc1c3c?oc=5",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "full",
-      "read_from": "www.fool.com"
-    }
-  ],
-  "most_positive": [
-    {
-      "title": "NVDA Stock On Track To Hit Over 2-Month High  Analyst Calls $12.9B Hugging Face Deal Strategically Valuable",
-      "source": "finviz",
-      "score": 0.919,
-      "url": "https://finance.yahoo.com/m/5efd76cf-4469-3367-9d36-49350be6271e/nvda-stock-on-track-to-hit.html",
+      "score": 0.94,
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQa2NVbTgxd01uU3JxNVRGQUV0bl9wbVY1UHhlVllsMUViT0VJRzZUa3ozQ3NLOC1rMEhCXzhOUU5nUUxsaE12SjBPTXk0aHdycEx2bHFlSzBaMHJrU0pFVlJZcmtJV2FBeGVDYmlxanZqN0E3UjRMZGg5VkJjcE5uUVlLelA5MnQzYVNMSnFXUnJlZDFSdl9sMg?oc=5",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
@@ -115,22 +125,12 @@
     {
       "title": "Nvidia stock moves closer to all-time high - Yahoo Finance",
       "source": "google_news",
-      "score": 0.874,
+      "score": 0.901,
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNUhYQzNDeE0tUk5IOExEUk9IcG5ydGZwQ3cwNGFVb2d0bWZIMXpFNGR2d0ZpczA3UlhVa2EzT0VtNXczV1VZWllzMkJZQ0dPc25zNWd6OXo3aDV6TFhjVndOX3pKUkxVOEJsSktsbEpKLWlSTHVvdkdEZUdtU3ZrbnZZU1p4QjhlWFlOY0lfejFNZUZ4eFNEQ3lVUVkxRXk3?oc=5",
-      "n_sources": 2,
-      "also_from": [],
-      "read_status": "full",
-      "read_from": "finance.yahoo.com"
-    },
-    {
-      "title": "Nvidia Shares Rise 2.6% Amid Hugging Face Deal, Blowout Earnings As Analysts Stay Bullish Heading Into Fall - International Business Times Australia",
-      "source": "International Business Times Australia",
-      "score": 0.79,
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQVDRnbmxoOU1ialdGZm9HeTZLRXJVaWtTbmJVMFlFdlJZdGVoRTNBQ0d1VmduTTZKMnhrd0l5cVJkWEx0MUR6UTJXR0pqWGFwM0ZkSGVLYWEwMVdwelRpenRJdUNhNEpmc2MxU3pWUlJpNktISnhVYl96LXJIMTdLYQ?oc=5",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
-      "read_from": "www.ibtimes.com.au"
+      "read_from": "finance.yahoo.com"
     }
   ]
 }

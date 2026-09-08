@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-09-08",
-  "generated_at": "2026-09-07T17:05:20",
+  "generated_at": "2026-09-08T17:04:09",
   "articles": [
+    {
+      "headline": "sony and microsoft may be forced to go all%e2%80%91digital next%e2%80%91gen as disc drive components disappear",
+      "source": "kitguru.net",
+      "category": "hyperscalers",
+      "weight": 0.0016,
+      "impact": -0.00963
+    },
+    {
+      "headline": "free microsoft 365 alternatives word excel powerpoint outlook",
+      "source": "makeuseof.com",
+      "category": "hyperscalers",
+      "weight": 0.0016,
+      "impact": -0.00872
+    },
+    {
+      "headline": "google messages chat theme issues 3707811",
+      "source": "androidauthority.com",
+      "category": "hyperscalers",
+      "weight": 0.0016,
+      "impact": -0.01687
+    },
     {
       "headline": "us judge rejects bid to force google to sell ad exchange",
       "source": "myanmarnews.net",
       "category": "hyperscalers",
-      "weight": 0.0022,
+      "weight": 0.0016,
       "impact": -0.01668
+    },
+    {
+      "headline": "i spoke to the microsoft pm rebuilding windows 11 for nvidia rtx spark the radical reinvention building the first true m",
+      "source": "tomsguide.com",
+      "category": "hyperscalers",
+      "weight": 0.0016,
+      "impact": -0.00811
     },
     {
       "headline": "can not switch from samsung to google ecosystem because of this single app",
       "source": "androidpolice.com",
       "category": "hyperscalers",
-      "weight": 0.0022,
+      "weight": 0.0016,
       "impact": -0.01557
+    },
+    {
+      "headline": "the pentagon doubled down on its anthropic blacklist why amazon and alphabet investors should care 1828433",
+      "source": "insidermonkey.com",
+      "category": "hyperscalers",
+      "weight": 0.0016,
+      "impact": -0.01718
     },
     {
       "headline": "karnataka seizes rs 4 lakh medicines from two unlicensed amazon facilities 101788707765227.html",
       "source": "hindustantimes.com",
       "category": "hyperscalers",
-      "weight": 0.0022,
+      "weight": 0.0016,
       "impact": -0.0071
     },
     {
       "headline": "buy amazon 10000 10 discount predict 10 years",
       "source": "fool.com",
       "category": "hyperscalers",
-      "weight": 0.0022,
+      "weight": 0.0016,
       "impact": -0.01192
     },
     {
       "headline": "saudi arabias paytabs group acquires amazon payments mena for 100mln 479057",
       "source": "zawya.com",
       "category": "hyperscalers",
-      "weight": 0.0022,
+      "weight": 0.0016,
       "impact": -0.01268
-    },
-    {
-      "headline": "microsoft to impose time limits on xbox game pass subscribers",
-      "source": "baystreet.ca",
-      "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.01506
-    },
-    {
-      "headline": "editorial meta settlement good start to protect kids from tech",
-      "source": "bostonherald.com",
-      "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.01591
-    },
-    {
-      "headline": "amazon cargo plane crashes at miami airport after it overshoots runway",
-      "source": "thefrontierpost.com",
-      "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.00472
-    },
-    {
-      "headline": "google avoids breakup of ad tech business in us antitrust case",
-      "source": "memphissun.com",
-      "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.01297
-    },
-    {
-      "headline": "sergey brin google dragonfly superyacht spain fuel cost luxury 138948106.html",
-      "source": "bhaskar.com",
-      "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.00806
     }
   ]
 }
