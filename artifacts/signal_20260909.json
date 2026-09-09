@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-09-09T17:09:14",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-09",
+  "last_close": 225.73,
+  "model_trained_through": "2026-09-02",
+  "gap_context": {
+    "prev_close": 225.73,
+    "latest": 224.69,
+    "gap_pct": -0.0046,
+    "session": "pre-market",
+    "as_of_et": "07:39 ET"
+  },
+  "model_prob_up": 0.3144,
+  "prob_big_move": 0.5185,
+  "big_move_threshold": 0.0129,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0544,
+  "headline_count": 165,
+  "article_count": 192,
+  "fulltext": {
+    "stories": 165,
+    "read_full": 113,
+    "read_partial": 17,
+    "headline_only": 35,
+    "alt_searches": 12,
+    "elapsed_s": 117.8
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 8,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.3782,
+  "brain_top_news": [
+    {
+      "headline": "exclusive google warns of lower quality as it revamps europe search results to avoid eu fines",
+      "source": "thestar.com.my",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.01612
+    },
+    {
+      "headline": "why oracle stock rose nearly 15 last month",
+      "source": "fool.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.012
+    },
+    {
+      "headline": "amazon abandons nearly finished sam altman biopic after openai deal",
+      "source": "gamerheadlines.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.01543
+    },
+    {
+      "headline": "microsofts macbook pro killer is heading to south africa",
+      "source": "htxt.co.za",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -4e-05
+    },
+    {
+      "headline": "crypto theft washington dc singapore prison sentence bitcoin spending spree scams racketeering conspiracy googly gemini ",
+      "source": "wjla.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.01009
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia supplier Wistron's shares drop after it announces $1.5 billion global stock sale - CNBC",
+      "source": "CNBC",
+      "score": -0.968,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3cUkxRTNkckFPV0E1alVORURUem9QV3RSYWxaV1RScXY5X200LWRWVU02WVdjUHlrTElOd1loNlYwcmFJdTRUWGUwX01GdUcydjJySHlxVGVJWFEycjlHQW1RQm93czVPdEdvMTB3eVcwX1Uwb0N4R2NoZ9IBgAFBVV95cUxQSlprSjA1bjhJMlUtdzVaX2NKc05GSlhfRHBaVVdzSll4QzM4bGtrRGt0T3gyMnVxLWRQSHJSVWlDcno5UlhJaTVtczloMVFLRm1WdEZUc3kwQTZQMEhQeWRDZzNtNG13bi1GLUV5bnhXT3FVME9oa3lzOG5aTlo2Mg?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Nvidia Stock NVDA Reverses Down After $236 Breakout Attempt Fails as Spending Risks Grow - FXLeaders",
+      "source": "google_news",
+      "score": -0.964,
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQQkExZnNqWVJfTHVDbFhySmRyVmh3MHZlWW1wbHpTaE9IN3RaMV9KUHMxWTNMZjJZbGFGVGM3eDBnY3hpclRxYWptWUlncGNCUXlrZGtsMzBfRWI2NmRrQmlPZmFkLWk4bUVCOEFMb2NWR2VwWDlreWVQeFFWSWFSQ0xDQ0FPb3pFS3JtR29nQ1lEdzJmNlFyOXFXVWlYZzNzV2lDbE1QbFdjY1Y5UUhOTlF6aXFONmFHc205V19JdVAtMndTT1NiUk1n?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.fxleaders.com"
+    },
+    {
+      "title": "Why Nvidia stock is down over 1% today even as AI peers are surging - TradingView",
+      "source": "google_news",
+      "score": -0.952,
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNzA1ZklQLVBSZmRTZWhFOWxOczV5TnpLRXMwVjhMbHNKaEFBelItYXdyb1FENEZRdHgyRjdjWmlXS3NhTjFHNFV3cVVYYUljQjNWZ3ByTU12NGplQVNlUUp4UXNjOWtES1lhYWNuV0hldl9iLUFha3ZGWFV0Ny1FTEZ4Z0h6ZWV3bDEwUktZUm5XTTRyNnpyTHlMNDJMQ3RUaUV2TV9pYVFJT1JnRFBvYXFLUTB3anRyWFIySC1HODc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.tradingview.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "OpenAI Hands Nvidia Fresh Win in Surging AI Market",
+      "source": "finviz",
+      "score": 0.919,
+      "url": "https://finance.yahoo.com/technology/ai/articles/openai-hands-nvidia-fresh-win-122815703.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Jensen Huang Says a 22% Rent Jump Proves Old Nvidia Chips Keep Earning",
+      "source": "finviz",
+      "score": 0.879,
+      "url": "https://finance.yahoo.com/m/32f1e6df-286d-3b97-b866-efda04685d84/jensen-huang-says-a-22%25-rent.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Palantir Stock Leads August Rally -- Nvidia, Salesforce and Super Micro Jump - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.875,
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNU3ZUczBRU2piS1BCUTNzRU1yb04tbnpFcnhycVFPRWcxRk81ZDZSdjZOYVdxZ0kwVFJGbnNHMG9vNm1ZU1ZaSUNsRFJyb0tORDYxcFdVbUFSUDRYc1N5U3hUMEVxMmNMVXpyNVJjRFQ3S2RTOXBib2szanZRaG5vM25TQUNTbS1aWUw2N3Z6b1hRZHRQT3l6RnE4YTBEMTA?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

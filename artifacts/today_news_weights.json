@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-08",
-  "generated_at": "2026-09-08T17:04:09",
+  "entry_day": "2026-09-09",
+  "generated_at": "2026-09-09T17:05:07",
   "articles": [
     {
-      "headline": "sony and microsoft may be forced to go all%e2%80%91digital next%e2%80%91gen as disc drive components disappear",
-      "source": "kitguru.net",
+      "headline": "exclusive google warns of lower quality as it revamps europe search results to avoid eu fines",
+      "source": "thestar.com.my",
       "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.00963
+      "weight": 0.0049,
+      "impact": -0.01612
     },
     {
-      "headline": "free microsoft 365 alternatives word excel powerpoint outlook",
-      "source": "makeuseof.com",
-      "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.00872
-    },
-    {
-      "headline": "google messages chat theme issues 3707811",
-      "source": "androidauthority.com",
-      "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.01687
-    },
-    {
-      "headline": "us judge rejects bid to force google to sell ad exchange",
-      "source": "myanmarnews.net",
-      "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.01668
-    },
-    {
-      "headline": "i spoke to the microsoft pm rebuilding windows 11 for nvidia rtx spark the radical reinvention building the first true m",
-      "source": "tomsguide.com",
-      "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.00811
-    },
-    {
-      "headline": "can not switch from samsung to google ecosystem because of this single app",
-      "source": "androidpolice.com",
-      "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.01557
-    },
-    {
-      "headline": "the pentagon doubled down on its anthropic blacklist why amazon and alphabet investors should care 1828433",
-      "source": "insidermonkey.com",
-      "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.01718
-    },
-    {
-      "headline": "karnataka seizes rs 4 lakh medicines from two unlicensed amazon facilities 101788707765227.html",
-      "source": "hindustantimes.com",
-      "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.0071
-    },
-    {
-      "headline": "buy amazon 10000 10 discount predict 10 years",
+      "headline": "why oracle stock rose nearly 15 last month",
       "source": "fool.com",
       "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.01192
+      "weight": 0.0049,
+      "impact": -0.012
     },
     {
-      "headline": "saudi arabias paytabs group acquires amazon payments mena for 100mln 479057",
-      "source": "zawya.com",
+      "headline": "amazon abandons nearly finished sam altman biopic after openai deal",
+      "source": "gamerheadlines.com",
       "category": "hyperscalers",
-      "weight": 0.0016,
-      "impact": -0.01268
+      "weight": 0.0049,
+      "impact": -0.01543
+    },
+    {
+      "headline": "microsofts macbook pro killer is heading to south africa",
+      "source": "htxt.co.za",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -4e-05
+    },
+    {
+      "headline": "crypto theft washington dc singapore prison sentence bitcoin spending spree scams racketeering conspiracy googly gemini ",
+      "source": "wjla.com",
+      "category": "hyperscalers",
+      "weight": 0.0049,
+      "impact": -0.01009
+    },
+    {
+      "headline": "no chance of a microsoft surface branded store in sa right now",
+      "source": "htxt.co.za",
+      "category": "hyperscalers",
+      "weight": 0.0048,
+      "impact": -0.00716
+    },
+    {
+      "headline": "google pixel 11 price drop get over rs 10000 discount here is how.html",
+      "source": "digit.in",
+      "category": "hyperscalers",
+      "weight": 0.0048,
+      "impact": -0.00869
+    },
+    {
+      "headline": "1590739 google warns of lower quality amid europe search revamp",
+      "source": "rte.ie",
+      "category": "hyperscalers",
+      "weight": 0.0048,
+      "impact": -0.00979
+    },
+    {
+      "headline": "oracle stock keeps falling while 113456535.html",
+      "source": "yahoo.com",
+      "category": "hyperscalers",
+      "weight": 0.0048,
+      "impact": -0.01472
+    },
+    {
+      "headline": "72392 windows 11 mais rapido 8gb ram otimizacao microsoft",
+      "source": "oficinadanet.com.br",
+      "category": "hyperscalers",
+      "weight": 0.0048,
+      "impact": -0.0083
     }
   ]
 }
