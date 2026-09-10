@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-09",
-  "generated_at": "2026-09-09T17:05:07",
+  "entry_day": "2026-09-10",
+  "generated_at": "2026-09-10T17:04:57",
   "articles": [
     {
-      "headline": "exclusive google warns of lower quality as it revamps europe search results to avoid eu fines",
-      "source": "thestar.com.my",
+      "headline": "google admits it just made search worse for europeans to dodge brussels fines",
+      "source": "webpronews.com",
       "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.01612
+      "weight": 0.005,
+      "impact": -0.01669
     },
     {
-      "headline": "why oracle stock rose nearly 15 last month",
+      "headline": "how to write captions that rank like google search results",
+      "source": "tribuneonlineng.com",
+      "category": "hyperscalers",
+      "weight": 0.005,
+      "impact": -0.01157
+    },
+    {
+      "headline": "amazon ceo andy jassy explained why semiconductor",
       "source": "fool.com",
       "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.012
+      "weight": 0.005,
+      "impact": -0.01284
     },
     {
-      "headline": "amazon abandons nearly finished sam altman biopic after openai deal",
-      "source": "gamerheadlines.com",
+      "headline": "ibm vet jennifer chronis joins amazon web services to lead dod business",
+      "source": "govconwire.com",
       "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.01543
+      "weight": 0.005,
+      "impact": -0.01215
     },
     {
-      "headline": "microsofts macbook pro killer is heading to south africa",
-      "source": "htxt.co.za",
+      "headline": "malicious software on google ads",
+      "source": "xlii.space",
       "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -4e-05
+      "weight": 0.005,
+      "impact": -0.00403
     },
     {
-      "headline": "crypto theft washington dc singapore prison sentence bitcoin spending spree scams racketeering conspiracy googly gemini ",
-      "source": "wjla.com",
+      "headline": "meta platforms settles major lawsuit pays 18 billion",
+      "source": "fool.com",
       "category": "hyperscalers",
-      "weight": 0.0049,
-      "impact": -0.01009
+      "weight": 0.005,
+      "impact": -0.00767
     },
     {
-      "headline": "no chance of a microsoft surface branded store in sa right now",
-      "source": "htxt.co.za",
+      "headline": "google warns of lower quality as it revamps search results",
+      "source": "gdnonline.com",
       "category": "hyperscalers",
-      "weight": 0.0048,
-      "impact": -0.00716
+      "weight": 0.005,
+      "impact": -0.00331
     },
     {
-      "headline": "google pixel 11 price drop get over rs 10000 discount here is how.html",
-      "source": "digit.in",
+      "headline": "96301345 google investuje vo finsku 13 miliard eur do ai infrastruktury pojde o rekord v europe",
+      "source": "hnonline.sk",
       "category": "hyperscalers",
-      "weight": 0.0048,
-      "impact": -0.00869
+      "weight": 0.005,
+      "impact": -0.0054
     },
     {
-      "headline": "1590739 google warns of lower quality amid europe search revamp",
-      "source": "rte.ie",
+      "headline": "google makes its largest ever european investment in finland",
+      "source": "news.az",
       "category": "hyperscalers",
-      "weight": 0.0048,
-      "impact": -0.00979
+      "weight": 0.005,
+      "impact": -0.01026
     },
     {
-      "headline": "oracle stock keeps falling while 113456535.html",
-      "source": "yahoo.com",
+      "headline": "states that gave data centers billions in tax breaks are now ripping up the deals 101788947762264.html",
+      "source": "hindustantimes.com",
       "category": "hyperscalers",
-      "weight": 0.0048,
-      "impact": -0.01472
-    },
-    {
-      "headline": "72392 windows 11 mais rapido 8gb ram otimizacao microsoft",
-      "source": "oficinadanet.com.br",
-      "category": "hyperscalers",
-      "weight": 0.0048,
-      "impact": -0.0083
+      "weight": 0.005,
+      "impact": -0.00914
     }
   ]
 }

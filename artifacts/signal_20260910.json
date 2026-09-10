@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-09-10T17:08:31",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-10",
+  "last_close": 223.67,
+  "model_trained_through": "2026-09-02",
+  "gap_context": {
+    "prev_close": 223.67,
+    "latest": 222.67,
+    "gap_pct": -0.0045,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.166,
+  "prob_big_move": 0.5185,
+  "big_move_threshold": 0.0129,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.1022,
+  "headline_count": 155,
+  "article_count": 192,
+  "fulltext": {
+    "stories": 155,
+    "read_full": 100,
+    "read_partial": 21,
+    "headline_only": 34,
+    "alt_searches": 12,
+    "elapsed_s": 104.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 4,
+  "stocktwits_bears": 4,
+  "advisory_composite": 0.2815,
+  "brain_top_news": [
+    {
+      "headline": "google admits it just made search worse for europeans to dodge brussels fines",
+      "source": "webpronews.com",
+      "category": "hyperscalers",
+      "weight": 0.005,
+      "impact": -0.01669
+    },
+    {
+      "headline": "how to write captions that rank like google search results",
+      "source": "tribuneonlineng.com",
+      "category": "hyperscalers",
+      "weight": 0.005,
+      "impact": -0.01157
+    },
+    {
+      "headline": "amazon ceo andy jassy explained why semiconductor",
+      "source": "fool.com",
+      "category": "hyperscalers",
+      "weight": 0.005,
+      "impact": -0.01284
+    },
+    {
+      "headline": "ibm vet jennifer chronis joins amazon web services to lead dod business",
+      "source": "govconwire.com",
+      "category": "hyperscalers",
+      "weight": 0.005,
+      "impact": -0.01215
+    },
+    {
+      "headline": "malicious software on google ads",
+      "source": "xlii.space",
+      "category": "hyperscalers",
+      "weight": 0.005,
+      "impact": -0.00403
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "NVDA Stock Slips Overnight: Nvidia Director Mark Stevens Unloads $640M In Shares\u2014 What Investors Need To Know - Stocktwits",
+      "source": "google_news",
+      "score": -0.968,
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOcG5fbmc3NjI0Rl8zam9fV2NrSW5sY2wyUnVHdGN1NVk1VHhoRmhxZ0xvUGQ4RThSbjJCcHVkNHd3NHNmdExYSGUxTTR5cVp5TzRCTDVkdGJzaC1WUGQxMU9zZlVOUFRHSDZJRnFrU2FIVk0td3J4MXFDWUxFVmI3RzNwRmdkNjZEQ21sS05ZWGZEQUkzcEUzdmlDQ2NMbFJOSEV5dmdwZFFBZ0c0Z2hyWnpMNWZwOTZYcFo3MkMxRVFvemxSWG9QdWNZbFpzV1BCek1Xb0RBZjRnS2Nnc0dXczNEQ2tfX1U3QVo3aEozYTlsZEJUd1liNUlPdTc?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "stocktwits.com"
+    },
+    {
+      "title": "Nvidia supplier Wistron's shares drop after it announces $1.5 billion global stock sale - CNBC",
+      "source": "CNBC",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3cUkxRTNkckFPV0E1alVORURUem9QV3RSYWxaV1RScXY5X200LWRWVU02WVdjUHlrTElOd1loNlYwcmFJdTRUWGUwX01GdUcydjJySHlxVGVJWFEycjlHQW1RQm93czVPdEdvMTB3eVcwX1Uwb0N4R2NoZ9IBgAFBVV95cUxQSlprSjA1bjhJMlUtdzVaX2NKc05GSlhfRHBaVVdzSll4QzM4bGtrRGt0T3gyMnVxLWRQSHJSVWlDcno5UlhJaTVtczloMVFLRm1WdEZUc3kwQTZQMEhQeWRDZzNtNG13bi1GLUV5bnhXT3FVME9oa3lzOG5aTlo2Mg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Nvidia reportedly drives testing interface capacity crunch, pushes Taiwan suppliers",
+      "source": "finviz",
+      "score": -0.96,
+      "url": "https://www.digitimes.com/news/a20260910PD212/ic-testing-interface-ai-chip-high-end-capacity-demand.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia-Backed MediaTeks Sales Soar 44% With AI Chip Momentum",
+      "source": "finviz",
+      "score": 0.948,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-backed-mediatek-sales-soar-090359864.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "NVIDIA Expands AI Infrastructure Capacity in Partnership With Australia's Data Center Ecosystem",
+      "source": "finviz",
+      "score": 0.915,
+      "url": "/news/390540/nvidia-expands-ai-infrastructure-capacity-in-partnership-with-australias-data-center-ecosystem",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "nvidianews.nvidia.com"
+    },
+    {
+      "title": "Ooredoo-backed Zankore secures $3.1 billion financing for Nvidia AI cloud platform",
+      "source": "finviz",
+      "score": 0.849,
+      "url": "https://finance.yahoo.com/m/d190655b-174b-3ab4-b796-07db37a87639/ooredoo-backed-zankore.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
