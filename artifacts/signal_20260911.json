@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-09-11T17:07:55",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-11",
+  "last_close": 218.36,
+  "model_trained_through": "2026-09-09",
+  "gap_context": {
+    "prev_close": 218.36,
+    "latest": 219.89,
+    "gap_pct": 0.007,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.532,
+  "prob_big_move": 0.528,
+  "big_move_threshold": 0.0129,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0693,
+  "headline_count": 168,
+  "article_count": 196,
+  "fulltext": {
+    "stories": 168,
+    "read_full": 115,
+    "read_partial": 16,
+    "headline_only": 37,
+    "alt_searches": 12,
+    "elapsed_s": 122.7
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 5,
+  "stocktwits_bears": 7,
+  "advisory_composite": 0.5328,
+  "brain_top_news": [
+    {
+      "headline": "forget smh the chip fund that charges 0 15 is beating it by 22 points this year",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00211
+    },
+    {
+      "headline": "wall street is wrong about these 2 chip stocks",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00871
+    },
+    {
+      "headline": "taiwan semiconductor september revenue surges 151224000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00387
+    },
+    {
+      "headline": "tsmcs global foundry market share hits record 725 in q220260910135624",
+      "source": "aninews.in",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00598
+    },
+    {
+      "headline": "forget smh chip fund charges 221518000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00201
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Dow's 300-point drop led by losses in shares of NVIDIA Corp., Amgen",
+      "source": "finviz",
+      "score": -0.972,
+      "url": "https://www.marketwatch.com/data-news/dow-s-300-point-drop-led-by-losses-in-shares-of-nvidia-corp-amgen-e20a7404-d2f6f5dd93c6?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia supplier Wistron's shares drop after it announces $1.5 billion global stock sale - CNBC",
+      "source": "google_news",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3cUkxRTNkckFPV0E1alVORURUem9QV3RSYWxaV1RScXY5X200LWRWVU02WVdjUHlrTElOd1loNlYwcmFJdTRUWGUwX01GdUcydjJySHlxVGVJWFEycjlHQW1RQm93czVPdEdvMTB3eVcwX1Uwb0N4R2NoZ9IBgAFBVV95cUxQSlprSjA1bjhJMlUtdzVaX2NKc05GSlhfRHBaVVdzSll4QzM4bGtrRGt0T3gyMnVxLWRQSHJSVWlDcno5UlhJaTVtczloMVFLRm1WdEZUc3kwQTZQMEhQeWRDZzNtNG13bi1GLUV5bnhXT3FVME9oa3lzOG5aTlo2Mg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Nvidia Drops Over 2% as Australia Targets a 125% AI-Capacity Jump",
+      "source": "finviz",
+      "score": -0.954,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-drops-over-2-australia-184933231.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "SpaceX Stock Chases 3-Week Winning Streak: CFO Says \u2018Very Strong\u2019 Nvidia Alliance Could Fuel 10-GW AI Push - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.935,
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNODVTNkxVQzJiRnRtVGZKZi0yX2t6enM0aHkweUxzZml6XzAxS2NzQTdQZUhPSndTb0dYUnZGQTQtMFJRTm5WVXhVYXZYa3JYT0NfY19uZVlWSENVUjV6Nk9SLVAxTXR6RW0xbVBuSzBtS3ZzMEt3czhMaHJrazhJWDExbG1KbDFfSnJqS2w0Y0tGYlBnV0E?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia-Backed MediaTek's Sales Soar 44% With AI Chip Momentum - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "score": 0.934,
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSjNfcF9qbW9aNUlBS2VMUDhpMmVmNkppUEpESEtxN1RMQ1gtd0tXckptcHNJRnYtX3h3MERuVEF3cWtuTEwwY0NZTW96SGhoRWhfTm1JNi1JU3hVQTd3d1huTFJKUXFPVHhhaE50bHc0bnA0ampGcTlCRkd0TUQxejIzd0lrdThfa3JOWW9Ca1BYMlBUWE83dzB0WTJKUQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia stock edges higher on Microsoft data center expansion report - Investing.com",
+      "source": "google_news",
+      "score": 0.931,
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQV09BalhIMTVsUUJTODJ4RDRyMk40ekZmUmhGOWY5elpEenp6YURqdVl1Qks4WHI2c1JJRk95OU8tWlpsQzFzNTd4WjdyTVlRVUlURXI2bnNfbWI1ay1YLS0zLURCYnNaS01yS2NPU3g1QnBFSmRRR1ZfVkNtRGhCSFJyUlZkUUtMMnBxWTYyUGRBb29hNGJNdXV0QlJmRmsyWDRUbXpzMEVKOU1TYjQyX2N6WmdrWFQ3OUFYaVRMT0Q4QQ?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
