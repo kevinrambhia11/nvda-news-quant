@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-09-10",
-  "generated_at": "2026-09-10T17:04:57",
+  "generated_at": "2026-09-11T15:45:06",
   "articles": [
     {
-      "headline": "google admits it just made search worse for europeans to dodge brussels fines",
-      "source": "webpronews.com",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.01669
-    },
-    {
-      "headline": "how to write captions that rank like google search results",
-      "source": "tribuneonlineng.com",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.01157
+      "headline": "why amazon is buying 60 billion of qualcomm chips",
+      "source": "siliconvalley.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00728
     },
     {
       "headline": "amazon ceo andy jassy explained why semiconductor",
       "source": "fool.com",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.01284
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00707
     },
     {
-      "headline": "ibm vet jennifer chronis joins amazon web services to lead dod business",
-      "source": "govconwire.com",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.01215
-    },
-    {
-      "headline": "malicious software on google ads",
-      "source": "xlii.space",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.00403
-    },
-    {
-      "headline": "meta platforms settles major lawsuit pays 18 billion",
+      "headline": "should you buy intel stock after a nearly fourfold year",
       "source": "fool.com",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.00767
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00581
     },
     {
-      "headline": "google warns of lower quality as it revamps search results",
-      "source": "gdnonline.com",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.00331
+      "headline": "asian stocks mixed as ai chip rally meets oil surge 1751573",
+      "source": "econotimes.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00035
     },
     {
-      "headline": "96301345 google investuje vo finsku 13 miliard eur do ai infrastruktury pojde o rekord v europe",
-      "source": "hnonline.sk",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.0054
+      "headline": "analysis does qualcomm s amazon server chip deal signal a channel shakeup",
+      "source": "crn.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00965
     },
     {
-      "headline": "google makes its largest ever european investment in finland",
-      "source": "news.az",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.01026
+      "headline": "cramer says qualcomm amazon collaboration 172539000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00596
     },
     {
-      "headline": "states that gave data centers billions in tax breaks are now ripping up the deals 101788947762264.html",
-      "source": "hindustantimes.com",
-      "category": "hyperscalers",
-      "weight": 0.005,
-      "impact": -0.00914
+      "headline": "tsmcs high na plan gives asml a catalyst but investors face two different timelines 1834574",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00149
+    },
+    {
+      "headline": "truist cuts broadcom stock target 143700999.html",
+      "source": "yahoo.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00583
+    },
+    {
+      "headline": "20260908 blue chip upgrades downgrades",
+      "source": "investorplace.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00313
+    },
+    {
+      "headline": "qualcomms amazon deal sent stock 140700972.html",
+      "source": "yahoo.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00927
     }
   ]
 }

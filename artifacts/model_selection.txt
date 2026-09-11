@@ -1,21 +1,20 @@
 ==================================================================
   Direction model - candidate selection (walk-forward OOS)
-  selection window: 2019-05-23 -> 2023-08-31  |  holdout: 2023-09-01 -> 2026-09-02
+  selection window: 2019-05-23 -> 2023-08-31  |  holdout: 2023-09-01 -> 2026-09-09
   judged on CLEAN window 2021-12-14 -> 2023-08-31 (nested news scorers trained < 2021-12-14)
   news2 / news2-decay / newsnet rows are EXPLORATORY second-use on a spent holdout - the live paper trail is the verdict
 ==================================================================
   candidate            Sharpe  +-SE     AUC    acc   expo
-  GBM deep + vol         0.66  0.76   0.515  0.520  48.3%
-  GBM deep + events      0.71  0.77   0.504  0.503  50.3%
-  GBM base + events      0.57  0.76   0.501  0.506  48.3%
-  GBM deep rolling-3y    0.19  0.76   0.479  0.476  44.1%
-  GBM deep calibrated    0.76  0.77   0.491  0.513  86.5%
-  GBM deep + cross       0.39  0.76   0.512  0.487  52.7%
-  GBM deep + news2       0.14  0.76   0.488  0.492  50.1%
-  GBM deep + news2-decay   0.91  0.77   0.498  0.506  44.3%
-  GBM deep + newsnet     0.41  0.76   0.490  0.506  41.5%
+  GBM deep + vol        -0.19  0.76   0.491  0.497  46.9%
+  GBM deep + events      0.29  0.76   0.496  0.494  51.5%
+  GBM base + events      0.84  0.77   0.510  0.490  49.2%
+  GBM deep rolling-3y    0.20  0.76   0.480  0.471  43.2%
+  GBM deep calibrated    0.86  0.77   0.491  0.515  88.4%
+  GBM deep + cross      -0.29  0.76   0.513  0.503  50.3%
+  GBM deep + news2       0.24  0.76   0.478  0.494  45.0%
+  GBM deep + news2-decay   0.21  0.76   0.499  0.501  46.4%
+  GBM deep + newsnet     0.73  0.77   0.485  0.503  44.1%
 ------------------------------------------------------------------
-  WINNER (by clean-window Sharpe): GBM deep + news2-decay [nested-validated]
-  Untouched holdout: Sharpe 0.97 (buy&hold 1.30) | AUC 0.487 | acc 0.490 | exposure 53.7%
-  (oos_predictions.csv starts at the nested boundary - earlier rows would be memorized)
+  WINNER (by clean-window Sharpe): GBM deep calibrated
+  Untouched holdout: Sharpe 1.26 (buy&hold 1.27) | AUC 0.513 | acc 0.554 | exposure 93.4%
 ==================================================================
