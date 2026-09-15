@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-09-15T17:08:31",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-15",
+  "last_close": 210.96,
+  "model_trained_through": "2026-09-09",
+  "gap_context": {
+    "prev_close": 210.96,
+    "latest": 212.24,
+    "gap_pct": 0.0061,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.5498,
+  "prob_big_move": 0.4867,
+  "big_move_threshold": 0.0124,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.1286,
+  "headline_count": 158,
+  "article_count": 187,
+  "fulltext": {
+    "stories": 158,
+    "read_full": 107,
+    "read_partial": 15,
+    "headline_only": 36,
+    "alt_searches": 12,
+    "elapsed_s": 137.1
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 9,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5156,
+  "brain_top_news": [
+    {
+      "headline": "3 hospitalized 7 others treated after bee attack at intel campus in chandler",
+      "source": "abc15.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00454
+    },
+    {
+      "headline": "is broadcom stock in trouble",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.0077
+    },
+    {
+      "headline": "stockstory 2026 9 14 lattice semiconductor amkor himax teradyne and entegris stocks trade down what you need to know",
+      "source": "financialcontent.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00449
+    },
+    {
+      "headline": "broadcom buys back irvine campus for 325m",
+      "source": "ocbj.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00489
+    },
+    {
+      "headline": "broadcom shares fall ai safety margin concerns 1875506",
+      "source": "ibtimes.com.au",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00512
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia and other chipmakers suffer as AI warnings raise spending concerns",
+      "source": "finviz",
+      "score": -0.972,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-other-chipmakers-suffer-ai-161200128.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Chip Stocks Tumble as AI Pacing Call Reaches Beyond Memory: Intel Drops 7%, AMD Sinks 6%, NVIDIA Pulls Back - 24/7 Wall St.",
+      "source": "google_news",
+      "score": -0.968,
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNWVotaFlCUllmUDFoWHpPdmtPamVBQzNkcTZCaW9TelVPa3ZmNGVnZ3dqRDE0ajduS0hUSEF1ekZRamNtb2Q5MXlnb0RBd1g4QXMweG50ZWFfdUp0ZS1DaFp2dEJfdDNkWGVQWHotOXZBeEFrU0wxNWtKTjRNX3F6b1lOaHNkOGJ5SGswMkV4aGFKbzlIMWJHXzlxdnNwTHpTaE1FbFBLYkN4M3JEZk1DWVdsODZ6VkhraEctYWVKRzcyRWJWN01kczJSdWtGVVFmUjRhYnAxUkJMbWE3SXFZ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "247wallst.com"
+    },
+    {
+      "title": "Dow falls 284 points on losses for Caterpillar, NVIDIA Corp. stocks",
+      "source": "finviz",
+      "score": -0.964,
+      "url": "https://www.marketwatch.com/data-news/dow-falls-284-points-on-losses-for-caterpillar-nvidia-corp-stocks-fed4eda8-a161457938e6?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Hyundai Motor Group bets on data, Nvidia, and in-house AI to speed autonomous driving rollout",
+      "source": "finviz",
+      "score": 0.91,
+      "url": "https://www.digitimes.com/news/a20260915PD205/hyundai-data-autonomous-driving-nvidia-hardware.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Foxconn Just Delivered a Major Bullish Signal for Nvidia Stock - Barchart.com",
+      "source": "google_news",
+      "score": 0.798,
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdnczdkUzYXFIQWIxMjhzMDlBdTcwTUZCcTJRYkhqU0JBZ09LbnlSX0E1ZHIyTnpoam44ZWR0SUNsdmZzUHNwMnY1SHNySjhtZTJ0Q2NNWXptTzNPaDZkaHR3T2ZoeFhLYlhOY3ktTXF0d3pGdWJETWswYXUwQ0NMNnZXQi16dHhvcXMwazZsY3lBN1BLNzhIdzJzY2hueGYyUWt5YWgzaWVsZw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "This Unassuming Stock is Trouncing Nvidia in 2026. Here\u2019s Why It\u2019s a No-Brainer Buy. - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.506,
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWmcwQnBNZ0YtQkR1RW1ZTm9RSHNubldSVVZocUp0MVRnQXNRNk01anA1NnJDajJfTEV5ekh4VUJXOHlwZXg2ZWFRc2ZkX0tXekx5cmJqcXduek50MjAwRUowaVlqVmNVQ05zeGVpejNTellPN3ltSDZsMmFxamZRVzRwX0hyNi12OGNjSm42a0g4ZEVKR0NuSmJLNkdCYTlHeXQxdlFn?oc=5",
+      "n_sources": 7,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

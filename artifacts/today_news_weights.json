@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-11",
-  "generated_at": "2026-09-11T17:04:13",
+  "entry_day": "2026-09-15",
+  "generated_at": "2026-09-15T17:04:19",
   "articles": [
     {
-      "headline": "forget smh the chip fund that charges 0 15 is beating it by 22 points this year",
-      "source": "247wallst.com",
+      "headline": "3 hospitalized 7 others treated after bee attack at intel campus in chandler",
+      "source": "abc15.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00211
+      "weight": 0.005,
+      "impact": -0.00454
     },
     {
-      "headline": "wall street is wrong about these 2 chip stocks",
+      "headline": "is broadcom stock in trouble",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00871
+      "weight": 0.005,
+      "impact": -0.0077
     },
     {
-      "headline": "taiwan semiconductor september revenue surges 151224000.html",
+      "headline": "stockstory 2026 9 14 lattice semiconductor amkor himax teradyne and entegris stocks trade down what you need to know",
+      "source": "financialcontent.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00449
+    },
+    {
+      "headline": "broadcom buys back irvine campus for 325m",
+      "source": "ocbj.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00489
+    },
+    {
+      "headline": "broadcom shares fall ai safety margin concerns 1875506",
+      "source": "ibtimes.com.au",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00512
+    },
+    {
+      "headline": "beyond nvidia how singapore earning its place semiconductor value chain",
+      "source": "businesstimes.com.sg",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00461
+    },
+    {
+      "headline": "broadcom stock trouble 180501000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00387
+      "weight": 0.005,
+      "impact": -0.00448
     },
     {
-      "headline": "tsmcs global foundry market share hits record 725 in q220260910135624",
-      "source": "aninews.in",
+      "headline": "intel shares fall ai slowdown chip selloff 1875501",
+      "source": "ibtimes.com.au",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00598
+      "weight": 0.005,
+      "impact": -0.00389
     },
     {
-      "headline": "forget smh chip fund charges 221518000.html",
-      "source": "aol.com",
+      "headline": "samsung qualcomm 2nm production optimization.html",
+      "source": "digitimes.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00201
+      "weight": 0.005,
+      "impact": -0.00562
     },
     {
-      "headline": "prediction taiwan semiconductors stock price 084500000.html",
-      "source": "aol.com",
+      "headline": "us market crash nvidia intel among chip stocks plunging up to 9 5 as ai slowdown fears hit wall street 11789395371565.ht",
+      "source": "livemint.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00131
-    },
-    {
-      "headline": "after selling micron broadcom and intel heres the",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00566
-    },
-    {
-      "headline": "huawei unveils new optical tech standard in challenge to nvidia broadcom",
-      "source": "nikkei.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00567
-    },
-    {
-      "headline": "wall street wrong 2 chip 090500000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00079
-    },
-    {
-      "headline": "qualcomm e amazon progettano insieme chip ai su misura per i data center",
-      "source": "tomshw.it",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00038
+      "weight": 0.005,
+      "impact": -0.00161
     }
   ]
 }
