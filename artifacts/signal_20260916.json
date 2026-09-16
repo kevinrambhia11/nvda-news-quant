@@ -1,0 +1,141 @@
+{
+  "generated_at": "2026-09-16T17:08:57",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-16",
+  "last_close": 212.17,
+  "model_trained_through": "2026-09-09",
+  "gap_context": {
+    "prev_close": 212.17,
+    "latest": 213.25,
+    "gap_pct": 0.0051,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.5465,
+  "prob_big_move": 0.5134,
+  "big_move_threshold": 0.0124,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.0476,
+  "headline_count": 166,
+  "article_count": 198,
+  "fulltext": {
+    "stories": 166,
+    "read_full": 111,
+    "read_partial": 18,
+    "headline_only": 37,
+    "alt_searches": 12,
+    "elapsed_s": 120.1
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 9,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.5254,
+  "brain_top_news": [
+    {
+      "headline": "asian stocks slip as ai rebound fades banks and chips face fresh pressure",
+      "source": "hellenicshippingnews.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00797
+    },
+    {
+      "headline": "cafc reverses dismissal of texasldpcs infringement suit against broadcom",
+      "source": "ipwatchdog.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.0081
+    },
+    {
+      "headline": "mediatek is using tsmcs cutting edge 2nm process for its latest chip",
+      "source": "engadget.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00507
+    },
+    {
+      "headline": "mediatek dimensity 9600 pro chip takes on samsung beats qualcomm to the 2nm finish line",
+      "source": "androidpolice.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00531
+    },
+    {
+      "headline": "mediatek dimensity 9600 pro tsmc 2nm chip 1875595",
+      "source": "ibtimes.com.au",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00367
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Chip Stocks Tumble as AI Pacing Call Reaches Beyond Memory: Intel Drops 7%, AMD Sinks 6%, NVIDIA Pulls Back - 247wallst.com",
+      "source": "google_news",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNWVotaFlCUllmUDFoWHpPdmtPamVBQzNkcTZCaW9TelVPa3ZmNGVnZ3dqRDE0ajduS0hUSEF1ekZRamNtb2Q5MXlnb0RBd1g4QXMweG50ZWFfdUp0ZS1DaFp2dEJfdDNkWGVQWHotOXZBeEFrU0wxNWtKTjRNX3F6b1lOaHNkOGJ5SGswMkV4aGFKbzlIMWJHXzlxdnNwTHpTaE1FbFBLYkN4M3JEZk1DWVdsODZ6VkhraEctYWVKRzcyRWJWN01kczJSdWtGVVFmUjRhYnAxUkJMbWE3SXFZ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "247wallst.com"
+    },
+    {
+      "title": "Nvidia supplier Wistron's shares drop after it announces $1.5 billion global stock sale - CNBC",
+      "source": "google_news",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3cUkxRTNkckFPV0E1alVORURUem9QV3RSYWxaV1RScXY5X200LWRWVU02WVdjUHlrTElOd1loNlYwcmFJdTRUWGUwX01GdUcydjJySHlxVGVJWFEycjlHQW1RQm93czVPdEdvMTB3eVcwX1Uwb0N4R2NoZ9IBgAFBVV95cUxQSlprSjA1bjhJMlUtdzVaX2NKc05GSlhfRHBaVVdzSll4QzM4bGtrRGt0T3gyMnVxLWRQSHJSVWlDcno5UlhJaTVtczloMVFLRm1WdEZUc3kwQTZQMEhQeWRDZzNtNG13bi1GLUV5bnhXT3FVME9oa3lzOG5aTlo2Mg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here\u2019s what to know. - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.931,
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNeXhhNU85c0VqbERFOS02Y1Zqb2RnbDQ0QXhSejZMMGdkMUV0LTVoSi1PQkpMQnNfdm5ESHRUcUV4bWtxb21SSXFQbnYyS1VSdmV3UVh5aWNFZ29KM0l1bW9qeldkZm9CemhJYmtVOTZkS0g5cHNSV01iRFA4ZTlXTFE2cEFXeFZnTlJTRHpHSV9CYlMwSmlqM1VsV29vUDByTzIxZkQzYmEycGJGY0lzSURQMnpsSXc2Vmpud09WUWgxS19mQ3ZfMkN3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NOK Stock Rises 5% Premarket: Nvidia-Powered AI-RAN Trials Expand, UK Defense Push Deepens - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.939,
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQLW91ZmdPMmd1T2hUZHpka1RJZzdxOFFET1VubDNIM2FvVVdOaS1zd2M1allBUU1INVpyalFfNnZCazlyTFBBeDBxMHBrM1B1Z013THdoeERwSEp5ekpqY2txNWJBbGw4OGlyNk9JU0xiaU9uY3BUS3hCTVh1XzIyNGpDaEZ0Y0V4emNYM2s1bXdvSDlLUlE?oc=5",
+      "n_sources": 3,
+      "also_from": [
+        "yahoo_rss",
+        "stocktwits"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "NVDA Stock Rises Premarket: Vera Rubin AI Accelerator Delivers 2X Profit Per GW Than Blackwell, Semianalysis Says - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.927,
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZ293di1DU0Q0OXBJcmdSRmR3Y2lzVU5JcDY0cmdFY3RFcTB2b051a25aWS1ZM3dyTHJVWjB1TnY5VEJ6ZVkySzRzeVFtekdxY1RkTUotb2pFQnltMUhvaVlac1VESGtpODhQTEhycElYaGhYb0U1ODhaOXU5SEd0azBxTm5LLUNrSENMNlpuM1FPQXBkZG53cDRyZE8?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia stock moves closer to all-time high - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.901,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNUhYQzNDeE0tUk5IOExEUk9IcG5ydGZwQ3cwNGFVb2d0bWZIMXpFNGR2d0ZpczA3UlhVa2EzT0VtNXczV1VZWllzMkJZQ0dPc25zNWd6OXo3aDV6TFhjVndOX3pKUkxVOEJsSktsbEpKLWlSTHVvdkdEZUdtU3ZrbnZZU1p4QjhlWFlOY0lfejFNZUZ4eFNEQ3lVUVkxRXk3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

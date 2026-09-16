@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-15",
-  "generated_at": "2026-09-15T17:04:19",
+  "entry_day": "2026-09-16",
+  "generated_at": "2026-09-16T17:04:24",
   "articles": [
     {
-      "headline": "3 hospitalized 7 others treated after bee attack at intel campus in chandler",
-      "source": "abc15.com",
+      "headline": "asian stocks slip as ai rebound fades banks and chips face fresh pressure",
+      "source": "hellenicshippingnews.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00454
+      "weight": 0.0049,
+      "impact": -0.00797
     },
     {
-      "headline": "is broadcom stock in trouble",
-      "source": "fool.com",
+      "headline": "cafc reverses dismissal of texasldpcs infringement suit against broadcom",
+      "source": "ipwatchdog.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.0077
+      "weight": 0.0048,
+      "impact": -0.0081
     },
     {
-      "headline": "stockstory 2026 9 14 lattice semiconductor amkor himax teradyne and entegris stocks trade down what you need to know",
-      "source": "financialcontent.com",
+      "headline": "mediatek is using tsmcs cutting edge 2nm process for its latest chip",
+      "source": "engadget.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00449
+      "weight": 0.0048,
+      "impact": -0.00507
     },
     {
-      "headline": "broadcom buys back irvine campus for 325m",
-      "source": "ocbj.com",
+      "headline": "mediatek dimensity 9600 pro chip takes on samsung beats qualcomm to the 2nm finish line",
+      "source": "androidpolice.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00489
+      "weight": 0.0048,
+      "impact": -0.00531
     },
     {
-      "headline": "broadcom shares fall ai safety margin concerns 1875506",
+      "headline": "mediatek dimensity 9600 pro tsmc 2nm chip 1875595",
       "source": "ibtimes.com.au",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00512
+      "weight": 0.0048,
+      "impact": -0.00367
     },
     {
-      "headline": "beyond nvidia how singapore earning its place semiconductor value chain",
+      "headline": "broadcoms real constraint isnt demand its supply 1837906",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00325
+    },
+    {
+      "headline": "us stocks wall street ends down calls ai slowdown pummel chipmakers",
       "source": "businesstimes.com.sg",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00461
+      "weight": 0.0048,
+      "impact": -0.00105
     },
     {
-      "headline": "broadcom stock trouble 180501000.html",
-      "source": "aol.com",
+      "headline": "20260914 blue chip upgrades downgrades",
+      "source": "investorplace.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00448
+      "weight": 0.0048,
+      "impact": -0.00368
     },
     {
-      "headline": "intel shares fall ai slowdown chip selloff 1875501",
-      "source": "ibtimes.com.au",
+      "headline": "chip stocks recovered today and the indexes fell",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00389
+      "weight": 0.0048,
+      "impact": -0.00121
     },
     {
-      "headline": "samsung qualcomm 2nm production optimization.html",
-      "source": "digitimes.com",
+      "headline": "dow jones apple stock aapl nvidia chipmaker tsm amd bloom",
+      "source": "investors.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00562
-    },
-    {
-      "headline": "us market crash nvidia intel among chip stocks plunging up to 9 5 as ai slowdown fears hit wall street 11789395371565.ht",
-      "source": "livemint.com",
-      "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00161
+      "weight": 0.0048,
+      "impact": -0.00492
     }
   ]
 }
