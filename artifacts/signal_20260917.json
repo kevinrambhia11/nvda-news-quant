@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-09-17T17:07:20",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-17",
+  "last_close": 213.9,
+  "model_trained_through": "2026-09-09",
+  "gap_context": {
+    "prev_close": 213.9,
+    "latest": 216.7,
+    "gap_pct": 0.0131,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.5353,
+  "prob_big_move": 0.5134,
+  "big_move_threshold": 0.0121,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.027,
+  "headline_count": 174,
+  "article_count": 205,
+  "fulltext": {
+    "stories": 174,
+    "read_full": 109,
+    "read_partial": 20,
+    "headline_only": 45,
+    "alt_searches": 12,
+    "elapsed_s": 96.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 8,
+  "stocktwits_bears": 4,
+  "advisory_composite": 0.5207,
+  "brain_top_news": [
+    {
+      "headline": "taiwan semiconductor is a no brainer buy on repeat and not for the reason you think",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00532
+    },
+    {
+      "headline": "wall street sees 56 upside in broadcom after summer selloff",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00995
+    },
+    {
+      "headline": "3 semiconductor stocks to buy before ai demand explodes in september",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0055,
+      "impact": -0.00765
+    },
+    {
+      "headline": "european cloud watchdog slams broadcom over vmware licensing practices issues warnings about sap 2.html",
+      "source": "networkworld.com",
+      "category": "competitors",
+      "weight": 0.0055,
+      "impact": -0.00408
+    },
+    {
+      "headline": "sk hynix intel in talks over us memory chip plant reuters says",
+      "source": "financial-news.co.uk",
+      "category": "competitors",
+      "weight": 0.0055,
+      "impact": -0.00194
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia supplier Wistron's shares drop after it announces $1.5 billion global stock sale - CNBC",
+      "source": "google_news",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3cUkxRTNkckFPV0E1alVORURUem9QV3RSYWxaV1RScXY5X200LWRWVU02WVdjUHlrTElOd1loNlYwcmFJdTRUWGUwX01GdUcydjJySHlxVGVJWFEycjlHQW1RQm93czVPdEdvMTB3eVcwX1Uwb0N4R2NoZ9IBgAFBVV95cUxQSlprSjA1bjhJMlUtdzVaX2NKc05GSlhfRHBaVVdzSll4QzM4bGtrRGt0T3gyMnVxLWRQSHJSVWlDcno5UlhJaTVtczloMVFLRm1WdEZUc3kwQTZQMEhQeWRDZzNtNG13bi1GLUV5bnhXT3FVME9oa3lzOG5aTlo2Mg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Nvidia Stock Drops. It\u2019s Still the Best Chip Bet in an AI Slowdown. - Barron's",
+      "source": "Barron's",
+      "score": -0.893,
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNd28zaEgxYzJOZi1kWWhWa0Y5RG5za0VEUDN5dEVXTjVPdzhnTlhLX3BIaUdTNUEtN20zRWhkandEbDlZaTNiX0VrUkQ2aFQ3Z3BvbmlDeTI5enc2RUJqaTkzV3FZZWxZUmxqMXBNZ25MNnRLMDhPYmV1aTd0WWc3MERLWQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here\u2019s what to know. - marketwatch.com",
+      "source": "marketwatch.com",
+      "score": -0.871,
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNeXhhNU85c0VqbERFOS02Y1Zqb2RnbDQ0QXhSejZMMGdkMUV0LTVoSi1PQkpMQnNfdm5ESHRUcUV4bWtxb21SSXFQbnYyS1VSdmV3UVh5aWNFZ29KM0l1bW9qeldkZm9CemhJYmtVOTZkS0g5cHNSV01iRFA4ZTlXTFE2cEFXeFZnTlJTRHpHSV9CYlMwSmlqM1VsV29vUDByTzIxZkQzYmEycGJGY0lzSURQMnpsSXc2Vmpud09WUWgxS19mQ3ZfMkN3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NOK Stock Rises 5% Premarket: Nvidia-Powered AI-RAN Trials Expand, UK Defense Push Deepens",
+      "source": "finviz",
+      "score": 0.94,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nok-stock-rises-5-premarket-103712034.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "NVIDIA stock price up 0.82% on Wednesday - StockInvest.us",
+      "source": "google_news",
+      "score": 0.923,
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTnNzaFBMX2lNT0RTMm4zN25OZHlIek9RM0hQODlEN0dnTm1ETTlaUFlhUExLYTRtc3FZcXU4SDBKWnFzNi1lSThzNi1DbFhlNk84Zk9CbHJiaG5ob0drV0VhY01MTTI2YkZlN2p0eVYtR1ZYRVR0Q1pETjJ6cWtjaDBRN1h3bVJIVmE0?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "stockinvest.us"
+    },
+    {
+      "title": "NVIDIA Tokenized Stock Surges As RWAs Hit $47 Billion - MarketForces Africa",
+      "source": "google_news",
+      "score": 0.895,
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNOHlqYnN5bkJZZVFVOEpMa0tJX2piNkxOVVFMczRLQVJrclFmanM4ZHhTckxWZktmNmVZREpuTm5PYkdyaUItRmVabU9vR3ROYjVRd0FfN0JsVERvVkxnQm1YUWNzc3NwSDNMR1l1UU1xWjhIcUszOXBudlhxOWI5b280WHJkdw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "dmarketforces.com"
+    }
+  ]
+}

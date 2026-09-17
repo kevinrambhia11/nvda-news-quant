@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-16",
-  "generated_at": "2026-09-16T17:04:24",
+  "entry_day": "2026-09-17",
+  "generated_at": "2026-09-17T17:04:01",
   "articles": [
     {
-      "headline": "asian stocks slip as ai rebound fades banks and chips face fresh pressure",
-      "source": "hellenicshippingnews.com",
+      "headline": "taiwan semiconductor is a no brainer buy on repeat and not for the reason you think",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00797
+      "weight": 0.0056,
+      "impact": -0.00532
     },
     {
-      "headline": "cafc reverses dismissal of texasldpcs infringement suit against broadcom",
-      "source": "ipwatchdog.com",
+      "headline": "wall street sees 56 upside in broadcom after summer selloff",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.0081
+      "weight": 0.0056,
+      "impact": -0.00995
     },
     {
-      "headline": "mediatek is using tsmcs cutting edge 2nm process for its latest chip",
-      "source": "engadget.com",
+      "headline": "3 semiconductor stocks to buy before ai demand explodes in september",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00507
+      "weight": 0.0055,
+      "impact": -0.00765
     },
     {
-      "headline": "mediatek dimensity 9600 pro chip takes on samsung beats qualcomm to the 2nm finish line",
-      "source": "androidpolice.com",
+      "headline": "european cloud watchdog slams broadcom over vmware licensing practices issues warnings about sap 2.html",
+      "source": "networkworld.com",
       "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00531
+      "weight": 0.0055,
+      "impact": -0.00408
     },
     {
-      "headline": "mediatek dimensity 9600 pro tsmc 2nm chip 1875595",
-      "source": "ibtimes.com.au",
+      "headline": "sk hynix intel in talks over us memory chip plant reuters says",
+      "source": "financial-news.co.uk",
       "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00367
+      "weight": 0.0055,
+      "impact": -0.00194
     },
     {
-      "headline": "broadcoms real constraint isnt demand its supply 1837906",
-      "source": "insidermonkey.com",
-      "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00325
-    },
-    {
-      "headline": "us stocks wall street ends down calls ai slowdown pummel chipmakers",
-      "source": "businesstimes.com.sg",
-      "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00105
-    },
-    {
-      "headline": "20260914 blue chip upgrades downgrades",
-      "source": "investorplace.com",
-      "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00368
-    },
-    {
-      "headline": "chip stocks recovered today and the indexes fell",
+      "headline": "intel stock investors should pay attention to this potential sk hynix deal",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00121
+      "weight": 0.0055,
+      "impact": -0.00591
+    },
+    {
+      "headline": "3 semiconductor stocks buy ai 100013000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0055,
+      "impact": -0.00525
     },
     {
       "headline": "dow jones apple stock aapl nvidia chipmaker tsm amd bloom",
       "source": "investors.com",
       "category": "competitors",
-      "weight": 0.0048,
+      "weight": 0.0055,
       "impact": -0.00492
+    },
+    {
+      "headline": "prediction 1000 invested in taiwan semiconductor t",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0055,
+      "impact": -0.00379
+    },
+    {
+      "headline": "taiwan semiconductor no brainer buy 144535000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0055,
+      "impact": -0.00239
     }
   ]
 }
