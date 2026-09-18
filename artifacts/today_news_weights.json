@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-09-17",
-  "generated_at": "2026-09-17T17:04:01",
+  "generated_at": "2026-09-18T15:45:43",
   "articles": [
     {
       "headline": "taiwan semiconductor is a no brainer buy on repeat and not for the reason you think",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00532
-    },
-    {
-      "headline": "wall street sees 56 upside in broadcom after summer selloff",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00995
+      "weight": 0.0062,
+      "impact": -0.00896
     },
     {
       "headline": "3 semiconductor stocks to buy before ai demand explodes in september",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00765
+      "weight": 0.0062,
+      "impact": -0.01325
     },
     {
-      "headline": "european cloud watchdog slams broadcom over vmware licensing practices issues warnings about sap 2.html",
-      "source": "networkworld.com",
+      "headline": "taiwan semiconductor vs asml theres actually one true dominant picks and shovels play",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00408
+      "weight": 0.0062,
+      "impact": 0.00232
     },
     {
-      "headline": "sk hynix intel in talks over us memory chip plant reuters says",
-      "source": "financial-news.co.uk",
+      "headline": "wall street sees 56 upside in broadcom after summer selloff",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00194
-    },
-    {
-      "headline": "intel stock investors should pay attention to this potential sk hynix deal",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00591
+      "weight": 0.0061,
+      "impact": -0.01761
     },
     {
       "headline": "3 semiconductor stocks buy ai 100013000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00525
+      "weight": 0.0061,
+      "impact": -0.00877
+    },
+    {
+      "headline": "qualcomm nasdaq qcom hits two month high as amazon ai chip deal reshapes growth outlook",
+      "source": "foreignpolicyjournal.com",
+      "category": "competitors",
+      "weight": 0.0061,
+      "impact": -0.00213
+    },
+    {
+      "headline": "sk hynix intel in talks over us memory chip plant reuters says",
+      "source": "financial-news.co.uk",
+      "category": "competitors",
+      "weight": 0.0061,
+      "impact": -0.00451
     },
     {
       "headline": "dow jones apple stock aapl nvidia chipmaker tsm amd bloom",
       "source": "investors.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00492
+      "weight": 0.0061,
+      "impact": -0.01557
     },
     {
-      "headline": "prediction 1000 invested in taiwan semiconductor t",
-      "source": "fool.com",
+      "headline": "european cloud watchdog slams broadcom over vmware licensing practices issues warnings about sap 2.html",
+      "source": "networkworld.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00379
+      "weight": 0.0061,
+      "impact": -0.00568
     },
     {
-      "headline": "taiwan semiconductor no brainer buy 144535000.html",
-      "source": "aol.com",
+      "headline": "us chip curbs have sharply restrained china high end ai chip production chip war author chris miller",
+      "source": "chinanationalnews.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00239
+      "weight": 0.0061,
+      "impact": 0.00286
     }
   ]
 }

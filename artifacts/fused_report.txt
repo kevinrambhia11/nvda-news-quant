@@ -1,12 +1,12 @@
 ==================================================================
   Direction x volatility fusion - untouched holdout only
   (days used to select either model are excluded)
-  2023-09-01 -> 2026-09-09  (757 trading days)
+  2023-09-01 -> 2026-09-16  (762 trading days)
   (sizing: 30% ann target vol, no leverage, costs 0.05%/change)
 ==================================================================
   leg                            CAGR  Sharpe    MaxDD  AvgExp
-  direction-only                61.1%    1.26   -46.6%   93.4%
-  fused (sign x vol size)       41.4%    1.26   -32.4%   71.9%
-  vol-sized long                42.8%    1.26   -29.9%   76.5%
-  buy & hold                    64.3%    1.27   -42.8%  100.0%
+  direction-only                71.6%    1.38   -46.2%   95.9%
+  fused (sign x vol size)       49.9%    1.43   -32.1%   73.9%
+  vol-sized long                42.0%    1.24   -29.9%   76.6%
+  buy & hold                    63.2%    1.26   -42.8%  100.0%
 ==================================================================

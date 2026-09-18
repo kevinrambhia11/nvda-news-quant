@@ -1,20 +1,20 @@
 ==================================================================
   Direction model - candidate selection (walk-forward OOS)
-  selection window: 2019-05-23 -> 2023-08-31  |  holdout: 2023-09-01 -> 2026-09-09
+  selection window: 2019-05-23 -> 2023-08-31  |  holdout: 2023-09-01 -> 2026-09-16
   judged on CLEAN window 2021-12-14 -> 2023-08-31 (nested news scorers trained < 2021-12-14)
   news2 / news2-decay / newsnet rows are EXPLORATORY second-use on a spent holdout - the live paper trail is the verdict
 ==================================================================
   candidate            Sharpe  +-SE     AUC    acc   expo
-  GBM deep + vol        -0.19  0.76   0.491  0.497  46.9%
-  GBM deep + events      0.29  0.76   0.496  0.494  51.5%
-  GBM base + events      0.84  0.77   0.510  0.490  49.2%
-  GBM deep rolling-3y    0.20  0.76   0.480  0.471  43.2%
-  GBM deep calibrated    0.86  0.77   0.491  0.515  88.4%
-  GBM deep + cross      -0.29  0.76   0.513  0.503  50.3%
-  GBM deep + news2       0.24  0.76   0.478  0.494  45.0%
-  GBM deep + news2-decay   0.21  0.76   0.499  0.501  46.4%
-  GBM deep + newsnet     0.73  0.77   0.485  0.503  44.1%
+  GBM deep + vol         0.45  0.76   0.509  0.513  45.2%
+  GBM deep + events      0.71  0.77   0.507  0.499  50.3%
+  GBM base + events      0.62  0.76   0.502  0.503  50.1%
+  GBM deep rolling-3y    0.21  0.76   0.465  0.459  44.3%
+  GBM deep calibrated    1.03  0.77   0.475  0.506  91.9%
+  GBM deep + cross       0.04  0.76   0.509  0.506  53.6%
+  GBM deep + news2       0.20  0.76   0.481  0.497  46.9%
+  GBM deep + news2-decay   0.44  0.76   0.494  0.499  43.9%
+  GBM deep + newsnet     0.79  0.77   0.486  0.501  42.5%
 ------------------------------------------------------------------
   WINNER (by clean-window Sharpe): GBM deep calibrated
-  Untouched holdout: Sharpe 1.26 (buy&hold 1.27) | AUC 0.513 | acc 0.554 | exposure 93.4%
+  Untouched holdout: Sharpe 1.38 (buy&hold 1.26) | AUC 0.516 | acc 0.551 | exposure 95.9%
 ==================================================================
