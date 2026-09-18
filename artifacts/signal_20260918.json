@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-09-18T17:10:02",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-18",
+  "last_close": 219.34,
+  "model_trained_through": "2026-09-16",
+  "gap_context": {
+    "prev_close": 219.34,
+    "latest": 220.03,
+    "gap_pct": 0.0031,
+    "session": "pre-market",
+    "as_of_et": "07:40 ET"
+  },
+  "model_prob_up": 0.5331,
+  "prob_big_move": 0.5166,
+  "big_move_threshold": 0.0127,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.1003,
+  "headline_count": 169,
+  "article_count": 199,
+  "fulltext": {
+    "stories": 169,
+    "read_full": 109,
+    "read_partial": 15,
+    "headline_only": 45,
+    "alt_searches": 12,
+    "elapsed_s": 116.9
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 8,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5382,
+  "brain_top_news": [
+    {
+      "headline": "qualcomm just rallied 18 in a month take profits or buy more",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.00509
+    },
+    {
+      "headline": "investors want to know when broadcoms custom hyperscaler chips will move share prices",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.00819
+    },
+    {
+      "headline": "meta can save 8 5 billion in 2027 by using its own mtia chips",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": 0.00049
+    },
+    {
+      "headline": "these 4 stocks could benefit most from a 3 2 trillion semiconductor opportunity",
+      "source": "technews.tw",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.01637
+    },
+    {
+      "headline": "jim cramer on broadcom avgo the stock may be too cheap to ignore 1839068",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.01196
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia supplier Wistron's shares drop after it announces $1.5 billion global stock sale - CNBC",
+      "source": "google_news",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3cUkxRTNkckFPV0E1alVORURUem9QV3RSYWxaV1RScXY5X200LWRWVU02WVdjUHlrTElOd1loNlYwcmFJdTRUWGUwX01GdUcydjJySHlxVGVJWFEycjlHQW1RQm93czVPdEdvMTB3eVcwX1Uwb0N4R2NoZ9IBgAFBVV95cUxQSlprSjA1bjhJMlUtdzVaX2NKc05GSlhfRHBaVVdzSll4QzM4bGtrRGt0T3gyMnVxLWRQSHJSVWlDcno5UlhJaTVtczloMVFLRm1WdEZUc3kwQTZQMEhQeWRDZzNtNG13bi1GLUV5bnhXT3FVME9oa3lzOG5aTlo2Mg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Nvidia Stock Drops. It\u2019s Still the Best Chip Bet in an AI Slowdown. - Barron's",
+      "source": "google_news",
+      "score": -0.893,
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNd28zaEgxYzJOZi1kWWhWa0Y5RG5za0VEUDN5dEVXTjVPdzhnTlhLX3BIaUdTNUEtN20zRWhkandEbDlZaTNiX0VrUkQ2aFQ3Z3BvbmlDeTI5enc2RUJqaTkzV3FZZWxZUmxqMXBNZ25MNnRLMDhPYmV1aTd0WWc3MERLWQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "How Far Can NVIDIA Stock Fall In A Demand Scare? - Trefis",
+      "source": "google_news",
+      "score": -0.741,
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQRjZDV05OUkJuYlZwRHFTSVZPbTV1Uk4xblZDWVE4MU01MUJEUzB4dEQzZ3c3cjRHUkVKWk9aVzNhWExIY291TzZjYzlHWDhEWE9mdDBGaEtMWWItZmlQZ0g2Mk1jR0RsdndHTVJSS0QzTzVBZ281WjFuZjlVclVYV1VQUjJ5TnF4SHRKNWdxWVJxckRZZTdwTGZkUXg3aF9KdGRCNlRQbEtmbXZu?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.trefis.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Gains 2.5% as Huawei Compresses Its 2027 Roadmap",
+      "source": "finviz",
+      "score": 0.938,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-gains-2-5-huawei-172854982.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "AMD Jumps 7% as Semiconductor Rebound Reaches a Third Session; Broadcom Rises 3%, NVIDIA Edges Higher - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.925,
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUEdiMWFJUkJPdHBGUThBWTVzY1hjQjg0NjRiMkkzMFZ1dEo1eW02Vm1CNTlMd1VUdHNOR2JBR0k4cGRHWmJWcnJUNDc3d3lUVnhPVW5MOEVYTEw1ZG8tenU5bnFKRlpHV3VzR09yZ005RHFNTnNRRGRkZW9haFd5LXZaLUpvXzJMQ0p1clVTSFhTX2Zvbzg0b1VtbkdmU1k?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nebius Stock Jumps 9% After Raising GPU Rates",
+      "source": "finviz",
+      "score": 0.921,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nebius-stock-jumps-9-raising-121106422.html",
+      "n_sources": 2,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

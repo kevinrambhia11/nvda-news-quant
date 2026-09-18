@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-17",
-  "generated_at": "2026-09-18T15:45:43",
+  "entry_day": "2026-09-18",
+  "generated_at": "2026-09-18T17:05:58",
   "articles": [
     {
-      "headline": "taiwan semiconductor is a no brainer buy on repeat and not for the reason you think",
+      "headline": "qualcomm just rallied 18 in a month take profits or buy more",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0062,
-      "impact": -0.00896
+      "weight": 0.006,
+      "impact": -0.00509
     },
     {
-      "headline": "3 semiconductor stocks to buy before ai demand explodes in september",
+      "headline": "investors want to know when broadcoms custom hyperscaler chips will move share prices",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0062,
-      "impact": -0.01325
+      "weight": 0.006,
+      "impact": -0.00819
     },
     {
-      "headline": "taiwan semiconductor vs asml theres actually one true dominant picks and shovels play",
+      "headline": "meta can save 8 5 billion in 2027 by using its own mtia chips",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0062,
-      "impact": 0.00232
+      "weight": 0.006,
+      "impact": 0.00049
     },
     {
-      "headline": "wall street sees 56 upside in broadcom after summer selloff",
-      "source": "247wallst.com",
+      "headline": "these 4 stocks could benefit most from a 3 2 trillion semiconductor opportunity",
+      "source": "technews.tw",
       "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.01761
+      "weight": 0.006,
+      "impact": -0.01637
     },
     {
-      "headline": "3 semiconductor stocks buy ai 100013000.html",
-      "source": "aol.com",
+      "headline": "jim cramer on broadcom avgo the stock may be too cheap to ignore 1839068",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00877
+      "weight": 0.006,
+      "impact": -0.01196
     },
     {
-      "headline": "qualcomm nasdaq qcom hits two month high as amazon ai chip deal reshapes growth outlook",
+      "headline": "sk hynix says exploring options after report of intel tie up 14031654.html",
+      "source": "moneycontrol.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.00158
+    },
+    {
+      "headline": "intels stock rises as investors hope memory chips can mark the next step in its turnaround",
+      "source": "morningstar.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.00673
+    },
+    {
+      "headline": "mediatek stock surpasses qualcomm nasdaq qcom in market cap as dimensity 9600 pro targets premium smartphone turf",
       "source": "foreignpolicyjournal.com",
       "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00213
+      "weight": 0.0059,
+      "impact": -0.00839
     },
     {
-      "headline": "sk hynix intel in talks over us memory chip plant reuters says",
-      "source": "financial-news.co.uk",
+      "headline": "despite hype broadcom keeps edging 125125000.html",
+      "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00451
+      "weight": 0.0059,
+      "impact": -0.00736
     },
     {
-      "headline": "dow jones apple stock aapl nvidia chipmaker tsm amd bloom",
-      "source": "investors.com",
+      "headline": "gasgoos gu xiaoying global automotive chip market to reach 969 billion in 2029 2100427270383894529",
+      "source": "gasgoo.com",
       "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.01557
-    },
-    {
-      "headline": "european cloud watchdog slams broadcom over vmware licensing practices issues warnings about sap 2.html",
-      "source": "networkworld.com",
-      "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00568
-    },
-    {
-      "headline": "us chip curbs have sharply restrained china high end ai chip production chip war author chris miller",
-      "source": "chinanationalnews.com",
-      "category": "competitors",
-      "weight": 0.0061,
-      "impact": 0.00286
+      "weight": 0.0059,
+      "impact": -0.00559
     }
   ]
 }
