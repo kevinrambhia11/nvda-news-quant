@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-18",
-  "generated_at": "2026-09-18T17:05:58",
+  "entry_day": "2026-09-21",
+  "generated_at": "2026-09-21T17:06:11",
   "articles": [
     {
-      "headline": "qualcomm just rallied 18 in a month take profits or buy more",
-      "source": "247wallst.com",
+      "headline": "intels 14a process is currently being evaluated by amazon apple amd google tesla microsoft nvidia and qualcomm according",
+      "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00509
+      "weight": 0.0026,
+      "impact": 0.00109
     },
     {
-      "headline": "investors want to know when broadcoms custom hyperscaler chips will move share prices",
-      "source": "247wallst.com",
+      "headline": "tsmcs operations boss says ai cannot fully overcome limitations to design next generation chip manufacturing tech such a",
+      "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00819
+      "weight": 0.0025,
+      "impact": 0.0111
     },
     {
-      "headline": "meta can save 8 5 billion in 2027 by using its own mtia chips",
-      "source": "247wallst.com",
+      "headline": "tsmc secures approval for sub 1 4 nanometer manufacturing plants says report as race with intel heats up",
+      "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": 0.00049
+      "weight": 0.0025,
+      "impact": 0.00334
     },
     {
-      "headline": "these 4 stocks could benefit most from a 3 2 trillion semiconductor opportunity",
-      "source": "technews.tw",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01637
-    },
-    {
-      "headline": "jim cramer on broadcom avgo the stock may be too cheap to ignore 1839068",
-      "source": "insidermonkey.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01196
-    },
-    {
-      "headline": "sk hynix says exploring options after report of intel tie up 14031654.html",
-      "source": "moneycontrol.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00158
-    },
-    {
-      "headline": "intels stock rises as investors hope memory chips can mark the next step in its turnaround",
+      "headline": "2 undervalued semiconductor stocks buy while market is skeptical ai growth",
       "source": "morningstar.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00673
+      "weight": 0.0025,
+      "impact": -0.01251
     },
     {
-      "headline": "mediatek stock surpasses qualcomm nasdaq qcom in market cap as dimensity 9600 pro targets premium smartphone turf",
-      "source": "foreignpolicyjournal.com",
-      "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.00839
-    },
-    {
-      "headline": "despite hype broadcom keeps edging 125125000.html",
+      "headline": "nividia dominance fades opening broadcom 121911000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.00736
+      "weight": 0.0025,
+      "impact": -0.01264
     },
     {
-      "headline": "gasgoos gu xiaoying global automotive chip market to reach 969 billion in 2029 2100427270383894529",
-      "source": "gasgoo.com",
+      "headline": "jim cramer calls intel intc the best stock in show and micron mu no 2 1840300",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.00559
+      "weight": 0.0025,
+      "impact": -0.01122
+    },
+    {
+      "headline": "intel 14a testuje 8 obrich americkych firem od amd po teslu",
+      "source": "svethardware.cz",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": 0.00453
+    },
+    {
+      "headline": "prediction amd biggest growth opportunity 140028000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": -0.00122
+    },
+    {
+      "headline": "intel foundry produkcja ukladow apple amd google microsoft tesla",
+      "source": "telepolis.pl",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": -0.00348
+    },
+    {
+      "headline": "qualcomm nasdaq qcom drops 6 as month long rally unwinds while skyworks and qorvo also slip",
+      "source": "foreignpolicyjournal.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": -0.00205
     }
   ]
 }

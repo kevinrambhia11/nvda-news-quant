@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-09-21T17:10:43",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-21",
+  "last_close": 222.27,
+  "model_trained_through": "2026-09-16",
+  "gap_context": {
+    "prev_close": 222.27,
+    "latest": 224.11,
+    "gap_pct": 0.0083,
+    "session": "pre-market",
+    "as_of_et": "07:40 ET"
+  },
+  "model_prob_up": 0.5331,
+  "prob_big_move": 0.5166,
+  "big_move_threshold": 0.0121,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0217,
+  "headline_count": 164,
+  "article_count": 196,
+  "fulltext": {
+    "stories": 164,
+    "read_full": 103,
+    "read_partial": 18,
+    "headline_only": 43,
+    "alt_searches": 12,
+    "elapsed_s": 157.7
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 4,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5264,
+  "brain_top_news": [
+    {
+      "headline": "intels 14a process is currently being evaluated by amazon apple amd google tesla microsoft nvidia and qualcomm according",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0026,
+      "impact": 0.00109
+    },
+    {
+      "headline": "tsmcs operations boss says ai cannot fully overcome limitations to design next generation chip manufacturing tech such a",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": 0.0111
+    },
+    {
+      "headline": "tsmc secures approval for sub 1 4 nanometer manufacturing plants says report as race with intel heats up",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": 0.00334
+    },
+    {
+      "headline": "2 undervalued semiconductor stocks buy while market is skeptical ai growth",
+      "source": "morningstar.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": -0.01251
+    },
+    {
+      "headline": "nividia dominance fades opening broadcom 121911000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": -0.01264
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia Stock (NVDA) Slips as Huawei Accelerates an AI Chip Launch - TipRanks",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOdlMtdWtQeW1aZXlrNjV1YXVvX0FaSm1uSGE4OVZheW80dXlhYjI2OHlhdTJvQ2lQbnl3T09sMmtPd3dCNHhEZGtzeldHRVhJaVlBajA1TGFGTjZ3Vk5yQllHRkFmRWZ6aE1MMEluUHZWaWs1RGNFNTRpaHdWY2tXRnBjVF9ndjZvY0pHbW12RjNoZExpYWg4aA?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.tipranks.com"
+    },
+    {
+      "title": "Nvidia Stock Keeps Failing to Retest Its Record High as Headwinds Rise - Benzinga",
+      "source": "google_news",
+      "score": -0.948,
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOM3V3Qi1RN2lfNWpBNVVXZF9rR2s4LVV3ZjhFcVc4TUgxUEJiaXdEdkF3WTE0dHRWTXlncU0yeEpJV1FhNG1DZUQ5VDFGOVR2c0RvUEtOVGkwMkhURXNpR2NHdmFsRS0weUF2UjB3WHVnZTZyNzh6TEEyYmZ3OExTZ09vOEZxUGlzSVItSFZjN0xoeWlxUDBiaUc1dHdROGs3djB0WWdSMFZGNHhpSDd0RkpwaUcyNWxqRHVuYmJneGNfNkF2eVE?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.benzinga.com"
+    },
+    {
+      "title": "Dow Drops To Record Worst Week In Six Months Amid Elevated Yields, Oil  NVDA, TSLA, SPCX, ONON In Focus",
+      "source": "finviz",
+      "score": -0.948,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/dow-drops-record-worst-week-233558682.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia stock moves closer to all-time high - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.901,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNUhYQzNDeE0tUk5IOExEUk9IcG5ydGZwQ3cwNGFVb2d0bWZIMXpFNGR2d0ZpczA3UlhVa2EzT0VtNXczV1VZWllzMkJZQ0dPc25zNWd6OXo3aDV6TFhjVndOX3pKUkxVOEJsSktsbEpKLWlSTHVvdkdEZUdtU3ZrbnZZU1p4QjhlWFlOY0lfejFNZUZ4eFNEQ3lVUVkxRXk3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Chip Sales Could Double Next Year, CEO Jensen Huang Says - Barron's",
+      "source": "Barron's",
+      "score": 0.845,
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObUdKSDd2eFZMMFJWU0Z4dy14Qm9nc1NkRFBJaHUxSWhwbnpZdmR5eHZuRkJNZ1RyTlE0UXkwRVRjenBJLTJmVm1iYW03QUxXSjAybElsSVhLeUdFeWVFTGlYbVRha3NuZ19mdlhaOWh4ZVlNa1VOQWJIWFFkN3ZvOVU2X3V2aEFD?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "Nvidia to Support Scale-Up of Autonomous Trucks at Sweden's Einride",
+      "source": "finviz",
+      "score": 0.738,
+      "url": "https://www.wsj.com/business/autos/nvidia-to-support-scale-up-of-autonomous-trucks-at-swedens-einride-db33d419?mod=wsj_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}
