@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-21",
-  "generated_at": "2026-09-21T17:06:11",
+  "entry_day": "2026-09-22",
+  "generated_at": "2026-09-22T17:04:28",
   "articles": [
     {
-      "headline": "intels 14a process is currently being evaluated by amazon apple amd google tesla microsoft nvidia and qualcomm according",
+      "headline": "tsmc 1 4nm four plants operational q2 2028 wafer price",
       "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.0026,
-      "impact": 0.00109
+      "weight": 0.0059,
+      "impact": -0.00565
     },
     {
-      "headline": "tsmcs operations boss says ai cannot fully overcome limitations to design next generation chip manufacturing tech such a",
-      "source": "wccftech.com",
+      "headline": "amd surpasses $1 tln market cap as ai demand drives record rally 1036562092",
+      "source": "finanzen.ch",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": 0.0111
+      "weight": 0.0058,
+      "impact": -0.00198
     },
     {
-      "headline": "tsmc secures approval for sub 1 4 nanometer manufacturing plants says report as race with intel heats up",
-      "source": "wccftech.com",
+      "headline": "amd becomes latest chipmaker to reach 1 trillion valuation on ai demand",
+      "source": "thestar.com.my",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": 0.00334
+      "weight": 0.0057,
+      "impact": -0.00106
     },
     {
-      "headline": "2 undervalued semiconductor stocks buy while market is skeptical ai growth",
-      "source": "morningstar.com",
+      "headline": "amd set to top 1 trillion in market value as chip ",
+      "source": "spokesman.com",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.01251
+      "weight": 0.0057,
+      "impact": -0.00427
     },
     {
-      "headline": "nividia dominance fades opening broadcom 121911000.html",
-      "source": "aol.com",
+      "headline": "taiwan breaks ground on advanced packaging park anchored by tsmc",
+      "source": "thestar.com.my",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.01264
+      "weight": 0.0057,
+      "impact": -0.0069
     },
     {
-      "headline": "jim cramer calls intel intc the best stock in show and micron mu no 2 1840300",
-      "source": "insidermonkey.com",
+      "headline": "amd 1 trillion valuation earnings multiple 1821054",
+      "source": "ibtimes.co.uk",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.01122
+      "weight": 0.0057,
+      "impact": -0.00568
     },
     {
-      "headline": "intel 14a testuje 8 obrich americkych firem od amd po teslu",
-      "source": "svethardware.cz",
+      "headline": "amd beats intel to the trillion dollar club as stock price soars firm joins nvidia broadcom and sk hynix for companies w",
+      "source": "tomshardware.com",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": 0.00453
+      "weight": 0.0057,
+      "impact": -0.00228
     },
     {
-      "headline": "prediction amd biggest growth opportunity 140028000.html",
-      "source": "aol.com",
+      "headline": "amd cracks 1 trillion as ai frenzy sends chip stocks soaring",
+      "source": "dailycaller.com",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.00122
+      "weight": 0.0057,
+      "impact": -0.00056
     },
     {
-      "headline": "intel foundry produkcja ukladow apple amd google microsoft tesla",
-      "source": "telepolis.pl",
+      "headline": "amd stock hits 1 trillion market cap how ai demand is fueling its nvidia challenge 101790003453280.html",
+      "source": "hindustantimes.com",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.00348
+      "weight": 0.0057,
+      "impact": -0.0007
     },
     {
-      "headline": "qualcomm nasdaq qcom drops 6 as month long rally unwinds while skyworks and qorvo also slip",
-      "source": "foreignpolicyjournal.com",
+      "headline": "amd joins us1 trillion club as chipmakers rally on ai driven demand 20260922 p60zbc",
+      "source": "afr.com",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.00205
+      "weight": 0.0057,
+      "impact": 0.0037
     }
   ]
 }

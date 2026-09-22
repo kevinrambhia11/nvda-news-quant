@@ -1,0 +1,141 @@
+{
+  "generated_at": "2026-09-22T17:08:26",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-22",
+  "last_close": 227.38,
+  "model_trained_through": "2026-09-16",
+  "gap_context": {
+    "prev_close": 227.38,
+    "latest": 226.98,
+    "gap_pct": -0.0018,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.5501,
+  "prob_big_move": 0.5166,
+  "big_move_threshold": 0.0121,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.1136,
+  "headline_count": 146,
+  "article_count": 186,
+  "fulltext": {
+    "stories": 146,
+    "read_full": 100,
+    "read_partial": 16,
+    "headline_only": 30,
+    "alt_searches": 12,
+    "elapsed_s": 139.4
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 6,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.5521,
+  "brain_top_news": [
+    {
+      "headline": "tsmc 1 4nm four plants operational q2 2028 wafer price",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.00565
+    },
+    {
+      "headline": "amd surpasses $1 tln market cap as ai demand drives record rally 1036562092",
+      "source": "finanzen.ch",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00198
+    },
+    {
+      "headline": "amd becomes latest chipmaker to reach 1 trillion valuation on ai demand",
+      "source": "thestar.com.my",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.00106
+    },
+    {
+      "headline": "amd set to top 1 trillion in market value as chip ",
+      "source": "spokesman.com",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.00427
+    },
+    {
+      "headline": "taiwan breaks ground on advanced packaging park anchored by tsmc",
+      "source": "thestar.com.my",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.0069
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "NVIDIA (NVDA.US) Stock Flashes a \"Warning Signal\": Valuation Hits Lowest Level in Over a Decade, What Is the Market Worried About? - Moomoo",
+      "source": "google_news",
+      "score": -0.946,
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMXU0OWtrQm9KQlVlTHhWRmVibW5CUC13UnZHWVVxNzhheUlHTE1EckRDczViV1l6QlM5ejhkVXhIQnBTWE5ZSy1FNm1YV3NvWjRuaktYVHFJOXR6QVhfc2J2akxWMFVGREVGeHJWMTZtYW0wZ2YzT3AzZE9SZU5CZkY3eGw2ZVc5U3JrRFVvRTZvbmNSRmZiMjNQOGx5dzBEMjQ4YWg1bTMyTjNEdXRz?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia\u2019s Stock Is Flashing a Warning Sign as Valuation Falls - Bloomberg.com",
+      "source": "google_news",
+      "score": -0.902,
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMmZza3lFQmV4Y3NTNVlkOThiYTlkUWFGY1lPUWF1SEpPRkRNXy1GRnpNYWlDa1JqdEJRejYyVF9mSlQ2eldpbGR0dFRRM1dWVS1oY1RmMGNqRy1aVExud1duUXhTZHdZTW9SU2J6aVBrMTVUVmNubDlQc3F6TjNHem4zWTM1dlp6dWFtbzd6d3ZOOE43NDNXYkpGMzMwR1NqQ2VfT3FPVGMtbEJHdzFMNQ?oc=5",
+      "n_sources": 4,
+      "also_from": [
+        "yahoo_rss",
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Stock Drops. It\u2019s Still the Best Chip Bet in an AI Slowdown. - Barron's",
+      "source": "google_news",
+      "score": -0.863,
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNd28zaEgxYzJOZi1kWWhWa0Y5RG5za0VEUDN5dEVXTjVPdzhnTlhLX3BIaUdTNUEtN20zRWhkandEbDlZaTNiX0VrUkQ2aFQ3Z3BvbmlDeTI5enc2RUJqaTkzV3FZZWxZUmxqMXBNZ25MNnRLMDhPYmV1aTd0WWc3MERLWQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "TSLA Stock Hits Nearly 3-Week High: Nvidia Win Adds Muscle To \u2018Physical AI\u2019 Pivot Despite Optimus Delays - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.929,
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxONVU5SmZTSW1MQ1ktQVZOTENySlRVa3UxOTBia1F0VGNYbExjcV9ycW1UdmtRVEM0a0R2a19EaDdOLUFLR296Yko0TDUwc2ZpTFN2eDRZalNiQnpFWHlWQWljd0xYM3F1cDN3OXVzdVRQOENlbEhod1NfV2w3R2NDOGpiS0NSekVZNUhpTTFBRFhJVTQ?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia stock moves closer to all-time high - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.901,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNUhYQzNDeE0tUk5IOExEUk9IcG5ydGZwQ3cwNGFVb2d0bWZIMXpFNGR2d0ZpczA3UlhVa2EzT0VtNXczV1VZWllzMkJZQ0dPc25zNWd6OXo3aDV6TFhjVndOX3pKUkxVOEJsSktsbEpKLWlSTHVvdkdEZUdtU3ZrbnZZU1p4QjhlWFlOY0lfejFNZUZ4eFNEQ3lVUVkxRXk3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "NVIDIA Corp., Merck share gains lead Dow's 425-point climb",
+      "source": "finviz",
+      "score": 0.864,
+      "url": "https://www.marketwatch.com/data-news/nvidia-corp-merck-share-gains-lead-dow-s-425-point-climb-ca99472b-dca736bf06de?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ]
+}
