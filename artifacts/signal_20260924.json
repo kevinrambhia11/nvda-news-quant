@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-09-24T17:08:33",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-24",
+  "last_close": 225.51,
+  "model_trained_through": "2026-09-16",
+  "gap_context": {
+    "prev_close": 225.51,
+    "latest": 222.93,
+    "gap_pct": -0.0114,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.5501,
+  "prob_big_move": 0.5166,
+  "big_move_threshold": 0.0127,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0072,
+  "headline_count": 161,
+  "article_count": 185,
+  "fulltext": {
+    "stories": 161,
+    "read_full": 103,
+    "read_partial": 10,
+    "headline_only": 48,
+    "alt_searches": 12,
+    "elapsed_s": 157.1
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 0,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.5362,
+  "brain_top_news": [
+    {
+      "headline": "vyms index buys on forecast yield so it held intel and walgreens right into their dividend cuts",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.00916
+    },
+    {
+      "headline": "72800 qualcomm lanca novos snapdragon para celulares topo de linha",
+      "source": "oficinadanet.com.br",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00601
+    },
+    {
+      "headline": "new qualcomm sound chip turns gadgets into ai devices that dont need a",
+      "source": "pcmag.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": 0.00261
+    },
+    {
+      "headline": "new qualcomm chip for android phones crushes apples a20 pro in this benchmark",
+      "source": "pcmag.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": 0.00344
+    },
+    {
+      "headline": "qualcomm google 2026 snapdragon partnership.html",
+      "source": "digitimes.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00261
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "NVDA Edges Down Overnight After 6-Day Winning Streak  Director Mark Stevens Sells Another $300M In Stock",
+      "source": "finviz",
+      "score": -0.966,
+      "url": "https://finance.yahoo.com/m/c9e2fc36-d6cd-3899-9fcb-132c37f1c6e9/nvda-edges-down-overnight.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia stock valuation hits decade low despite profit boom - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNb3U3WG15alJKcW1uWWl2Q1ZrTlNydzBXdlpoRV9PNkJtOHd4UHU4OUY0ZGhHZkltSXR0a3g0RGJaN0hLekRLVW1QQlVrS1lyTUpET1Q5ektzMXhVbTh4cnJEVUIySWZzZzY2dTk2bjI3QUlIZzJhUWw3bXUwNUIybk9GRWdnenl1SW9IQ0IxaE1kcWhGMGFnMXp3aDZVQ1g4?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia\u2019s Stock Is Flashing a Warning Sign as Valuation Falls - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "score": -0.935,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQVB0djBZRHItdW9ub3BCOEFrUGtQZlhfNmEwXzdhR1dVU3BuX0ZFRmNvOXcxMUlBMUtEb3dxWVd6cURqbkV3dXcxMWR3WUo2MTBkZDdETWJWWGNnWk0wNk9ZVGw5N2VRVTQ2ZWVtSUJBeWpGXzZsOUJSbzNsX1lJZ1g5dDRKS3JFb29UX0JwSWs4a3FxVlJmd21pSE9nRHB2?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "google_news"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "IONQ Stock On Track To Hit Over 1-Month High On Nvidia Superion 256 Deployment, Quantum Error Decoder Breakthrough",
+      "source": "finviz",
+      "score": 0.865,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ionq-stock-track-hit-over-132204557.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "IonQ is in 'the beginning of an exciting era,' CEO says as Nvidia deal lifts stock - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.834,
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOMG01RzNvclpvWlpPUlBzZmc3WndDUmo5VVF0MHRZWXFQTG9DS0JPQjJBWWhFRk9EbUF2eVdzU1F6UEJPWG9haEdXZS1DNWtIQ2JtcGdnOERCOHdudzI5WTdRekNtaEMtS0J3eFNGQml4bkoyRWJMczFHaTlRVGlScE03Y2pEcFdOT3Z4Qk9XVVk0cEZZOXlDRDJWWU9TZGdhNEF5M2Z3cWJMZWtiam9mNmltM3kyVFRYWUlmcEtQVGJXNEVVYkQ0dTJkT2hhenZmaWc?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Price Prediction: Wall Street and Our Model Finally Agree - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.812,
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPejVaUG9xcTAzRTNWbWp2cHcyMW42RnphUHphMFZqR05GZkZ4YXEwTEM5d1dxX1N3VTRBenhmd0xVLXhuSXFEVGxzS3RUaG5sR1dOVXVjWktuN3NYQXlJRFBfeUdGV3dNVTB5UGdVOGNNTVQ2eGNxN29JVHdPd2pqQ1ZfUm5FMmRsQ3NhVVJTUHVRd1c2akxXbFR2MnBsTEYzdGc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
