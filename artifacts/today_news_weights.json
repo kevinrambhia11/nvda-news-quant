@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-24",
-  "generated_at": "2026-09-25T15:50:21",
+  "entry_day": "2026-09-25",
+  "generated_at": "2026-09-25T17:03:56",
   "articles": [
     {
-      "headline": "vyms index buys on forecast yield so it held intel and walgreens right into their dividend cuts",
+      "headline": "why semiconductor investors are rotating from smhs nvidia concentration to psis equal weight approach",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00668
+      "weight": 0.0052,
+      "impact": -0.009
     },
     {
-      "headline": "new qualcomm sound chip turns gadgets into ai devices that dont need a",
-      "source": "pcmag.com",
+      "headline": "qualcomm snapdragon sound elite gen 2 platforma audio",
+      "source": "telepolis.pl",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": 0.00206
+      "weight": 0.005,
+      "impact": -0.00826
     },
     {
-      "headline": "new qualcomm chip for android phones crushes apples a20 pro in this benchmark",
-      "source": "pcmag.com",
+      "headline": "qualcomm buys picknick 2026 09",
+      "source": "electronicsweekly.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": 0.00347
+      "weight": 0.005,
+      "impact": -0.00714
     },
     {
-      "headline": "72800 qualcomm lanca novos snapdragon para celulares topo de linha",
-      "source": "oficinadanet.com.br",
+      "headline": "qualcomm apple extend global patent licensing agreement.html",
+      "source": "fonearena.com",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.00281
+      "weight": 0.005,
+      "impact": -0.0026
     },
     {
-      "headline": "china reviews dependence on broadcom switches in data centres",
-      "source": "technews.tw",
+      "headline": "prismml brings its tiny llms to qualcomm powered smart glasses",
+      "source": "techcrunch.com",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.00858
+      "weight": 0.005,
+      "impact": 0.00137
     },
     {
-      "headline": "lpddr6 ist hier samsungs schneller arbeitsspeicher startet mit neuen qualcomm socs.99519",
-      "source": "computerbase.de",
+      "headline": "microsoft rinnova la linea surface con i chip snapdragon x2 plus 6md1bued7nyq7xx1zm2cm0",
+      "source": "adnkronos.com",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.00028
+      "weight": 0.005,
+      "impact": 0.00229
     },
     {
-      "headline": "snapdragon 8 elite gen 6 qualcomm puces mobiles 2 nm",
-      "source": "kulturegeek.fr",
+      "headline": "indias semiconductor journey old designer new producer",
+      "source": "thediplomat.com",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": 0.00112
+      "weight": 0.005,
+      "impact": -0.00981
     },
     {
-      "headline": "qualcomm nasdaq qcom stock surges 9 on ai interconnect demo with lumentum and corning but can the rally last",
-      "source": "foreignpolicyjournal.com",
+      "headline": "qualcomm pokracuje ve spolupraci s apple",
+      "source": "letemsvetemapplem.eu",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": 0.00017
+      "weight": 0.005,
+      "impact": -0.00141
     },
     {
-      "headline": "qualcomm snapdragon 8 elite gen 6 agentic ai chips summit",
-      "source": "mashable.com",
+      "headline": "tse technology rides ai boom alongside amd apple nvidia tsmc",
+      "source": "investors.com",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": 0.00396
+      "weight": 0.005,
+      "impact": -0.00384
     },
     {
-      "headline": "qualcomm google 2026 snapdragon partnership.html",
-      "source": "digitimes.com",
+      "headline": "a20 pro qualcomm kann zu apples chip aufschliessen und durchbricht die 5 ghz schallmauer 190218.html",
+      "source": "mactechnews.de",
       "category": "competitors",
-      "weight": 0.0053,
-      "impact": -7e-05
+      "weight": 0.005,
+      "impact": -0.00106
     }
   ]
 }

@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-09-25T17:07:00",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-25",
+  "last_close": 224.58,
+  "model_trained_through": "2026-09-23",
+  "gap_context": {
+    "prev_close": 224.58,
+    "latest": 226.2,
+    "gap_pct": 0.0072,
+    "session": "pre-market",
+    "as_of_et": "07:36 ET"
+  },
+  "model_prob_up": 0.5887,
+  "prob_big_move": 0.5233,
+  "big_move_threshold": 0.0127,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0041,
+  "headline_count": 172,
+  "article_count": 196,
+  "fulltext": {
+    "stories": 172,
+    "read_full": 104,
+    "read_partial": 4,
+    "headline_only": 64,
+    "alt_searches": 12,
+    "elapsed_s": 100.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 3,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5627,
+  "brain_top_news": [
+    {
+      "headline": "why semiconductor investors are rotating from smhs nvidia concentration to psis equal weight approach",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.009
+    },
+    {
+      "headline": "qualcomm snapdragon sound elite gen 2 platforma audio",
+      "source": "telepolis.pl",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00826
+    },
+    {
+      "headline": "qualcomm buys picknick 2026 09",
+      "source": "electronicsweekly.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00714
+    },
+    {
+      "headline": "qualcomm apple extend global patent licensing agreement.html",
+      "source": "fonearena.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.0026
+    },
+    {
+      "headline": "prismml brings its tiny llms to qualcomm powered smart glasses",
+      "source": "techcrunch.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": 0.00137
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Super Micro Stock Slips as New NVIDIA AI Systems Enter the Market",
+      "source": "finviz",
+      "score": -0.97,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-stock-slips-nvidia-174602638.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Stock Market Today: Dow Falls On Rising Treasury Yields; Nvidia Extends Losses (Live Coverage)",
+      "source": "finviz",
+      "score": -0.968,
+      "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-treasury-yields-nvidia-stock-nvda-buy-point?mod=IBD_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia stock valuation hits decade low despite profit boom - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNb3U3WG15alJKcW1uWWl2Q1ZrTlNydzBXdlpoRV9PNkJtOHd4UHU4OUY0ZGhHZkltSXR0a3g0RGJaN0hLekRLVW1QQlVrS1lyTUpET1Q5ektzMXhVbTh4cnJEVUIySWZzZzY2dTk2bjI3QUlIZzJhUWw3bXUwNUIybk9GRWdnenl1SW9IQ0IxaE1kcWhGMGFnMXp3aDZVQ1g4?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "IonQ Stock Surges After Inking Quantum Computing Deal With Nvidia - Barron's",
+      "source": "Barron's",
+      "score": 0.857,
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRldVcFU5d2RFRUpmV3RyU19qRHVhOGxHUjM3UURzRXAxdWtmdVFZTGg5V082UTlSSjRFVTNSN0xwU3VwTHlBcW4zcXh0d0FtVGhCNy0tMm5Bd0tPTHpZc1I3b1g2a2duRGRxaTVDV0pNUXhLTXZEbV9yREdieklvRC11QTVPR2ZtOEk0Qm1jaVF5VGs?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.proactiveinvestors.com"
+    },
+    {
+      "title": "IonQ is in 'the beginning of an exciting era,' CEO says as Nvidia deal lifts stock - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.818,
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOMG01RzNvclpvWlpPUlBzZmc3WndDUmo5VVF0MHRZWXFQTG9DS0JPQjJBWWhFRk9EbUF2eVdzU1F6UEJPWG9haEdXZS1DNWtIQ2JtcGdnOERCOHdudzI5WTdRekNtaEMtS0J3eFNGQml4bkoyRWJMczFHaTlRVGlScE03Y2pEcFdOT3Z4Qk9XVVk0cEZZOXlDRDJWWU9TZGdhNEF5M2Z3cWJMZWtiam9mNmltM3kyVFRYWUlmcEtQVGJXNEVVYkQ0dTJkT2hhenZmaWc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia\u2019s Immense Dividend Hike Puts Dividend Growth Stocks in the Spotlight - Morningstar",
+      "source": "google_news",
+      "score": 0.718,
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdVV4dEg1UDVVUEUtcU91WXRCZFI3Zm5pQU5tMTF2Q0tqZThjQjV6Nk5QdEt1NGJHMzBhRmpUV0lQS093MVVXOTdPNHdvRTE3RWFTMGM4Y21VNmhfQ0gtREdkeW9ES3BhMDh3UDJxcFV4aE16M0hNZmtSb0x4RnVKdC0xZmEyZjAzMV9ud0xMcXlGSktJZnRENGpmVmtJeURFVFFGRA?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.morningstar.com"
+    }
+  ]
+}
