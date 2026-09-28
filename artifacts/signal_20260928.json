@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-09-28T17:11:09",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-28",
+  "last_close": 225.07,
+  "model_trained_through": "2026-09-23",
+  "gap_context": {
+    "prev_close": 225.07,
+    "latest": 227.08,
+    "gap_pct": 0.0089,
+    "session": "pre-market",
+    "as_of_et": "07:41 ET"
+  },
+  "model_prob_up": 0.6052,
+  "prob_big_move": 0.4717,
+  "big_move_threshold": 0.0135,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.0339,
+  "headline_count": 126,
+  "article_count": 171,
+  "fulltext": {
+    "stories": 126,
+    "read_full": 89,
+    "read_partial": 18,
+    "headline_only": 19,
+    "alt_searches": 12,
+    "elapsed_s": 141.3
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 0,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.5686,
+  "brain_top_news": [
+    {
+      "headline": "qualcomms new elite sound chip might finally deliver the wi fi earbud dream",
+      "source": "theverge.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.00516
+    },
+    {
+      "headline": "apple ve qualcomm patent lisans anlasmasini yeniledi h225655.html",
+      "source": "webtekno.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.00327
+    },
+    {
+      "headline": "intel torna al centro della scena le aziende tech valutano il nuovo nodo 14a",
+      "source": "tomshw.it",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": 0.00822
+    },
+    {
+      "headline": "qualcomm flagship snapdragon soc 5 40ghz tsmc 2nm n2p",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0022,
+      "impact": 0.00348
+    },
+    {
+      "headline": "what catalysts could drive qualcomm qcoms stock higher or lower 1843836",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.0022,
+      "impact": -0.01132
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "China chipmaking stocks tumble as Beijing reportedly mulls allowing Nvidia sales - Investing.com",
+      "source": "google_news",
+      "score": -0.951,
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQMGNkY1owUDdjNlJScjV3ZnEtV3JNYkczbHpoSGRxX2R2UHpoWEpSbnZmbkxjUzlzYzEteE13TEVOY3lBLTl0YWI1Wm5xTVJXdG50ckxNMDYtYmxiSG4waUZmZ0g2X3ZHOUVyWDAyQ1RwMmtMY2xtbDdpc2V3UnhiVG1kN01hM1FrVWc0Tms1MG03X0dQUllFWWRYYlJUUVZKeWVnT3prN0JhWmZrQTNXaHRIRmlFUGpsd00xTzVfQ1FTZFhMZDEyQzFfVU1ia09icDJN?oc=5",
+      "n_sources": 3,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia\u2019s Stock Is Flashing a Warning Sign as Valuation Falls - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.95,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQVB0djBZRHItdW9ub3BCOEFrUGtQZlhfNmEwXzdhR1dVU3BuX0ZFRmNvOXcxMUlBMUtEb3dxWVd6cURqbkV3dXcxMWR3WUo2MTBkZDdETWJWWGNnWk0wNk9ZVGw5N2VRVTQ2ZWVtSUJBeWpGXzZsOUJSbzNsX1lJZ1g5dDRKS3JFb29UX0JwSWs4a3FxVlJmd21pSE9nRHB2?oc=5",
+      "n_sources": 2,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Stock Moves Lower as Einride Scales Physical AI",
+      "source": "finviz",
+      "score": -0.942,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-stock-moves-lower-einride-170112548.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia stock turns higher, but not the broader market, on news of $150 billion buyback extension",
+      "source": "finviz",
+      "score": 0.92,
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-oil-prices-rise-bond-selloff-deepens/card/nvidia-stock-turns-higher-but-not-the-broader-market-on-news-of-150-billion-buyback-extension-ux7VQWFZhV6BRGDbiZ2R?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia unveils massive $150B increase to share buyback program (NVDA:NASDAQ) - Seeking Alpha",
+      "source": "google_news",
+      "score": 0.893,
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRlFjUUtPSzI4Q2JHSG5kRUUxQ3VDX1dWV2I5MDBYWXdXNGlxa3NOU3ZIbU9PeVBSZW1QRnN6d0s5RFFvUDRjcFloakF3NEwxTDVTLWE5NEdYNFpPb0Fwb003azVGUDVWdXcyTVlWdWNkZUJ6WUR4Tmh3cmdVY2NlMUpGUGVNeFRRMk9NejJaVlA1SWRPS25Ba2x4ZS1xd01p?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "seekingalpha.com"
+    },
+    {
+      "title": "Nvidia approves $150B stock buyback increase - Breakingthenews.net",
+      "source": "google_news",
+      "score": 0.795,
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOQy1qWl9QRGNaY3RNVEszcHlHODd0TkZjY3l6QUprMTc2SnMtbXhjczh2Zk9CenhtUVdPUkhHNHVMM082TmpSbnoyX3VZV2Npb05wTEZWaFJQQXJ3UjlSWUVpQnNnRHJzdUdhSVgxMmUzdzdLb2FZR1oyZENVVnp4VWNuVElRb0VKamd1WVMxTnBVLUhEOGhPM2hR?oc=5",
+      "n_sources": 2,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "theminermag.com"
+    }
+  ]
+}

@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-25",
-  "generated_at": "2026-09-25T17:03:56",
+  "entry_day": "2026-09-28",
+  "generated_at": "2026-09-28T17:07:02",
   "articles": [
     {
-      "headline": "why semiconductor investors are rotating from smhs nvidia concentration to psis equal weight approach",
-      "source": "247wallst.com",
+      "headline": "qualcomms new elite sound chip might finally deliver the wi fi earbud dream",
+      "source": "theverge.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.009
+      "weight": 0.0023,
+      "impact": -0.00516
     },
     {
-      "headline": "qualcomm snapdragon sound elite gen 2 platforma audio",
-      "source": "telepolis.pl",
+      "headline": "apple ve qualcomm patent lisans anlasmasini yeniledi h225655.html",
+      "source": "webtekno.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00826
+      "weight": 0.0023,
+      "impact": -0.00327
     },
     {
-      "headline": "qualcomm buys picknick 2026 09",
-      "source": "electronicsweekly.com",
+      "headline": "intel torna al centro della scena le aziende tech valutano il nuovo nodo 14a",
+      "source": "tomshw.it",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00714
+      "weight": 0.0023,
+      "impact": 0.00822
     },
     {
-      "headline": "qualcomm apple extend global patent licensing agreement.html",
-      "source": "fonearena.com",
+      "headline": "qualcomm flagship snapdragon soc 5 40ghz tsmc 2nm n2p",
+      "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.0026
+      "weight": 0.0022,
+      "impact": 0.00348
     },
     {
-      "headline": "prismml brings its tiny llms to qualcomm powered smart glasses",
-      "source": "techcrunch.com",
+      "headline": "what catalysts could drive qualcomm qcoms stock higher or lower 1843836",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": 0.00137
+      "weight": 0.0022,
+      "impact": -0.01132
     },
     {
-      "headline": "microsoft rinnova la linea surface con i chip snapdragon x2 plus 6md1bued7nyq7xx1zm2cm0",
-      "source": "adnkronos.com",
+      "headline": "mivi one 5g arrives with a 2023 chip in the year nothing gave up on budget phones",
+      "source": "memeburn.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": 0.00229
+      "weight": 0.0022,
+      "impact": 0.00272
     },
     {
-      "headline": "indias semiconductor journey old designer new producer",
-      "source": "thediplomat.com",
+      "headline": "qualcomm porta bonsai sugli occhiali lai puo fare a meno del cloud",
+      "source": "tomshw.it",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00981
+      "weight": 0.0022,
+      "impact": 0.00139
     },
     {
-      "headline": "qualcomm pokracuje ve spolupraci s apple",
-      "source": "letemsvetemapplem.eu",
+      "headline": "qualcomm renews apple patent license effective april 1 2027",
+      "source": "iclarified.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00141
+      "weight": 0.0022,
+      "impact": 0.00055
     },
     {
-      "headline": "tse technology rides ai boom alongside amd apple nvidia tsmc",
-      "source": "investors.com",
+      "headline": "qualcomm announces renewal of global patent license agreement with apple",
+      "source": "mactech.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00384
+      "weight": 0.0022,
+      "impact": -0.00201
     },
     {
-      "headline": "a20 pro qualcomm kann zu apples chip aufschliessen und durchbricht die 5 ghz schallmauer 190218.html",
-      "source": "mactechnews.de",
+      "headline": "qualcomm apple patent lisansi 2027",
+      "source": "teknoblog.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00106
+      "weight": 0.0022,
+      "impact": -0.00089
     }
   ]
 }
