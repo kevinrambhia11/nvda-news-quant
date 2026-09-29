@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-09-29T17:10:01",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-29",
+  "last_close": 228.86,
+  "model_trained_through": "2026-09-23",
+  "gap_context": {
+    "prev_close": 228.86,
+    "latest": 230.57,
+    "gap_pct": 0.0075,
+    "session": "pre-market",
+    "as_of_et": "07:40 ET"
+  },
+  "model_prob_up": 0.5619,
+  "prob_big_move": 0.5233,
+  "big_move_threshold": 0.0135,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0159,
+  "headline_count": 137,
+  "article_count": 179,
+  "fulltext": {
+    "stories": 137,
+    "read_full": 95,
+    "read_partial": 21,
+    "headline_only": 21,
+    "alt_searches": 12,
+    "elapsed_s": 138.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 0,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.5457,
+  "brain_top_news": [
+    {
+      "headline": "taiwan clears usd 44 billion in tsmc investments for united states expansion",
+      "source": "taiwansun.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01184
+    },
+    {
+      "headline": "nvidia rises 2 as board authorizes record 150b buyback increase amd and broadcom slip",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.00926
+    },
+    {
+      "headline": "new phones keep getting more expensive the chips powering them are becoming more extreme too",
+      "source": "thestar.com.my",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.00385
+    },
+    {
+      "headline": "top vmware partner insight deauthorized by broadcom in north america",
+      "source": "crn.com",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.00687
+    },
+    {
+      "headline": "qualcomm e samsung fecham parceria inedita para novos chips",
+      "source": "canaltech.com.br",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.00141
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "SK Hynix Stock Falls 5.1% as Rubin Memory Moves Into View",
+      "source": "finviz",
+      "score": -0.945,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-stock-falls-5-204223692.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Stock Market Today: Dow Ends Lower But Nvidia Pops On This; Leisure Play Tests Entry, MongoDB Dives",
+      "source": "finviz",
+      "score": -0.936,
+      "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-trump-iran-oil-prices-treasury-yields?mod=IBD_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Chip stocks fall as AI breach fuels safety concerns, but Nvidia bucks the trend: Chart of the Day - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.934,
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNRmw5ak5yb3R1Y3A0TGk2cVk0dEJDQkQzZkJTZVNQMGpvcDZHWVYyZ1RLN0g4cGtnSFdpdi1UbVl4LUNHcncwckV2bkNBZnByVkpSTTZjQkJIdmM1dHRlS3FraURNQW5jUHBPWFpiNDBDcjNCVk5WeVhYLUJ0U0Q3T0JfbTZIcVoyWXVrUE93NlMyWWlyYlMxODBScE5fRzZqMjZmbGY0eVAwaWhxLWI4TXpyZjNSRTZhWDNYZVRTRGdtd3dIQXpLcXJRNTBOb3VqSndMLWJZd3hTNmc5ZWdJdHM0ajAyQ1U?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "PANW, CRWD, ZS Lead Nasdaq-100 Gains As Nvidia's AI Agent Safety Push, Security Scares Lift Cybersecurity Stocks",
+      "source": "finviz",
+      "score": 0.917,
+      "url": "https://finance.yahoo.com/technology/ai/articles/panw-crwd-zs-lead-nasdaq-033828720.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia's biggest-ever buyback plan signals confidence in AI boom - Reuters",
+      "source": "Reuters",
+      "score": 0.905,
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE83M2tHWkh5dlhFZHhlTXctNFNMbE5kY3N5emtBM2NrTGVMRmxSOFctT2xXLUxtUjlTcnBvWHBGUHptWUdFeHBLdEQ0T2lpRW4zOW1Tb3VoZ0cyQ3Z0VUpMMDhKbC14UDA?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.bnnbloomberg.ca"
+    },
+    {
+      "title": "Uniserve Signs Five-Year AI Compute Services Agreement for NVIDIA B300 Servers",
+      "source": "yahoo_rss",
+      "score": 0.903,
+      "url": "https://finance.yahoo.com/technology/ai/articles/uniserve-signs-five-ai-compute-111500991.html?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

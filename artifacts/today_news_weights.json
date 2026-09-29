@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-28",
-  "generated_at": "2026-09-28T17:07:02",
+  "entry_day": "2026-09-29",
+  "generated_at": "2026-09-29T17:05:32",
   "articles": [
     {
-      "headline": "qualcomms new elite sound chip might finally deliver the wi fi earbud dream",
-      "source": "theverge.com",
+      "headline": "taiwan clears usd 44 billion in tsmc investments for united states expansion",
+      "source": "taiwansun.com",
       "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.00516
+      "weight": 0.0064,
+      "impact": -0.01184
     },
     {
-      "headline": "apple ve qualcomm patent lisans anlasmasini yeniledi h225655.html",
-      "source": "webtekno.com",
+      "headline": "nvidia rises 2 as board authorizes record 150b buyback increase amd and broadcom slip",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.00327
+      "weight": 0.0064,
+      "impact": -0.00926
     },
     {
-      "headline": "intel torna al centro della scena le aziende tech valutano il nuovo nodo 14a",
-      "source": "tomshw.it",
+      "headline": "new phones keep getting more expensive the chips powering them are becoming more extreme too",
+      "source": "thestar.com.my",
       "category": "competitors",
-      "weight": 0.0023,
-      "impact": 0.00822
+      "weight": 0.0063,
+      "impact": -0.00385
     },
     {
-      "headline": "qualcomm flagship snapdragon soc 5 40ghz tsmc 2nm n2p",
-      "source": "wccftech.com",
+      "headline": "top vmware partner insight deauthorized by broadcom in north america",
+      "source": "crn.com",
       "category": "competitors",
-      "weight": 0.0022,
-      "impact": 0.00348
+      "weight": 0.0063,
+      "impact": -0.00687
     },
     {
-      "headline": "what catalysts could drive qualcomm qcoms stock higher or lower 1843836",
-      "source": "insidermonkey.com",
+      "headline": "qualcomm e samsung fecham parceria inedita para novos chips",
+      "source": "canaltech.com.br",
       "category": "competitors",
-      "weight": 0.0022,
-      "impact": -0.01132
+      "weight": 0.0063,
+      "impact": -0.00141
     },
     {
-      "headline": "mivi one 5g arrives with a 2023 chip in the year nothing gave up on budget phones",
-      "source": "memeburn.com",
+      "headline": "qualcomm views saudi ai boom as opportunity for industrial tech and power efficiency 3003154",
+      "source": "arabnews.com",
       "category": "competitors",
-      "weight": 0.0022,
-      "impact": 0.00272
+      "weight": 0.0063,
+      "impact": -0.00169
     },
     {
-      "headline": "qualcomm porta bonsai sugli occhiali lai puo fare a meno del cloud",
-      "source": "tomshw.it",
+      "headline": "tsmc stock nvidia amd apple partner etches buy points",
+      "source": "investors.com",
       "category": "competitors",
-      "weight": 0.0022,
-      "impact": 0.00139
+      "weight": 0.0062,
+      "impact": -0.01728
     },
     {
-      "headline": "qualcomm renews apple patent license effective april 1 2027",
-      "source": "iclarified.com",
+      "headline": "qualcomm snapdragon 8 elite extreme gen 6 bezi na 5 ghz",
+      "source": "svethardware.cz",
       "category": "competitors",
-      "weight": 0.0022,
-      "impact": 0.00055
+      "weight": 0.0062,
+      "impact": 0.00102
     },
     {
-      "headline": "qualcomm announces renewal of global patent license agreement with apple",
-      "source": "mactech.com",
+      "headline": "apple perpanjang lisensi paten qualcomm hingga 2027",
+      "source": "liputan6.com",
       "category": "competitors",
-      "weight": 0.0022,
-      "impact": -0.00201
+      "weight": 0.0062,
+      "impact": 0.00253
     },
     {
-      "headline": "qualcomm apple patent lisansi 2027",
-      "source": "teknoblog.com",
+      "headline": "qualcomm nasdaq qcom and apple nasdaq aapl renew global patent license as chip revenue fades",
+      "source": "foreignpolicyjournal.com",
       "category": "competitors",
-      "weight": 0.0022,
-      "impact": -0.00089
+      "weight": 0.0062,
+      "impact": 0.00143
     }
   ]
 }
