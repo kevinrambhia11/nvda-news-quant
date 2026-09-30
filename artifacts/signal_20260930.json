@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-09-30T17:06:15",
+  "ticker": "NVDA",
+  "entry_day": "2026-09-30",
+  "last_close": 227.21,
+  "model_trained_through": "2026-09-23",
+  "gap_context": {
+    "prev_close": 227.21,
+    "latest": 227.98,
+    "gap_pct": 0.0034,
+    "session": "pre-market",
+    "as_of_et": "07:36 ET"
+  },
+  "model_prob_up": 0.5323,
+  "prob_big_move": 0.5233,
+  "big_move_threshold": 0.0135,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0279,
+  "headline_count": 160,
+  "article_count": 204,
+  "fulltext": {
+    "stories": 160,
+    "read_full": 107,
+    "read_partial": 15,
+    "headline_only": 38,
+    "alt_searches": 12,
+    "elapsed_s": 129.2
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 6,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5268,
+  "brain_top_news": [],
+  "most_negative": [
+    {
+      "title": "Chip stocks fall as AI breach fuels safety concerns, but Nvidia bucks the trend: Chart of the Day - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.934,
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNRmw5ak5yb3R1Y3A0TGk2cVk0dEJDQkQzZkJTZVNQMGpvcDZHWVYyZ1RLN0g4cGtnSFdpdi1UbVl4LUNHcncwckV2bkNBZnByVkpSTTZjQkJIdmM1dHRlS3FraURNQW5jUHBPWFpiNDBDcjNCVk5WeVhYLUJ0U0Q3T0JfbTZIcVoyWXVrUE93NlMyWWlyYlMxODBScE5fRzZqMjZmbGY0eVAwaWhxLWI4TXpyZjNSRTZhWDNYZVRTRGdtd3dIQXpLcXJRNTBOb3VqSndMLWJZd3hTNmc5ZWdJdHM0ajAyQ1U?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Stocks slip as bond yields rise, but Nvidia stock is rising: AlphaCheck - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.911,
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUm9MZndsejJPY25xMWhQMzl1MU12dFhYLUduSXFwcWtyNTZwLWt0anR1X0dHaEdzLU1DaWZaUkZKaGg0c1JYRlBZeHRtSU0tQU5tUHBfeEVESTEwcTBTUkwtLUlkOE54VW9pVk5IdXo3NzlacGUxZHJpbHNjOGltelE4eUdRTDVfaENTdllaMTVqNk82aXhNQXNnd2NoNVpkaWNDSjFYZ0FoR2FYN290Z0oybWwyYmhEbXVPdkl5X0JSY0hM?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "AMD Is Having to Pay a Steep Price to Keep Up With Nvidia - Barron's",
+      "source": "Barron's",
+      "score": -0.768,
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPN180ODVZUU04U3dpTkRWRE9SbEZwUjc2WWVvUE1OQnlFZGFiWGVWWU12c3lWM3ZrU1BXdE5FY1ZSeS01djZHb2ZrWnV0cm12bzFNWlpweG5TTEstQUFLUVM0V3g2d1pIMmYxQnRzUExFc1FwOEFVSmZUcHNud1AtTVRGMGE?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVIDIA Upsizes Share Buyback Program to $235B amid AI Safety Tool Release - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.879,
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQUmw1RXFXdnRjRkV2UE1uQ1pxcXM4SnlaWC1HUmdXUlBoU2NSOXhWbmRWb1lndXFCRlI0M3Jkc2F1NmJrZHA1VG1qdkxyQlpNQXJXbVphWGpXNGFDY21GNDI0Q2VtcG1iRjNzTXJTNmU0MXpVWUwwdk9PbXlEXzRyLXVBYTJXeXRtcWJuSGJJdEg2S0lrNy1sYW04UFVXTzV4MVFJ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "AMD vs. Nvidia: Which Chip Giant Looks Stronger After Their Latest Acquisitions?",
+      "source": "finviz",
+      "score": 0.803,
+      "url": "/news/396758/amd-vs-nvidia-which-chip-giant-looks-stronger-after-their-latest-acquisitions",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Micron could dethrone Nvidia and become the biggest driver of S&P 500 profit growth - MarketWatch",
+      "source": "MarketWatch",
+      "score": 0.782,
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNc1BoMWkyX0xibzdDSW1VMUFmNjdSNHdjNVRFMFBqaF9Tb1lJN281TnpYR2tWWW1HU2pXdk1lWEpHUEd3b19EcHQzWGZmQ2llU2owS3pIaTdxTVZtTXRTT3RpZHdhWFM2S0szUU4tZW1kSGVaWjRMZWNvOWpFOWc4bmEyQkdZOE14cHJBcDdLazdVMFo3bFZDTFZRdXpwdFZOTld5a09HbnA2Tjk4X1VlNlBmR18tc2YtdDF3alJKMXpZQnd0?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ]
+}
