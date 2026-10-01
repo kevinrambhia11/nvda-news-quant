@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-09-29",
-  "generated_at": "2026-09-30T17:01:32",
+  "entry_day": "2026-10-01",
+  "generated_at": "2026-10-01T17:04:20",
   "articles": [
     {
-      "headline": "taiwan clears usd 44 billion in tsmc investments for united states expansion",
-      "source": "taiwansun.com",
+      "headline": "qualcomm early windows soc snapdragon x family dropped next windows update",
+      "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.01184
+      "weight": 0.0058,
+      "impact": -0.00487
     },
     {
-      "headline": "nvidia rises 2 as board authorizes record 150b buyback increase amd and broadcom slip",
+      "headline": "schds rules sold broadcom in march 2024 the stock is up about 183 since and schd holders missed the run",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.00926
+      "weight": 0.0057,
+      "impact": -0.00477
     },
     {
-      "headline": "new phones keep getting more expensive the chips powering them are becoming more extreme too",
-      "source": "thestar.com.my",
+      "headline": "intel rises 3 as chip contender caps off surprisingly strong september nvidia ticks up amd slips",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0063,
-      "impact": -0.00385
+      "weight": 0.0057,
+      "impact": -0.00406
     },
     {
-      "headline": "top vmware partner insight deauthorized by broadcom in north america",
-      "source": "crn.com",
+      "headline": "arm is betting on a world where everything needs a chip",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0063,
-      "impact": -0.00687
+      "weight": 0.0057,
+      "impact": 0.00995
     },
     {
-      "headline": "qualcomm e samsung fecham parceria inedita para novos chips",
-      "source": "canaltech.com.br",
+      "headline": "32 analysts say hold on intel heres what the numbers actually show",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0063,
-      "impact": -0.00141
+      "weight": 0.0057,
+      "impact": 0.00231
     },
     {
-      "headline": "qualcomm views saudi ai boom as opportunity for industrial tech and power efficiency 3003154",
-      "source": "arabnews.com",
+      "headline": "samsung foundry 2nm yield hits 60 chips still drain more power snapdragon.htm",
+      "source": "techtimes.com",
       "category": "competitors",
-      "weight": 0.0063,
-      "impact": -0.00169
+      "weight": 0.0056,
+      "impact": -0.00399
     },
     {
-      "headline": "tsmc stock nvidia amd apple partner etches buy points",
-      "source": "investors.com",
+      "headline": "tablet gaming iqoo pad ultra debut pakai chip sd 8 elite extreme gen 6",
+      "source": "antaranews.com",
       "category": "competitors",
-      "weight": 0.0062,
-      "impact": -0.01728
+      "weight": 0.0056,
+      "impact": 0.01298
     },
     {
-      "headline": "qualcomm snapdragon 8 elite extreme gen 6 bezi na 5 ghz",
-      "source": "svethardware.cz",
+      "headline": "amd chief to visit korea next month sources",
+      "source": "koreatimes.co.kr",
       "category": "competitors",
-      "weight": 0.0062,
-      "impact": 0.00102
+      "weight": 0.0056,
+      "impact": -0.00157
     },
     {
-      "headline": "apple perpanjang lisensi paten qualcomm hingga 2027",
+      "headline": "qualcomm pertimbangkan pakai teknologi 2nm samsung",
       "source": "liputan6.com",
       "category": "competitors",
-      "weight": 0.0062,
-      "impact": 0.00253
+      "weight": 0.0055,
+      "impact": -0.00062
     },
     {
-      "headline": "qualcomm nasdaq qcom and apple nasdaq aapl renew global patent license as chip revenue fades",
-      "source": "foreignpolicyjournal.com",
+      "headline": "microsoft vysvetlil proc surface opet nema amd",
+      "source": "svethardware.cz",
       "category": "competitors",
-      "weight": 0.0062,
-      "impact": 0.00143
+      "weight": 0.0055,
+      "impact": 0.00426
     }
   ]
 }
