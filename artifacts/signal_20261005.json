@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-10-05T12:19:41",
+  "generated_at": "2026-10-05T17:04:02",
   "ticker": "NVDA",
   "entry_day": "2026-10-05",
   "last_close": 233.95,
   "model_trained_through": "2026-09-23",
   "gap_context": {
     "prev_close": 233.95,
-    "latest": 234.22,
-    "gap_pct": 0.0012,
-    "session": "after-hours",
-    "as_of_et": "19:59 ET"
+    "latest": 235.36,
+    "gap_pct": 0.006,
+    "session": "pre-market",
+    "as_of_et": "07:34 ET"
   },
   "model_prob_up": 0.6159,
   "prob_big_move": 0.5233,
   "big_move_threshold": 0.0135,
   "action": "BUY / HOLD LONG",
-  "headline_sentiment": 0.0215,
-  "headline_count": 151,
-  "article_count": 178,
+  "headline_sentiment": 0.0577,
+  "headline_count": 145,
+  "article_count": 172,
   "fulltext": {
-    "stories": 151,
-    "read_full": 104,
-    "read_partial": 11,
-    "headline_only": 36,
+    "stories": 145,
+    "read_full": 101,
+    "read_partial": 15,
+    "headline_only": 29,
     "alt_searches": 12,
-    "elapsed_s": 160.4
+    "elapsed_s": 59.3
   },
   "data_warnings": [],
   "headlines_degraded": false,
   "sentiment_backend": "finbert",
   "stocktwits_bulls": 0,
   "stocktwits_bears": 0,
-  "advisory_composite": 0.5844,
+  "advisory_composite": 0.5898,
   "brain_top_news": [
     {
       "headline": "broadcom is lending one of its biggest customers 42 billion to buy its chips",
@@ -81,36 +81,38 @@
       "read_from": "www.cnbc.com"
     },
     {
-      "title": "Nvidia Defies Critics\u2014as Its Stock Falls Just Shy of First Record Since May - Barron's",
-      "source": "Barron's",
-      "score": -0.923,
+      "title": "Nvidia\u2019s $20bn licensing deal with Groq faces lawsuit from jilted engineers - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.933,
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUld4cEY1TDkzZFR4VURPM2Z1a3hBOGRGbmQwQXRqQk9SMm5ZZm1raDltLXFEUnJid1JhQWpFaF9sSkJ5WXFHVjIyWnd2RFpVejNJTEFRRC1YbWR5dkRPWGc2NHJzeElJWmtsQ3I1N3lwYkJlbTIydzhRUndxUEo1TXBWTkxPeXdFalM2cDJWOXFjZ3RmOV84?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Defies Critics\u2014as Its Stock Falls Just Shy of First Record Since May - barrons.com",
+      "source": "barrons.com",
+      "score": -0.926,
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObmhMZDU4ZE5HTWxGajFKbHlIRV9fV1YxZlZ1SjYzdkVLdEMzaHUySXVOdXAxMTM4eW9XeGVCWjZqYXhVcjdmcHI4NjkyV2tHSlF5STB4eGtFcUk0UnppZkFOOXdYNEUzVEVnVnBhUzdoQURvOE9kVEpOYXZVR0R6ZEpXd1c5Znc?oc=5",
       "n_sources": 1,
       "also_from": [],
       "read_status": "partial",
       "read_from": "www.barrons.com"
-    },
-    {
-      "title": "Top Three US Stocks to Watch This Week: PepsiCo, Delta Air Lines, Nvidia - Benzinga",
-      "source": "google_news",
-      "score": -0.473,
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOWVJiSEpHeFM0TkF1R3NOcXNIdGR4aXJDU1FIWmtFT2J1WmhhRFVkZmhlWndleVFpYVVuWUQwa21BUm1Qbm80NHRkdzdFV2tZM0Nva0thWWJSUmdkUXlwMkh2Z253cFU1cHF5VDhRTERvWlp2ZF96c1Y5NkRnTnU3WllzMF84TEN5SFRqd2RnYWJOdVdSd19KNllaNHJwRUo5R3ZPMVZULWV2NUNQY3I3dFJfbnBlUVhjS3ZtcXUtNA?oc=5",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "full",
-      "read_from": "www.benzinga.com"
     }
   ],
   "most_positive": [
     {
-      "title": "Nvidia Stock Price Forecast: Stock Expected to Challenge $300 as Largest-Ever Buyback Begins - TradingKey",
-      "source": "google_news",
-      "score": 0.927,
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRlZOYzd4RlY3SXpDa093M2ZSNjF3aGxwNHhYYVc0VTlObFUxamlXb2FsdEZ1N2RiZmFwd1hidy1CUUoxRXl3a3N5S0dSU1ZtbllfbklUT3BNRHExU29CLWZqYk5lV21FelJ5T0U5OWZKUFNrSlpKYTlUYVByRkdtdTVVbWdvNTM1ZWxGU3A2dE1rd1A2RC1rU0NYMndKQ2tCRTJFTzZyZ294dXN4S3IzbUVPaXI3OFI2eGQ5eGx3eEhzSEU?oc=5",
+      "title": "Morgan Stanley Has Strong Message For Nvidia Stock Investors",
+      "source": "finviz",
+      "score": 0.912,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-strong-message-nvidia-195818641.html",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
-      "read_from": "www.tradingkey.com"
+      "read_from": "finance.yahoo.com"
     },
     {
       "title": "Nvidia Shares Jump to Record High After Strong AI Growth",
@@ -123,14 +125,14 @@
       "read_from": "finance.yahoo.com"
     },
     {
-      "title": "NVIDIA Tokenised Stock Climbs To $235 On AI Growth Prospects - MarketForces Africa",
-      "source": "google_news",
-      "score": 0.893,
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNM3R4QXNsVzRYRHk3MGJIV2QtSmtDVGdReE5kcHR1ZklUcVNwRXI1a2V2T3FjM28zelViMzRQRjhHUFAxZ2t1T2toNjd3LXZacUtKS1F0N2R3ZWgyOEhwX290c3pVVnYzUlNfb1NZRG0tZXU4Y3EzWkt4eGU5MFBqOVlmTFp5QVlHYkJFYUViYw?oc=5",
+      "title": "Nvidia Hits Record High, Wall Street Still Sees Up to 99% Upside",
+      "source": "finviz",
+      "score": 0.886,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-hits-record-high-wall-003921500.html",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
-      "read_from": "dmarketforces.com"
+      "read_from": "finance.yahoo.com"
     }
   ]
 }
