@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-01",
-  "generated_at": "2026-10-01T17:04:20",
+  "entry_day": "2026-10-05",
+  "generated_at": "2026-10-05T12:15:12",
   "articles": [
     {
-      "headline": "qualcomm early windows soc snapdragon x family dropped next windows update",
+      "headline": "broadcom is lending one of its biggest customers 42 billion to buy its chips",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": -0.01014
+    },
+    {
+      "headline": "prediction broadcom stock could be much higher by 2027",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": -0.00473
+    },
+    {
+      "headline": "broadcoms total return from 4 milestones avago ipo to the 2 trillion club",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": -0.00364
+    },
+    {
+      "headline": "3 semiconductor stocks with fortress balance sheets and proven dividend raises",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0025,
+      "impact": -0.00936
+    },
+    {
+      "headline": "taiwanese social media users mock samsungs plan to grow foundry customers fourfold by 2029 sarcastically claiming tsmc i",
       "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00487
+      "weight": 0.0025,
+      "impact": 0.00323
     },
     {
-      "headline": "schds rules sold broadcom in march 2024 the stock is up about 183 since and schd holders missed the run",
+      "headline": "the ai chip revolution wouldnt be possible without this company",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00477
+      "weight": 0.0024,
+      "impact": 0.00883
     },
     {
-      "headline": "intel rises 3 as chip contender caps off surprisingly strong september nvidia ticks up amd slips",
-      "source": "247wallst.com",
+      "headline": "samsung hopes to rejoin qualcomms supply chain by leveraging its 2nm technology",
+      "source": "technews.tw",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00406
+      "weight": 0.0024,
+      "impact": -0.00645
     },
     {
-      "headline": "arm is betting on a world where everything needs a chip",
-      "source": "247wallst.com",
+      "headline": "micron technology vs qualcomm revenue 054012000.html",
+      "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": 0.00995
+      "weight": 0.0024,
+      "impact": -0.00501
     },
     {
-      "headline": "32 analysts say hold on intel heres what the numbers actually show",
-      "source": "247wallst.com",
+      "headline": "here is why broadcom avgo is a good investment at todays price 1848228",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": 0.00231
+      "weight": 0.0024,
+      "impact": -0.00591
     },
     {
-      "headline": "samsung foundry 2nm yield hits 60 chips still drain more power snapdragon.htm",
-      "source": "techtimes.com",
+      "headline": "broadcom seeks 60 billion for ai chips as anthropic races to expand computing power 14043293.html",
+      "source": "moneycontrol.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00399
-    },
-    {
-      "headline": "tablet gaming iqoo pad ultra debut pakai chip sd 8 elite extreme gen 6",
-      "source": "antaranews.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": 0.01298
-    },
-    {
-      "headline": "amd chief to visit korea next month sources",
-      "source": "koreatimes.co.kr",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00157
-    },
-    {
-      "headline": "qualcomm pertimbangkan pakai teknologi 2nm samsung",
-      "source": "liputan6.com",
-      "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00062
-    },
-    {
-      "headline": "microsoft vysvetlil proc surface opet nema amd",
-      "source": "svethardware.cz",
-      "category": "competitors",
-      "weight": 0.0055,
-      "impact": 0.00426
+      "weight": 0.0024,
+      "impact": 0.00466
     }
   ]
 }
