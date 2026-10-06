@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-05",
-  "generated_at": "2026-10-05T17:01:22",
+  "entry_day": "2026-10-06",
+  "generated_at": "2026-10-06T17:03:23",
   "articles": [
     {
-      "headline": "broadcom is lending one of its biggest customers 42 billion to buy its chips",
+      "headline": "qualcomm can grow even as u s ev sales fall",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.01014
+      "weight": 0.0059,
+      "impact": -0.00676
     },
     {
-      "headline": "prediction broadcom stock could be much higher by 2027",
+      "headline": "why october 15 is the most important day for nvidia and broadcom until thanksgiving",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.00473
+      "weight": 0.0058,
+      "impact": -0.00659
     },
     {
-      "headline": "broadcoms total return from 4 milestones avago ipo to the 2 trillion club",
+      "headline": "im loading up on taiwan semiconductor ahead of oct 15 earnings",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.00364
+      "weight": 0.0058,
+      "impact": -0.00065
     },
     {
-      "headline": "3 semiconductor stocks with fortress balance sheets and proven dividend raises",
-      "source": "247wallst.com",
+      "headline": "vmware isn t the right business for everybody broadcom channel exec says insight deauthorized in north america for not m",
+      "source": "crn.com",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": -0.00936
+      "weight": 0.0058,
+      "impact": -0.0031
     },
     {
-      "headline": "taiwanese social media users mock samsungs plan to grow foundry customers fourfold by 2029 sarcastically claiming tsmc i",
-      "source": "wccftech.com",
+      "headline": "qualcomm and arm head to trial again potential for huge damages in focus",
+      "source": "thestar.com.my",
       "category": "competitors",
-      "weight": 0.0025,
-      "impact": 0.00323
+      "weight": 0.0057,
+      "impact": -2e-05
     },
     {
-      "headline": "the ai chip revolution wouldnt be possible without this company",
-      "source": "247wallst.com",
+      "headline": "googlebook android app compatibility heres why you might choose qualcomm over intel models",
+      "source": "stuff.tv",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": 0.00883
+      "weight": 0.0057,
+      "impact": 0.00583
     },
     {
-      "headline": "samsung hopes to rejoin qualcomms supply chain by leveraging its 2nm technology",
-      "source": "technews.tw",
+      "headline": "anthropic turns to broadcom for up to usd42 billion in financing",
+      "source": "laosnews.net",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.00645
+      "weight": 0.0057,
+      "impact": -0.01039
     },
     {
-      "headline": "micron technology vs qualcomm revenue 054012000.html",
-      "source": "aol.com",
+      "headline": "qualcomm to pay huawei for first time in 5g ai patent breakthrough",
+      "source": "nikkei.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.00501
+      "weight": 0.0057,
+      "impact": -7e-05
     },
     {
-      "headline": "here is why broadcom avgo is a good investment at todays price 1848228",
-      "source": "insidermonkey.com",
+      "headline": "broadcom offers anthropic up to usd42 billion in financing",
+      "source": "newzealandstar.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.00591
+      "weight": 0.0057,
+      "impact": -0.00768
     },
     {
-      "headline": "broadcom seeks 60 billion for ai chips as anthropic races to expand computing power 14043293.html",
-      "source": "moneycontrol.com",
+      "headline": "google confirma problemas em apps nos googlebooks com chip intel",
+      "source": "estadao.com.br",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": 0.00466
+      "weight": 0.0057,
+      "impact": -0.00097
     }
   ]
 }

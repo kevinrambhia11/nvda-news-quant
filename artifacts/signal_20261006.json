@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-10-06T17:07:20",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-06",
+  "last_close": 238.9,
+  "model_trained_through": "2026-09-23",
+  "gap_context": {
+    "prev_close": 238.9,
+    "latest": 241.09,
+    "gap_pct": 0.0092,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.4376,
+  "prob_big_move": 0.4231,
+  "big_move_threshold": 0.0127,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0732,
+  "headline_count": 155,
+  "article_count": 184,
+  "fulltext": {
+    "stories": 155,
+    "read_full": 116,
+    "read_partial": 20,
+    "headline_only": 19,
+    "alt_searches": 12,
+    "elapsed_s": 141.2
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 0,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.4673,
+  "brain_top_news": [
+    {
+      "headline": "qualcomm can grow even as u s ev sales fall",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.00676
+    },
+    {
+      "headline": "why october 15 is the most important day for nvidia and broadcom until thanksgiving",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00659
+    },
+    {
+      "headline": "im loading up on taiwan semiconductor ahead of oct 15 earnings",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00065
+    },
+    {
+      "headline": "vmware isn t the right business for everybody broadcom channel exec says insight deauthorized in north america for not m",
+      "source": "crn.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.0031
+    },
+    {
+      "headline": "qualcomm and arm head to trial again potential for huge damages in focus",
+      "source": "thestar.com.my",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -2e-05
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia Defies Critics\u2014as Its Stock Falls Just Shy of First Record Since May - Barron's",
+      "source": "google_news",
+      "score": -0.923,
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObmhMZDU4ZE5HTWxGajFKbHlIRV9fV1YxZlZ1SjYzdkVLdEMzaHUySXVOdXAxMTM4eW9XeGVCWjZqYXhVcjdmcHI4NjkyV2tHSlF5STB4eGtFcUk0UnppZkFOOXdYNEUzVEVnVnBhUzdoQURvOE9kVEpOYXZVR0R6ZEpXd1c5Znc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "Nvidia, Broadcom shielded as AI power crunch hits chip supply chain, says Morgan Stanley - Reuters",
+      "source": "Reuters",
+      "score": -0.859,
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMF9lcTkxVU5OWUp5THhibUJWc3U0MWo5c2dreS02dFk3TGt4SlBXLVdpX0htOV85SnVsc3RUZjZJZDJac3p3bFgzS05uU2hjVXh5N0RjcFVtQml0TnBRSllwREVDdUVFOTBoTTRMT01RMnVUNGQtZk1ZY0ZIdUZHWHNBbjlaMk10dEpJZ3J5eTZHYjlDQW9JdEg4STBBLVNYNlFRb1J1aUJudHJkS2lmT0otSUJHdE5wVnJaXw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "manufacturing.economictimes.indiatimes.com"
+    },
+    {
+      "title": "Nvidia's $20 billion Groq deal faces lawsuit alleging startup's stockholders were shortchanged - CNBC",
+      "source": "CNBC",
+      "score": -0.831,
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1tMlZTSmhldFlfaWNYeXdVNENBYW55RVFSajRaa2toaHpkY19JaUZUZlJoQ0lnV0pPUHk3bzZuc0Z6RndFMXFuM0tVZW1PUC1qX0ZYODl2TE9PRUh4UWJTTHphSXJtU0Vnb0lxbF85OExwUTJPT0FIUC0yMEtNZ9IBgwFBVV95cUxQdnh1NFI4VDQ4ZnIzZXhETC1ZTklPWmJaZHR6eEVPalhwM05YeTdLQVdMcnFIRUZmbXpYT01QcGhsSmtaeGFJelZRdDJORDFyQkY2dGlEbXpwLVBfbzdDZDRxd1BOZURBQkdwUVcwNVM3ZWVyQW04ZG1aTUFUaUNMeXdyWQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "The case for Nvidia\u2019s stock to march even higher after clinching its first record high in months - MarketWatch",
+      "source": "MarketWatch",
+      "score": 0.938,
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNNnE1ZVh1NDBVSlYyZ21pR3VfNTFaaGpqMVN1aTBIUzgzalZZTDVwZkZ1ekZ2cTZfaTdKWURBOUEteTRPSDVnV2hCWUEtTUhXZl96cVVmUlVqN1pkQ2xyT0ZGbkw1NzJwa1ZZZmhBQ2FYcDZoSi1QUGc1Y1BkZXVXT29IcUZscjhXWk02RHlHOWtFRGh5eDBzZHlXYV9XYnR5eEh2YjhfcnZvMGF1LWdHNE94SG9PT0FxbWJQMlcySW5zaWlFTUdHQmZIck1uMVZrZUZxeg?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Key facts: NVIDIA (NVDA) Q3 Due Nov 18; BNP Paribas Raises PT to $345 - TradingView",
+      "source": "TradingView",
+      "score": 0.923,
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMXBsbkxqQlNwdHdaM2FhR2JCckUwLThzWHhENG9JeERKaDFwLUxkYldvU3hZNFNzQWE1UU5TOGhsdUJTMTVPVkxWZjltbkdGVG1vUmQtWGlMRWRCUDVsT2RLVHllY1ZvNVRiNTlmNVY4ZkpWcG9jcUFYOU9ndzRvd1ZkemlBZ25NaXRueGpmai1zcmFzUXNsT1VpOF82em9CZkVWb1liR1RQT29MYlFONlhOdXJrNnRmQTI2WU5xV2tSUFVq?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.tradingview.com"
+    },
+    {
+      "title": "Dow's 132-point rally highlighted by gains in shares of Visa, NVIDIA Corp.",
+      "source": "finviz",
+      "score": 0.919,
+      "url": "https://www.marketwatch.com/data-news/dow-s-132-point-rally-highlighted-by-gains-in-shares-of-visa-nvidia-corp-3b23e937-f1b21152b5f8?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ]
+}
