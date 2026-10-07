@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-10-07T17:06:39",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-07",
+  "last_close": 239.24,
+  "model_trained_through": "2026-09-23",
+  "gap_context": {
+    "prev_close": 239.24,
+    "latest": 237.68,
+    "gap_pct": -0.0065,
+    "session": "pre-market",
+    "as_of_et": "07:36 ET"
+  },
+  "model_prob_up": 0.4381,
+  "prob_big_move": 0.4667,
+  "big_move_threshold": 0.0127,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0392,
+  "headline_count": 148,
+  "article_count": 188,
+  "fulltext": {
+    "stories": 148,
+    "read_full": 106,
+    "read_partial": 22,
+    "headline_only": 20,
+    "alt_searches": 12,
+    "elapsed_s": 99.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 0,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.4625,
+  "brain_top_news": [
+    {
+      "headline": "skyworks vs qualcomm why one chip maker is rewarding shareholders while the other suspends dividends",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.01082
+    },
+    {
+      "headline": "what will 5000 invested in broadcom stock be worth in 5 years",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.01439
+    },
+    {
+      "headline": "huawei touts logicfoldings 50 clock buffer cut but a semiconductor expert warns the heat problem remains which is why qu",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": 0.00442
+    },
+    {
+      "headline": "heres why im buying broadcom even as concerns about circular financing with anthropic mount",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.00354
+    },
+    {
+      "headline": "forget smh blackrocks chip fund beat it by 22 43 points over the past year",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.00423
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Repon revenue slips in September as Vera Rubin, ASIC slide rail shipments ramp up",
+      "source": "finviz",
+      "score": -0.968,
+      "url": "https://www.digitimes.com/news/a20261006PD237/repon-ai-server-slide-rails-asic-revenue-supply-chain.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.digitimes.com"
+    },
+    {
+      "title": "Nvidia Defies Critics\u2014as Its Stock Falls Just Shy of First Record Since May - Barron's",
+      "source": "google_news",
+      "score": -0.923,
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObmhMZDU4ZE5HTWxGajFKbHlIRV9fV1YxZlZ1SjYzdkVLdEMzaHUySXVOdXAxMTM4eW9XeGVCWjZqYXhVcjdmcHI4NjkyV2tHSlF5STB4eGtFcUk0UnppZkFOOXdYNEUzVEVnVnBhUzdoQURvOE9kVEpOYXZVR0R6ZEpXd1c5Znc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "The World\u2019s Largest Stock Has Lagged. If Nvidia Runs, Tech and Markets Will Follow. - Barron's",
+      "source": "Barron's",
+      "score": -0.858,
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaEhnSzY2NmZ1cTRXYlBBXzRmQ1Nlcld5OVhFSUpUdlEwdzVyOHZySk9nZ2tDNDFILTR4b1p2QVprZTl5UnN5N2F2bUJPWUxTNG1pajZ1UjAtbjRiWWJJdVNncWJhTkk0dUxzdUJ6UEQ4N2R2ZzExUEhEQmwtcHhmb0k1dGFGbzQ?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia stock hits record high after Foxconn Q3 2026 revenue surge - Quartz",
+      "source": "google_news",
+      "score": 0.938,
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBsWHNQWGdlTElNSUowYmlDcGZ0OEd0bV9kT0RuTXNfTENVc093RGE1bG5IUUN0Ym1UMGxjRm9WMXZ2XzNQUjFCbTVkaVhwX0FJd0ZEcWQtUEZaNC1VSERjTGZrcTRCdWZjWERXQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "qz.com"
+    },
+    {
+      "title": "The case for Nvidia\u2019s stock to march even higher after clinching its first record high in months - MarketWatch",
+      "source": "MarketWatch",
+      "score": 0.936,
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNNnE1ZVh1NDBVSlYyZ21pR3VfNTFaaGpqMVN1aTBIUzgzalZZTDVwZkZ1ekZ2cTZfaTdKWURBOUEteTRPSDVnV2hCWUEtTUhXZl96cVVmUlVqN1pkQ2xyT0ZGbkw1NzJwa1ZZZmhBQ2FYcDZoSi1QUGc1Y1BkZXVXT29IcUZscjhXWk02RHlHOWtFRGh5eDBzZHlXYV9XYnR5eEh2YjhfcnZvMGF1LWdHNE94SG9PT0FxbWJQMlcySW5zaWlFTUdHQmZIck1uMVZrZUZxeg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Stock market today: S&P 500, Nasdaq hit record highs as Nvidia, AMD lead tech higher",
+      "source": "finviz",
+      "score": 0.906,
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-6-dow-sp-500-nasdaq-080526166.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
