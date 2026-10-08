@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-07",
-  "generated_at": "2026-10-07T17:03:30",
+  "entry_day": "2026-10-08",
+  "generated_at": "2026-10-08T17:03:46",
   "articles": [
     {
-      "headline": "skyworks vs qualcomm why one chip maker is rewarding shareholders while the other suspends dividends",
-      "source": "247wallst.com",
+      "headline": "dow jones futures yields samsung taiwan semi micron sandisk",
+      "source": "investors.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.01082
+      "weight": 0.0051,
+      "impact": -0.01645
     },
     {
-      "headline": "what will 5000 invested in broadcom stock be worth in 5 years",
+      "headline": "broadcom owns the backstage amd fights for the spotlight",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.01439
+      "weight": 0.005,
+      "impact": -0.00585
     },
     {
-      "headline": "huawei touts logicfoldings 50 clock buffer cut but a semiconductor expert warns the heat problem remains which is why qu",
+      "headline": "elon musk is aligned with china warns taiwanese op ed advising tsmc to reject terafab chip making project partnership",
       "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.0051,
-      "impact": 0.00442
+      "weight": 0.005,
+      "impact": -0.00144
     },
     {
-      "headline": "heres why im buying broadcom even as concerns about circular financing with anthropic mount",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.00354
-    },
-    {
-      "headline": "forget smh blackrocks chip fund beat it by 22 43 points over the past year",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.00423
-    },
-    {
-      "headline": "intel googlebooks diesmal wird x86 zum kompatibilitaetsproblem.99690",
-      "source": "computerbase.de",
+      "headline": "broadcom avgo is lagging the market this year is it a buy 1850224",
+      "source": "insidermonkey.com",
       "category": "competitors",
       "weight": 0.005,
-      "impact": -0.00278
+      "impact": -0.00791
     },
     {
-      "headline": "qualcomm will pay huawei to license its patents for the first time in historic turnaround reversal in a 5g and ai cross ",
+      "headline": "elon musk rules out wider tsmc role in texas terafab says his companies will build and run facility",
+      "source": "taiwansun.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00477
+    },
+    {
+      "headline": "marvell targets 90b revenue 2031 google warrant ties 120b chip buys marvell equity.htm",
+      "source": "techtimes.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00287
+    },
+    {
+      "headline": "fort collins moves quickly with broadcom incentives plan",
+      "source": "bizwest.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00674
+    },
+    {
+      "headline": "qualcomm will license patents behind huaweis logicfolding chip architecture report says the kirin 9050 pro already uses ",
       "source": "tomshardware.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": 0.00457
+      "weight": 0.0049,
+      "impact": 0.00788
     },
     {
-      "headline": "google akui sejumlah aplikasi android bermasalah di googlebooks intel",
-      "source": "antaranews.com",
+      "headline": "rapidus seeks chip customers as japan pushes 2nm semiconductor revival 1754146",
+      "source": "econotimes.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": 0.00586
+      "weight": 0.0049,
+      "impact": -0.00235
     },
     {
-      "headline": "justices seem to support end to intel 401 k fund suit",
-      "source": "law360.com",
+      "headline": "intel cpu prices climbed 30 because ai seized global memory production.htm",
+      "source": "techtimes.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00726
-    },
-    {
-      "headline": "qualcomm nasdaq qcom automotive revenue surges 61 as u s ev sales slide",
-      "source": "foreignpolicyjournal.com",
-      "category": "competitors",
-      "weight": 0.005,
-      "impact": -3e-05
+      "weight": 0.0049,
+      "impact": 0.00054
     }
   ]
 }

@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-10-08T17:06:57",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-08",
+  "last_close": 237.47,
+  "model_trained_through": "2026-09-23",
+  "gap_context": {
+    "prev_close": 237.47,
+    "latest": 235.12,
+    "gap_pct": -0.0099,
+    "session": "pre-market",
+    "as_of_et": "07:36 ET"
+  },
+  "model_prob_up": 0.5921,
+  "prob_big_move": 0.4717,
+  "big_move_threshold": 0.0135,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0294,
+  "headline_count": 166,
+  "article_count": 209,
+  "fulltext": {
+    "stories": 166,
+    "read_full": 101,
+    "read_partial": 22,
+    "headline_only": 43,
+    "alt_searches": 12,
+    "elapsed_s": 102.2
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 8,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5689,
+  "brain_top_news": [
+    {
+      "headline": "dow jones futures yields samsung taiwan semi micron sandisk",
+      "source": "investors.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.01645
+    },
+    {
+      "headline": "broadcom owns the backstage amd fights for the spotlight",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00585
+    },
+    {
+      "headline": "elon musk is aligned with china warns taiwanese op ed advising tsmc to reject terafab chip making project partnership",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00144
+    },
+    {
+      "headline": "broadcom avgo is lagging the market this year is it a buy 1850224",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00791
+    },
+    {
+      "headline": "elon musk rules out wider tsmc role in texas terafab says his companies will build and run facility",
+      "source": "taiwansun.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00477
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "S&P 500 And Nasdaq 100 Slip From Record Highs Amid Pressure From Soaring Treasury Yields  SPCX, AMD, NVDA, MRVL In Focus",
+      "source": "finviz",
+      "score": -0.962,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-100-slip-225051213.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "SpaceX stock slips on report of its $40 billion in new debt for Nvidia chips - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.96,
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOUmpyUVZ1UWIzcy1TeXItY2FQMU1CMk1uUW1YcVBfdGdxUkdwX0JJTjE3c3FFYXh5dkVrZHhYUEljS0ZqLTg5cTJ3WnA2LWFvMFJSWHpFckNYUkw3SF9odVFFUWktMUtQSDV4QzJrRnhqOV8zLVNJa1Z3NHlXUTB5d2FEUlRBVnUxUGlZT3hMbmtPT1BQaGJGUEdwZVFfa0pCME5kWHFqVUNaYUlWSE5Zc2tWNkJVM2VYa3pYSmY1eXdEeVBCcHBaNk91ZmxhZ2l5NUxYOTVB?oc=5",
+      "n_sources": 2,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia-Backed IPO\u2019s Cratering Demand Sends Warning on AI Funding",
+      "source": "yahoo_rss",
+      "score": -0.952,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-backed-ipo-cratering-demand-102043878.html?.tsrc=rss",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia stock hits record high after Foxconn Q3 2026 revenue surge - Quartz",
+      "source": "google_news",
+      "score": 0.938,
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBsWHNQWGdlTElNSUowYmlDcGZ0OEd0bV9kT0RuTXNfTENVc093RGE1bG5IUUN0Ym1UMGxjRm9WMXZ2XzNQUjFCbTVkaVhwX0FJd0ZEcWQtUEZaNC1VSERjTGZrcTRCdWZjWERXQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "qz.com"
+    },
+    {
+      "title": "The case for Nvidia\u2019s stock to march even higher after clinching its first record high in months - MarketWatch",
+      "source": "MarketWatch",
+      "score": 0.936,
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNNnE1ZVh1NDBVSlYyZ21pR3VfNTFaaGpqMVN1aTBIUzgzalZZTDVwZkZ1ekZ2cTZfaTdKWURBOUEteTRPSDVnV2hCWUEtTUhXZl96cVVmUlVqN1pkQ2xyT0ZGbkw1NzJwa1ZZZmhBQ2FYcDZoSi1QUGc1Y1BkZXVXT29IcUZscjhXWk02RHlHOWtFRGh5eDBzZHlXYV9XYnR5eEh2YjhfcnZvMGF1LWdHNE94SG9PT0FxbWJQMlcySW5zaWlFTUdHQmZIck1uMVZrZUZxeg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia stock approaches $6 trillion market cap milestone - Quartz",
+      "source": "google_news",
+      "score": 0.907,
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9uQUVYX2hlTkRtSGtpVVBhRkppcklFTHZFb1RKdk5MOUhVWnhrWWtRUmYxVl9oQ2NrWGxUTzVwVFJlVVNyMEZBVDFHUFpLQUZPTkRlRVJSZ29yakYxcnI1NmNJTG80MW1WN3c?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "qz.com"
+    }
+  ]
+}
