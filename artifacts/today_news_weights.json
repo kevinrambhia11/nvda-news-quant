@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-10-08",
-  "generated_at": "2026-10-08T17:03:46",
+  "generated_at": "2026-10-09T15:46:44",
   "articles": [
     {
-      "headline": "dow jones futures yields samsung taiwan semi micron sandisk",
-      "source": "investors.com",
+      "headline": "we just benchmarked the first 5 googlebooks and intel should be worried",
+      "source": "tomsguide.com",
       "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.01645
-    },
-    {
-      "headline": "broadcom owns the backstage amd fights for the spotlight",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00585
-    },
-    {
-      "headline": "elon musk is aligned with china warns taiwanese op ed advising tsmc to reject terafab chip making project partnership",
-      "source": "wccftech.com",
-      "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00144
-    },
-    {
-      "headline": "broadcom avgo is lagging the market this year is it a buy 1850224",
-      "source": "insidermonkey.com",
-      "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00791
-    },
-    {
-      "headline": "elon musk rules out wider tsmc role in texas terafab says his companies will build and run facility",
-      "source": "taiwansun.com",
-      "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00477
-    },
-    {
-      "headline": "marvell targets 90b revenue 2031 google warrant ties 120b chip buys marvell equity.htm",
-      "source": "techtimes.com",
-      "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00287
-    },
-    {
-      "headline": "fort collins moves quickly with broadcom incentives plan",
-      "source": "bizwest.com",
-      "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.00674
+      "weight": 0.0043,
+      "impact": -0.00143
     },
     {
       "headline": "qualcomm will license patents behind huaweis logicfolding chip architecture report says the kirin 9050 pro already uses ",
       "source": "tomshardware.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": 0.00788
+      "weight": 0.0043,
+      "impact": 0.00801
+    },
+    {
+      "headline": "qualcomm et arm setrillent a nouveau devant la justice le prix de votre prochain smartphone va t il augmenter.html",
+      "source": "01net.com",
+      "category": "competitors",
+      "weight": 0.0043,
+      "impact": 0.01122
+    },
+    {
+      "headline": "nvidia broadcom october 1 ai 111605000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0043,
+      "impact": 0.00076
+    },
+    {
+      "headline": "spacex in talks with investors to borrow 40 billion to buy nvidia chips 126100700148 1.html",
+      "source": "business-standard.com",
+      "category": "competitors",
+      "weight": 0.0043,
+      "impact": -0.01033
+    },
+    {
+      "headline": "why intel rallied september 132000000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0043,
+      "impact": 0.00399
     },
     {
       "headline": "rapidus seeks chip customers as japan pushes 2nm semiconductor revival 1754146",
       "source": "econotimes.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00235
+      "weight": 0.0043,
+      "impact": -0.00367
     },
     {
-      "headline": "intel cpu prices climbed 30 because ai seized global memory production.htm",
-      "source": "techtimes.com",
+      "headline": "broadcom avgo is lagging the market this year is it a buy 1850224",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": 0.00054
+      "weight": 0.0043,
+      "impact": -0.01367
+    },
+    {
+      "headline": "amd more 100x 10 years 140023000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0043,
+      "impact": 0.00486
+    },
+    {
+      "headline": "broadcom owns the backstage amd fights for the spotlight",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0043,
+      "impact": -0.00467
     }
   ]
 }
