@@ -1,0 +1,141 @@
+{
+  "generated_at": "2026-10-09T17:06:39",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-09",
+  "last_close": 230.48,
+  "model_trained_through": "2026-10-07",
+  "gap_context": {
+    "prev_close": 230.48,
+    "latest": 233.89,
+    "gap_pct": 0.0148,
+    "session": "pre-market",
+    "as_of_et": "07:36 ET"
+  },
+  "model_prob_up": 0.4154,
+  "prob_big_move": 0.4903,
+  "big_move_threshold": 0.0127,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": -0.0564,
+  "headline_count": 159,
+  "article_count": 202,
+  "fulltext": {
+    "stories": 159,
+    "read_full": 96,
+    "read_partial": 18,
+    "headline_only": 45,
+    "alt_searches": 12,
+    "elapsed_s": 134.9
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 11,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.4323,
+  "brain_top_news": [
+    {
+      "headline": "rising smartphone prices put affordability under pressure but open door for new brands qualcomm india president article ",
+      "source": "moneycontrol.com",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": -0.00271
+    },
+    {
+      "headline": "spacex broadcom and oracle all want billions in ai chip debt at the same time",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": -0.00508
+    },
+    {
+      "headline": "could this chipmaker really overtake intel in revenue by 2031",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": -0.00341
+    },
+    {
+      "headline": "nvidia vs broadcom ai chip 214900000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": 0.00511
+    },
+    {
+      "headline": "samsung flags 783 profit jump to record 80bn as ai chip boom also lifts tsmc sales",
+      "source": "euronews.com",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": -0.00673
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nasdaq 100 Ends Lower As Report Of Weaker-Than-Expected OpenAI Revenue Drags Chipmakers  NVDA, DIS, ORCL, SBUX In Focus",
+      "source": "finviz",
+      "score": -0.972,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-100-ends-lower-report-225519360.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Micron, Nvidia and AI chip stocks fall as report on OpenAI\u2019s revenue causes \u2018undue concern\u2019 - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNOFhHOU9ES2xuX2Q1dWdTYVRjS0lGQUI4ekV5T1hzMGhzNF9mVldoSkVPTmE0QjdPakdnZ1BVeXU0bjZkSWhQMEVYNDFaSWstZUFNS2tzeUxUdFhmVWloVTFTNWJLejNKbEZOWjVCS3d5Y24tR0tFRXd5TlZGN0F2b1ZQN0NoUnE3UVhqaGhqZkNNRVRGMzZrNktSTDI3UDN5WENtdVByempvU0R6blZ3TlZIcmwwU05fcERjblBSeUNkVWk2VUd0bzNn?oc=5",
+      "n_sources": 3,
+      "also_from": [
+        "google_news",
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "www.fxleaders.com"
+    },
+    {
+      "title": "OpenAI\u2019s Revenue Is Reportedly $20 Billion Lower Than Thought. Nvidia Just Lost $170 Billion - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.968,
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdDFTdmhNSHJ4OXdGRTROLXpPamlQRUN5MFlNNXJYcHJxUWR4RFd0SlpzcHNoQWdiamhOd29LaVljRG5CeU1XdnhsWko4dlQ1aVg2U2FSb3o3bXhGbVFRc1lLNkJMTWdsU1VHUGFrQ3hOOTRSNVdKN3ZsTm95ZEJqUDVjZDIxVU9NbGxZcEtUODJWLV9TdlllNFN0V2FtZlo2aENz?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "yahoo_rss"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "The case for Nvidia\u2019s stock to march even higher after clinching its first record high in months - MarketWatch",
+      "source": "google_news",
+      "score": 0.936,
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNNnE1ZVh1NDBVSlYyZ21pR3VfNTFaaGpqMVN1aTBIUzgzalZZTDVwZkZ1ekZ2cTZfaTdKWURBOUEteTRPSDVnV2hCWUEtTUhXZl96cVVmUlVqN1pkQ2xyT0ZGbkw1NzJwa1ZZZmhBQ2FYcDZoSi1QUGc1Y1BkZXVXT29IcUZscjhXWk02RHlHOWtFRGh5eDBzZHlXYV9XYnR5eEh2YjhfcnZvMGF1LWdHNE94SG9PT0FxbWJQMlcySW5zaWlFTUdHQmZIck1uMVZrZUZxeg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Samsung HBM4E wins NVIDIA nod for AI accelerator push",
+      "source": "finviz",
+      "score": 0.817,
+      "url": "https://www.digitimes.com/news/a20261008PD231/samsung-hbm-production-data-data-center.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "NVIDIA Commits $1 Billion to Advance US Science Over the Next Five Years",
+      "source": "finviz",
+      "score": 0.722,
+      "url": "/news/400499/nvidia-commits-1-billion-to-advance-us-science-over-the-next-five-years",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "nvidianews.nvidia.com"
+    }
+  ]
+}

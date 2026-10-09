@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-08",
-  "generated_at": "2026-10-09T15:46:44",
+  "entry_day": "2026-10-09",
+  "generated_at": "2026-10-09T17:03:04",
   "articles": [
     {
-      "headline": "we just benchmarked the first 5 googlebooks and intel should be worried",
-      "source": "tomsguide.com",
+      "headline": "rising smartphone prices put affordability under pressure but open door for new brands qualcomm india president article ",
+      "source": "moneycontrol.com",
       "category": "competitors",
-      "weight": 0.0043,
-      "impact": -0.00143
+      "weight": 0.0046,
+      "impact": -0.00271
     },
     {
-      "headline": "qualcomm will license patents behind huaweis logicfolding chip architecture report says the kirin 9050 pro already uses ",
-      "source": "tomshardware.com",
-      "category": "competitors",
-      "weight": 0.0043,
-      "impact": 0.00801
-    },
-    {
-      "headline": "qualcomm et arm setrillent a nouveau devant la justice le prix de votre prochain smartphone va t il augmenter.html",
-      "source": "01net.com",
-      "category": "competitors",
-      "weight": 0.0043,
-      "impact": 0.01122
-    },
-    {
-      "headline": "nvidia broadcom october 1 ai 111605000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0043,
-      "impact": 0.00076
-    },
-    {
-      "headline": "spacex in talks with investors to borrow 40 billion to buy nvidia chips 126100700148 1.html",
-      "source": "business-standard.com",
-      "category": "competitors",
-      "weight": 0.0043,
-      "impact": -0.01033
-    },
-    {
-      "headline": "why intel rallied september 132000000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0043,
-      "impact": 0.00399
-    },
-    {
-      "headline": "rapidus seeks chip customers as japan pushes 2nm semiconductor revival 1754146",
-      "source": "econotimes.com",
-      "category": "competitors",
-      "weight": 0.0043,
-      "impact": -0.00367
-    },
-    {
-      "headline": "broadcom avgo is lagging the market this year is it a buy 1850224",
-      "source": "insidermonkey.com",
-      "category": "competitors",
-      "weight": 0.0043,
-      "impact": -0.01367
-    },
-    {
-      "headline": "amd more 100x 10 years 140023000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0043,
-      "impact": 0.00486
-    },
-    {
-      "headline": "broadcom owns the backstage amd fights for the spotlight",
+      "headline": "spacex broadcom and oracle all want billions in ai chip debt at the same time",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0043,
-      "impact": -0.00467
+      "weight": 0.0046,
+      "impact": -0.00508
+    },
+    {
+      "headline": "could this chipmaker really overtake intel in revenue by 2031",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": -0.00341
+    },
+    {
+      "headline": "nvidia vs broadcom ai chip 214900000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": 0.00511
+    },
+    {
+      "headline": "samsung flags 783 profit jump to record 80bn as ai chip boom also lifts tsmc sales",
+      "source": "euronews.com",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": -0.00673
+    },
+    {
+      "headline": "s p 500 nasdaq end lower as chip stocks weigh",
+      "source": "freemalaysiatoday.com",
+      "category": "competitors",
+      "weight": 0.0045,
+      "impact": -0.00818
+    },
+    {
+      "headline": "could chipmaker really overtake intel 111555000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0045,
+      "impact": -0.00185
+    },
+    {
+      "headline": "intel sales leadership shake up old guard out new guard in",
+      "source": "crn.com",
+      "category": "competitors",
+      "weight": 0.0045,
+      "impact": -0.01314
+    },
+    {
+      "headline": "imc 2026 qualcomm connectivity plus demo.html",
+      "source": "fonearena.com",
+      "category": "competitors",
+      "weight": 0.0045,
+      "impact": 0.00489
+    },
+    {
+      "headline": "wall st turns lower as crude spikes chip stocks weigh 11791485275522.html",
+      "source": "livemint.com",
+      "category": "competitors",
+      "weight": 0.0045,
+      "impact": -0.00621
     }
   ]
 }
