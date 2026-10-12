@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-09",
-  "generated_at": "2026-10-09T17:03:04",
+  "entry_day": "2026-10-12",
+  "generated_at": "2026-10-12T17:56:56",
   "articles": [
     {
-      "headline": "rising smartphone prices put affordability under pressure but open door for new brands qualcomm india president article ",
-      "source": "moneycontrol.com",
+      "headline": "nvidia ma od roku 2028 pri vyrobe cipu vyuzivat intel foveros",
+      "source": "svethardware.cz",
       "category": "competitors",
-      "weight": 0.0046,
-      "impact": -0.00271
+      "weight": 0.0021,
+      "impact": 0.00367
     },
     {
-      "headline": "spacex broadcom and oracle all want billions in ai chip debt at the same time",
+      "headline": "the next wave of ai demand could send broadcom marvell and amd soaring",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0046,
-      "impact": -0.00508
+      "weight": 0.0021,
+      "impact": 0.0005
     },
     {
-      "headline": "could this chipmaker really overtake intel in revenue by 2031",
+      "headline": "qualcomm ceo smartphones 100b llms 2028 dram supply cost",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.00313
+    },
+    {
+      "headline": "chips with everything broadcom backstops us42bn funding for anthropic",
+      "source": "ifre.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": 0.00226
+    },
+    {
+      "headline": "hyperscaler and chipmaker cds widen to record levels",
+      "source": "ifre.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": 0.00593
+    },
+    {
+      "headline": "amd turned 10000 into more than 1 2 million can it happen again",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0046,
-      "impact": -0.00341
+      "weight": 0.0021,
+      "impact": -0.00378
     },
     {
-      "headline": "nvidia vs broadcom ai chip 214900000.html",
-      "source": "aol.com",
+      "headline": "new insider tip claims the samsung galaxy s27 ultra will only be available with a qualcomm chipset news 74995.php",
+      "source": "gsmarena.com",
       "category": "competitors",
-      "weight": 0.0046,
-      "impact": 0.00511
+      "weight": 0.002,
+      "impact": 0.00651
     },
     {
-      "headline": "samsung flags 783 profit jump to record 80bn as ai chip boom also lifts tsmc sales",
-      "source": "euronews.com",
+      "headline": "intel wants to become the go to foundry for asics and specialized chips and lip bu tans secret weapon is a former marvel",
+      "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.0046,
-      "impact": -0.00673
+      "weight": 0.002,
+      "impact": 0.00287
     },
     {
-      "headline": "s p 500 nasdaq end lower as chip stocks weigh",
-      "source": "freemalaysiatoday.com",
+      "headline": "intel in gelismis cip paketleme teknolojisi devlerin radarinda  211442",
+      "source": "donanimhaber.com",
       "category": "competitors",
-      "weight": 0.0045,
-      "impact": -0.00818
+      "weight": 0.002,
+      "impact": 0.00371
     },
     {
-      "headline": "could chipmaker really overtake intel 111555000.html",
-      "source": "aol.com",
+      "headline": "3 chip and software giants paid dividends on the same day 1 hasnt raised its payout since 2023",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0045,
-      "impact": -0.00185
-    },
-    {
-      "headline": "intel sales leadership shake up old guard out new guard in",
-      "source": "crn.com",
-      "category": "competitors",
-      "weight": 0.0045,
-      "impact": -0.01314
-    },
-    {
-      "headline": "imc 2026 qualcomm connectivity plus demo.html",
-      "source": "fonearena.com",
-      "category": "competitors",
-      "weight": 0.0045,
-      "impact": 0.00489
-    },
-    {
-      "headline": "wall st turns lower as crude spikes chip stocks weigh 11791485275522.html",
-      "source": "livemint.com",
-      "category": "competitors",
-      "weight": 0.0045,
-      "impact": -0.00621
+      "weight": 0.002,
+      "impact": -0.00524
     }
   ]
 }

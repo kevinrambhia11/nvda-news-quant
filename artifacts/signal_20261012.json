@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-10-12T18:09:54",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-12",
+  "last_close": 229.28,
+  "model_trained_through": "2026-10-07",
+  "gap_context": {
+    "prev_close": 229.28,
+    "latest": 228.65,
+    "gap_pct": -0.0027,
+    "session": "pre-market",
+    "as_of_et": "08:39 ET"
+  },
+  "model_prob_up": 0.4734,
+  "prob_big_move": 0.4903,
+  "big_move_threshold": 0.0127,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": 0.0128,
+  "headline_count": 147,
+  "article_count": 172,
+  "fulltext": {
+    "stories": 147,
+    "read_full": 96,
+    "read_partial": 18,
+    "headline_only": 33,
+    "alt_searches": 12,
+    "elapsed_s": 233.8
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 0,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.4833,
+  "brain_top_news": [
+    {
+      "headline": "nvidia ma od roku 2028 pri vyrobe cipu vyuzivat intel foveros",
+      "source": "svethardware.cz",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": 0.00367
+    },
+    {
+      "headline": "the next wave of ai demand could send broadcom marvell and amd soaring",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": 0.0005
+    },
+    {
+      "headline": "qualcomm ceo smartphones 100b llms 2028 dram supply cost",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.00313
+    },
+    {
+      "headline": "chips with everything broadcom backstops us42bn funding for anthropic",
+      "source": "ifre.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": 0.00226
+    },
+    {
+      "headline": "hyperscaler and chipmaker cds widen to record levels",
+      "source": "ifre.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": 0.00593
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Why Are Oracle (NYSE:ORCL) and Broadcom (AVGO) Stocks Falling While Nvidia Holds Up - Stocks Down Under",
+      "source": "google_news",
+      "score": -0.961,
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5OcDVMcU9KRjRVa3VNTFF2YTF5TnhNdjBhTUFCUnM1ODUwYTJwSlVpVXNxNWJUdFNVT0JOZGllRjFOdllnMXlKMFJiZnpKd1A3S0dGel9SbVliVWIycS0zbzRhR0ZQWGZmS1loTHpVamNQVkN5NWZOczZWZUdzS3c?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia Stock Faces Critical Warning Sign. Is the AI Trade Breaking? - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.92,
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNE9vRG1WR1hhNk04UHVKZDlWeWl6Z2E1elNMOC0yUkd5eGl1UHNqbU9XRlRNZGM1QUpoMzY4eGs0clc0MnlHZzI3ZlE3X3lfMC1nZ3AxSHFmTUlqQ1NaeW5KVk5nNHJmOEFXdGNQQ3dlLWJ2Vmx0VHo2SXFuenk5eVlQOWVOZkFDV3FFVW5PQnl4RFNscWhnSzVMcFZCajE1dWc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report - CNBC",
+      "source": "google_news",
+      "score": -0.918,
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPOG8tazVEa2hVcWdlYU1pZk53QzNMLU1lVWk4c2U0NFRvMk5IMnJYMWdTZERsSHhkYWo1dkRlczFWcGdwRHJfbFJzQ09kUEo1elE4YVRQZWp0Z3lVbU1MUjJIVV9lbFFHbUxPUlJhUER6NzgwdjVFTHM4UVhGZ3pNd3pR0gGHAUFVX3lxTE9nLWxxNlZwaWJicm9JSVBTT3lHeElLRDJ2QklRT2FkelA0eXZSNDlyRWh6dWlhNFloNzZfOUtid3dmcEJsTGNNcTE5VnhEbURXWWo0UGktcmhXNV8tS1lHYndTellPVm00RmFpeFVLTnBqNENtUUtBdHV2NVdPU0Jnb1A1NnpzSQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "The case for Nvidia\u2019s stock to march even higher after clinching its first record high in months - MarketWatch",
+      "source": "google_news",
+      "score": 0.936,
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNNnE1ZVh1NDBVSlYyZ21pR3VfNTFaaGpqMVN1aTBIUzgzalZZTDVwZkZ1ekZ2cTZfaTdKWURBOUEteTRPSDVnV2hCWUEtTUhXZl96cVVmUlVqN1pkQ2xyT0ZGbkw1NzJwa1ZZZmhBQ2FYcDZoSi1QUGc1Y1BkZXVXT29IcUZscjhXWk02RHlHOWtFRGh5eDBzZHlXYV9XYnR5eEh2YjhfcnZvMGF1LWdHNE94SG9PT0FxbWJQMlcySW5zaWlFTUdHQmZIck1uMVZrZUZxeg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Chenbro Micom expands into Nvidia Vera Rubin rack-scale systems, 2026 revenue already tops full-year 2025",
+      "source": "finviz",
+      "score": 0.892,
+      "url": "https://www.digitimes.com/news/a20261012VL223/chenbro-2026-chassis-revenue-nvidia.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia stock flashes massive signal as Wall Street leans in - TheStreet",
+      "source": "google_news",
+      "score": 0.766,
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBJcGxnVGN3YXVGSzNTTmY0RDdDLWpVbFlyOU9oQXhxOE9ha0d5ZFdLYXplZGZkS2hIcV9na001RzRkSzZrQ3pvVkpHUTl1clNndVlKeTRoME0ydFg3VzY4SzNidU1mY21jSG42X1p3VFY3dDdsSnRfbTZqQjB1Zw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}
