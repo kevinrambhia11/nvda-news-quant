@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-12",
-  "generated_at": "2026-10-12T17:56:56",
+  "entry_day": "2026-10-13",
+  "generated_at": "2026-10-13T17:04:20",
   "articles": [
     {
-      "headline": "nvidia ma od roku 2028 pri vyrobe cipu vyuzivat intel foveros",
-      "source": "svethardware.cz",
+      "headline": "microsoft plans huge deployment of its own ai chips with an eye on saving costs",
+      "source": "tribune.com.pk",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": 0.00367
+      "weight": 0.0048,
+      "impact": 0.00666
     },
     {
-      "headline": "the next wave of ai demand could send broadcom marvell and amd soaring",
+      "headline": "samsung galaxy s27 ultra nuove indiscrezioni sul processore il modello di punta potrebbe utilizzare soltanto un chip qua",
+      "source": "hwupgrade.it",
+      "category": "competitors",
+      "weight": 0.0047,
+      "impact": 0.00521
+    },
+    {
+      "headline": "broadcom is building an ai business unlike nvidias heres my price prediction",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": 0.0005
+      "weight": 0.0047,
+      "impact": -0.004
     },
     {
-      "headline": "qualcomm ceo smartphones 100b llms 2028 dram supply cost",
+      "headline": "qualcomm snapdragon x price hike advanced wafer nodes x86 cost efficiency",
       "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00313
+      "weight": 0.0047,
+      "impact": -0.00041
     },
     {
-      "headline": "chips with everything broadcom backstops us42bn funding for anthropic",
-      "source": "ifre.com",
+      "headline": "samsung galaxy s27 ultra mund te vije vetem me procesor qualcomm sipas nje raporti te ri",
+      "source": "zhurnal.mk",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": 0.00226
+      "weight": 0.0047,
+      "impact": 0.00693
     },
     {
-      "headline": "hyperscaler and chipmaker cds widen to record levels",
-      "source": "ifre.com",
-      "category": "competitors",
-      "weight": 0.0021,
-      "impact": 0.00593
-    },
-    {
-      "headline": "amd turned 10000 into more than 1 2 million can it happen again",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00378
-    },
-    {
-      "headline": "new insider tip claims the samsung galaxy s27 ultra will only be available with a qualcomm chipset news 74995.php",
-      "source": "gsmarena.com",
-      "category": "competitors",
-      "weight": 0.002,
-      "impact": 0.00651
-    },
-    {
-      "headline": "intel wants to become the go to foundry for asics and specialized chips and lip bu tans secret weapon is a former marvel",
+      "headline": "multiple intel cpu families witness 15 20 price hike while amd is also expected to raise cpu prices soon",
       "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": 0.00287
+      "weight": 0.0047,
+      "impact": -0.00587
     },
     {
-      "headline": "intel in gelismis cip paketleme teknolojisi devlerin radarinda  211442",
+      "headline": "qualcomm prevede un nuovo superciclo di vendite per gli smartphone grazie all ia 160497.html",
+      "source": "hwupgrade.it",
+      "category": "competitors",
+      "weight": 0.0047,
+      "impact": 0.00373
+    },
+    {
+      "headline": "intel islemcilere yeni zam kapida amd ve qualcomm da sirada  211535",
       "source": "donanimhaber.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": 0.00371
+      "weight": 0.0047,
+      "impact": -0.00164
     },
     {
-      "headline": "3 chip and software giants paid dividends on the same day 1 hasnt raised its payout since 2023",
-      "source": "247wallst.com",
+      "headline": "news item 43856 intel s apprte  augmenter d un seul coup le prix de ses processeurs de 20 .html",
+      "source": "informaticien.be",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.00524
+      "weight": 0.0046,
+      "impact": 0.00871
+    },
+    {
+      "headline": "broadcom ceo compares ai investors to gamblers they are in a casino",
+      "source": "nypost.com",
+      "category": "competitors",
+      "weight": 0.0046,
+      "impact": -0.00823
     }
   ]
 }

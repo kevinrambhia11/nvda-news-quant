@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-10-13T17:07:51",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-13",
+  "last_close": 226.32,
+  "model_trained_through": "2026-10-07",
+  "gap_context": {
+    "prev_close": 226.32,
+    "latest": 224.03,
+    "gap_pct": -0.0101,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.5756,
+  "prob_big_move": 0.5194,
+  "big_move_threshold": 0.0127,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.0911,
+  "headline_count": 169,
+  "article_count": 203,
+  "fulltext": {
+    "stories": 169,
+    "read_full": 105,
+    "read_partial": 11,
+    "headline_only": 53,
+    "alt_searches": 12,
+    "elapsed_s": 105.9
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 6,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5392,
+  "brain_top_news": [
+    {
+      "headline": "microsoft plans huge deployment of its own ai chips with an eye on saving costs",
+      "source": "tribune.com.pk",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": 0.00666
+    },
+    {
+      "headline": "samsung galaxy s27 ultra nuove indiscrezioni sul processore il modello di punta potrebbe utilizzare soltanto un chip qua",
+      "source": "hwupgrade.it",
+      "category": "competitors",
+      "weight": 0.0047,
+      "impact": 0.00521
+    },
+    {
+      "headline": "broadcom is building an ai business unlike nvidias heres my price prediction",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0047,
+      "impact": -0.004
+    },
+    {
+      "headline": "qualcomm snapdragon x price hike advanced wafer nodes x86 cost efficiency",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0047,
+      "impact": -0.00041
+    },
+    {
+      "headline": "samsung galaxy s27 ultra mund te vije vetem me procesor qualcomm sipas nje raporti te ri",
+      "source": "zhurnal.mk",
+      "category": "competitors",
+      "weight": 0.0047,
+      "impact": 0.00693
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Broadcom\u2019s AI Durability Warning Triggers Sharp Drop In SK Hynix, Samsung In Korea; Nvidia's China AI Chip Share Falls As Huawei Closes In - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.972,
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZ3dDT2F5Ym1KZWJLZ0NmX1g1Y25GdU1xZndZM2xzN2tLMmJmTFV2bWYyQlZ6RGNMYnJzOGdZTlJmY3B6TlI2X194bHFJSmtEUXU5TUcyUDZXNDI0anJwVXB2NVdfb2J0Tm1TMTZ5SHBjZUxKQzh0eHczaEk2NVp6eXBCQWk5MnhqRURIUEFBS3NmYVFtU19DVlFmWDFQRkFBODdEZzVmNA?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Why Are Nvidia, AMD and Intel Stocks Falling Today? AI Chip Selloff Deepens - Stocks Down Under",
+      "source": "google_news",
+      "score": -0.969,
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBwQjkyMXh0YndVRlJhS3FBSll4dVB4akV2TWoyclpKWEE3RXEzODUwYWxtczdwdV9PUFFLUnVfenNtSWpZWnlGRUMzbGJiVHpaOVA0WEVmQ3RzSHFOalAzWENZWFVJeW1QMWtPRDh2YnRKNkdGYzFfN2hR?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Dan Ives Says Semiconductor Sell-Off Is \u2018Way Overdone\u2019 As AI Spending Fears Rattle NVDA, MU, SKHY, SNDK",
+      "source": "yahoo_rss",
+      "score": -0.969,
+      "url": "https://stocktwits.com/news-articles/markets/equity/dan-ives-says-semiconductor-sell-off-is-way-overdone-nvda-mu-skhy-sndk-stocks/cZxBWE1RBoV?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "stocktwits.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVTS Stock Rises Overnight: Navitas Unveils 24 kW Nvidia AI Power Board Targeting 97% Efficiency",
+      "source": "finviz",
+      "score": 0.905,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvts-stock-rises-overnight-navitas-063816365.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Navitas shares surge 5% on Nvidia AI infrastructure partnership",
+      "source": "finviz",
+      "score": 0.881,
+      "url": "https://finance.yahoo.com/technology/ai/articles/navitas-shares-surge-5-nvidia-205435130.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "NVIDIA and Cisco Introduce New Pluggable Optics Form Factor to Scale AI Factories",
+      "source": "finviz",
+      "score": 0.748,
+      "url": "/news/401330/nvidia-and-cisco-introduce-new-pluggable-optics-form-factor-to-scale-ai-factories",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "newsroom.cisco.com"
+    }
+  ]
+}
