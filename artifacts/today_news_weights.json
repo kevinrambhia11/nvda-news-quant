@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-13",
-  "generated_at": "2026-10-13T17:04:20",
+  "entry_day": "2026-10-14",
+  "generated_at": "2026-10-14T17:03:44",
   "articles": [
     {
-      "headline": "microsoft plans huge deployment of its own ai chips with an eye on saving costs",
-      "source": "tribune.com.pk",
+      "headline": "chipmakers flag smartphone affordability concerns new indian brands sense opportunity article 14050834.html",
+      "source": "moneycontrol.com",
       "category": "competitors",
       "weight": 0.0048,
-      "impact": 0.00666
+      "impact": 0.00063
     },
     {
-      "headline": "samsung galaxy s27 ultra nuove indiscrezioni sul processore il modello di punta potrebbe utilizzare soltanto un chip qua",
-      "source": "hwupgrade.it",
-      "category": "competitors",
-      "weight": 0.0047,
-      "impact": 0.00521
-    },
-    {
-      "headline": "broadcom is building an ai business unlike nvidias heres my price prediction",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.0047,
-      "impact": -0.004
-    },
-    {
-      "headline": "qualcomm snapdragon x price hike advanced wafer nodes x86 cost efficiency",
+      "headline": "musk says spacex is the only anomaly beating chinas mass production machine and ram chips could be next",
       "source": "wccftech.com",
       "category": "competitors",
-      "weight": 0.0047,
-      "impact": -0.00041
+      "weight": 0.0048,
+      "impact": -0.00296
+    },
+    {
+      "headline": "gemtek qualcomm and gfiber collaborate to bring edge ai to wi fi 8 broadband gateways",
+      "source": "saultstar.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.01306
+    },
+    {
+      "headline": "gfiber qualcomm and gemtek unveil an ai native wi fi 8 broadband gateway at network x 2026",
+      "source": "itbusinessnet.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00075
+    },
+    {
+      "headline": "microsoft to scale in house ai chips to multi gigawatt deployments from 2027",
+      "source": "jamaicantimes.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": 0.00478
+    },
+    {
+      "headline": "how qualcomms open software strategy challenges nvidia",
+      "source": "technews.tw",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00049
     },
     {
       "headline": "samsung galaxy s27 ultra mund te vije vetem me procesor qualcomm sipas nje raporti te ri",
-      "source": "zhurnal.mk",
+      "source": "shenja.tv",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": 0.00605
+    },
+    {
+      "headline": "you bought a semiconductor fund on 500000 87743 of it is nvidia",
+      "source": "247wallst.com",
       "category": "competitors",
       "weight": 0.0047,
-      "impact": 0.00693
+      "impact": -0.01187
     },
     {
-      "headline": "multiple intel cpu families witness 15 20 price hike while amd is also expected to raise cpu prices soon",
-      "source": "wccftech.com",
+      "headline": "broadcom nasdaq avgo vs qualcomm nasdaq qcom valuations and growth drivers set these chip giants apart in 2026",
+      "source": "foreignpolicyjournal.com",
       "category": "competitors",
       "weight": 0.0047,
-      "impact": -0.00587
+      "impact": 0.0007
     },
     {
-      "headline": "qualcomm prevede un nuovo superciclo di vendite per gli smartphone grazie all ia 160497.html",
-      "source": "hwupgrade.it",
+      "headline": "marvell 214 2026 while broadcom 190011000.html",
+      "source": "aol.com",
       "category": "competitors",
       "weight": 0.0047,
-      "impact": 0.00373
-    },
-    {
-      "headline": "intel islemcilere yeni zam kapida amd ve qualcomm da sirada  211535",
-      "source": "donanimhaber.com",
-      "category": "competitors",
-      "weight": 0.0047,
-      "impact": -0.00164
-    },
-    {
-      "headline": "news item 43856 intel s apprte  augmenter d un seul coup le prix de ses processeurs de 20 .html",
-      "source": "informaticien.be",
-      "category": "competitors",
-      "weight": 0.0046,
-      "impact": 0.00871
-    },
-    {
-      "headline": "broadcom ceo compares ai investors to gamblers they are in a casino",
-      "source": "nypost.com",
-      "category": "competitors",
-      "weight": 0.0046,
-      "impact": -0.00823
+      "impact": 0.00349
     }
   ]
 }

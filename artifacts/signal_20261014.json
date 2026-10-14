@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-10-14T17:07:21",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-14",
+  "last_close": 228.52,
+  "model_trained_through": "2026-10-07",
+  "gap_context": {
+    "prev_close": 228.52,
+    "latest": 227.7,
+    "gap_pct": -0.0036,
+    "session": "pre-market",
+    "as_of_et": "07:35 ET"
+  },
+  "model_prob_up": 0.5234,
+  "prob_big_move": 0.4903,
+  "big_move_threshold": 0.0135,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.103,
+  "headline_count": 154,
+  "article_count": 186,
+  "fulltext": {
+    "stories": 154,
+    "read_full": 106,
+    "read_partial": 14,
+    "headline_only": 34,
+    "alt_searches": 12,
+    "elapsed_s": 119.4
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 0,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.5009,
+  "brain_top_news": [
+    {
+      "headline": "chipmakers flag smartphone affordability concerns new indian brands sense opportunity article 14050834.html",
+      "source": "moneycontrol.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": 0.00063
+    },
+    {
+      "headline": "musk says spacex is the only anomaly beating chinas mass production machine and ram chips could be next",
+      "source": "wccftech.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00296
+    },
+    {
+      "headline": "gemtek qualcomm and gfiber collaborate to bring edge ai to wi fi 8 broadband gateways",
+      "source": "saultstar.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.01306
+    },
+    {
+      "headline": "gfiber qualcomm and gemtek unveil an ai native wi fi 8 broadband gateway at network x 2026",
+      "source": "itbusinessnet.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": -0.00075
+    },
+    {
+      "headline": "microsoft to scale in house ai chips to multi gigawatt deployments from 2027",
+      "source": "jamaicantimes.com",
+      "category": "competitors",
+      "weight": 0.0048,
+      "impact": 0.00478
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "U.S. Export Restrictions Drive Nvidia China AI Chip Market Share Down to 34%",
+      "source": "finviz",
+      "score": -0.971,
+      "url": "https://finance.yahoo.com/technology/ai/articles/u-export-restrictions-drive-nvidia-124325286.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia and AMD shares fall as new AI announcements fail to re-energize investors - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.963,
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQXZzMHlabWpaZHpJVFo0dkxhUUpKbDRod2NNYmJPYzJ3Qk5aeWVMMkJUM3JyR3pNM3QxWmlFbVJOVUtLWnppX05vakw2ckNjdHExYmN4M1F5UUd1NU13Vl92dWtIenNJNHRaSlJOU3QzdkxndGI3UmFXclNIM1pxWFJ4UkhXczZmVnN2TlN6YzYtQ3NWX3JVS0FGNW5MVHd1WWNHbVJiX3NYeDRkeElOcnZRbXpaQUU4UU9Kcjg4M1Q?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Dan Ives Says Semiconductor Sell-Off Is Way Overdone As AI Spending Fears Rattle NVDA, MU, SKHY, SNDK",
+      "source": "finviz",
+      "score": -0.959,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/dan-ives-says-semiconductor-sell-105258246.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVTS Stock Rises Overnight: Navitas Unveils 24 kW Nvidia AI Power Board Targeting 97% Efficiency",
+      "source": "finviz",
+      "score": 0.905,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvts-stock-rises-overnight-navitas-063816365.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Alpha Compute Signs Binding GPU Contract, Leasing ALPHA-03 cluster under Four-Year, $81.7 Million Agreement in its Missouri Superintelligence Factory",
+      "source": "yahoo_rss",
+      "score": 0.851,
+      "url": "https://finance.yahoo.com/technology/ai/articles/alpha-compute-signs-binding-gpu-110000962.html?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Qnity Bets On Local Production To Win More AI Chip Business From Nvidia, TSMC  CEO Touts Local-For-Local Strategy",
+      "source": "finviz",
+      "score": 0.801,
+      "url": "https://finance.yahoo.com/technology/ai/articles/qnity-bets-local-production-win-115447951.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
