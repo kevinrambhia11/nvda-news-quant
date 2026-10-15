@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-14",
-  "generated_at": "2026-10-14T17:03:44",
+  "entry_day": "2026-10-15",
+  "generated_at": "2026-10-15T17:03:16",
   "articles": [
     {
-      "headline": "chipmakers flag smartphone affordability concerns new indian brands sense opportunity article 14050834.html",
-      "source": "moneycontrol.com",
+      "headline": "gfiber and qualcomm announce wi fi 8 gateway 20 gig customers to be first to receive next gen wireless upgrade",
+      "source": "tomshardware.com",
       "category": "competitors",
-      "weight": 0.0048,
-      "impact": 0.00063
+      "weight": 0.0056,
+      "impact": -0.00751
     },
     {
-      "headline": "musk says spacex is the only anomaly beating chinas mass production machine and ram chips could be next",
-      "source": "wccftech.com",
+      "headline": "microsoft targets million chip rollout with new maia ai processor",
+      "source": "utahindependent.com",
       "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00296
+      "weight": 0.0056,
+      "impact": 0.0066
     },
     {
-      "headline": "gemtek qualcomm and gfiber collaborate to bring edge ai to wi fi 8 broadband gateways",
-      "source": "saultstar.com",
+      "headline": "qualcomm arm a karsi davayi kazandi tazminat sadece 2 dolar  211620",
+      "source": "donanimhaber.com",
       "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.01306
+      "weight": 0.0055,
+      "impact": 0.00216
     },
     {
-      "headline": "gfiber qualcomm and gemtek unveil an ai native wi fi 8 broadband gateway at network x 2026",
-      "source": "itbusinessnet.com",
-      "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00075
-    },
-    {
-      "headline": "microsoft to scale in house ai chips to multi gigawatt deployments from 2027",
-      "source": "jamaicantimes.com",
-      "category": "competitors",
-      "weight": 0.0048,
-      "impact": 0.00478
-    },
-    {
-      "headline": "how qualcomms open software strategy challenges nvidia",
-      "source": "technews.tw",
-      "category": "competitors",
-      "weight": 0.0048,
-      "impact": -0.00049
-    },
-    {
-      "headline": "samsung galaxy s27 ultra mund te vije vetem me procesor qualcomm sipas nje raporti te ri",
-      "source": "shenja.tv",
-      "category": "competitors",
-      "weight": 0.0048,
-      "impact": 0.00605
-    },
-    {
-      "headline": "you bought a semiconductor fund on 500000 87743 of it is nvidia",
+      "headline": "michael burry says stocks could peak within 9 months and hes betting against the nasdaq and chip stocks",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0047,
-      "impact": -0.01187
+      "weight": 0.0055,
+      "impact": -0.00944
     },
     {
-      "headline": "broadcom nasdaq avgo vs qualcomm nasdaq qcom valuations and growth drivers set these chip giants apart in 2026",
-      "source": "foreignpolicyjournal.com",
+      "headline": "india global economy ashwini vaishnaw semiconductors bloomberg new economy forum 101791956685913.html",
+      "source": "hindustantimes.com",
       "category": "competitors",
-      "weight": 0.0047,
-      "impact": 0.0007
+      "weight": 0.0055,
+      "impact": -0.00163
     },
     {
-      "headline": "marvell 214 2026 while broadcom 190011000.html",
-      "source": "aol.com",
+      "headline": "globalfoundries to open 2 new chip plants in new york with 21 billion in financing from japan",
+      "source": "wsls.com",
       "category": "competitors",
-      "weight": 0.0047,
-      "impact": 0.00349
+      "weight": 0.0055,
+      "impact": -0.01471
+    },
+    {
+      "headline": "globalfoundries chip manufacturing japan",
+      "source": "baltimoresun.com",
+      "category": "competitors",
+      "weight": 0.0055,
+      "impact": -0.00045
+    },
+    {
+      "headline": "qualcomm arm jogi gyozelem ket egesz dollar.html",
+      "source": "prohardver.hu",
+      "category": "competitors",
+      "weight": 0.0055,
+      "impact": -0.00345
+    },
+    {
+      "headline": "juri reconhece quebra de contrato da arm com qualcomm",
+      "source": "telesintese.com.br",
+      "category": "competitors",
+      "weight": 0.0054,
+      "impact": 0.00743
+    },
+    {
+      "headline": "nvidias first gpu geforce 256",
+      "source": "homeip.net",
+      "category": "nvda",
+      "weight": 0.0054,
+      "impact": 0.00486
     }
   ]
 }
