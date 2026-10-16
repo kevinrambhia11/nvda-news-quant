@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-10-16T17:06:24",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-16",
+  "last_close": 217.23,
+  "model_trained_through": "2026-10-14",
+  "gap_context": {
+    "prev_close": 217.23,
+    "latest": 216.93,
+    "gap_pct": -0.0014,
+    "session": "pre-market",
+    "as_of_et": "07:36 ET"
+  },
+  "model_prob_up": 0.7759,
+  "prob_big_move": 0.5136,
+  "big_move_threshold": 0.0127,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.0835,
+  "headline_count": 158,
+  "article_count": 190,
+  "fulltext": {
+    "stories": 158,
+    "read_full": 96,
+    "read_partial": 14,
+    "headline_only": 48,
+    "alt_searches": 12,
+    "elapsed_s": 104.9
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 12,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.6806,
+  "brain_top_news": [
+    {
+      "headline": "tsmc posts sixth straight quarter record profit ai boom market cap nearly double samsung electronics",
+      "source": "businesstimes.com.sg",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.01215
+    },
+    {
+      "headline": "arm qualcomm legal fight ends in limited verdict larger stakes remain.html",
+      "source": "computerworld.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.00224
+    },
+    {
+      "headline": "warren buffett and broadcom s ceo issue a similar blunt warning to wall street here s what investors should do next acco",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.0161
+    },
+    {
+      "headline": "tsmc q3 profit jumps 69 to record beating expectations",
+      "source": "933thedrive.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.0156
+    },
+    {
+      "headline": "broadcom ceo hock tan echoes warren buffett",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.01557
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "NVDA Stock Slips As Risk-Off Mood And Trump Sale Hit Sentiment - StocksToTrade",
+      "source": "google_news",
+      "score": -0.964,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE12eTM4YmhINWJUYjhkMHFzQ25BRDJrN2dndDNpcXZubjloOHJVaXgwd21oR3Z2V1BLX0ZXRDNWZmo2Z3RTQ1lKaWR1Q3BZQWxIYVhuMmlTdGJQLWxhM1IxVUxBWVR3MnlXWGVCcHRNNnF0Y1pLd1hQZmRXRQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "stockstotrade.com"
+    },
+    {
+      "title": "Nvidia leads chip stocks lower as AI trade takes - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQY1lhcFhDalVzMzVWSUVsUWo2ZWtLYjdpR3dQUXJWWDc1UUFONzJUM3ZvazhJWFhxU0dST2R4cTgtaUdoTGx1MzFjOUU5U09ma3c4d0JNc3MzLWZxSGVOUVFTSFRxMWFRUEgxR1NCR2lWUHc5MFZZQmRJM1d1dFNZWWFkRnk5a0VWbXphUk90TWtUUktraE5lczFfLVVSbFBoRnBHYWMyY2VHSXFKd3p4VkZ6dW9NYUdwVTNHdTF0T0Y3SkVxbDhNQ2NTc2F4SnVrVGtReEt3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia's China AI-chip share falls as Huawei closes gap, report finds - Reuters",
+      "source": "google_news",
+      "score": -0.954,
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZ2lCcTJZLWVsU3NJWjJRV2xZd0RXM1NtbWNnQUtfb1RsSjlNVmFEWnVxYVJ5Y0pXS0lWV284NlVCWkp2Qy1jbm5na2ZFeE5BYmNlWFVaVGttNElacjE1SGlaeVBOc1J5Z042bUlOS3JPbWpHcloxVDF5X3B2NG5hSEdCcHp0SGswU3d5VWNNWE02bE1KS0VyTVROTlJxUTRFUzNQM3hrbERWWWh5X21pSFg2ajBBOG02cXdzS1UyV09MY0k?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.brecorder.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Mercedes-Benz and Nvidia Expand Collaboration on Advanced Driver Assistance and Automated Driving",
+      "source": "finviz",
+      "score": 0.893,
+      "url": "/news/403466/mercedes-benz-and-nvidia-expand-collaboration-on-advanced-driver-assistance-and-automated-driving",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "autos.yahoo.com"
+    },
+    {
+      "title": "Nvidia-Backed AI Biotech Iambic Up 16% After $150 Million IPO",
+      "source": "finviz",
+      "score": 0.877,
+      "url": "https://finance.yahoo.com/healthcare/articles/nvidia-backed-ai-biotech-iambic-163100460.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Adobe and NVIDIA Expand Collaboration to Speed Agentic Creation",
+      "source": "finviz",
+      "score": 0.838,
+      "url": "/news/403225/adobe-and-nvidia-expand-collaboration-to-speed-agentic-creation",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

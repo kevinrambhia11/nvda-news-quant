@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-15",
-  "generated_at": "2026-10-16T15:46:32",
+  "entry_day": "2026-10-16",
+  "generated_at": "2026-10-16T17:03:24",
   "articles": [
     {
-      "headline": "michael burry says stocks could peak within 9 months and hes betting against the nasdaq and chip stocks",
-      "source": "247wallst.com",
+      "headline": "tsmc posts sixth straight quarter record profit ai boom market cap nearly double samsung electronics",
+      "source": "businesstimes.com.sg",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01003
+      "weight": 0.0052,
+      "impact": -0.01215
     },
     {
-      "headline": "best semiconductor stocks to buy and hold through",
+      "headline": "arm qualcomm legal fight ends in limited verdict larger stakes remain.html",
+      "source": "computerworld.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.00224
+    },
+    {
+      "headline": "warren buffett and broadcom s ceo issue a similar blunt warning to wall street here s what investors should do next acco",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.0157
+      "weight": 0.0052,
+      "impact": -0.0161
     },
     {
-      "headline": "broadcom ceo echoes warren buffett 000700000.html",
-      "source": "aol.com",
+      "headline": "tsmc q3 profit jumps 69 to record beating expectations",
+      "source": "933thedrive.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01121
+      "weight": 0.0052,
+      "impact": -0.0156
     },
     {
-      "headline": "history says happens taiwan semiconductor 143432000.html",
-      "source": "aol.com",
+      "headline": "broadcom ceo hock tan echoes warren buffett",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00598
+      "weight": 0.0052,
+      "impact": -0.01557
+    },
+    {
+      "headline": "jury finds arm guilty in licensing breach qualcomm awarded just usd2 in total",
+      "source": "androidcentral.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.00727
     },
     {
       "headline": "globalfoundries to open 2 new chip plants in new york with 21 billion in financing from japan",
-      "source": "wsls.com",
+      "source": "timesleader.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01259
+      "weight": 0.0052,
+      "impact": -0.01141
     },
     {
-      "headline": "taiwan semiconductor top line growth 164518000.html",
-      "source": "aol.com",
+      "headline": "chip stocks tumble on ai investment worries",
+      "source": "investors.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00785
+      "weight": 0.0052,
+      "impact": -0.0082
     },
     {
-      "headline": "india global economy ashwini vaishnaw semiconductors bloomberg new economy forum 101791956685913.html",
-      "source": "hindustantimes.com",
+      "headline": "tsmc posts strong third quarter results but shares drop amid ai selloff",
+      "source": "siliconangle.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00499
+      "weight": 0.0052,
+      "impact": -0.01151
     },
     {
-      "headline": "qualcomm arm a karsi davayi kazandi tazminat sadece 2 dolar  211620",
-      "source": "donanimhaber.com",
+      "headline": "tsmc expected to report sixth straight quarter of record profit thanks to ai boom 2",
+      "source": "ksevradio.com",
       "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.00059
-    },
-    {
-      "headline": "qualcomm 175 narrative shift sending 111537000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.00542
-    },
-    {
-      "headline": "qualcomm arm jogi gyozelem ket egesz dollar.html",
-      "source": "prohardver.hu",
-      "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.00328
+      "weight": 0.0052,
+      "impact": -0.00618
     }
   ]
 }
