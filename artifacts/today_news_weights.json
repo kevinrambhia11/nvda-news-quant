@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-10-15",
-  "generated_at": "2026-10-15T17:03:16",
+  "generated_at": "2026-10-16T15:46:32",
   "articles": [
-    {
-      "headline": "gfiber and qualcomm announce wi fi 8 gateway 20 gig customers to be first to receive next gen wireless upgrade",
-      "source": "tomshardware.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00751
-    },
-    {
-      "headline": "microsoft targets million chip rollout with new maia ai processor",
-      "source": "utahindependent.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": 0.0066
-    },
-    {
-      "headline": "qualcomm arm a karsi davayi kazandi tazminat sadece 2 dolar  211620",
-      "source": "donanimhaber.com",
-      "category": "competitors",
-      "weight": 0.0055,
-      "impact": 0.00216
-    },
     {
       "headline": "michael burry says stocks could peak within 9 months and hes betting against the nasdaq and chip stocks",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00944
+      "weight": 0.006,
+      "impact": -0.01003
     },
     {
-      "headline": "india global economy ashwini vaishnaw semiconductors bloomberg new economy forum 101791956685913.html",
-      "source": "hindustantimes.com",
+      "headline": "best semiconductor stocks to buy and hold through",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00163
+      "weight": 0.006,
+      "impact": -0.0157
+    },
+    {
+      "headline": "broadcom ceo echoes warren buffett 000700000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.01121
+    },
+    {
+      "headline": "history says happens taiwan semiconductor 143432000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.00598
     },
     {
       "headline": "globalfoundries to open 2 new chip plants in new york with 21 billion in financing from japan",
       "source": "wsls.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.01471
+      "weight": 0.006,
+      "impact": -0.01259
     },
     {
-      "headline": "globalfoundries chip manufacturing japan",
-      "source": "baltimoresun.com",
+      "headline": "taiwan semiconductor top line growth 164518000.html",
+      "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00045
+      "weight": 0.006,
+      "impact": -0.00785
+    },
+    {
+      "headline": "india global economy ashwini vaishnaw semiconductors bloomberg new economy forum 101791956685913.html",
+      "source": "hindustantimes.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.00499
+    },
+    {
+      "headline": "qualcomm arm a karsi davayi kazandi tazminat sadece 2 dolar  211620",
+      "source": "donanimhaber.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.00059
+    },
+    {
+      "headline": "qualcomm 175 narrative shift sending 111537000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.00542
     },
     {
       "headline": "qualcomm arm jogi gyozelem ket egesz dollar.html",
       "source": "prohardver.hu",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00345
-    },
-    {
-      "headline": "juri reconhece quebra de contrato da arm com qualcomm",
-      "source": "telesintese.com.br",
-      "category": "competitors",
-      "weight": 0.0054,
-      "impact": 0.00743
-    },
-    {
-      "headline": "nvidias first gpu geforce 256",
-      "source": "homeip.net",
-      "category": "nvda",
-      "weight": 0.0054,
-      "impact": 0.00486
+      "weight": 0.0059,
+      "impact": -0.00328
     }
   ]
 }
