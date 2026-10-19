@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-16",
-  "generated_at": "2026-10-16T17:03:24",
+  "entry_day": "2026-10-19",
+  "generated_at": "2026-10-19T19:33:31",
   "articles": [
     {
-      "headline": "tsmc posts sixth straight quarter record profit ai boom market cap nearly double samsung electronics",
-      "source": "businesstimes.com.sg",
+      "headline": "asia stocks extend rebound as chipmakers gain indonesia shares slump 11",
+      "source": "hellenicshippingnews.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.01215
+      "weight": 0.0021,
+      "impact": -0.01829
     },
     {
-      "headline": "arm qualcomm legal fight ends in limited verdict larger stakes remain.html",
-      "source": "computerworld.com",
+      "headline": "the weekly close chip stocks crater as dow holds firm",
+      "source": "financial-news.co.uk",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.00224
+      "weight": 0.0021,
+      "impact": -0.01516
     },
     {
-      "headline": "warren buffett and broadcom s ceo issue a similar blunt warning to wall street here s what investors should do next acco",
+      "headline": "tsmc just posted record profit for the sixth straight quarter why did the stock fall",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.0161
+      "weight": 0.002,
+      "impact": -0.01397
     },
     {
-      "headline": "tsmc q3 profit jumps 69 to record beating expectations",
-      "source": "933thedrive.com",
+      "headline": "smuggling nvidia chips into china is about to become a crime in taiwan",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.0156
+      "weight": 0.002,
+      "impact": -0.01024
     },
     {
-      "headline": "broadcom ceo hock tan echoes warren buffett",
+      "headline": "taiwan semiconductor posts record profit",
+      "source": "baystreet.ca",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.012
+    },
+    {
+      "headline": "huawei once hobbled by us sanctions passes 100 million kirin chip milestone",
+      "source": "thestar.com.my",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.00516
+    },
+    {
+      "headline": "bytedance asic deal nvidia funds chips us export controls meant block.htm",
+      "source": "techtimes.com",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.01051
+    },
+    {
+      "headline": "got usd1 000 1 top stock to buy amid the semiconductor sell off before it triples by 2030",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.01557
+      "weight": 0.002,
+      "impact": -0.01452
     },
     {
-      "headline": "jury finds arm guilty in licensing breach qualcomm awarded just usd2 in total",
-      "source": "androidcentral.com",
+      "headline": "icymi tsmc profit jumps nearly 70 on ai demand but margin outlook weighs on shares",
+      "source": "investinglive.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.00727
+      "weight": 0.002,
+      "impact": -0.01315
     },
     {
-      "headline": "globalfoundries to open 2 new chip plants in new york with 21 billion in financing from japan",
-      "source": "timesleader.com",
+      "headline": "tsmc earnings tesla talks us expansion could boost stock",
+      "source": "morningstar.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.01141
-    },
-    {
-      "headline": "chip stocks tumble on ai investment worries",
-      "source": "investors.com",
-      "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.0082
-    },
-    {
-      "headline": "tsmc posts strong third quarter results but shares drop amid ai selloff",
-      "source": "siliconangle.com",
-      "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.01151
-    },
-    {
-      "headline": "tsmc expected to report sixth straight quarter of record profit thanks to ai boom 2",
-      "source": "ksevradio.com",
-      "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.00618
+      "weight": 0.002,
+      "impact": -0.01615
     }
   ]
 }
