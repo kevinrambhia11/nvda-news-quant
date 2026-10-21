@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-10-21T17:12:06",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-21",
+  "last_close": 216.47,
+  "model_trained_through": "2026-10-14",
+  "gap_context": {
+    "prev_close": 216.47,
+    "latest": 220.93,
+    "gap_pct": 0.0206,
+    "session": "pre-market",
+    "as_of_et": "07:42 ET"
+  },
+  "model_prob_up": 0.5573,
+  "prob_big_move": 0.5135,
+  "big_move_threshold": 0.012,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.0026,
+  "headline_count": 181,
+  "article_count": 217,
+  "fulltext": {
+    "stories": 181,
+    "read_full": 104,
+    "read_partial": 12,
+    "headline_only": 65,
+    "alt_searches": 12,
+    "elapsed_s": 156.8
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 12,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.5397,
+  "brain_top_news": [
+    {
+      "headline": "credit default swaps for oracle broadcom and nvidia continue to widen out with oracle at a 23 default probability nvidia",
+      "source": "investmentwatchblog.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.01491
+    },
+    {
+      "headline": "broadcom wi fi bug turns sweet 16 still lets strangers hijack your router",
+      "source": "technews.tw",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.02052
+    },
+    {
+      "headline": "chip stocks shrug off scary 154222000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00856
+    },
+    {
+      "headline": "qualcomm job cuts to hit staff worldwide ceo memo shows",
+      "source": "financial-news.co.uk",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.01116
+    },
+    {
+      "headline": "korea plans new samsung sk hynix chip hub in gwangju risking trump s ire 14055811.html",
+      "source": "moneycontrol.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00286
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia leads chip stocks lower as AI trade takes - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQY1lhcFhDalVzMzVWSUVsUWo2ZWtLYjdpR3dQUXJWWDc1UUFONzJUM3ZvazhJWFhxU0dST2R4cTgtaUdoTGx1MzFjOUU5U09ma3c4d0JNc3MzLWZxSGVOUVFTSFRxMWFRUEgxR1NCR2lWUHc5MFZZQmRJM1d1dFNZWWFkRnk5a0VWbXphUk90TWtUUktraE5lczFfLVVSbFBoRnBHYWMyY2VHSXFKd3p4VkZ6dW9NYUdwVTNHdTF0T0Y3SkVxbDhNQ2NTc2F4SnVrVGtReEt3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia stock sinks as chip sell-off deepens on hot inflation data - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.958,
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQb1ZGcUkyMFZEdXYtUDhENXZ6Rkl6b29Ic3BlOUE2a2U5d3I3UWlPM2ZYRjRnZVYyRVdPRUFjTklPeG9OY2hrdUNZaXc4YU9JWGlsNXY2WFlkQ0lzNHl1VFZoaWNLamlGT3lKQVpyN2VTMm1HVEpRd2FzdUZUN3dTbFBkOEVVUnh6SE05QTZpRmlDTk4xVUoyckJQRjlIRVJaZTBkV2hWalNwd1pKOW9QSFh5ODY4VEVZcE51Wm5RMHZ1RlVnWDVvZw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Gets a China Boost but the Stock Is Still Falling -- Barrons.com - Moomoo",
+      "source": "Moomoo",
+      "score": -0.939,
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSFdKOGVWbUhPMUdrdDNpbUJZNUhmcU1mQVd1VFdvQWZKRDlTRHdGc3VmQXlLdUgtVGNaYXRoZEo3bVlWQUpmMVJDTG1MX29vN1hFalI1Ul9CdTdXeG1PYVlNeHBud3dqV2NORjBqSFR3NGJyOUlmN1FZX2p4NmNNcDl3Y2ZXNEk4WDVrd2dLTENrSjBXUERJ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVIDIA and Supply Chain Partners Expand Capacity to Accelerate AI Infrastructure Buildout",
+      "source": "finviz",
+      "score": 0.941,
+      "url": "/news/405047/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "nvidianews.nvidia.com"
+    },
+    {
+      "title": "Maas Group shares rise 5% as Nvidia weighs fresh backing for Firmus",
+      "source": "finviz",
+      "score": 0.932,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/maas-group-shares-rise-5-055151094.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Samsung Electro-Mechanics and NVIDIA Announce Strategic Partnership to Supply ABF Substrates",
+      "source": "yahoo_rss",
+      "score": 0.908,
+      "url": "https://finance.yahoo.com/technology/ai/articles/samsung-electro-mechanics-nvidia-announce-113000283.html?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

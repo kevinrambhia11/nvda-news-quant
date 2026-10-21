@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-19",
-  "generated_at": "2026-10-19T19:33:31",
+  "entry_day": "2026-10-21",
+  "generated_at": "2026-10-21T17:07:12",
   "articles": [
     {
-      "headline": "asia stocks extend rebound as chipmakers gain indonesia shares slump 11",
-      "source": "hellenicshippingnews.com",
+      "headline": "credit default swaps for oracle broadcom and nvidia continue to widen out with oracle at a 23 default probability nvidia",
+      "source": "investmentwatchblog.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.01829
+      "weight": 0.005,
+      "impact": -0.01491
     },
     {
-      "headline": "the weekly close chip stocks crater as dow holds firm",
+      "headline": "broadcom wi fi bug turns sweet 16 still lets strangers hijack your router",
+      "source": "technews.tw",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.02052
+    },
+    {
+      "headline": "chip stocks shrug off scary 154222000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00856
+    },
+    {
+      "headline": "qualcomm job cuts to hit staff worldwide ceo memo shows",
       "source": "financial-news.co.uk",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.01516
+      "weight": 0.0049,
+      "impact": -0.01116
     },
     {
-      "headline": "tsmc just posted record profit for the sixth straight quarter why did the stock fall",
-      "source": "fool.com",
+      "headline": "korea plans new samsung sk hynix chip hub in gwangju risking trump s ire 14055811.html",
+      "source": "moneycontrol.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01397
+      "weight": 0.0049,
+      "impact": -0.00286
     },
     {
-      "headline": "smuggling nvidia chips into china is about to become a crime in taiwan",
-      "source": "247wallst.com",
+      "headline": "three killed in workplace accident at tsmc kaohsiung construction site",
+      "source": "taiwansun.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01024
+      "weight": 0.0049,
+      "impact": 0.00311
     },
     {
-      "headline": "taiwan semiconductor posts record profit",
-      "source": "baystreet.ca",
+      "headline": "bytedance alibaba tencent order over 35 billion in nvidia chips but supply may fall short 14056010.html",
+      "source": "moneycontrol.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.012
+      "weight": 0.0049,
+      "impact": -0.00796
     },
     {
-      "headline": "huawei once hobbled by us sanctions passes 100 million kirin chip milestone",
-      "source": "thestar.com.my",
+      "headline": "qualcomm wins architecture breach verdict against arm but gets just usd2 judge could still suspend royalty fees for five",
+      "source": "singtaousa.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.00516
+      "weight": 0.0049,
+      "impact": -0.00625
     },
     {
-      "headline": "bytedance asic deal nvidia funds chips us export controls meant block.htm",
-      "source": "techtimes.com",
+      "headline": "bytedance alibaba tencent place over us35 billion worth nvidia chip orders",
+      "source": "businesstimes.com.sg",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01051
+      "weight": 0.0049,
+      "impact": -0.00763
     },
     {
-      "headline": "got usd1 000 1 top stock to buy amid the semiconductor sell off before it triples by 2030",
-      "source": "fool.com",
+      "headline": "qualcomm cut jobs worldwide performance focused layoffs internal memo",
+      "source": "businesstimes.com.sg",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01452
-    },
-    {
-      "headline": "icymi tsmc profit jumps nearly 70 on ai demand but margin outlook weighs on shares",
-      "source": "investinglive.com",
-      "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01315
-    },
-    {
-      "headline": "tsmc earnings tesla talks us expansion could boost stock",
-      "source": "morningstar.com",
-      "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.01615
+      "weight": 0.0049,
+      "impact": -0.0065
     }
   ]
 }
