@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-21",
-  "generated_at": "2026-10-21T17:07:12",
+  "entry_day": "2026-10-22",
+  "generated_at": "2026-10-22T17:04:27",
   "articles": [
     {
-      "headline": "credit default swaps for oracle broadcom and nvidia continue to widen out with oracle at a 23 default probability nvidia",
-      "source": "investmentwatchblog.com",
+      "headline": "maverick david tykocinski intel investment pitch stock 2026 10",
+      "source": "businessinsider.com",
       "category": "competitors",
       "weight": 0.005,
-      "impact": -0.01491
+      "impact": -0.0144
     },
     {
-      "headline": "broadcom wi fi bug turns sweet 16 still lets strangers hijack your router",
-      "source": "technews.tw",
+      "headline": "spacex and tesla039s terafab targets 2028 for volume chip production musk says",
+      "source": "thestar.com.my",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.02052
+      "impact": -0.00621
     },
     {
-      "headline": "chip stocks shrug off scary 154222000.html",
+      "headline": "qualcomm announces global job cuts from november ceo says mu",
+      "source": "wn.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.01123
+    },
+    {
+      "headline": "taiwan semiconductor manufacturing company ltd tsm stock seed wealth management inc reduces holdings.html",
+      "source": "tickerreport.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00989
+    },
+    {
+      "headline": "prediction tsmc stock going 1 130801000.html",
       "source": "aol.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.00856
+      "impact": -0.00738
     },
     {
-      "headline": "qualcomm job cuts to hit staff worldwide ceo memo shows",
-      "source": "financial-news.co.uk",
+      "headline": "51124 broadcom ntt docomo sign 10 year private cloud agreement",
+      "source": "thefastmode.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.01116
+      "impact": -0.01129
     },
     {
-      "headline": "korea plans new samsung sk hynix chip hub in gwangju risking trump s ire 14055811.html",
-      "source": "moneycontrol.com",
+      "headline": "qualcomm to start worldwide layoffs 2026 10",
+      "source": "electronicsweekly.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.00286
+      "impact": -0.00824
     },
     {
-      "headline": "three killed in workplace accident at tsmc kaohsiung construction site",
-      "source": "taiwansun.com",
+      "headline": "spacex and teslas terafab targets 2028 for volume chip production says musk 1997568",
+      "source": "deccanchronicle.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": 0.00311
+      "impact": -0.00445
     },
     {
-      "headline": "bytedance alibaba tencent order over 35 billion in nvidia chips but supply may fall short 14056010.html",
-      "source": "moneycontrol.com",
+      "headline": "spacex and teslas terafab targets 2028 for volume chip production musk says",
+      "source": "933thedrive.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.00796
+      "impact": -0.00523
     },
     {
-      "headline": "qualcomm wins architecture breach verdict against arm but gets just usd2 judge could still suspend royalty fees for five",
-      "source": "singtaousa.com",
+      "headline": "focused alpha llc reduces its stock position in intel corporation nasdaq intc",
+      "source": "foreignpolicyjournal.com",
       "category": "competitors",
       "weight": 0.0049,
-      "impact": -0.00625
-    },
-    {
-      "headline": "bytedance alibaba tencent place over us35 billion worth nvidia chip orders",
-      "source": "businesstimes.com.sg",
-      "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00763
-    },
-    {
-      "headline": "qualcomm cut jobs worldwide performance focused layoffs internal memo",
-      "source": "businesstimes.com.sg",
-      "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.0065
+      "impact": -0.00782
     }
   ]
 }

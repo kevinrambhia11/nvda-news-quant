@@ -1,0 +1,141 @@
+{
+  "generated_at": "2026-10-22T17:08:13",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-22",
+  "last_close": 221.97,
+  "model_trained_through": "2026-10-14",
+  "gap_context": {
+    "prev_close": 221.97,
+    "latest": 217.35,
+    "gap_pct": -0.0208,
+    "session": "pre-market",
+    "as_of_et": "07:38 ET"
+  },
+  "model_prob_up": 0.5456,
+  "prob_big_move": 0.5136,
+  "big_move_threshold": 0.0127,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.0547,
+  "headline_count": 162,
+  "article_count": 205,
+  "fulltext": {
+    "stories": 162,
+    "read_full": 91,
+    "read_partial": 22,
+    "headline_only": 49,
+    "alt_searches": 12,
+    "elapsed_s": 116.4
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 13,
+  "stocktwits_bears": 4,
+  "advisory_composite": 0.5237,
+  "brain_top_news": [
+    {
+      "headline": "maverick david tykocinski intel investment pitch stock 2026 10",
+      "source": "businessinsider.com",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.0144
+    },
+    {
+      "headline": "spacex and tesla039s terafab targets 2028 for volume chip production musk says",
+      "source": "thestar.com.my",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00621
+    },
+    {
+      "headline": "qualcomm announces global job cuts from november ceo says mu",
+      "source": "wn.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.01123
+    },
+    {
+      "headline": "taiwan semiconductor manufacturing company ltd tsm stock seed wealth management inc reduces holdings.html",
+      "source": "tickerreport.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00989
+    },
+    {
+      "headline": "prediction tsmc stock going 1 130801000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0049,
+      "impact": -0.00738
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia Stock Falls in a Case of Bad Timing Over Another Potential AI Investment - Barron's",
+      "source": "Barron's",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9VeEdHR2lCQXB5TGVFS2dwc0JnRTVDR3loNTVlRlRmTHNWcmpHbUdHdzV6bVJQQWgzQkJZTmZWbXJrQjFHWGhMVEVUZEJyOXh4UWZFa1kybFZWcGVDVGF3RXcwOXhZZkVxWVVKc0pwa1lhak1lRXBB?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "Nvidia leads chip stocks lower as AI trade takes - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQY1lhcFhDalVzMzVWSUVsUWo2ZWtLYjdpR3dQUXJWWDc1UUFONzJUM3ZvazhJWFhxU0dST2R4cTgtaUdoTGx1MzFjOUU5U09ma3c4d0JNc3MzLWZxSGVOUVFTSFRxMWFRUEgxR1NCR2lWUHc5MFZZQmRJM1d1dFNZWWFkRnk5a0VWbXphUk90TWtUUktraE5lczFfLVVSbFBoRnBHYWMyY2VHSXFKd3p4VkZ6dW9NYUdwVTNHdTF0T0Y3SkVxbDhNQ2NTc2F4SnVrVGtReEt3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Heckler disrupts Nvidia CEO Huang\u2019s keynote speech at Berlin conference - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.899,
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPckFGZmxWN1Z1U2NQNjdlMXFWZWZLOW5sQjlxVFo1cXAtajB0S19QVnZVOWVuRERRNlU4SEJrTkhoY2tvTzcybnBucUdVY0hVdkV6SkM3ZE9RQi14OEp2SGMwcWllTXFHUDRxcGU1bE5Vb0treklpSHBmMlVqMmdwcmdETXl6NFJKV1lmQXhXd0dsN0laYk9DSm1BOWVCNUNSTnZmYU9XZVg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Dow's 131-Point Rally Highlighted By Gains For NVIDIA Corp., IBM Stocks - Moomoo",
+      "source": "Moomoo",
+      "score": 0.904,
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcDRUUzJmZy1BZTdNY3J3al9KZmNWalIxZlNWWW1UMk90TnRLc01VUGhWcXJYZURZVWlxbl9FQkdyNmZTT3RxNVFyQ3VncFc0OTR6eVBfYmMxTmRfUzY0Vk1XMWZJNnhlTWhmQ3hFcFB0V3p3SWpxRGRGZmFsVmNtakhrNGxsT0FjX3UxMGVtcmt2d05CVERsR2U4cUNhZw?oc=5",
+      "n_sources": 3,
+      "also_from": [
+        "finviz",
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Schneider Electric, NVIDIA & HPE announce strategic collaboration to accelerate Physical AI for Process Industries",
+      "source": "yahoo_rss",
+      "score": 0.851,
+      "url": "https://finance.yahoo.com/technology/ai/articles/schneider-electric-nvidia-hpe-announce-110000448.html?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Agility Robotics Expands NVIDIA Collaboration as It Prepares Digit 5 for Commercial Scale",
+      "source": "yahoo_rss",
+      "score": 0.847,
+      "url": "https://finance.yahoo.com/technology/ai/articles/agility-robotics-expands-nvidia-collaboration-110000023.html?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
