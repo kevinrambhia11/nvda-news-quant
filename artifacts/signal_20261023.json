@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-10-23T17:06:51",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-23",
+  "last_close": 212.21,
+  "model_trained_through": "2026-10-21",
+  "gap_context": {
+    "prev_close": 212.21,
+    "latest": 212.9,
+    "gap_pct": 0.0033,
+    "session": "pre-market",
+    "as_of_et": "07:36 ET"
+  },
+  "model_prob_up": 0.5399,
+  "prob_big_move": 0.5191,
+  "big_move_threshold": 0.0135,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.185,
+  "headline_count": 174,
+  "article_count": 200,
+  "fulltext": {
+    "stories": 174,
+    "read_full": 106,
+    "read_partial": 22,
+    "headline_only": 46,
+    "alt_searches": 12,
+    "elapsed_s": 113.6
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 9,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5002,
+  "brain_top_news": [
+    {
+      "headline": "cuba blasts us pressure ahead un vote illegal blockade",
+      "source": "morningstaronline.co.uk",
+      "category": "macro",
+      "weight": 0.009,
+      "impact": -0.03398
+    },
+    {
+      "headline": "putin says iran deal still possible after talks with us envoy",
+      "source": "europesun.com",
+      "category": "macro",
+      "weight": 0.0082,
+      "impact": -0.02125
+    },
+    {
+      "headline": "chatgpt users can now lock sensitive chats behind a pin or face id",
+      "source": "mobileidworld.com",
+      "category": "ai_companies",
+      "weight": 0.0079,
+      "impact": -0.01522
+    },
+    {
+      "headline": "taiwan semiconductor wants in on spacexs terafab but only if it runs the fab",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.00234
+    },
+    {
+      "headline": "qualcomm zmienia target smartfony nie sa juz najwazniejsze",
+      "source": "instalki.pl",
+      "category": "competitors",
+      "weight": 0.007,
+      "impact": 0.0009
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Securitize shares slide 38% since it put Apple and Nvidia stock on Solana - DL News",
+      "source": "google_news",
+      "score": -0.972,
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdHY4d1h1Qnk3Uld6NmVYamRabnphVkN6eFFCNXYtcXNaOHhQS014QWxBTkJTQm1IenByLVZZUzZjcTFSN2V5bWVFc0YtcnRqRDVBVlg2WUhITk1INUNhcVVBSU5ZazkyQ3EzeTdXcl92MEtSR0ZWbXhpbjZYZ0ZNbVVPV3hNbUNRblZBYW94ZzV1Mk5yckk4VmppTUdRdDNlSHpvaXZKZ1JIQTB0Z0Q4Y0Z6czBqdjg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.dlnews.com"
+    },
+    {
+      "title": "Nvidia Tokenized Stock Dips As Market Cap Falls To $5.12trn - MarketForces Africa",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONEdTSXFnOEZ1LU1ENjJLcXFTeGRQaGM5Yk1BZURCU0JwdTNTaFA5cjEzZzFRYmtDel92N1YzVUszQjZmR3lIcFA2Q3gtd2hSV1d0SUpDNVRSU1ZSMXpuMHBXV3daazJlVGxVUnBnMW1xRk9FQ1I5bUdLQ1Zkb0tJU1Q1b1JPWlQyY3l6WVJ3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "dmarketforces.com"
+    },
+    {
+      "title": "Nvidia Stock Falls in a Case of Bad Timing Over Another Potential AI Investment - Barron's",
+      "source": "Barron's",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdHZReDV5OFRVTEExenMzSnlhbXgyLVNiZ1lETnNCWHNydkJKQ3gzeUdrTjU1U3hKYWRvXzZ3RDR1M3dTS3VoUnMxcTN3dWVfV1JSNVoyakNUaVJHaXJrVXpBVjZ0WDkxbGpNV0VLMS1ydUUzenVrVFQxMjZWVkRXY0FB?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Stock Gains. Its European Partnerships Could Open New Growth Market - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.865,
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQREVQSGpRZ0ptZ2xpbW44cTlodGduX2prVE5QTXJ5a1hDdVo3a0ZVRk9hZld5NU5vUndkV0RnaXBQU1N4b2VtM0xtUHpvY3U5MFF6VHZRSVlsUFFBWm5yT0N4N2luSG1UMjFtZzVUckI0SmdxWUctTDIyY25rVi1QMFEwVEtBX2NPZVE0RTFpU01OVzJOZXc4V0dUdHJzY2pzbXFJ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Pony.ai partners with inDrive, Nvidia to launch robotaxis in Kazakhstan",
+      "source": "finviz",
+      "score": 0.86,
+      "url": "https://finance.yahoo.com/technology/ai/articles/pony-ai-partners-indrive-nvidia-050536766.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "SpaceX Is Working With Nvidia, Apollo And Other Top Tech And Consulting Firms On A Grok Partnership Program",
+      "source": "finviz",
+      "score": 0.819,
+      "url": "https://finance.yahoo.com/technology/ai/articles/spacex-working-nvidia-apollo-other-175641418.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

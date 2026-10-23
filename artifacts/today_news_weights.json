@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-22",
-  "generated_at": "2026-10-23T15:49:49",
+  "entry_day": "2026-10-23",
+  "generated_at": "2026-10-23T17:03:31",
   "articles": [
     {
-      "headline": "three workers killed one in intensive care after fall at tsmcs 2nm fab construction site in kaohsiung broken bolt on a s",
-      "source": "tomshardware.com",
+      "headline": "cuba blasts us pressure ahead un vote illegal blockade",
+      "source": "morningstaronline.co.uk",
+      "category": "macro",
+      "weight": 0.009,
+      "impact": -0.03398
+    },
+    {
+      "headline": "putin says iran deal still possible after talks with us envoy",
+      "source": "europesun.com",
+      "category": "macro",
+      "weight": 0.0082,
+      "impact": -0.02125
+    },
+    {
+      "headline": "chatgpt users can now lock sensitive chats behind a pin or face id",
+      "source": "mobileidworld.com",
+      "category": "ai_companies",
+      "weight": 0.0079,
+      "impact": -0.01522
+    },
+    {
+      "headline": "taiwan semiconductor wants in on spacexs terafab but only if it runs the fab",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": 0.01592
+      "weight": 0.0072,
+      "impact": -0.00234
     },
     {
-      "headline": "forget gold galax bedazzling rtx 5090 hof swarovski crystals",
-      "source": "hothardware.com",
-      "category": "nvda",
-      "weight": 0.0054,
-      "impact": -0.02629
-    },
-    {
-      "headline": "taiwan semiconductor manufacturing company ltd tsm stock seed wealth management inc reduces holdings.html",
-      "source": "tickerreport.com",
+      "headline": "qualcomm zmienia target smartfony nie sa juz najwazniejsze",
+      "source": "instalki.pl",
       "category": "competitors",
-      "weight": 0.0053,
-      "impact": -0.00387
+      "weight": 0.007,
+      "impact": 0.0009
     },
     {
-      "headline": "broadcom fought t over vmware 230300000.html",
+      "headline": "taiwan semiconductor wants spacex terafab 162839000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": 0.0013
+      "weight": 0.0069,
+      "impact": -0.00289
     },
     {
-      "headline": "maverick david tykocinski intel investment pitch stock 2026 10",
-      "source": "businessinsider.com",
+      "headline": "prediction broadcom stock could crush the sp 500 through 2030",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0052,
-      "impact": -0.01121
+      "weight": 0.0069,
+      "impact": -0.006
     },
     {
-      "headline": "qualcomm to start worldwide layoffs 2026 10",
-      "source": "electronicsweekly.com",
+      "headline": "cc wei tsmc texas terafab chip expansion",
+      "source": "observer.com",
       "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.00364
+      "weight": 0.0068,
+      "impact": 0.00463
     },
     {
-      "headline": "focused alpha llc reduces its stock position in intel corporation nasdaq intc",
-      "source": "foreignpolicyjournal.com",
-      "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.00242
+      "headline": "trump putin negotiate release of us air force veteran from russian prison",
+      "source": "airforcetimes.com",
+      "category": "macro",
+      "weight": 0.0068,
+      "impact": -0.01731
     },
     {
-      "headline": "qualcomm to start firing employees after november performance review",
-      "source": "trak.in",
+      "headline": "bytedance alibaba tencent order over usd35bn in nvidia chips",
+      "source": "pittsburghstar.com",
       "category": "competitors",
-      "weight": 0.0051,
-      "impact": 0.00108
-    },
-    {
-      "headline": "51124 broadcom ntt docomo sign 10 year private cloud agreement",
-      "source": "thefastmode.com",
-      "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.00804
-    },
-    {
-      "headline": "qualcomm announces global job cuts from november ceo says mu",
-      "source": "wn.com",
-      "category": "competitors",
-      "weight": 0.0051,
-      "impact": -0.0074
+      "weight": 0.0068,
+      "impact": -0.00607
     }
   ]
 }
