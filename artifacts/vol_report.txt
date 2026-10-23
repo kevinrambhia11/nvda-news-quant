@@ -5,39 +5,39 @@
    the winner reported on the untouched HOLDOUT tail)
 ==================================================================
 
-  Horizon 1 day(s)  |  judged 2021-12-14 -> 2023-09-01  |  holdout -> 2026-10-15
+  Horizon 1 day(s)  |  judged 2021-12-14 -> 2023-09-01  |  holdout -> 2026-10-22
   (newsvec candidates use NESTED scorers; all models judged on the clean window. Newsvec was
    promoted on the magnitude head's holdout, which overlaps this holdout - treat a newsvec
    holdout QLIKE as second-use; the live paper trail is the fresh test.)
   model                   RMSE(log)    QLIKE      R2
   Random walk                0.4082   0.4079  -0.172
   EWMA (GK var)              0.3424   0.2230   0.176
-  GBM news+price             0.3455   0.3025   0.161
-  GBM +events                0.3391   0.2878   0.191
+  GBM news+price             0.3463   0.3047   0.157
+  GBM +events                0.3392   0.2875   0.191
   HAR (classic)              0.3276   0.2762   0.245
   HAR +events                0.3255   0.2687   0.255
-  GBM +ev+newsvec            0.3423   0.2975   0.176
+  GBM +ev+newsvec            0.3407   0.2955   0.184
   HAR +ev+newsvec            0.3365   0.2989   0.204
-  GBM +ev+decay              0.3367   0.2975   0.203
+  GBM +ev+decay              0.3379   0.2984   0.197
   HAR +ev+decay              0.3355   0.2930   0.209
   -> selected: HAR +events (best selection QLIKE among fitted candidates)
-     untouched holdout: RMSE 0.3550 | QLIKE 0.2970 | R2 0.324
+     untouched holdout: RMSE 0.3542 | QLIKE 0.2958 | R2 0.323
 
-  Horizon 5 day(s)  |  judged 2021-12-14 -> 2023-09-01  |  holdout -> 2026-10-09
+  Horizon 5 day(s)  |  judged 2021-12-14 -> 2023-09-01  |  holdout -> 2026-10-16
   (newsvec candidates use NESTED scorers; all models judged on the clean window. Newsvec was
    promoted on the magnitude head's holdout, which overlaps this holdout - treat a newsvec
    holdout QLIKE as second-use; the live paper trail is the fresh test.)
   model                   RMSE(log)    QLIKE      R2
   Random walk                0.3365   0.2658  -0.557
   EWMA (GK var)              0.2161   0.0859   0.358
-  GBM news+price             0.2393   0.1350   0.213
+  GBM news+price             0.2397   0.1353   0.210
   GBM +events                0.2380   0.1335   0.221
   HAR (classic)              0.2117   0.1062   0.384
   HAR +events                0.2085   0.1018   0.403
-  GBM +ev+newsvec            0.2337   0.1324   0.249
+  GBM +ev+newsvec            0.2336   0.1325   0.250
   HAR +ev+newsvec            0.2254   0.1230   0.301
-  GBM +ev+decay              0.2345   0.1345   0.244
+  GBM +ev+decay              0.2344   0.1346   0.244
   HAR +ev+decay              0.2272   0.1237   0.291
   -> selected: HAR +events (best selection QLIKE among fitted candidates)
-     untouched holdout: RMSE 0.2382 | QLIKE 0.1314 | R2 0.444
+     untouched holdout: RMSE 0.2378 | QLIKE 0.1309 | R2 0.443
 ==================================================================

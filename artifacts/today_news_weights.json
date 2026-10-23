@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-10-22",
-  "generated_at": "2026-10-22T17:04:27",
+  "generated_at": "2026-10-23T15:49:49",
   "articles": [
     {
-      "headline": "maverick david tykocinski intel investment pitch stock 2026 10",
-      "source": "businessinsider.com",
+      "headline": "three workers killed one in intensive care after fall at tsmcs 2nm fab construction site in kaohsiung broken bolt on a s",
+      "source": "tomshardware.com",
       "category": "competitors",
-      "weight": 0.005,
-      "impact": -0.0144
+      "weight": 0.0058,
+      "impact": 0.01592
     },
     {
-      "headline": "spacex and tesla039s terafab targets 2028 for volume chip production musk says",
-      "source": "thestar.com.my",
-      "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00621
-    },
-    {
-      "headline": "qualcomm announces global job cuts from november ceo says mu",
-      "source": "wn.com",
-      "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.01123
+      "headline": "forget gold galax bedazzling rtx 5090 hof swarovski crystals",
+      "source": "hothardware.com",
+      "category": "nvda",
+      "weight": 0.0054,
+      "impact": -0.02629
     },
     {
       "headline": "taiwan semiconductor manufacturing company ltd tsm stock seed wealth management inc reduces holdings.html",
       "source": "tickerreport.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00989
+      "weight": 0.0053,
+      "impact": -0.00387
     },
     {
-      "headline": "prediction tsmc stock going 1 130801000.html",
+      "headline": "broadcom fought t over vmware 230300000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00738
+      "weight": 0.0052,
+      "impact": 0.0013
     },
     {
-      "headline": "51124 broadcom ntt docomo sign 10 year private cloud agreement",
-      "source": "thefastmode.com",
+      "headline": "maverick david tykocinski intel investment pitch stock 2026 10",
+      "source": "businessinsider.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.01129
+      "weight": 0.0052,
+      "impact": -0.01121
     },
     {
       "headline": "qualcomm to start worldwide layoffs 2026 10",
       "source": "electronicsweekly.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00824
-    },
-    {
-      "headline": "spacex and teslas terafab targets 2028 for volume chip production says musk 1997568",
-      "source": "deccanchronicle.com",
-      "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00445
-    },
-    {
-      "headline": "spacex and teslas terafab targets 2028 for volume chip production musk says",
-      "source": "933thedrive.com",
-      "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00523
+      "weight": 0.0051,
+      "impact": -0.00364
     },
     {
       "headline": "focused alpha llc reduces its stock position in intel corporation nasdaq intc",
       "source": "foreignpolicyjournal.com",
       "category": "competitors",
-      "weight": 0.0049,
-      "impact": -0.00782
+      "weight": 0.0051,
+      "impact": -0.00242
+    },
+    {
+      "headline": "qualcomm to start firing employees after november performance review",
+      "source": "trak.in",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": 0.00108
+    },
+    {
+      "headline": "51124 broadcom ntt docomo sign 10 year private cloud agreement",
+      "source": "thefastmode.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.00804
+    },
+    {
+      "headline": "qualcomm announces global job cuts from november ceo says mu",
+      "source": "wn.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.0074
     }
   ]
 }
