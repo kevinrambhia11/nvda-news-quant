@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-23",
-  "generated_at": "2026-10-23T17:03:31",
+  "entry_day": "2026-10-26",
+  "generated_at": "2026-10-26T17:07:13",
   "articles": [
     {
-      "headline": "cuba blasts us pressure ahead un vote illegal blockade",
-      "source": "morningstaronline.co.uk",
+      "headline": "pakistan rejects afghan taliban regimes diversionary allegations",
+      "source": "radio.gov.pk",
       "category": "macro",
-      "weight": 0.009,
-      "impact": -0.03398
+      "weight": 0.0033,
+      "impact": -0.0137
     },
     {
-      "headline": "putin says iran deal still possible after talks with us envoy",
-      "source": "europesun.com",
+      "headline": "iran warns us against entering persian gulf as irgc claims 2 supertankers hit naval mines near strait of hormuz",
+      "source": "israelherald.com",
       "category": "macro",
-      "weight": 0.0082,
-      "impact": -0.02125
+      "weight": 0.0026,
+      "impact": -0.01163
     },
     {
-      "headline": "chatgpt users can now lock sensitive chats behind a pin or face id",
-      "source": "mobileidworld.com",
+      "headline": "elvis presley estate sues anthropic for stealing his music at a scale never seen before to train ai",
+      "source": "vice.com",
       "category": "ai_companies",
-      "weight": 0.0079,
-      "impact": -0.01522
+      "weight": 0.0025,
+      "impact": 0.01323
     },
     {
-      "headline": "taiwan semiconductor wants in on spacexs terafab but only if it runs the fab",
-      "source": "247wallst.com",
+      "headline": "corks first aws re start graduates celebrate at county hall",
+      "source": "avondhupress.ie",
+      "category": "hyperscalers",
+      "weight": 0.0022,
+      "impact": -0.03513
+    },
+    {
+      "headline": "taiwan semiconductor manufacturing company ltd tsm stock sold by rwc asset management llp.html",
+      "source": "tickerreport.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.00234
+      "weight": 0.0022,
+      "impact": -0.00104
     },
     {
-      "headline": "qualcomm zmienia target smartfony nie sa juz najwazniejsze",
-      "source": "instalki.pl",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": 0.0009
-    },
-    {
-      "headline": "taiwan semiconductor wants spacex terafab 162839000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0069,
-      "impact": -0.00289
-    },
-    {
-      "headline": "prediction broadcom stock could crush the sp 500 through 2030",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.0069,
-      "impact": -0.006
-    },
-    {
-      "headline": "cc wei tsmc texas terafab chip expansion",
-      "source": "observer.com",
-      "category": "competitors",
-      "weight": 0.0068,
-      "impact": 0.00463
-    },
-    {
-      "headline": "trump putin negotiate release of us air force veteran from russian prison",
-      "source": "airforcetimes.com",
+      "headline": "putin peace talks",
+      "source": "gatestoneinstitute.org",
       "category": "macro",
-      "weight": 0.0068,
-      "impact": -0.01731
+      "weight": 0.0021,
+      "impact": -0.01927
     },
     {
-      "headline": "bytedance alibaba tencent order over usd35bn in nvidia chips",
-      "source": "pittsburghstar.com",
+      "headline": "best 5g smartphones for network reception in 2026 samsung iphone google pixel motorola and qualcomm compared 128357",
+      "source": "telecomlead.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.00607
+      "weight": 0.0021,
+      "impact": 0.0012
+    },
+    {
+      "headline": "qualcomm vs mediatek vs samsung exynos 2026 5g modem speeds power efficiency and smartphone market share 128360",
+      "source": "telecomlead.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.00387
+    },
+    {
+      "headline": "taiwan semiconductor posted record profit and the",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.00646
+    },
+    {
+      "headline": "despite 9 9 billion revenues qualcomm to fire upto 1200 in india",
+      "source": "trak.in",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.00134
     }
   ]
 }
