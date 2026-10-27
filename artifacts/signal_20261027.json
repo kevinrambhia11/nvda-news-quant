@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-10-27T17:07:24",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-27",
+  "last_close": 216.0,
+  "model_trained_through": "2026-10-21",
+  "gap_context": {
+    "prev_close": 216.0,
+    "latest": 217.28,
+    "gap_pct": 0.0059,
+    "session": "pre-market",
+    "as_of_et": "07:37 ET"
+  },
+  "model_prob_up": 0.569,
+  "prob_big_move": 0.5191,
+  "big_move_threshold": 0.0135,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": 0.0723,
+  "headline_count": 161,
+  "article_count": 189,
+  "fulltext": {
+    "stories": 161,
+    "read_full": 93,
+    "read_partial": 15,
+    "headline_only": 53,
+    "alt_searches": 12,
+    "elapsed_s": 124.3
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 13,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.5592,
+  "brain_top_news": [
+    {
+      "headline": "britain sanctions sudanese commanders over weaponised rape",
+      "source": "aljazeera.com",
+      "category": "macro",
+      "weight": 0.0074,
+      "impact": -0.01908
+    },
+    {
+      "headline": "nvidia quietly lowers vera rubin hbm4 bandwidth by up to 26 nvlink speeds also reduced",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0059,
+      "impact": -0.02717
+    },
+    {
+      "headline": "uk sanctions 15 sudan commanders over rape",
+      "source": "riotimesonline.com",
+      "category": "macro",
+      "weight": 0.0058,
+      "impact": -0.01642
+    },
+    {
+      "headline": "how investors may respond to qualcomm qcom stock earnings outlook concerns",
+      "source": "foreignpolicyjournal.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00919
+    },
+    {
+      "headline": "taiwanese tsmc arizona microchip families schools.html",
+      "source": "dailymail.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": 0.00594
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "US AI chip export controls push Nvidia stock down 4.35% - Traders Union",
+      "source": "google_news",
+      "score": -0.969,
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdVV2TTA4YXdzRGRHLWxNcDluMXhJRGFqQTJzbFAwNk5ZRkdMRzZycjI0a2ltUV9rVnNSWWJWVEs3R2V4RlFxQnM3T3IxaHVELVJnclZqVVNBc3FIZGFDdUdiRWwza05ST2dkckppbVY4ZjA2bGtEbWVvdWZKTUw1NUlOZHd3N2RuUElJR1M4dEtnUQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia Stock Falls in a Case of Bad Timing Over Another Potential AI Investment - Barron's",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9VeEdHR2lCQXB5TGVFS2dwc0JnRTVDR3loNTVlRlRmTHNWcmpHbUdHdzV6bVJQQWgzQkJZTmZWbXJrQjFHWGhMVEVUZEJyOXh4UWZFa1kybFZWcGVDVGF3RXcwOXhZZkVxWVVKc0pwa1lhak1lRXBB?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "Nvidia stock sinks as chip sell-off deepens on hot inflation data - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.958,
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQb1ZGcUkyMFZEdXYtUDhENXZ6Rkl6b29Ic3BlOUE2a2U5d3I3UWlPM2ZYRjRnZVYyRVdPRUFjTklPeG9OY2hrdUNZaXc4YU9JWGlsNXY2WFlkQ0lzNHl1VFZoaWNLamlGT3lKQVpyN2VTMm1HVEpRd2FzdUZUN3dTbFBkOEVVUnh6SE05QTZpRmlDTk4xVUoyckJQRjlIRVJaZTBkV2hWalNwd1pKOW9QSFh5ODY4VEVZcE51Wm5RMHZ1RlVnWDVvZw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Elon Musk\u2019s latest move brings good news for Nvidia investors - TheStreet",
+      "source": "google_news",
+      "score": 0.942,
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa0QySEM2OW9ScGtKbUVZMHh4OXBvWUZmM0tWSlMyQlZSYnVCY0dhUTVPRU9zMW5VVUhFRklwZy03NHdSaTRLcnVSSzFQU2phcWtrSjI1LUdFc2ZESF9LdVl2S3ZyQWZlMUJwSFJham1DcDgyTkhZVHRvZzZHZ3U1S1ZMRW1pQlFrU2N0T2lGMWtCeUxDekhwVkR0NDh3NS1qQlZBUWhn?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.fool.com"
+    },
+    {
+      "title": "NVIDIA and Meta to Expand Collaboration on Muse and Muse Family of Models Amid Robust Growth",
+      "source": "finviz",
+      "score": 0.937,
+      "url": "/news/408443/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "nvidianews.nvidia.com"
+    },
+    {
+      "title": "Nvidia, Chipmakers Face Higher Costs? TSMC Reportedly Plans Up To 20% Price Hike For Advanced Chip Packaging",
+      "source": "finviz",
+      "score": 0.934,
+      "url": "https://finance.yahoo.com/technology/articles/nvidia-chipmakers-face-higher-costs-050030975.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

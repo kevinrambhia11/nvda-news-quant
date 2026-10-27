@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-26",
-  "generated_at": "2026-10-26T17:07:13",
+  "entry_day": "2026-10-27",
+  "generated_at": "2026-10-27T17:03:49",
   "articles": [
     {
-      "headline": "pakistan rejects afghan taliban regimes diversionary allegations",
-      "source": "radio.gov.pk",
+      "headline": "britain sanctions sudanese commanders over weaponised rape",
+      "source": "aljazeera.com",
       "category": "macro",
-      "weight": 0.0033,
-      "impact": -0.0137
+      "weight": 0.0074,
+      "impact": -0.01908
     },
     {
-      "headline": "iran warns us against entering persian gulf as irgc claims 2 supertankers hit naval mines near strait of hormuz",
-      "source": "israelherald.com",
+      "headline": "nvidia quietly lowers vera rubin hbm4 bandwidth by up to 26 nvlink speeds also reduced",
+      "source": "wccftech.com",
+      "category": "nvda",
+      "weight": 0.0059,
+      "impact": -0.02717
+    },
+    {
+      "headline": "uk sanctions 15 sudan commanders over rape",
+      "source": "riotimesonline.com",
       "category": "macro",
-      "weight": 0.0026,
-      "impact": -0.01163
+      "weight": 0.0058,
+      "impact": -0.01642
     },
     {
-      "headline": "elvis presley estate sues anthropic for stealing his music at a scale never seen before to train ai",
-      "source": "vice.com",
-      "category": "ai_companies",
-      "weight": 0.0025,
-      "impact": 0.01323
-    },
-    {
-      "headline": "corks first aws re start graduates celebrate at county hall",
-      "source": "avondhupress.ie",
-      "category": "hyperscalers",
-      "weight": 0.0022,
-      "impact": -0.03513
-    },
-    {
-      "headline": "taiwan semiconductor manufacturing company ltd tsm stock sold by rwc asset management llp.html",
-      "source": "tickerreport.com",
+      "headline": "how investors may respond to qualcomm qcom stock earnings outlook concerns",
+      "source": "foreignpolicyjournal.com",
       "category": "competitors",
-      "weight": 0.0022,
-      "impact": -0.00104
+      "weight": 0.0056,
+      "impact": -0.00919
     },
     {
-      "headline": "putin peace talks",
-      "source": "gatestoneinstitute.org",
-      "category": "macro",
-      "weight": 0.0021,
-      "impact": -0.01927
-    },
-    {
-      "headline": "best 5g smartphones for network reception in 2026 samsung iphone google pixel motorola and qualcomm compared 128357",
-      "source": "telecomlead.com",
+      "headline": "taiwanese tsmc arizona microchip families schools.html",
+      "source": "dailymail.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": 0.0012
+      "weight": 0.0056,
+      "impact": 0.00594
     },
     {
-      "headline": "qualcomm vs mediatek vs samsung exynos 2026 5g modem speeds power efficiency and smartphone market share 128360",
-      "source": "telecomlead.com",
+      "headline": "tsmcs rising manufacturing costs are squeezing pc market",
+      "source": "fingerlakes1.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00387
+      "weight": 0.0055,
+      "impact": -0.00201
     },
     {
-      "headline": "taiwan semiconductor posted record profit and the",
-      "source": "fool.com",
+      "headline": "a 16 year old bug could be putting millions of routers at risk despite broadcom saying it patched the issue years ago",
+      "source": "techradar.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00646
+      "weight": 0.0055,
+      "impact": -0.0045
     },
     {
-      "headline": "despite 9 9 billion revenues qualcomm to fire upto 1200 in india",
-      "source": "trak.in",
+      "headline": "nvidia amd and broadcom could buy meta shares as part of 35 billion stock offering",
+      "source": "morningstar.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00134
+      "weight": 0.0055,
+      "impact": -0.01348
+    },
+    {
+      "headline": "qualcomm reportedly plans performance based global layoffs in november 11497649.html",
+      "source": "heise.de",
+      "category": "competitors",
+      "weight": 0.0054,
+      "impact": -0.0016
+    },
+    {
+      "headline": "musk says spacex raised 40 billion in debt for gpus",
+      "source": "thestar.com.my",
+      "category": "nvda",
+      "weight": 0.0054,
+      "impact": -0.02346
     }
   ]
 }
