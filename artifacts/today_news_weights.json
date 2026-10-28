@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-27",
-  "generated_at": "2026-10-27T17:03:49",
+  "entry_day": "2026-10-28",
+  "generated_at": "2026-10-28T17:05:12",
   "articles": [
     {
-      "headline": "britain sanctions sudanese commanders over weaponised rape",
-      "source": "aljazeera.com",
-      "category": "macro",
-      "weight": 0.0074,
-      "impact": -0.01908
-    },
-    {
-      "headline": "nvidia quietly lowers vera rubin hbm4 bandwidth by up to 26 nvlink speeds also reduced",
-      "source": "wccftech.com",
-      "category": "nvda",
-      "weight": 0.0059,
-      "impact": -0.02717
-    },
-    {
-      "headline": "uk sanctions 15 sudan commanders over rape",
-      "source": "riotimesonline.com",
-      "category": "macro",
-      "weight": 0.0058,
-      "impact": -0.01642
-    },
-    {
-      "headline": "how investors may respond to qualcomm qcom stock earnings outlook concerns",
-      "source": "foreignpolicyjournal.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00919
-    },
-    {
-      "headline": "taiwanese tsmc arizona microchip families schools.html",
-      "source": "dailymail.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": 0.00594
-    },
-    {
-      "headline": "tsmcs rising manufacturing costs are squeezing pc market",
-      "source": "fingerlakes1.com",
-      "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.00201
-    },
-    {
-      "headline": "a 16 year old bug could be putting millions of routers at risk despite broadcom saying it patched the issue years ago",
-      "source": "techradar.com",
-      "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.0045
-    },
-    {
-      "headline": "nvidia amd and broadcom could buy meta shares as part of 35 billion stock offering",
+      "headline": "how broadcoms stock can surge and overcome the biggest dislocation in the market",
       "source": "morningstar.com",
       "category": "competitors",
-      "weight": 0.0055,
-      "impact": -0.01348
+      "weight": 0.0054,
+      "impact": -0.01597
     },
     {
-      "headline": "qualcomm reportedly plans performance based global layoffs in november 11497649.html",
-      "source": "heise.de",
+      "headline": "anthropic highlights disruptions to tsmc operations as a risk",
+      "source": "technews.tw",
       "category": "competitors",
-      "weight": 0.0054,
-      "impact": -0.0016
+      "weight": 0.0052,
+      "impact": -0.00388
     },
     {
-      "headline": "musk says spacex raised 40 billion in debt for gpus",
-      "source": "thestar.com.my",
+      "headline": "tsmc pritet te rrise deri ne 20 cmimet e paketimit te avancuar te cipave raporton china times",
+      "source": "24-ore.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": 0.00814
+    },
+    {
+      "headline": "taiwan semiconductor manufacturing company ltd tsm stock purchased by oppenheimer co inc.html",
+      "source": "tickerreport.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.00015
+    },
+    {
+      "headline": "us stocks tick higher as broadcom and other ai companies lift the market",
+      "source": "kurv.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.00893
+    },
+    {
+      "headline": "broadcom vs taiwan semiconductor two 085002000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.00073
+    },
+    {
+      "headline": "anduril qualcomm s bluechip targets a fully us made laptop",
+      "source": "explosion.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.00856
+    },
+    {
+      "headline": "jensen huangs late night calls with trump",
+      "source": "fool.com",
       "category": "nvda",
-      "weight": 0.0054,
-      "impact": -0.02346
+      "weight": 0.0051,
+      "impact": -0.01685
+    },
+    {
+      "headline": "why broadcom stock rallied tuesday morning",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.0087
+    },
+    {
+      "headline": "broadcom anthropic deal",
+      "source": "technews.tw",
+      "category": "competitors",
+      "weight": 0.005,
+      "impact": -0.00611
     }
   ]
 }

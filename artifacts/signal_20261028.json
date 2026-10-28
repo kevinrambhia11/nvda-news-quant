@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-10-28T17:11:33",
+  "ticker": "NVDA",
+  "entry_day": "2026-10-28",
+  "last_close": 217.94,
+  "model_trained_through": "2026-10-21",
+  "gap_context": {
+    "prev_close": 217.94,
+    "latest": 219.69,
+    "gap_pct": 0.008,
+    "session": "pre-market",
+    "as_of_et": "07:41 ET"
+  },
+  "model_prob_up": 0.5399,
+  "prob_big_move": 0.5191,
+  "big_move_threshold": 0.0143,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": 0.0589,
+  "headline_count": 153,
+  "article_count": 187,
+  "fulltext": {
+    "stories": 153,
+    "read_full": 93,
+    "read_partial": 17,
+    "headline_only": 43,
+    "alt_searches": 12,
+    "elapsed_s": 218.7
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 6,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.5368,
+  "brain_top_news": [
+    {
+      "headline": "how broadcoms stock can surge and overcome the biggest dislocation in the market",
+      "source": "morningstar.com",
+      "category": "competitors",
+      "weight": 0.0054,
+      "impact": -0.01597
+    },
+    {
+      "headline": "anthropic highlights disruptions to tsmc operations as a risk",
+      "source": "technews.tw",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": -0.00388
+    },
+    {
+      "headline": "tsmc pritet te rrise deri ne 20 cmimet e paketimit te avancuar te cipave raporton china times",
+      "source": "24-ore.com",
+      "category": "competitors",
+      "weight": 0.0052,
+      "impact": 0.00814
+    },
+    {
+      "headline": "taiwan semiconductor manufacturing company ltd tsm stock purchased by oppenheimer co inc.html",
+      "source": "tickerreport.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.00015
+    },
+    {
+      "headline": "us stocks tick higher as broadcom and other ai companies lift the market",
+      "source": "kurv.com",
+      "category": "competitors",
+      "weight": 0.0051,
+      "impact": -0.00893
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Cloud AI costs drive demand for on-premises computing, squeezing Asus RTX Spark supply",
+      "source": "finviz",
+      "score": -0.958,
+      "url": "https://www.digitimes.com/news/a20261028PD203/asus-demand-rtx-intel-commercial.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia Stock Is Down 12% From Its High. Here's What History Says Happens Next. - The Motley Fool",
+      "source": "google_news",
+      "score": -0.952,
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPcEZla1VqXzQxakdfSk52MkVWQ191TzRxSDJpSi1JMU5jUkZiNTYxQi1xeG92dnhHUDFsWjhBejM1dXNUTUs4WmVvZHFtTUw0bUh0bHVuN0hwUFJvcGdNb2FRZmRoaEtRbHd1aS1BYS11NmU3cXltVm9iZEd0N29IWVZxal9XZjg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.fool.com"
+    },
+    {
+      "title": "\"Even with accelerated localization, supply remains insufficient\" Continued Nvidia dependence amid China's AI chip shortage, including smuggling and overseas cloud utilization - https://economy.ac/",
+      "source": "https://economy.ac/",
+      "score": -0.942,
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE02TFRqdC1sTjdmcmhrZXVsdGtFN21ZdHhKcEZPa0VqNE5XUVNzSEltUWVaSF9pWDM2YXRLSVVVZEl5QU1reWpRVUcxZ3RPM3pQckJ5ZE9Wcw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "economy.ac"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVIDIA and Meta to Expand Collaboration on Muse and Muse Family of Models Amid Robust Growth",
+      "source": "finviz",
+      "score": 0.937,
+      "url": "/news/408443/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "nvidianews.nvidia.com"
+    },
+    {
+      "title": "Nvidia, Chipmakers Face Higher Costs? TSMC Reportedly Plans Up To 20% Price Hike For Advanced Chip Packaging",
+      "source": "finviz",
+      "score": 0.934,
+      "url": "https://finance.yahoo.com/technology/articles/nvidia-chipmakers-face-higher-costs-050030975.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Picks Up $3B Stock In Meta's Equity Offering, Will Help Improve Muse AI Platform",
+      "source": "finviz",
+      "score": 0.889,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-picks-3b-stock-metas-074333095.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
