@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-10-30",
-  "generated_at": "2026-10-30T17:04:59",
+  "entry_day": "2026-11-02",
+  "generated_at": "2026-11-02T17:05:20",
   "articles": [
     {
-      "headline": "cisco microsoft dell hpe lenovo and broadcom change partner incentives as channel margins face pressure 99313",
-      "source": "infotechlead.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01866
+      "headline": "ukraine evacuees from russian occupied oleshky reach belarus under ceasefire",
+      "source": "orissapost.com",
+      "category": "macro",
+      "weight": 0.0023,
+      "impact": -0.00188
     },
     {
-      "headline": "taiwan semiconductor industry group backs government review of nuclear power restart",
-      "source": "933thedrive.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00348
+      "headline": "refugees from ukraines besieged oleshky are returned to safety",
+      "source": "bostonherald.com",
+      "category": "macro",
+      "weight": 0.0023,
+      "impact": -0.01647
     },
     {
-      "headline": "taiwan semiconductor group backs govt review of nuclear power restart",
-      "source": "freemalaysiatoday.com",
+      "headline": "intel shares tumble after hours hit by chip supply constraints big cash burn",
+      "source": "thestar.com.my",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00064
+      "weight": 0.0021,
+      "impact": -0.01349
     },
     {
-      "headline": "qualcomm aptx lossless announced snapdragon sound",
-      "source": "theverge.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01484
-    },
-    {
-      "headline": "to counter chinese dominance qualcomm and anduril build american made laptop",
-      "source": "siliconvalley.com",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.0071
-    },
-    {
-      "headline": "amazon and intel headline the earnings releases after today s close",
-      "source": "investinglive.com",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.01057
-    },
-    {
-      "headline": "news broadcom 89 spring enterprise flaws",
-      "source": "esecurityplanet.com",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00649
-    },
-    {
-      "headline": "semicon qualcomm capacity pmic packaging.html",
-      "source": "digitimes.com",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00608
-    },
-    {
-      "headline": "asian stocks fall as google earnings reveal cash burn",
-      "source": "dailyliberal.com.au",
+      "headline": "download android apps without using google play store",
+      "source": "howtogeek.com",
       "category": "hyperscalers",
-      "weight": 0.0056,
-      "impact": -0.02769
+      "weight": 0.0021,
+      "impact": -0.01822
     },
     {
-      "headline": "alphabet amazon spacex microsoft broadcom 121500000.html",
-      "source": "aol.com",
+      "headline": "googles dns gets hidden backup path that my ad blocker never gets on android",
+      "source": "androidpolice.com",
+      "category": "hyperscalers",
+      "weight": 0.0021,
+      "impact": -0.01055
+    },
+    {
+      "headline": "intel shares tumble 27 pre market following massive 16 6 billion quarterly loss",
+      "source": "investmentwatchblog.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00543
+      "weight": 0.0021,
+      "impact": -0.0086
+    },
+    {
+      "headline": "intel loses usd146 billion in value as warning sparks chip rout",
+      "source": "milwaukeesun.com",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.00777
+    },
+    {
+      "headline": "iran accuses un rapporteur of whitewashing us israeli crimes",
+      "source": "voiceofvienna.org",
+      "category": "macro",
+      "weight": 0.0021,
+      "impact": 0.00201
+    },
+    {
+      "headline": "art45423691 halloween na wall street przychodzi wczesniej intel traci niemal jedna trzecia wartosci",
+      "source": "parkiet.com",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.00317
+    },
+    {
+      "headline": "intel shares fall 22 as weak sales outlook dents turnaround",
+      "source": "irishtimes.com",
+      "category": "competitors",
+      "weight": 0.002,
+      "impact": -0.00851
     }
   ]
 }

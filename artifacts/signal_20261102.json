@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-11-02T17:09:21",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-02",
+  "last_close": 204.64,
+  "model_trained_through": "2026-10-28",
+  "gap_context": {
+    "prev_close": 204.64,
+    "latest": 207.33,
+    "gap_pct": 0.0131,
+    "session": "pre-market",
+    "as_of_et": "06:39 ET"
+  },
+  "model_prob_up": 0.7239,
+  "prob_big_move": 0.4154,
+  "big_move_threshold": 0.0143,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.1604,
+  "headline_count": 169,
+  "article_count": 197,
+  "fulltext": {
+    "stories": 169,
+    "read_full": 102,
+    "read_partial": 19,
+    "headline_only": 48,
+    "alt_searches": 12,
+    "elapsed_s": 145.0
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 7,
+  "stocktwits_bears": 0,
+  "advisory_composite": 0.6326,
+  "brain_top_news": [
+    {
+      "headline": "ukraine evacuees from russian occupied oleshky reach belarus under ceasefire",
+      "source": "orissapost.com",
+      "category": "macro",
+      "weight": 0.0023,
+      "impact": -0.00188
+    },
+    {
+      "headline": "refugees from ukraines besieged oleshky are returned to safety",
+      "source": "bostonherald.com",
+      "category": "macro",
+      "weight": 0.0023,
+      "impact": -0.01647
+    },
+    {
+      "headline": "intel shares tumble after hours hit by chip supply constraints big cash burn",
+      "source": "thestar.com.my",
+      "category": "competitors",
+      "weight": 0.0021,
+      "impact": -0.01349
+    },
+    {
+      "headline": "download android apps without using google play store",
+      "source": "howtogeek.com",
+      "category": "hyperscalers",
+      "weight": 0.0021,
+      "impact": -0.01822
+    },
+    {
+      "headline": "googles dns gets hidden backup path that my ad blocker never gets on android",
+      "source": "androidpolice.com",
+      "category": "hyperscalers",
+      "weight": 0.0021,
+      "impact": -0.01055
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Big Tech ETF slumps as Nvidia and Amazon shares sell off",
+      "source": "finviz",
+      "score": -0.97,
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-amazon-intel-financial-earnings-us-treasurys/card/big-tech-etf-slumps-as-nvidia-and-amazon-shares-sell-off-LOiyWeiREsKnaLN0rhkG?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia Stock Has Dropped Nearly 6% in a Month; Now Jim Cramer Is Asking Why \u2018Anything Negative in Tech\u2019 I - Benzinga",
+      "source": "google_news",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRmMtRmV3UmRJOVFzQ0NyS01vaVlnTTBXV01GbW52UDhNeGo4ZHNfMWNTUmE2MW1LT01Fb19xZDB6VndBOVlQTldtNFZLeXJTRDZuRndHWEVZSnIzV3FzUEZRUEFXQ0RFdnJGbnFNY0FaOUtLdDRkak40Q0hUZjkzaThiY1ZwNFYwWnNvRHNwYlpEOEk0T291Q3paTzhFTnlzODRxRXRib0t3LWVpanV2cQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "NVIDIA Corp., Goldman Sachs share losses contribute to Dow's 537-point fall",
+      "source": "finviz",
+      "score": -0.963,
+      "url": "https://www.marketwatch.com/data-news/nvidia-corp-goldman-sachs-share-losses-contribute-to-dow-s-537-point-fall-5d2c8149-e575043e6fb0?mod=mw_FV",
+      "n_sources": 4,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Iluvatar CoreX Tiangai 300 tops Nvidia H200 in select AI inference tests, with long-context and MoE gains",
+      "source": "finviz",
+      "score": 0.929,
+      "url": "https://www.digitimes.com/news/a20261102PD208/china-gpu-ai-inference-performance-nvidia.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.digitimes.com"
+    },
+    {
+      "title": "Nvidia May Actually Raise Its 70% Growth Guide In November - Seeking Alpha",
+      "source": "google_news",
+      "score": 0.929,
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMzkwNDNBX2JDYk1SOUF2YVlkdEx4U05naHhkV0xLZzNfWmNYd2M1bGVCOU0ySTQwNjVzbFFBTEZNVDMzSENyalpMU2FXMFZEN2YzVTNzT093WExtSlJnald4Ny1PdWtKWS1QMmQ0WVNDOTlPVVJadlg0VERoUXNYcnRjVWJ0N0JsU3BXZ0p3UG5ueG9LZG5nTU1VVzltR3NkWjVtZUtRY095UQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Buy This Incredible Artificial Intelligence (AI) Stock Before It Soars 144% (Hint: It Will Outpace Nvidia\u2019s Growth) - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.889,
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSEhOWDBSZkJ3R3VuSjZycG5ZQUZZemdOeWthWE4tR1R1Sjc4bnNQY1g4U2g0YnkwMndaQTNHYlZhVEFWZHRPQ0tTVmo0aV9ucHVwby15MnN4U1FQZVBBVk9QZXNhakJxMWZ6Y2pNTXR2bFpOY1ZKTWtTUFRlNnpRR003b3RYMU5SUDBkVmMwclc3dllhako5ZlNNSGVIdkJjb3VIeG0wNEk?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
