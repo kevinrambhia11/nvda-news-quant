@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-11-03T17:06:56",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-03",
+  "last_close": 202.06,
+  "model_trained_through": "2026-10-28",
+  "gap_context": {
+    "prev_close": 202.06,
+    "latest": 204.89,
+    "gap_pct": 0.014,
+    "session": "pre-market",
+    "as_of_et": "06:36 ET"
+  },
+  "model_prob_up": 0.8189,
+  "prob_big_move": 0.4717,
+  "big_move_threshold": 0.0135,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.0594,
+  "headline_count": 171,
+  "article_count": 203,
+  "fulltext": {
+    "stories": 171,
+    "read_full": 99,
+    "read_partial": 17,
+    "headline_only": 55,
+    "alt_searches": 12,
+    "elapsed_s": 115.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 10,
+  "stocktwits_bears": 4,
+  "advisory_composite": 0.7143,
+  "brain_top_news": [
+    {
+      "headline": "musk may soften terafab control stance in fresh tsmc talks 1101093.html",
+      "source": "proactiveinvestors.com",
+      "category": "competitors",
+      "weight": 0.0065,
+      "impact": -0.00788
+    },
+    {
+      "headline": "hbm4 alternative qualcomm validiert hbc speicher fuer dragonfly.100136",
+      "source": "computerbase.de",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.00645
+    },
+    {
+      "headline": "intel loses usd146 billion in value as warning sparks chip rout",
+      "source": "middleeaststar.com",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.00675
+    },
+    {
+      "headline": "chip stocks are suffering from a crisis of confidence but things arent as gloomy as they seem",
+      "source": "morningstar.com",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.01097
+    },
+    {
+      "headline": "intel s record plunge triggers global chip selloff",
+      "source": "laosnews.net",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.00476
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "NVIDIA (NASDAQ:NVDA) Stock Falls 1.3% Following Analyst Downgrade - MarketBeat",
+      "source": "google_news",
+      "score": -0.972,
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbEE5R0QwbV83ZHU4b1RnbGs0VDcteUtKVUJJWkpXZzIxVWMwX29BeDNwd2VIYTNMOXRzTnRGbDhBRE1uX3RyTGZCQnZRdDNiTWFtVnA1bjdHMlJNaFZpZTJvTVI0bUdYVmkzU2IxUUd4YlVHZ0ZoQUlFVm05cnNQaS1lY0l0VWpDNFgxZ3BNSlo5UWJoNEFCb29rM1NzOFU5WllZc215TV9qNy1HTkVtY2RtcDR2M3lVYjA5dUln?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.marketbeat.com"
+    },
+    {
+      "title": "Nvidia leads chip stocks lower as AI trade takes - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQY1lhcFhDalVzMzVWSUVsUWo2ZWtLYjdpR3dQUXJWWDc1UUFONzJUM3ZvazhJWFhxU0dST2R4cTgtaUdoTGx1MzFjOUU5U09ma3c4d0JNc3MzLWZxSGVOUVFTSFRxMWFRUEgxR1NCR2lWUHc5MFZZQmRJM1d1dFNZWWFkRnk5a0VWbXphUk90TWtUUktraE5lczFfLVVSbFBoRnBHYWMyY2VHSXFKd3p4VkZ6dW9NYUdwVTNHdTF0T0Y3SkVxbDhNQ2NTc2F4SnVrVGtReEt3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Stock Declines as Competition Probe\u2014and Spy Report\u2014Presents New AI Concern - Barron's",
+      "source": "google_news",
+      "score": -0.936,
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQUhtWFVGeXRmbWVsY083ckRJRUYwOHhEYTZ5cURrdlktQXNyVWk2QllyVVZpRGY3cWg0X3JTNU4xWVBjUTZ4M1pRWWJLR1V3c0FYcGsxQWwzd29jYjRETGpHYnhqMFZpMlk4RG81OFU2NUtUZ3JVaEwxY1NYZkVuYUxabUpWRjNyeVJmbg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVDA Shares Inch Higher Overnight After 4-Day Rout: Chipmaker Reportedly Tells Cloud Clients To Limit China Exposure",
+      "source": "finviz",
+      "score": 0.938,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvda-shares-inch-higher-overnight-085557639.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Iluvatar CoreX Tiangai 300 tops Nvidia H200 in select AI inference tests, with long-context and MoE gains",
+      "source": "finviz",
+      "score": 0.929,
+      "url": "https://www.digitimes.com/news/a20261102PD208/china-gpu-ai-inference-performance-nvidia.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.digitimes.com"
+    },
+    {
+      "title": "Nvidia Stock Rises in Wednesday Premarket as Elon Musk Says SpaceX Is Adding 200,000 Chips a Month \u2014 Daniel Newman Says NVDA Is 'Ripping' (UPDATED) - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.795,
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNlJ3a3BoVTJkcVB3c2V6LWg1RU53V3FOeEZkUXNNYXNEVUF2NXJZb18yZ1JFSTR6djVzX2hScnNBdG4tcEQtdjRBMUJ4cjJJYVN4OExVMXBDU0pfaTI5ZXc2MXhuSU54ZXRjZDNabFNLNUYzbGZRNno1YU1DVnFvNmIxbVZhVnAzeXZYaDk3clY4OUtDMEdsNg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

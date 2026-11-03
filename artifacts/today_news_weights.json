@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-02",
-  "generated_at": "2026-11-02T17:05:20",
+  "entry_day": "2026-11-03",
+  "generated_at": "2026-11-03T17:03:17",
   "articles": [
     {
-      "headline": "ukraine evacuees from russian occupied oleshky reach belarus under ceasefire",
-      "source": "orissapost.com",
-      "category": "macro",
-      "weight": 0.0023,
-      "impact": -0.00188
-    },
-    {
-      "headline": "refugees from ukraines besieged oleshky are returned to safety",
-      "source": "bostonherald.com",
-      "category": "macro",
-      "weight": 0.0023,
-      "impact": -0.01647
-    },
-    {
-      "headline": "intel shares tumble after hours hit by chip supply constraints big cash burn",
-      "source": "thestar.com.my",
+      "headline": "musk may soften terafab control stance in fresh tsmc talks 1101093.html",
+      "source": "proactiveinvestors.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.01349
+      "weight": 0.0065,
+      "impact": -0.00788
     },
     {
-      "headline": "download android apps without using google play store",
-      "source": "howtogeek.com",
-      "category": "hyperscalers",
-      "weight": 0.0021,
-      "impact": -0.01822
-    },
-    {
-      "headline": "googles dns gets hidden backup path that my ad blocker never gets on android",
-      "source": "androidpolice.com",
-      "category": "hyperscalers",
-      "weight": 0.0021,
-      "impact": -0.01055
-    },
-    {
-      "headline": "intel shares tumble 27 pre market following massive 16 6 billion quarterly loss",
-      "source": "investmentwatchblog.com",
+      "headline": "hbm4 alternative qualcomm validiert hbc speicher fuer dragonfly.100136",
+      "source": "computerbase.de",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.0086
+      "weight": 0.0064,
+      "impact": -0.00645
     },
     {
       "headline": "intel loses usd146 billion in value as warning sparks chip rout",
-      "source": "milwaukeesun.com",
+      "source": "middleeaststar.com",
       "category": "competitors",
-      "weight": 0.0021,
-      "impact": -0.00777
+      "weight": 0.0063,
+      "impact": -0.00675
     },
     {
-      "headline": "iran accuses un rapporteur of whitewashing us israeli crimes",
-      "source": "voiceofvienna.org",
-      "category": "macro",
-      "weight": 0.0021,
-      "impact": 0.00201
+      "headline": "chip stocks are suffering from a crisis of confidence but things arent as gloomy as they seem",
+      "source": "morningstar.com",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.01097
     },
     {
-      "headline": "art45423691 halloween na wall street przychodzi wczesniej intel traci niemal jedna trzecia wartosci",
-      "source": "parkiet.com",
+      "headline": "intel s record plunge triggers global chip selloff",
+      "source": "laosnews.net",
       "category": "competitors",
-      "weight": 0.002,
+      "weight": 0.0063,
+      "impact": -0.00476
+    },
+    {
+      "headline": "manufacturing tsmc production industrial taiwan.html",
+      "source": "digitimes.com",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.00282
+    },
+    {
+      "headline": "india is pouring billions into semiconductors just not where you might expect",
+      "source": "indiagazette.com",
+      "category": "competitors",
+      "weight": 0.0063,
       "impact": -0.00317
     },
     {
-      "headline": "intel shares fall 22 as weak sales outlook dents turnaround",
-      "source": "irishtimes.com",
+      "headline": "marvell to acquire lumentum in 115 billion deal steps up challenge to broadcom amid ai boom 11793621075835.html",
+      "source": "livemint.com",
       "category": "competitors",
-      "weight": 0.002,
-      "impact": -0.00851
+      "weight": 0.0062,
+      "impact": -0.00576
+    },
+    {
+      "headline": "intc shareholder investigation suewallst notifies investors of potential securities claims involving intel 302926630.htm",
+      "source": "prnewswire.com",
+      "category": "competitors",
+      "weight": 0.0062,
+      "impact": -0.0056
+    },
+    {
+      "headline": "tsmcs 265 billion campus is driving a real estate boom in the phoenix suburbs 11793568453780.html",
+      "source": "livemint.com",
+      "category": "competitors",
+      "weight": 0.0062,
+      "impact": -0.00078
     }
   ]
 }
