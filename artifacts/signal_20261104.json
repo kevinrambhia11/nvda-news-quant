@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-11-04T17:07:02",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-04",
+  "last_close": 206.69,
+  "model_trained_through": "2026-10-28",
+  "gap_context": {
+    "prev_close": 206.69,
+    "latest": 208.98,
+    "gap_pct": 0.0111,
+    "session": "pre-market",
+    "as_of_et": "06:36 ET"
+  },
+  "model_prob_up": 0.8259,
+  "prob_big_move": 0.5251,
+  "big_move_threshold": 0.0124,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.0455,
+  "headline_count": 166,
+  "article_count": 202,
+  "fulltext": {
+    "stories": 166,
+    "read_full": 97,
+    "read_partial": 19,
+    "headline_only": 50,
+    "alt_searches": 12,
+    "elapsed_s": 100.1
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 3,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.7213,
+  "brain_top_news": [
+    {
+      "headline": "lumentum acquisition could challenge broadcom%e2%80%99s leadership",
+      "source": "compoundsemiconductor.net",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.01186
+    },
+    {
+      "headline": "taiwan semi or broadcom if i could only own 1 for",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.01236
+    },
+    {
+      "headline": "taiwan semi broadcom could only 162000000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00526
+    },
+    {
+      "headline": "infineon aktie qualcomm ist jetzt mit an bord 958852",
+      "source": "boerse-express.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00464
+    },
+    {
+      "headline": "redmagic 12 pro pairs qualcomms new chip with the phone series biggest battery yet",
+      "source": "cnet.com",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.00455
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia Stock Is Rebounding but Stock Chart Is Really Ugly - Barron's",
+      "source": "Barron's",
+      "score": -0.901,
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTVM2cFd2cHpQRW5qUmlXUGhLMlBHTUc5aVgtSTNGZFNDcGZXM3N6aUR6ZVVCZ3ZUSkdwRi15d2lhOHJTWXAxc2N0RXJ6M0x3U3hBVk5yTktPcS12Rl85b3d0aUN5cVpSUEJaTFlWM2ItUloxcEExTHN1cU9ienBTak5DeDQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "Apple Loses Stock-Market Crown to Nvidia After Earnings - WSJ",
+      "source": "google_news",
+      "score": -0.887,
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPU2poS3JuenplNTVFT0trdDVMN1RKR3VGOTZaSGZlVVRaU251eVlFZDlla1Y2N3NRbXdQREFLWlJiR21WSU5fR0VqbTdqbUoweUNjTEpaTVEyYjk4a3YzZ2plbUwyTUNsaUxRcERudGRacVdOaGkzbzNoNEVUclVjODZUOXlsUUFpOFoxY2VoN0Y0ZmdQREs5dXVrZmxfZ0doal81dGdzTy1LcGxWdjd0V0EyNmRndDhEWWZXM1UzMTJoYVppdUpPS29URkNOTnN3Uk0xUXlZMTQtcVhfa3JjLVBpZnV6VUdCQXl0UEVsWQ?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "NVIDIA replaces Brev SSH keys after unauthorized activity; no evidence of key misuse - Mezha.net",
+      "source": "Mezha.net",
+      "score": -0.812,
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdGwxUTJmSm5xNzRxMEZDYUhWenU1a0JVWGxJM3NFbnlaclJNdVJ6Sms2THdGVXFVMl9PM0RfWGxpcnBQWmVUd1J3Q3E1dFNUZ09vZjl1WHJzLWdhUWhNdDBobVhKZExwWGkwMTVWQ0haTTBRUXkyRXpVNGE1aFlwQ2x3RHE1QQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "mezha.net"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Stock Price Today: NVDA Rebounds 3% From $200 Support Level - Coinpedia",
+      "source": "google_news",
+      "score": 0.946,
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbHlWVUxvODMyR0hTd3FycDlMc1FYd0djV00tZWRHbTQtTjVNMTYybEJXRDR2ZnpQV3l6Ri1mRHBnVEhlelVteUp6MExjSGhqMWZZUFl1akQ1THB4cUhKVkE2RlN6dFVhd3E5TDRxTlQ4bEZTMDUtWXF0M3ZBMWpVTnV5Vy1NQXM1c3o3MG5FeWdmVjBqcjhNdkVxeDY3WjlLeDkyckN30gGrAUFVX3lxTE54cWdtLWp6UVpsTGJXTVRBQU0xd0pNeEVfZTJzdTRfYkRRazB5aldSbkt3cUt0TVp5LU1HSzd5V29fcmpNZVhUNVdYeW50R201RHJZX2ZpUTItakJoNGJfQXBFRUEzdDBhSlBsN3BEQjRwQnlPay1GcElMSVRLWFhleFdQV1A4ZnRpSFRwZlp0dVp0bVZmbUZ1Tmpib2xQVWNiVnc1UEFEZVdOVQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "coinpedia.org"
+    },
+    {
+      "title": "NVDA Shares Inch Higher Overnight After 4-Day Rout: Chipmaker Reportedly Tells Cloud Clients To Limit China Exposure",
+      "source": "finviz",
+      "score": 0.938,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvda-shares-inch-higher-overnight-085557639.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "NVIDIA Rises 3% Despite AI CEO's Warning on Chinese Chip Competition; AMD Climbs 5%, Broadcom Gains 3% - 24/7 Wall St.",
+      "source": "google_news",
+      "score": 0.896,
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOUzM5WElEdldxcTYzbFdta1VBUmsyUWlPX25saldDQ3ctZFZjWVJVR25YX1d4QWxtYld3YzZnaEMwbEtsMko0QkdTNkNfQzl2c1BxVFdXOE1FOVN5ekhfdWVVeHVOcGJFbS1nSGx1NlpUQm5ZWHVBTmtGUzJSLUN2Y3hoUmRaV1pUSXkxZ3AxR082bjcxZW44ZTFpNkw4d0hJcV92REFlQUZodXoydmxXRXlOSU9JQnp1TWhqaW95Z1MzeDVxcDBNN2Y0bWxqZGxMYVJCNjVfcw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "247wallst.com"
+    }
+  ]
+}
