@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-04",
-  "generated_at": "2026-11-04T17:03:47",
+  "entry_day": "2026-11-05",
+  "generated_at": "2026-11-05T17:03:53",
   "articles": [
     {
-      "headline": "lumentum acquisition could challenge broadcom%e2%80%99s leadership",
-      "source": "compoundsemiconductor.net",
+      "headline": "spacex taps qualcomm for starlink mobile 5g network buildout",
+      "source": "rcrwireless.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01186
+      "weight": 0.0056,
+      "impact": -0.01399
     },
     {
-      "headline": "taiwan semi or broadcom if i could only own 1 for",
-      "source": "fool.com",
+      "headline": "tsmc to list usd 450 million green bonds on november 12 to fund environmental projects",
+      "source": "taiwansun.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01236
+      "weight": 0.0056,
+      "impact": -0.00979
     },
     {
-      "headline": "taiwan semi broadcom could only 162000000.html",
-      "source": "aol.com",
+      "headline": "us stocks trade mixed as chips rebound",
+      "source": "bignewsnetwork.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00526
+      "weight": 0.0056,
+      "impact": -0.01372
     },
     {
-      "headline": "infineon aktie qualcomm ist jetzt mit an bord 958852",
-      "source": "boerse-express.com",
+      "headline": "spacex taps qualcomm to power starlink mobile in challenge to verizon at t in us wireless market 11793799237674.html",
+      "source": "livemint.com",
       "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00464
+      "weight": 0.0056,
+      "impact": -0.00835
     },
     {
-      "headline": "redmagic 12 pro pairs qualcomms new chip with the phone series biggest battery yet",
-      "source": "cnet.com",
+      "headline": "broadcom avgo stock butterfly spread options",
+      "source": "investors.com",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00455
+      "weight": 0.0056,
+      "impact": -0.01339
     },
     {
-      "headline": "nasdaq rebounds as chip stocks rally and dow slips",
-      "source": "investinglive.com",
+      "headline": "qualcomm signs major 5g infrastructure deal with spacex for starlink mobile network",
+      "source": "thestar.com.my",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00649
+      "weight": 0.0056,
+      "impact": -0.01506
     },
     {
-      "headline": "1794 broadcom inc avgo shares sold by united asset strategies inc.html",
-      "source": "tickerreport.com",
+      "headline": "us markets why qualcomm shares are in top focus today with quarterly earnings growth outlook amid ai costs concerns 1179",
+      "source": "livemint.com",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00527
+      "weight": 0.0056,
+      "impact": -0.01299
     },
     {
-      "headline": "chip stocks bouncing back fresh 152637000.html",
-      "source": "aol.com",
+      "headline": "spacex partners with qualcomm to accelerate wireless ambitions",
+      "source": "morningstar.com",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00616
+      "weight": 0.0056,
+      "impact": -0.0129
     },
     {
-      "headline": "2028 mediatek market asic broadcom.html",
-      "source": "digitimes.com",
+      "headline": "spacex costruira rete 5g tecnologia qualcomm",
+      "source": "punto-informatico.it",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00602
+      "weight": 0.0056,
+      "impact": -0.00481
     },
     {
-      "headline": "stock market today nov 3 markets edge higher as semiconductor stocks rebound",
-      "source": "fool.com",
+      "headline": "starlink is building a nationwide 5g network with qualcomm",
+      "source": "digitaltrends.com",
       "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.01272
+      "weight": 0.0056,
+      "impact": -0.01116
     }
   ]
 }

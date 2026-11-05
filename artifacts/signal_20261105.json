@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-11-05T17:07:05",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-05",
+  "last_close": 200.13,
+  "model_trained_through": "2026-10-28",
+  "gap_context": {
+    "prev_close": 200.13,
+    "latest": 198.21,
+    "gap_pct": -0.0096,
+    "session": "pre-market",
+    "as_of_et": "06:36 ET"
+  },
+  "model_prob_up": 0.7778,
+  "prob_big_move": 0.5251,
+  "big_move_threshold": 0.0135,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.0729,
+  "headline_count": 177,
+  "article_count": 207,
+  "fulltext": {
+    "stories": 177,
+    "read_full": 101,
+    "read_partial": 19,
+    "headline_only": 57,
+    "alt_searches": 12,
+    "elapsed_s": 91.6
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 5,
+  "stocktwits_bears": 5,
+  "advisory_composite": 0.6835,
+  "brain_top_news": [
+    {
+      "headline": "spacex taps qualcomm for starlink mobile 5g network buildout",
+      "source": "rcrwireless.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.01399
+    },
+    {
+      "headline": "tsmc to list usd 450 million green bonds on november 12 to fund environmental projects",
+      "source": "taiwansun.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00979
+    },
+    {
+      "headline": "us stocks trade mixed as chips rebound",
+      "source": "bignewsnetwork.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.01372
+    },
+    {
+      "headline": "spacex taps qualcomm to power starlink mobile in challenge to verizon at t in us wireless market 11793799237674.html",
+      "source": "livemint.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00835
+    },
+    {
+      "headline": "broadcom avgo stock butterfly spread options",
+      "source": "investors.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.01339
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia Stock Price Forecast: Shares Hit Nearly Three-Month Low Amid Seven-Day Losing Streak, Risking Drop Toward $165 - TradingKey",
+      "source": "google_news",
+      "score": -0.973,
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeE15RjZPaGJYbVkycWczUU15MjFxV1FoYV9xclI1RVpOVGlHb1lESHlyYVV6LV9mRWpwdUJ3S1J5OFBLZ1NGS0JHanhoOEpzcG5PcW5ONGtZb25nVjNqaUtMQWVBYUtLTDZBaGpPT3BZVVFHYlFsaU9fYnFWX2tydGdVZ2E1RUtHdUFNYzU5OEx3TzlRSS1oLTd1T3VNMVl0WGlfeU5IbjZCaW5sc0laTFFoT0xfMVl2RlJHa083TXhBdw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.tradingkey.com"
+    },
+    {
+      "title": "Intel Drops 5%, NVIDIA Retreats 2% After AMD Earnings Beat and Strong 2027 Outlook as Intel Falls 3%; AMD Stock Goes Nowhere - 24/7 Wall St.",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPVnlhSjhhcGtkM1VvZ1BqMEVhR0d0QWNlaXNfYXNBS3ItR3dIX0k5SS1mQjlqUFBTM0tqa1F6SExNWndUeC1VSzZDNmtwYjVzb0piU3c4MFdlQ0MwdUZBVHVRbTZaT0QwX3llODFMc1A0M1pyLXNJRkJ5MkZRXzJCWUJYUG1RSm9ySVZfb2lhRGtzQVV5ZHBHWk1MQlJRcHZkaGJjNnNEZWpWUDZsbkxJSVZpUWw3Z3FrUEF0cG9hclZwdE1YTHYtNlFndW5pNWRiajlJUTVIcXNNeU93NWJPSWZFSTdUblp4cXVfRUpZM2FIZXV3T3c?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "247wallst.com"
+    },
+    {
+      "title": "5-star analyst resets Nvidia stock target after Intel crash - TheStreet",
+      "source": "google_news",
+      "score": -0.942,
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1lblNMVXVxdlBmUV9MYVpURHhYNDJZRlpPVDIxVWlTZVZnQTlJVVN2SG9YSklrSGowQnZGWEs0QVVLaTJHV3hjOURDUlR2SFZVSmRlQU9qRmRfTV84Qi1QMWw0SFcwbFJWUnBjMXh4MndVNlZiM0dOU3hlZUp5QQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.aol.co.uk"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Stock Price Today: NVDA Rebounds 3% From $200 Support Level - Coinpedia",
+      "source": "google_news",
+      "score": 0.946,
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbHlWVUxvODMyR0hTd3FycDlMc1FYd0djV00tZWRHbTQtTjVNMTYybEJXRDR2ZnpQV3l6Ri1mRHBnVEhlelVteUp6MExjSGhqMWZZUFl1akQ1THB4cUhKVkE2RlN6dFVhd3E5TDRxTlQ4bEZTMDUtWXF0M3ZBMWpVTnV5Vy1NQXM1c3o3MG5FeWdmVjBqcjhNdkVxeDY3WjlLeDkyckN30gGrAUFVX3lxTE54cWdtLWp6UVpsTGJXTVRBQU0xd0pNeEVfZTJzdTRfYkRRazB5aldSbkt3cUt0TVp5LU1HSzd5V29fcmpNZVhUNVdYeW50R201RHJZX2ZpUTItakJoNGJfQXBFRUEzdDBhSlBsN3BEQjRwQnlPay1GcElMSVRLWFhleFdQV1A4ZnRpSFRwZlp0dVp0bVZmbUZ1Tmpib2xQVWNiVnc1UEFEZVdOVQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "coinpedia.org"
+    },
+    {
+      "title": "Nvidia Partner Hon Hai\u2019s Sales Rise 46% Thanks to AI Demand - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "score": 0.941,
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPY21OQzRnWEJXbm9XazB3Z096RHpjOU53ajNLTG5sb3RGS3JYcDFqZUpwVXNwT3dYRHhZeV90d3hxSVdDNE9Qa21zamctWUtEeGVqVkVLTmhGSUgxQ3ZpUGR5bWg3Q1pOY19qNjBVWlhuMlVxZWo1TDJoSlJENS01a0RxcThfblM0dXhkTGlYM0ZHOUhYNjBwREZwTk1va1hvS0M1cWljY081Z0tCYmc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "AMD's AI Data Center Guarantees Reach $8.5 Billion as It Challenges Nvidia",
+      "source": "finviz",
+      "score": 0.858,
+      "url": "https://finance.yahoo.com/technology/ai/articles/amds-ai-data-center-guarantees-175411598.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
