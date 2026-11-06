@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-11-05",
-  "generated_at": "2026-11-05T17:03:53",
+  "generated_at": "2026-11-06T15:49:37",
   "articles": [
-    {
-      "headline": "spacex taps qualcomm for starlink mobile 5g network buildout",
-      "source": "rcrwireless.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.01399
-    },
-    {
-      "headline": "tsmc to list usd 450 million green bonds on november 12 to fund environmental projects",
-      "source": "taiwansun.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00979
-    },
     {
       "headline": "us stocks trade mixed as chips rebound",
       "source": "bignewsnetwork.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.01372
+      "weight": 0.0062,
+      "impact": -0.01708
     },
     {
-      "headline": "spacex taps qualcomm to power starlink mobile in challenge to verizon at t in us wireless market 11793799237674.html",
-      "source": "livemint.com",
+      "headline": "spacex taps qualcomm for starlink mobile 5g network buildout",
+      "source": "rcrwireless.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00835
+      "weight": 0.0061,
+      "impact": -0.01876
     },
     {
       "headline": "broadcom avgo stock butterfly spread options",
       "source": "investors.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.01339
+      "weight": 0.006,
+      "impact": -0.01663
     },
     {
-      "headline": "qualcomm signs major 5g infrastructure deal with spacex for starlink mobile network",
-      "source": "thestar.com.my",
+      "headline": "tsmc to list usd 450 million green bonds on november 12 to fund environmental projects",
+      "source": "taiwansun.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.01506
-    },
-    {
-      "headline": "us markets why qualcomm shares are in top focus today with quarterly earnings growth outlook amid ai costs concerns 1179",
-      "source": "livemint.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.01299
+      "weight": 0.006,
+      "impact": -0.01081
     },
     {
       "headline": "spacex partners with qualcomm to accelerate wireless ambitions",
       "source": "morningstar.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.0129
+      "weight": 0.006,
+      "impact": -0.01769
     },
     {
-      "headline": "spacex costruira rete 5g tecnologia qualcomm",
-      "source": "punto-informatico.it",
+      "headline": "us markets why qualcomm shares are in top focus today with quarterly earnings growth outlook amid ai costs concerns 1179",
+      "source": "livemint.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00481
+      "weight": 0.006,
+      "impact": -0.0161
     },
     {
-      "headline": "starlink is building a nationwide 5g network with qualcomm",
-      "source": "digitaltrends.com",
+      "headline": "semiconductor sell off the best chip stocks to buy right now before they skyrocket once again",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.01116
+      "weight": 0.006,
+      "impact": -0.01222
+    },
+    {
+      "headline": "qualcomm power spacexs masive 5g nationwide network musk takes aim telecom giants",
+      "source": "zerohedge.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.01194
+    },
+    {
+      "headline": "stock market today nov 3 markets edge higher as semiconductor stocks rebound",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.0137
+    },
+    {
+      "headline": "qualcomm beats q4 forecasts shares slip 2 as profit guidance comes in light",
+      "source": "investinglive.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.02047
     }
   ]
 }
