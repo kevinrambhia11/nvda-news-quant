@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-11-06T17:06:02",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-06",
+  "last_close": 181.6,
+  "model_trained_through": "2026-11-04",
+  "gap_context": {
+    "prev_close": 181.6,
+    "latest": 190.41,
+    "gap_pct": 0.0485,
+    "session": "pre-market",
+    "as_of_et": "06:35 ET"
+  },
+  "model_prob_up": 0.4247,
+  "prob_big_move": 0.5183,
+  "big_move_threshold": 0.0143,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": -0.2227,
+  "headline_count": 172,
+  "article_count": 210,
+  "fulltext": {
+    "stories": 172,
+    "read_full": 99,
+    "read_partial": 14,
+    "headline_only": 59,
+    "alt_searches": 12,
+    "elapsed_s": 110.2
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 5,
+  "stocktwits_bears": 1,
+  "advisory_composite": 0.4139,
+  "brain_top_news": [
+    {
+      "headline": "asian shares mostly advance following us midterms though kospi falls on selling of chipmakers",
+      "source": "krmg.com",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.01538
+    },
+    {
+      "headline": "us midterm blue wave puts pressure on memory chip demand",
+      "source": "koreatimes.co.kr",
+      "category": "competitors",
+      "weight": 0.0062,
+      "impact": -0.01292
+    },
+    {
+      "headline": "qualcomm wins spacex 5g deal but earnings slide dominates",
+      "source": "financial-news.co.uk",
+      "category": "competitors",
+      "weight": 0.0062,
+      "impact": -0.02085
+    },
+    {
+      "headline": "us midterm blue wave puts pressure on memory chip demands",
+      "source": "koreatimes.co.kr",
+      "category": "competitors",
+      "weight": 0.0062,
+      "impact": -0.01004
+    },
+    {
+      "headline": "stock market down today nvidia spacex amd",
+      "source": "mashable.com",
+      "category": "competitors",
+      "weight": 0.0061,
+      "impact": -0.0154
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Dow turns lower, dropping more than 650 points as Nvidia shares slide",
+      "source": "finviz",
+      "score": -0.973,
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-democrat-sweep-midterm-elections-rally/card/dow-turns-lower-dropping-more-than-650-points-as-nvidia-shares-slide-WomII7HVFdqwgQ0DOqSS?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia has lost nearly $1.4 trillion since its October record - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPc2NrRkNsOE94M2lLbzNWdWkwZWdyZmVNd2ZsTW0zcTNSWW4ySjBFeVJyaktrS0dtaWcxVC1keV9SLURsMkRKTnk1cklBUmxSRUM5TEFKci1TQlBWS01fNzFhUFR6LXdxVmRBdGduNzUtZi11dlE0alphdjRyQjEtdmFwR0Q2OWdMODFjdld3aTRzWmlDcGpVNHdEX0Zra2NFc09oc09Oamh3R3hlQ0Q1aHl1dGFVWk0?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "AI meltdown: Nvidia and Qualcomm drop more than 9%, pushing Nasdaq to worst day since April 2025 - CNBC",
+      "source": "CNBC",
+      "score": -0.968,
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUGR6VGxMQVNKdUF0R21NRjNRYzB1MlJMRzZFVVViM0tLZXpMM3BOc210T2FGZ0RMcEVWOTRXeGx3dHJNd2JlOHh4Z05BREdvSmVGdjdHWlptek45UEc1UGU1eDFYdVdRczVheTJCcE93S2E4d0dULWI0NUtVXzNiQtIBhgFBVV95cUxPU1pQS0l2NFdxYnpCWkV0d1lrSzFVQU45NVJWOEhlQTZfdTFoaVVwbUNsMXBNZVJ5aFAtMFRhbUhIZ0VNbG16YklqODNsekdieHY4M2ZGNzlXemtZTHYxOHYyM096QWVyVkllTFhjTHZUYmpWeEpMUEJBaHdTbXBTTkp2VG5TUQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Partner Hon Hai\u2019s Sales Rise 46% Thanks to AI Demand - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "score": 0.933,
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPY21OQzRnWEJXbm9XazB3Z096RHpjOU53ajNLTG5sb3RGS3JYcDFqZUpwVXNwT3dYRHhZeV90d3hxSVdDNE9Qa21zamctWUtEeGVqVkVLTmhGSUgxQ3ZpUGR5bWg3Q1pOY19qNjBVWlhuMlVxZWo1TDJoSlJENS01a0RxcThfblM0dXhkTGlYM0ZHOUhYNjBwREZwTk1va1hvS0M1cWljY081Z0tCYmc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.briefs.co"
+    },
+    {
+      "title": "Nvidia Boosts Chip Tracking in Southeast Asia to Fight Smuggling",
+      "source": "finviz",
+      "score": 0.746,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-boosts-chip-tracking-southeast-100319244.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "NVIDIA Corporation $NVDA Stock: Cohen Capital Management Inc. Grows Stake - MarketBeat",
+      "source": "google_news",
+      "score": 0.705,
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPc0lMbmJSUE5ENXhxcmFxaUYzVEhOT2lVYW51STgwa0FBanJVX1R1UjhrekRidHpYeUkyOWM1OHpfa2dneTFsSVpMMjdwYjRGcmJfNzZVdFo5eEl2SVdxa0hnblM3SnZIR2JUTkNZRWpFVkNuN3dKLUVxbXZKV0RoMnFQU0NzeTZUSUkyTWZ2RzJJbnlFZlJqN0JuWHZUN3g3b0RiM3BxVHZOZmF4WHoyMDNCQkxxWGpXVWVac3EzRUExd3hzVmhMbmNTdw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.marketbeat.com"
+    }
+  ]
+}

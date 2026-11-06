@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-05",
-  "generated_at": "2026-11-06T15:49:37",
+  "entry_day": "2026-11-06",
+  "generated_at": "2026-11-06T17:03:03",
   "articles": [
     {
-      "headline": "us stocks trade mixed as chips rebound",
-      "source": "bignewsnetwork.com",
+      "headline": "asian shares mostly advance following us midterms though kospi falls on selling of chipmakers",
+      "source": "krmg.com",
+      "category": "competitors",
+      "weight": 0.0063,
+      "impact": -0.01538
+    },
+    {
+      "headline": "us midterm blue wave puts pressure on memory chip demand",
+      "source": "koreatimes.co.kr",
       "category": "competitors",
       "weight": 0.0062,
-      "impact": -0.01708
+      "impact": -0.01292
     },
     {
-      "headline": "spacex taps qualcomm for starlink mobile 5g network buildout",
-      "source": "rcrwireless.com",
+      "headline": "qualcomm wins spacex 5g deal but earnings slide dominates",
+      "source": "financial-news.co.uk",
+      "category": "competitors",
+      "weight": 0.0062,
+      "impact": -0.02085
+    },
+    {
+      "headline": "us midterm blue wave puts pressure on memory chip demands",
+      "source": "koreatimes.co.kr",
+      "category": "competitors",
+      "weight": 0.0062,
+      "impact": -0.01004
+    },
+    {
+      "headline": "stock market down today nvidia spacex amd",
+      "source": "mashable.com",
       "category": "competitors",
       "weight": 0.0061,
-      "impact": -0.01876
+      "impact": -0.0154
     },
     {
-      "headline": "broadcom avgo stock butterfly spread options",
-      "source": "investors.com",
+      "headline": "broadcom stock could be approaching a major turning point heres the price target",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01663
+      "weight": 0.0061,
+      "impact": -0.01322
     },
     {
-      "headline": "tsmc to list usd 450 million green bonds on november 12 to fund environmental projects",
-      "source": "taiwansun.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01081
-    },
-    {
-      "headline": "spacex partners with qualcomm to accelerate wireless ambitions",
-      "source": "morningstar.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01769
-    },
-    {
-      "headline": "us markets why qualcomm shares are in top focus today with quarterly earnings growth outlook amid ai costs concerns 1179",
-      "source": "livemint.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.0161
-    },
-    {
-      "headline": "semiconductor sell off the best chip stocks to buy right now before they skyrocket once again",
+      "headline": "is broadcom stock a buy after marvell s usd115 billion deal",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01222
+      "weight": 0.0061,
+      "impact": -0.01513
     },
     {
-      "headline": "qualcomm power spacexs masive 5g nationwide network musk takes aim telecom giants",
-      "source": "zerohedge.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01194
-    },
-    {
-      "headline": "stock market today nov 3 markets edge higher as semiconductor stocks rebound",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.0137
-    },
-    {
-      "headline": "qualcomm beats q4 forecasts shares slip 2 as profit guidance comes in light",
+      "headline": "nasdaq futures analysis for day traders today bears take control below 28 270 as semiconductor weakness returns",
       "source": "investinglive.com",
       "category": "competitors",
+      "weight": 0.0061,
+      "impact": -0.00617
+    },
+    {
+      "headline": "better foundry stock taiwan semiconductor vs intel",
+      "source": "fool.com",
+      "category": "competitors",
       "weight": 0.006,
-      "impact": -0.02047
+      "impact": -0.0054
+    },
+    {
+      "headline": "spacex selects qualcomm to accelerate starlink mobiles nationwide 5g network",
+      "source": "newswiretoday.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.014
     }
   ]
 }
