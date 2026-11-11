@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-06",
-  "generated_at": "2026-11-06T17:03:03",
+  "entry_day": "2026-11-11",
+  "generated_at": "2026-11-11T11:37:14",
   "articles": [
     {
-      "headline": "asian shares mostly advance following us midterms though kospi falls on selling of chipmakers",
-      "source": "krmg.com",
+      "headline": "sp 500 stocks 20 biggest losers amd recovered losses",
+      "source": "investors.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.00952
+    },
+    {
+      "headline": "tsmc earmarks up to 1bn to buy anthropic and openai shares",
+      "source": "nikkei.com",
+      "category": "competitors",
+      "weight": 0.0064,
+      "impact": -0.01855
+    },
+    {
+      "headline": "texoma semiconductor tech hub awarded nearly 24 million federal funding",
+      "source": "kxii.com",
       "category": "competitors",
       "weight": 0.0063,
-      "impact": -0.01538
+      "impact": -0.01093
     },
     {
-      "headline": "us midterm blue wave puts pressure on memory chip demand",
-      "source": "koreatimes.co.kr",
-      "category": "competitors",
-      "weight": 0.0062,
-      "impact": -0.01292
-    },
-    {
-      "headline": "qualcomm wins spacex 5g deal but earnings slide dominates",
-      "source": "financial-news.co.uk",
-      "category": "competitors",
-      "weight": 0.0062,
-      "impact": -0.02085
-    },
-    {
-      "headline": "us midterm blue wave puts pressure on memory chip demands",
-      "source": "koreatimes.co.kr",
-      "category": "competitors",
-      "weight": 0.0062,
-      "impact": -0.01004
-    },
-    {
-      "headline": "stock market down today nvidia spacex amd",
-      "source": "mashable.com",
+      "headline": "amd gets bullish rating with 600 price target",
+      "source": "technews.tw",
       "category": "competitors",
       "weight": 0.0061,
-      "impact": -0.0154
+      "impact": -0.00827
     },
     {
-      "headline": "broadcom stock could be approaching a major turning point heres the price target",
-      "source": "247wallst.com",
+      "headline": "tsm stock taiwan semiconductor october 2026 sales",
+      "source": "investors.com",
       "category": "competitors",
       "weight": 0.0061,
-      "impact": -0.01322
+      "impact": -0.00449
     },
     {
-      "headline": "is broadcom stock a buy after marvell s usd115 billion deal",
+      "headline": "tsmc s october sales hit record nt 586 89 billion up 59 7 from 2025 1774334",
+      "source": "econotimes.com",
+      "category": "competitors",
+      "weight": 0.0061,
+      "impact": -0.0059
+    },
+    {
+      "headline": "tsmc is at the center of an ai boom that flipped 25 years of u s trade is the stock a buy",
       "source": "fool.com",
       "category": "competitors",
       "weight": 0.0061,
-      "impact": -0.01513
+      "impact": -0.00788
     },
     {
-      "headline": "nasdaq futures analysis for day traders today bears take control below 28 270 as semiconductor weakness returns",
-      "source": "investinglive.com",
+      "headline": "qualcomm nasdaqqcom shares up 1 2 still a buy.html",
+      "source": "tickerreport.com",
       "category": "competitors",
       "weight": 0.0061,
-      "impact": -0.00617
+      "impact": -0.00953
     },
     {
-      "headline": "better foundry stock taiwan semiconductor vs intel",
-      "source": "fool.com",
+      "headline": "qualcomm price prediction automotive boom 133305000.html",
+      "source": "aol.com",
       "category": "competitors",
       "weight": 0.006,
-      "impact": -0.0054
+      "impact": -0.00801
     },
     {
-      "headline": "spacex selects qualcomm to accelerate starlink mobiles nationwide 5g network",
-      "source": "newswiretoday.com",
+      "headline": "taiwan semiconductor manufacturing co reports 59 7 october revenue gain 1774243",
+      "source": "econotimes.com",
       "category": "competitors",
       "weight": 0.006,
-      "impact": -0.014
+      "impact": -0.00488
     }
   ]
 }
