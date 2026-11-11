@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-11-11T11:42:55",
+  "generated_at": "2026-11-11T17:05:49",
   "ticker": "NVDA",
   "entry_day": "2026-11-11",
   "last_close": 168.89,
   "model_trained_through": "2026-11-04",
   "gap_context": {
     "prev_close": 168.89,
-    "latest": 170.48,
-    "gap_pct": 0.0094,
-    "session": "after-hours",
-    "as_of_et": "19:59 ET"
+    "latest": 177.55,
+    "gap_pct": 0.0513,
+    "session": "pre-market",
+    "as_of_et": "06:35 ET"
   },
   "model_prob_up": 0.5889,
   "prob_big_move": 0.5183,
   "big_move_threshold": 0.0156,
   "action": "BUY / HOLD LONG",
-  "headline_sentiment": -0.1893,
-  "headline_count": 174,
-  "article_count": 212,
+  "headline_sentiment": -0.14,
+  "headline_count": 173,
+  "article_count": 213,
   "fulltext": {
-    "stories": 174,
-    "read_full": 89,
-    "read_partial": 19,
-    "headline_only": 66,
+    "stories": 173,
+    "read_full": 91,
+    "read_partial": 20,
+    "headline_only": 62,
     "alt_searches": 12,
-    "elapsed_s": 187.1
+    "elapsed_s": 52.2
   },
   "data_warnings": [],
   "headlines_degraded": false,
   "sentiment_backend": "finbert",
-  "stocktwits_bulls": 14,
+  "stocktwits_bulls": 9,
   "stocktwits_bears": 2,
-  "advisory_composite": 0.5339,
+  "advisory_composite": 0.5413,
   "brain_top_news": [
     {
       "headline": "sp 500 stocks 20 biggest losers amd recovered losses",
@@ -71,49 +71,39 @@
   ],
   "most_negative": [
     {
-      "title": "NVDA Stock Slides To Fresh 7-Month Low Amid CEO Turmoil: Ross Gerber Calls Selloff A Chance To Buy Shares At Absurdly Low Price",
-      "source": "finviz",
-      "score": -0.97,
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nvda-stock-slides-fresh-7-192340098.html",
+      "title": "Nvidia live updates: Nvidia stock drops as spy fiasco involving CEO Jensen Huang raises broader risk concerns - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.964,
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPWldTaHlFa1FDMTZiZldtdUlEVFkybDRmU3BUWms1eXNTR21qc1owdUVmSVAya1VBMnFwOTFBTUNlb005WU1kdDFBd0JUcVUwTWYta2RDZjRNRjNhQS13dElEY2Y4aXpNaGJDV1ZHWmp1SVdjMUpuekdNQ0hKX0paRkJENGtHSDNpQnZaZEMzeDJ5YnczVk1jUG93MEJRT05zN1FQbklPVklhR0FVa0ZCVFBiSHN3SGlzTUt4OER2RWIxaDhTMzJ5RVA4NmFXWXQyU2hjQnpKbFY0YU8tTmRzN1BoZmpmbDZmRnVMLVZsX2tpNXc?oc=5",
       "n_sources": 1,
       "also_from": [],
       "read_status": "full",
       "read_from": "finance.yahoo.com"
     },
     {
-      "title": "Nvidia live updates: Nvidia stock drops as spy fiasco involving CEO Jensen Huang raises broader risk concerns - Yahoo Finance",
+      "title": "Nvidia stock falls after investigation into CEO, bucking market rally - CNN",
       "source": "google_news",
-      "score": -0.965,
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPWldTaHlFa1FDMTZiZldtdUlEVFkybDRmU3BUWms1eXNTR21qc1owdUVmSVAya1VBMnFwOTFBTUNlb005WU1kdDFBd0JUcVUwTWYta2RDZjRNRjNhQS13dElEY2Y4aXpNaGJDV1ZHWmp1SVdjMUpuekdNQ0hKX0paRkJENGtHSDNpQnZaZEMzeDJ5YnczVk1jUG93MEJRT05zN1FQbklPVklhR0FVa0ZCVFBiSHN3SGlzTUt4OER2RWIxaDhTMzJ5RVA4NmFXWXQyU2hjQnpKbFY0YU8tTmRzN1BoZmpmbDZmRnVMLVZsX2tpNXc?oc=5",
+      "score": -0.954,
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE50WjBIUUkwd0ZNMkFYTzZjQjRnOFZoc2lPTFVORzZtU0ZwOV9SNldqdUxPZ0NsUEFLZ3lDdzh3RV9ZTWZ4ek9KaWR4aENKVEFtdFIybjhqUkxvTHRFYWFocVgta1ZKRWJYYTFIZ1JpaE5uTVBfNzMzb3VkUC1iUQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.channel3000.com"
+    },
+    {
+      "title": "Chip stocks' slide nears $5 trillion as Nvidia hits most extreme selling level since 2019 - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.953,
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNeGhUMWhtSk5Kdm9GOHhVaFlETXR3clBfSEI0VnRtTHNtWEFNWkIxelY4R2NyUjQzMjg5SF9JZ0xOZldPSGR3WlBhejJjNTdmM21HdFQzaGpwMEFrVGxMMFB1RHQ0MkVvOUtCeklOMFJmemRmUDRIRS1sS2VheW5UUDc4anhmQU5ZUV9HY09lTEpUWmFfLWZOOXhUcVZFeTRVQXZVeGE0TzhxdVVnaDRPTzdVWXY2TmQ1UEgyNGJHMFhFS241ZkJGa1o2NHphdmdSV0xCRjh0Q0k0MHdF?oc=5",
       "n_sources": 2,
       "also_from": [
         "finviz"
       ],
       "read_status": "full",
       "read_from": "finance.yahoo.com"
-    },
-    {
-      "title": "Dow drops 200 points on losses in NVIDIA Corp., Caterpillar shares",
-      "source": "finviz",
-      "score": -0.964,
-      "url": "https://www.marketwatch.com/data-news/dow-drops-200-points-on-losses-in-nvidia-corp-caterpillar-shares-dbcfec87-fd18727b8adf?mod=mw_FV",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "partial",
-      "read_from": "www.marketwatch.com"
     }
   ],
   "most_positive": [
-    {
-      "title": "AMD Gains 25% Against NVDA in 2 Days: Chip Analyst Says Lisa Su Is at Her Best",
-      "source": "finviz",
-      "score": 0.909,
-      "url": "https://finance.yahoo.com/technology/articles/amd-gains-25-against-nvda-193008000.html",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "full",
-      "read_from": "finance.yahoo.com"
-    },
     {
       "title": "CoreWeave pushes Nvidia Vera Rubin racks into production",
       "source": "finviz",
@@ -133,6 +123,16 @@
       "also_from": [],
       "read_status": "headline_only",
       "read_from": null
+    },
+    {
+      "title": "AMD launches Zen 6 EPYC 'Venice' server CPUs pitched at agentic AI as Nvidia's Vera gets its first full reviews - MLQ.ai",
+      "source": "MLQ.ai",
+      "score": 0.71,
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQQ1VwSDBXaEdJT3hVOGs0NkstcHhzZFBmQktUckhCalBNZ1VaMzJUeUZMbi1FeDBKelg0bm91MHRKaGpwdjAxZDcxbmhsdVNlTTdkdUVzMmhWV1l2a3NZZl9FalZMakZ1TXRwdk94VEJ6LWhOMGp4Rm9idDNPRGl4Rml3dVlvbWhzc210OFZjT0w0NWNqNHE3TldZNVgxcFQzQ0llNmE1RHlQdlJfbGJ6MU9iV3R0Z1RuZHl6R1RGWERhbkRkSlZmUw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "mlq.ai"
     }
   ]
 }
