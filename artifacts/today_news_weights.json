@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-11",
-  "generated_at": "2026-11-11T17:02:36",
+  "entry_day": "2026-11-12",
+  "generated_at": "2026-11-12T17:04:01",
   "articles": [
     {
-      "headline": "sp 500 stocks 20 biggest losers amd recovered losses",
-      "source": "investors.com",
+      "headline": "tsmc record sales strengthen wedbush s bullish outlook 1101547.html",
+      "source": "proactiveinvestors.com",
       "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.00952
+      "weight": 0.0059,
+      "impact": -0.0088
     },
     {
-      "headline": "tsmc earmarks up to 1bn to buy anthropic and openai shares",
+      "headline": "anthropic owes everyone no profit for years chips are rented money is borrowed and the revenue is a forecast",
+      "source": "investmentwatchblog.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00757
+    },
+    {
+      "headline": "tsmc approves 500 million anthropic ipo stake anthropic filing flags tsmc chip supply risk.htm",
+      "source": "techtimes.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00889
+    },
+    {
+      "headline": "tsmc october revenue surges 597 yoy to usd 1761 billion",
+      "source": "taiwansun.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00299
+    },
+    {
+      "headline": "heres why barclays tom omalley kept a sell on qualcomm qcom 1864349",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.01636
+    },
+    {
+      "headline": "tsmc is seeing insatiable demand for chips executive tells nikkei forum",
       "source": "nikkei.com",
       "category": "competitors",
-      "weight": 0.0064,
-      "impact": -0.01855
+      "weight": 0.0057,
+      "impact": -0.00677
     },
     {
-      "headline": "texoma semiconductor tech hub awarded nearly 24 million federal funding",
-      "source": "kxii.com",
+      "headline": "tsmc to invest up to usd 1 billion in anthropic openai20261111100319",
+      "source": "aninews.in",
       "category": "competitors",
-      "weight": 0.0063,
-      "impact": -0.01093
+      "weight": 0.0057,
+      "impact": -0.00798
     },
     {
-      "headline": "amd gets bullish rating with 600 price target",
-      "source": "technews.tw",
+      "headline": "qualcomm will fire 1000 employees in india as layoffs begin",
+      "source": "trak.in",
       "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00827
+      "weight": 0.0057,
+      "impact": -0.00189
     },
     {
-      "headline": "tsm stock taiwan semiconductor october 2026 sales",
-      "source": "investors.com",
+      "headline": "nvidias ceo probe and singapore ties will future chip orders suffer",
+      "source": "thestar.com.my",
       "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00449
+      "weight": 0.0057,
+      "impact": -0.00969
     },
     {
-      "headline": "tsmc s october sales hit record nt 586 89 billion up 59 7 from 2025 1774334",
-      "source": "econotimes.com",
+      "headline": "asian markets mostly gain on ai chip demand despite wall streets retreat on inflation data",
+      "source": "durangoherald.com",
       "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.0059
-    },
-    {
-      "headline": "tsmc is at the center of an ai boom that flipped 25 years of u s trade is the stock a buy",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00788
-    },
-    {
-      "headline": "qualcomm nasdaqqcom shares up 1 2 still a buy.html",
-      "source": "tickerreport.com",
-      "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00953
-    },
-    {
-      "headline": "qualcomm price prediction automotive boom 133305000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00801
-    },
-    {
-      "headline": "taiwan semiconductor manufacturing co reports 59 7 october revenue gain 1774243",
-      "source": "econotimes.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00488
+      "weight": 0.0057,
+      "impact": 0.00023
     }
   ]
 }

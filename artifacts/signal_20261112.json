@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-11-12T17:07:23",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-12",
+  "last_close": 173.73,
+  "model_trained_through": "2026-11-04",
+  "gap_context": {
+    "prev_close": 173.73,
+    "latest": 160.99,
+    "gap_pct": -0.0733,
+    "session": "pre-market",
+    "as_of_et": "06:37 ET"
+  },
+  "model_prob_up": 0.6681,
+  "prob_big_move": 0.5183,
+  "big_move_threshold": 0.0156,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.2403,
+  "headline_count": 159,
+  "article_count": 217,
+  "fulltext": {
+    "stories": 159,
+    "read_full": 85,
+    "read_partial": 19,
+    "headline_only": 55,
+    "alt_searches": 12,
+    "elapsed_s": 108.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 4,
+  "stocktwits_bears": 10,
+  "advisory_composite": 0.5816,
+  "brain_top_news": [
+    {
+      "headline": "tsmc record sales strengthen wedbush s bullish outlook 1101547.html",
+      "source": "proactiveinvestors.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.0088
+    },
+    {
+      "headline": "anthropic owes everyone no profit for years chips are rented money is borrowed and the revenue is a forecast",
+      "source": "investmentwatchblog.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00757
+    },
+    {
+      "headline": "tsmc approves 500 million anthropic ipo stake anthropic filing flags tsmc chip supply risk.htm",
+      "source": "techtimes.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00889
+    },
+    {
+      "headline": "tsmc october revenue surges 597 yoy to usd 1761 billion",
+      "source": "taiwansun.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00299
+    },
+    {
+      "headline": "heres why barclays tom omalley kept a sell on qualcomm qcom 1864349",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.0057,
+      "impact": -0.01636
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia shares slip in after-hours trading on fresh allegations of CEO relationship - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.969,
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZFpBZGI4RmF5X3M4OTFNOUc3U3pWZzRjMmhrcmRLWjdSWmhUSEV0dUdjZXl3YTBWVHhfbHk2Y0hkM2VPbXR6SkVLRVp3dDhYbl9Yc1drS1pWMEI0S1hsNFFfRG5LYVAwV1JmSEwtRHg3Y3ZkbkhHTHBwOGF1RkFyRFpCRmRYMEpUWTNOSDZmUzdORk9ya185WHhtQlJZQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Stock Market Today: Nvidia Stock Slides 8% After Hours as Board Weighs Jensen Huang\u2019s Future - Eurasia Business News",
+      "source": "google_news",
+      "score": -0.968,
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOTEdzSDBUcDRkbjFSR2RCYVNiR2c1NUUwRnNibUxEOGhNOVdPVkltT2VzcVhzeVFuZFAzZndUWE5RYzdQdXg5N1VCdXdDRDJBMWhJRlAtWXg3NTNteFB5YnpLa2ZuWDJ5ODRFR2h1SWI1UUlkVDZvVE4tSE9SYzVxVEZuZ2ZiaUV3b2VxQmpfVXptRWpKWktOV0hFMDBjc2lEMjVJbzMyQk8zT1AyR3lsVDVLTUhhcE1hRE1JMlZKYkNTZVZaeDJ4TXYyU3REdw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "eurasiabusinessnews.com"
+    },
+    {
+      "title": "Nasdaq, S&P 500 futures fall as Nvidia turbulence unsettles AI stocks",
+      "source": "finviz",
+      "score": -0.968,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-fall-nvidia-turmoil-093910045.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "European stocks hit record high after Nvidia storm rattles Asia - Reuters",
+      "source": "google_news",
+      "score": 0.839,
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA1ODl5LXpyQ0RZanVjSnZGS1NjS1ljMjZvdW9xY3ZSSUxvNkY2Z3dCMThiSjdKNHI1TFRCZnBIRHdYY0UxTGh0QjRZX3Y2S25sY0k4M0dKN3VZdGNMSGk5N0tPUmVJa3ozWXRCcmluOWxVVjVfblRLdmttMA?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "AMD launches Zen 6 EPYC 'Venice' server CPUs pitched at agentic AI as Nvidia's Vera gets its first full reviews - MLQ.ai",
+      "source": "MLQ.ai",
+      "score": 0.71,
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQQ1VwSDBXaEdJT3hVOGs0NkstcHhzZFBmQktUckhCalBNZ1VaMzJUeUZMbi1FeDBKelg0bm91MHRKaGpwdjAxZDcxbmhsdVNlTTdkdUVzMmhWV1l2a3NZZl9FalZMakZ1TXRwdk94VEJ6LWhOMGp4Rm9idDNPRGl4Rml3dVlvbWhzc210OFZjT0w0NWNqNHE3TldZNVgxcFQzQ0llNmE1RHlQdlJfbGJ6MU9iV3R0Z1RuZHl6R1RGWERhbkRkSlZmUw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "mlq.ai"
+    },
+    {
+      "title": "Watch Barclays' Lafargue: Semiconductor Outlook Holds Despite Nvidia Risks - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "score": 0.63,
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNd1FkMkwzUHdLeDdIRVRxMk54M0ZaS3BDVDVza2lQVjJ1d3JWc25ZWXdIMXVqSUpac1ViTExiN2hMZVFWRDZWMmo4RkNNZFpJaUFXU0NKRUNOdE1vcDRZNHRMMUNPc2J6TEgtM2llbW9IX1FXdHRES3pTYjdiS1JIWDV0OENoajdGMGhiaWVzNEhoa0Z0Y3BCeFhXb1h1V3kzemFuTDV3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}
