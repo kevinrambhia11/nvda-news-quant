@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-11-13T17:07:09",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-13",
+  "last_close": 166.19,
+  "model_trained_through": "2026-11-04",
+  "gap_context": {
+    "prev_close": 166.19,
+    "latest": 170.45,
+    "gap_pct": 0.0256,
+    "session": "pre-market",
+    "as_of_et": "06:37 ET"
+  },
+  "model_prob_up": 0.5931,
+  "prob_big_move": 0.5183,
+  "big_move_threshold": 0.0168,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.2711,
+  "headline_count": 178,
+  "article_count": 219,
+  "fulltext": {
+    "stories": 178,
+    "read_full": 101,
+    "read_partial": 18,
+    "headline_only": 59,
+    "alt_searches": 12,
+    "elapsed_s": 137.9
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 10,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.5245,
+  "brain_top_news": [
+    {
+      "headline": "why broadcom stock rallied thursday morning",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.01072
+    },
+    {
+      "headline": "spacex s new deal with qualcomm aims to take on mobile carriers history says it s going to be an uphill battle",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.01196
+    },
+    {
+      "headline": "here s my biggest worry about broadcom stock it isn t enough to stop me from buying",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.0158
+    },
+    {
+      "headline": "nvidia stock plunges 8 6 but amd and broadcom rally which chip stocks are worth buying",
+      "source": "investinglive.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.01231
+    },
+    {
+      "headline": "60 billion amazon deal and a pivot away from smartphones could triple qualcomms nasdaq qcom non handset revenue",
+      "source": "foreignpolicyjournal.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.01166
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia PE falls to 14-year low, but CEO exit and AI worries cloud the bargain - Reuters",
+      "source": "google_news",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNN1pCSzVXOGZaWVZyWTl6OXJiSk40TnNaMmhDUXJuN3BsdnNzZU8tSmg0bVkycVVmSG1UNGV6N0lNZ0lqRjdZZXZmQW1USXdvMWJ6MGRCUVotRmpvQTdxVWRmcjdPZmRrLVhPSDFmcjZRMFNWSk9EQjVIaDRINVl5d182b3BJb0hmTEJ0RTJrZ0dRWFBITWtMdW9ET2g4b2hCLWRoQnc5ODZvZw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.investify.pk"
+    },
+    {
+      "title": "Nvidia sells off for second day in fallout from Jensen Huang\u2019s affair with alleged spy - CNBC",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYUp3aWtLM3FHZFMycjJkRGVUeXFXWUdPOV9fbEtkVUhwUk5oX2xDVHZ4alZwdl93VnY1UzMwSUN5QjJneHVzdTZHR21JUnkyU2NtZ05LazhQMHoteDNzSVUxQ2lTR0VVSk8yczdTVTd5cXFHNnFUR1hHdVlfc1psbktyRy1OTTQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "US Stock Futures Edge Lower as Nvidia Leadership Changes Offset Cisco and Applied Materials Forecasts: Dow Jones, S&P, Nasdaq, Wall Street",
+      "source": "finviz",
+      "score": -0.962,
+      "url": "/news/422455/us-stock-futures-edge-lower-as-nvidia-leadership-changes-offset-cisco-and-applied-materials-forecasts-dow-jones-sp-nasdaq-wall-street",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "AMD launches Zen 6 EPYC 'Venice' server CPUs pitched at agentic AI as Nvidia's Vera gets its first full reviews - MLQ.ai",
+      "source": "MLQ.ai",
+      "score": 0.71,
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQQ1VwSDBXaEdJT3hVOGs0NkstcHhzZFBmQktUckhCalBNZ1VaMzJUeUZMbi1FeDBKelg0bm91MHRKaGpwdjAxZDcxbmhsdVNlTTdkdUVzMmhWV1l2a3NZZl9FalZMakZ1TXRwdk94VEJ6LWhOMGp4Rm9idDNPRGl4Rml3dVlvbWhzc210OFZjT0w0NWNqNHE3TldZNVgxcFQzQ0llNmE1RHlQdlJfbGJ6MU9iV3R0Z1RuZHl6R1RGWERhbkRkSlZmUw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "mlq.ai"
+    },
+    {
+      "title": "Analysts Set Nvidia (NVDA) Stock Price Target For 12 Months - TradingView",
+      "source": "TradingView",
+      "score": 0.432,
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVHJ5UzAyQjNmQXJ4TS1iWFFYN2FMVUF4cmI3ZTNFeVZJRy1sSFJXeTJFNEZZdjViTFpMYjZGS1U5Y05zRzhRNHBJV2YyTWxqX2FaR2pKUktCc3F6dHNkTGxwdk5sOUhueXZhTmNVN20tdjFfQUpCbHAwX240RzB3MXdyR0Vmd21XczFndjZWRGFxS0d1MWxMWkdMX3p0UkJJZWNuTXppVWVfcmNsOXY4ejRBdlJ0NUhr?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.tradingview.com"
+    },
+    {
+      "title": "Great News for Nvidia, Micron, Broadcom, and AMD Stock Investors -- Wall Street Made a Mistake - The Globe and Mail",
+      "source": "The Globe and Mail",
+      "score": 0.414,
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOVGF6YWVteE5xaFp2eUFEY0RjSjNGelF2OEdkaE1IcEVnTjBJWHY1aEo0QXFjTnNXR1cxVnhVVmhfLWNvTW5xLW56MTdYY2Jha3d2WUE2ckhfRGtqQjZnbVM0WTVZR2pOblM1THFUeklIc2FUVXFUdmlwS1VFNElyNnlaSTVaaG1LZHdkQTljandnYUI0Z0hyTGFEbWtMaG9GLUZSU0ZhNHdBNnRHa0Myd1ZmaUVmRzNybUl5UGNiSXlTUW1jNWx0cDFPaTdKN0g5Q0NmMzBiZU0wSHlwcFBzX3M4OEQyUGRza0s5alZzaGhPb1MzREsxbExrVmZmeDY3STFBNA?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.theglobeandmail.com"
+    }
+  ]
+}
