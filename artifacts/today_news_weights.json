@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-13",
-  "generated_at": "2026-11-13T17:03:20",
+  "entry_day": "2026-11-16",
+  "generated_at": "2026-11-16T17:08:20",
   "articles": [
     {
-      "headline": "why broadcom stock rallied thursday morning",
+      "headline": "taiwan banks eye tsmc cash pile",
+      "source": "ifre.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.01322
+    },
+    {
+      "headline": "nvidia ceo exit could give south korean chipmakers greater leverage in hbm supply deals report",
+      "source": "bignewsnetwork.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.01527
+    },
+    {
+      "headline": "nvidia ceos exit could give south korean chipmakers greater leverage in hbm supply deals report20261113193800",
+      "source": "aninews.in",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.01725
+    },
+    {
+      "headline": "nvidia shares fall over 4 in after hours trading while amd broadcom rally",
+      "source": "freepressjournal.in",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.02236
+    },
+    {
+      "headline": "4672440 broadcom in focus as rothschild downgrades to neutral but flags potential upside",
+      "source": "seekingalpha.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.02131
+    },
+    {
+      "headline": "us stocks close mixed as chip sell off deepens",
+      "source": "bignewsnetwork.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.01142
+    },
+    {
+      "headline": "why a rising tsmc challenger could reshape the chi",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.01072
+      "weight": 0.0023,
+      "impact": -0.01004
     },
     {
-      "headline": "spacex s new deal with qualcomm aims to take on mobile carriers history says it s going to be an uphill battle",
+      "headline": "trauma is more emotional than financial amid qualcomm layoffs employees share personal stories of anxiety 11794642950605",
+      "source": "livemint.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.00719
+    },
+    {
+      "headline": "china spy allegations surround nvidia ceo but taiwans tsmc faces little risk",
+      "source": "arabtimesonline.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.01047
+    },
+    {
+      "headline": "nvidia fell while amd and broadcom jumped here s what history says happens next to all 3 stocks",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.01196
-    },
-    {
-      "headline": "here s my biggest worry about broadcom stock it isn t enough to stop me from buying",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.0158
-    },
-    {
-      "headline": "nvidia stock plunges 8 6 but amd and broadcom rally which chip stocks are worth buying",
-      "source": "investinglive.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01231
-    },
-    {
-      "headline": "60 billion amazon deal and a pivot away from smartphones could triple qualcomms nasdaq qcom non handset revenue",
-      "source": "foreignpolicyjournal.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01166
-    },
-    {
-      "headline": "2 chip stocks to buy instead of nvidia right now",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01692
-    },
-    {
-      "headline": "why amd shares are surging and what a usd10 000 investment in the stock could be worth in 3 years",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01035
-    },
-    {
-      "headline": "heres why bernsteins mark li is raising his price target on tsmc tsm to 600 1865100",
-      "source": "insidermonkey.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.0032
-    },
-    {
-      "headline": "2 chip stocks buy instead 162302000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.0112
-    },
-    {
-      "headline": "broadcom inc avgo stock nemes rush group llc reduces stake.html",
-      "source": "themarketsdaily.com",
-      "category": "competitors",
-      "weight": 0.0057,
-      "impact": -0.00694
+      "weight": 0.0022,
+      "impact": -0.014
     }
   ]
 }

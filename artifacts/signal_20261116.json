@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-11-16T17:14:23",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-16",
+  "last_close": 162.85,
+  "model_trained_through": "2026-11-04",
+  "gap_context": {
+    "prev_close": 162.85,
+    "latest": 158.64,
+    "gap_pct": -0.0259,
+    "session": "pre-market",
+    "as_of_et": "06:44 ET"
+  },
+  "model_prob_up": 0.6918,
+  "prob_big_move": 0.5183,
+  "big_move_threshold": 0.0168,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.2678,
+  "headline_count": 178,
+  "article_count": 223,
+  "fulltext": {
+    "stories": 178,
+    "read_full": 103,
+    "read_partial": 15,
+    "headline_only": 60,
+    "alt_searches": 12,
+    "elapsed_s": 227.8
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 1,
+  "stocktwits_bears": 10,
+  "advisory_composite": 0.5941,
+  "brain_top_news": [
+    {
+      "headline": "taiwan banks eye tsmc cash pile",
+      "source": "ifre.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.01322
+    },
+    {
+      "headline": "nvidia ceo exit could give south korean chipmakers greater leverage in hbm supply deals report",
+      "source": "bignewsnetwork.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.01527
+    },
+    {
+      "headline": "nvidia ceos exit could give south korean chipmakers greater leverage in hbm supply deals report20261113193800",
+      "source": "aninews.in",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.01725
+    },
+    {
+      "headline": "nvidia shares fall over 4 in after hours trading while amd broadcom rally",
+      "source": "freepressjournal.in",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.02236
+    },
+    {
+      "headline": "4672440 broadcom in focus as rothschild downgrades to neutral but flags potential upside",
+      "source": "seekingalpha.com",
+      "category": "competitors",
+      "weight": 0.0023,
+      "impact": -0.02131
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nasdaq set to fall as investors continue to wonder about Nvidia scandal",
+      "source": "finviz",
+      "score": -0.968,
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-investors-nvidia-results-anthropic-ipo/card/nasdaq-set-to-fall-as-investors-continue-to-wonder-about-nvidia-scandal-4W1kMMiYC28p5DfCn1T1?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "S&P 500, Nasdaq futures slide as Nvidia earnings, Anthropic debut loom",
+      "source": "finviz",
+      "score": -0.964,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-futures-slide-104351968.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "KOSPI Falls Near 3% as Friday's Nvidia Selloff Reaches Seoul",
+      "source": "finviz",
+      "score": -0.964,
+      "url": "https://finance.yahoo.com/markets/world-indices/articles/kospi-falls-near-3-fridays-034120080.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "More Pain For NVDA? Top Supply Chain Analyst Says New OpenAI, Anthropic Chip Orders Boost Googles TPU Outlook",
+      "source": "finviz",
+      "score": 0.949,
+      "url": "https://finance.yahoo.com/technology/ai/articles/more-pain-nvda-top-supply-050330578.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Instead Of Lowering GPU Prices, Former NVIDIA CEO Jensen Huang Reportedly Financed AI Startups To Absorb Excess Silicon, Shattering The Shortage Perception - Wccftech",
+      "source": "Wccftech",
+      "score": 0.891,
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRHY5LWkyLWJMemRpb19USWRiZkdQSWJOVTJFQUMyZHNVdEhBaGJXWXZzajR2ZTB4c0o5WEZnczFuSEFIZVVSX3NYQzRQM095OFIzTTBHZFg0MlZTNTlHSVN3Yk1XbDNMckphYlhvSkFHTG10ZXR2ZmRPNDN4ZTE5SnZxa9IBiAFBVV95cUxPaUgzWktjM2NjcFdMNHdaR2NRd05lbkhyMmhKbk9tS3JFdzJyZEkwREhMd191bll5WkdvOUlGUU1ZbjRid2pzTGJoQkpjYmJrbkxXVlNfMlhabGxaVmpHS1ZjUDJ6ZWFVUkI1aUFNbkprcDh4aVBWOWtiSGtzUzFpLTNDZnRlWE5u?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia's off-balance-sheet guarantees reached $530 billion as supply commitments surged - Mezha.net",
+      "source": "Mezha.net",
+      "score": 0.797,
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPa3lYUWhFOEl0VlExdXEwZmx3RjlZQTBwRmZaM3otLXNpdEdHR1I4U3NPYTYxZGxDdW0xRnVsNVN1ZkVBbFJUMDFPYkdmOFYyR1JRd1BRc3N3R1Q5RzNuV2pqeEI4cXFBczVTLTUtLWo3TnRVZ3NvZEc5RmZtQUZvamxKUjZxOWcyVlBsU29sQzEtaGhzdlZiRWd6WUE?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "mezha.net"
+    }
+  ]
+}
