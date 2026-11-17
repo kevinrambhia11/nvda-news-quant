@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-16",
-  "generated_at": "2026-11-16T17:08:20",
+  "entry_day": "2026-11-17",
+  "generated_at": "2026-11-17T17:03:56",
   "articles": [
     {
-      "headline": "taiwan banks eye tsmc cash pile",
-      "source": "ifre.com",
+      "headline": "asian chip stocks tumble ahead of nvidia q3 earnings",
+      "source": "cointelegraph.com",
       "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.01322
+      "weight": 0.0073,
+      "impact": -0.01675
     },
     {
-      "headline": "nvidia ceo exit could give south korean chipmakers greater leverage in hbm supply deals report",
-      "source": "bignewsnetwork.com",
+      "headline": "nasdaq 100 leads u s index losses as chip shares fall in intraday trading 1777711",
+      "source": "econotimes.com",
       "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.01527
+      "weight": 0.0071,
+      "impact": -0.00971
     },
     {
-      "headline": "nvidia ceos exit could give south korean chipmakers greater leverage in hbm supply deals report20261113193800",
-      "source": "aninews.in",
+      "headline": "trumps new chip export rule targets china but exempts tiktoks parent company",
+      "source": "reason.com",
       "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.01725
+      "weight": 0.0071,
+      "impact": -0.00532
     },
     {
-      "headline": "nvidia shares fall over 4 in after hours trading while amd broadcom rally",
-      "source": "freepressjournal.in",
-      "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.02236
-    },
-    {
-      "headline": "4672440 broadcom in focus as rothschild downgrades to neutral but flags potential upside",
-      "source": "seekingalpha.com",
-      "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.02131
-    },
-    {
-      "headline": "us stocks close mixed as chip sell off deepens",
-      "source": "bignewsnetwork.com",
-      "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.01142
-    },
-    {
-      "headline": "why a rising tsmc challenger could reshape the chi",
+      "headline": "4 chip stocks down as much as 36 from their highs to buy and hold for the next decade",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0023,
+      "weight": 0.007,
+      "impact": -0.01125
+    },
+    {
+      "headline": "futures slide asian chip carnage greets nvidias first post huang earnings week",
+      "source": "zerohedge.com",
+      "category": "competitors",
+      "weight": 0.007,
+      "impact": -0.00699
+    },
+    {
+      "headline": "broadcom shares fall ai chip selloff downgrade 1878706",
+      "source": "ibtimes.com.au",
+      "category": "competitors",
+      "weight": 0.007,
+      "impact": -0.01174
+    },
+    {
+      "headline": "10 best blue chip stocks to buy and hold for 3 years 1864716",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.007,
+      "impact": -0.01439
+    },
+    {
+      "headline": "auo s handover date for two plants sold to tsmc remains unset 1777477",
+      "source": "econotimes.com",
+      "category": "competitors",
+      "weight": 0.007,
       "impact": -0.01004
     },
     {
-      "headline": "trauma is more emotional than financial amid qualcomm layoffs employees share personal stories of anxiety 11794642950605",
-      "source": "livemint.com",
+      "headline": "intc investors have opportunity to lead intel corporation securities fraud lawsuit with sbs law 302940924.html",
+      "source": "prnewswire.com",
       "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.00719
+      "weight": 0.007,
+      "impact": -0.00874
     },
     {
-      "headline": "china spy allegations surround nvidia ceo but taiwans tsmc faces little risk",
-      "source": "arabtimesonline.com",
+      "headline": "chips big tech and more what hedge funds bought and sold in the third quarter.html",
+      "source": "cnbc.com",
       "category": "competitors",
-      "weight": 0.0023,
-      "impact": -0.01047
-    },
-    {
-      "headline": "nvidia fell while amd and broadcom jumped here s what history says happens next to all 3 stocks",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0022,
-      "impact": -0.014
+      "weight": 0.0069,
+      "impact": -0.01127
     }
   ]
 }

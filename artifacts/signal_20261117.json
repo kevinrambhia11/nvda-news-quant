@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-11-17T17:07:39",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-17",
+  "last_close": 156.14,
+  "model_trained_through": "2026-11-04",
+  "gap_context": {
+    "prev_close": 156.14,
+    "latest": 157.49,
+    "gap_pct": 0.0086,
+    "session": "pre-market",
+    "as_of_et": "06:37 ET"
+  },
+  "model_prob_up": 0.6418,
+  "prob_big_move": 0.5183,
+  "big_move_threshold": 0.0174,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.297,
+  "headline_count": 157,
+  "article_count": 207,
+  "fulltext": {
+    "stories": 157,
+    "read_full": 90,
+    "read_partial": 13,
+    "headline_only": 54,
+    "alt_searches": 12,
+    "elapsed_s": 119.5
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 12,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.5547,
+  "brain_top_news": [
+    {
+      "headline": "asian chip stocks tumble ahead of nvidia q3 earnings",
+      "source": "cointelegraph.com",
+      "category": "competitors",
+      "weight": 0.0073,
+      "impact": -0.01675
+    },
+    {
+      "headline": "nasdaq 100 leads u s index losses as chip shares fall in intraday trading 1777711",
+      "source": "econotimes.com",
+      "category": "competitors",
+      "weight": 0.0071,
+      "impact": -0.00971
+    },
+    {
+      "headline": "trumps new chip export rule targets china but exempts tiktoks parent company",
+      "source": "reason.com",
+      "category": "competitors",
+      "weight": 0.0071,
+      "impact": -0.00532
+    },
+    {
+      "headline": "4 chip stocks down as much as 36 from their highs to buy and hold for the next decade",
+      "source": "fool.com",
+      "category": "competitors",
+      "weight": 0.007,
+      "impact": -0.01125
+    },
+    {
+      "headline": "futures slide asian chip carnage greets nvidias first post huang earnings week",
+      "source": "zerohedge.com",
+      "category": "competitors",
+      "weight": 0.007,
+      "impact": -0.00699
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Stock Market Midday, Nov. 16: Nasdaq Tumbles as Wall Street Braces for Nvidia Earnings and Bitcoin Slides - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZVNlc3FyY2w0TUVtTDRsVF9HUUMyc2JPU3JQZUJvYW5SZll1SUExRXNkXy15amJWNEJTUVdndFNPVEZZUzBzUl8xWFpWTTZkNEg2UzJ3MWpLcHQxRWM1VmFsNENQX2Q2U0hxb3VzRWI2RDU5bklWYWdTSlVsTlRHOW9WSmpFR19rWTFOSmZMd0F5QzVCUWc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nokia stock tumbles after Nvidia cuts stake by more than half",
+      "source": "finviz",
+      "score": -0.97,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nokia-stock-tumbles-nvidia-cuts-093318816.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia\u2019s stock extends decline following harsh words from the U.S. government - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.969,
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSkJsamppQU9MUGc1UDk1MG5XclJteGw5Z3hzSVdCbHg4cGNnOVRSVzNuY2N3ZW9zb0ZDUWMyQUF6Qmk5ck9CSE10RUdCSTdfMnhNbEJrVWxKaDZtVXBDRWRDTUlTekh1Y3pqdjZ5ZkVKSFI0QVBPQmdXVUU1Nl9GanlnSkoyaExNLUJzYVlIQVJiX3JZWE1HWkNMWmdsa2NwbXBpWjV4STJtNV9aQjhVeU5hRFVERDNYcmxZ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia's off-balance-sheet guarantees reached $530 billion as supply commitments surged - Mezha.net",
+      "source": "Mezha.net",
+      "score": 0.797,
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPa3lYUWhFOEl0VlExdXEwZmx3RjlZQTBwRmZaM3otLXNpdEdHR1I4U3NPYTYxZGxDdW0xRnVsNVN1ZkVBbFJUMDFPYkdmOFYyR1JRd1BRc3N3R1Q5RzNuV2pqeEI4cXFBczVTLTUtLWo3TnRVZ3NvZEc5RmZtQUZvamxKUjZxOWcyVlBsU29sQzEtaGhzdlZiRWd6WUE?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "mezha.net"
+    },
+    {
+      "title": "Nvidia amassed $530 billion in financial guarantees to corner the AI market \u2014 supply commitments rose by nearly a quarter of a trillion dollars in a single quarter - Tom's Hardware",
+      "source": "Tom's Hardware",
+      "score": 0.776,
+      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxOajhHTXNyN0hmN2JOalllaEMtT25MMUN3QWZKcDFxOW5Vb1hmbVJiQThyaDZkYWxZSFh5a2RtcTNUY0k5WUxYcmRXcnhoUzdrMldXeHFoaEtKT1J3UldCbk1lTmo2em5FUHFoeWExTTRiZkU1RFlVYVF6M053QkpoZ2FleFVzZllLX0JFQjNwa0FYMl83ZG9nUGxBZU5qRzJxT1RoYnpZOXZyT1h3a1hPNUdUVG9HeF92QmNxTnBLbVhmLVJfRUhudFJhYm9oWENtOVhHT3Nyc2pKeTBWN1FBdjZmbWNldmNCbXdFck41SEdQOEdEeThGWTZtVFRrb3lBOS1pV0o0aXpNN3dGeVgtQ09xUVAtTVh3OFNVak1DUmlRb2xXbF9ROU9rTXdPM1RxVHRRN29hLVktU1o3SnozMWRhVkxrOFdUM0JmdTJkSQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.tomshardware.com"
+    },
+    {
+      "title": "Silicon Motion accelerates AI infrastructure with Nvidia DPU and Aspeed BMC",
+      "source": "finviz",
+      "score": 0.629,
+      "url": "https://www.digitimes.com/news/a20261117PD240/silicon-motion-2026-bmc-infrastructure-aspeed.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}
