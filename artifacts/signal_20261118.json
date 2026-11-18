@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-11-18T17:09:02",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-18",
+  "last_close": 155.46,
+  "model_trained_through": "2026-11-04",
+  "gap_context": {
+    "prev_close": 155.46,
+    "latest": 159.76,
+    "gap_pct": 0.0277,
+    "session": "pre-market",
+    "as_of_et": "06:39 ET"
+  },
+  "model_prob_up": 0.3999,
+  "prob_big_move": 0.5183,
+  "big_move_threshold": 0.0174,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": -0.0617,
+  "headline_count": 179,
+  "article_count": 233,
+  "fulltext": {
+    "stories": 179,
+    "read_full": 107,
+    "read_partial": 17,
+    "headline_only": 55,
+    "alt_searches": 12,
+    "elapsed_s": 133.8
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 12,
+  "stocktwits_bears": 8,
+  "advisory_composite": 0.4207,
+  "brain_top_news": [
+    {
+      "headline": "druckenmiller exits copper steel and chip stocks to buy gold miners",
+      "source": "mining.com",
+      "category": "competitors",
+      "weight": 0.0061,
+      "impact": -0.02155
+    },
+    {
+      "headline": "wsj us imposes chip export licenses on 5 countries to close china s data center loophole",
+      "source": "investinglive.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.01047
+    },
+    {
+      "headline": "what happens to a 69 year olds 800000 in broadcom stock when rmds start",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.00958
+    },
+    {
+      "headline": "how spacex and qualcomm plan to reduce the cost of deploying tens of thousands of 5g base stations 128752",
+      "source": "telecomlead.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.01127
+    },
+    {
+      "headline": "applied materials vs taiwan semiconductor 142302000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.0015
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia\u2019s stock extends decline following harsh words from the U.S. government - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.969,
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSkJsamppQU9MUGc1UDk1MG5XclJteGw5Z3hzSVdCbHg4cGNnOVRSVzNuY2N3ZW9zb0ZDUWMyQUF6Qmk5ck9CSE10RUdCSTdfMnhNbEJrVWxKaDZtVXBDRWRDTUlTekh1Y3pqdjZ5ZkVKSFI0QVBPQmdXVUU1Nl9GanlnSkoyaExNLUJzYVlIQVJiX3JZWE1HWkNMWmdsa2NwbXBpWjV4STJtNV9aQjhVeU5hRFVERDNYcmxZ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia Stock Is Down 32%. Is It a No-Brainer Buy at $163 or a Value Trap? - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.958,
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWEs4MVFFeWhtMGNQdjlFVGgzNDBaeG9OOV83QW92OUVENk5JcFQ2YmdaV0FrQW1la3VvMk92amtrWlU5SDBKSVFUc0Y3SHdNbUg1aFJBa09HMzJMdURWY0ZqNDF0bC1xdlkyRUVfYXc0NFNqTk5PQ1VaNjhfcTRubFUwSmtwN0xsUk9YcGVBQ21Kdw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "'We're still torn on the stock,' says an analyst who recently downgraded Nvidia",
+      "source": "finviz",
+      "score": -0.958,
+      "url": "https://www.marketwatch.com/livecoverage/nvidia-earnings-stock-nvidia-jensen-huang-results-call/card/-we-re-still-torn-on-the-stock-says-an-analyst-who-recently-downgraded-nvidia-DiFnYSyANs57OEcw8IG8?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.marketwatch.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia's Strong Fundamentals Give New CEO a Much-Needed Tailwind",
+      "source": "finviz",
+      "score": 0.95,
+      "url": "https://www.wsj.com/business/nvidias-strong-fundamentals-give-new-ceo-a-much-needed-tailwind-65859856?mod=wsj_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia promises that revenue will keep soaring \u2014 for now - TechCrunch",
+      "source": "TechCrunch",
+      "score": 0.946,
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPT2lFRzNPZkR6QVI1aTFMRGRhM3ZlekY3eWpacXFXSmdRakNoOURFcXN0ZWRHSWVRQ2ppYjgwUUlDUTZrMUR2QlBNSmQ3LWxqOHN5a2tmX0lDZkNZUWFxUFpCRjF2QmRNRTRTbHN6a0ZHMFppUmRBU3VoTE00dWgzeU9FZjJ5SXZjVTh1SnZULVpwZlk?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "techcrunch.com"
+    },
+    {
+      "title": "Nvidia Raises Fiscal 2028 Growth Forecast to 75% on AI Boom",
+      "source": "yahoo_rss",
+      "score": 0.942,
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-raises-fiscal-2028-growth-111523249.html?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}

@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-17",
-  "generated_at": "2026-11-17T17:03:56",
+  "entry_day": "2026-11-18",
+  "generated_at": "2026-11-18T17:04:57",
   "articles": [
     {
-      "headline": "asian chip stocks tumble ahead of nvidia q3 earnings",
-      "source": "cointelegraph.com",
+      "headline": "druckenmiller exits copper steel and chip stocks to buy gold miners",
+      "source": "mining.com",
       "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.01675
+      "weight": 0.0061,
+      "impact": -0.02155
     },
     {
-      "headline": "nasdaq 100 leads u s index losses as chip shares fall in intraday trading 1777711",
-      "source": "econotimes.com",
+      "headline": "wsj us imposes chip export licenses on 5 countries to close china s data center loophole",
+      "source": "investinglive.com",
       "category": "competitors",
-      "weight": 0.0071,
-      "impact": -0.00971
+      "weight": 0.0059,
+      "impact": -0.01047
     },
     {
-      "headline": "trumps new chip export rule targets china but exempts tiktoks parent company",
-      "source": "reason.com",
+      "headline": "what happens to a 69 year olds 800000 in broadcom stock when rmds start",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0071,
-      "impact": -0.00532
+      "weight": 0.0059,
+      "impact": -0.00958
+    },
+    {
+      "headline": "how spacex and qualcomm plan to reduce the cost of deploying tens of thousands of 5g base stations 128752",
+      "source": "telecomlead.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.01127
+    },
+    {
+      "headline": "applied materials vs taiwan semiconductor 142302000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.0015
+    },
+    {
+      "headline": "taiwan semiconductor booked a record nt587 billion month the stock has lost nearly 10 in three days anyway",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00589
     },
     {
       "headline": "4 chip stocks down as much as 36 from their highs to buy and hold for the next decade",
       "source": "fool.com",
       "category": "competitors",
-      "weight": 0.007,
+      "weight": 0.0058,
       "impact": -0.01125
     },
     {
-      "headline": "futures slide asian chip carnage greets nvidias first post huang earnings week",
-      "source": "zerohedge.com",
+      "headline": "amd broadcom tsmc stocks rise 220159000.html",
+      "source": "aol.com",
       "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.00699
+      "weight": 0.0057,
+      "impact": -0.00945
     },
     {
-      "headline": "broadcom shares fall ai chip selloff downgrade 1878706",
-      "source": "ibtimes.com.au",
+      "headline": "amd wants to help partners cut high memory costs with paid software",
+      "source": "crn.com",
       "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.01174
+      "weight": 0.0057,
+      "impact": -0.00218
     },
     {
-      "headline": "10 best blue chip stocks to buy and hold for 3 years 1864716",
-      "source": "insidermonkey.com",
+      "headline": "applied materials vs taiwan semiconductor manufacturing which tech stock is a better buy for 2027",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.01439
-    },
-    {
-      "headline": "auo s handover date for two plants sold to tsmc remains unset 1777477",
-      "source": "econotimes.com",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.01004
-    },
-    {
-      "headline": "intc investors have opportunity to lead intel corporation securities fraud lawsuit with sbs law 302940924.html",
-      "source": "prnewswire.com",
-      "category": "competitors",
-      "weight": 0.007,
-      "impact": -0.00874
-    },
-    {
-      "headline": "chips big tech and more what hedge funds bought and sold in the third quarter.html",
-      "source": "cnbc.com",
-      "category": "competitors",
-      "weight": 0.0069,
-      "impact": -0.01127
+      "weight": 0.0057,
+      "impact": -0.00469
     }
   ]
 }
