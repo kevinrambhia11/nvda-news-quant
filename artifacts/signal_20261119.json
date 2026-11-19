@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-11-19T17:07:30",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-19",
+  "last_close": 150.96,
+  "model_trained_through": "2026-11-04",
+  "gap_context": {
+    "prev_close": 150.96,
+    "latest": 154.53,
+    "gap_pct": 0.0236,
+    "session": "pre-market",
+    "as_of_et": "06:37 ET"
+  },
+  "model_prob_up": 0.5942,
+  "prob_big_move": 0.5183,
+  "big_move_threshold": 0.0174,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.1628,
+  "headline_count": 191,
+  "article_count": 223,
+  "fulltext": {
+    "stories": 191,
+    "read_full": 103,
+    "read_partial": 19,
+    "headline_only": 69,
+    "alt_searches": 12,
+    "elapsed_s": 107.0
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 6,
+  "stocktwits_bears": 4,
+  "advisory_composite": 0.5415,
+  "brain_top_news": [
+    {
+      "headline": "huang pitches nvidia comeback wsj reports sec probing chipmaker",
+      "source": "asiaone.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.01197
+    },
+    {
+      "headline": "qualcomm india restructuring job losses ceo says layoffs performance based but 47 of employees allege favouritism 117949",
+      "source": "livemint.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.00696
+    },
+    {
+      "headline": "wie qualcomm ki und echtzeitsteuerung getrennte wege gehen laesst a 908940726e36f492c0471d1fefc8947a",
+      "source": "elektronikpraxis.de",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00409
+    },
+    {
+      "headline": "broadcom vs micron technology tech 033002000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.00633
+    },
+    {
+      "headline": "nvidia amd earnings fall 2026 chips pause frontier models",
+      "source": "theverge.com",
+      "category": "competitors",
+      "weight": 0.0058,
+      "impact": -0.0056
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia\u2019s stock extends decline following harsh words from the U.S. government - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.969,
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSkJsamppQU9MUGc1UDk1MG5XclJteGw5Z3hzSVdCbHg4cGNnOVRSVzNuY2N3ZW9zb0ZDUWMyQUF6Qmk5ck9CSE10RUdCSTdfMnhNbEJrVWxKaDZtVXBDRWRDTUlTekh1Y3pqdjZ5ZkVKSFI0QVBPQmdXVUU1Nl9GanlnSkoyaExNLUJzYVlIQVJiX3JZWE1HWkNMWmdsa2NwbXBpWjV4STJtNV9aQjhVeU5hRFVERDNYcmxZ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia doubles down on Taiwan supply chain as AI squeezes substrate and OSAT capacity",
+      "source": "finviz",
+      "score": -0.963,
+      "url": "https://www.digitimes.com/news/a20261119PD229/nvidia-capacity-substrate-osat-taiwan.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia closes lower ahead of earnings as company reels from Huang resignation - CNBC",
+      "source": "google_news",
+      "score": -0.96,
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUDhQMU5rWGhWemtOTG9CLWY2Q0tCWVVJejRxYU50bXo0U3N5cFE1R0JkQWpPN3RvakZtOERpVk5WSmJIbVlfaVlfTGdZY001TWRqV1ZaTk5yME5TdVQyek81TXVza2REZFNfRnJ5LW9rUmNRT21wNy1FVEZBdUlZaGdINXVqdlkzSzlz0gGQAUFVX3lxTE1hOFNxWkE1WDFjYTgzQVNPNE9MUEIwSmwxazl1QXlpaEo5SGlfSUVJdFJFWjZ4eGF6cXVVQkhoRU5pTmpJVF9jMFJEYjVabW9BMU5Fc0lpNGVXbURhVU4zLTlVQ1E4S0ZRX3hubnRDN0l3QThkS3NienJxZm9oT1BYMUk3M25wZ3lNbDZaY1RTSg?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia Stock Is Rebounding on Hope Anthropic IPO Will Rescue the AI Trade - Barron's",
+      "source": "google_news",
+      "score": 0.936,
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOM0V3d1ZlZG04SEFmUFJDc1lRZDRWMkZMMkVULVc2SlZqMmI2VUlfUW9sWS1UOFAydWxxdDBVZDZVU2FRODNxMUtTdGdKSnh1Z0tnOF90VDNzMThFUkk2dFE0Y0ZwenFLSWl5TFNKUDhod1pOU0VHT2lEbE0tUUtKN3hQNjk?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "Anthropics Cash Pile Tops Amazon And Nvidia Combined After Record IPO  Meet The New ETF Tracking ANT-Linked Companies",
+      "source": "finviz",
+      "score": 0.921,
+      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-cash-pile-tops-amazon-054757994.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia says its open source AI strategy remains intact after Jensen Huang\u2019s exit - TechCrunch",
+      "source": "TechCrunch",
+      "score": 0.909,
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcDRWN3ZsWTVWNkNia01rdTdxR0c4bnVsTS0xUFBWbG9EUWZCWnFKQVhWV0dXVUdVNmJhM3VpTFM4UWJDOGYxUVl2LTd5ZUlWWGVFX0RubWFRYThfV2lVU0tpWDJJM0V2cHljbUVqR3dBRE5yb2hscXBmU0I2NzRhRjBDS3dONmNCYnZrelRDWFRoNTFNS0t3cXRvVXRIcVBEa25YVjAxWHJ6ek56cERNbEFGY2I?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "techcrunch.com"
+    }
+  ]
+}
