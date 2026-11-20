@@ -1,20 +1,20 @@
 ==================================================================
   Direction model - candidate selection (walk-forward OOS)
-  selection window: 2019-05-23 -> 2023-08-31  |  holdout: 2023-09-01 -> 2026-11-04
+  selection window: 2019-05-23 -> 2023-08-31  |  holdout: 2023-09-01 -> 2026-11-18
   judged on CLEAN window 2021-12-14 -> 2023-08-31 (nested news scorers trained < 2021-12-14)
   news2 / news2-decay / newsnet rows are EXPLORATORY second-use on a spent holdout - the live paper trail is the verdict
 ==================================================================
   candidate            Sharpe  +-SE     AUC    acc   expo
-  GBM deep + vol         0.25  0.76   0.502  0.499  48.7%
-  GBM deep + events      0.28  0.76   0.495  0.490  52.0%
-  GBM base + events      0.93  0.77   0.509  0.499  52.7%
-  GBM deep rolling-3y    0.12  0.76   0.478  0.473  43.2%
-  GBM deep calibrated    0.78  0.77   0.473  0.517  86.8%
-  GBM deep + cross       0.71  0.77   0.512  0.501  52.7%
-  GBM deep + news2       0.37  0.76   0.482  0.497  49.4%
-  GBM deep + news2-decay   0.18  0.76   0.505  0.492  43.4%
-  GBM deep + newsnet     0.89  0.77   0.494  0.508  44.3%
+  GBM deep + vol         0.43  0.76   0.508  0.497  47.6%
+  GBM deep + events      0.91  0.77   0.506  0.510  51.3%
+  GBM base + events      0.49  0.76   0.502  0.497  49.4%
+  GBM deep rolling-3y    0.11  0.76   0.464  0.455  44.8%
+  GBM deep calibrated    0.83  0.77   0.487  0.503  88.9%
+  GBM deep + cross      -0.17  0.76   0.507  0.520  52.7%
+  GBM deep + news2       0.21  0.76   0.491  0.501  45.5%
+  GBM deep + news2-decay   0.62  0.76   0.505  0.513  44.5%
+  GBM deep + newsnet     0.35  0.76   0.494  0.508  43.6%
 ------------------------------------------------------------------
-  WINNER (by clean-window Sharpe): GBM base + events
-  Untouched holdout: Sharpe 1.11 (buy&hold 1.15) | AUC 0.506 | acc 0.528 | exposure 58.3%
+  WINNER (by clean-window Sharpe): GBM deep + events
+  Untouched holdout: Sharpe 1.16 (buy&hold 0.97) | AUC 0.502 | acc 0.513 | exposure 56.5%
 ==================================================================
