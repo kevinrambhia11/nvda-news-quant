@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-19",
-  "generated_at": "2026-11-20T15:56:51",
+  "entry_day": "2026-11-20",
+  "generated_at": "2026-11-20T17:04:26",
   "articles": [
     {
-      "headline": "nvidia amd earnings fall 2026 chips pause frontier models",
-      "source": "theverge.com",
-      "category": "competitors",
-      "weight": 0.0061,
-      "impact": -0.00022
-    },
-    {
-      "headline": "broadcom already eclipsed amd as the 2nd biggest chip maker but the market wont recognize that truth until 2027",
+      "headline": "googles parent now holds a 548 million qualcomm stake that wasnt in its june filing",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00374
+      "weight": 0.0056,
+      "impact": -0.0072
     },
     {
-      "headline": "qualcomm layoffs 2026 how many indians are losing their jobs check estimated job cuts affected cities and major reasons ",
-      "source": "jagranjosh.com",
+      "headline": "analysts are bullish on this blue chip stock should you buy 1866529",
+      "source": "insidermonkey.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00572
+      "weight": 0.0056,
+      "impact": -0.0095
     },
     {
-      "headline": "nvidia shares rise as chip giant beats forecasts",
-      "source": "rnz.co.nz",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00916
-    },
-    {
-      "headline": "chipmaker qualcomm announces 517 layoffs in california",
-      "source": "nypost.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00719
-    },
-    {
-      "headline": "broadcom vs micron technology tech 033002000.html",
+      "headline": "qualcomm vs taiwan semiconductor diverging 170302000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00443
+      "weight": 0.0056,
+      "impact": -0.00281
     },
     {
-      "headline": "the numbers removed the near term doubt but the two things amd podcast episode 01m7nzkd71nf1qxpnyr906jfrv",
-      "source": "247wallst.com",
+      "headline": "pomerantz llp advises investors of class action involving intel corporation r5245339.htm",
+      "source": "pr-inside.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00065
+      "weight": 0.0056,
+      "impact": -0.01522
     },
     {
-      "headline": "qualcomm is laying off hundreds of workers in san diego",
-      "source": "thestar.com.my",
+      "headline": "qualcomm crowns qualikeeper winner of 2026 social impact fund in cape town",
+      "source": "hapakenya.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.0025
+      "weight": 0.0056,
+      "impact": -0.0084
     },
     {
-      "headline": "70169593 first and qualcomm technologies inc launch next generation of k 8 robotics education 200.htm",
-      "source": "finanznachrichten.de",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00137
-    },
-    {
-      "headline": "qualcomm india restructuring job losses ceo says layoffs performance based but 47 of employees allege favouritism 117949",
+      "headline": "south koreas kospi up 1 4 hang seng edges higher as chip stocks recover can anthropics debut revive the ai trade 1179508",
       "source": "livemint.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00922
+      "weight": 0.0056,
+      "impact": -0.00585
+    },
+    {
+      "headline": "amd shares slide after short seller warns china ties could invite us scrutiny",
+      "source": "nypost.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00736
+    },
+    {
+      "headline": "qualcomm ceo calls india layoffs performance focused but employees allege favouritism",
+      "source": "freepressjournal.in",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00967
+    },
+    {
+      "headline": "qualcomm india job cuts spark bias concerns with 47 7 citing favouritism report 568400 2026 11 19",
+      "source": "businesstoday.in",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00527
+    },
+    {
+      "headline": "nvidia amd micron stocks rise as anthropic ipo boosts ai chip demand optimism 101795099742185.html",
+      "source": "hindustantimes.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00211
     }
   ]
 }

@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-11-20T17:07:45",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-20",
+  "last_close": 145.98,
+  "model_trained_through": "2026-11-18",
+  "gap_context": {
+    "prev_close": 145.98,
+    "latest": 142.58,
+    "gap_pct": -0.0233,
+    "session": "pre-market",
+    "as_of_et": "06:37 ET"
+  },
+  "model_prob_up": 0.398,
+  "prob_big_move": 0.5226,
+  "big_move_threshold": 0.0179,
+  "action": "EXIT / STAY FLAT",
+  "headline_sentiment": -0.2194,
+  "headline_count": 186,
+  "article_count": 218,
+  "fulltext": {
+    "stories": 186,
+    "read_full": 102,
+    "read_partial": 21,
+    "headline_only": 63,
+    "alt_searches": 12,
+    "elapsed_s": 111.7
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 3,
+  "stocktwits_bears": 5,
+  "advisory_composite": 0.3957,
+  "brain_top_news": [
+    {
+      "headline": "googles parent now holds a 548 million qualcomm stake that wasnt in its june filing",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.0072
+    },
+    {
+      "headline": "analysts are bullish on this blue chip stock should you buy 1866529",
+      "source": "insidermonkey.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.0095
+    },
+    {
+      "headline": "qualcomm vs taiwan semiconductor diverging 170302000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.00281
+    },
+    {
+      "headline": "pomerantz llp advises investors of class action involving intel corporation r5245339.htm",
+      "source": "pr-inside.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.01522
+    },
+    {
+      "headline": "qualcomm crowns qualikeeper winner of 2026 social impact fund in cape town",
+      "source": "hapakenya.com",
+      "category": "competitors",
+      "weight": 0.0056,
+      "impact": -0.0084
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia, Broadcom, and Micron stocks decline as Anthropic goes public - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.972,
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQnFiUEhueFNuXzRVcWt0NUlDWXY3b0MwVnYzN0YxYzZBZkoyRnZRQmJqeTJUdlJuaG1ubUdoQkk0Yk5KcHk3N2FTWm5rX2ZqQ2dPeml5dnBHUVZpNFVhdVdWdEZVLVNiRnFpNm15RUktZUdmUV9oV1ZFVWd4VVZwQlYwa19wc3cyMFMzbGRrVXdiYndLeVFUSUhrVTJBSUVmTGR1ZmVsd3QzZ05HTTVabktzRS02aEdDdnhJ?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia\u2019s stock falls further. It has lost $669 billion in six trading days. - MarketWatch",
+      "source": "MarketWatch",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVEJ3VzdMRnFXV3ZlNU1Kc0NHZ0toc2w3aFRGSFF5QkFCYmRTQUVGOW9YVE52UE9nLWR4U1JSZmF0R0h6aUNjREs4VGVyZ1NaZkhOdGhzQ0ZQbEdHQTlrU1VuaEFMMDlQdE1YdVdRYTdtaVp2UWQtX3hZMjBVLXQ4Z1VuTDRabnRRTnl4Zy1GZlA5QW52cTJIcGw1SnBZZ2VmQ01GYVUxQWNzSzEzelctbkhWX2w?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.marketwatch.com"
+    },
+    {
+      "title": "Nvidia Stock Is Down 40% From Its High. It Might Look Ugly but There Is Hope. - Barron's",
+      "source": "google_news",
+      "score": -0.966,
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5INVNuU2E4Z3Bsa0FYa0RqbHNYM3ZlS1lZV3BlODA2Q2F2ejlxMllHQnl2YzhmMm5IeW5RdU9tUzhGUUdlVTJtMUozbkJYZGZOMFpnMmRaWWxpRDY0OVF3a1JiTVBrZmNWMkJsTVotRERzWUZvQVNV?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Nvidia\u2019s Crisis Has Boosted Competing Stocks - Morningstar",
+      "source": "google_news",
+      "score": 0.917,
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdnEybGlNblFXb0RWMWF5alZlRjllSEpWOGFPa3NpZGltdjNpVmVMMWZxOVVzSTRYdGVNM3U4NjM3N0tJOWJmZC1MWkRYWmllNHFxT0UxLXkzbHR0S1ZFbklhTjBDYXRDdURsSWRLV3ZLOWViUjRDb2pZNkI1ZGk4dzNQMjRxTEl6VUE1bHRBcmM?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "mezha.net"
+    },
+    {
+      "title": "Nvidia says its open source AI strategy remains intact after Jensen Huang\u2019s exit - TechCrunch",
+      "source": "TechCrunch",
+      "score": 0.909,
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcDRWN3ZsWTVWNkNia01rdTdxR0c4bnVsTS0xUFBWbG9EUWZCWnFKQVhWV0dXVUdVNmJhM3VpTFM4UWJDOGYxUVl2LTd5ZUlWWGVFX0RubWFRYThfV2lVU0tpWDJJM0V2cHljbUVqR3dBRE5yb2hscXBmU0I2NzRhRjBDS3dONmNCYnZrelRDWFRoNTFNS0t3cXRvVXRIcVBEa25YVjAxWHJ6ek56cERNbEFGY2I?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "techcrunch.com"
+    },
+    {
+      "title": "Google's TPU challenges Nvidia, opening a path for MediaTek to dominate ASIC supply",
+      "source": "finviz",
+      "score": 0.884,
+      "url": "https://www.digitimes.com/news/a20261120PD230/google-tpu-mediatek-asic-nvidia.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}
