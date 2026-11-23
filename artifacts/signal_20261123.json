@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-11-23T17:09:09",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-23",
+  "last_close": 125.53,
+  "model_trained_through": "2026-11-18",
+  "gap_context": {
+    "prev_close": 125.53,
+    "latest": 135.99,
+    "gap_pct": 0.0833,
+    "session": "pre-market",
+    "as_of_et": "06:39 ET"
+  },
+  "model_prob_up": 0.5789,
+  "prob_big_move": 0.5226,
+  "big_move_threshold": 0.0179,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.2278,
+  "headline_count": 184,
+  "article_count": 212,
+  "fulltext": {
+    "stories": 184,
+    "read_full": 97,
+    "read_partial": 22,
+    "headline_only": 65,
+    "alt_searches": 12,
+    "elapsed_s": 131.9
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 9,
+  "stocktwits_bears": 2,
+  "advisory_composite": 0.5211,
+  "brain_top_news": [
+    {
+      "headline": "taiwan stock market falls 6 2 to cap its worst week since 1991 as kospi closes down 5 2 and nikkei 225 drops 5 1 in ai c",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.00779
+    },
+    {
+      "headline": "yield trumps tech jitters as apollo prices divisive spacex chip financing",
+      "source": "ifre.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.00299
+    },
+    {
+      "headline": "south koreas stock market and the nikkei 225 sink more than 4 as the ai selloff spreads from wall street heres how much ",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.00711
+    },
+    {
+      "headline": "soxl crashes 32 in its third worst day ever and is down 90 from its june record the chip index it tracks is down 43",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.00399
+    },
+    {
+      "headline": "nvidia stock has crashed 48 and now trades at 15 times earnings its cheapest in more than a decade and cheaper than micr",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.0092
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "US Stock AI Sector Plunges Sharply Overnight: Nvidia's Market Cap Crashes by $2.7 Trillion in Late-Night Trading - eu.36kr.com",
+      "source": "eu.36kr.com",
+      "score": -0.971,
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1IUW81bm1NSEg0UVl0OEpQUjR6ZFVrbUo0YUFkMGdxQThGcGpVT1l4eTM0eWgzcHNjeWlaV3gzck9wQkgzUkpXczdvd2tlZ1F5M3NJ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "eu.36kr.com"
+    },
+    {
+      "title": "Nvidia\u2019s stock closes the week down 14 percent, as Reuters reports the SEC is looking into its \u201caccounting practices.\u201d - The Verge",
+      "source": "The Verge",
+      "score": -0.97,
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPdEptOTBSRXl4WlktZUx3THR4d3VZOUhfcm5FazEwaHBvTmVsOGJvZHM1eFFkUUREeVJJWXZWc1pfOXhkaUh1RUU1Nl9NNW00dUNsS0RqSFBGc0Q4ZF9iTXNxZkExZWN5SFNxNVY3Z3k3QTdiWFNobnRMcFZScE5wVkVn?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.theverge.com"
+    },
+    {
+      "title": "Nvidia Suffers Worst Weekly Rout in Years, Wiping Out $1 Trillion Since Jensen Huang's Exit",
+      "source": "yahoo_rss",
+      "score": -0.969,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-suffers-worst-weekly-rout-111320635.html?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Micron Stock: 3 Catalysts Set to Boost the Memory Chip Maker Beyond Nvidia Earnings - Barron's",
+      "source": "Barron's",
+      "score": 0.803,
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1EUkd4T0FNR1lpSjgxY2pQMm5jR1dJYU1WLU9PT0tybjhIcGpFTTBqemF5djRKUFd2T0gzaENGQU9QUXhuQXhpQmdUNmlZcG50Q1RJMjhFSlRIUlhQWmpGZFZKWWVjRm8wcGk0WmFJaUxVeEkwdnQxQXVaX3g?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "partial",
+      "read_from": "www.barrons.com"
+    },
+    {
+      "title": "NVDA, INTC, MU, AMD Chip Stocks Rip Higher: Dan Ives Says \u2018Bears Feel Validated,\u2019 But There\u2019s No Stopping The AI Wave - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.799,
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNLWVsV09aaUtCWVhraDVzNVlWQlRILTEtMEN0ZDdpVXFBZ2s5b3hnZTlxRFFvYmhZVzNlVnpqa2JwY3A4RDBMT3V6cnd5YXVuZW9RMFh1Zk55OXVXNlBpQ1NvREg1bjJ2dUtPZ3gxZnhQVVg4TDBmcGpDd0pSZHVVSV9lYmdha09yOFRGb0tLOA?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Anthropic, Nvidia shares rise in premarket trading after major tech selloff - CNBC",
+      "source": "google_news",
+      "score": 0.676,
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBJVmhYR3dCSjgwTWZWTGJGUGE1S0NKbkxQUDhzODNkU2lSRFU3dk5LeENVUjI0RS0zYnJ6LWFCMFZZaEpUWmdzSUFwQzRzOFM4VWNpSU9JTHo2c3o5U3NXcUpkNEdoSFdtbkdoatIBckFVX3lxTE9TTG1paDhMMG81cTlpOHdVOVRUMmVhTnRMOXR2MFd3ZHBvY3BTX1d6NVBZOVV4cDdVQ1dfRUs5YW95cmpieTdNZzlkWmFqUVNUR05EOGQ0SEk5a1RMZDdBaU1VdGlkdXN1cXFCM2RwN1d4QQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}

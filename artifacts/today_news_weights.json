@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-20",
-  "generated_at": "2026-11-20T17:04:26",
+  "entry_day": "2026-11-23",
+  "generated_at": "2026-11-23T17:05:22",
   "articles": [
     {
-      "headline": "googles parent now holds a 548 million qualcomm stake that wasnt in its june filing",
+      "headline": "taiwan stock market falls 6 2 to cap its worst week since 1991 as kospi closes down 5 2 and nikkei 225 drops 5 1 in ai c",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.0072
+      "weight": 0.0024,
+      "impact": -0.00779
     },
     {
-      "headline": "analysts are bullish on this blue chip stock should you buy 1866529",
-      "source": "insidermonkey.com",
+      "headline": "yield trumps tech jitters as apollo prices divisive spacex chip financing",
+      "source": "ifre.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.0095
+      "weight": 0.0024,
+      "impact": -0.00299
     },
     {
-      "headline": "qualcomm vs taiwan semiconductor diverging 170302000.html",
-      "source": "aol.com",
+      "headline": "south koreas stock market and the nikkei 225 sink more than 4 as the ai selloff spreads from wall street heres how much ",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00281
+      "weight": 0.0024,
+      "impact": -0.00711
     },
     {
-      "headline": "pomerantz llp advises investors of class action involving intel corporation r5245339.htm",
+      "headline": "soxl crashes 32 in its third worst day ever and is down 90 from its june record the chip index it tracks is down 43",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.00399
+    },
+    {
+      "headline": "nvidia stock has crashed 48 and now trades at 15 times earnings its cheapest in more than a decade and cheaper than micr",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.0092
+    },
+    {
+      "headline": "tsmc buys 500 million stake in anthropic at ipo price eyes openai investment next 14085363.html",
+      "source": "moneycontrol.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.00573
+    },
+    {
+      "headline": "after nvidia amd now alleged to have china supply links short seller flags ties stock plunges 7 7 14085651.html",
+      "source": "moneycontrol.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.00571
+    },
+    {
+      "headline": "advanced micro devices and intel shares fall before u s open 1780156",
+      "source": "econotimes.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.0097
+    },
+    {
+      "headline": "tsmc invests usd 500 million in anthropic acquires 003 stake at ipo price",
+      "source": "milwaukeesun.com",
+      "category": "competitors",
+      "weight": 0.0024,
+      "impact": -0.01011
+    },
+    {
+      "headline": "lost money on intel corporation intc contact levi korsinsky for r5246165.htm",
       "source": "pr-inside.com",
       "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.01522
-    },
-    {
-      "headline": "qualcomm crowns qualikeeper winner of 2026 social impact fund in cape town",
-      "source": "hapakenya.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.0084
-    },
-    {
-      "headline": "south koreas kospi up 1 4 hang seng edges higher as chip stocks recover can anthropics debut revive the ai trade 1179508",
-      "source": "livemint.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00585
-    },
-    {
-      "headline": "amd shares slide after short seller warns china ties could invite us scrutiny",
-      "source": "nypost.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00736
-    },
-    {
-      "headline": "qualcomm ceo calls india layoffs performance focused but employees allege favouritism",
-      "source": "freepressjournal.in",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00967
-    },
-    {
-      "headline": "qualcomm india job cuts spark bias concerns with 47 7 citing favouritism report 568400 2026 11 19",
-      "source": "businesstoday.in",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00527
-    },
-    {
-      "headline": "nvidia amd micron stocks rise as anthropic ipo boosts ai chip demand optimism 101795099742185.html",
-      "source": "hindustantimes.com",
-      "category": "competitors",
-      "weight": 0.0056,
-      "impact": -0.00211
+      "weight": 0.0024,
+      "impact": -0.0166
     }
   ]
 }
