@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-11-24T17:06:53",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-24",
+  "last_close": 165.05,
+  "model_trained_through": "2026-11-18",
+  "gap_context": {
+    "prev_close": 165.05,
+    "latest": 156.5,
+    "gap_pct": -0.0518,
+    "session": "pre-market",
+    "as_of_et": "06:36 ET"
+  },
+  "model_prob_up": 0.4922,
+  "prob_big_move": 0.5226,
+  "big_move_threshold": 0.0187,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.1033,
+  "headline_count": 171,
+  "article_count": 209,
+  "fulltext": {
+    "stories": 171,
+    "read_full": 100,
+    "read_partial": 5,
+    "headline_only": 66,
+    "alt_searches": 12,
+    "elapsed_s": 114.8
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 4,
+  "stocktwits_bears": 6,
+  "advisory_composite": 0.4791,
+  "brain_top_news": [
+    {
+      "headline": "billionaire andreas halvorsen exited microsoft and made tsmc his top holding at 1 8 billion",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.01308
+    },
+    {
+      "headline": "chip stocks lead wall streets monday rebound as buyers return",
+      "source": "elliotlakestandard.ca",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.01506
+    },
+    {
+      "headline": "tollbooths like taiwan semiconductor rarely get this cheap and with october revenue up 60 i am taking advantage",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.00609
+    },
+    {
+      "headline": "tsmcs future could look very different by the end of 2028",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": 0.0014
+    },
+    {
+      "headline": "jensen huangs return just added about 500 billion to micron dell tsmc and the ai stocks that depend on nvidia",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.006,
+      "impact": -0.00362
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "ANT Stock Drops Further Despite Tech Rally  Why This Analyst Thinks Jensen Huangs Return As Nvidia CEO Is A Threat To Anthropic",
+      "source": "finviz",
+      "score": -0.97,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ant-stock-drops-further-despite-090305638.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Shares Fall 5% in Premarket Trading as Goldman Sachs Highlights Lingering Uncertainty Following Huang's Return",
+      "source": "finviz",
+      "score": -0.965,
+      "url": "/news/426606/nvidia-shares-fall-5-in-premarket-trading-as-goldman-sachs-highlights-lingering-uncertainty-following-huangs-return",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia shares fall 4% in premarket after Huang comeback rally - CNBC",
+      "source": "google_news",
+      "score": -0.956,
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE52aUdsdjBXTkFjSkg1UVpmamJ6cXNsRWxPSGRGZXNMOFNuRWFHZEdudVdnQ2pRS0xKbFJvRUJmYldqSEl6UzFseHJWZzdENkNrbEdXd05yWEpyU3NOQjM3TVNjZUcyYVlKZ0RGTFlPVWF2T2hvX0tUVdIBfkFVX3lxTE9jTGJUVzdZamlIUjdnZlVNYkVhaDJ4MzY5MmpTZUpGMl9GRjZDSTNGR2FGenRsN0djalZxbjlrWUNCUXFOME9HdHdVTzdPTE9KT28wei1iTXl3bUxLSTZKRm1VWGhXVlhFQUpRMTV4ak9tUUtGdXZ6b29YNWhCQQ?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Dollar Stays Strong After Nvidia News Boosts U.S. Tech Stocks",
+      "source": "finviz",
+      "score": 0.93,
+      "url": "https://www.wsj.com/articles/dollar-stays-strong-after-nvidia-news-boosts-u-s-tech-stocks-a0c603c2?mod=wsj_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "investinglive.com"
+    },
+    {
+      "title": "Nvidia live updates: Nvidia stock climbs more than 31% as board reinstates Jensen Huang as CEO",
+      "source": "finviz",
+      "score": 0.926,
+      "url": "https://finance.yahoo.com/markets/stocks/live/nvidia-live-updates-jensen-huang-reinstated-as-ceo-trump-says-he-convinced-board-165423793.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Stock Market Today: Dow, S&P 500 and Nasdaq set to consolidate gains following Nvidia's 31% surge; Dell results on tap: live updates",
+      "source": "finviz",
+      "score": 0.874,
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-extend-gains-jensen-huang-ceo-return-nvidia-dell-results?mod=mw_FV",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    }
+  ]
+}

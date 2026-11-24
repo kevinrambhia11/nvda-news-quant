@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-23",
-  "generated_at": "2026-11-23T17:05:22",
+  "entry_day": "2026-11-24",
+  "generated_at": "2026-11-24T17:03:27",
   "articles": [
     {
-      "headline": "taiwan stock market falls 6 2 to cap its worst week since 1991 as kospi closes down 5 2 and nikkei 225 drops 5 1 in ai c",
+      "headline": "billionaire andreas halvorsen exited microsoft and made tsmc his top holding at 1 8 billion",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.00779
+      "weight": 0.006,
+      "impact": -0.01308
     },
     {
-      "headline": "yield trumps tech jitters as apollo prices divisive spacex chip financing",
-      "source": "ifre.com",
+      "headline": "chip stocks lead wall streets monday rebound as buyers return",
+      "source": "elliotlakestandard.ca",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.00299
+      "weight": 0.006,
+      "impact": -0.01506
     },
     {
-      "headline": "south koreas stock market and the nikkei 225 sink more than 4 as the ai selloff spreads from wall street heres how much ",
+      "headline": "tollbooths like taiwan semiconductor rarely get this cheap and with october revenue up 60 i am taking advantage",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.00711
+      "weight": 0.006,
+      "impact": -0.00609
     },
     {
-      "headline": "soxl crashes 32 in its third worst day ever and is down 90 from its june record the chip index it tracks is down 43",
+      "headline": "tsmcs future could look very different by the end of 2028",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.00399
+      "weight": 0.006,
+      "impact": 0.0014
     },
     {
-      "headline": "nvidia stock has crashed 48 and now trades at 15 times earnings its cheapest in more than a decade and cheaper than micr",
+      "headline": "jensen huangs return just added about 500 billion to micron dell tsmc and the ai stocks that depend on nvidia",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.0092
+      "weight": 0.006,
+      "impact": -0.00362
     },
     {
-      "headline": "tsmc buys 500 million stake in anthropic at ipo price eyes openai investment next 14085363.html",
-      "source": "moneycontrol.com",
+      "headline": "all broadcom has to do is deliver modestly to prove stanley druckenmiller wrong and hit 500 in 2027",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.00573
+      "weight": 0.006,
+      "impact": -0.00409
     },
     {
-      "headline": "after nvidia amd now alleged to have china supply links short seller flags ties stock plunges 7 7 14085651.html",
-      "source": "moneycontrol.com",
+      "headline": "taiwan meets with tsmc financial firms in bid to calm markets 11795466488909.html",
+      "source": "livemint.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.00571
+      "weight": 0.0059,
+      "impact": -0.01177
     },
     {
-      "headline": "advanced micro devices and intel shares fall before u s open 1780156",
-      "source": "econotimes.com",
+      "headline": "nvidia stock massive surge jensen reinstatement impact on micron vs amd vs sandisk vs oracle shares data details 1179545",
+      "source": "livemint.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.0097
+      "weight": 0.0059,
+      "impact": -0.00892
     },
     {
-      "headline": "tsmc invests usd 500 million in anthropic acquires 003 stake at ipo price",
-      "source": "milwaukeesun.com",
-      "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.01011
-    },
-    {
-      "headline": "lost money on intel corporation intc contact levi korsinsky for r5246165.htm",
+      "headline": "levi korsinsky reminds intel corporation investors of the pending r5246613.htm",
       "source": "pr-inside.com",
       "category": "competitors",
-      "weight": 0.0024,
-      "impact": -0.0166
+      "weight": 0.0059,
+      "impact": -0.01409
+    },
+    {
+      "headline": "weekly news roundup tsmc sk hynix chips equipment investment.html",
+      "source": "digitimes.com",
+      "category": "competitors",
+      "weight": 0.0059,
+      "impact": -0.00412
     }
   ]
 }
