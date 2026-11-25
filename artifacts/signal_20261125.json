@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-11-25T17:06:53",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-25",
+  "last_close": 155.38,
+  "model_trained_through": "2026-11-18",
+  "gap_context": {
+    "prev_close": 155.38,
+    "latest": 147.61,
+    "gap_pct": -0.05,
+    "session": "pre-market",
+    "as_of_et": "06:36 ET"
+  },
+  "model_prob_up": 0.6425,
+  "prob_big_move": 0.5226,
+  "big_move_threshold": 0.0187,
+  "action": "BUY / HOLD LONG",
+  "headline_sentiment": -0.2103,
+  "headline_count": 171,
+  "article_count": 212,
+  "fulltext": {
+    "stories": 171,
+    "read_full": 97,
+    "read_partial": 7,
+    "headline_only": 67,
+    "alt_searches": 12,
+    "elapsed_s": 98.0
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 0,
+  "stocktwits_bears": 8,
+  "advisory_composite": 0.5682,
+  "brain_top_news": [
+    {
+      "headline": "price prediction amd and palantir will trade at this price in 2028",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0073,
+      "impact": -0.00493
+    },
+    {
+      "headline": "dow tops 50000 chip stocks slide after nvidia rally.htm",
+      "source": "hngn.com",
+      "category": "competitors",
+      "weight": 0.0073,
+      "impact": -0.01098
+    },
+    {
+      "headline": "lost money on intel corporation intc contact levi korsinsky for r5247217.htm",
+      "source": "pr-inside.com",
+      "category": "competitors",
+      "weight": 0.0073,
+      "impact": -0.01597
+    },
+    {
+      "headline": "tsmc stock jumps 10 adds 158 billion in market value as nvidias jensen huang returns as ceo 11795515269169.html",
+      "source": "livemint.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.00779
+    },
+    {
+      "headline": "prediction happen broadcom stock price 112002000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.00445
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia, AMD, Broadcom lead chip stocks lower as AI trade comes under pressure - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.964,
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPZlFHMUxxYkptX1RuUVVSbmwzSTJzY1R3N0VHQnBxakF2TzQwY1lheWFLSVhlSkY5TnJlaVBlZlpMTFo3Sml1M1ZEQnZ5VHZYekVpRHV0YTk3UnNvbUZzVzA1S201NkdCSjRvc0c4NXNtSkFBSFZTYUg0U1dlXzJsMXFrbUFQYm1DN1dHYW00eUR0Mjl2YlBRb3ZTams1ekNlNlBVaFpoaEx6d19mNVlyMmRuanM1Z1JQbmFBdGo0Nm02N2VLZGVBSHA3N0E?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia shares fall more than 5% as Huang comeback rally cools - CNBC",
+      "source": "google_news",
+      "score": -0.964,
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE52aUdsdjBXTkFjSkg1UVpmamJ6cXNsRWxPSGRGZXNMOFNuRWFHZEdudVdnQ2pRS0xKbFJvRUJmYldqSEl6UzFseHJWZzdENkNrbEdXd05yWEpyU3NOQjM3TVNjZUcyYVlKZ0RGTFlPVWF2T2hvX0tUVdIBfkFVX3lxTE9jTGJUVzdZamlIUjdnZlVNYkVhaDJ4MzY5MmpTZUpGMl9GRjZDSTNGR2FGenRsN0djalZxbjlrWUNCUXFOME9HdHdVTzdPTE9KT28wei1iTXl3bUxLSTZKRm1VWGhXVlhFQUpRMTV4ak9tUUtGdXZ6b29YNWhCQQ?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    },
+    {
+      "title": "Tech rout deepens globally; Softbank falls 15%, Nvidia down 4.5% premarket - CNBC",
+      "source": "CNBC",
+      "score": -0.959,
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPX3MzSVpVUmVHWUZvX0hLbENVM1oyN3VDUzhqcFRrRTg0TlZEQTNjeEtKektuOTJQM0RxT1EybW03MXJZRHhtZEg1bUtZTXN3Z0g1RUp2cHJTRmxjQW9GSjhIQnE1dVpBUzgtUkhaTFNOY0ppbDJPSXBFRmtxZVhyajlDZnE4UVViaFZKQXFCVXZCZXhz0gGaAUFVX3lxTE1OZTBPc2FtSElJNmVpYTZOTTJfRWUxVExZN1NSajNvbk1ORnRNSHg5RWxXQTVpVXJSVGhjZW8xdkRWQ25XSmwtdXhsV0Q0MGtyaTFzbXhfOC1WVHQ2M0lwdURjUm9QcDk4U1VvTV9oMHRBQ0JiMlJ1TFdJZWluWFdIbHRxeW05aVRYYWZlWGM5bW41Z0hmTThTV1E?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.cnbc.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "Ed Yardeni Says Jensen Huangs Return To Nvidia Could Ease AI Financing Concerns But Intensify Regulatory Scrutiny",
+      "source": "finviz",
+      "score": 0.911,
+      "url": "https://finance.yahoo.com/technology/ai/articles/ed-yardeni-says-jensen-huang-110253355.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "US Congress advances three AI chip export bills as CEO returns to Nvidia",
+      "source": "finviz",
+      "score": 0.776,
+      "url": "https://www.digitimes.com/news/a20261125PD211/ai-chip-nvidia-chips-equipment.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Colette Kress Scored a Win Worth Millions From Huang\u2019s Return to Nvidia - Barron's",
+      "source": "Barron's",
+      "score": 0.718,
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTUU3WmVPdDhXeGVYTFRacFdPa1pnemJpNkZTNzdFUm90NGRnTzQ5dmZoV0VubXJRdlBwdTVIQTFqdWpPblc5ckxhZjlaQTRvMy16dmRFYlFScUp3Rk9NRW5qUTc1b1NZejdTcHBoTGRxZU04MWdfWVl4SG9oUXlMUHlKMVpTekR2c1BXVHRpbWdTMlhBWVVCRFdwdENIQlNVaU01TENQa3ZzSUs4aUFVUkw1Q1RLQ1NB?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "timesofindia.indiatimes.com"
+    }
+  ]
+}

@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-24",
-  "generated_at": "2026-11-24T17:03:27",
+  "entry_day": "2026-11-25",
+  "generated_at": "2026-11-25T17:03:38",
   "articles": [
     {
-      "headline": "billionaire andreas halvorsen exited microsoft and made tsmc his top holding at 1 8 billion",
+      "headline": "price prediction amd and palantir will trade at this price in 2028",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01308
+      "weight": 0.0073,
+      "impact": -0.00493
     },
     {
-      "headline": "chip stocks lead wall streets monday rebound as buyers return",
-      "source": "elliotlakestandard.ca",
+      "headline": "dow tops 50000 chip stocks slide after nvidia rally.htm",
+      "source": "hngn.com",
       "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.01506
+      "weight": 0.0073,
+      "impact": -0.01098
     },
     {
-      "headline": "tollbooths like taiwan semiconductor rarely get this cheap and with october revenue up 60 i am taking advantage",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00609
-    },
-    {
-      "headline": "tsmcs future could look very different by the end of 2028",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": 0.0014
-    },
-    {
-      "headline": "jensen huangs return just added about 500 billion to micron dell tsmc and the ai stocks that depend on nvidia",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00362
-    },
-    {
-      "headline": "all broadcom has to do is deliver modestly to prove stanley druckenmiller wrong and hit 500 in 2027",
-      "source": "247wallst.com",
-      "category": "competitors",
-      "weight": 0.006,
-      "impact": -0.00409
-    },
-    {
-      "headline": "taiwan meets with tsmc financial firms in bid to calm markets 11795466488909.html",
-      "source": "livemint.com",
-      "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.01177
-    },
-    {
-      "headline": "nvidia stock massive surge jensen reinstatement impact on micron vs amd vs sandisk vs oracle shares data details 1179545",
-      "source": "livemint.com",
-      "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.00892
-    },
-    {
-      "headline": "levi korsinsky reminds intel corporation investors of the pending r5246613.htm",
+      "headline": "lost money on intel corporation intc contact levi korsinsky for r5247217.htm",
       "source": "pr-inside.com",
       "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.01409
+      "weight": 0.0073,
+      "impact": -0.01597
     },
     {
-      "headline": "weekly news roundup tsmc sk hynix chips equipment investment.html",
-      "source": "digitimes.com",
+      "headline": "tsmc stock jumps 10 adds 158 billion in market value as nvidias jensen huang returns as ceo 11795515269169.html",
+      "source": "livemint.com",
       "category": "competitors",
-      "weight": 0.0059,
-      "impact": -0.00412
+      "weight": 0.0072,
+      "impact": -0.00779
+    },
+    {
+      "headline": "prediction happen broadcom stock price 112002000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.00445
+    },
+    {
+      "headline": "openai google anthropic use ai challenge nvidia chip dominance 2026 11",
+      "source": "businessinsider.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.00551
+    },
+    {
+      "headline": "rosen leading investor counsel encourages intel corporation investors r5247058.htm",
+      "source": "pr-inside.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.01514
+    },
+    {
+      "headline": "intc lawsuit alert levi korsinsky notifies intel corporation investors r5247244.htm",
+      "source": "pr-inside.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.01275
+    },
+    {
+      "headline": "qualikeeper wins qualcomms 75000 social impact grant",
+      "source": "ghanaiantimes.com.gh",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.00951
+    },
+    {
+      "headline": "wall st futures dip chip 105231000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0072,
+      "impact": -0.0046
     }
   ]
 }
