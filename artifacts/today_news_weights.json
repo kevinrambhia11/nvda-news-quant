@@ -1,76 +1,76 @@
 {
-  "entry_day": "2026-11-25",
-  "generated_at": "2026-11-25T17:03:38",
+  "entry_day": "2026-11-27",
+  "generated_at": "2026-11-26T17:04:54",
   "articles": [
     {
-      "headline": "price prediction amd and palantir will trade at this price in 2028",
+      "headline": "chip stocks just pulled a whipsaw last seen at the april 2025 tariff pause",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.00493
+      "weight": 0.0069,
+      "impact": -0.01011
     },
     {
-      "headline": "dow tops 50000 chip stocks slide after nvidia rally.htm",
-      "source": "hngn.com",
+      "headline": "billionaire brad gerstners altimeter opened a 680 million tesla stake and exited qualcomm and applied materials",
+      "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.01098
+      "weight": 0.0069,
+      "impact": -0.01012
     },
     {
-      "headline": "lost money on intel corporation intc contact levi korsinsky for r5247217.htm",
-      "source": "pr-inside.com",
+      "headline": "hedge or attack wall street faces a thanksgiving test navigating the semiconductor bloodbath 6128478",
+      "source": "theepochtimes.com",
       "category": "competitors",
-      "weight": 0.0073,
-      "impact": -0.01597
+      "weight": 0.0068,
+      "impact": -0.00472
     },
     {
-      "headline": "tsmc stock jumps 10 adds 158 billion in market value as nvidias jensen huang returns as ceo 11795515269169.html",
-      "source": "livemint.com",
-      "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.00779
-    },
-    {
-      "headline": "prediction happen broadcom stock price 112002000.html",
+      "headline": "taiwan semiconductor manufacturing down nearly 130001000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.00445
+      "weight": 0.0068,
+      "impact": -0.00382
     },
     {
-      "headline": "openai google anthropic use ai challenge nvidia chip dominance 2026 11",
-      "source": "businessinsider.com",
-      "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.00551
-    },
-    {
-      "headline": "rosen leading investor counsel encourages intel corporation investors r5247058.htm",
+      "headline": "intc deadline levi korsinsky reminds intel corporation investors r5247442.htm",
       "source": "pr-inside.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.01514
+      "weight": 0.0068,
+      "impact": -0.01278
     },
     {
-      "headline": "intc lawsuit alert levi korsinsky notifies intel corporation investors r5247244.htm",
+      "headline": "intc deadline levi korsinsky reminds intel corporation investors r5247665.htm",
       "source": "pr-inside.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.01275
+      "weight": 0.0068,
+      "impact": -0.01258
     },
     {
-      "headline": "qualikeeper wins qualcomms 75000 social impact grant",
-      "source": "ghanaiantimes.com.gh",
+      "headline": "tsmc seeks school tax break for proposed college station semiconductor campus in brazos county",
+      "source": "kxxv.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.00951
+      "weight": 0.0068,
+      "impact": -0.00654
     },
     {
-      "headline": "wall st futures dip chip 105231000.html",
+      "headline": "levi korsinsky notifies intel corporation intc investors of lead r5247566.htm",
+      "source": "pr-inside.com",
+      "category": "competitors",
+      "weight": 0.0068,
+      "impact": -0.01553
+    },
+    {
+      "headline": "amd shares fall semiconductor selloff trade restrictions 1879375",
+      "source": "ibtimes.com.au",
+      "category": "competitors",
+      "weight": 0.0068,
+      "impact": -0.01293
+    },
+    {
+      "headline": "not micron not broadcom top 215101000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0072,
-      "impact": -0.0046
+      "weight": 0.0068,
+      "impact": -0.00577
     }
   ]
 }

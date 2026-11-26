@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-11-26T17:09:54",
+  "ticker": "NVDA",
+  "entry_day": "2026-11-27",
+  "last_close": 149.3,
+  "model_trained_through": "2026-11-18",
+  "gap_context": {
+    "prev_close": 149.3,
+    "latest": 151.22,
+    "gap_pct": 0.0129,
+    "session": "after-hours",
+    "as_of_et": "19:59 ET"
+  },
+  "model_prob_up": 0.4889,
+  "prob_big_move": 0.5385,
+  "big_move_threshold": 0.0187,
+  "action": "HOLD (keep current position)",
+  "headline_sentiment": -0.1686,
+  "headline_count": 180,
+  "article_count": 222,
+  "fulltext": {
+    "stories": 180,
+    "read_full": 114,
+    "read_partial": 4,
+    "headline_only": 62,
+    "alt_searches": 12,
+    "elapsed_s": 162.6
+  },
+  "data_warnings": [],
+  "headlines_degraded": false,
+  "sentiment_backend": "finbert",
+  "stocktwits_bulls": 4,
+  "stocktwits_bears": 3,
+  "advisory_composite": 0.467,
+  "brain_top_news": [
+    {
+      "headline": "chip stocks just pulled a whipsaw last seen at the april 2025 tariff pause",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0069,
+      "impact": -0.01011
+    },
+    {
+      "headline": "billionaire brad gerstners altimeter opened a 680 million tesla stake and exited qualcomm and applied materials",
+      "source": "247wallst.com",
+      "category": "competitors",
+      "weight": 0.0069,
+      "impact": -0.01012
+    },
+    {
+      "headline": "hedge or attack wall street faces a thanksgiving test navigating the semiconductor bloodbath 6128478",
+      "source": "theepochtimes.com",
+      "category": "competitors",
+      "weight": 0.0068,
+      "impact": -0.00472
+    },
+    {
+      "headline": "taiwan semiconductor manufacturing down nearly 130001000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0068,
+      "impact": -0.00382
+    },
+    {
+      "headline": "intc deadline levi korsinsky reminds intel corporation investors r5247442.htm",
+      "source": "pr-inside.com",
+      "category": "competitors",
+      "weight": 0.0068,
+      "impact": -0.01278
+    }
+  ],
+  "most_negative": [
+    {
+      "title": "Nvidia, AMD and Micron Stocks Plunge as AI Selloff Deepens",
+      "source": "yahoo_rss",
+      "score": -0.97,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-amd-micron-stocks-plunge-110624788.html?.tsrc=rss",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia, AMD, and Micron stocks trim steep losses amid jittery AI trade - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.969,
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVk9mVUxsUll4NmpxRklUb1dFaHduU3ZURXZRV2ktV0pDM2ZMNElPb3RrV0NiS0JlLTVXQXJKNnpTV1JmV1k2NGMtdzNLa0F0c2tsY2xRMmJKZHhwY1dueWZXb0l4VXhWNkl4NmJ6QUlTNjBpZUItN0xkX21JUXJ5WGlUbWdON0E0V2FOT2lGYkozcm9VSjlXVjR3SDc5WWQ3VzJhWm5mb29YbjBQSU1hQURkYw?oc=5",
+      "n_sources": 2,
+      "also_from": [
+        "finviz"
+      ],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Why Nvidia (NVDA) Stock Is Falling Today: Tech and Chip Selloff - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.967,
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbUtXWTRwbjJyUHJSeW96c01xRU5wT0hINTlCU0hhRXpIc2dQa2hhSkpSRkwyeW9YSFhHOGpPVVRTb0Z4Tzd1Z3cyaWV0NWM2emR1Qk5lTktDdnhwYVBsTWdnOXFsbDVnV2hMVDNQbVNvNFJGeUVrTno2eDZSZExtWjZfZVRKMGNjT3czM2xHSm1OUEtnSG1SN0F3?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ],
+  "most_positive": [
+    {
+      "title": "NVIDIA stock remains a solid long-term value buy, analyst says - Fox Business",
+      "source": "google_news",
+      "score": 0.939,
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBBbFRad0M5eDdyY3JQVlg5aDBKRGdYbUlqYy0xYUlFbF82UmIwdzRiNkZaMVNiMEU0cEQ4WG9LZkh1aEhnenhVTHpicU9FSmEyVzZINHdpdjFXSWc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "headline_only",
+      "read_from": null
+    },
+    {
+      "title": "Nvidia stock has best day since May 2003, gaining nearly $1T in market cap after Jensen Huang is reinstated as CEO - Yahoo Finance",
+      "source": "google_news",
+      "score": 0.923,
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPWE52dEljX0cyZVo2a1A1dWJaNXFBemdNUE9jcU94RjNXc1JwMEJyZkpjd3h5cHF0VFUxZWpCOTRpTlRRSzJBTlJGa0tubHEwa3VROU9xRFd4a1czS1Z3d05tMklnTFdESzMyTVRpdVFUQXBoMmkwdE0zd0V4TkcxRnhocTdBSm9fS3pvcksteFlqRGtIMUpjdldDbElVQlgzX3hMNWotbEJXelczemJac2h0TWhKeW9PTmJrZlIwNVBpY2VQVFVaRHFadlNOV0d2bWN2aDl4WlVQeU9IVkFRRUNDSU9tSV9xcjNJcFdJVGhkQWw0cmpJbld3WWE5OHhKcnc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Wins Back Wall Street Backing As Jensen Huang Returns; CRWD, LI Stocks Score Upgrades While DKNG, AMBA Face Pressure",
+      "source": "finviz",
+      "score": 0.872,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-wins-back-wall-street-084312453.html",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    }
+  ]
+}
