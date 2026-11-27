@@ -1,97 +1,75 @@
 {
-  "generated_at": "2026-11-26T17:09:54",
+  "generated_at": "2026-11-27T17:06:52",
   "ticker": "NVDA",
   "entry_day": "2026-11-27",
   "last_close": 149.3,
-  "model_trained_through": "2026-11-18",
+  "model_trained_through": "2026-11-24",
   "gap_context": {
     "prev_close": 149.3,
     "latest": 151.22,
     "gap_pct": 0.0129,
     "session": "after-hours",
-    "as_of_et": "19:59 ET"
+    "as_of_et": "19:55 ET"
   },
-  "model_prob_up": 0.4889,
-  "prob_big_move": 0.5385,
+  "model_prob_up": 0.5401,
+  "prob_big_move": 0.5897,
   "big_move_threshold": 0.0187,
   "action": "HOLD (keep current position)",
-  "headline_sentiment": -0.1686,
-  "headline_count": 180,
-  "article_count": 222,
+  "headline_sentiment": -0.1416,
+  "headline_count": 189,
+  "article_count": 230,
   "fulltext": {
-    "stories": 180,
-    "read_full": 114,
-    "read_partial": 4,
-    "headline_only": 62,
+    "stories": 189,
+    "read_full": 113,
+    "read_partial": 6,
+    "headline_only": 70,
     "alt_searches": 12,
-    "elapsed_s": 162.6
+    "elapsed_s": 95.2
   },
   "data_warnings": [],
   "headlines_degraded": false,
   "sentiment_backend": "finbert",
-  "stocktwits_bulls": 4,
+  "stocktwits_bulls": 10,
   "stocktwits_bears": 3,
-  "advisory_composite": 0.467,
+  "advisory_composite": 0.5068,
   "brain_top_news": [
     {
       "headline": "chip stocks just pulled a whipsaw last seen at the april 2025 tariff pause",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0069,
-      "impact": -0.01011
+      "weight": 0.0032,
+      "impact": -0.01178
     },
     {
       "headline": "billionaire brad gerstners altimeter opened a 680 million tesla stake and exited qualcomm and applied materials",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0069,
-      "impact": -0.01012
+      "weight": 0.0031,
+      "impact": -0.00842
     },
     {
-      "headline": "hedge or attack wall street faces a thanksgiving test navigating the semiconductor bloodbath 6128478",
-      "source": "theepochtimes.com",
-      "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.00472
-    },
-    {
-      "headline": "taiwan semiconductor manufacturing down nearly 130001000.html",
+      "headline": "goldman sachs resets broadcoms 12 163315000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.00382
+      "weight": 0.0031,
+      "impact": -0.01113
     },
     {
-      "headline": "intc deadline levi korsinsky reminds intel corporation investors r5247442.htm",
-      "source": "pr-inside.com",
+      "headline": "semiconductor etf kept falling nvidia 045702000.html",
+      "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.01278
+      "weight": 0.0031,
+      "impact": -0.00701
+    },
+    {
+      "headline": "nvidia executive romance and chip smuggling scandal",
+      "source": "technews.tw",
+      "category": "competitors",
+      "weight": 0.0031,
+      "impact": -0.011
     }
   ],
   "most_negative": [
-    {
-      "title": "Nvidia, AMD and Micron Stocks Plunge as AI Selloff Deepens",
-      "source": "yahoo_rss",
-      "score": -0.97,
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-amd-micron-stocks-plunge-110624788.html?.tsrc=rss",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "full",
-      "read_from": "finance.yahoo.com"
-    },
-    {
-      "title": "Nvidia, AMD, and Micron stocks trim steep losses amid jittery AI trade - Yahoo Finance",
-      "source": "google_news",
-      "score": -0.969,
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVk9mVUxsUll4NmpxRklUb1dFaHduU3ZURXZRV2ktV0pDM2ZMNElPb3RrV0NiS0JlLTVXQXJKNnpTV1JmV1k2NGMtdzNLa0F0c2tsY2xRMmJKZHhwY1dueWZXb0l4VXhWNkl4NmJ6QUlTNjBpZUItN0xkX21JUXJ5WGlUbWdON0E0V2FOT2lGYkozcm9VSjlXVjR3SDc5WWQ3VzJhWm5mb29YbjBQSU1hQURkYw?oc=5",
-      "n_sources": 2,
-      "also_from": [
-        "finviz"
-      ],
-      "read_status": "full",
-      "read_from": "finance.yahoo.com"
-    },
     {
       "title": "Why Nvidia (NVDA) Stock Is Falling Today: Tech and Chip Selloff - Yahoo Finance",
       "source": "google_news",
@@ -101,19 +79,29 @@
       "also_from": [],
       "read_status": "full",
       "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia, AMD, and Micron stocks trim steep losses amid jittery AI trade - Yahoo Finance",
+      "source": "google_news",
+      "score": -0.967,
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVk9mVUxsUll4NmpxRklUb1dFaHduU3ZURXZRV2ktV0pDM2ZMNElPb3RrV0NiS0JlLTVXQXJKNnpTV1JmV1k2NGMtdzNLa0F0c2tsY2xRMmJKZHhwY1dueWZXb0l4VXhWNkl4NmJ6QUlTNjBpZUItN0xkX21JUXJ5WGlUbWdON0E0V2FOT2lGYkozcm9VSjlXVjR3SDc5WWQ3VzJhWm5mb29YbjBQSU1hQURkYw?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Nvidia Is Down 35% From Its All-Time High, Tied for Its Biggest Drop Since the AI Boom Began. Is It a Buy? - The Motley Fool",
+      "source": "google_news",
+      "score": -0.962,
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNZzFndHNoRTl5ak1qTEtMYm5UNlZib3hqc2ZpZWFRcWE5ZjZlVGxvUWFReGpLdUpGT25BVVl0Smo4VzE5ZzYyb0sxSE80Yng4SlNLQUF5eFdFTUc4SEZ2a3RfRVZscE1ub3BibVpiclRfWTE3anc2Qk5saUtCV2Y2eDNJMExEeVc5eFBUdU9ILWVxZDN0VExKVW5mMXBiZVo5enZmVW91RzJ5TEVOeDZKRTZsLVVFNHVTcUJpek1qNUhaTE5vZ2NIdVhrOVBsenoxX1V6S1BielFIZ0pPcFE?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.fool.com"
     }
   ],
   "most_positive": [
-    {
-      "title": "NVIDIA stock remains a solid long-term value buy, analyst says - Fox Business",
-      "source": "google_news",
-      "score": 0.939,
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBBbFRad0M5eDdyY3JQVlg5aDBKRGdYbUlqYy0xYUlFbF82UmIwdzRiNkZaMVNiMEU0cEQ4WG9LZkh1aEhnenhVTHpicU9FSmEyVzZINHdpdjFXSWc?oc=5",
-      "n_sources": 1,
-      "also_from": [],
-      "read_status": "headline_only",
-      "read_from": null
-    },
     {
       "title": "Nvidia stock has best day since May 2003, gaining nearly $1T in market cap after Jensen Huang is reinstated as CEO - Yahoo Finance",
       "source": "google_news",
@@ -133,6 +121,16 @@
       "also_from": [],
       "read_status": "full",
       "read_from": "finance.yahoo.com"
+    },
+    {
+      "title": "Stocks surge in best day since 2025, adding trillions in value after Jensen Huang returns to Nvidia - NBC News",
+      "source": "google_news",
+      "score": 0.829,
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTWR5WHAwZmExU2UyZkd2d0w4UWxCcXh0X1hJajU4alplUUVUdGM5bk52dDRoazNfamJfbWdQRGhEVExVeFAtZldhcmxYOTlaMmJKTkNQN2Yza1dNS0dfZkhQZTRTTGZudGI1d0JNbWR3SWJzN1hRYWxxWktYS2hNaFR3ajgzQ3FRUlJLVjE5d0cwVnc?oc=5",
+      "n_sources": 1,
+      "also_from": [],
+      "read_status": "full",
+      "read_from": "www.nbcnews.com"
     }
   ]
 }

@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-11-27",
-  "generated_at": "2026-11-27T15:54:17",
+  "generated_at": "2026-11-27T17:03:41",
   "articles": [
     {
       "headline": "chip stocks just pulled a whipsaw last seen at the april 2025 tariff pause",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0061,
+      "weight": 0.0032,
       "impact": -0.01178
     },
     {
       "headline": "billionaire brad gerstners altimeter opened a 680 million tesla stake and exited qualcomm and applied materials",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.006,
+      "weight": 0.0031,
       "impact": -0.00842
+    },
+    {
+      "headline": "goldman sachs resets broadcoms 12 163315000.html",
+      "source": "aol.com",
+      "category": "competitors",
+      "weight": 0.0031,
+      "impact": -0.01113
     },
     {
       "headline": "semiconductor etf kept falling nvidia 045702000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0059,
+      "weight": 0.0031,
       "impact": -0.00701
+    },
+    {
+      "headline": "nvidia executive romance and chip smuggling scandal",
+      "source": "technews.tw",
+      "category": "competitors",
+      "weight": 0.0031,
+      "impact": -0.011
+    },
+    {
+      "headline": "amd shares extend losses after resale filing covers up to 336 9 million shares 1780689",
+      "source": "econotimes.com",
+      "category": "competitors",
+      "weight": 0.003,
+      "impact": -0.01162
+    },
+    {
+      "headline": "sandisks nasdaq sndk 3 6x forward p e dwarfs qualcomms nasdaq qcom premium as flash memory boom reshapes semiconductor i",
+      "source": "foreignpolicyjournal.com",
+      "category": "competitors",
+      "weight": 0.003,
+      "impact": -0.00778
     },
     {
       "headline": "taiwan semiconductor manufacturing down nearly 130001000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0058,
+      "weight": 0.003,
       "impact": -0.00367
     },
     {
       "headline": "how qualcomms cmo is reshaping his team for its post apple era",
       "source": "fortune.com",
       "category": "competitors",
-      "weight": 0.0058,
+      "weight": 0.003,
       "impact": -0.00275
     },
     {
       "headline": "hedge or attack wall street faces a thanksgiving test navigating the semiconductor bloodbath 6128478",
       "source": "theepochtimes.com",
       "category": "competitors",
-      "weight": 0.0058,
+      "weight": 0.003,
       "impact": -0.00473
-    },
-    {
-      "headline": "microsoft declares code red to overhaul outage response after massive 365 outage",
-      "source": "oann.com",
-      "category": "hyperscalers",
-      "weight": 0.0058,
-      "impact": -0.01594
-    },
-    {
-      "headline": "the semiconductor etf kept falling after nvidia raised its forecast time to buy",
-      "source": "fool.com",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.00855
-    },
-    {
-      "headline": "amazon sell cars online uk 37914178",
-      "source": "mirror.co.uk",
-      "category": "hyperscalers",
-      "weight": 0.0058,
-      "impact": -0.02144
-    },
-    {
-      "headline": "amd shares fall semiconductor selloff trade restrictions 1879375",
-      "source": "ibtimes.com.au",
-      "category": "competitors",
-      "weight": 0.0058,
-      "impact": -0.01166
     }
   ]
 }
