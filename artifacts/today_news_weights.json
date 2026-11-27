@@ -1,76 +1,76 @@
 {
   "entry_day": "2026-11-27",
-  "generated_at": "2026-11-26T17:04:54",
+  "generated_at": "2026-11-27T15:54:17",
   "articles": [
     {
       "headline": "chip stocks just pulled a whipsaw last seen at the april 2025 tariff pause",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0069,
-      "impact": -0.01011
+      "weight": 0.0061,
+      "impact": -0.01178
     },
     {
       "headline": "billionaire brad gerstners altimeter opened a 680 million tesla stake and exited qualcomm and applied materials",
       "source": "247wallst.com",
       "category": "competitors",
-      "weight": 0.0069,
-      "impact": -0.01012
+      "weight": 0.006,
+      "impact": -0.00842
     },
     {
-      "headline": "hedge or attack wall street faces a thanksgiving test navigating the semiconductor bloodbath 6128478",
-      "source": "theepochtimes.com",
+      "headline": "semiconductor etf kept falling nvidia 045702000.html",
+      "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.00472
+      "weight": 0.0059,
+      "impact": -0.00701
     },
     {
       "headline": "taiwan semiconductor manufacturing down nearly 130001000.html",
       "source": "aol.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.00382
+      "weight": 0.0058,
+      "impact": -0.00367
     },
     {
-      "headline": "intc deadline levi korsinsky reminds intel corporation investors r5247442.htm",
-      "source": "pr-inside.com",
+      "headline": "how qualcomms cmo is reshaping his team for its post apple era",
+      "source": "fortune.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.01278
+      "weight": 0.0058,
+      "impact": -0.00275
     },
     {
-      "headline": "intc deadline levi korsinsky reminds intel corporation investors r5247665.htm",
-      "source": "pr-inside.com",
+      "headline": "hedge or attack wall street faces a thanksgiving test navigating the semiconductor bloodbath 6128478",
+      "source": "theepochtimes.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.01258
+      "weight": 0.0058,
+      "impact": -0.00473
     },
     {
-      "headline": "tsmc seeks school tax break for proposed college station semiconductor campus in brazos county",
-      "source": "kxxv.com",
-      "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.00654
+      "headline": "microsoft declares code red to overhaul outage response after massive 365 outage",
+      "source": "oann.com",
+      "category": "hyperscalers",
+      "weight": 0.0058,
+      "impact": -0.01594
     },
     {
-      "headline": "levi korsinsky notifies intel corporation intc investors of lead r5247566.htm",
-      "source": "pr-inside.com",
+      "headline": "the semiconductor etf kept falling after nvidia raised its forecast time to buy",
+      "source": "fool.com",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.01553
+      "weight": 0.0058,
+      "impact": -0.00855
+    },
+    {
+      "headline": "amazon sell cars online uk 37914178",
+      "source": "mirror.co.uk",
+      "category": "hyperscalers",
+      "weight": 0.0058,
+      "impact": -0.02144
     },
     {
       "headline": "amd shares fall semiconductor selloff trade restrictions 1879375",
       "source": "ibtimes.com.au",
       "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.01293
-    },
-    {
-      "headline": "not micron not broadcom top 215101000.html",
-      "source": "aol.com",
-      "category": "competitors",
-      "weight": 0.0068,
-      "impact": -0.00577
+      "weight": 0.0058,
+      "impact": -0.01166
     }
   ]
 }
